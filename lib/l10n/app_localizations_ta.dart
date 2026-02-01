@@ -21,7 +21,7 @@ class AppLocalizationsTa extends AppLocalizations {
   String get settings => 'அமைப்புகள்';
 
   @override
-  String get myLibrary => 'எனது நூலகம்';
+  String get myLibrary => 'தொகுப்பு';
 
   @override
   String get temples => 'கோயில்கள்';
@@ -264,4 +264,32 @@ class AppLocalizationsTa extends AppLocalizations {
 
   @override
   String get english => 'English';
+
+  @override
+  String get dataManagement => 'Data Management';
+
+  @override
+  String get exportData => 'Export Data';
+
+  @override
+  String get importData => 'Import Data';
+
+  @override
+  String get importConfirmationTitle => 'Import Backup';
+
+  @override
+  String get importConfirmationMessage =>
+      'This will import data from a backup file.\n\n• Categories and Favorites will be merged.\n• Notes and Highlights will be overwritten for existing songs.\n\nDo you want to continue?';
+
+  @override
+  String get exportSuccess => 'Export successful';
+
+  @override
+  String get exportFailed => 'Export failed';
+
+  @override
+  String get importSuccess => 'Import completed successfully';
+
+  @override
+  String get importFailed => 'Import failed';
 }

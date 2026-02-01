@@ -20,7 +20,7 @@ class HighlightsNotesScreen extends StatelessWidget {
       length: 2,
       child: Scaffold(
         appBar: AppBar(
-          title: const Text('My Library'),
+          title: Text(AppLocalizations.of(context)!.myLibrary),
           bottom: const TabBar(
             tabs: [
               Tab(icon: Icon(Icons.highlight), text: 'Highlights'),

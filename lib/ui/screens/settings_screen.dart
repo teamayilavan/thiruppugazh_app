@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import '../../providers/theme_provider.dart';
 import '../../providers/language_provider.dart';
 import '../../l10n/app_localizations.dart';
+import '../../services/backup_service.dart';
 
 class SettingsScreen extends StatelessWidget {
   const SettingsScreen({super.key});
@@ -36,6 +37,8 @@ class SettingsScreen extends StatelessWidget {
               _showThemeDialog(context, themeProvider);
             },
           ),
+          const Divider(),
+          _buildDataManagementSection(context, l10n),
           const Divider(),
           Padding(
             padding: const EdgeInsets.all(16.0),
@@ -172,6 +175,63 @@ class SettingsScreen extends StatelessWidget {
           ),
         );
       },
+    );
+  }
+
+  Widget _buildDataManagementSection(BuildContext context, AppLocalizations l10n) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        ListTile(
+          leading: const Icon(Icons.storage_outlined),
+          title: Text(l10n.dataManagement),
+        ),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+          child: Row(
+            children: [
+              Expanded(
+                child: OutlinedButton.icon(
+                  onPressed: () => BackupService().exportData(context),
+                  icon: const Icon(Icons.upload),
+                  label: Text(l10n.exportData),
+                ),
+              ),
+              const SizedBox(width: 16),
+              Expanded(
+                child: FilledButton.icon(
+                  onPressed: () => _confirmAndImport(context, l10n),
+                  icon: const Icon(Icons.download),
+                  label: Text(l10n.importData),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ],
+    );
+  }
+
+  void _confirmAndImport(BuildContext context, AppLocalizations l10n) {
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: Text(l10n.importConfirmationTitle),
+        content: Text(l10n.importConfirmationMessage),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(context),
+            child: Text(l10n.cancel),
+          ),
+          FilledButton(
+            onPressed: () {
+              Navigator.pop(context); // Close dialog
+              BackupService().importData(context);
+            },
+            child: Text(l10n.yes),
+          ),
+        ],
+      ),
     );
   }
 }

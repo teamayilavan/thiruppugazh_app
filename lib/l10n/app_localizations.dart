@@ -125,7 +125,7 @@ abstract class AppLocalizations {
   /// No description provided for @myLibrary.
   ///
   /// In en, this message translates to:
-  /// **'My Library'**
+  /// **'Library'**
   String get myLibrary;
 
   /// No description provided for @temples.
@@ -583,6 +583,60 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'English'**
   String get english;
+
+  /// No description provided for @dataManagement.
+  ///
+  /// In en, this message translates to:
+  /// **'Data Management'**
+  String get dataManagement;
+
+  /// No description provided for @exportData.
+  ///
+  /// In en, this message translates to:
+  /// **'Export Data'**
+  String get exportData;
+
+  /// No description provided for @importData.
+  ///
+  /// In en, this message translates to:
+  /// **'Import Data'**
+  String get importData;
+
+  /// No description provided for @importConfirmationTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Import Backup'**
+  String get importConfirmationTitle;
+
+  /// No description provided for @importConfirmationMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'This will import data from a backup file.\n\n• Categories and Favorites will be merged.\n• Notes and Highlights will be overwritten for existing songs.\n\nDo you want to continue?'**
+  String get importConfirmationMessage;
+
+  /// No description provided for @exportSuccess.
+  ///
+  /// In en, this message translates to:
+  /// **'Export successful'**
+  String get exportSuccess;
+
+  /// No description provided for @exportFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Export failed'**
+  String get exportFailed;
+
+  /// No description provided for @importSuccess.
+  ///
+  /// In en, this message translates to:
+  /// **'Import completed successfully'**
+  String get importSuccess;
+
+  /// No description provided for @importFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Import failed'**
+  String get importFailed;
 }
 
 class _AppLocalizationsDelegate

@@ -5,7 +5,7 @@
   "categories": "Categories",
   "search": "Search",
   "settings": "Settings",
-  "myLibrary": "My Library",
+  "myLibrary": "Library",
   "temples": "Temples",
   "more": "More",
   
@@ -93,5 +93,14 @@
   
   "language": "Language",
   "tamil": "Tamil",
-  "english": "English"
+  "english": "English",
+  "dataManagement": "Data Management",
+  "exportData": "Export Data",
+  "importData": "Import Data",
+  "importConfirmationTitle": "Import Backup",
+  "importConfirmationMessage": "This will import data from a backup file.\n\n• Categories and Favorites will be merged.\n• Notes and Highlights will be overwritten for existing songs.\n\nDo you want to continue?",
+  "exportSuccess": "Export successful",
+  "exportFailed": "Export failed",
+  "importSuccess": "Import completed successfully",
+  "importFailed": "Import failed"
 }

@@ -1,6 +1,5 @@
-// import 'dart:io';
-// import 'dart:typed_data';
-// import 'package:flutter/services.dart';
+import 'dart:io';
+import 'package:flutter/services.dart';
 import 'package:path/path.dart';
 import 'package:sqflite/sqflite.dart';
 import '../models/song_model.dart';
@@ -19,8 +18,7 @@ class DatabaseHelper {
 
   static Database? _database;
   static const String _dbName = "thiruppugazh.db";
-  static const int _dbVersion = 5;
-
+  static const int _dbVersion = 1;
 
   /// Returns the singleton database instance, initializing it if necessary.
   Future<Database> get database async {
@@ -29,30 +27,71 @@ class DatabaseHelper {
     return _database!;
   }
 
-
   Future<Database> _initDatabase() async {
     final dbPath = await getDatabasesPath();
     final path = join(dbPath, _dbName);
 
+    // Check if the database exists
+    final exists = await databaseExists(path);
+
+    if (!exists) {
+      // If not, copy from assets
+      AppLogger.info("Creating new copy from asset");
+      try {
+        await Directory(dirname(path)).create(recursive: true);
+        
+        // Copy from asset
+        ByteData data = await rootBundle.load('assets/thiruppugazh.db');
+        List<int> bytes =
+            data.buffer.asUint8List(data.offsetInBytes, data.lengthInBytes);
+            
+        await File(path).writeAsBytes(bytes, flush: true);
+        AppLogger.info("Database copied from assets");
+
+      } catch (e) {
+        AppLogger.error("Error copying database", error: e);
+        // Fallback: Let openDatabase create an empty one (though this might fail expectations)
+      }
+    } else {
+      AppLogger.info("Opening existing database");
+    }
+
     return await openDatabase(
       path,
       version: _dbVersion,
-      onCreate: (db, version) async {
-        await _createDb(db);
-        if (version >= 4) {
-           await _migrateV3ToV4(db);
-        }
-        if (version >= 5) {
-           await _migrateV4ToV5(db);
-        }
+      onConfigure: (db) async {
+         // Enable foreign keys
+         await db.execute('PRAGMA foreign_keys = ON');
       },
-      onUpgrade: _onUpgrade,
+      onCreate: (db, version) async {
+        // Since we copied the asset, 'songs' table should exist.
+        // We need to ensure other tables exist and populate temples.
+        await _initializeSchema(db);
+      },
+      onUpgrade: (db, oldVersion, newVersion) async {
+        // For existing users with older versions (e.g. dev versions), 
+        // we might want to just ensure schema is consistent.
+        // Since we are consolidating to v1, we assume a "reset" or "ensure" approach.
+        // If we want to support upgrade from the dev versions, we would need logic here,
+        // but the request is to "merge all into one single migration".
+        // Simplest strategy for dev/test apps: Ensure tables exist.
+        await _initializeSchema(db);
+      },
+      onOpen: (db) async {
+         // Ensure schema is up to date even on open if needed
+         // (Optional, but safe for dev environments where asset might be replaced)
+         // For now, we rely on onCreate/onUpgrade
+      }
     );
   }
 
-  Future<void> _createDb(Database db) async {
+  Future<void> _initializeSchema(Database db) async {
+    AppLogger.info("Initializing database schema");
+
+    // 1. Ensure 'songs' table exists (it should from asset)
+    // If not, we have a problem, but let's define it just in case of empty db creation
     await db.execute('''
-      CREATE TABLE songs(
+      CREATE TABLE IF NOT EXISTS songs(
         id INTEGER PRIMARY KEY,
         title TEXT NOT NULL,
         lyrics TEXT,
@@ -66,15 +105,22 @@ class DatabaseHelper {
       )
     ''');
     
+    // 2. Create Categories table
     await db.execute('''
-      CREATE TABLE categories(
+      CREATE TABLE IF NOT EXISTS categories(
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         name TEXT NOT NULL UNIQUE
       )
     ''');
-
+    
+    // Insert default 'Favorites' category if it doesn't exist
     await db.execute('''
-      CREATE TABLE song_categories(
+      INSERT OR IGNORE INTO categories (id, name) VALUES (1, 'Favorites')
+    ''');
+
+    // 3. Create Song Categories mapping table
+    await db.execute('''
+      CREATE TABLE IF NOT EXISTS song_categories(
         song_id INTEGER,
         category_id INTEGER,
         PRIMARY KEY (song_id, category_id),
@@ -83,32 +129,16 @@ class DatabaseHelper {
       )
     ''');
 
+    // 4. Create Temples table
     await db.execute('''
-      CREATE TABLE temples(
+      CREATE TABLE IF NOT EXISTS temples(
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         name TEXT NOT NULL UNIQUE,
         song_count INTEGER DEFAULT 0
       )
     ''');
 
-    await db.insert('categories', {'id': 1, 'name': 'Favorites'});
-  }
-
-  Future<void> _migrateV1ToV2(Database db) async {
-      try {
-        await db.execute('ALTER TABLE songs ADD COLUMN is_favorite INTEGER DEFAULT 0');
-      } catch (_) {}
-  }
-  
-  Future<void> _migrateV2ToV3(Database db) async {
-      // Placeholder
-  }
-
-  /// Migrates from version 3 to 4: Add highlights and notes tables.
-  Future<void> _migrateV3ToV4(Database db) async {
-    AppLogger.info('Migrating to v4: Creating highlights and notes tables');
-    
-    // Create Highlights table
+    // 5. Create Highlights table
     await db.execute('''
       CREATE TABLE IF NOT EXISTS highlights(
         id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -120,7 +150,7 @@ class DatabaseHelper {
       )
     ''');
     
-    // Create Notes table
+    // 6. Create Notes table
     await db.execute('''
       CREATE TABLE IF NOT EXISTS notes(
         id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -131,68 +161,41 @@ class DatabaseHelper {
         FOREIGN KEY(song_id) REFERENCES songs(id) ON DELETE CASCADE
       )
     ''');
-  }
 
-  // ... (previous migrations)
+    // 7. Populate Temples Table
+    // We only want to populate if it's empty to avoid re-calculating on every open/upgrade unnecessarily, 
+    // unless we want to ensure sync.
+    // Let's check count first.
+    final count = Sqflite.firstIntValue(await db.rawQuery('SELECT COUNT(*) FROM temples'));
+    
+    if (count == 0) {
+      AppLogger.info('Populating temples table');
+      final List<Map<String, dynamic>> places = await db.rawQuery('''
+        SELECT place, COUNT(*) as count 
+        FROM songs 
+        WHERE place IS NOT NULL AND place != '' 
+        GROUP BY place
+      ''');
 
-  Future<void> _onUpgrade(Database db, int oldVersion, int newVersion) async {
-    // Handle version 1 to 2 migration - Add is_favorite column
-    if (oldVersion < 2) {
-      await _migrateV1ToV2(db);
-    }
-
-    // Handle version 2 to 3 migration - Extend FTS with metadata
-    if (oldVersion < 3) {
-      await _migrateV2ToV3(db);
+      final batch = db.batch();
+      for (final place in places) {
+        batch.insert('temples', {
+          'name': place['place'],
+          'song_count': place['count']
+        }, conflictAlgorithm: ConflictAlgorithm.replace);
+      }
+      await batch.commit(noResult: true);
     }
     
-    // Handle version 3 to 4 migration - Add highlights and notes tables
-    if (oldVersion < 4) {
-      await _migrateV3ToV4(db);
-    }
-
-    // Handle version 4 to 5 migration - Add temples table and populate
-    if (oldVersion < 5) {
-      await _migrateV4ToV5(db);
+    // 8. Ensure is_favorite column exists in songs (if asset didn't have it)
+    try {
+      await db.rawQuery('SELECT is_favorite FROM songs LIMIT 1');
+    } catch (_) {
+      // Column doesn't exist, add it
+      AppLogger.info('Adding is_favorite column to songs');
+       await db.execute('ALTER TABLE songs ADD COLUMN is_favorite INTEGER DEFAULT 0');
     }
   }
-
-  // ... (existing migrations)
-
-  /// Migrates from version 4 to 5: Add temples table and populate it.
-  Future<void> _migrateV4ToV5(Database db) async {
-    AppLogger.info('Migrating to v5: Creating and populating temples table');
-    
-    // Create Temples table
-    await db.execute('''
-      CREATE TABLE IF NOT EXISTS temples(
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
-        name TEXT NOT NULL UNIQUE,
-        song_count INTEGER DEFAULT 0
-      )
-    ''');
-
-    // Populate Temples table from existing songs
-    // Extract unique places and their counts
-    final List<Map<String, dynamic>> places = await db.rawQuery('''
-      SELECT place, COUNT(*) as count 
-      FROM songs 
-      WHERE place IS NOT NULL AND place != '' 
-      GROUP BY place
-    ''');
-
-    final batch = db.batch();
-    for (final place in places) {
-      batch.insert('temples', {
-        'name': place['place'],
-        'song_count': place['count']
-      }, conflictAlgorithm: ConflictAlgorithm.replace);
-    }
-    await batch.commit(noResult: true);
-    AppLogger.info('Populated temples table with ${places.length} entries');
-  }
-
-  // ... (Highlights and Notes methods)
 
   // --- Highlights Methods ---
   
@@ -441,6 +444,22 @@ class DatabaseHelper {
       whereArgs: [songId],
     );
     return maps.map((map) => map['category_id'] as int).toList();
+  }
+
+  Future<List<Map<String, dynamic>>> getAllSongCategories() async {
+    final db = await database;
+    return await db.query('song_categories');
+  }
+
+  Future<Category?> getCategoryByName(String name) async {
+    final db = await database;
+    final maps = await db.query(
+      'categories',
+      where: 'name = ?',
+      whereArgs: [name],
+    );
+    if (maps.isEmpty) return null;
+    return Category.fromMap(maps.first);
   }
 
   Future<List<Song>> getSongsByCategoryId(int categoryId) async {
