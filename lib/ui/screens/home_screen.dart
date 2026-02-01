@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import '../../data/models/song_model.dart';
 import '../../providers/song_list_provider.dart';
 import 'song_detail_screen.dart';
+import 'search_screen.dart';
 import '../../../constants/app_strings.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -205,6 +206,16 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           );
         },
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.of(context).push(
+            MaterialPageRoute(
+               builder: (context) => const SearchScreen(),
+            ),
+          );
+        },
+        child: const Icon(Icons.search),
       ),
     );
   }

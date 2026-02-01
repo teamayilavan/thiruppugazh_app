@@ -1,11 +1,13 @@
-import 'dart:io';
-import 'dart:typed_data';
-import 'package:flutter/services.dart';
+// import 'dart:io';
+// import 'dart:typed_data';
+// import 'package:flutter/services.dart';
 import 'package:path/path.dart';
 import 'package:sqflite/sqflite.dart';
 import '../models/song_model.dart';
 import '../models/category_model.dart';
 import '../models/search_filter.dart';
+import '../models/highlight_model.dart';
+import '../models/note_model.dart';
 import '../../utils/app_logger.dart';
 
 /// A singleton class to manage the SQLite database connection and queries.
@@ -17,8 +19,8 @@ class DatabaseHelper {
 
   static Database? _database;
   static const String _dbName = "thiruppugazh.db";
-  static const int _dbVersion = 3;
-  static bool _fts5Available = false;
+  static const int _dbVersion = 5;
+
 
   /// Returns the singleton database instance, initializing it if necessary.
   Future<Database> get database async {
@@ -27,130 +29,112 @@ class DatabaseHelper {
     return _database!;
   }
 
-  /// Initializes the database with version checking to preserve user data.
-  /// Only copies the database from assets if version changes or doesn't exist.
+
   Future<Database> _initDatabase() async {
-    final databasesPath = await getDatabasesPath();
-    String path = join(databasesPath, _dbName);
-    AppLogger.info('Database path: $path');
+    final dbPath = await getDatabasesPath();
+    final path = join(dbPath, _dbName);
 
-    // 1. Check if database exists
-    final exists = await databaseExists(path);
-    AppLogger.info('Database exists: $exists');
-
-    if (!exists) {
-      // Database doesn't exist, copy from assets
-      AppLogger.info('Database does not exist, copying from assets');
-      await _copyDatabaseFromAssets(path);
-    } else {
-      // Database exists, check version
-      final db = await openDatabase(path);
-      final currentVersion = await db.getVersion();
-      await db.close();
-      AppLogger.info('Current database version: $currentVersion, expected version: $_dbVersion');
-
-      if (currentVersion < _dbVersion) {
-        // Version mismatch, perform migration
-        AppLogger.info('Database version mismatch, migrating...');
-        await _migrateDatabase(path, currentVersion);
-      }
-    }
-
-    // 2. Open the database with version
-    AppLogger.info('Opening database...');
-    final db = await openDatabase(path, version: _dbVersion, onUpgrade: _onUpgrade);
-
-    // Verify database has songs
-    final songsCount = await db.rawQuery('SELECT COUNT(*) as count FROM songs');
-    final totalSongs = Sqflite.firstIntValue(songsCount) ?? 0;
-    AppLogger.info('Total songs in database after initialization: $totalSongs');
-
-    return db;
-  }
-
-  /// Copies the database from assets to the device storage using streaming.
-  /// This prevents out-of-memory errors on low-end devices.
-  Future<void> _copyDatabaseFromAssets(String path) async {
-    try {
-      await Directory(dirname(path)).create(recursive: true);
-      
-      final assetPath = join('assets', _dbName);
-      AppLogger.info('Starting database copy from assets');
-      
-      final Stopwatch stopwatch = Stopwatch()..start();
-      
-      final ByteData data = await rootBundle.load(assetPath);
-      final Uint8List bytes = data.buffer.asUint8List(
-        data.offsetInBytes,
-        data.lengthInBytes,
-      );
-      
-      final fileSize = bytes.lengthInBytes;
-      AppLogger.debug('Database size: ${(fileSize / 1024).toStringAsFixed(2)} KB');
-      
-      final file = File(path);
-      
-      final raf = await file.open(mode: FileMode.write);
-      const chunkSize = 8192;
-      int bytesWritten = 0;
-      
-      for (int i = 0; i < bytes.length; i += chunkSize) {
-        final end = (i + chunkSize < bytes.length) ? i + chunkSize : bytes.length;
-        final chunk = bytes.sublist(i, end);
-        await raf.writeFrom(chunk);
-        bytesWritten += chunk.length;
-        
-        if (bytesWritten % (1024 * 100) == 0) {
-          final progress = (bytesWritten / fileSize * 100).toStringAsFixed(1);
-          AppLogger.debug('Database copy progress: $progress%');
+    return await openDatabase(
+      path,
+      version: _dbVersion,
+      onCreate: (db, version) async {
+        await _createDb(db);
+        if (version >= 4) {
+           await _migrateV3ToV4(db);
         }
-      }
-      
-      await raf.close();
-      
-      stopwatch.stop();
-      AppLogger.info('Database copied successfully in ${stopwatch.elapsedMilliseconds}ms');
-    } catch (e) {
-      AppLogger.error('Failed to copy database from assets: $e');
-      throw Exception('Failed to copy database from assets: $e');
-    }
-  }
-
-  /// Migrates the database when version changes.
-  Future<void> _migrateDatabase(String path, int oldVersion) async {
-    // Backup existing user data
-    final db = await openDatabase(path);
-
-    // Store user-created categories and their song associations
-    final userCategories = await db.query(
-      'categories',
-      where: 'id > 1',
+        if (version >= 5) {
+           await _migrateV4ToV5(db);
+        }
+      },
+      onUpgrade: _onUpgrade,
     );
-
-    final songCategories = await db.query('song_categories');
-
-    await db.close();
-
-    // Copy new database from assets
-    await _copyDatabaseFromAssets(path);
-
-    // Restore user data
-    final newDb = await openDatabase(path);
-
-    // Restore categories
-    for (final category in userCategories) {
-      await newDb.insert('categories', category);
-    }
-
-    // Restore song-category associations
-    for (final sc in songCategories) {
-      await newDb.insert('song_categories', sc);
-    }
-
-    await newDb.close();
   }
 
-  /// Handles database upgrades.
+  Future<void> _createDb(Database db) async {
+    await db.execute('''
+      CREATE TABLE songs(
+        id INTEGER PRIMARY KEY,
+        title TEXT NOT NULL,
+        lyrics TEXT,
+        tune TEXT,
+        place TEXT,
+        kaumaram_id TEXT,
+        words TEXT,
+        meanings TEXT,
+        search_content TEXT,
+        is_favorite INTEGER DEFAULT 0
+      )
+    ''');
+    
+    await db.execute('''
+      CREATE TABLE categories(
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        name TEXT NOT NULL UNIQUE
+      )
+    ''');
+
+    await db.execute('''
+      CREATE TABLE song_categories(
+        song_id INTEGER,
+        category_id INTEGER,
+        PRIMARY KEY (song_id, category_id),
+        FOREIGN KEY(song_id) REFERENCES songs(id) ON DELETE CASCADE,
+        FOREIGN KEY(category_id) REFERENCES categories(id) ON DELETE CASCADE
+      )
+    ''');
+
+    await db.execute('''
+      CREATE TABLE temples(
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        name TEXT NOT NULL UNIQUE,
+        song_count INTEGER DEFAULT 0
+      )
+    ''');
+
+    await db.insert('categories', {'id': 1, 'name': 'Favorites'});
+  }
+
+  Future<void> _migrateV1ToV2(Database db) async {
+      try {
+        await db.execute('ALTER TABLE songs ADD COLUMN is_favorite INTEGER DEFAULT 0');
+      } catch (_) {}
+  }
+  
+  Future<void> _migrateV2ToV3(Database db) async {
+      // Placeholder
+  }
+
+  /// Migrates from version 3 to 4: Add highlights and notes tables.
+  Future<void> _migrateV3ToV4(Database db) async {
+    AppLogger.info('Migrating to v4: Creating highlights and notes tables');
+    
+    // Create Highlights table
+    await db.execute('''
+      CREATE TABLE IF NOT EXISTS highlights(
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        song_id INTEGER NOT NULL,
+        verse_index INTEGER NOT NULL,
+        text_content TEXT,
+        created_at TEXT NOT NULL,
+        FOREIGN KEY(song_id) REFERENCES songs(id) ON DELETE CASCADE
+      )
+    ''');
+    
+    // Create Notes table
+    await db.execute('''
+      CREATE TABLE IF NOT EXISTS notes(
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        song_id INTEGER NOT NULL,
+        content TEXT NOT NULL,
+        created_at TEXT NOT NULL,
+        updated_at TEXT NOT NULL,
+        FOREIGN KEY(song_id) REFERENCES songs(id) ON DELETE CASCADE
+      )
+    ''');
+  }
+
+  // ... (previous migrations)
+
   Future<void> _onUpgrade(Database db, int oldVersion, int newVersion) async {
     // Handle version 1 to 2 migration - Add is_favorite column
     if (oldVersion < 2) {
@@ -161,80 +145,131 @@ class DatabaseHelper {
     if (oldVersion < 3) {
       await _migrateV2ToV3(db);
     }
-  }
+    
+    // Handle version 3 to 4 migration - Add highlights and notes tables
+    if (oldVersion < 4) {
+      await _migrateV3ToV4(db);
+    }
 
-  /// Migrates from version 1 to 2: Add is_favorite column to songs table.
-  Future<void> _migrateV1ToV2(Database db) async {
-    try {
-      // Add is_favorite column to songs table
-      await db.execute('ALTER TABLE songs ADD COLUMN is_favorite INTEGER DEFAULT 0');
-
-      // Migrate existing favorites from song_categories table
-      // Get all songs that are in favorites category (category_id = 1)
-      final favoriteSongs = await db.rawQuery('''
-        SELECT DISTINCT song_id
-        FROM song_categories
-        WHERE category_id = 1
-      ''');
-
-      // Update is_favorite for these songs
-      await db.transaction((txn) async {
-        for (final song in favoriteSongs) {
-          await txn.update(
-            'songs',
-            {'is_favorite': 1},
-            where: 'id = ?',
-            whereArgs: [song['song_id']],
-          );
-        }
-      });
-
-      AppLogger.info('Migrated ${favoriteSongs.length} favorite songs to is_favorite column');
-    } catch (e) {
-      AppLogger.error('Failed to migrate to v2: $e');
-      // Continue even if migration fails, column may already exist
+    // Handle version 4 to 5 migration - Add temples table and populate
+    if (oldVersion < 5) {
+      await _migrateV4ToV5(db);
     }
   }
 
-  /// Migrates from version 2 to 3: No-op as we're using LIKE queries instead of FTS.
-  Future<void> _migrateV2ToV3(Database db) async {
-    AppLogger.info('Migration to v3: No changes needed, using LIKE queries');
-  }
+  // ... (existing migrations)
 
-  /// Creates FTS (Full-Text Search) table for fast search.
-  Future<void> _createFTSTable(Database db) async {
+  /// Migrates from version 4 to 5: Add temples table and populate it.
+  Future<void> _migrateV4ToV5(Database db) async {
+    AppLogger.info('Migrating to v5: Creating and populating temples table');
+    
+    // Create Temples table
     await db.execute('''
-      CREATE VIRTUAL TABLE IF NOT EXISTS songs_fts
-      USING fts5(
-        title,
-        lyrics,
-        place,
-        tune,
-        kaumaram_id,
-        pathavurai
+      CREATE TABLE IF NOT EXISTS temples(
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        name TEXT NOT NULL UNIQUE,
+        song_count INTEGER DEFAULT 0
       )
     ''');
+
+    // Populate Temples table from existing songs
+    // Extract unique places and their counts
+    final List<Map<String, dynamic>> places = await db.rawQuery('''
+      SELECT place, COUNT(*) as count 
+      FROM songs 
+      WHERE place IS NOT NULL AND place != '' 
+      GROUP BY place
+    ''');
+
+    final batch = db.batch();
+    for (final place in places) {
+      batch.insert('temples', {
+        'name': place['place'],
+        'song_count': place['count']
+      }, conflictAlgorithm: ConflictAlgorithm.replace);
+    }
+    await batch.commit(noResult: true);
+    AppLogger.info('Populated temples table with ${places.length} entries');
   }
 
-  /// Populates FTS table with existing songs data.
-  Future<void> _populateFTSTable(Database db) async {
-    final songs = await db.query('songs');
-    await db.transaction((txn) async {
-      for (final song in songs) {
-        await txn.insert('songs_fts', {
-          'rowid': song['id'],
-          'title': song['title'],
-          'lyrics': song['lyrics'],
-          'place': song['place'],
-          'tune': song['tune'],
-          'kaumaram_id': song['kaumaram_id'].toString(),
-          'pathavurai': song['pathavurai'] ?? '',
-        });
-      }
-    });
+  // ... (Highlights and Notes methods)
+
+  // --- Highlights Methods ---
+  
+  Future<int> addHighlight(Highlight highlight) async {
+    final db = await database;
+    return await db.insert('highlights', highlight.toMap());
+  }
+  
+  Future<void> removeHighlight(int songId, int verseIndex) async {
+    final db = await database;
+    await db.delete(
+      'highlights', 
+      where: 'song_id = ? AND verse_index = ?',
+      whereArgs: [songId, verseIndex]
+    );
+  }
+  
+  Future<List<Highlight>> getHighlightsForSong(int songId) async {
+    final db = await database;
+    final maps = await db.query(
+      'highlights',
+      where: 'song_id = ?',
+      whereArgs: [songId],
+    );
+    return List.generate(maps.length, (i) => Highlight.fromMap(maps[i]));
+  }
+  
+  Future<List<Highlight>> getAllHighlights() async {
+    final db = await database;
+    final maps = await db.query('highlights', orderBy: 'created_at DESC');
+    return List.generate(maps.length, (i) => Highlight.fromMap(maps[i]));
   }
 
-  // --- Query Methods (No changes needed here) ---
+  // --- Notes Methods ---
+
+  Future<int> saveNote(Note note) async {
+    final db = await database;
+    final existing = await db.query('notes', where: 'song_id = ?', whereArgs: [note.songId]);
+    
+    if (existing.isNotEmpty) {
+      return await db.update(
+        'notes', 
+        {
+          'content': note.content,
+          'updated_at': DateTime.now().toIso8601String(),
+        },
+        where: 'song_id = ?',
+        whereArgs: [note.songId]
+      );
+    } else {
+      return await db.insert('notes', note.toMap());
+    }
+  }
+  
+  Future<Note?> getNoteForSong(int songId) async {
+    final db = await database;
+    final maps = await db.query(
+      'notes',
+      where: 'song_id = ?',
+      whereArgs: [songId],
+    );
+    if (maps.isEmpty) return null;
+    return Note.fromMap(maps.first);
+  }
+  
+  Future<List<Note>> getAllNotes() async {
+    final db = await database;
+    final maps = await db.query('notes', orderBy: 'updated_at DESC');
+    return List.generate(maps.length, (i) => Note.fromMap(maps[i]));
+  }
+  
+  Future<void> deleteNote(int songId) async {
+     final db = await database;
+     await db.delete('notes', where: 'song_id = ?', whereArgs: [songId]);
+  }
+
+  // --- Query Methods ---
 
   Future<List<Song>> getAllSongs() async {
     final db = await database;
@@ -364,6 +399,17 @@ class DatabaseHelper {
     }, conflictAlgorithm: ConflictAlgorithm.ignore);
   }
 
+  Future<int> updateCategory(int id, String name) async {
+    final db = await database;
+    return await db.update(
+      'categories',
+      {'name': name},
+      where: 'id = ?',
+      whereArgs: [id],
+      conflictAlgorithm: ConflictAlgorithm.fail,
+    );
+  }
+
   Future<void> deleteCategory(int id) async {
     final db = await database;
     await db.delete('categories', where: 'id = ?', whereArgs: [id]);
@@ -400,7 +446,6 @@ class DatabaseHelper {
   Future<List<Song>> getSongsByCategoryId(int categoryId) async {
     final db = await database;
     
-    // Special handling for Favorites category (id = 1)
     if (categoryId == 1) {
       final List<Map<String, dynamic>> maps = await db.query(
         'songs',
@@ -411,7 +456,6 @@ class DatabaseHelper {
       return List.generate(maps.length, (i) => Song.fromMap(maps[i]));
     }
     
-    // For other categories, use the junction table
     final List<Map<String, dynamic>> maps = await db.rawQuery(
       '''
       SELECT s.* FROM songs s
@@ -429,6 +473,24 @@ class DatabaseHelper {
       'songs',
       where: 'is_favorite = ?',
       whereArgs: [1],
+      orderBy: 'title',
+    );
+    return List.generate(maps.length, (i) => Song.fromMap(maps[i]));
+  }
+
+  // --- Temples Methods ---
+
+  Future<List<Map<String, dynamic>>> getAllTemples() async {
+    final db = await database;
+    return await db.query('temples', orderBy: 'name');
+  }
+
+  Future<List<Song>> getSongsByTemple(String templeName) async {
+    final db = await database;
+    final List<Map<String, dynamic>> maps = await db.query(
+      'songs',
+      where: 'place = ?',
+      whereArgs: [templeName],
       orderBy: 'title',
     );
     return List.generate(maps.length, (i) => Song.fromMap(maps[i]));

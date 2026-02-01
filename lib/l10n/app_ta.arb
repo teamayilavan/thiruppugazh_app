@@ -5,6 +5,9 @@
   "categories": "வகைகள்",
   "search": "தேடு",
   "settings": "அமைப்புகள்",
+  "myLibrary": "எனது நூலகம்",
+  "temples": "கோயில்கள்",
+  "more": "மேலும்",
   
   "exitAppTitle": "செயலியை வெளியேற?",
   "exitAppMessage": "திருப்புகழ் செயலியை மூட விரும்புகிறீர்களா?",
@@ -27,6 +30,9 @@
   "createCategory": "வகை உருவாக்கு",
   "cancel": "ரத்துசெய்",
   "save": "சேமி",
+  "delete": "நீக்கு",
+  "deleteNote": "குறிப்பை நீக்கு",
+  "deleteNoteConfirmation": "இந்த குறிப்பை நிச்சயமாக நீக்க விரும்புகிறீர்களா?",
   
   "favorites": "பிடித்தவை",
   

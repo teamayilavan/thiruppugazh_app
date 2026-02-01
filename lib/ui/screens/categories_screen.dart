@@ -35,41 +35,48 @@ class CategoriesScreen extends StatelessWidget {
               }
 
               final categories = snapshot.data!;
+              // Split categories into favorites and custom
+              final favorites = categories.where((c) => c.id == 1).toList();
+              final customCategories = categories.where((c) => c.id != 1).toList();
+
               return Scrollbar(
-                child: ListView.builder(
-                  itemCount: categories.length,
-                  itemBuilder: (context, index) {
-                    final category = categories[index];
-                    return Semantics(
-                      button: true,
-                      label: '${category.name} category',
-                      hint: '${category.songCount} songs',
-                      child: ListTile(
-                        leading: Icon(
-                          category.name == 'Favorites'
-                              ? Icons.favorite
-                              : Icons.folder_open_outlined,
-                        ),
-                        title: Text(category.name),
-                        trailing: Text(
-                          category.songCount.toString(),
-                          style: TextStyle(
-                            color: Theme.of(context).colorScheme.primary,
-                            fontWeight: FontWeight.bold,
+                child: ListView(
+                  padding: const EdgeInsets.only(bottom: 80), // Space for FAB
+                  children: [
+                    // Favorites Section
+                    if (favorites.isNotEmpty) ...favorites.map((category) => _buildCategoryTile(context, category)),
+                    
+                    if (favorites.isNotEmpty) const Divider(),
+
+                    // Custom Categories Header
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(16, 16, 16, 8),
+                      child: Text(
+                        AppStrings.customCategories,
+                        style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                              color: Theme.of(context).colorScheme.primary,
+                              fontWeight: FontWeight.bold,
+                            ),
+                      ),
+                    ),
+
+                    // Custom Categories List or Empty State
+                    if (customCategories.isEmpty)
+                      Center(
+                        child: Padding(
+                          padding: const EdgeInsets.all(32.0),
+                          child: Text(
+                            AppStrings.noCustomCategories,
+                            textAlign: TextAlign.center,
+                            style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                                  color: Theme.of(context).colorScheme.onSurfaceVariant,
+                                ),
                           ),
                         ),
-                        // ✨ The onTap is simple again. No need for setState.
-                        onTap: () {
-                          Navigator.of(context).push(
-                            MaterialPageRoute(
-                              builder: (context) =>
-                                  SongListScreen(category: category),
-                            ),
-                          );
-                        },
-                      ),
-                    );
-                  },
+                      )
+                    else
+                      ...customCategories.map((category) => _buildCategoryTile(context, category)),
+                  ],
                 ),
               );
             },
@@ -81,6 +88,7 @@ class CategoriesScreen extends StatelessWidget {
         label: 'Create new category',
         hint: 'Tap to create a new song category',
         child: FloatingActionButton(
+          heroTag: 'add_category_fab',
           onPressed: () {
             // This dialog now triggers a repository method, which will
             // automatically update UI thanks to the Consumer.
@@ -89,6 +97,76 @@ class CategoriesScreen extends StatelessWidget {
           tooltip: 'Create Category',
           child: const Icon(Icons.add),
         ),
+      ),
+    );
+  }
+
+  Widget _buildCategoryTile(BuildContext context, Category category) {
+    return Semantics(
+      button: true,
+      label: '${category.name} category',
+      hint: '${category.songCount} songs',
+      child: ListTile(
+        leading: Icon(
+          category.name == 'Favorites'
+              ? Icons.favorite
+              : Icons.folder_open_outlined,
+        ),
+        title: Text(category.name),
+        trailing: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Text(
+              category.songCount.toString(),
+              style: TextStyle(
+                color: Theme.of(context).colorScheme.primary,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            if (category.id != 1) ...[ // ID 1 is Favorites
+              const SizedBox(width: 8),
+              PopupMenuButton<String>(
+                icon: const Icon(Icons.more_vert),
+                onSelected: (value) {
+                  if (value == 'rename') {
+                    _showRenameCategoryDialog(context, category);
+                  } else if (value == 'delete') {
+                    _showDeleteConfirmationDialog(context, category);
+                  }
+                },
+                itemBuilder: (BuildContext context) => [
+                  const PopupMenuItem(
+                    value: 'rename',
+                    child: Row(
+                      children: [
+                        Icon(Icons.edit, size: 20),
+                        SizedBox(width: 8),
+                        Text('Rename'),
+                      ],
+                    ),
+                  ),
+                  const PopupMenuItem(
+                    value: 'delete',
+                    child: Row(
+                      children: [
+                        Icon(Icons.delete, size: 20, color: Colors.red),
+                        SizedBox(width: 8),
+                        Text('Delete', style: TextStyle(color: Colors.red)),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ],
+        ),
+        onTap: () {
+          Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (context) => SongListScreen(category: category),
+            ),
+          );
+        },
       ),
     );
   }
@@ -218,6 +296,150 @@ class CategoriesScreen extends StatelessWidget {
               ],
             );
           },
+        );
+      },
+    );
+  }
+
+  void _showRenameCategoryDialog(BuildContext context, Category category) {
+    final TextEditingController controller = TextEditingController(text: category.name);
+    final formKey = GlobalKey<FormState>();
+
+    showDialog(
+      context: context,
+      builder: (BuildContext dialogContext) {
+        bool isSaving = false;
+        return StatefulBuilder(
+          builder: (context, setState) {
+            return AlertDialog(
+              title: const Text('Rename Category'),
+              content: Form(
+                key: formKey,
+                child: TextFormField(
+                  controller: controller,
+                  autofocus: true,
+                  decoration: const InputDecoration(
+                    labelText: AppStrings.categoryName,
+                    border: OutlineInputBorder(),
+                  ),
+                  validator: (value) {
+                    if (value == null || value.trim().isEmpty) {
+                      return AppStrings.pleaseEnterCategoryName;
+                    }
+                    final trimmed = value.trim();
+                    if (trimmed.length < AppConstants.categoryMinNameLength) {
+                      return AppStrings.categoryMinLength;
+                    }
+                    if (trimmed.length > AppConstants.categoryMaxNameLength) {
+                      return AppStrings.categoryMaxLength;
+                    }
+                    final sanitized = trimmed.replaceAll(RegExp(r'[^\w\s]'), '').trim();
+                    if (sanitized.isEmpty) {
+                      return AppStrings.enterValidCategoryName;
+                    }
+                    return null;
+                  },
+                ),
+              ),
+              actions: [
+                TextButton(
+                  onPressed: isSaving ? null : () => Navigator.of(dialogContext).pop(),
+                  child: const Text(AppStrings.cancel),
+                ),
+                FilledButton(
+                  onPressed: isSaving
+                      ? null
+                      : () async {
+                          if (formKey.currentState!.validate()) {
+                            final repo = Provider.of<SongRepository>(context, listen: false);
+                            final newName = controller.text.trim();
+
+                            if (newName == category.name) {
+                              Navigator.of(dialogContext).pop();
+                              return;
+                            }
+
+                            setState(() {
+                              isSaving = true;
+                            });
+
+                            try {
+                              // Check for duplicates
+                              final categories = await repo.getAllCategories();
+                              final isDuplicate = categories.any(
+                                (cat) => cat.id != category.id && 
+                                        cat.name.toLowerCase() == newName.toLowerCase(),
+                              );
+
+                              if (isDuplicate) {
+                                setState(() {
+                                  isSaving = false;
+                                });
+                                if (dialogContext.mounted) {
+                                  ScaffoldMessenger.of(dialogContext).showSnackBar(
+                                    const SnackBar(content: Text(AppStrings.categoryExists)),
+                                  );
+                                }
+                                return;
+                              }
+
+                              await repo.updateCategory(category.id!, newName);
+
+                              if (dialogContext.mounted) {
+                                Navigator.of(dialogContext).pop();
+                              }
+                            } catch (e) {
+                              setState(() {
+                                isSaving = false;
+                              });
+                              if (dialogContext.mounted) {
+                                ScaffoldMessenger.of(dialogContext).showSnackBar(
+                                  SnackBar(content: Text('Error updating category: $e')),
+                                );
+                              }
+                            }
+                          }
+                        },
+                  child: isSaving
+                      ? const SizedBox(
+                          width: 16,
+                          height: 16,
+                          child: CircularProgressIndicator(strokeWidth: 2),
+                        )
+                      : const Text('Save'),
+                ),
+              ],
+            );
+          },
+        );
+      },
+    );
+  }
+
+  void _showDeleteConfirmationDialog(BuildContext context, Category category) {
+    showDialog(
+      context: context,
+      builder: (BuildContext dialogContext) {
+        return AlertDialog(
+          title: const Text('Delete Category'),
+          content: Text('Are you sure you want to delete "${category.name}"? This action cannot be undone.'),
+          actions: [
+             TextButton(
+              onPressed: () => Navigator.of(dialogContext).pop(),
+              child: const Text('Cancel'),
+            ),
+            FilledButton(
+              onPressed: () async {
+                 final repo = Provider.of<SongRepository>(context, listen: false);
+                 await repo.deleteCategory(category.id!);
+                 if (dialogContext.mounted) {
+                   Navigator.of(dialogContext).pop();
+                 }
+              },
+               style: FilledButton.styleFrom(backgroundColor: Colors.red),
+              child: const Text('Delete'),
+            ),
+          ],
         );
       },
     );

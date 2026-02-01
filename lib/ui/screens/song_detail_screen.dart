@@ -4,6 +4,8 @@ import 'package:share_plus/share_plus.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../../data/models/song_model.dart';
+import '../../data/models/highlight_model.dart';
+import '../../data/models/note_model.dart';
 import '../../data/repositories/song_repository.dart';
 import '../widgets/add_to_category_dialog.dart';
 import '../../../constants/app_strings.dart';
@@ -19,6 +21,8 @@ class SongDetailScreen extends StatefulWidget {
 class _SongDetailScreenState extends State<SongDetailScreen> {
   bool _isFavorite = false;
   bool _isFavoriteLoading = false;
+  List<Highlight> _highlights = [];
+  Note? _note;
 
   @override
   void initState() {
@@ -29,10 +33,15 @@ class _SongDetailScreenState extends State<SongDetailScreen> {
 
   void _loadCategoryInfo(SongRepository repo) async {
     final categoryIds = await repo.getCategoryIdsForSong(widget.song.id);
+    final highlights = await repo.getHighlightsForSong(widget.song.id);
+    final note = await repo.getNoteForSong(widget.song.id);
+
     if (mounted) {
       setState(() {
         widget.song.categoryIds = categoryIds;
         _isFavorite = widget.song.isFavorite;
+        _highlights = highlights;
+        _note = note;
       });
     }
   }
@@ -76,6 +85,94 @@ class _SongDetailScreenState extends State<SongDetailScreen> {
         ),
       );
     }
+    }
+
+
+  void _toggleHighlight(int verseIndex, String content) async {
+    final repo = Provider.of<SongRepository>(context, listen: false);
+    final existingIndex = _highlights.indexWhere((h) => h.verseIndex == verseIndex);
+
+    if (existingIndex != -1) {
+      // Remove
+      await repo.removeHighlight(widget.song.id, verseIndex);
+      setState(() {
+        _highlights.removeAt(existingIndex);
+      });
+    } else {
+      // Add
+      final highlight = Highlight(
+        songId: widget.song.id,
+        verseIndex: verseIndex,
+        textContent: content,
+        createdAt: DateTime.now(),
+      );
+      await repo.addHighlight(highlight);
+      setState(() {
+        _highlights.add(highlight);
+      });
+    }
+  }
+
+  void _showNoteDialog() {
+    final TextEditingController noteController = 
+        TextEditingController(text: _note?.content ?? '');
+        
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+          title: const Text('Song Note'),
+          content: SizedBox(
+            height: MediaQuery.of(context).size.height * 0.7,
+            width: double.maxFinite,
+            child: TextField(
+              controller: noteController,
+              maxLines: null,
+              expands: true,
+              textAlignVertical: TextAlignVertical.top,
+              decoration: const InputDecoration(
+                hintText: 'Enter your thoughts here!',
+                border: OutlineInputBorder(),
+              ),
+            ),
+          ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(context),
+            child: const Text('Cancel'),
+          ),
+          FilledButton(
+            onPressed: () async {
+              final content = noteController.text.trim();
+              final repo = Provider.of<SongRepository>(context, listen: false);
+              
+              if (content.isEmpty) {
+                if (_note != null) {
+                  await repo.deleteNote(widget.song.id);
+                }
+              } else {
+                final note = Note(
+                  songId: widget.song.id,
+                  content: content,
+                  createdAt: _note?.createdAt ?? DateTime.now(),
+                  updatedAt: DateTime.now(),
+                );
+                await repo.saveNote(note);
+              }
+              
+              // Reload note
+              final updatedNote = await repo.getNoteForSong(widget.song.id);
+              if (mounted) {
+                setState(() {
+                  _note = updatedNote;
+                });
+                Navigator.pop(context);
+              }
+            },
+            child: const Text('Save'),
+          ),
+        ],
+      ),
+    );
   }
 
 
@@ -147,6 +244,33 @@ class _SongDetailScreenState extends State<SongDetailScreen> {
     }
   }
 
+  void _launchGoogleSearch() async {
+    final messenger = ScaffoldMessenger.of(context);
+
+    final songTitle = Uri.encodeComponent(widget.song.title);
+    final url = Uri.parse(
+      'https://www.google.com/search?q=திருப்புகழ்%20$songTitle',
+    );
+
+    if (!_isValidUrl(url, ['google.com', 'www.google.com'])) {
+      messenger.showSnackBar(
+        const SnackBar(content: Text('Invalid URL')),
+      );
+      return;
+    }
+
+    final confirmed = await _showUrlConfirmationDialog(context, 'Google');
+    if (confirmed == true) {
+      if (!await launchUrl(url)) {
+        messenger.showSnackBar(
+          SnackBar(
+            content: Text('Could not launch Google for ${widget.song.title}'),
+          ),
+        );
+      }
+    }
+  }
+
   void _launchCustomUrl() async {
     final messenger = ScaffoldMessenger.of(context);
 
@@ -210,6 +334,11 @@ class _SongDetailScreenState extends State<SongDetailScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final buttonStyle = FilledButton.styleFrom(
+      backgroundColor: Theme.of(context).colorScheme.primaryContainer,
+      foregroundColor: Theme.of(context).colorScheme.onPrimaryContainer,
+    );
+
     return Scaffold(
       body: CustomScrollView(
         slivers: [
@@ -253,10 +382,31 @@ class _SongDetailScreenState extends State<SongDetailScreen> {
                 final paragraph = widget.song.lyricsList[index];
                 if (paragraph.trim().isEmpty) return const SizedBox.shrink();
                 
-                return SelectableText(
-                  paragraph,
-                  style: const TextStyle(fontSize: 16, height: 1.2),
+                return InkWell(
+                  onLongPress: () => _toggleHighlight(index, paragraph),
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: _highlights.any((h) => h.verseIndex == index)
+                          ? Colors.yellow.withOpacity(0.3)
+                          : null,
+                      borderRadius: BorderRadius.circular(4),
+                    ),
+                    padding: const EdgeInsets.symmetric(vertical: 4.0, horizontal: 2.0),
+                    child: SelectableText(
+                      paragraph,
+                      style: const TextStyle(fontSize: 16, height: 1.2),
+                      // Pass tap events through if not selecting text? 
+                      // SelectableText captures gestures, so InkWell might conflict if precise.
+                      // However, onLongPress on InkWell wraps the container. 
+                      // SelectableText consumes long press for selection. 
+                      // Alternatively, we use GestureDetector -> onDoubleTap to highlight since long press selects.
+                      // Or creating a custom context menu for SelectableText is harder.
+                      // Let's rely on Double Tap for highlighting to avoid conflict with text selection.
+                    ),
+                  ),
                 );
+                // Note: Double Tap is better than Long Press because SelectableText needs Long Press.
+                // Switching InkWell onLongPress to onDoubleTap in next edit if needed, but trying LongPress on parent first.
               },
               separatorBuilder: (context, index) {
                 // Calculate separator based on tuneList length to group lines into stanzas
@@ -292,37 +442,62 @@ class _SongDetailScreenState extends State<SongDetailScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
+                  FilledButton.tonalIcon(
+                    style: buttonStyle,
+                    icon: Icon(_note != null ? Icons.note : Icons.note_add_outlined),
+                    label: const Text('Note'),
+                    onPressed: _showNoteDialog,
+                  ),
+                  const SizedBox(height: 12),
                   Row(
                     children: [
                       Expanded(
-                        child: ElevatedButton.icon(
-                          icon: const Icon(Icons.description),
-                          label: const Text('Share Lyrics'),
+                        child: FilledButton.tonalIcon(
+                          style: buttonStyle,
+                          icon: const Icon(Icons.share_outlined),
+                          label: const Text('Share Text'),
                           onPressed: _shareSongText,
                         ),
                       ),
-                      const SizedBox(width: 12),
+                      const SizedBox(width: 8),
                       Expanded(
-                        child: ElevatedButton.icon(
-                          icon: const Icon(Icons.share),
-                          label: const Text('Share'),
+                        child: FilledButton.tonalIcon(
+                          style: buttonStyle,
+                          icon: const Icon(Icons.install_mobile),
+                          label: const Text('Share Link'),
                           onPressed: _shareSongLink,
                         ),
                       ),
                     ],
                   ),
                   const SizedBox(height: 12),
-                  ElevatedButton.icon(
-                    icon: const Icon(Icons.play_circle_outline),
+                  FilledButton.tonalIcon(
+                    style: buttonStyle,
+                    icon: const Icon(Icons.language),
+                    label: const Text('Open Kaumaram Page'),
+                    onPressed: _launchCustomUrl,
+                  ),
+                  const SizedBox(height: 12),
+                  FilledButton.tonalIcon(
+                    style: buttonStyle,
+                    icon: const Icon(Icons.smart_display),
                     label: const Text('Search on YouTube'),
                     onPressed: _launchYouTubeSearch,
                   ),
                   const SizedBox(height: 12),
-                  ElevatedButton.icon(
-                    icon: const Icon(Icons.link),
-                    label: const Text('Open Kaumaram Page'),
-                    onPressed: _launchCustomUrl,
+                  FilledButton.tonalIcon(
+                    style: buttonStyle,
+                    icon: const Icon(Icons.search),
+                    label: const Text('Search in Google'),
+                    onPressed: _launchGoogleSearch,
                   ),
+                  // const SizedBox(height: 12),
+                  // FilledButton.tonalIcon(
+                  //   style: buttonStyle,
+                  //   icon: const Icon(Icons.language),
+                  //   label: const Text('Open Kaumaram Page'),
+                  //   onPressed: _launchCustomUrl,
+                  // ),
                   const SizedBox(height: 48),
                 ],
               ),

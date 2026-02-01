@@ -207,27 +207,11 @@ class SearchFilterOptions extends StatelessWidget {
             },
           ),
           FilterChip(
-            label: const Text('Tune'),
-            selected: filter.searchTune,
-            onSelected: (_) {
-              onFilterChanged(filter.copyWith(searchTune: !filter.searchTune));
-            },
-          ),
-          FilterChip(
             label: const Text('Kaumaram ID'),
             selected: filter.searchKaumaramId,
             onSelected: (_) {
               onFilterChanged(
                 filter.copyWith(searchKaumaramId: !filter.searchKaumaramId),
-              );
-            },
-          ),
-          FilterChip(
-            label: const Text('Explanation'),
-            selected: filter.searchPathavurai,
-            onSelected: (_) {
-              onFilterChanged(
-                filter.copyWith(searchPathavurai: !filter.searchPathavurai),
               );
             },
           ),

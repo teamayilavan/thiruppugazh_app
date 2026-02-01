@@ -5,6 +5,9 @@
   "categories": "Categories",
   "search": "Search",
   "settings": "Settings",
+  "myLibrary": "My Library",
+  "temples": "Temples",
+  "more": "More",
   
   "exitAppTitle": "Exit App?",
   "exitAppMessage": "Are you sure you want to close Thiruppugazh?",
@@ -27,6 +30,9 @@
   "createCategory": "Create Category",
   "cancel": "Cancel",
   "save": "Save",
+  "delete": "Delete",
+  "deleteNote": "Delete Note",
+  "deleteNoteConfirmation": "Are you sure you want to delete this note?",
   
   "favorites": "Favorites",
   

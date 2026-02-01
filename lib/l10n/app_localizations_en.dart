@@ -21,6 +21,15 @@ class AppLocalizationsEn extends AppLocalizations {
   String get settings => 'Settings';
 
   @override
+  String get myLibrary => 'My Library';
+
+  @override
+  String get temples => 'Temples';
+
+  @override
+  String get more => 'More';
+
+  @override
   String get exitAppTitle => 'Exit App?';
 
   @override
@@ -76,6 +85,16 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get save => 'Save';
+
+  @override
+  String get delete => 'Delete';
+
+  @override
+  String get deleteNote => 'Delete Note';
+
+  @override
+  String get deleteNoteConfirmation =>
+      'Are you sure you want to delete this note?';
 
   @override
   String get favorites => 'Favorites';

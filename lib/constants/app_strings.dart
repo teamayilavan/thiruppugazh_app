@@ -58,6 +58,8 @@ class AppStrings {
   static const String categoryExists = 'A category with this name already exists.';
   static const String errorCreatingCategory = 'Error creating category';
   static const String create = 'Create';
+  static const String customCategories = 'Custom Categories';
+  static const String noCustomCategories = 'No custom categories created';
 
   // ==================== Search Screen ====================
   static const String globalSearch = 'Global Search';

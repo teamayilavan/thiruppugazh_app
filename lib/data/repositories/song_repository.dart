@@ -4,11 +4,57 @@ import '../database/database_helper.dart';
 import '../models/category_model.dart';
 import '../models/song_model.dart';
 import '../models/search_filter.dart';
+import '../models/highlight_model.dart';
+import '../models/note_model.dart';
 
 /// A repository that acts as a mediator between UI and data source (DatabaseHelper).
 /// It extends ChangeNotifier to notify of data changes.
 class SongRepository extends ChangeNotifier {
   final dbHelper = DatabaseHelper();
+
+  // --- Song and Meaning Methods ---
+  
+  // --- Highlights Methods ---
+  
+  Future<int> addHighlight(Highlight highlight) async {
+    final id = await dbHelper.addHighlight(highlight);
+    notifyListeners();
+    return id;
+  }
+  
+  Future<void> removeHighlight(int songId, int verseIndex) async {
+    await dbHelper.removeHighlight(songId, verseIndex);
+    notifyListeners();
+  }
+  
+  Future<List<Highlight>> getHighlightsForSong(int songId) async {
+    return await dbHelper.getHighlightsForSong(songId);
+  }
+  
+  Future<List<Highlight>> getAllHighlights() async {
+    return await dbHelper.getAllHighlights();
+  }
+
+  // --- Notes Methods ---
+
+  Future<int> saveNote(Note note) async {
+    final id = await dbHelper.saveNote(note);
+    notifyListeners();
+    return id;
+  }
+  
+  Future<Note?> getNoteForSong(int songId) async {
+    return await dbHelper.getNoteForSong(songId);
+  }
+  
+  Future<List<Note>> getAllNotes() async {
+    return await dbHelper.getAllNotes();
+  }
+  
+  Future<void> deleteNote(int songId) async {
+    await dbHelper.deleteNote(songId);
+    notifyListeners();
+  }
 
   // --- Song and Meaning Methods ---
 
@@ -64,6 +110,12 @@ class SongRepository extends ChangeNotifier {
     final result = await dbHelper.createCategory(name);
     notifyListeners(); // Notify UI that list of categories has changed.
     return result;
+  }
+
+  /// Updates a category's name and notifies listeners.
+  Future<void> updateCategory(int id, String name) async {
+    await dbHelper.updateCategory(id, name);
+    notifyListeners();
   }
 
   /// Deletes a category and notifies listeners.

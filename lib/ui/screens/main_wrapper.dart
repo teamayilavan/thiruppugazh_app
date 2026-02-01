@@ -3,8 +3,9 @@ import 'dart:io';
 
 import 'categories_screen.dart';
 import 'home_screen.dart';
-import 'search_screen.dart';
+import 'temples_screen.dart';
 import 'settings_screen.dart';
+import 'highlights_notes_screen.dart';
 import 'package:app_links/app_links.dart';
 import 'package:provider/provider.dart';
 import '../../data/repositories/song_repository.dart';
@@ -23,11 +24,15 @@ class _MainWrapperState extends State<MainWrapper> {
 
   static const List<Widget> _widgetOptions = <Widget>[
     HomeScreen(),
+    TemplesScreen(),
     CategoriesScreen(),
-    SearchScreen(),
-    SettingsScreen(),
+    HighlightsNotesScreen(),
     SettingsScreen(),
   ];
+
+// ... (omitted AppLinks code) ...
+
+
 
   late AppLinks _appLinks;
 
@@ -136,19 +141,24 @@ class _MainWrapperState extends State<MainWrapper> {
             label: l10n.songs,
           ),
           NavigationDestination(
+            icon: const Icon(Icons.temple_hindu_outlined),
+            selectedIcon: const Icon(Icons.temple_hindu),
+            label: l10n.temples,
+          ),
+          NavigationDestination(
             icon: const Icon(Icons.category_outlined),
             selectedIcon: const Icon(Icons.category),
             label: l10n.categories,
           ),
           NavigationDestination(
-            icon: const Icon(Icons.search_outlined),
-            selectedIcon: const Icon(Icons.search),
-            label: l10n.search,
+            icon: const Icon(Icons.library_books_outlined),
+            selectedIcon: const Icon(Icons.library_books),
+            label: l10n.myLibrary,
           ),
           NavigationDestination(
-            icon: const Icon(Icons.settings_outlined),
-            selectedIcon: const Icon(Icons.settings),
-            label: l10n.settings,
+            icon: const Icon(Icons.more_horiz_outlined),
+            selectedIcon: const Icon(Icons.more_horiz),
+            label: l10n.more,
           ),
         ],
       ),

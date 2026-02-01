@@ -21,6 +21,15 @@ class AppLocalizationsTa extends AppLocalizations {
   String get settings => 'அமைப்புகள்';
 
   @override
+  String get myLibrary => 'எனது நூலகம்';
+
+  @override
+  String get temples => 'கோயில்கள்';
+
+  @override
+  String get more => 'மேலும்';
+
+  @override
   String get exitAppTitle => 'செயலியை வெளியேற?';
 
   @override
@@ -76,6 +85,16 @@ class AppLocalizationsTa extends AppLocalizations {
 
   @override
   String get save => 'சேமி';
+
+  @override
+  String get delete => 'நீக்கு';
+
+  @override
+  String get deleteNote => 'குறிப்பை நீக்கு';
+
+  @override
+  String get deleteNoteConfirmation =>
+      'இந்த குறிப்பை நிச்சயமாக நீக்க விரும்புகிறீர்களா?';
 
   @override
   String get favorites => 'பிடித்தவை';
