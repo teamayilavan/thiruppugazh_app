@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../l10n/app_localizations.dart';
 
 /// A reusable error display widget with retry functionality.
 class ErrorDisplayWidget extends StatelessWidget {
@@ -15,6 +16,7 @@ class ErrorDisplayWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     return Center(
       child: Padding(
         padding: const EdgeInsets.all(24.0),
@@ -28,7 +30,7 @@ class ErrorDisplayWidget extends StatelessWidget {
             ),
             const SizedBox(height: 16),
             Text(
-              'An error occurred',
+              l10n.anErrorOccurred,
               style: Theme.of(context).textTheme.headlineSmall,
               textAlign: TextAlign.center,
             ),
@@ -43,7 +45,7 @@ class ErrorDisplayWidget extends StatelessWidget {
               ElevatedButton.icon(
                 onPressed: onRetry,
                 icon: const Icon(Icons.refresh),
-                label: const Text('Retry'),
+                label: Text(l10n.retry),
               ),
             ],
           ],

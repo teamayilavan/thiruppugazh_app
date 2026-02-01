@@ -46,13 +46,13 @@ class _TemplesScreenState extends State<TemplesScreen> {
           }
 
           if (snapshot.hasError) {
-             return Center(child: Text('Error: ${snapshot.error}'));
+             return Center(child: Text('${AppLocalizations.of(context)!.anErrorOccurred}: ${snapshot.error}'));
           }
 
           final temples = snapshot.data ?? [];
 
           if (temples.isEmpty) {
-            return const Center(child: Text('No temples found'));
+            return Center(child: Text(AppLocalizations.of(context)!.noTemplesFound));
           }
 
           return Scrollbar(

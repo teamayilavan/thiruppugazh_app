@@ -637,6 +637,264 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Import failed'**
   String get importFailed;
+
+  /// No description provided for @songNote.
+  ///
+  /// In en, this message translates to:
+  /// **'Song Note'**
+  String get songNote;
+
+  /// No description provided for @enterThoughts.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter your thoughts here!'**
+  String get enterThoughts;
+
+  /// No description provided for @shareText.
+  ///
+  /// In en, this message translates to:
+  /// **'Share Text'**
+  String get shareText;
+
+  /// No description provided for @shareLink.
+  ///
+  /// In en, this message translates to:
+  /// **'Share Link'**
+  String get shareLink;
+
+  /// No description provided for @searchInGoogle.
+  ///
+  /// In en, this message translates to:
+  /// **'Search in Google'**
+  String get searchInGoogle;
+
+  /// No description provided for @removeFromFavorites.
+  ///
+  /// In en, this message translates to:
+  /// **'Remove from favorites'**
+  String get removeFromFavorites;
+
+  /// No description provided for @addToFavorites.
+  ///
+  /// In en, this message translates to:
+  /// **'Add to favorites'**
+  String get addToFavorites;
+
+  /// No description provided for @tapToToggleFavorite.
+  ///
+  /// In en, this message translates to:
+  /// **'Tap to toggle favorite status'**
+  String get tapToToggleFavorite;
+
+  /// No description provided for @loading.
+  ///
+  /// In en, this message translates to:
+  /// **'Loading'**
+  String get loading;
+
+  /// No description provided for @tapToAddCategories.
+  ///
+  /// In en, this message translates to:
+  /// **'Tap to add song to categories'**
+  String get tapToAddCategories;
+
+  /// No description provided for @renameCategory.
+  ///
+  /// In en, this message translates to:
+  /// **'Rename Category'**
+  String get renameCategory;
+
+  /// No description provided for @deleteCategoryTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Delete Category'**
+  String get deleteCategoryTitle;
+
+  /// No description provided for @deleteCategoryConfirmation.
+  ///
+  /// In en, this message translates to:
+  /// **'Are you sure you want to delete \"{categoryName}\"? This action cannot be undone.'**
+  String deleteCategoryConfirmation(Object categoryName);
+
+  /// No description provided for @rename.
+  ///
+  /// In en, this message translates to:
+  /// **'Rename'**
+  String get rename;
+
+  /// No description provided for @customCategories.
+  ///
+  /// In en, this message translates to:
+  /// **'Custom Categories'**
+  String get customCategories;
+
+  /// No description provided for @noCustomCategories.
+  ///
+  /// In en, this message translates to:
+  /// **'No custom categories created'**
+  String get noCustomCategories;
+
+  /// No description provided for @searchFilterTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Title'**
+  String get searchFilterTitle;
+
+  /// No description provided for @searchFilterLyrics.
+  ///
+  /// In en, this message translates to:
+  /// **'Lyrics'**
+  String get searchFilterLyrics;
+
+  /// No description provided for @searchFilterTemple.
+  ///
+  /// In en, this message translates to:
+  /// **'Temple'**
+  String get searchFilterTemple;
+
+  /// No description provided for @searchFilterKaumaramId.
+  ///
+  /// In en, this message translates to:
+  /// **'Kaumaram ID'**
+  String get searchFilterKaumaramId;
+
+  /// No description provided for @checkOutSong.
+  ///
+  /// In en, this message translates to:
+  /// **'Check out \"{songTitle}\" on the Thiruppugazh App!'**
+  String checkOutSong(Object songTitle);
+
+  /// No description provided for @tapToOpenInApp.
+  ///
+  /// In en, this message translates to:
+  /// **'Tap to open in app:'**
+  String get tapToOpenInApp;
+
+  /// No description provided for @getTheAppHere.
+  ///
+  /// In en, this message translates to:
+  /// **'Get the app here:'**
+  String get getTheAppHere;
+
+  /// No description provided for @genericError.
+  ///
+  /// In en, this message translates to:
+  /// **'An unexpected error occurred.'**
+  String get genericError;
+
+  /// No description provided for @networkError.
+  ///
+  /// In en, this message translates to:
+  /// **'Network error occurred.'**
+  String get networkError;
+
+  /// No description provided for @databaseError.
+  ///
+  /// In en, this message translates to:
+  /// **'Database error occurred.'**
+  String get databaseError;
+
+  /// No description provided for @fileNotFound.
+  ///
+  /// In en, this message translates to:
+  /// **'File not found.'**
+  String get fileNotFound;
+
+  /// No description provided for @permissionDenied.
+  ///
+  /// In en, this message translates to:
+  /// **'Permission denied.'**
+  String get permissionDenied;
+
+  /// No description provided for @timeout.
+  ///
+  /// In en, this message translates to:
+  /// **'Request timed out.'**
+  String get timeout;
+
+  /// No description provided for @required.
+  ///
+  /// In en, this message translates to:
+  /// **'This field is required.'**
+  String get required;
+
+  /// No description provided for @emailInvalid.
+  ///
+  /// In en, this message translates to:
+  /// **'Please enter a valid email address.'**
+  String get emailInvalid;
+
+  /// No description provided for @passwordTooShort.
+  ///
+  /// In en, this message translates to:
+  /// **'Password must be at least 8 characters.'**
+  String get passwordTooShort;
+
+  /// No description provided for @passwordMismatch.
+  ///
+  /// In en, this message translates to:
+  /// **'Passwords do not match.'**
+  String get passwordMismatch;
+
+  /// No description provided for @phoneInvalid.
+  ///
+  /// In en, this message translates to:
+  /// **'Please enter a valid phone number.'**
+  String get phoneInvalid;
+
+  /// No description provided for @title.
+  ///
+  /// In en, this message translates to:
+  /// **'Title'**
+  String get title;
+
+  /// No description provided for @noTemplesFound.
+  ///
+  /// In en, this message translates to:
+  /// **'No temples found'**
+  String get noTemplesFound;
+
+  /// No description provided for @noSongsFoundForTemple.
+  ///
+  /// In en, this message translates to:
+  /// **'No songs found for this temple'**
+  String get noSongsFoundForTemple;
+
+  /// No description provided for @thiruppugazhHeroImage.
+  ///
+  /// In en, this message translates to:
+  /// **'Thiruppugazh hero image'**
+  String get thiruppugazhHeroImage;
+
+  /// No description provided for @tapToViewSongDetails.
+  ///
+  /// In en, this message translates to:
+  /// **'Tap to view song details'**
+  String get tapToViewSongDetails;
+
+  /// No description provided for @highlights.
+  ///
+  /// In en, this message translates to:
+  /// **'Highlights'**
+  String get highlights;
+
+  /// No description provided for @notes.
+  ///
+  /// In en, this message translates to:
+  /// **'Notes'**
+  String get notes;
+
+  /// No description provided for @noHighlightsFound.
+  ///
+  /// In en, this message translates to:
+  /// **'No highlights yet.'**
+  String get noHighlightsFound;
+
+  /// No description provided for @noNotesFound.
+  ///
+  /// In en, this message translates to:
+  /// **'No notes yet.'**
+  String get noNotesFound;
 }
 
 class _AppLocalizationsDelegate

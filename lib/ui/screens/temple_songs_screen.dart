@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../data/database/database_helper.dart';
 import '../../data/models/song_model.dart';
+import '../../l10n/app_localizations.dart';
 import 'song_detail_screen.dart';
 
 class TempleSongsScreen extends StatefulWidget {
@@ -35,13 +36,13 @@ class _TempleSongsScreenState extends State<TempleSongsScreen> {
           }
 
           if (snapshot.hasError) {
-            return Center(child: Text('Error: ${snapshot.error}'));
+            return Center(child: Text('${AppLocalizations.of(context)!.anErrorOccurred}: ${snapshot.error}'));
           }
 
           final songs = snapshot.data ?? [];
 
           if (songs.isEmpty) {
-            return const Center(child: Text('No songs found for this temple'));
+            return Center(child: Text(AppLocalizations.of(context)!.noSongsFoundForTemple));
           }
 
           return ListView.separated(

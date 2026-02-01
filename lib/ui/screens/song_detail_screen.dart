@@ -8,7 +8,8 @@ import '../../data/models/highlight_model.dart';
 import '../../data/models/note_model.dart';
 import '../../data/repositories/song_repository.dart';
 import '../widgets/add_to_category_dialog.dart';
-import '../../../constants/app_strings.dart';
+import '../../constants/app_strings.dart';
+import '../../l10n/app_localizations.dart';
 
 class SongDetailScreen extends StatefulWidget {
   final Song song;
@@ -120,7 +121,7 @@ class _SongDetailScreenState extends State<SongDetailScreen> {
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
-          title: const Text('Song Note'),
+          title: Text(AppLocalizations.of(context)!.songNote),
           content: SizedBox(
             height: MediaQuery.of(context).size.height * 0.7,
             width: double.maxFinite,
@@ -129,16 +130,16 @@ class _SongDetailScreenState extends State<SongDetailScreen> {
               maxLines: null,
               expands: true,
               textAlignVertical: TextAlignVertical.top,
-              decoration: const InputDecoration(
-                hintText: 'Enter your thoughts here!',
-                border: OutlineInputBorder(),
+              decoration: InputDecoration(
+                hintText: AppLocalizations.of(context)!.enterThoughts,
+                border: const OutlineInputBorder(),
               ),
             ),
           ),
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(context),
-            child: const Text('Cancel'),
+            child: Text(AppLocalizations.of(context)!.cancel),
           ),
           FilledButton(
             onPressed: () async {
@@ -168,7 +169,7 @@ class _SongDetailScreenState extends State<SongDetailScreen> {
                 Navigator.pop(context);
               }
             },
-            child: const Text('Save'),
+            child: Text(AppLocalizations.of(context)!.save),
           ),
         ],
       ),
@@ -180,40 +181,43 @@ class _SongDetailScreenState extends State<SongDetailScreen> {
   void _shareSongText() {
     final song = widget.song;
 
+    final l10n = AppLocalizations.of(context)!;
     final textToShare =
         '''
-      தலைப்பு: 
+      ${l10n.title}: 
       ${song.title} 
  
-      திருத்தலம்:
+      ${l10n.temple}:
       ${song.place}
  
-      சந்தம்: 
+      ${l10n.tune}: 
       ${song.tune}
  
-      பாடல்:
+      ${l10n.lyrics}:
       ${song.lyrics}
       ''';
 
     SharePlus.instance.share(
-      ShareParams(title: 'பாடல்: ${song.title}', text: textToShare),
+      ShareParams(title: '${l10n.lyrics}: ${song.title}', text: textToShare),
     );
   }
 
   void _shareSongLink() {
     final song = widget.song;
+    final l10n = AppLocalizations.of(context)!;
+    
     // Custom scheme URI that MainWrapper detects
     final deepLink = 'thiruppugazh://song/${song.id}';
     // Fallback Play Store URL (using standard ID format, replace if actual ID differs)
     final playStoreUrl = 'https://play.google.com/store/apps/details?id=com.example.thiruppugazh';
 
     final textToShare = 
-        'Check out "${song.title}" on the Thiruppugazh App!\n\n'
-        'Tap to open in app:\n$deepLink\n\n'
-        'Get the app here:\n$playStoreUrl';
+        '${l10n.checkOutSong(song.title)}\n\n'
+        '${l10n.tapToOpenInApp}\n$deepLink\n\n'
+        '${l10n.getTheAppHere}\n$playStoreUrl';
 
     SharePlus.instance.share(
-      ShareParams(title: 'Check out ${song.title}', text: textToShare),
+      ShareParams(title: l10n.checkOutSong(song.title), text: textToShare),
     );
   }
 
@@ -315,16 +319,16 @@ class _SongDetailScreenState extends State<SongDetailScreen> {
       context: context,
       builder: (dialogContext) {
         return AlertDialog(
-          title: const Text('Open External Link'),
-          content: Text('You are about to visit $domain. Continue?'),
+          title: Text(AppLocalizations.of(context)!.openExternalLink),
+          content: Text(AppLocalizations.of(context)!.openExternalLinkConfirmation(domain)),
           actions: [
             TextButton(
               onPressed: () => Navigator.of(dialogContext).pop(false),
-              child: const Text('Cancel'),
+              child: Text(AppLocalizations.of(context)!.cancel),
             ),
             FilledButton(
               onPressed: () => Navigator.of(dialogContext).pop(true),
-              child: const Text('Open'),
+              child: Text(AppLocalizations.of(context)!.open),
             ),
           ],
         );
@@ -338,6 +342,7 @@ class _SongDetailScreenState extends State<SongDetailScreen> {
       backgroundColor: Theme.of(context).colorScheme.primaryContainer,
       foregroundColor: Theme.of(context).colorScheme.onPrimaryContainer,
     );
+    final l10n = AppLocalizations.of(context)!;
 
     return Scaffold(
       body: CustomScrollView(
@@ -365,7 +370,7 @@ class _SongDetailScreenState extends State<SongDetailScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Text('பாடல்', style: TextStyle(fontSize: 16)),
+                  Text(l10n.lyrics, style: const TextStyle(fontSize: 16)),
                   const SizedBox(height: 8),
                   const Divider(height: 16),
                   const SizedBox(height: 16),
@@ -429,7 +434,7 @@ class _SongDetailScreenState extends State<SongDetailScreen> {
             child: Padding(
               padding: const EdgeInsets.symmetric(vertical: 32.0),
                child: _buildMeaningsCard(
-                'பொருள்',
+                l10n.meaning,
                 widget.song.words,
                 widget.song.meanings,
               ),
@@ -445,7 +450,7 @@ class _SongDetailScreenState extends State<SongDetailScreen> {
                   FilledButton.tonalIcon(
                     style: buttonStyle,
                     icon: Icon(_note != null ? Icons.note : Icons.note_add_outlined),
-                    label: const Text('Note'),
+                    label: Text(l10n.songNote),
                     onPressed: _showNoteDialog,
                   ),
                   const SizedBox(height: 12),
@@ -455,7 +460,7 @@ class _SongDetailScreenState extends State<SongDetailScreen> {
                         child: FilledButton.tonalIcon(
                           style: buttonStyle,
                           icon: const Icon(Icons.share_outlined),
-                          label: const Text('Share Text'),
+                          label: Text(l10n.shareText),
                           onPressed: _shareSongText,
                         ),
                       ),
@@ -464,7 +469,7 @@ class _SongDetailScreenState extends State<SongDetailScreen> {
                         child: FilledButton.tonalIcon(
                           style: buttonStyle,
                           icon: const Icon(Icons.install_mobile),
-                          label: const Text('Share Link'),
+                          label: Text(l10n.shareLink),
                           onPressed: _shareSongLink,
                         ),
                       ),
@@ -474,30 +479,23 @@ class _SongDetailScreenState extends State<SongDetailScreen> {
                   FilledButton.tonalIcon(
                     style: buttonStyle,
                     icon: const Icon(Icons.language),
-                    label: const Text('Open Kaumaram Page'),
+                    label: Text(l10n.openKaumaramPage),
                     onPressed: _launchCustomUrl,
                   ),
                   const SizedBox(height: 12),
                   FilledButton.tonalIcon(
                     style: buttonStyle,
                     icon: const Icon(Icons.smart_display),
-                    label: const Text('Search on YouTube'),
+                    label: Text(l10n.searchOnYouTube),
                     onPressed: _launchYouTubeSearch,
                   ),
                   const SizedBox(height: 12),
                   FilledButton.tonalIcon(
                     style: buttonStyle,
                     icon: const Icon(Icons.search),
-                    label: const Text('Search in Google'),
+                    label: Text(l10n.searchInGoogle),
                     onPressed: _launchGoogleSearch,
                   ),
-                  // const SizedBox(height: 12),
-                  // FilledButton.tonalIcon(
-                  //   style: buttonStyle,
-                  //   icon: const Icon(Icons.language),
-                  //   label: const Text('Open Kaumaram Page'),
-                  //   onPressed: _launchCustomUrl,
-                  // ),
                   const SizedBox(height: 48),
                 ],
               ),
@@ -510,8 +508,8 @@ class _SongDetailScreenState extends State<SongDetailScreen> {
         children: [
           Semantics(
             button: true,
-            label: _isFavorite ? 'Remove from favorites' : 'Add to favorites',
-            hint: _isFavoriteLoading ? 'Loading' : 'Tap to toggle favorite status',
+            label: _isFavorite ? l10n.removeFromFavorites : l10n.addToFavorites,
+            hint: _isFavoriteLoading ? l10n.loading : l10n.tapToToggleFavorite,
             child: FloatingActionButton(
               heroTag: 'fab_favorite',
               onPressed: _isFavoriteLoading ? null : _toggleFavorite,
@@ -530,8 +528,8 @@ class _SongDetailScreenState extends State<SongDetailScreen> {
           const SizedBox(height: 16),
           Semantics(
             button: true,
-            label: 'Add to categories',
-            hint: 'Tap to add song to categories',
+            label: l10n.addToCategories,
+            hint: l10n.tapToAddCategories,
             child: FloatingActionButton(
               heroTag: 'fab_add_category',
               onPressed: () {
@@ -556,20 +554,21 @@ class _SongDetailScreenState extends State<SongDetailScreen> {
   }
 
   Widget _buildInfoCard(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     return Padding(
       padding: const EdgeInsets.all(16.0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text("திருத்தலம்", style: TextStyle(fontSize: 16)),
+          Text(l10n.temple, style: const TextStyle(fontSize: 16)),
           const SizedBox(height: 8),
           Text(
             widget.song.place,
-            style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+            style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
           ),
           const SizedBox(height: 24),
-          Text("சந்தம்", style: TextStyle(fontSize: 16)),
-          Text(widget.song.tune, style: TextStyle(fontSize: 16)),
+          Text(l10n.tune, style: const TextStyle(fontSize: 16)),
+          Text(widget.song.tune, style: const TextStyle(fontSize: 16)),
         ],
       ),
     );

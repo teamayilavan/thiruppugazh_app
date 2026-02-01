@@ -21,10 +21,10 @@ class HighlightsNotesScreen extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           title: Text(AppLocalizations.of(context)!.myLibrary),
-          bottom: const TabBar(
+          bottom: TabBar(
             tabs: [
-              Tab(icon: Icon(Icons.highlight), text: 'Highlights'),
-              Tab(icon: Icon(Icons.note), text: 'Notes'),
+              Tab(icon: const Icon(Icons.highlight), text: AppLocalizations.of(context)!.highlights),
+              Tab(icon: const Icon(Icons.note), text: AppLocalizations.of(context)!.notes),
             ],
           ),
         ),
@@ -75,7 +75,7 @@ class _HighlightsListState extends State<HighlightsList> {
             if (snapshot.connectionState == ConnectionState.waiting) {
               return const Center(child: CircularProgressIndicator());
             } else if (!snapshot.hasData || snapshot.data!.isEmpty) {
-              return const Center(child: Text('No highlights yet.'));
+              return Center(child: Text(AppLocalizations.of(context)!.noHighlightsFound));
             }
 
             final highlights = snapshot.data!;
@@ -144,7 +144,7 @@ class NotesList extends StatelessWidget {
             if (snapshot.connectionState == ConnectionState.waiting) {
               return const Center(child: CircularProgressIndicator());
             } else if (!snapshot.hasData || snapshot.data!.isEmpty) {
-              return const Center(child: Text('No notes yet.'));
+              return Center(child: Text(AppLocalizations.of(context)!.noNotesFound));
             }
 
             final notes = snapshot.data!;

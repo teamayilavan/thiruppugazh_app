@@ -94,7 +94,7 @@ class AppLocalizationsTa extends AppLocalizations {
 
   @override
   String get deleteNoteConfirmation =>
-      'இந்த குறிப்பை நிச்சயமாக நீக்க விரும்புகிறீர்களா?';
+      'இந்தக் குறிப்பை நிச்சயமாக நீக்க விரும்புகிறீர்களா?';
 
   @override
   String get favorites => 'பிடித்தவை';
@@ -292,4 +292,139 @@ class AppLocalizationsTa extends AppLocalizations {
 
   @override
   String get importFailed => 'Import failed';
+
+  @override
+  String get songNote => 'பாடல் குறிப்பு';
+
+  @override
+  String get enterThoughts => 'உங்கள் எண்ணங்களை இங்கே உள்ளிடவும்!';
+
+  @override
+  String get shareText => 'உரையைப் பகிர்';
+
+  @override
+  String get shareLink => 'இணைப்பைப் பகிர்';
+
+  @override
+  String get searchInGoogle => 'Google இல் தேடு';
+
+  @override
+  String get removeFromFavorites => 'பிடித்தவையிலிருந்து நீக்கு';
+
+  @override
+  String get addToFavorites => 'பிடித்தவையில் சேர்';
+
+  @override
+  String get tapToToggleFavorite => 'பிடித்தவை நிலையை மாற்ற தட்டவும்';
+
+  @override
+  String get loading => 'ஏற்றப்படுகிறது';
+
+  @override
+  String get tapToAddCategories => 'வகைகளில் சேர்க்க தட்டவும்';
+
+  @override
+  String get renameCategory => 'வகையை மறுபெயரிடு';
+
+  @override
+  String get deleteCategoryTitle => 'வகையை நீக்கு';
+
+  @override
+  String deleteCategoryConfirmation(Object categoryName) {
+    return '\"$categoryName\" வகையை நிச்சயமாக நீக்க விரும்புகிறீர்களா? இச்செயலை ரத்து செய்ய முடியாது.';
+  }
+
+  @override
+  String get rename => 'மறுபெயரிடு';
+
+  @override
+  String get customCategories => 'தனிப்பயன் வகைகள்';
+
+  @override
+  String get noCustomCategories =>
+      'தனிப்பயன் வகைகள் எதுவும் உருவாக்கப்படவில்லை';
+
+  @override
+  String get searchFilterTitle => 'தலைப்பு';
+
+  @override
+  String get searchFilterLyrics => 'பாடல் வரிகள்';
+
+  @override
+  String get searchFilterTemple => 'திருத்தலம்';
+
+  @override
+  String get searchFilterKaumaramId => 'கௌமாரம் எண்';
+
+  @override
+  String checkOutSong(Object songTitle) {
+    return 'திருப்புகழ் செயலியில் \"$songTitle\" பாடலைப் பாருங்கள்!';
+  }
+
+  @override
+  String get tapToOpenInApp => 'செயலியில் திறக்க தட்டவும்:';
+
+  @override
+  String get getTheAppHere => 'செயலியை இங்கே பெறவும்:';
+
+  @override
+  String get genericError => 'எதிர்பாராத பிழை ஏற்பட்டது.';
+
+  @override
+  String get networkError => 'பிணைய பிழை ஏற்பட்டது.';
+
+  @override
+  String get databaseError => 'தரவுத்தள பிழை ஏற்பட்டது.';
+
+  @override
+  String get fileNotFound => 'கோப்பு காணப்படவில்லை.';
+
+  @override
+  String get permissionDenied => 'அனுமதி மறுக்கப்பட்டது.';
+
+  @override
+  String get timeout => 'கோரிக்கை காலாவதியானது.';
+
+  @override
+  String get required => 'இலம் கட்டாயம் நிரப்பப்பட வேண்டும்.';
+
+  @override
+  String get emailInvalid => 'சரியான மின்னஞ்சல் முகவரியை உள்ளிடவும்.';
+
+  @override
+  String get passwordTooShort =>
+      'கடவுச்சொல் குறைந்தது 8 எழுத்துக்கள் இருக்க வேண்டும்.';
+
+  @override
+  String get passwordMismatch => 'கடவுச்சொற்கள் பொருந்தவில்லை.';
+
+  @override
+  String get phoneInvalid => 'சரியான தொலைபேசி எண்ணை உள்ளிடவும்.';
+
+  @override
+  String get title => 'தலைப்பு';
+
+  @override
+  String get noTemplesFound => 'கோயில்கள் எதுவும் காணப்படவில்லை';
+
+  @override
+  String get noSongsFoundForTemple => 'இந்த கோயிலுக்கான பாடல்கள் எதுவும் இல்லை';
+
+  @override
+  String get thiruppugazhHeroImage => 'திருப்புகழ் முகப்பு படம்';
+
+  @override
+  String get tapToViewSongDetails => 'பாடல் விவரங்களைக் காண தட்டவும்';
+
+  @override
+  String get highlights => 'சிறப்பம்சங்கள்';
+
+  @override
+  String get notes => 'குறிப்புகள்';
+
+  @override
+  String get noHighlightsFound => 'சிறப்பம்சங்கள் எதுவும் இல்லை.';
+
+  @override
+  String get noNotesFound => 'குறிப்புகள் எதுவும் இல்லை.';
 }

@@ -4,7 +4,8 @@ import '../../data/models/song_model.dart';
 import '../../providers/song_list_provider.dart';
 import 'song_detail_screen.dart';
 import 'search_screen.dart';
-import '../../../constants/app_strings.dart';
+import 'search_screen.dart';
+import '../../l10n/app_localizations.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -56,6 +57,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     final listBackgroundColor = Theme.of(context).colorScheme.surfaceContainerHighest;
+    final l10n = AppLocalizations.of(context)!;
 
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.surface,
@@ -72,7 +74,7 @@ class _HomeScreenState extends State<HomeScreen> {
                  physics: const AlwaysScrollableScrollPhysics(),
                  child: SizedBox(
                    height: MediaQuery.of(context).size.height,
-                   child: const Center(child: Text(AppStrings.noSongsFound)),
+                   child: Center(child: Text(l10n.noSongsFound)),
                  ),
                ),
              );
@@ -106,7 +108,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     SliverToBoxAdapter(
                       child: Semantics(
                         image: true,
-                        label: 'Thiruppugazh hero image',
+                        label: l10n.thiruppugazhHeroImage,
                         child: Image.asset(
                           'assets/images/hero.png',
                           width: double.infinity,
@@ -121,7 +123,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         child: Semantics(
                           header: true,
                           child: Text(
-                            AppStrings.thiruppugazhTitle,
+                            l10n.thiruppugazhTitle,
                             textAlign: TextAlign.center,
                             style: Theme.of(context).textTheme.headlineMedium
                                 ?.copyWith(fontWeight: FontWeight.bold)
@@ -162,7 +164,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           return Semantics(
                             button: true,
                             label: '${index + 1}. ${song.title}. ${song.place}',
-                            hint: 'Tap to view song details',
+                            hint: l10n.tapToViewSongDetails,
                             child: ListTile(
                               leading: Text(
                                 '${index + 1}',
@@ -172,7 +174,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               subtitle: Text(
                                 song.place.isNotEmpty
                                     ? song.place
-                                    : AppStrings.tuneNotAvailable,
+                                    : l10n.tuneNotAvailable,
                                 style: const TextStyle(fontSize: 12),
                               ),
                               tileColor: listBackgroundColor,

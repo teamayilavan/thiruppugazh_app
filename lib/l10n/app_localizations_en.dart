@@ -292,4 +292,137 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get importFailed => 'Import failed';
+
+  @override
+  String get songNote => 'Song Note';
+
+  @override
+  String get enterThoughts => 'Enter your thoughts here!';
+
+  @override
+  String get shareText => 'Share Text';
+
+  @override
+  String get shareLink => 'Share Link';
+
+  @override
+  String get searchInGoogle => 'Search in Google';
+
+  @override
+  String get removeFromFavorites => 'Remove from favorites';
+
+  @override
+  String get addToFavorites => 'Add to favorites';
+
+  @override
+  String get tapToToggleFavorite => 'Tap to toggle favorite status';
+
+  @override
+  String get loading => 'Loading';
+
+  @override
+  String get tapToAddCategories => 'Tap to add song to categories';
+
+  @override
+  String get renameCategory => 'Rename Category';
+
+  @override
+  String get deleteCategoryTitle => 'Delete Category';
+
+  @override
+  String deleteCategoryConfirmation(Object categoryName) {
+    return 'Are you sure you want to delete \"$categoryName\"? This action cannot be undone.';
+  }
+
+  @override
+  String get rename => 'Rename';
+
+  @override
+  String get customCategories => 'Custom Categories';
+
+  @override
+  String get noCustomCategories => 'No custom categories created';
+
+  @override
+  String get searchFilterTitle => 'Title';
+
+  @override
+  String get searchFilterLyrics => 'Lyrics';
+
+  @override
+  String get searchFilterTemple => 'Temple';
+
+  @override
+  String get searchFilterKaumaramId => 'Kaumaram ID';
+
+  @override
+  String checkOutSong(Object songTitle) {
+    return 'Check out \"$songTitle\" on the Thiruppugazh App!';
+  }
+
+  @override
+  String get tapToOpenInApp => 'Tap to open in app:';
+
+  @override
+  String get getTheAppHere => 'Get the app here:';
+
+  @override
+  String get genericError => 'An unexpected error occurred.';
+
+  @override
+  String get networkError => 'Network error occurred.';
+
+  @override
+  String get databaseError => 'Database error occurred.';
+
+  @override
+  String get fileNotFound => 'File not found.';
+
+  @override
+  String get permissionDenied => 'Permission denied.';
+
+  @override
+  String get timeout => 'Request timed out.';
+
+  @override
+  String get required => 'This field is required.';
+
+  @override
+  String get emailInvalid => 'Please enter a valid email address.';
+
+  @override
+  String get passwordTooShort => 'Password must be at least 8 characters.';
+
+  @override
+  String get passwordMismatch => 'Passwords do not match.';
+
+  @override
+  String get phoneInvalid => 'Please enter a valid phone number.';
+
+  @override
+  String get title => 'Title';
+
+  @override
+  String get noTemplesFound => 'No temples found';
+
+  @override
+  String get noSongsFoundForTemple => 'No songs found for this temple';
+
+  @override
+  String get thiruppugazhHeroImage => 'Thiruppugazh hero image';
+
+  @override
+  String get tapToViewSongDetails => 'Tap to view song details';
+
+  @override
+  String get highlights => 'Highlights';
+
+  @override
+  String get notes => 'Notes';
+
+  @override
+  String get noHighlightsFound => 'No highlights yet.';
+
+  @override
+  String get noNotesFound => 'No notes yet.';
 }

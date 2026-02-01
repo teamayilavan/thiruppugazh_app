@@ -4,8 +4,9 @@ import '../../data/models/category_model.dart';
 import '../../data/repositories/song_repository.dart';
 import 'song_list_screen.dart';
 import '../widgets/error_display_widget.dart';
-import '../../../constants/app_strings.dart';
-import '../../../constants/app_constants.dart';
+import '../../l10n/app_localizations.dart';
+import '../../constants/app_strings.dart';
+import '../../constants/app_constants.dart';
 
 // ✨ It's now a simpler StatelessWidget
 class CategoriesScreen extends StatelessWidget {
@@ -13,8 +14,9 @@ class CategoriesScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     return Scaffold(
-      appBar: AppBar(title: const Text(AppStrings.categories)),
+      appBar: AppBar(title: Text(l10n.categories)),
       // ✅ Wrap the body with a Consumer to listen for changes
       body: Consumer<SongRepository>(
         builder: (context, repository, child) {
@@ -27,11 +29,11 @@ class CategoriesScreen extends StatelessWidget {
                 return const Center(child: CircularProgressIndicator());
               } else if (snapshot.hasError) {
                 return ErrorDisplayWidget(
-                  errorMessage: AppStrings.failedToLoadCategories,
+                  errorMessage: l10n.failedToLoadCategories,
                   onRetry: null,
                 );
               } else if (!snapshot.hasData || snapshot.data!.isEmpty) {
-                return const Center(child: Text(AppStrings.noCategoriesFound));
+                return Center(child: Text(l10n.noCategoriesFound));
               }
 
               final categories = snapshot.data!;
@@ -49,16 +51,16 @@ class CategoriesScreen extends StatelessWidget {
                     if (favorites.isNotEmpty) const Divider(),
 
                     // Custom Categories Header
-                    Padding(
-                      padding: const EdgeInsets.fromLTRB(16, 16, 16, 8),
-                      child: Text(
-                        AppStrings.customCategories,
-                        style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                              color: Theme.of(context).colorScheme.primary,
-                              fontWeight: FontWeight.bold,
-                            ),
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(16, 16, 16, 8),
+                        child: Text(
+                          l10n.customCategories,
+                          style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                                color: Theme.of(context).colorScheme.primary,
+                                fontWeight: FontWeight.bold,
+                              ),
+                        ),
                       ),
-                    ),
 
                     // Custom Categories List or Empty State
                     if (customCategories.isEmpty)
@@ -66,7 +68,7 @@ class CategoriesScreen extends StatelessWidget {
                         child: Padding(
                           padding: const EdgeInsets.all(32.0),
                           child: Text(
-                            AppStrings.noCustomCategories,
+                            l10n.noCustomCategories,
                             textAlign: TextAlign.center,
                             style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                                   color: Theme.of(context).colorScheme.onSurfaceVariant,
@@ -102,17 +104,18 @@ class CategoriesScreen extends StatelessWidget {
   }
 
   Widget _buildCategoryTile(BuildContext context, Category category) {
+    final l10n = AppLocalizations.of(context)!;
     return Semantics(
       button: true,
       label: '${category.name} category',
       hint: '${category.songCount} songs',
       child: ListTile(
         leading: Icon(
-          category.name == 'Favorites'
+          category.id == 1
               ? Icons.favorite
               : Icons.folder_open_outlined,
         ),
-        title: Text(category.name),
+        title: Text(category.id == 1 ? l10n.favorites : category.name),
         trailing: Row(
           mainAxisSize: MainAxisSize.min,
           children: [
@@ -135,23 +138,23 @@ class CategoriesScreen extends StatelessWidget {
                   }
                 },
                 itemBuilder: (BuildContext context) => [
-                  const PopupMenuItem(
+                  PopupMenuItem(
                     value: 'rename',
                     child: Row(
                       children: [
-                        Icon(Icons.edit, size: 20),
-                        SizedBox(width: 8),
-                        Text('Rename'),
+                        const Icon(Icons.edit, size: 20),
+                        const SizedBox(width: 8),
+                        Text(l10n.rename),
                       ],
                     ),
                   ),
-                  const PopupMenuItem(
+                  PopupMenuItem(
                     value: 'delete',
                     child: Row(
                       children: [
-                        Icon(Icons.delete, size: 20, color: Colors.red),
-                        SizedBox(width: 8),
-                        Text('Delete', style: TextStyle(color: Colors.red)),
+                        const Icon(Icons.delete, size: 20, color: Colors.red),
+                        const SizedBox(width: 8),
+                        Text(l10n.delete, style: const TextStyle(color: Colors.red)),
                       ],
                     ),
                   ),
@@ -175,6 +178,7 @@ class CategoriesScreen extends StatelessWidget {
   void _showCreateCategoryDialog(BuildContext context) {
     final TextEditingController controller = TextEditingController();
     final formKey = GlobalKey<FormState>();
+    final l10n = AppLocalizations.of(context)!;
 
     showDialog(
       context: context,
@@ -183,38 +187,38 @@ class CategoriesScreen extends StatelessWidget {
         return StatefulBuilder(
           builder: (context, setState) {
             return AlertDialog(
-              title: const Text(AppStrings.createNewCategory),
+              title: Text(l10n.createNewCategory),
               content: Form(
                 key: formKey,
                 child: TextFormField(
                   controller: controller,
                   autofocus: false,
-                  decoration: const InputDecoration(
-                    labelText: AppStrings.categoryName,
-                    border: OutlineInputBorder(),
+                  decoration: InputDecoration(
+                    labelText: l10n.categoryName,
+                    border: const OutlineInputBorder(),
                   ),
                   validator: (value) {
                     // Validation
                     if (value == null || value.trim().isEmpty) {
-                      return AppStrings.pleaseEnterCategoryName;
+                      return l10n.pleaseEnterCategoryName;
                     }
 
                     final trimmed = value.trim();
 
                     // Minimum length: 2 characters
                     if (trimmed.length < AppConstants.categoryMinNameLength) {
-                      return AppStrings.categoryMinLength;
+                      return l10n.categoryMinLength;
                     }
 
                     // Maximum length: 50 characters
                     if (trimmed.length > AppConstants.categoryMaxNameLength) {
-                      return AppStrings.categoryMaxLength;
+                      return l10n.categoryMaxLength;
                     }
 
                     // Sanitize: Remove special characters (keep letters, numbers, spaces)
                     final sanitized = trimmed.replaceAll(RegExp(r'[^\w\s]'), '').trim();
                     if (sanitized.isEmpty) {
-                      return AppStrings.enterValidCategoryName;
+                      return l10n.enterValidCategoryName;
                     }
 
                     return null;
@@ -224,7 +228,7 @@ class CategoriesScreen extends StatelessWidget {
               actions: [
                 TextButton(
                   onPressed: isCreating ? null : () => Navigator.of(dialogContext).pop(),
-                  child: const Text(AppStrings.cancel),
+                  child: Text(l10n.cancel),
                 ),
                 FilledButton(
                   onPressed: isCreating
@@ -254,8 +258,8 @@ class CategoriesScreen extends StatelessWidget {
                                 });
                                 if (dialogContext.mounted) {
                                   ScaffoldMessenger.of(dialogContext).showSnackBar(
-                                    const SnackBar(
-                                      content: Text(AppStrings.categoryExists),
+                                    SnackBar(
+                                      content: Text(l10n.categoryExists),
                                     ),
                                   );
                                 }
@@ -276,7 +280,7 @@ class CategoriesScreen extends StatelessWidget {
                                 ScaffoldMessenger.of(dialogContext).showSnackBar(
                                   SnackBar(
                                     content: Text(
-                                        '${AppStrings.errorCreatingCategory}: $e'),
+                                        '${l10n.errorCreatingCategory}: $e'),
                                   ),
                                 );
                               }
@@ -291,7 +295,7 @@ class CategoriesScreen extends StatelessWidget {
                             strokeWidth: 2,
                           ),
                         )
-                      : const Text(AppStrings.create),
+                      : Text(l10n.create),
                 ),
               ],
             );
@@ -304,6 +308,7 @@ class CategoriesScreen extends StatelessWidget {
   void _showRenameCategoryDialog(BuildContext context, Category category) {
     final TextEditingController controller = TextEditingController(text: category.name);
     final formKey = GlobalKey<FormState>();
+    final l10n = AppLocalizations.of(context)!;
 
     showDialog(
       context: context,
@@ -312,30 +317,30 @@ class CategoriesScreen extends StatelessWidget {
         return StatefulBuilder(
           builder: (context, setState) {
             return AlertDialog(
-              title: const Text('Rename Category'),
+              title: Text(l10n.renameCategory),
               content: Form(
                 key: formKey,
                 child: TextFormField(
                   controller: controller,
                   autofocus: true,
-                  decoration: const InputDecoration(
-                    labelText: AppStrings.categoryName,
-                    border: OutlineInputBorder(),
+                  decoration: InputDecoration(
+                    labelText: l10n.categoryName,
+                    border: const OutlineInputBorder(),
                   ),
                   validator: (value) {
                     if (value == null || value.trim().isEmpty) {
-                      return AppStrings.pleaseEnterCategoryName;
+                      return l10n.pleaseEnterCategoryName;
                     }
                     final trimmed = value.trim();
                     if (trimmed.length < AppConstants.categoryMinNameLength) {
-                      return AppStrings.categoryMinLength;
+                      return l10n.categoryMinLength;
                     }
                     if (trimmed.length > AppConstants.categoryMaxNameLength) {
-                      return AppStrings.categoryMaxLength;
+                      return l10n.categoryMaxLength;
                     }
                     final sanitized = trimmed.replaceAll(RegExp(r'[^\w\s]'), '').trim();
                     if (sanitized.isEmpty) {
-                      return AppStrings.enterValidCategoryName;
+                      return l10n.enterValidCategoryName;
                     }
                     return null;
                   },
@@ -344,7 +349,7 @@ class CategoriesScreen extends StatelessWidget {
               actions: [
                 TextButton(
                   onPressed: isSaving ? null : () => Navigator.of(dialogContext).pop(),
-                  child: const Text(AppStrings.cancel),
+                  child: Text(l10n.cancel),
                 ),
                 FilledButton(
                   onPressed: isSaving
@@ -377,7 +382,7 @@ class CategoriesScreen extends StatelessWidget {
                                 });
                                 if (dialogContext.mounted) {
                                   ScaffoldMessenger.of(dialogContext).showSnackBar(
-                                    const SnackBar(content: Text(AppStrings.categoryExists)),
+                                    SnackBar(content: Text(l10n.categoryExists)),
                                   );
                                 }
                                 return;
@@ -406,7 +411,7 @@ class CategoriesScreen extends StatelessWidget {
                           height: 16,
                           child: CircularProgressIndicator(strokeWidth: 2),
                         )
-                      : const Text('Save'),
+                      : Text(l10n.save),
                 ),
               ],
             );
@@ -417,16 +422,17 @@ class CategoriesScreen extends StatelessWidget {
   }
 
   void _showDeleteConfirmationDialog(BuildContext context, Category category) {
+    final l10n = AppLocalizations.of(context)!;
     showDialog(
       context: context,
       builder: (BuildContext dialogContext) {
         return AlertDialog(
-          title: const Text('Delete Category'),
-          content: Text('Are you sure you want to delete "${category.name}"? This action cannot be undone.'),
+          title: Text(l10n.deleteCategoryTitle),
+          content: Text(l10n.deleteCategoryConfirmation(category.name)),
           actions: [
              TextButton(
               onPressed: () => Navigator.of(dialogContext).pop(),
-              child: const Text('Cancel'),
+              child: Text(l10n.cancel),
             ),
             FilledButton(
               onPressed: () async {
@@ -437,7 +443,7 @@ class CategoriesScreen extends StatelessWidget {
                  }
               },
                style: FilledButton.styleFrom(backgroundColor: Colors.red),
-              child: const Text('Delete'),
+              child: Text(l10n.delete),
             ),
           ],
         );

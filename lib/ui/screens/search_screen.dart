@@ -5,7 +5,7 @@ import '../../data/models/song_model.dart';
 import '../../data/models/search_filter.dart';
 import '../../data/repositories/song_repository.dart';
 import 'song_detail_screen.dart';
-import '../../../constants/app_strings.dart';
+import '../../l10n/app_localizations.dart';
 import '../../../constants/app_constants.dart';
 
 class SearchScreen extends StatefulWidget {
@@ -74,12 +74,13 @@ class _SearchScreenState extends State<SearchScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     return GestureDetector(
       onTap: () {
         _searchFocusNode.unfocus();
       },
       child: Scaffold(
-        appBar: AppBar(title: const Text(AppStrings.globalSearch)),
+        appBar: AppBar(title: Text(l10n.globalSearch)),
         body: Column(
           children: [
             Padding(
@@ -90,7 +91,7 @@ class _SearchScreenState extends State<SearchScreen> {
                 onChanged: _onSearchChanged,
                 autofocus: false,
                 decoration: InputDecoration(
-                  hintText: AppStrings.searchByTitleOrLyrics,
+                  hintText: l10n.searchByTitleOrLyrics,
                   prefixIcon: const Icon(Icons.search),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(12.0),
@@ -123,8 +124,8 @@ class _SearchScreenState extends State<SearchScreen> {
                   ? Center(
                       child: Text(
                         _searchController.text.trim().isEmpty
-                            ? AppStrings.startTypingToSearch
-                            : AppStrings.noResultsFound,
+                            ? l10n.startTypingToSearch
+                            : l10n.noResultsFound,
                         style: Theme.of(context).textTheme.bodyLarge,
                       ),
                     )
@@ -179,6 +180,7 @@ class SearchFilterOptions extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 8.0),
       child: Wrap(
@@ -186,28 +188,28 @@ class SearchFilterOptions extends StatelessWidget {
         runSpacing: 8.0,
         children: [
           FilterChip(
-            label: const Text('Title'),
+            label: Text(l10n.searchFilterTitle),
             selected: filter.searchTitle,
             onSelected: (_) {
               onFilterChanged(filter.copyWith(searchTitle: !filter.searchTitle));
             },
           ),
           FilterChip(
-            label: const Text('Lyrics'),
+            label: Text(l10n.searchFilterLyrics),
             selected: filter.searchLyrics,
             onSelected: (_) {
               onFilterChanged(filter.copyWith(searchLyrics: !filter.searchLyrics));
             },
           ),
           FilterChip(
-            label: const Text('Temple'),
+            label: Text(l10n.searchFilterTemple),
             selected: filter.searchPlace,
             onSelected: (_) {
               onFilterChanged(filter.copyWith(searchPlace: !filter.searchPlace));
             },
           ),
           FilterChip(
-            label: const Text('Kaumaram ID'),
+            label: Text(l10n.searchFilterKaumaramId),
             selected: filter.searchKaumaramId,
             onSelected: (_) {
               onFilterChanged(

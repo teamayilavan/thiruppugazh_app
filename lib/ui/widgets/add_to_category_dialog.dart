@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../../data/repositories/song_repository.dart';
 import '../../data/models/song_model.dart';
+import '../../l10n/app_localizations.dart';
 import '../../constants/app_strings.dart';
 
 class AddToCategoryDialog extends StatefulWidget {
@@ -23,6 +24,7 @@ class _AddToCategoryDialogState extends State<AddToCategoryDialog> {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     return FutureBuilder(
       future: Provider.of<SongRepository>(context, listen: false).getAllCategories(),
       builder: (context, snapshot) {
@@ -41,7 +43,7 @@ class _AddToCategoryDialogState extends State<AddToCategoryDialog> {
         return StatefulBuilder(
           builder: (context, setDialogState) {
             return AlertDialog(
-              title: const Text(AppStrings.addToCategories),
+              title: Text(l10n.addToCategories),
               content: SizedBox(
                 width: double.maxFinite,
                 child: ListView.builder(
@@ -73,7 +75,7 @@ class _AddToCategoryDialogState extends State<AddToCategoryDialog> {
               actions: [
                 TextButton(
                   onPressed: _isSaving ? null : () => Navigator.pop(context),
-                  child: const Text(AppStrings.cancel),
+                  child: Text(l10n.cancel),
                 ),
                 FilledButton(
                   onPressed: _isSaving
@@ -112,9 +114,9 @@ class _AddToCategoryDialogState extends State<AddToCategoryDialog> {
                             messenger.showSnackBar(
                               SnackBar(
                                 content: Text(
-                                  AppStrings.categoriesUpdated(widget.song.title),
+                                    l10n.categoriesUpdated(widget.song.title),
+                                  ),
                                 ),
-                              ),
                             );
                           } catch (e) {
                             if (!mounted) return;
@@ -123,7 +125,7 @@ class _AddToCategoryDialogState extends State<AddToCategoryDialog> {
                             });
                             messenger.showSnackBar(
                               SnackBar(
-                                content: Text('${AppStrings.errorUpdatingCategories}: $e'),
+                                content: Text('${l10n.errorUpdatingCategories}: $e'),
                               ),
                             );
                           }
@@ -136,7 +138,7 @@ class _AddToCategoryDialogState extends State<AddToCategoryDialog> {
                             strokeWidth: 2,
                           ),
                         )
-                      : const Text(AppStrings.save),
+                      : Text(l10n.save),
                 ),
               ],
             );

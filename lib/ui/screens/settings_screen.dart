@@ -21,7 +21,7 @@ class SettingsScreen extends StatelessWidget {
           ListTile(
             leading: const Icon(Icons.translate_outlined),
             title: Text(l10n.language),
-            subtitle: Text(languageProvider.currentLanguage.displayName),
+            subtitle: Text(_getLanguageDisplayName(context, languageProvider.currentLanguage)),
             onTap: () {
               _showLanguageDialog(context, languageProvider);
             },
@@ -31,7 +31,7 @@ class SettingsScreen extends StatelessWidget {
             leading: const Icon(Icons.brightness_6_outlined),
             title: Text(l10n.theme),
             subtitle: Text(
-              '${l10n.current}: ${themeProvider.themeMode.name.capitalize()}',
+              '${l10n.current}: ${_getThemeDisplayName(context, themeProvider.themeMode)}',
             ),
             onTap: () {
               _showThemeDialog(context, themeProvider);
@@ -234,11 +234,25 @@ class SettingsScreen extends StatelessWidget {
       ),
     );
   }
-}
+  String _getLanguageDisplayName(BuildContext context, AppLanguage language) {
+    final l10n = AppLocalizations.of(context)!;
+    switch (language) {
+      case AppLanguage.tamil:
+        return l10n.tamil;
+      case AppLanguage.english:
+        return l10n.english;
+    }
+  }
 
-extension StringExtension on String {
-  String capitalize() {
-    if (isEmpty) return this;
-    return "${this[0].toUpperCase()}${substring(1)}";
+  String _getThemeDisplayName(BuildContext context, ThemeMode mode) {
+    final l10n = AppLocalizations.of(context)!;
+    switch (mode) {
+      case ThemeMode.light:
+        return l10n.light;
+      case ThemeMode.dark:
+        return l10n.dark;
+      case ThemeMode.system:
+        return l10n.systemDefault;
+    }
   }
 }
