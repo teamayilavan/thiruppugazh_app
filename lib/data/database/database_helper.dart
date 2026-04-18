@@ -495,25 +495,15 @@ class DatabaseHelper {
     return variations.toList();
   }
 
-  /// Sanitizes search query to prevent SQL injection and malicious input.
+  /// Trims and length-limits the search query.
+  /// SQL injection is prevented by parameterised queries (whereArgs),
+  /// not by character removal.
   String _sanitizeSearchQuery(String query) {
-    // Trim whitespace
-    String sanitized = query.trim();
-    
-    // Limit length to 100 characters
-    if (sanitized.length > 100) {
-      sanitized = sanitized.substring(0, 100);
+    final trimmed = query.trim();
+    if (trimmed.length > AppConstants.maxSearchQueryLength) {
+      return trimmed.substring(0, AppConstants.maxSearchQueryLength);
     }
-    
-    // Remove potentially dangerous SQL patterns using plain string replacement
-    sanitized = sanitized.replaceAll("'", '');
-    sanitized = sanitized.replaceAll('"', '');
-    sanitized = sanitized.replaceAll(';', '');
-    sanitized = sanitized.replaceAll('--', '');
-    sanitized = sanitized.replaceAll('/*', '');
-    sanitized = sanitized.replaceAll('*/', '');
-    
-    return sanitized;
+    return trimmed;
   }
 
   Future<List<Category>> getCategoriesWithSongCounts() async {
