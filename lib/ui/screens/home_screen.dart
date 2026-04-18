@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../../data/models/song_model.dart';
 import '../../providers/song_list_provider.dart';
 import 'song_detail_screen.dart';
-import 'search_screen.dart';
 import 'search_screen.dart';
 import '../../l10n/app_localizations.dart';
 
@@ -35,24 +33,7 @@ class _HomeScreenState extends State<HomeScreen> {
     super.dispose();
   }
 
-  void _onScroll() {
-    if (!_scrollController.hasClients) return;
 
-    final maxScroll = _scrollController.position.maxScrollExtent;
-    final currentScroll = _scrollController.position.pixels;
-    
-    // Prefetch when user is 70% down the list or ~20 items away from end is a bit tricky with pixel height.
-    // Simpler approach: If we are close to bottom (e.g. 2000 pixels or 2 screens worth)
-    // The user requested "fetch next page when 30 items remain".
-    // Since item height is variable, we can roughly estimate or just use a pixel threshold that equates to ~30 items.
-    // Assuming approx 70px per item => 30 items = 2100px.
-    
-    const prefetchThreshold = 2500.0; 
-
-    if (maxScroll - currentScroll <= prefetchThreshold) {
-      Provider.of<SongListProvider>(context, listen: false).loadMoreSongs();
-    }
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -125,9 +106,8 @@ class _HomeScreenState extends State<HomeScreen> {
                           child: Text(
                             l10n.thiruppugazhTitle,
                             textAlign: TextAlign.center,
-                            style: Theme.of(context).textTheme.headlineMedium
-                                ?.copyWith(fontWeight: FontWeight.bold)
-                                .copyWith(fontSize: 24),
+                            style: Theme.of(context).textTheme.headlineSmall
+                                ?.copyWith(fontWeight: FontWeight.bold),
                           ),
                         ),
                       ),
@@ -150,16 +130,6 @@ class _HomeScreenState extends State<HomeScreen> {
                           }
 
                           final song = provider.songs[index];
-                          
-                          // Optional: Strict Index-based prefetching (as a backup to scroll listener)
-                          // If we are at the 30th to last item, trigger load
-                          if (provider.hasMore && !provider.isLoading && 
-                              index >= provider.songs.length - 30) {
-                             // Defer trying to load in build phase, do it post frame
-                             WidgetsBinding.instance.addPostFrameCallback((_) {
-                               provider.loadMoreSongs();
-                             });
-                          }
 
                           return Semantics(
                             button: true,
@@ -168,14 +138,14 @@ class _HomeScreenState extends State<HomeScreen> {
                             child: ListTile(
                               leading: Text(
                                 '${index + 1}',
-                                style: const TextStyle(fontSize: 14),
+                                style: Theme.of(context).textTheme.bodyMedium,
                               ),
                               title: Text(song.title),
                               subtitle: Text(
                                 song.place.isNotEmpty
                                     ? song.place
                                     : l10n.tuneNotAvailable,
-                                style: const TextStyle(fontSize: 12),
+                                style: Theme.of(context).textTheme.bodySmall,
                               ),
                               tileColor: listBackgroundColor,
                               onTap: () {
