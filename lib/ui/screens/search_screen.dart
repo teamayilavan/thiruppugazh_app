@@ -140,12 +140,12 @@ class _SearchScreenState extends State<SearchScreen> {
                           return ListTile(
                             leading: Text(
                               (index + 1).toString(),
-                              style: const TextStyle(fontSize: 16),
+                              style: Theme.of(context).textTheme.bodyLarge,
                             ),
                             title: Text(song.title),
                             subtitle: Text(
                               song.place,
-                              style: const TextStyle(fontSize: 12),
+                              style: Theme.of(context).textTheme.bodySmall,
                             ),
                             onTap: () {
                               _searchFocusNode.unfocus();
