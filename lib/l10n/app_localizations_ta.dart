@@ -427,4 +427,10 @@ class AppLocalizationsTa extends AppLocalizations {
 
   @override
   String get noNotesFound => 'குறிப்புகள் எதுவும் இல்லை.';
+
+  @override
+  String get highlight => 'வண்ணமிடு';
+
+  @override
+  String get privacyPolicy => 'தனியுரிமைக் கொள்கை';
 }
