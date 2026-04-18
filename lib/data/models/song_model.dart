@@ -58,7 +58,7 @@ class Song {
       isFavorite: (map['is_favorite'] ?? 0) == 1,
 
       // categoryIds are populated separately by the repository.
-      categoryIds: [],
+      categoryIds: const [],
     );
   }
 }

@@ -60,7 +60,7 @@ void main() {
       expect(song.categoryIds, isEmpty);
     });
 
-    test('Song categoryIds is a final field', () {
+    test('Song can be constructed with non-empty categoryIds', () {
       final song = Song(
         id: 1,
         kaumaramId: '1',
