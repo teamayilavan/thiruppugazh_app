@@ -1,6 +1,5 @@
 /// Centralized constants for the application.
 /// Contains all magic numbers and configuration values.
-
 class AppConstants {
   AppConstants._();
 
@@ -8,6 +7,13 @@ class AppConstants {
   static const int dbVersion = 1;
   static const String dbName = 'thiruppugazh.db';
   static const String assetsPath = 'assets';
+
+  // ==================== Preferences Keys ====================
+  static const String themePrefsKey = 'themeMode';
+  static const String languagePrefsKey = 'app_language';
+
+  // ==================== Deep Link ====================
+  static const String deepLinkDomain = 'thiruppugazh.ayilavan.org';
 
   // ==================== Search Constants ====================
   static const int searchDebounceMs = 500;
