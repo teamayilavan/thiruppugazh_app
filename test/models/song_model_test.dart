@@ -12,7 +12,7 @@ void main() {
         'title': 'Test Song',
         'place': 'Test Temple',
         'tune': 'Test Tune',
-        'lyrics': '',
+        'lyrics': 'Line 1\nLine 2\nLine 3',
         'pathavurai': 'Test Author',
         'lyrics_list': jsonEncode(['Line 1', 'Line 2', 'Line 3']),
         'tune_list': jsonEncode(['Tune']),
