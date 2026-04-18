@@ -49,9 +49,9 @@ class DatabaseHelper {
         await File(path).writeAsBytes(bytes, flush: true);
         AppLogger.info("Database copied from assets");
 
-      } catch (e) {
-        AppLogger.error("Error copying database", error: e);
-        // Fallback: Let openDatabase create an empty one (though this might fail expectations)
+      } catch (e, stackTrace) {
+        AppLogger.error("Fatal: failed to copy bundled database", error: e, stackTrace: stackTrace);
+        rethrow;
       }
     } else {
       AppLogger.info("Opening existing database");
