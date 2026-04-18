@@ -12,7 +12,7 @@ void main() {
         'title': 'Test Song',
         'place': 'Test Temple',
         'tune': 'Test Tune',
-        'lyrics': '',
+        'lyrics': 'Line 1\nLine 2\nLine 3',
         'pathavurai': 'Test Author',
         'lyrics_list': jsonEncode(['Line 1', 'Line 2', 'Line 3']),
         'tune_list': jsonEncode(['Tune']),
@@ -58,6 +58,26 @@ void main() {
 
       // Assert
       expect(song.categoryIds, isEmpty);
+    });
+
+    test('Song can be constructed with non-empty categoryIds', () {
+      final song = Song(
+        id: 1,
+        kaumaramId: '1',
+        title: 'T',
+        place: 'P',
+        tune: 'Tu',
+        lyrics: '',
+        lyricsList: [],
+        tuneList: [],
+        words: [],
+        meanings: [],
+        pathavurai: '',
+        patham: [],
+        categoryIds: [2, 3],
+      );
+
+      expect(song.categoryIds, [2, 3]);
     });
   });
 }

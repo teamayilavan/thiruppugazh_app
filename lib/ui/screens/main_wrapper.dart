@@ -10,6 +10,7 @@ import 'package:app_links/app_links.dart';
 import 'package:provider/provider.dart';
 import '../../data/repositories/song_repository.dart';
 import 'song_detail_screen.dart';
+import '../../constants/app_constants.dart';
 import '../../l10n/app_localizations.dart';
 
 class MainWrapper extends StatefulWidget {
@@ -57,10 +58,28 @@ class _MainWrapperState extends State<MainWrapper> {
     });
   }
 
-  void _handleDeepLink(Uri uri) async {
-    // Expected format: thiruppugazh://song/{id}
-    if (uri.host == 'song' && uri.pathSegments.isNotEmpty) {
-      final songIdString = uri.pathSegments.first;
+  Future<void> _handleDeepLink(Uri uri) async {
+    // Expected formats: 
+    // 1. Custom Scheme: thiruppugazh://song/{id} (Legacy/Internal)
+    // 2. App Link: https://thiruppugazh.ayilavan.org/song/{id}
+    
+    bool isSongLink = false;
+    String? songIdString;
+
+    if (uri.scheme == 'thiruppugazh' && uri.host == 'song') {
+       // Legacy format
+       if (uri.pathSegments.isNotEmpty) songIdString = uri.pathSegments.first;
+       isSongLink = true;
+    } else if ((uri.scheme == 'https' || uri.scheme == 'http') && 
+               uri.host == AppConstants.deepLinkDomain &&
+               uri.pathSegments.isNotEmpty && 
+               uri.pathSegments[0] == 'song') {
+       // HTTPS format: /song/{id}
+       if (uri.pathSegments.length > 1) songIdString = uri.pathSegments[1];
+       isSongLink = true;
+    }
+
+    if (isSongLink && songIdString != null) {
       final songId = int.tryParse(songIdString);
 
       if (songId != null) {
@@ -98,7 +117,7 @@ class _MainWrapperState extends State<MainWrapper> {
           Expanded(
             child: PopScope(
               canPop: false,
-              onPopInvoked: (bool didPop) {
+              onPopInvokedWithResult: (bool didPop, dynamic result) {
                 if (didPop) return;
                 showDialog(
                   context: context,

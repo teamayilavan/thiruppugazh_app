@@ -461,7 +461,7 @@ abstract class AppLocalizations {
   /// No description provided for @kaumaramFounder.
   ///
   /// In en, this message translates to:
-  /// **'Kaumaram website founder'**
+  /// **'Kaumaram Website founder'**
   String get kaumaramFounder;
 
   /// No description provided for @kaumaramTeam.
@@ -485,7 +485,7 @@ abstract class AppLocalizations {
   /// No description provided for @ayilavanAni.
   ///
   /// In en, this message translates to:
-  /// **'Ayilavan Ani'**
+  /// **'Team Ayilavan'**
   String get ayilavanAni;
 
   /// No description provided for @contact.
@@ -895,6 +895,18 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'No notes yet.'**
   String get noNotesFound;
+
+  /// No description provided for @highlight.
+  ///
+  /// In en, this message translates to:
+  /// **'Highlight'**
+  String get highlight;
+
+  /// No description provided for @privacyPolicy.
+  ///
+  /// In en, this message translates to:
+  /// **'Privacy Policy'**
+  String get privacyPolicy;
 }
 
 class _AppLocalizationsDelegate

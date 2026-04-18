@@ -5,6 +5,8 @@ import 'package:provider/provider.dart';
 import '../../data/models/category_model.dart';
 import '../../data/models/song_model.dart';
 import '../../data/repositories/song_repository.dart';
+import '../../l10n/app_localizations.dart';
+import '../widgets/error_display_widget.dart';
 import 'song_detail_screen.dart';
 
 class SongListScreen extends StatefulWidget {
@@ -47,7 +49,16 @@ class _SongListScreenState extends State<SongListScreen> {
             if (snapshot.connectionState == ConnectionState.waiting) {
               return const Center(child: CircularProgressIndicator());
             } else if (snapshot.hasError) {
-              return Center(child: Text('Error: ${snapshot.error}'));
+              return ErrorDisplayWidget(
+                errorMessage: AppLocalizations.of(context)!.failedToLoadSongs,
+                onRetry: () {
+                  setState(() {
+                    _songsFuture =
+                        Provider.of<SongRepository>(context, listen: false)
+                            .getSongsByCategoryId(widget.category.id!);
+                  });
+                },
+              );
             } else if (!snapshot.hasData || snapshot.data!.isEmpty) {
                return Stack(
                 children: [
@@ -83,7 +94,7 @@ class _SongListScreenState extends State<SongListScreen> {
                     subtitle: Text(
                       song.place.isNotEmpty ? song.place : 'Tune not available',
                       //change text size
-                      style: TextStyle(fontSize: 12),
+                      style: Theme.of(context).textTheme.bodySmall,
                     ),
                     onTap: () {
                       Navigator.of(context).push(

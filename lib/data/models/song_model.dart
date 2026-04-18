@@ -17,9 +17,9 @@ class Song {
   final List<String> patham;
   final bool isFavorite;
 
-  /// A mutable list of category IDs this song belongs to.
-  /// This is managed at the app level, not directly from the 'songs' table.
-  List<int> categoryIds;
+  /// Category IDs this song belongs to.
+  /// Populated by the repository; managed as local state in the UI layer.
+  final List<int> categoryIds;
 
   Song({
     required this.id,
@@ -58,7 +58,7 @@ class Song {
       isFavorite: (map['is_favorite'] ?? 0) == 1,
 
       // categoryIds are populated separately by the repository.
-      categoryIds: [],
+      categoryIds: const [],
     );
   }
 }

@@ -4,6 +4,7 @@ import '../../providers/theme_provider.dart';
 import '../../providers/language_provider.dart';
 import '../../l10n/app_localizations.dart';
 import '../../services/backup_service.dart';
+import 'privacy_policy_screen.dart';
 
 class SettingsScreen extends StatelessWidget {
   const SettingsScreen({super.key});
@@ -45,53 +46,71 @@ class SettingsScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(l10n.creditsTitle, style: const TextStyle(fontSize: 16)),
+                Text(l10n.creditsTitle, style: Theme.of(context).textTheme.titleMedium),
                 const SizedBox(height: 24.0),
                 Text(
                   l10n.sriGopalaSundaram,
-                  style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                  style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold),
                 ),
                 const SizedBox(height: 12.0),
                 Text(
                   l10n.thiruppugazhExplanatoryText,
-                  style: const TextStyle(fontSize: 16),
+                  style: Theme.of(context).textTheme.bodyLarge,
                 ),
                 const SizedBox(height: 24.0),
                 Text(
                   l10n.thiruSendhan,
-                  style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                  style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold),
                 ),
                 const SizedBox(height: 12.0),
                 Text(
                   l10n.kaumaramFounder,
-                  style: const TextStyle(fontSize: 16),
+                  style: Theme.of(context).textTheme.bodyLarge,
                 ),
                 const SizedBox(height: 24.0),
                 Text(
                   l10n.kaumaramTeam,
-                  style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                  style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold),
                 ),
                 const SizedBox(height: 12.0),
                 Text(
                   l10n.kaumaramCoFounders,
-                  style: const TextStyle(fontSize: 16),
+                  style: Theme.of(context).textTheme.bodyLarge,
                 ),
 
                 const SizedBox(height: 24.0),
                 Text(
                   l10n.appDevelopment,
-                  style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                  style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold),
                 ),
                 const SizedBox(height: 12.0),
-                Text(l10n.ayilavanAni, style: const TextStyle(fontSize: 16)),
+                Text(l10n.ayilavanAni, style: Theme.of(context).textTheme.bodyLarge),
                 const SizedBox(height: 24.0),
                 Text(
                   l10n.contact,
-                  style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                  style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold),
                 ),
                 const SizedBox(height: 12.0),
-                Text(l10n.contactEmail, style: const TextStyle(fontSize: 16)),
+                Text(l10n.contactEmail, style: Theme.of(context).textTheme.bodyLarge),
               ],
+            ),
+          ),
+          const Divider(),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 16.0),
+            child: SizedBox(
+              width: double.infinity,
+              child: FilledButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const PrivacyPolicyScreen(),
+                    ),
+                  );
+                },
+                child: Text(l10n.privacyPolicy),
+              ),
             ),
           ),
         ],

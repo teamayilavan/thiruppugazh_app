@@ -73,7 +73,7 @@ class _TemplesScreenState extends State<TemplesScreen> {
                 return ListTile(
                   leading: Text(
                     '${index + 1}',
-                    style: const TextStyle(fontSize: 14),
+                    style: Theme.of(context).textTheme.bodyMedium,
                   ),
                   title: Text(name),
                   trailing: Text(

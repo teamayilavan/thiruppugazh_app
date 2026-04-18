@@ -201,7 +201,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get thiruSendhan => 'Thiru. Sendhan';
 
   @override
-  String get kaumaramFounder => 'Kaumaram website founder';
+  String get kaumaramFounder => 'Kaumaram Website founder';
 
   @override
   String get kaumaramTeam => 'Kaumaram Team';
@@ -213,7 +213,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get appDevelopment => 'App Development';
 
   @override
-  String get ayilavanAni => 'Ayilavan Ani';
+  String get ayilavanAni => 'Team Ayilavan';
 
   @override
   String get contact => 'Contact';
@@ -425,4 +425,10 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get noNotesFound => 'No notes yet.';
+
+  @override
+  String get highlight => 'Highlight';
+
+  @override
+  String get privacyPolicy => 'Privacy Policy';
 }

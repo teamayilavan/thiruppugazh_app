@@ -1,6 +1,5 @@
 /// Centralized string constants for the Thiruppugazh app.
 /// This file contains all user-facing strings to support future internationalization.
-
 class AppStrings {
   // Prevent instantiation
   AppStrings._();

@@ -8,7 +8,8 @@ import '../../data/models/highlight_model.dart';
 import '../../data/models/note_model.dart';
 import '../../data/repositories/song_repository.dart';
 import '../widgets/add_to_category_dialog.dart';
-import '../../constants/app_strings.dart';
+
+import '../../constants/app_constants.dart';
 import '../../l10n/app_localizations.dart';
 
 class SongDetailScreen extends StatefulWidget {
@@ -22,8 +23,11 @@ class SongDetailScreen extends StatefulWidget {
 class _SongDetailScreenState extends State<SongDetailScreen> {
   bool _isFavorite = false;
   bool _isFavoriteLoading = false;
+  List<int> _categoryIds = [];
   List<Highlight> _highlights = [];
   Note? _note;
+  final List<VerseRange> _verseRanges = [];
+
 
   @override
   void initState() {
@@ -32,14 +36,14 @@ class _SongDetailScreenState extends State<SongDetailScreen> {
     _loadCategoryInfo(repo);
   }
 
-  void _loadCategoryInfo(SongRepository repo) async {
+  Future<void> _loadCategoryInfo(SongRepository repo) async {
     final categoryIds = await repo.getCategoryIdsForSong(widget.song.id);
     final highlights = await repo.getHighlightsForSong(widget.song.id);
     final note = await repo.getNoteForSong(widget.song.id);
 
     if (mounted) {
       setState(() {
-        widget.song.categoryIds = categoryIds;
+        _categoryIds = categoryIds;
         _isFavorite = widget.song.isFavorite;
         _highlights = highlights;
         _note = note;
@@ -47,12 +51,12 @@ class _SongDetailScreenState extends State<SongDetailScreen> {
     }
   }
 
-  void _toggleFavorite() async {
+  Future<void> _toggleFavorite() async {
     if (_isFavoriteLoading) return;
 
     final repo = Provider.of<SongRepository>(context, listen: false);
     final messenger = ScaffoldMessenger.of(context);
-    final wasFavorite = _isFavorite || widget.song.categoryIds.contains(1);
+    final wasFavorite = _isFavorite || _categoryIds.contains(1);
 
     setState(() {
       _isFavoriteLoading = true;
@@ -89,29 +93,87 @@ class _SongDetailScreenState extends State<SongDetailScreen> {
     }
 
 
-  void _toggleHighlight(int verseIndex, String content) async {
+  Future<void> _toggleHighlights(List<int> indices) async {
     final repo = Provider.of<SongRepository>(context, listen: false);
-    final existingIndex = _highlights.indexWhere((h) => h.verseIndex == verseIndex);
-
-    if (existingIndex != -1) {
-      // Remove
-      await repo.removeHighlight(widget.song.id, verseIndex);
-      setState(() {
-        _highlights.removeAt(existingIndex);
-      });
+    
+    // Check if all selected verses are already highlighted
+    final allHighlighted = indices.every((i) => _highlights.any((h) => h.verseIndex == i));
+    
+    if (allHighlighted) {
+      // Remove highlights
+      for (final index in indices) {
+        await repo.removeHighlight(widget.song.id, index);
+      }
+      if (mounted) {
+        setState(() {
+          _highlights.removeWhere((h) => indices.contains(h.verseIndex));
+        });
+      }
     } else {
-      // Add
-      final highlight = Highlight(
-        songId: widget.song.id,
-        verseIndex: verseIndex,
-        textContent: content,
-        createdAt: DateTime.now(),
-      );
-      await repo.addHighlight(highlight);
-      setState(() {
-        _highlights.add(highlight);
-      });
+      // Add highlights
+      final newHighlights = <Highlight>[];
+      for (final index in indices) {
+        if (!_highlights.any((h) => h.verseIndex == index)) {
+          final content = widget.song.lyricsList[index];
+          final highlight = Highlight(
+            songId: widget.song.id,
+            verseIndex: index,
+            textContent: content,
+            createdAt: DateTime.now(),
+          );
+          await repo.addHighlight(highlight);
+          newHighlights.add(highlight);
+        }
+      }
+      if (mounted) {
+        setState(() {
+          _highlights.addAll(newHighlights);
+        });
+      }
     }
+  }
+
+  List<InlineSpan> _buildLyricsTextSpans(BuildContext context) {
+    _verseRanges.clear();
+    final spans = <InlineSpan>[];
+    int currentIndex = 0;
+    final tuneLength = widget.song.tuneList.length;
+
+    for (int i = 0; i < widget.song.lyricsList.length; i++) {
+        final paragraph = widget.song.lyricsList[i];
+        if (paragraph.trim().isEmpty) continue;
+
+        // Determine style
+        final isHighlighted = _highlights.any((h) => h.verseIndex == i);
+        // Using a light yellow background for highlighted text
+        final bgColor = isHighlighted ? Colors.yellow.withValues(alpha: 0.3) : null;
+        
+        final style = Theme.of(context).textTheme.bodyLarge?.copyWith(
+            height: 1.5,
+            backgroundColor: bgColor,
+            color: Theme.of(context).colorScheme.onSurface,
+        );
+
+        final span = TextSpan(text: paragraph, style: style);
+        spans.add(span);
+        
+        final start = currentIndex;
+        final end = currentIndex + paragraph.length;
+        _verseRanges.add(VerseRange(start: start, end: end, index: i));
+        currentIndex += paragraph.length;
+
+        // Add separator
+        if (tuneLength > 0 && (i + 1) % tuneLength == 0) {
+             const sep = '\n\n';
+             spans.add(const TextSpan(text: sep));
+             currentIndex += sep.length;
+        } else {
+             const sep = '\n';
+             spans.add(const TextSpan(text: sep));
+             currentIndex += sep.length;
+        }
+    }
+    return spans;
   }
 
   void _showNoteDialog() {
@@ -162,7 +224,7 @@ class _SongDetailScreenState extends State<SongDetailScreen> {
               
               // Reload note
               final updatedNote = await repo.getNoteForSong(widget.song.id);
-              if (mounted) {
+              if (context.mounted) {
                 setState(() {
                   _note = updatedNote;
                 });
@@ -207,9 +269,10 @@ class _SongDetailScreenState extends State<SongDetailScreen> {
     final l10n = AppLocalizations.of(context)!;
     
     // Custom scheme URI that MainWrapper detects
-    final deepLink = 'thiruppugazh://song/${song.id}';
+    // Updated to use https domain for App Links / Universal Links
+    final deepLink = 'https://${AppConstants.deepLinkDomain}/song/${song.id}';
     // Fallback Play Store URL (using standard ID format, replace if actual ID differs)
-    final playStoreUrl = 'https://play.google.com/store/apps/details?id=com.example.thiruppugazh';
+    const playStoreUrl = 'https://play.google.com/store/apps/details?id=org.ayilavan.thiruppugazh';
 
     final textToShare = 
         '${l10n.checkOutSong(song.title)}\n\n'
@@ -221,7 +284,7 @@ class _SongDetailScreenState extends State<SongDetailScreen> {
     );
   }
 
-  void _launchYouTubeSearch() async {
+  Future<void> _launchYouTubeSearch() async {
     final messenger = ScaffoldMessenger.of(context);
 
     final songTitle = Uri.encodeComponent(widget.song.title);
@@ -248,7 +311,7 @@ class _SongDetailScreenState extends State<SongDetailScreen> {
     }
   }
 
-  void _launchGoogleSearch() async {
+  Future<void> _launchGoogleSearch() async {
     final messenger = ScaffoldMessenger.of(context);
 
     final songTitle = Uri.encodeComponent(widget.song.title);
@@ -275,7 +338,7 @@ class _SongDetailScreenState extends State<SongDetailScreen> {
     }
   }
 
-  void _launchCustomUrl() async {
+  Future<void> _launchCustomUrl() async {
     final messenger = ScaffoldMessenger.of(context);
 
     final kaumaramId = widget.song.kaumaramId.padLeft(4, '0');
@@ -354,7 +417,7 @@ class _SongDetailScreenState extends State<SongDetailScreen> {
                 const SizedBox(height: 32),
                 Text(
                   widget.song.title,
-                  style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                  style: Theme.of(context).textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.bold),
                   textAlign: TextAlign.center,
                 ),
                 const SizedBox(height: 32),
@@ -370,7 +433,7 @@ class _SongDetailScreenState extends State<SongDetailScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(l10n.lyrics, style: const TextStyle(fontSize: 16)),
+                  Text(l10n.lyrics, style: Theme.of(context).textTheme.bodyLarge),
                   const SizedBox(height: 8),
                   const Divider(height: 16),
                   const SizedBox(height: 16),
@@ -379,54 +442,51 @@ class _SongDetailScreenState extends State<SongDetailScreen> {
             ),
           ),
           
-          SliverPadding(
-            padding: const EdgeInsets.symmetric(horizontal: 16.0),
-            sliver: SliverList.separated(
-              itemCount: widget.song.lyricsList.length,
-              itemBuilder: (context, index) {
-                final paragraph = widget.song.lyricsList[index];
-                if (paragraph.trim().isEmpty) return const SizedBox.shrink();
-                
-                return InkWell(
-                  onLongPress: () => _toggleHighlight(index, paragraph),
-                  child: Container(
-                    decoration: BoxDecoration(
-                      color: _highlights.any((h) => h.verseIndex == index)
-                          ? Colors.yellow.withOpacity(0.3)
-                          : null,
-                      borderRadius: BorderRadius.circular(4),
-                    ),
-                    padding: const EdgeInsets.symmetric(vertical: 4.0, horizontal: 2.0),
-                    child: SelectableText(
-                      paragraph,
-                      style: const TextStyle(fontSize: 16, height: 1.2),
-                      // Pass tap events through if not selecting text? 
-                      // SelectableText captures gestures, so InkWell might conflict if precise.
-                      // However, onLongPress on InkWell wraps the container. 
-                      // SelectableText consumes long press for selection. 
-                      // Alternatively, we use GestureDetector -> onDoubleTap to highlight since long press selects.
-                      // Or creating a custom context menu for SelectableText is harder.
-                      // Let's rely on Double Tap for highlighting to avoid conflict with text selection.
-                    ),
-                  ),
-                );
-                // Note: Double Tap is better than Long Press because SelectableText needs Long Press.
-                // Switching InkWell onLongPress to onDoubleTap in next edit if needed, but trying LongPress on parent first.
-              },
-              separatorBuilder: (context, index) {
-                // Calculate separator based on tuneList length to group lines into stanzas
-                final tuneLength = widget.song.tuneList.length;
-                
-                // Avoid division by zero, default to simple list if no tune structure
-                if (tuneLength == 0) return const SizedBox(height: 8);
+          SliverToBoxAdapter(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16.0),
+              child: SelectableText.rich(
+                TextSpan(
+                  children: _buildLyricsTextSpans(context),
+                ),
+                style: Theme.of(context).textTheme.bodyLarge?.copyWith(height: 1.5, color: Colors.black),
+                contextMenuBuilder: (context, editableTextState) {
+                  return AdaptiveTextSelectionToolbar.buttonItems(
+                    anchors: editableTextState.contextMenuAnchors,
+                    buttonItems: [
+                      ...editableTextState.contextMenuButtonItems
+                          .where((item) => item.type == ContextMenuButtonType.copy),
+                      ContextMenuButtonItem(
+                        onPressed: () {
+                          final selection = editableTextState.textEditingValue.selection;
+                          if (!selection.isValid) {
+                             editableTextState.hideToolbar();
+                             return;
+                          }
+                          
+                          // Find affected verses
+                          final start = selection.start;
+                          final end = selection.end;
+                          final affectedIndices = <int>[];
+                          
+                          for (final range in _verseRanges) {
+                            // Check for intersection
+                            if (range.start < end && range.end > start) {
+                              affectedIndices.add(range.index);
+                            }
+                          }
 
-                // Check if the current line (index+1) completes a stanza
-                if ((index + 1) % tuneLength == 0) {
-                  return const SizedBox(height: 32); // Paragraph break
-                } else {
-                  return const SizedBox(height: 4); // Line break (tightly spaced)
-                }
-              },
+                          editableTextState.hideToolbar();
+                          if (affectedIndices.isNotEmpty) {
+                            _toggleHighlights(affectedIndices);
+                          }
+                        },
+                        label: AppLocalizations.of(context)!.highlight,
+                      ),
+                    ],
+                  );
+                },
+              ),
             ),
           ),
           
@@ -522,7 +582,7 @@ class _SongDetailScreenState extends State<SongDetailScreen> {
                         valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
                       ),
                     )
-                  : Icon((_isFavorite || widget.song.categoryIds.contains(1)) ? Icons.favorite : Icons.favorite_border),
+                  : Icon((_isFavorite || _categoryIds.contains(1)) ? Icons.favorite : Icons.favorite_border),
             ),
           ),
           const SizedBox(height: 16),
@@ -537,9 +597,11 @@ class _SongDetailScreenState extends State<SongDetailScreen> {
                   context: context,
                   builder: (context) => AddToCategoryDialog(
                     song: widget.song,
-                    onUpdate: () {
+                    currentCategoryIds: _categoryIds,
+                    onCategoryIdsChanged: (updatedIds) {
                       setState(() {
-                         _isFavorite = widget.song.categoryIds.contains(1);
+                        _categoryIds = updatedIds;
+                        _isFavorite = updatedIds.contains(1);
                       });
                     },
                   ),
@@ -560,15 +622,15 @@ class _SongDetailScreenState extends State<SongDetailScreen> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(l10n.temple, style: const TextStyle(fontSize: 16)),
+          Text(l10n.temple, style: Theme.of(context).textTheme.bodyLarge),
           const SizedBox(height: 8),
           Text(
             widget.song.place,
-            style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+            style: Theme.of(context).textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.w600),
           ),
           const SizedBox(height: 24),
-          Text(l10n.tune, style: const TextStyle(fontSize: 16)),
-          Text(widget.song.tune, style: const TextStyle(fontSize: 16)),
+          Text(l10n.tune, style: Theme.of(context).textTheme.bodyLarge),
+          Text(widget.song.tune, style: Theme.of(context).textTheme.bodyLarge),
         ],
       ),
     );
@@ -594,7 +656,7 @@ class _SongDetailScreenState extends State<SongDetailScreen> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(title, style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+          Text(title, style: Theme.of(context).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold)),
           const SizedBox(height: 8),
           const Divider(height: 16),
           const SizedBox(height: 16),
@@ -619,7 +681,7 @@ class _SongDetailScreenState extends State<SongDetailScreen> {
                     ),
                   SelectableText(
                     meaning,
-                    style: const TextStyle(fontSize: 16, height: 1.5),
+                    style: Theme.of(context).textTheme.bodyLarge?.copyWith(height: 1.5),
                   ),
                 ],
               ),
@@ -629,4 +691,12 @@ class _SongDetailScreenState extends State<SongDetailScreen> {
       ),
     );
   }
+}
+
+class VerseRange {
+  final int start;
+  final int end;
+  final int index;
+
+  VerseRange({required this.start, required this.end, required this.index});
 }

@@ -8,6 +8,7 @@ import '../models/search_filter.dart';
 import '../models/highlight_model.dart';
 import '../models/note_model.dart';
 import '../../utils/app_logger.dart';
+import '../../constants/app_constants.dart';
 
 /// A singleton class to manage the SQLite database connection and queries.
 class DatabaseHelper {
@@ -16,16 +17,13 @@ class DatabaseHelper {
   factory DatabaseHelper() => _instance;
   DatabaseHelper._internal();
 
-  static Database? _database;
+  static Future<Database>? _databaseFuture;
   static const String _dbName = "thiruppugazh.db";
-  static const int _dbVersion = 1;
+  static const int _dbVersion = AppConstants.dbVersion;
 
   /// Returns the singleton database instance, initializing it if necessary.
-  Future<Database> get database async {
-    if (_database != null) return _database!;
-    _database = await _initDatabase();
-    return _database!;
-  }
+  /// Caches the Future itself so concurrent callers all await the same init.
+  Future<Database> get database => _databaseFuture ??= _initDatabase();
 
   Future<Database> _initDatabase() async {
     final dbPath = await getDatabasesPath();
@@ -48,9 +46,9 @@ class DatabaseHelper {
         await File(path).writeAsBytes(bytes, flush: true);
         AppLogger.info("Database copied from assets");
 
-      } catch (e) {
-        AppLogger.error("Error copying database", error: e);
-        // Fallback: Let openDatabase create an empty one (though this might fail expectations)
+      } catch (e, stackTrace) {
+        AppLogger.error("Fatal: failed to copy bundled database", error: e, stackTrace: stackTrace);
+        rethrow;
       }
     } else {
       AppLogger.info("Opening existing database");
@@ -67,15 +65,13 @@ class DatabaseHelper {
         // Since we copied the asset, 'songs' table should exist.
         // We need to ensure other tables exist and populate temples.
         await _initializeSchema(db);
+        await _addIndexes(db);
       },
       onUpgrade: (db, oldVersion, newVersion) async {
-        // For existing users with older versions (e.g. dev versions), 
-        // we might want to just ensure schema is consistent.
-        // Since we are consolidating to v1, we assume a "reset" or "ensure" approach.
-        // If we want to support upgrade from the dev versions, we would need logic here,
-        // but the request is to "merge all into one single migration".
-        // Simplest strategy for dev/test apps: Ensure tables exist.
-        await _initializeSchema(db);
+        if (oldVersion < 2) {
+          // v1 -> v2: add indexes for performance
+          await _addIndexes(db);
+        }
       },
       onOpen: (db) async {
          // Ensure schema is up to date even on open if needed
@@ -104,7 +100,7 @@ class DatabaseHelper {
         is_favorite INTEGER DEFAULT 0
       )
     ''');
-    
+
     // 2. Create Categories table
     await db.execute('''
       CREATE TABLE IF NOT EXISTS categories(
@@ -112,7 +108,7 @@ class DatabaseHelper {
         name TEXT NOT NULL UNIQUE
       )
     ''');
-    
+
     // Insert default 'Favorites' category if it doesn't exist
     await db.execute('''
       INSERT OR IGNORE INTO categories (id, name) VALUES (1, 'Favorites')
@@ -149,7 +145,7 @@ class DatabaseHelper {
         FOREIGN KEY(song_id) REFERENCES songs(id) ON DELETE CASCADE
       )
     ''');
-    
+
     // 6. Create Notes table
     await db.execute('''
       CREATE TABLE IF NOT EXISTS notes(
@@ -163,17 +159,17 @@ class DatabaseHelper {
     ''');
 
     // 7. Populate Temples Table
-    // We only want to populate if it's empty to avoid re-calculating on every open/upgrade unnecessarily, 
+    // We only want to populate if it's empty to avoid re-calculating on every open/upgrade unnecessarily,
     // unless we want to ensure sync.
     // Let's check count first.
     final count = Sqflite.firstIntValue(await db.rawQuery('SELECT COUNT(*) FROM temples'));
-    
+
     if (count == 0) {
       AppLogger.info('Populating temples table');
       final List<Map<String, dynamic>> places = await db.rawQuery('''
-        SELECT place, COUNT(*) as count 
-        FROM songs 
-        WHERE place IS NOT NULL AND place != '' 
+        SELECT place, COUNT(*) as count
+        FROM songs
+        WHERE place IS NOT NULL AND place != ''
         GROUP BY place
       ''');
 
@@ -186,7 +182,7 @@ class DatabaseHelper {
       }
       await batch.commit(noResult: true);
     }
-    
+
     // 8. Ensure is_favorite column exists in songs (if asset didn't have it)
     try {
       await db.rawQuery('SELECT is_favorite FROM songs LIMIT 1');
@@ -195,6 +191,33 @@ class DatabaseHelper {
       AppLogger.info('Adding is_favorite column to songs');
        await db.execute('ALTER TABLE songs ADD COLUMN is_favorite INTEGER DEFAULT 0');
     }
+  }
+
+  Future<void> _addIndexes(Database db) async {
+    // Index for fast favorite lookups (WHERE is_favorite = 1)
+    await db.execute('''
+      CREATE INDEX IF NOT EXISTS idx_songs_is_favorite
+      ON songs(is_favorite)
+    ''');
+
+    // Index for fast category-based song lookups
+    // (composite PK covers song_id first; this covers category_id queries)
+    await db.execute('''
+      CREATE INDEX IF NOT EXISTS idx_song_categories_category_id
+      ON song_categories(category_id)
+    ''');
+
+    // Index for fast highlight lookups by song
+    await db.execute('''
+      CREATE INDEX IF NOT EXISTS idx_highlights_song_id
+      ON highlights(song_id)
+    ''');
+
+    // Index for fast note lookups by song
+    await db.execute('''
+      CREATE INDEX IF NOT EXISTS idx_notes_song_id
+      ON notes(song_id)
+    ''');
   }
 
   // --- Highlights Methods ---
@@ -227,6 +250,19 @@ class DatabaseHelper {
     final db = await database;
     final maps = await db.query('highlights', orderBy: 'created_at DESC');
     return List.generate(maps.length, (i) => Highlight.fromMap(maps[i]));
+  }
+
+  /// Returns all highlights joined with their song titles in one query.
+  /// Each map contains all highlight columns plus `song_title`.
+  Future<List<Map<String, dynamic>>> getHighlightsWithSongs() async {
+    final db = await database;
+    return await db.rawQuery('''
+      SELECT h.id, h.song_id, h.verse_index, h.text_content, h.created_at,
+             s.title AS song_title
+      FROM highlights h
+      INNER JOIN songs s ON h.song_id = s.id
+      ORDER BY h.created_at DESC
+    ''');
   }
 
   // --- Notes Methods ---
@@ -266,7 +302,20 @@ class DatabaseHelper {
     final maps = await db.query('notes', orderBy: 'updated_at DESC');
     return List.generate(maps.length, (i) => Note.fromMap(maps[i]));
   }
-  
+
+  /// Returns all notes joined with their song titles in one query.
+  /// Each map contains all note columns plus `song_title`.
+  Future<List<Map<String, dynamic>>> getNotesWithSongs() async {
+    final db = await database;
+    return await db.rawQuery('''
+      SELECT n.id, n.song_id, n.content, n.created_at, n.updated_at,
+             s.title AS song_title
+      FROM notes n
+      INNER JOIN songs s ON n.song_id = s.id
+      ORDER BY n.updated_at DESC
+    ''');
+  }
+
   Future<void> deleteNote(int songId) async {
      final db = await database;
      await db.delete('notes', where: 'song_id = ?', whereArgs: [songId]);
@@ -347,37 +396,111 @@ class DatabaseHelper {
       return [];
     }
 
-    // Use LIKE queries for Tamil language support
-    final searchPattern = '%$sanitizedQuery%';
+    // Build dynamic WHERE clause based on filter flags
+    final List<String> conditions = [];
+    final List<dynamic> args = [];
+    final exactQuery = sanitizedQuery;
+
+    // Generate variations for Tamil spelling tolerance (e.g. ன vs ந)
+    final variations = _getTamilVariations(sanitizedQuery);
+
+    void addLikeCondition(String field) {
+      if (variations.isEmpty) return;
+      final fieldConditions = <String>[];
+      for (var _ in variations) {
+        fieldConditions.add('$field LIKE ?');
+      }
+      conditions.add('(${fieldConditions.join(' OR ')})');
+      args.addAll(variations.map((v) => '%$v%'));
+    }
+
+    if (filter.searchTitle) {
+      addLikeCondition('title');
+    }
+    
+    // For lyrics, we also check 'words' as it often contains the segmented words useful for search
+    if (filter.searchLyrics) {
+      // Combined lyrics and words condition check for all variations
+      // Logic: (lyrics LIKE %v1% OR lyrics LIKE %v2% OR words LIKE %v1% OR words LIKE %v2%)
+      // This is slightly more complex if we want to treat lyrics/words as a group.
+      // But adding independent conditions is fine: (lyrics conditions) AND (words conditions)? 
+      // No, they are usually OR'ed in the main query logic?
+      // Wait, the main query joins conditions with OR.
+      // So conditions.add(...) -> adds a block.
+      // 'title LIKE ...' OR 'lyrics LIKE ...'
+      
+      addLikeCondition('lyrics');
+      addLikeCondition('words');
+    }
+    
+    if (filter.searchPlace) {
+      addLikeCondition('place');
+    }
+    
+    if (filter.searchTune) {
+      addLikeCondition('tune');
+    }
+    
+    if (filter.searchKaumaramId) {
+      // Exact match for Kaumaram ID as requested
+      conditions.add('kaumaram_id = ?');
+      args.add(exactQuery);
+    }
+
+    if (filter.searchPathavurai) {
+      addLikeCondition('pathavurai');
+    }
+
+    // If no specific filter is selected, fallback... (handled by returning empty above if conditions empty)
+    
+    if (conditions.isEmpty) {
+      return []; 
+    }
+
+    final whereClause = conditions.join(' OR ');
+
+    // AppLogger.info('Searching with Clause: $whereClause'); 
+    // AppLogger.info('Args: $args');
+
     final List<Map<String, dynamic>> results = await db.rawQuery('''
       SELECT * FROM songs
-      WHERE title LIKE ? OR lyrics LIKE ?
+      WHERE $whereClause
       ORDER BY title
       LIMIT 50
-    ''', [searchPattern, searchPattern]);
+    ''', args);
 
     return results.map((songMap) => Song.fromMap(songMap)).toList();
   }
 
-  /// Sanitizes search query to prevent SQL injection and malicious input.
-  String _sanitizeSearchQuery(String query) {
-    // Trim whitespace
-    String sanitized = query.trim();
+  /// Generates variations for common Tamil spelling differences.
+  /// Currently handles:
+  /// - ன (U+0BA9) <-> ந (U+0BA8)
+  List<String> _getTamilVariations(String query) {
+    final Set<String> variations = {query};
     
-    // Limit length to 100 characters
-    if (sanitized.length > 100) {
-      sanitized = sanitized.substring(0, 100);
+    // Handle ன (Nna - Alveolar) vs ந (Na - Dental) mismatch
+    // These are often confused in spelling (e.g., Palani: பழனி vs பழநி)
+    if (query.contains('ன')) {
+      variations.add(query.replaceAll('ன', 'ந'));
+    }
+    if (query.contains('ந')) {
+      variations.add(query.replaceAll('ந', 'ன'));
     }
     
-    // Remove potentially dangerous SQL patterns using plain string replacement
-    sanitized = sanitized.replaceAll("'", '');
-    sanitized = sanitized.replaceAll('"', '');
-    sanitized = sanitized.replaceAll(';', '');
-    sanitized = sanitized.replaceAll('--', '');
-    sanitized = sanitized.replaceAll('/*', '');
-    sanitized = sanitized.replaceAll('*/', '');
+    // We could add more here (ra/Ra, la/La/zha) if needed later.
     
-    return sanitized;
+    return variations.toList();
+  }
+
+  /// Trims and length-limits the search query.
+  /// SQL injection is prevented by parameterised queries (whereArgs),
+  /// not by character removal.
+  String _sanitizeSearchQuery(String query) {
+    final trimmed = query.trim();
+    if (trimmed.length > AppConstants.maxSearchQueryLength) {
+      return trimmed.substring(0, AppConstants.maxSearchQueryLength);
+    }
+    return trimmed;
   }
 
   Future<List<Category>> getCategoriesWithSongCounts() async {
