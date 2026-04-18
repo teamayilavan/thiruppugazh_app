@@ -8,6 +8,7 @@ import '../models/search_filter.dart';
 import '../models/highlight_model.dart';
 import '../models/note_model.dart';
 import '../../utils/app_logger.dart';
+import '../../constants/app_constants.dart';
 
 /// A singleton class to manage the SQLite database connection and queries.
 class DatabaseHelper {
@@ -18,7 +19,7 @@ class DatabaseHelper {
 
   static Database? _database;
   static const String _dbName = "thiruppugazh.db";
-  static const int _dbVersion = 1;
+  static const int _dbVersion = AppConstants.dbVersion;
 
   /// Returns the singleton database instance, initializing it if necessary.
   Future<Database> get database async {
@@ -67,15 +68,13 @@ class DatabaseHelper {
         // Since we copied the asset, 'songs' table should exist.
         // We need to ensure other tables exist and populate temples.
         await _initializeSchema(db);
+        await _addIndexes(db);
       },
       onUpgrade: (db, oldVersion, newVersion) async {
-        // For existing users with older versions (e.g. dev versions), 
-        // we might want to just ensure schema is consistent.
-        // Since we are consolidating to v1, we assume a "reset" or "ensure" approach.
-        // If we want to support upgrade from the dev versions, we would need logic here,
-        // but the request is to "merge all into one single migration".
-        // Simplest strategy for dev/test apps: Ensure tables exist.
-        await _initializeSchema(db);
+        if (oldVersion < 2) {
+          // v1 -> v2: add indexes for performance
+          await _addIndexes(db);
+        }
       },
       onOpen: (db) async {
          // Ensure schema is up to date even on open if needed
@@ -104,7 +103,7 @@ class DatabaseHelper {
         is_favorite INTEGER DEFAULT 0
       )
     ''');
-    
+
     // 2. Create Categories table
     await db.execute('''
       CREATE TABLE IF NOT EXISTS categories(
@@ -112,7 +111,7 @@ class DatabaseHelper {
         name TEXT NOT NULL UNIQUE
       )
     ''');
-    
+
     // Insert default 'Favorites' category if it doesn't exist
     await db.execute('''
       INSERT OR IGNORE INTO categories (id, name) VALUES (1, 'Favorites')
@@ -149,7 +148,7 @@ class DatabaseHelper {
         FOREIGN KEY(song_id) REFERENCES songs(id) ON DELETE CASCADE
       )
     ''');
-    
+
     // 6. Create Notes table
     await db.execute('''
       CREATE TABLE IF NOT EXISTS notes(
@@ -163,17 +162,17 @@ class DatabaseHelper {
     ''');
 
     // 7. Populate Temples Table
-    // We only want to populate if it's empty to avoid re-calculating on every open/upgrade unnecessarily, 
+    // We only want to populate if it's empty to avoid re-calculating on every open/upgrade unnecessarily,
     // unless we want to ensure sync.
     // Let's check count first.
     final count = Sqflite.firstIntValue(await db.rawQuery('SELECT COUNT(*) FROM temples'));
-    
+
     if (count == 0) {
       AppLogger.info('Populating temples table');
       final List<Map<String, dynamic>> places = await db.rawQuery('''
-        SELECT place, COUNT(*) as count 
-        FROM songs 
-        WHERE place IS NOT NULL AND place != '' 
+        SELECT place, COUNT(*) as count
+        FROM songs
+        WHERE place IS NOT NULL AND place != ''
         GROUP BY place
       ''');
 
@@ -186,7 +185,7 @@ class DatabaseHelper {
       }
       await batch.commit(noResult: true);
     }
-    
+
     // 8. Ensure is_favorite column exists in songs (if asset didn't have it)
     try {
       await db.rawQuery('SELECT is_favorite FROM songs LIMIT 1');
@@ -195,6 +194,33 @@ class DatabaseHelper {
       AppLogger.info('Adding is_favorite column to songs');
        await db.execute('ALTER TABLE songs ADD COLUMN is_favorite INTEGER DEFAULT 0');
     }
+  }
+
+  Future<void> _addIndexes(Database db) async {
+    // Index for fast favorite lookups (WHERE is_favorite = 1)
+    await db.execute('''
+      CREATE INDEX IF NOT EXISTS idx_songs_is_favorite
+      ON songs(is_favorite)
+    ''');
+
+    // Index for fast category-based song lookups
+    // (composite PK covers song_id first; this covers category_id queries)
+    await db.execute('''
+      CREATE INDEX IF NOT EXISTS idx_song_categories_category_id
+      ON song_categories(category_id)
+    ''');
+
+    // Index for fast highlight lookups by song
+    await db.execute('''
+      CREATE INDEX IF NOT EXISTS idx_highlights_song_id
+      ON highlights(song_id)
+    ''');
+
+    // Index for fast note lookups by song
+    await db.execute('''
+      CREATE INDEX IF NOT EXISTS idx_notes_song_id
+      ON notes(song_id)
+    ''');
   }
 
   // --- Highlights Methods ---
