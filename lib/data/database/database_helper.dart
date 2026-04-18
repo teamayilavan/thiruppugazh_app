@@ -229,6 +229,19 @@ class DatabaseHelper {
     return List.generate(maps.length, (i) => Highlight.fromMap(maps[i]));
   }
 
+  /// Returns all highlights joined with their song titles in one query.
+  /// Each map contains all highlight columns plus `song_title`.
+  Future<List<Map<String, dynamic>>> getHighlightsWithSongs() async {
+    final db = await database;
+    return await db.rawQuery('''
+      SELECT h.id, h.song_id, h.verse_index, h.text_content, h.created_at,
+             s.title AS song_title
+      FROM highlights h
+      INNER JOIN songs s ON h.song_id = s.id
+      ORDER BY h.created_at DESC
+    ''');
+  }
+
   // --- Notes Methods ---
 
   Future<int> saveNote(Note note) async {
@@ -266,7 +279,20 @@ class DatabaseHelper {
     final maps = await db.query('notes', orderBy: 'updated_at DESC');
     return List.generate(maps.length, (i) => Note.fromMap(maps[i]));
   }
-  
+
+  /// Returns all notes joined with their song titles in one query.
+  /// Each map contains all note columns plus `song_title`.
+  Future<List<Map<String, dynamic>>> getNotesWithSongs() async {
+    final db = await database;
+    return await db.rawQuery('''
+      SELECT n.id, n.song_id, n.content, n.created_at, n.updated_at,
+             s.title AS song_title
+      FROM notes n
+      INNER JOIN songs s ON n.song_id = s.id
+      ORDER BY n.updated_at DESC
+    ''');
+  }
+
   Future<void> deleteNote(int songId) async {
      final db = await database;
      await db.delete('notes', where: 'song_id = ?', whereArgs: [songId]);
@@ -347,16 +373,100 @@ class DatabaseHelper {
       return [];
     }
 
-    // Use LIKE queries for Tamil language support
-    final searchPattern = '%$sanitizedQuery%';
+    // Build dynamic WHERE clause based on filter flags
+    final List<String> conditions = [];
+    final List<dynamic> args = [];
+    final exactQuery = sanitizedQuery;
+
+    // Generate variations for Tamil spelling tolerance (e.g. ன vs ந)
+    final variations = _getTamilVariations(sanitizedQuery);
+
+    void addLikeCondition(String field) {
+      if (variations.isEmpty) return;
+      final fieldConditions = <String>[];
+      for (var _ in variations) {
+        fieldConditions.add('$field LIKE ?');
+      }
+      conditions.add('(${fieldConditions.join(' OR ')})');
+      args.addAll(variations.map((v) => '%$v%'));
+    }
+
+    if (filter.searchTitle) {
+      addLikeCondition('title');
+    }
+    
+    // For lyrics, we also check 'words' as it often contains the segmented words useful for search
+    if (filter.searchLyrics) {
+      // Combined lyrics and words condition check for all variations
+      // Logic: (lyrics LIKE %v1% OR lyrics LIKE %v2% OR words LIKE %v1% OR words LIKE %v2%)
+      // This is slightly more complex if we want to treat lyrics/words as a group.
+      // But adding independent conditions is fine: (lyrics conditions) AND (words conditions)? 
+      // No, they are usually OR'ed in the main query logic?
+      // Wait, the main query joins conditions with OR.
+      // So conditions.add(...) -> adds a block.
+      // 'title LIKE ...' OR 'lyrics LIKE ...'
+      
+      addLikeCondition('lyrics');
+      addLikeCondition('words');
+    }
+    
+    if (filter.searchPlace) {
+      addLikeCondition('place');
+    }
+    
+    if (filter.searchTune) {
+      addLikeCondition('tune');
+    }
+    
+    if (filter.searchKaumaramId) {
+      // Exact match for Kaumaram ID as requested
+      conditions.add('kaumaram_id = ?');
+      args.add(exactQuery);
+    }
+
+    if (filter.searchPathavurai) {
+      addLikeCondition('pathavurai');
+    }
+
+    // If no specific filter is selected, fallback... (handled by returning empty above if conditions empty)
+    
+    if (conditions.isEmpty) {
+      return []; 
+    }
+
+    final whereClause = conditions.join(' OR ');
+
+    // AppLogger.info('Searching with Clause: $whereClause'); 
+    // AppLogger.info('Args: $args');
+
     final List<Map<String, dynamic>> results = await db.rawQuery('''
       SELECT * FROM songs
-      WHERE title LIKE ? OR lyrics LIKE ?
+      WHERE $whereClause
       ORDER BY title
       LIMIT 50
-    ''', [searchPattern, searchPattern]);
+    ''', args);
 
     return results.map((songMap) => Song.fromMap(songMap)).toList();
+  }
+
+  /// Generates variations for common Tamil spelling differences.
+  /// Currently handles:
+  /// - ன (U+0BA9) <-> ந (U+0BA8)
+  List<String> _getTamilVariations(String query) {
+    final Set<String> variations = {query};
+    
+    // Handle ன (Nna - Alveolar) vs ந (Na - Dental) mismatch
+    // These are often confused in spelling (e.g., Palani: பழனி vs பழநி)
+    if (query.contains('ன')) {
+      variations.add(query.replaceAll('ன', 'ந'));
+    }
+    if (query.contains('ந')) {
+      variations.add(query.replaceAll('ந', 'ன'));
+    }
+    
+    // We could add more here (ra/Ra, la/La/zha) if needed later.
+    
+    return variations.toList();
   }
 
   /// Sanitizes search query to prevent SQL injection and malicious input.

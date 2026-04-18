@@ -35,6 +35,9 @@ class SongRepository extends ChangeNotifier {
     return await dbHelper.getAllHighlights();
   }
 
+  Future<List<Map<String, dynamic>>> getHighlightsWithSongs() =>
+      dbHelper.getHighlightsWithSongs();
+
   // --- Notes Methods ---
 
   Future<int> saveNote(Note note) async {
@@ -50,7 +53,10 @@ class SongRepository extends ChangeNotifier {
   Future<List<Note>> getAllNotes() async {
     return await dbHelper.getAllNotes();
   }
-  
+
+  Future<List<Map<String, dynamic>>> getNotesWithSongs() =>
+      dbHelper.getNotesWithSongs();
+
   Future<void> deleteNote(int songId) async {
     await dbHelper.deleteNote(songId);
     notifyListeners();
