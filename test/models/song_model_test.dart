@@ -59,5 +59,25 @@ void main() {
       // Assert
       expect(song.categoryIds, isEmpty);
     });
+
+    test('Song categoryIds is a final field', () {
+      final song = Song(
+        id: 1,
+        kaumaramId: '1',
+        title: 'T',
+        place: 'P',
+        tune: 'Tu',
+        lyrics: '',
+        lyricsList: [],
+        tuneList: [],
+        words: [],
+        meanings: [],
+        pathavurai: '',
+        patham: [],
+        categoryIds: [2, 3],
+      );
+
+      expect(song.categoryIds, [2, 3]);
+    });
   });
 }

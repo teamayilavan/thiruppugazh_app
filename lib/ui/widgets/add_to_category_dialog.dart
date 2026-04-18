@@ -3,16 +3,17 @@ import 'package:provider/provider.dart';
 import '../../data/repositories/song_repository.dart';
 import '../../data/models/song_model.dart';
 import '../../l10n/app_localizations.dart';
-import '../../constants/app_strings.dart';
 
 class AddToCategoryDialog extends StatefulWidget {
   final Song song;
-  final VoidCallback onUpdate;
+  final List<int> currentCategoryIds;
+  final ValueChanged<List<int>> onCategoryIdsChanged;
 
   const AddToCategoryDialog({
     super.key,
     required this.song,
-    required this.onUpdate,
+    required this.currentCategoryIds,
+    required this.onCategoryIdsChanged,
   });
 
   @override
@@ -38,7 +39,7 @@ class _AddToCategoryDialogState extends State<AddToCategoryDialog> {
         }
 
         final allCategories = snapshot.data!;
-        final currentCategoryIds = widget.song.categoryIds.toSet();
+        final currentCategoryIds = widget.currentCategoryIds.toSet();
 
         return StatefulBuilder(
           builder: (context, setDialogState) {
@@ -106,8 +107,7 @@ class _AddToCategoryDialogState extends State<AddToCategoryDialog> {
 
                             if (!mounted) return;
 
-                            widget.song.categoryIds = currentCategoryIds.toList();
-                            widget.onUpdate();
+                            widget.onCategoryIdsChanged(currentCategoryIds.toList());
 
                             navigator.pop();
                             

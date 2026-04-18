@@ -23,6 +23,7 @@ class SongDetailScreen extends StatefulWidget {
 class _SongDetailScreenState extends State<SongDetailScreen> {
   bool _isFavorite = false;
   bool _isFavoriteLoading = false;
+  List<int> _categoryIds = [];
   List<Highlight> _highlights = [];
   Note? _note;
   final List<VerseRange> _verseRanges = [];
@@ -42,7 +43,7 @@ class _SongDetailScreenState extends State<SongDetailScreen> {
 
     if (mounted) {
       setState(() {
-        widget.song.categoryIds = categoryIds;
+        _categoryIds = categoryIds;
         _isFavorite = widget.song.isFavorite;
         _highlights = highlights;
         _note = note;
@@ -55,7 +56,7 @@ class _SongDetailScreenState extends State<SongDetailScreen> {
 
     final repo = Provider.of<SongRepository>(context, listen: false);
     final messenger = ScaffoldMessenger.of(context);
-    final wasFavorite = _isFavorite || widget.song.categoryIds.contains(1);
+    final wasFavorite = _isFavorite || _categoryIds.contains(1);
 
     setState(() {
       _isFavoriteLoading = true;
@@ -581,7 +582,7 @@ class _SongDetailScreenState extends State<SongDetailScreen> {
                         valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
                       ),
                     )
-                  : Icon((_isFavorite || widget.song.categoryIds.contains(1)) ? Icons.favorite : Icons.favorite_border),
+                  : Icon((_isFavorite || _categoryIds.contains(1)) ? Icons.favorite : Icons.favorite_border),
             ),
           ),
           const SizedBox(height: 16),
@@ -596,9 +597,11 @@ class _SongDetailScreenState extends State<SongDetailScreen> {
                   context: context,
                   builder: (context) => AddToCategoryDialog(
                     song: widget.song,
-                    onUpdate: () {
+                    currentCategoryIds: _categoryIds,
+                    onCategoryIdsChanged: (updatedIds) {
                       setState(() {
-                         _isFavorite = widget.song.categoryIds.contains(1);
+                        _categoryIds = updatedIds;
+                        _isFavorite = updatedIds.contains(1);
                       });
                     },
                   ),
