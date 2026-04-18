@@ -58,6 +58,7 @@ class BackupService {
       await file.writeAsString(jsonString);
 
       // 4. Share file
+      // ignore: deprecated_member_use
       final result = await Share.shareXFiles(
         [XFile(file.path)],
         subject: 'Thiruppugazh Backup',
@@ -101,10 +102,7 @@ class BackupService {
       final content = await file.readAsString();
       final Map<String, dynamic> importMap = jsonDecode(content);
 
-      // Validate simple structure
-      if (!importMap.containsKey('favorites') || !importMap.containsKey('categories')) {
-        throw Exception('Invalid backup file format');
-      }
+      _validateBackupMap(importMap);
 
       // Show progress
       if (context.mounted) {
@@ -179,13 +177,56 @@ class BackupService {
       if (context.mounted) {
         // Close progress dialog if open (can be tricky to know state, but usually fine here)
         // A better way is using a stateful widget or provider, but for this simple action:
-        Navigator.of(context).maybePop(); 
-        
+        Navigator.of(context).maybePop();
+
         AppLogger.error('Import failed', error: e, stackTrace: stackTrace);
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(content: Text('Import failed: ${e.toString()}')),
         );
       }
+    }
+  }
+
+  void _validateBackupMap(Map<String, dynamic> map) {
+    if (!map.containsKey('favorites') || !map.containsKey('categories')) {
+      throw const FormatException('Missing required keys: favorites, categories');
+    }
+
+    final favorites = map['favorites'];
+    if (favorites is! List) {
+      throw const FormatException('favorites must be a list');
+    }
+    if (favorites.any((e) => e is! int)) {
+      throw const FormatException('favorites must contain only integers');
+    }
+    if (favorites.length > 10000) {
+      throw const FormatException('favorites list is unexpectedly large');
+    }
+
+    final categories = map['categories'];
+    if (categories is! List) {
+      throw const FormatException('categories must be a list');
+    }
+    for (final cat in categories) {
+      if (cat is! Map) throw const FormatException('each category must be an object');
+      if (cat['name'] is! String) throw const FormatException('category name must be a string');
+      final songs = cat['songs'];
+      if (songs != null) {
+        if (songs is! List) throw const FormatException('category songs must be a list');
+        if (songs.any((e) => e is! int)) {
+          throw const FormatException('category songs must contain only integers');
+        }
+      }
+    }
+
+    final notes = map['notes'];
+    if (notes != null && notes is! List) {
+      throw const FormatException('notes must be a list');
+    }
+
+    final highlights = map['highlights'];
+    if (highlights != null && highlights is! List) {
+      throw const FormatException('highlights must be a list');
     }
   }
 }
