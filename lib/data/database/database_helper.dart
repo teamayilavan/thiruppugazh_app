@@ -17,16 +17,13 @@ class DatabaseHelper {
   factory DatabaseHelper() => _instance;
   DatabaseHelper._internal();
 
-  static Database? _database;
+  static Future<Database>? _databaseFuture;
   static const String _dbName = "thiruppugazh.db";
   static const int _dbVersion = AppConstants.dbVersion;
 
   /// Returns the singleton database instance, initializing it if necessary.
-  Future<Database> get database async {
-    if (_database != null) return _database!;
-    _database = await _initDatabase();
-    return _database!;
-  }
+  /// Caches the Future itself so concurrent callers all await the same init.
+  Future<Database> get database => _databaseFuture ??= _initDatabase();
 
   Future<Database> _initDatabase() async {
     final dbPath = await getDatabasesPath();
