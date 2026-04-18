@@ -54,6 +54,7 @@ class _HighlightsListState extends State<HighlightsList> {
   }
 
   void _refresh() {
+    if (!mounted) return;
     setState(_load);
   }
 
@@ -148,6 +149,7 @@ class _NotesListState extends State<NotesList> {
   }
 
   void _refresh() {
+    if (!mounted) return;
     setState(_load);
   }
 
@@ -207,21 +209,20 @@ class _NotesListState extends State<NotesList> {
               trailing: IconButton(
                 icon: const Icon(Icons.delete_outline),
                 onPressed: () async {
-                  final l10nInner = AppLocalizations.of(context)!;
                   final confirm = await showDialog<bool>(
                     context: context,
                     builder: (context) => AlertDialog(
-                      title: Text(l10nInner.deleteNote),
-                      content: Text(l10nInner.deleteNoteConfirmation),
+                      title: Text(l10n.deleteNote),
+                      content: Text(l10n.deleteNoteConfirmation),
                       actions: [
                         TextButton(
                           onPressed: () => Navigator.of(context).pop(false),
-                          child: Text(l10nInner.cancel),
+                          child: Text(l10n.cancel),
                         ),
                         TextButton(
                           onPressed: () => Navigator.of(context).pop(true),
                           child: Text(
-                            l10nInner.delete,
+                            l10n.delete,
                             style: const TextStyle(color: Colors.red),
                           ),
                         ),
