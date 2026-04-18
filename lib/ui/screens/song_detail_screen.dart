@@ -36,7 +36,7 @@ class _SongDetailScreenState extends State<SongDetailScreen> {
     _loadCategoryInfo(repo);
   }
 
-  void _loadCategoryInfo(SongRepository repo) async {
+  Future<void> _loadCategoryInfo(SongRepository repo) async {
     final categoryIds = await repo.getCategoryIdsForSong(widget.song.id);
     final highlights = await repo.getHighlightsForSong(widget.song.id);
     final note = await repo.getNoteForSong(widget.song.id);
@@ -51,7 +51,7 @@ class _SongDetailScreenState extends State<SongDetailScreen> {
     }
   }
 
-  void _toggleFavorite() async {
+  Future<void> _toggleFavorite() async {
     if (_isFavoriteLoading) return;
 
     final repo = Provider.of<SongRepository>(context, listen: false);
@@ -93,7 +93,7 @@ class _SongDetailScreenState extends State<SongDetailScreen> {
     }
 
 
-  void _toggleHighlights(List<int> indices) async {
+  Future<void> _toggleHighlights(List<int> indices) async {
     final repo = Provider.of<SongRepository>(context, listen: false);
     
     // Check if all selected verses are already highlighted
@@ -272,7 +272,7 @@ class _SongDetailScreenState extends State<SongDetailScreen> {
     // Updated to use https domain for App Links / Universal Links
     final deepLink = 'https://${AppConstants.deepLinkDomain}/song/${song.id}';
     // Fallback Play Store URL (using standard ID format, replace if actual ID differs)
-    final playStoreUrl = 'https://play.google.com/store/apps/details?id=org.ayilavan.thiruppugazh';
+    const playStoreUrl = 'https://play.google.com/store/apps/details?id=org.ayilavan.thiruppugazh';
 
     final textToShare = 
         '${l10n.checkOutSong(song.title)}\n\n'
@@ -284,7 +284,7 @@ class _SongDetailScreenState extends State<SongDetailScreen> {
     );
   }
 
-  void _launchYouTubeSearch() async {
+  Future<void> _launchYouTubeSearch() async {
     final messenger = ScaffoldMessenger.of(context);
 
     final songTitle = Uri.encodeComponent(widget.song.title);
@@ -311,7 +311,7 @@ class _SongDetailScreenState extends State<SongDetailScreen> {
     }
   }
 
-  void _launchGoogleSearch() async {
+  Future<void> _launchGoogleSearch() async {
     final messenger = ScaffoldMessenger.of(context);
 
     final songTitle = Uri.encodeComponent(widget.song.title);
@@ -338,7 +338,7 @@ class _SongDetailScreenState extends State<SongDetailScreen> {
     }
   }
 
-  void _launchCustomUrl() async {
+  Future<void> _launchCustomUrl() async {
     final messenger = ScaffoldMessenger.of(context);
 
     final kaumaramId = widget.song.kaumaramId.padLeft(4, '0');

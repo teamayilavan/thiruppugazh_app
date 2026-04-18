@@ -98,7 +98,7 @@ final lightTheme = ThemeData(
         return const IconThemeData(color: AppColors.dbackground);
       } else {
         // Otherwise, apply this color for the "unselected" state.
-        return IconThemeData(color: AppColors.dtextMuted);
+        return const IconThemeData(color: AppColors.dtextMuted);
       }
     }),
     labelTextStyle: WidgetStateProperty.all(
@@ -140,7 +140,7 @@ final darkTheme = ThemeData(
         return const IconThemeData(color: AppColors.background);
       } else {
         // Otherwise, apply this color for the "unselected" state.
-        return IconThemeData(color: AppColors.textMuted);
+        return const IconThemeData(color: AppColors.textMuted);
       }
     }),
     labelTextStyle: WidgetStateProperty.all(

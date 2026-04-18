@@ -58,7 +58,7 @@ class _MainWrapperState extends State<MainWrapper> {
     });
   }
 
-  void _handleDeepLink(Uri uri) async {
+  Future<void> _handleDeepLink(Uri uri) async {
     // Expected formats: 
     // 1. Custom Scheme: thiruppugazh://song/{id} (Legacy/Internal)
     // 2. App Link: https://thiruppugazh.ayilavan.org/song/{id}
