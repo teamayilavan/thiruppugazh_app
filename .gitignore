@@ -48,3 +48,10 @@ app.*.map.json
 android/key.properties
 *.jks
 *.keystore
+
+# Claude Code internal config
+.claude/
+
+# Local scratch files
+run_commands
+docs/superpowers/
