@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import '../../data/database/database_helper.dart';
 import '../../data/models/song_model.dart';
 import '../../l10n/app_localizations.dart';
+import '../../providers/lyrics_language_provider.dart';
 import 'song_detail_screen.dart';
 
 class TempleSongsScreen extends StatefulWidget {
@@ -50,9 +52,16 @@ class _TempleSongsScreenState extends State<TempleSongsScreen> {
             separatorBuilder: (context, index) => const Divider(height: 1),
             itemBuilder: (context, index) {
               final song = songs[index];
+              final lyricsLang = Provider.of<LyricsLanguageProvider>(context, listen: false).lyricsLanguage;
+              final useEnglish = lyricsLang == LyricsLanguage.english && song.hasEnglishContent;
+              final displayTitle = useEnglish ? (song.englishTitle ?? song.title) : song.title;
+              final displayPlace = useEnglish ? (song.englishVenue ?? song.place) : song.place;
               return ListTile(
                 leading: Text('${index + 1}'),
-                title: Text(song.title),
+                title: Text(displayTitle),
+                subtitle: displayPlace.isNotEmpty
+                    ? Text(displayPlace, style: Theme.of(context).textTheme.bodySmall)
+                    : null,
                 onTap: () {
                   Navigator.push(
                     context,

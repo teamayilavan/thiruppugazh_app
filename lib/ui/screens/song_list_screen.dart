@@ -6,6 +6,7 @@ import '../../data/models/category_model.dart';
 import '../../data/models/song_model.dart';
 import '../../data/repositories/song_repository.dart';
 import '../../l10n/app_localizations.dart';
+import '../../providers/lyrics_language_provider.dart';
 import '../widgets/error_display_widget.dart';
 import 'song_detail_screen.dart';
 
@@ -80,11 +81,15 @@ class _SongListScreenState extends State<SongListScreen> {
                 itemCount: songs.length,
                 itemBuilder: (context, index) {
                   final song = songs[index];
+                  final lyricsLang = Provider.of<LyricsLanguageProvider>(context, listen: false).lyricsLanguage;
+                  final useEnglish = lyricsLang == LyricsLanguage.english && song.hasEnglishContent;
+                  final displayTitle = useEnglish ? (song.englishTitle ?? song.title) : song.title;
+                  final displayPlace = useEnglish ? (song.englishVenue ?? song.place) : song.place;
                   return ListTile(
                     title: Padding(
                       // Add padding to the bottom of the title
                       padding: const EdgeInsets.only(bottom: 2.0),
-                      child: Text('${index + 1}. ${song.title}'),
+                      child: Text('${index + 1}. $displayTitle'),
                     ),
                     //gap between title and subtitle
                     contentPadding: const EdgeInsets.symmetric(
@@ -92,7 +97,7 @@ class _SongListScreenState extends State<SongListScreen> {
                       horizontal: 12.0,
                     ),
                     subtitle: Text(
-                      song.place.isNotEmpty ? song.place : 'Tune not available',
+                      displayPlace.isNotEmpty ? displayPlace : 'Tune not available',
                       //change text size
                       style: Theme.of(context).textTheme.bodySmall,
                     ),
