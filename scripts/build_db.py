@@ -45,6 +45,10 @@ def transliterate_tune_line(line: str) -> str:
     return result
 
 
+def _has_tamil(s: str) -> bool:
+    return any('஀' <= c <= '௿' for c in s)
+
+
 # ---------------------------------------------------------------------------
 # SQL schema
 # ---------------------------------------------------------------------------
@@ -129,6 +133,15 @@ INDEXES = [
     "CREATE INDEX IF NOT EXISTS idx_notes_song_id ON notes(song_id)",
 ]
 
+SONG_COLUMNS = [
+    'id', 'title', 'lyrics', 'tune', 'place', 'kaumaram_id',
+    'tune_list', 'lyrics_list', 'words', 'meanings', 'pathavurai',
+    'patham', 'search_content', 'is_favorite',
+    'english_title', 'english_venue', 'english_tune_list',
+    'english_lyrics_list', 'english_words', 'english_meanings_list',
+    'english_pathavurai',
+]
+
 
 # ---------------------------------------------------------------------------
 # Per-song data extraction
@@ -162,6 +175,10 @@ def extract_song_row(data: dict) -> dict:
 
     if data.get('english_lyrics') is not None:
         en_tune_list = [transliterate_tune_line(line) for line in tune_list]
+        partially_tamil = [line for line in en_tune_list if _has_tamil(line)]
+        if partially_tamil:
+            sid = data.get('kaumaram_id', '?')
+            print(f"  WARN song {sid}: {len(partially_tamil)} tune line(s) not fully transliterated")
     else:
         en_tune_list = None
 
@@ -254,7 +271,12 @@ def build(songs_dir: Path, db_path: Path, patch_path: Path):
         except Exception as e:
             print(f"WARNING: skipping {f.name}: {e}")
 
-    cols = list(rows[0].keys())
+    if not rows:
+        print("ERROR: no songs were successfully parsed; aborting")
+        conn.close()
+        return
+
+    cols = SONG_COLUMNS
     placeholders = ', '.join('?' for _ in cols)
     col_names = ', '.join(cols)
     conn.executemany(
