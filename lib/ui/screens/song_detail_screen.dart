@@ -11,6 +11,7 @@ import '../widgets/add_to_category_dialog.dart';
 
 import '../../constants/app_constants.dart';
 import '../../l10n/app_localizations.dart';
+import '../../providers/lyrics_language_provider.dart';
 
 class SongDetailScreen extends StatefulWidget {
   final Song song;
@@ -27,13 +28,43 @@ class _SongDetailScreenState extends State<SongDetailScreen> {
   List<Highlight> _highlights = [];
   Note? _note;
   final List<VerseRange> _verseRanges = [];
+  LyricsLanguage _lyricsLanguage = LyricsLanguage.tamil;
 
+  bool get _useEnglish =>
+      _lyricsLanguage == LyricsLanguage.english && widget.song.hasEnglishContent;
+
+  String get _displayTitle =>
+      _useEnglish ? (widget.song.englishTitle ?? widget.song.title) : widget.song.title;
+
+  String get _displayPlace =>
+      _useEnglish ? (widget.song.englishVenue ?? widget.song.place) : widget.song.place;
+
+  String get _displayTune =>
+      _useEnglish ? widget.song.englishTune : widget.song.tune;
+
+  List<String> get _displayTuneList =>
+      _useEnglish ? widget.song.englishTuneList : widget.song.tuneList;
+
+  List<String> get _displayLyricsList =>
+      _useEnglish ? widget.song.englishLyricsList : widget.song.lyricsList;
+
+  List<String> get _displayWords =>
+      _useEnglish ? widget.song.englishWords : widget.song.words;
+
+  List<String> get _displayMeanings =>
+      _useEnglish ? widget.song.englishMeaningsList : widget.song.meanings;
 
   @override
   void initState() {
     super.initState();
     final repo = Provider.of<SongRepository>(context, listen: false);
     _loadCategoryInfo(repo);
+  }
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    _lyricsLanguage = Provider.of<LyricsLanguageProvider>(context).lyricsLanguage;
   }
 
   Future<void> _loadCategoryInfo(SongRepository repo) async {
@@ -137,10 +168,10 @@ class _SongDetailScreenState extends State<SongDetailScreen> {
     _verseRanges.clear();
     final spans = <InlineSpan>[];
     int currentIndex = 0;
-    final tuneLength = widget.song.tuneList.length;
+    final tuneLength = _displayTuneList.length;
 
-    for (int i = 0; i < widget.song.lyricsList.length; i++) {
-        final paragraph = widget.song.lyricsList[i];
+    for (int i = 0; i < _displayLyricsList.length; i++) {
+        final paragraph = _displayLyricsList[i];
         if (paragraph.trim().isEmpty) continue;
 
         // Determine style
@@ -241,26 +272,21 @@ class _SongDetailScreenState extends State<SongDetailScreen> {
 
 
   void _shareSongText() {
-    final song = widget.song;
-
     final l10n = AppLocalizations.of(context)!;
-    final textToShare =
-        '''
-      ${l10n.title}: 
-      ${song.title} 
- 
-      ${l10n.temple}:
-      ${song.place}
- 
-      ${l10n.tune}: 
-      ${song.tune}
- 
-      ${l10n.lyrics}:
-      ${song.lyrics}
-      ''';
+    final textToShare = '''${l10n.title}:
+$_displayTitle
+
+${l10n.temple}:
+$_displayPlace
+
+${l10n.tune}:
+$_displayTune
+
+${l10n.lyrics}:
+${_displayLyricsList.join('\n')}''';
 
     SharePlus.instance.share(
-      ShareParams(title: '${l10n.lyrics}: ${song.title}', text: textToShare),
+      ShareParams(title: '${l10n.lyrics}: $_displayTitle', text: textToShare),
     );
   }
 
@@ -416,10 +442,23 @@ class _SongDetailScreenState extends State<SongDetailScreen> {
               children: [
                 const SizedBox(height: 32),
                 Text(
-                  widget.song.title,
+                  _displayTitle,
                   style: Theme.of(context).textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.bold),
                   textAlign: TextAlign.center,
                 ),
+                if (_lyricsLanguage == LyricsLanguage.english &&
+                    !widget.song.hasEnglishContent)
+                  Padding(
+                    padding: const EdgeInsets.only(top: 8.0),
+                    child: Chip(
+                      label: Text(
+                        AppLocalizations.of(context)!.englishLyricsUnavailable,
+                        style: Theme.of(context).textTheme.bodySmall,
+                      ),
+                      backgroundColor:
+                          Theme.of(context).colorScheme.surfaceContainerHighest,
+                    ),
+                  ),
                 const SizedBox(height: 32),
                 _buildInfoCard(context),
                 const SizedBox(height: 32),
@@ -495,8 +534,8 @@ class _SongDetailScreenState extends State<SongDetailScreen> {
               padding: const EdgeInsets.symmetric(vertical: 32.0),
                child: _buildMeaningsCard(
                 l10n.meaning,
-                widget.song.words,
-                widget.song.meanings,
+                _displayWords,
+                _displayMeanings,
               ),
             ),
           ),
@@ -625,12 +664,12 @@ class _SongDetailScreenState extends State<SongDetailScreen> {
           Text(l10n.temple, style: Theme.of(context).textTheme.bodyLarge),
           const SizedBox(height: 8),
           Text(
-            widget.song.place,
+            _displayPlace,
             style: Theme.of(context).textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.w600),
           ),
           const SizedBox(height: 24),
           Text(l10n.tune, style: Theme.of(context).textTheme.bodyLarge),
-          Text(widget.song.tune, style: Theme.of(context).textTheme.bodyLarge),
+          Text(_displayTune, style: Theme.of(context).textTheme.bodyLarge),
         ],
       ),
     );
