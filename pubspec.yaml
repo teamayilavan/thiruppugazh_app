@@ -94,6 +94,7 @@ flutter:
   
   assets: 
     - assets/thiruppugazh.db
+    - assets/english_data.json
     - assets/images/hero.png
 
 
