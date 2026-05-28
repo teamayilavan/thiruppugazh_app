@@ -36,6 +36,7 @@ class _TemplesScreenState extends State<TemplesScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final lyricsLang = Provider.of<LyricsLanguageProvider>(context).lyricsLanguage;
     return Scaffold(
       appBar: AppBar(
         title: Text(AppLocalizations.of(context)!.temples),
@@ -73,8 +74,6 @@ class _TemplesScreenState extends State<TemplesScreen> {
                 final englishName = temple['english_name'] as String?;
                 final count       = temple['song_count'] as int;
 
-                final lyricsLang  = Provider.of<LyricsLanguageProvider>(
-                    context, listen: false).lyricsLanguage;
                 final displayName = (lyricsLang == LyricsLanguage.english && englishName != null)
                     ? englishName
                     : name;

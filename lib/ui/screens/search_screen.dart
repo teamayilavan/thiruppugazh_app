@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 import '../../data/models/song_model.dart';
 import '../../data/models/search_filter.dart';
 import '../../data/repositories/song_repository.dart';
+import '../../providers/lyrics_language_provider.dart';
 import 'song_detail_screen.dart';
 import '../../l10n/app_localizations.dart';
 import '../../../constants/app_constants.dart';
@@ -75,6 +76,7 @@ class _SearchScreenState extends State<SearchScreen> {
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
+    final lyricsLang = Provider.of<LyricsLanguageProvider>(context).lyricsLanguage;
     return GestureDetector(
       onTap: () {
         _searchFocusNode.unfocus();
@@ -137,14 +139,17 @@ class _SearchScreenState extends State<SearchScreen> {
                         itemCount: _results.length,
                         itemBuilder: (context, index) {
                           final song = _results[index];
+                          final useEnglish = lyricsLang == LyricsLanguage.english && song.hasEnglishContent;
+                          final displayTitle = useEnglish ? (song.englishTitle ?? song.title) : song.title;
+                          final displayPlace = useEnglish ? (song.englishVenue ?? song.place) : song.place;
                           return ListTile(
                             leading: Text(
                               (index + 1).toString(),
                               style: Theme.of(context).textTheme.bodyLarge,
                             ),
-                            title: Text(song.title),
+                            title: Text(displayTitle),
                             subtitle: Text(
-                              song.place,
+                              displayPlace,
                               style: Theme.of(context).textTheme.bodySmall,
                             ),
                             onTap: () {

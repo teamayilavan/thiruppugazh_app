@@ -62,6 +62,8 @@ class _HomeScreenState extends State<HomeScreen> {
              );
           }
 
+          final lyricsLang = Provider.of<LyricsLanguageProvider>(context).lyricsLanguage;
+
           return NotificationListener<ScrollNotification>(
             onNotification: (ScrollNotification scrollInfo) {
               // We can also check here index-based if we want strict "30 items remaining" logic,
@@ -131,7 +133,6 @@ class _HomeScreenState extends State<HomeScreen> {
                           }
 
                           final song = provider.songs[index];
-                          final lyricsLang = Provider.of<LyricsLanguageProvider>(context, listen: false).lyricsLanguage;
                           final useEnglish = lyricsLang == LyricsLanguage.english && song.hasEnglishContent;
                           final displayTitle = useEnglish ? (song.englishTitle ?? song.title) : song.title;
                           final displayPlace = useEnglish ? (song.englishVenue ?? song.place) : song.place;

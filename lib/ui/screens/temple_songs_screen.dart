@@ -31,6 +31,7 @@ class _TempleSongsScreenState extends State<TempleSongsScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final lyricsLang = Provider.of<LyricsLanguageProvider>(context).lyricsLanguage;
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.templeDisplayName ?? widget.templeName),
@@ -57,7 +58,6 @@ class _TempleSongsScreenState extends State<TempleSongsScreen> {
             separatorBuilder: (context, index) => const Divider(height: 1),
             itemBuilder: (context, index) {
               final song = songs[index];
-              final lyricsLang = Provider.of<LyricsLanguageProvider>(context, listen: false).lyricsLanguage;
               final useEnglish = lyricsLang == LyricsLanguage.english && song.hasEnglishContent;
               final displayTitle = useEnglish ? (song.englishTitle ?? song.title) : song.title;
               final displayPlace = useEnglish ? (song.englishVenue ?? song.place) : song.place;

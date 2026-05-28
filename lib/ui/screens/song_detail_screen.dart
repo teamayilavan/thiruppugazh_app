@@ -145,7 +145,7 @@ class _SongDetailScreenState extends State<SongDetailScreen> {
       final newHighlights = <Highlight>[];
       for (final index in indices) {
         if (!_highlights.any((h) => h.verseIndex == index)) {
-          final content = widget.song.lyricsList[index];
+          final content = _displayLyricsList[index];
           final highlight = Highlight(
             songId: widget.song.id,
             verseIndex: index,

@@ -32,6 +32,7 @@ class _SongListScreenState extends State<SongListScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final lyricsLang = Provider.of<LyricsLanguageProvider>(context).lyricsLanguage;
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.category.name),
@@ -81,7 +82,6 @@ class _SongListScreenState extends State<SongListScreen> {
                 itemCount: songs.length,
                 itemBuilder: (context, index) {
                   final song = songs[index];
-                  final lyricsLang = Provider.of<LyricsLanguageProvider>(context, listen: false).lyricsLanguage;
                   final useEnglish = lyricsLang == LyricsLanguage.english && song.hasEnglishContent;
                   final displayTitle = useEnglish ? (song.englishTitle ?? song.title) : song.title;
                   final displayPlace = useEnglish ? (song.englishVenue ?? song.place) : song.place;
