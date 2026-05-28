@@ -55,3 +55,6 @@ android/key.properties
 # Local scratch files
 run_commands
 docs/superpowers/
+
+# Reference data — not part of the app build
+songs/
