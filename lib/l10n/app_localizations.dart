@@ -572,6 +572,24 @@ abstract class AppLocalizations {
   /// **'Language'**
   String get language;
 
+  /// No description provided for @appLanguage.
+  ///
+  /// In en, this message translates to:
+  /// **'App Language'**
+  String get appLanguage;
+
+  /// No description provided for @lyricsLanguage.
+  ///
+  /// In en, this message translates to:
+  /// **'Lyrics Language'**
+  String get lyricsLanguage;
+
+  /// No description provided for @englishLyricsUnavailable.
+  ///
+  /// In en, this message translates to:
+  /// **'English not available — showing Tamil'**
+  String get englishLyricsUnavailable;
+
   /// No description provided for @tamil.
   ///
   /// In en, this message translates to:

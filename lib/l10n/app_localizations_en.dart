@@ -260,6 +260,15 @@ class AppLocalizationsEn extends AppLocalizations {
   String get language => 'Language';
 
   @override
+  String get appLanguage => 'App Language';
+
+  @override
+  String get lyricsLanguage => 'Lyrics Language';
+
+  @override
+  String get englishLyricsUnavailable => 'English not available — showing Tamil';
+
+  @override
   String get tamil => 'Tamil';
 
   @override
