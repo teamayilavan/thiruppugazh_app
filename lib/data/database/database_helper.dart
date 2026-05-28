@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'dart:io';
 import 'package:flutter/services.dart';
 import 'package:path/path.dart';
@@ -69,8 +70,10 @@ class DatabaseHelper {
       },
       onUpgrade: (db, oldVersion, newVersion) async {
         if (oldVersion < 2) {
-          // v1 -> v2: add indexes for performance
           await _addIndexes(db);
+        }
+        if (oldVersion < 3) {
+          await _migrateToV3(db);
         }
       },
       onOpen: (db) async {
@@ -88,16 +91,27 @@ class DatabaseHelper {
     // If not, we have a problem, but let's define it just in case of empty db creation
     await db.execute('''
       CREATE TABLE IF NOT EXISTS songs(
-        id INTEGER PRIMARY KEY,
-        title TEXT NOT NULL,
-        lyrics TEXT,
-        tune TEXT,
-        place TEXT,
-        kaumaram_id TEXT,
-        words TEXT,
-        meanings TEXT,
-        search_content TEXT,
-        is_favorite INTEGER DEFAULT 0
+        id                    INTEGER PRIMARY KEY,
+        title                 TEXT NOT NULL,
+        lyrics                TEXT,
+        tune                  TEXT,
+        place                 TEXT,
+        kaumaram_id           TEXT,
+        tune_list             TEXT,
+        lyrics_list           TEXT,
+        words                 TEXT,
+        meanings              TEXT,
+        pathavurai            TEXT,
+        patham                TEXT,
+        search_content        TEXT,
+        is_favorite           INTEGER DEFAULT 0,
+        english_title         TEXT,
+        english_venue         TEXT,
+        english_tune_list     TEXT,
+        english_lyrics_list   TEXT,
+        english_words         TEXT,
+        english_meanings_list TEXT,
+        english_pathavurai    TEXT
       )
     ''');
 
@@ -128,9 +142,10 @@ class DatabaseHelper {
     // 4. Create Temples table
     await db.execute('''
       CREATE TABLE IF NOT EXISTS temples(
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
-        name TEXT NOT NULL UNIQUE,
-        song_count INTEGER DEFAULT 0
+        id           INTEGER PRIMARY KEY AUTOINCREMENT,
+        name         TEXT NOT NULL UNIQUE,
+        song_count   INTEGER DEFAULT 0,
+        english_name TEXT
       )
     ''');
 
@@ -218,6 +233,71 @@ class DatabaseHelper {
       CREATE INDEX IF NOT EXISTS idx_notes_song_id
       ON notes(song_id)
     ''');
+  }
+
+  Future<void> _migrateToV3(Database db) async {
+    AppLogger.info('Running v3 migration: adding English content columns');
+
+    // Step 1: Add English columns to songs (all nullable)
+    for (final col in [
+      'english_title',
+      'english_venue',
+      'english_tune_list',
+      'english_lyrics_list',
+      'english_words',
+      'english_meanings_list',
+      'english_pathavurai',
+    ]) {
+      await db.execute('ALTER TABLE songs ADD COLUMN $col TEXT');
+    }
+
+    // Step 2: Add english_name to temples
+    await db.execute('ALTER TABLE temples ADD COLUMN english_name TEXT');
+
+    // Step 3: Populate songs English columns from bundled JSON asset
+    try {
+      final jsonString = await rootBundle.loadString(AppConstants.englishDataAsset);
+      final Map<String, dynamic> patch = jsonDecode(jsonString);
+
+      final batch = db.batch();
+      for (final entry in patch.entries) {
+        final id = int.tryParse(entry.key);
+        if (id == null) continue;
+        final fields = entry.value as Map<String, dynamic>;
+        batch.update(
+          'songs',
+          {
+            'english_title':         fields['english_title'],
+            'english_venue':         fields['english_venue'],
+            'english_tune_list':     fields['english_tune_list'],
+            'english_lyrics_list':   fields['english_lyrics_list'],
+            'english_words':         fields['english_words'],
+            'english_meanings_list': fields['english_meanings_list'],
+            'english_pathavurai':    fields['english_pathavurai'],
+          },
+          where: 'id = ?',
+          whereArgs: [id],
+        );
+      }
+      await batch.commit(noResult: true);
+      AppLogger.info('v3 migration: populated English data for ${patch.length} songs');
+    } catch (e, st) {
+      AppLogger.error('v3 migration: failed to populate English data', error: e, stackTrace: st);
+      // Non-fatal: English columns remain NULL, app falls back to Tamil
+    }
+
+    // Step 4: Populate temples.english_name from songs (runs after Step 3)
+    await db.execute('''
+      UPDATE temples
+      SET english_name = (
+        SELECT english_venue FROM songs
+        WHERE songs.place = temples.name
+          AND songs.english_venue IS NOT NULL
+        LIMIT 1
+      )
+    ''');
+
+    AppLogger.info('v3 migration complete');
   }
 
   // --- Highlights Methods ---
