@@ -7,9 +7,14 @@ import '../../providers/lyrics_language_provider.dart';
 import 'song_detail_screen.dart';
 
 class TempleSongsScreen extends StatefulWidget {
-  final String templeName;
+  final String templeName;          // Tamil name — used for DB query
+  final String? templeDisplayName;  // Display name (English or Tamil)
 
-  const TempleSongsScreen({super.key, required this.templeName});
+  const TempleSongsScreen({
+    super.key,
+    required this.templeName,
+    this.templeDisplayName,
+  });
 
   @override
   State<TempleSongsScreen> createState() => _TempleSongsScreenState();
@@ -28,7 +33,7 @@ class _TempleSongsScreenState extends State<TempleSongsScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.templeName),
+        title: Text(widget.templeDisplayName ?? widget.templeName),
       ),
       body: FutureBuilder<List<Song>>(
         future: _songsFuture,
