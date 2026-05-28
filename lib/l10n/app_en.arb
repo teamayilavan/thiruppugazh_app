@@ -92,6 +92,9 @@
   "youTubeDomain": "YouTube",
   
   "language": "Language",
+  "appLanguage": "App Language",
+  "lyricsLanguage": "Lyrics Language",
+  "englishLyricsUnavailable": "English not available — showing Tamil",
   "tamil": "Tamil",
   "english": "English",
   "dataManagement": "Data Management",

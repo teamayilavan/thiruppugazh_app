@@ -266,7 +266,8 @@ class AppLocalizationsTa extends AppLocalizations {
   String get lyricsLanguage => 'பாடல் மொழி';
 
   @override
-  String get englishLyricsUnavailable => 'ஆங்கிலம் இல்லை — தமிழில் காட்டப்படுகிறது';
+  String get englishLyricsUnavailable =>
+      'ஆங்கிலம் இல்லை — தமிழில் காட்டப்படுகிறது';
 
   @override
   String get tamil => 'தமிழ்';
