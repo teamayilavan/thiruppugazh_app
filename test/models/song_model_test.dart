@@ -79,5 +79,88 @@ void main() {
 
       expect(song.categoryIds, [2, 3]);
     });
+
+    group('English content', () {
+      test('hasEnglishContent is true when englishLyricsList is non-empty', () {
+        final song = Song(
+          id: 1, kaumaramId: '1', title: 'T', place: 'P',
+          tune: '', lyrics: '', lyricsList: [], tuneList: [],
+          words: [], meanings: [], pathavurai: '', patham: [],
+          englishLyricsList: ['line one', 'line two'],
+        );
+        expect(song.hasEnglishContent, isTrue);
+      });
+
+      test('hasEnglishContent is false when englishLyricsList is empty', () {
+        final song = Song(
+          id: 1, kaumaramId: '1', title: 'T', place: 'P',
+          tune: '', lyrics: '', lyricsList: [], tuneList: [],
+          words: [], meanings: [], pathavurai: '', patham: [],
+        );
+        expect(song.hasEnglishContent, isFalse);
+      });
+
+      test('englishLyrics joins englishLyricsList with newlines', () {
+        final song = Song(
+          id: 1, kaumaramId: '1', title: 'T', place: 'P',
+          tune: '', lyrics: '', lyricsList: [], tuneList: [],
+          words: [], meanings: [], pathavurai: '', patham: [],
+          englishLyricsList: ['line one', 'line two'],
+        );
+        expect(song.englishLyrics, 'line one\nline two');
+      });
+
+      test('Song.fromMap reads English columns with null safety', () {
+        final map = {
+          'id': 7,
+          'kaumaram_id': 7,
+          'title': 'Tamil Title',
+          'place': 'Tamil Place',
+          'tune': '',
+          'lyrics': '',
+          'tune_list': '[]',
+          'lyrics_list': '[]',
+          'words': '[]',
+          'meanings': '[]',
+          'pathavurai': '',
+          'patham': '[]',
+          'english_title': 'English Title',
+          'english_venue': 'English Venue',
+          'english_tune_list': '["thana","thana"]',
+          'english_lyrics_list': '["line one","line two"]',
+          'english_words': '["word one"]',
+          'english_meanings_list': '["meaning one"]',
+          'english_pathavurai': 'meaning one',
+        };
+        final song = Song.fromMap(map);
+        expect(song.englishTitle, 'English Title');
+        expect(song.englishVenue, 'English Venue');
+        expect(song.englishTuneList, ['thana', 'thana']);
+        expect(song.englishLyricsList, ['line one', 'line two']);
+        expect(song.hasEnglishContent, isTrue);
+      });
+
+      test('Song.fromMap handles missing English columns gracefully', () {
+        final map = {
+          'id': 67,
+          'kaumaram_id': 67,
+          'title': 'Tamil Title',
+          'place': 'Tamil Place',
+          'tune': '',
+          'lyrics': '',
+          'tune_list': '[]',
+          'lyrics_list': '[]',
+          'words': '[]',
+          'meanings': '[]',
+          'pathavurai': '',
+          'patham': '[]',
+          // No English fields
+        };
+        final song = Song.fromMap(map);
+        expect(song.englishTitle, isNull);
+        expect(song.englishLyricsList, isEmpty);
+        expect(song.hasEnglishContent, isFalse);
+      });
+    });
   });
 }

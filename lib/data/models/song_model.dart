@@ -21,6 +21,21 @@ class Song {
   /// Populated by the repository; managed as local state in the UI layer.
   final List<int> categoryIds;
 
+  // English content fields (null when English data is absent for this song)
+  final String? englishTitle;
+  final String? englishVenue;
+  final List<String> englishTuneList;
+  final List<String> englishLyricsList;
+  final List<String> englishWords;
+  final List<String> englishMeaningsList;
+  final String englishPathavurai;
+
+  // Computed — not stored in DB
+  String get englishLyrics => englishLyricsList.join('\n');
+  String get englishTune   => englishTuneList.join('\n');
+
+  bool get hasEnglishContent => englishLyricsList.isNotEmpty;
+
   Song({
     required this.id,
     required this.title,
@@ -35,7 +50,14 @@ class Song {
     required this.pathavurai,
     required this.patham,
     this.isFavorite = false,
-    this.categoryIds = const [] // Default to an empty list
+    this.categoryIds = const [], // Default to an empty list
+    this.englishTitle,
+    this.englishVenue,
+    this.englishTuneList = const [],
+    this.englishLyricsList = const [],
+    this.englishWords = const [],
+    this.englishMeaningsList = const [],
+    this.englishPathavurai = '',
   });
 
   /// Factory constructor to create a Song instance from a database map.
@@ -59,6 +81,14 @@ class Song {
 
       // categoryIds are populated separately by the repository.
       categoryIds: const [],
+
+      englishTitle:        map['english_title'] as String?,
+      englishVenue:        map['english_venue'] as String?,
+      englishTuneList:     List<String>.from(jsonDecode(map['english_tune_list']     ?? '[]')),
+      englishLyricsList:   List<String>.from(jsonDecode(map['english_lyrics_list']   ?? '[]')),
+      englishWords:        List<String>.from(jsonDecode(map['english_words']         ?? '[]')),
+      englishMeaningsList: List<String>.from(jsonDecode(map['english_meanings_list'] ?? '[]')),
+      englishPathavurai:   map['english_pathavurai'] ?? '',
     );
   }
 }
