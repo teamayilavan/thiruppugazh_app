@@ -484,43 +484,39 @@ class DatabaseHelper {
     // Generate variations for Tamil spelling tolerance (e.g. ன vs ந)
     final variations = _getTamilVariations(sanitizedQuery);
 
-    void addLikeCondition(String field) {
+    void addLikeConditions(String tamilField, [String? englishField]) {
       if (variations.isEmpty) return;
       final fieldConditions = <String>[];
       for (var _ in variations) {
-        fieldConditions.add('$field LIKE ?');
+        fieldConditions.add('$tamilField LIKE ?');
+      }
+      args.addAll(variations.map((v) => '%$v%'));
+
+      if (englishField != null) {
+        fieldConditions.add('$englishField LIKE ?');
+        args.add('%$sanitizedQuery%');
       }
       conditions.add('(${fieldConditions.join(' OR ')})');
-      args.addAll(variations.map((v) => '%$v%'));
     }
 
     if (filter.searchTitle) {
-      addLikeCondition('title');
+      addLikeConditions('title', 'english_title');
     }
-    
+
     // For lyrics, we also check 'words' as it often contains the segmented words useful for search
     if (filter.searchLyrics) {
-      // Combined lyrics and words condition check for all variations
-      // Logic: (lyrics LIKE %v1% OR lyrics LIKE %v2% OR words LIKE %v1% OR words LIKE %v2%)
-      // This is slightly more complex if we want to treat lyrics/words as a group.
-      // But adding independent conditions is fine: (lyrics conditions) AND (words conditions)? 
-      // No, they are usually OR'ed in the main query logic?
-      // Wait, the main query joins conditions with OR.
-      // So conditions.add(...) -> adds a block.
-      // 'title LIKE ...' OR 'lyrics LIKE ...'
-      
-      addLikeCondition('lyrics');
-      addLikeCondition('words');
+      addLikeConditions('lyrics', 'english_lyrics_list');
+      addLikeConditions('words', 'english_words');
     }
-    
+
     if (filter.searchPlace) {
-      addLikeCondition('place');
+      addLikeConditions('place', 'english_venue');
     }
-    
+
     if (filter.searchTune) {
-      addLikeCondition('tune');
+      addLikeConditions('tune'); // no English tune search
     }
-    
+
     if (filter.searchKaumaramId) {
       // Exact match for Kaumaram ID as requested
       conditions.add('kaumaram_id = ?');
@@ -528,7 +524,7 @@ class DatabaseHelper {
     }
 
     if (filter.searchPathavurai) {
-      addLikeCondition('pathavurai');
+      addLikeConditions('pathavurai', 'english_pathavurai');
     }
 
     // If no specific filter is selected, fallback... (handled by returning empty above if conditions empty)
