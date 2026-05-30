@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import '../../data/database/database_helper.dart';
+import '../../providers/lyrics_language_provider.dart';
 import 'temple_songs_screen.dart';
 import '../../l10n/app_localizations.dart';
 
@@ -34,6 +36,7 @@ class _TemplesScreenState extends State<TemplesScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final lyricsLang = Provider.of<LyricsLanguageProvider>(context).lyricsLanguage;
     return Scaffold(
       appBar: AppBar(
         title: Text(AppLocalizations.of(context)!.temples),
@@ -67,15 +70,20 @@ class _TemplesScreenState extends State<TemplesScreen> {
               separatorBuilder: (context, index) => const SizedBox(height: 8),
               itemBuilder: (context, index) {
                 final temple = temples[index];
-                final name = temple['name'] as String;
-                final count = temple['song_count'] as int;
+                final name        = temple['name'] as String;
+                final englishName = temple['english_name'] as String?;
+                final count       = temple['song_count'] as int;
+
+                final displayName = (lyricsLang == LyricsLanguage.english && englishName != null)
+                    ? englishName
+                    : name;
 
                 return ListTile(
                   leading: Text(
                     '${index + 1}',
                     style: Theme.of(context).textTheme.bodyMedium,
                   ),
-                  title: Text(name),
+                  title: Text(displayName),
                   trailing: Text(
                     '$count',
                     style: Theme.of(context).textTheme.bodyMedium,
@@ -84,7 +92,10 @@ class _TemplesScreenState extends State<TemplesScreen> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => TempleSongsScreen(templeName: name),
+                        builder: (context) => TempleSongsScreen(
+                          templeName: name,
+                          templeDisplayName: displayName,
+                        ),
                       ),
                     );
                   },

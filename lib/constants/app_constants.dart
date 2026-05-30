@@ -4,13 +4,15 @@ class AppConstants {
   AppConstants._();
 
   // ==================== Database Constants ====================
-  static const int dbVersion = 2;
+  static const int dbVersion = 3;
   static const String dbName = 'thiruppugazh.db';
   static const String assetsPath = 'assets';
+  static const String englishDataAsset = 'assets/english_data.json';
 
   // ==================== Preferences Keys ====================
   static const String themePrefsKey = 'themeMode';
   static const String languagePrefsKey = 'app_language';
+  static const String lyricsLanguagePrefsKey = 'lyrics_language';
 
   // ==================== Deep Link ====================
   static const String deepLinkDomain = 'thiruppugazh.ayilavan.org';

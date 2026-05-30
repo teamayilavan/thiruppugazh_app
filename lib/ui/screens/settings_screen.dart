@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../../providers/theme_provider.dart';
 import '../../providers/language_provider.dart';
+import '../../providers/lyrics_language_provider.dart';
 import '../../l10n/app_localizations.dart';
 import '../../services/backup_service.dart';
 import 'privacy_policy_screen.dart';
@@ -13,6 +14,7 @@ class SettingsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final themeProvider = Provider.of<ThemeProvider>(context);
     final languageProvider = Provider.of<LanguageProvider>(context);
+    final lyricsLanguageProvider = Provider.of<LyricsLanguageProvider>(context);
     final l10n = AppLocalizations.of(context)!;
 
     return Scaffold(
@@ -21,11 +23,15 @@ class SettingsScreen extends StatelessWidget {
         children: [
           ListTile(
             leading: const Icon(Icons.translate_outlined),
-            title: Text(l10n.language),
+            title: Text(l10n.appLanguage),
             subtitle: Text(_getLanguageDisplayName(context, languageProvider.currentLanguage)),
-            onTap: () {
-              _showLanguageDialog(context, languageProvider);
-            },
+            onTap: () => _showLanguageDialog(context, languageProvider),
+          ),
+          ListTile(
+            leading: const Icon(Icons.menu_book_outlined),
+            title: Text(l10n.lyricsLanguage),
+            subtitle: Text(_getLyricsLanguageDisplayName(lyricsLanguageProvider.lyricsLanguage)),
+            onTap: () => _showLyricsLanguageDialog(context, lyricsLanguageProvider),
           ),
           const Divider(),
           ListTile(
@@ -153,6 +159,41 @@ class SettingsScreen extends StatelessWidget {
     );
   }
 
+  void _showLyricsLanguageDialog(BuildContext context, LyricsLanguageProvider provider) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        final l10n = AppLocalizations.of(context)!;
+        return AlertDialog(
+          title: Text(l10n.lyricsLanguage),
+          content: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              RadioListTile<LyricsLanguage>(
+                title: const Text('தமிழ்'),
+                value: LyricsLanguage.tamil,
+                groupValue: provider.lyricsLanguage,
+                onChanged: (LyricsLanguage? value) {
+                  provider.setLyricsLanguage(value!);
+                  Navigator.of(context).pop();
+                },
+              ),
+              RadioListTile<LyricsLanguage>(
+                title: const Text('English'),
+                value: LyricsLanguage.english,
+                groupValue: provider.lyricsLanguage,
+                onChanged: (LyricsLanguage? value) {
+                  provider.setLyricsLanguage(value!);
+                  Navigator.of(context).pop();
+                },
+              ),
+            ],
+          ),
+        );
+      },
+    );
+  }
+
   void _showThemeDialog(BuildContext context, ThemeProvider provider) {
     showDialog(
       context: context,
@@ -260,6 +301,15 @@ class SettingsScreen extends StatelessWidget {
         return l10n.tamil;
       case AppLanguage.english:
         return l10n.english;
+    }
+  }
+
+  String _getLyricsLanguageDisplayName(LyricsLanguage language) {
+    switch (language) {
+      case LyricsLanguage.tamil:
+        return 'தமிழ்';
+      case LyricsLanguage.english:
+        return 'English';
     }
   }
 

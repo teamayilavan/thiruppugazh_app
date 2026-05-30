@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../../providers/song_list_provider.dart';
+import '../../providers/lyrics_language_provider.dart';
 import 'song_detail_screen.dart';
 import 'search_screen.dart';
 import '../../l10n/app_localizations.dart';
@@ -60,6 +61,8 @@ class _HomeScreenState extends State<HomeScreen> {
                ),
              );
           }
+
+          final lyricsLang = Provider.of<LyricsLanguageProvider>(context).lyricsLanguage;
 
           return NotificationListener<ScrollNotification>(
             onNotification: (ScrollNotification scrollInfo) {
@@ -130,20 +133,23 @@ class _HomeScreenState extends State<HomeScreen> {
                           }
 
                           final song = provider.songs[index];
+                          final useEnglish = lyricsLang == LyricsLanguage.english && song.hasEnglishContent;
+                          final displayTitle = useEnglish ? (song.englishTitle ?? song.title) : song.title;
+                          final displayPlace = useEnglish ? (song.englishVenue ?? song.place) : song.place;
 
                           return Semantics(
                             button: true,
-                            label: '${index + 1}. ${song.title}. ${song.place}',
+                            label: '${index + 1}. $displayTitle. $displayPlace',
                             hint: l10n.tapToViewSongDetails,
                             child: ListTile(
                               leading: Text(
                                 '${index + 1}',
                                 style: Theme.of(context).textTheme.bodyMedium,
                               ),
-                              title: Text(song.title),
+                              title: Text(displayTitle),
                               subtitle: Text(
-                                song.place.isNotEmpty
-                                    ? song.place
+                                displayPlace.isNotEmpty
+                                    ? displayPlace
                                     : l10n.tuneNotAvailable,
                                 style: Theme.of(context).textTheme.bodySmall,
                               ),
