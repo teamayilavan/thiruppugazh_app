@@ -11,38 +11,45 @@ import shutil
 from pathlib import Path
 
 # ---------------------------------------------------------------------------
-# Tune transliteration — word-level map, longest match first
+# Tune romanization — grapheme-cluster based
+# Handles each Tamil consonant + optional modifier (virama or vowel sign)
+# in a single left-to-right pass, so combining characters are never stranded.
 # ---------------------------------------------------------------------------
-_TUNE_MAP = {
-    'தனத்த':  'thanaththa',
-    'தந்தன':  'thanthan',
-    'தனதன':   'thanathan',
-    'தனதான':  'thanathaan',
-    'தனத':    'thanatha',
-    'தத்தன':  'thaththan',
-    'திமித':  'thimitha',
-    'திமி':   'thimi',
-    'தான':    'thaan',
-    'தன':     'thana',
-    'தாத':    'thaatha',
-    'தா':     'thaa',
-    'தித':    'thitha',
-    'தி':     'thi',
-    'நத':     'natha',
-    'நா':     'naa',
-    'ன':      'na',
-    'ந':      'na',
-    'த':      'tha',
-    '......': '......',
+_TUNE_CONSONANTS = {
+    'த': 'th',
+    'ன': 'n',
+    'ந': 'n',
+    'ம': 'm',
+    'ய': 'y',
 }
-_TUNE_ENTRIES = sorted(_TUNE_MAP.items(), key=lambda kv: -len(kv[0]))
+_TUNE_VOWEL_SIGNS = {
+    'ா': 'aa',
+    'ு': 'u',
+    'ி': 'i',
+}
+_VIRAMA = '்'
 
 
 def transliterate_tune_line(line: str) -> str:
-    result = line
-    for tamil, roman in _TUNE_ENTRIES:
-        result = result.replace(tamil, roman)
-    return result
+    result = []
+    i = 0
+    while i < len(line):
+        c = line[i]
+        if c in _TUNE_CONSONANTS:
+            base = _TUNE_CONSONANTS[c]
+            i += 1
+            if i < len(line) and line[i] == _VIRAMA:
+                result.append(base)
+                i += 1
+            elif i < len(line) and line[i] in _TUNE_VOWEL_SIGNS:
+                result.append(base + _TUNE_VOWEL_SIGNS[line[i]])
+                i += 1
+            else:
+                result.append(base + 'a')
+        else:
+            result.append(c)
+            i += 1
+    return ''.join(result)
 
 
 def _has_tamil(s: str) -> bool:
