@@ -12,6 +12,7 @@ import '../widgets/add_to_category_dialog.dart';
 import '../../constants/app_constants.dart';
 import '../../l10n/app_localizations.dart';
 import '../../providers/lyrics_language_provider.dart';
+import '../../providers/lyrics_font_size_provider.dart';
 
 class SongDetailScreen extends StatefulWidget {
   final Song song;
@@ -173,6 +174,7 @@ class _SongDetailScreenState extends State<SongDetailScreen> {
     final spans = <InlineSpan>[];
     int currentIndex = 0;
     final tuneLength = _displayTuneList.length;
+    final lyricsFontSize = context.watch<LyricsFontSizeProvider>().fontSize;
 
     for (int i = 0; i < _displayLyricsList.length; i++) {
       final paragraph = _displayLyricsList[i];
@@ -186,6 +188,7 @@ class _SongDetailScreenState extends State<SongDetailScreen> {
           : null;
 
       final style = Theme.of(context).textTheme.bodyLarge?.copyWith(
+        fontSize: lyricsFontSize,
         height: 1.5,
         backgroundColor: bgColor,
         color: Theme.of(context).colorScheme.onSurface,
@@ -479,9 +482,36 @@ ${_displayLyricsList.join('\n')}''';
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    l10n.lyrics,
-                    style: Theme.of(context).textTheme.bodyLarge,
+                  Row(
+                    children: [
+                      Expanded(
+                        child: Text(
+                          l10n.lyrics,
+                          style: Theme.of(context).textTheme.bodyLarge,
+                        ),
+                      ),
+                      Consumer<LyricsFontSizeProvider>(
+                        builder: (context, fontSizeProvider, _) => Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            IconButton(
+                              icon: const Icon(Icons.text_decrease),
+                              tooltip: l10n.decreaseLyricsFontSize,
+                              onPressed: fontSizeProvider.canDecrease
+                                  ? fontSizeProvider.decrease
+                                  : null,
+                            ),
+                            IconButton(
+                              icon: const Icon(Icons.text_increase),
+                              tooltip: l10n.increaseLyricsFontSize,
+                              onPressed: fontSizeProvider.canIncrease
+                                  ? fontSizeProvider.increase
+                                  : null,
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
                   ),
                   const SizedBox(height: 8),
                   const Divider(height: 16),
@@ -497,6 +527,7 @@ ${_displayLyricsList.join('\n')}''';
               child: SelectableText.rich(
                 TextSpan(children: _buildLyricsTextSpans(context)),
                 style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                  fontSize: context.watch<LyricsFontSizeProvider>().fontSize,
                   height: 1.5,
                   color: Colors.black,
                 ),

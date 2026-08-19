@@ -450,4 +450,10 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get viewSourceCode => 'View Source Code on GitHub';
+
+  @override
+  String get increaseLyricsFontSize => 'Increase lyrics font size';
+
+  @override
+  String get decreaseLyricsFontSize => 'Decrease lyrics font size';
 }

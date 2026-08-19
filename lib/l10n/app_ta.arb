@@ -151,5 +151,7 @@
   "highlight": "வண்ணமிடு",
   "highlights": "சிறப்பம்சங்கள்",
   "privacyPolicy": "தனியுரிமைக் கொள்கை",
-  "viewSourceCode": "GitHub-இல் மூலக் குறியீட்டைக் காண்க"
+  "viewSourceCode": "GitHub-இல் மூலக் குறியீட்டைக் காண்க",
+  "increaseLyricsFontSize": "பாடல் வரிகளின் எழுத்துருவை பெரிதாக்கு",
+  "decreaseLyricsFontSize": "பாடல் வரிகளின் எழுத்துருவை சிறிதாக்கு"
 }

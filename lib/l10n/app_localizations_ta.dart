@@ -452,4 +452,10 @@ class AppLocalizationsTa extends AppLocalizations {
 
   @override
   String get viewSourceCode => 'GitHub-இல் மூலக் குறியீட்டைக் காண்க';
+
+  @override
+  String get increaseLyricsFontSize => 'பாடல் வரிகளின் எழுத்துருவை பெரிதாக்கு';
+
+  @override
+  String get decreaseLyricsFontSize => 'பாடல் வரிகளின் எழுத்துருவை சிறிதாக்கு';
 }

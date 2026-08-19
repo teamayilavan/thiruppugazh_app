@@ -943,6 +943,18 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'View Source Code on GitHub'**
   String get viewSourceCode;
+
+  /// No description provided for @increaseLyricsFontSize.
+  ///
+  /// In en, this message translates to:
+  /// **'Increase lyrics font size'**
+  String get increaseLyricsFontSize;
+
+  /// No description provided for @decreaseLyricsFontSize.
+  ///
+  /// In en, this message translates to:
+  /// **'Decrease lyrics font size'**
+  String get decreaseLyricsFontSize;
 }
 
 class _AppLocalizationsDelegate

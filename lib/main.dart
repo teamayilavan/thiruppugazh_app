@@ -8,6 +8,7 @@ import 'data/repositories/song_repository.dart';
 import 'providers/theme_provider.dart';
 import 'providers/language_provider.dart';
 import 'providers/lyrics_language_provider.dart';
+import 'providers/lyrics_font_size_provider.dart';
 import 'providers/song_list_provider.dart';
 import 'ui/screens/main_wrapper.dart';
 import 'theme/app_theme.dart';
@@ -27,6 +28,7 @@ Future<void> main() async {
         ChangeNotifierProvider(create: (context) => ThemeProvider()),
         ChangeNotifierProvider(create: (context) => LanguageProvider()),
         ChangeNotifierProvider(create: (context) => LyricsLanguageProvider()),
+        ChangeNotifierProvider(create: (context) => LyricsFontSizeProvider()),
         ChangeNotifierProvider(
           create: (context) => SongListProvider(
             Provider.of<SongRepository>(context, listen: false),

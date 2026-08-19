@@ -13,6 +13,7 @@ class AppConstants {
   static const String themePrefsKey = 'themeMode';
   static const String languagePrefsKey = 'app_language';
   static const String lyricsLanguagePrefsKey = 'lyrics_language';
+  static const String lyricsFontSizePrefsKey = 'lyrics_font_size';
 
   // ==================== Deep Link ====================
   static const String deepLinkDomain = 'thiruppugazh.ayilavan.org';
