@@ -1,0 +1,22 @@
+[build]
+  command = "python web_app/generate_site.py"
+  publish = "web_app/dist"
+
+# Netlify doesn't serve dot-folders (like .well-known/) directly, so
+# generate_site.py also writes the file to well-known/ (no dot), and this
+# redirect makes it reachable at the path Android actually requests:
+# https://thiruppugazh.ayilavan.org/.well-known/assetlinks.json
+[[redirects]]
+  from = "/.well-known/*"
+  to = "/well-known/:splat"
+  status = 200
+
+[[headers]]
+  for = "/.well-known/assetlinks.json"
+  [headers.values]
+    Content-Type = "application/json"
+
+[[headers]]
+  for = "/well-known/assetlinks.json"
+  [headers.values]
+    Content-Type = "application/json"

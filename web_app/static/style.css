@@ -1,0 +1,212 @@
+:root {
+  --bg: #D8EFD3;
+  --container: #CAE8BD;
+  --card: #B3D8A8;
+  --text-high: #196519;
+  --text: #0D3619;
+  --text-muted: #6B6B6B;
+  --accent: #80AF81;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1F4529;
+    --container: #255F38;
+    --card: #357943;
+    --text-high: #63B467;
+    --text: #ECECEC;
+    --text-muted: #A9A9A9;
+    --accent: #609755;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Noto Sans Tamil', 'Noto Sans', system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+}
+
+a { color: var(--text-high); }
+
+.site-header {
+  padding: 16px 20px;
+  background: var(--container);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--text-high);
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.brand-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+}
+
+main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px 20px 140px;
+}
+
+h1 {
+  color: var(--text-high);
+  font-size: 1.6rem;
+  margin-bottom: 4px;
+}
+
+.english-title {
+  color: var(--text-muted);
+  font-size: 1rem;
+  margin: 0 0 16px;
+}
+
+.song-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  background: var(--container);
+  border-radius: 12px;
+  padding: 16px;
+  margin: 20px 0;
+}
+
+.song-meta .label {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.song-meta .value {
+  display: block;
+  font-weight: 600;
+}
+
+h2 {
+  color: var(--text-high);
+  font-size: 1.1rem;
+  border-bottom: 1px solid var(--card);
+  padding-bottom: 8px;
+  margin-top: 32px;
+}
+
+.lyrics p, .lyrics-en p {
+  white-space: pre-line;
+}
+
+.meanings dl {
+  background: var(--container);
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.meanings dt {
+  font-weight: 700;
+  color: var(--text-high);
+  margin-top: 12px;
+}
+
+.meanings dt:first-child { margin-top: 0; }
+
+.meanings dd {
+  margin: 4px 0 0;
+}
+
+.kaumaram-link {
+  margin-top: 24px;
+  font-size: 0.9rem;
+}
+
+.tagline {
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+
+.song-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.song-list li {
+  border-bottom: 1px solid var(--card);
+}
+
+.song-list a {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 4px;
+  text-decoration: none;
+  color: var(--text);
+}
+
+.song-list .place {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+.get-app-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--container);
+  border-top: 1px solid var(--card);
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.get-app-text {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.85rem;
+}
+
+.get-app-text strong {
+  color: var(--text-high);
+}
+
+.get-app-text span {
+  color: var(--text-muted);
+}
+
+.get-app-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.btn {
+  padding: 10px 16px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: var(--text-high);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--text-high);
+  border: 1px solid var(--accent);
+}

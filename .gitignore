@@ -58,3 +58,9 @@ docs/superpowers/
 
 # Reference data — not part of the app build
 songs/
+
+# Generated static site output — rebuild with python web_app/generate_site.py
+web_app/dist/
+
+# Playwright MCP tool artifacts
+.playwright-mcp/
