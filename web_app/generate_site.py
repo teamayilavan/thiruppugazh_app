@@ -50,6 +50,20 @@ def esc(value):
     return html.escape(value or "", quote=True)
 
 
+def build_stanza_html(lines, tune_list):
+    """Groups verse lines into stanzas the same way SongDetailScreen does in
+    the app (_buildLyricsTextSpans): every len(tune_list) lines gets a blank
+    line between stanzas, otherwise lines just wrap normally."""
+    tune_length = len(tune_list)
+    parts = []
+    for i, line in enumerate(lines):
+        if not line.strip():
+            continue
+        parts.append(esc(line))
+        parts.append("\n\n" if tune_length > 0 and (i + 1) % tune_length == 0 else "\n")
+    return "".join(parts).rstrip()
+
+
 def page_shell(*, title, description, canonical_url, deep_link, content):
     return f"""<!doctype html>
 <html lang="ta">
@@ -116,7 +130,9 @@ def render_song_page(song):
     english_venue = song["english_venue"]
     tune = song["tune"] or ""
 
+    tune_list = load_json_list(song["tune_list"])
     lyrics_list = load_json_list(song["lyrics_list"])
+    english_tune_list = load_json_list(song["english_tune_list"])
     english_lyrics_list = load_json_list(song["english_lyrics_list"])
     words = load_json_list(song["words"])
     meanings = load_json_list(song["meanings"])
@@ -128,7 +144,7 @@ def render_song_page(song):
         f'<p class="english-title">{esc(english_title)}</p>' if english_title else ""
     )
 
-    lyrics_html = esc("\n".join(p for p in lyrics_list if p.strip()))
+    lyrics_html = build_stanza_html(lyrics_list, tune_list)
     lyrics_section = (
         f"""
 <section class="lyrics">
@@ -142,9 +158,7 @@ def render_song_page(song):
 
     english_section = ""
     if english_lyrics_list:
-        english_lyrics_html = esc(
-            "\n".join(p for p in english_lyrics_list if p.strip())
-        )
+        english_lyrics_html = build_stanza_html(english_lyrics_list, english_tune_list)
         english_section = f"""
 <section class="lyrics-en">
   <h2>Lyrics (English)</h2>
@@ -218,11 +232,13 @@ def render_index_page(songs):
 
 
 def main():
-    if OUTPUT_DIR.exists():
-        shutil.rmtree(OUTPUT_DIR)
-    OUTPUT_DIR.mkdir(parents=True)
+    # Overwrite in place rather than deleting OUTPUT_DIR first -- avoids
+    # failing on Windows when something (a local test server, an open
+    # explorer window, ...) has the directory locked, and is idempotent
+    # either way.
+    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
-    shutil.copytree(STATIC_DIR, OUTPUT_DIR / "static")
+    shutil.copytree(STATIC_DIR, OUTPUT_DIR / "static", dirs_exist_ok=True)
     shutil.copy(ROOT / APP_ICON, OUTPUT_DIR / "static" / "icon.png")
     shutil.copy(ROOT / HERO_IMAGE, OUTPUT_DIR / "static" / "hero.png")
 
@@ -242,11 +258,11 @@ def main():
     # Netlify (and some other static hosts) don't serve dot-folders like
     # .well-known/ directly -- netlify.toml redirects /.well-known/* to
     # /well-known/:splat, so the file needs to exist at both paths.
-    (OUTPUT_DIR / ".well-known").mkdir()
+    (OUTPUT_DIR / ".well-known").mkdir(exist_ok=True)
     (OUTPUT_DIR / ".well-known" / "assetlinks.json").write_text(
         assetlinks_json, encoding="utf-8"
     )
-    (OUTPUT_DIR / "well-known").mkdir()
+    (OUTPUT_DIR / "well-known").mkdir(exist_ok=True)
     (OUTPUT_DIR / "well-known" / "assetlinks.json").write_text(
         assetlinks_json, encoding="utf-8"
     )
@@ -258,7 +274,7 @@ def main():
 
     for song in songs:
         song_dir = OUTPUT_DIR / "song" / str(song["id"])
-        song_dir.mkdir(parents=True)
+        song_dir.mkdir(parents=True, exist_ok=True)
         (song_dir / "index.html").write_text(
             render_song_page(song), encoding="utf-8"
         )
