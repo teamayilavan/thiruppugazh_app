@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../../data/repositories/song_repository.dart';
 import '../../data/models/song_model.dart';
+import '../../constants/app_constants.dart';
 import '../../l10n/app_localizations.dart';
 
 class AddToCategoryDialog extends StatefulWidget {
@@ -22,6 +23,41 @@ class AddToCategoryDialog extends StatefulWidget {
 
 class _AddToCategoryDialogState extends State<AddToCategoryDialog> {
   bool _isSaving = false;
+  String? _newCategoryError;
+  final TextEditingController _newCategoryController = TextEditingController();
+
+  @override
+  void dispose() {
+    _newCategoryController.dispose();
+    super.dispose();
+  }
+
+  String? _validateCategoryName(
+    String name,
+    List<String> existingNames,
+    AppLocalizations l10n,
+  ) {
+    if (name.isEmpty) {
+      return l10n.pleaseEnterCategoryName;
+    }
+    if (name.length < AppConstants.categoryMinNameLength) {
+      return l10n.categoryMinLength;
+    }
+    if (name.length > AppConstants.categoryMaxNameLength) {
+      return l10n.categoryMaxLength;
+    }
+    final sanitized = name.replaceAll(RegExp(r'[^\w\s]'), '').trim();
+    if (sanitized.isEmpty) {
+      return l10n.enterValidCategoryName;
+    }
+    final isDuplicate = existingNames.any(
+      (existing) => existing.toLowerCase() == name.toLowerCase(),
+    );
+    if (isDuplicate) {
+      return l10n.categoryExists;
+    }
+    return null;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -40,37 +76,105 @@ class _AddToCategoryDialogState extends State<AddToCategoryDialog> {
 
         final allCategories = snapshot.data!;
         final currentCategoryIds = widget.currentCategoryIds.toSet();
+        final pendingNewCategories = <String>[];
 
         return StatefulBuilder(
           builder: (context, setDialogState) {
+            void addPendingCategory() {
+              final name = _newCategoryController.text.trim();
+              final existingNames = [
+                ...allCategories.where((c) => c.id != 1).map((c) => c.name),
+                ...pendingNewCategories,
+              ];
+              final error = _validateCategoryName(name, existingNames, l10n);
+
+              setDialogState(() {
+                if (error != null) {
+                  _newCategoryError = error;
+                } else {
+                  pendingNewCategories.add(name);
+                  _newCategoryController.clear();
+                  _newCategoryError = null;
+                }
+              });
+            }
+
             return AlertDialog(
               title: Text(l10n.addToCategories),
               content: SizedBox(
                 width: double.maxFinite,
-                child: ListView.builder(
-                  shrinkWrap: true,
-                  itemCount: allCategories.length,
-                  itemBuilder: (context, index) {
-                    final category = allCategories[index];
-                    // Skip 'Favorites' category usually ID 1, assuming explicit check or ID-based check
-                    if (category.id == 1) return const SizedBox.shrink();
-                    
-                    final isSelected = currentCategoryIds.contains(category.id);
-
-                    return CheckboxListTile(
-                      title: Text(category.name),
-                      value: isSelected,
-                      onChanged: (bool? selected) {
-                        setDialogState(() {
-                          if (selected == true) {
-                            currentCategoryIds.add(category.id!);
-                          } else {
-                            currentCategoryIds.remove(category.id!);
-                          }
-                        });
-                      },
-                    );
-                  },
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Expanded(
+                          child: TextField(
+                            controller: _newCategoryController,
+                            decoration: InputDecoration(
+                              labelText: l10n.categoryName,
+                              errorText: _newCategoryError,
+                              isDense: true,
+                              border: const OutlineInputBorder(),
+                            ),
+                            onChanged: (_) {
+                              if (_newCategoryError != null) {
+                                setDialogState(() {
+                                  _newCategoryError = null;
+                                });
+                              }
+                            },
+                            onSubmitted: (_) => addPendingCategory(),
+                          ),
+                        ),
+                        const SizedBox(width: 8),
+                        IconButton(
+                          icon: const Icon(Icons.add),
+                          tooltip: l10n.create,
+                          onPressed: addPendingCategory,
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 8),
+                    const Divider(height: 1),
+                    ListView(
+                      shrinkWrap: true,
+                      children: [
+                        ...allCategories.where((c) => c.id != 1).map((category) {
+                          final isSelected = currentCategoryIds.contains(category.id);
+                          return CheckboxListTile(
+                            title: Text(category.name),
+                            value: isSelected,
+                            onChanged: (bool? selected) {
+                              setDialogState(() {
+                                if (selected == true) {
+                                  currentCategoryIds.add(category.id!);
+                                } else {
+                                  currentCategoryIds.remove(category.id!);
+                                }
+                              });
+                            },
+                          );
+                        }),
+                        ...pendingNewCategories.map((name) {
+                          return ListTile(
+                            leading: const Icon(Icons.fiber_new_outlined),
+                            title: Text(name),
+                            trailing: IconButton(
+                              icon: const Icon(Icons.close),
+                              onPressed: () {
+                                setDialogState(() {
+                                  pendingNewCategories.remove(name);
+                                });
+                              },
+                            ),
+                          );
+                        }),
+                      ],
+                    ),
+                  ],
                 ),
               ),
               actions: [
@@ -105,12 +209,22 @@ class _AddToCategoryDialogState extends State<AddToCategoryDialog> {
                               }
                             }
 
+                            final newlyCreatedIds = <int>[];
+                            for (final name in pendingNewCategories) {
+                              final newId = await repo.createCategory(name);
+                              await repo.addSongToCategory(widget.song.id, newId);
+                              newlyCreatedIds.add(newId);
+                            }
+
                             if (!mounted) return;
 
-                            widget.onCategoryIdsChanged(currentCategoryIds.toList());
+                            widget.onCategoryIdsChanged([
+                              ...currentCategoryIds,
+                              ...newlyCreatedIds,
+                            ]);
 
                             navigator.pop();
-                            
+
                             messenger.showSnackBar(
                               SnackBar(
                                 content: Text(
