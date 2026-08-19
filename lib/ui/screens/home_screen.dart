@@ -78,7 +78,9 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final listBackgroundColor = Theme.of(context).colorScheme.surfaceContainerHighest;
+    final listBackgroundColor = Theme.of(
+      context,
+    ).colorScheme.surfaceContainerHighest;
     final l10n = AppLocalizations.of(context)!;
 
     return Scaffold(
@@ -86,38 +88,41 @@ class _HomeScreenState extends State<HomeScreen> {
       body: Consumer<SongListProvider>(
         builder: (context, provider, child) {
           if (provider.isLoading && provider.songs.isEmpty) {
-             return const Center(child: CircularProgressIndicator());
-          }
-          
-          if (!provider.isLoading && provider.songs.isEmpty) {
-             return RefreshIndicator(
-               onRefresh: provider.refreshSongs,
-               child: SingleChildScrollView(
-                 physics: const AlwaysScrollableScrollPhysics(),
-                 child: SizedBox(
-                   height: MediaQuery.of(context).size.height,
-                   child: Center(child: Text(l10n.noSongsFound)),
-                 ),
-               ),
-             );
+            return const Center(child: CircularProgressIndicator());
           }
 
-          final lyricsLang = Provider.of<LyricsLanguageProvider>(context).lyricsLanguage;
+          if (!provider.isLoading && provider.songs.isEmpty) {
+            return RefreshIndicator(
+              onRefresh: provider.refreshSongs,
+              child: SingleChildScrollView(
+                physics: const AlwaysScrollableScrollPhysics(),
+                child: SizedBox(
+                  height: MediaQuery.of(context).size.height,
+                  child: Center(child: Text(l10n.noSongsFound)),
+                ),
+              ),
+            );
+          }
+
+          final lyricsLang = Provider.of<LyricsLanguageProvider>(
+            context,
+          ).lyricsLanguage;
 
           return NotificationListener<ScrollNotification>(
             onNotification: (ScrollNotification scrollInfo) {
               // We can also check here index-based if we want strict "30 items remaining" logic,
               // but pixel-based is smoother for infinite scroll.
-              
+
               // However, to strictly follow "start fetching user reaches 30" (remaining),
               // we can try to rely on the scroll controller listener which is standard.
               // Let's stick to the scroll controller approach but attach it to the CustomScrollView.
-               if (scrollInfo.metrics.pixels >= scrollInfo.metrics.maxScrollExtent - 2500) {
-                 if (!provider.isLoading && provider.hasMore) {
-                    provider.loadMoreSongs();
-                 }
-               }
-               return false;
+              if (scrollInfo.metrics.pixels >=
+                  scrollInfo.metrics.maxScrollExtent - 2500) {
+                if (!provider.isLoading && provider.hasMore) {
+                  provider.loadMoreSongs();
+                }
+              }
+              return false;
             },
             child: RefreshIndicator(
               onRefresh: provider.refreshSongs,
@@ -161,21 +166,26 @@ class _HomeScreenState extends State<HomeScreen> {
                         vertical: 8.0,
                       ),
                       sliver: SliverList.separated(
-                        itemCount: provider.songs.length + (provider.hasMore ? 1 : 0),
+                        itemCount:
+                            provider.songs.length + (provider.hasMore ? 1 : 0),
                         itemBuilder: (context, index) {
                           if (index == provider.songs.length) {
                             return const Padding(
                               padding: EdgeInsets.all(16.0),
-                              child: Center(
-                                child: CircularProgressIndicator(),
-                              ),
+                              child: Center(child: CircularProgressIndicator()),
                             );
                           }
 
                           final song = provider.songs[index];
-                          final useEnglish = lyricsLang == LyricsLanguage.english && song.hasEnglishContent;
-                          final displayTitle = useEnglish ? (song.englishTitle ?? song.title) : song.title;
-                          final displayPlace = useEnglish ? (song.englishVenue ?? song.place) : song.place;
+                          final useEnglish =
+                              lyricsLang == LyricsLanguage.english &&
+                              song.hasEnglishContent;
+                          final displayTitle = useEnglish
+                              ? (song.englishTitle ?? song.title)
+                              : song.title;
+                          final displayPlace = useEnglish
+                              ? (song.englishVenue ?? song.place)
+                              : song.place;
 
                           return Semantics(
                             button: true,
@@ -249,9 +259,7 @@ class _HomeScreenState extends State<HomeScreen> {
             heroTag: 'fab_search',
             onPressed: () {
               Navigator.of(context).push(
-                MaterialPageRoute(
-                   builder: (context) => const SearchScreen(),
-                ),
+                MaterialPageRoute(builder: (context) => const SearchScreen()),
               );
             },
             child: const Icon(Icons.search),

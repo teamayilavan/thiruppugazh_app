@@ -52,16 +52,11 @@ class NetworkException extends AppException {
   NetworkException(super.message, {super.details, super.originalError});
 
   factory NetworkException.urlLaunchError(String url) {
-    return NetworkException(
-      'Failed to launch URL',
-      details: url,
-    );
+    return NetworkException('Failed to launch URL', details: url);
   }
 
   factory NetworkException.timeoutError() {
-    return NetworkException(
-      'Request timed out',
-    );
+    return NetworkException('Request timed out');
   }
 }
 
@@ -70,17 +65,11 @@ class ValidationException extends AppException {
   ValidationException(super.message, {super.details, super.originalError});
 
   factory ValidationException.invalidInput(String field) {
-    return ValidationException(
-      'Invalid input',
-      details: field,
-    );
+    return ValidationException('Invalid input', details: field);
   }
 
   factory ValidationException.duplicateValue(String field) {
-    return ValidationException(
-      'Duplicate value',
-      details: field,
-    );
+    return ValidationException('Duplicate value', details: field);
   }
 
   factory ValidationException.tooShort(String field, int minLength) {
@@ -159,16 +148,13 @@ class ErrorHandler {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
           content: Text(message),
-          action: SnackBarAction(
-            label: 'Retry',
-            onPressed: onRetry,
-          ),
+          action: SnackBarAction(label: 'Retry', onPressed: onRetry),
         ),
       );
     } else {
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text(message)),
-      );
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(SnackBar(content: Text(message)));
     }
   }
 

@@ -2,12 +2,7 @@
 import 'package:flutter/foundation.dart';
 
 /// Log levels for application logging.
-enum LogLevel {
-  debug,
-  info,
-  warning,
-  error,
-}
+enum LogLevel { debug, info, warning, error }
 
 /// Utility class for consistent logging throughout the application.
 /// In debug mode, logs are printed to console.

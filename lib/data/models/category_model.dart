@@ -1,23 +1,16 @@
 class Category {
   final int? id;
   final String name;
-  
+
   /// The number of songs associated with this category.
   /// This value is calculated in a database query, not stored in the table.
   final int songCount;
 
-  Category({
-    this.id,
-    required this.name,
-    this.songCount = 0,
-  });
+  Category({this.id, required this.name, this.songCount = 0});
 
   /// Converts a Category object into a Map for database insertion.
   Map<String, dynamic> toMap() {
-    return {
-      'id': id,
-      'name': name,
-    };
+    return {'id': id, 'name': name};
   }
 
   /// Creates a Category object from a Map, typically from a database query.

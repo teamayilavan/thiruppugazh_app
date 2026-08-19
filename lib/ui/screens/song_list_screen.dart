@@ -26,22 +26,26 @@ class _SongListScreenState extends State<SongListScreen> {
   void initState() {
     super.initState();
     // Fetch songs for the specific category when the screen loads
-    _songsFuture = Provider.of<SongRepository>(context, listen: false)
-        .getSongsByCategoryId(widget.category.id!);
+    _songsFuture = Provider.of<SongRepository>(
+      context,
+      listen: false,
+    ).getSongsByCategoryId(widget.category.id!);
   }
 
   @override
   Widget build(BuildContext context) {
-    final lyricsLang = Provider.of<LyricsLanguageProvider>(context).lyricsLanguage;
+    final lyricsLang = Provider.of<LyricsLanguageProvider>(
+      context,
+    ).lyricsLanguage;
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.category.name),
-      ),
+      appBar: AppBar(title: Text(widget.category.name)),
       body: RefreshIndicator(
         onRefresh: () async {
           setState(() {
-            _songsFuture = Provider.of<SongRepository>(context, listen: false)
-                .getSongsByCategoryId(widget.category.id!);
+            _songsFuture = Provider.of<SongRepository>(
+              context,
+              listen: false,
+            ).getSongsByCategoryId(widget.category.id!);
           });
           await _songsFuture;
         },
@@ -55,14 +59,15 @@ class _SongListScreenState extends State<SongListScreen> {
                 errorMessage: AppLocalizations.of(context)!.failedToLoadSongs,
                 onRetry: () {
                   setState(() {
-                    _songsFuture =
-                        Provider.of<SongRepository>(context, listen: false)
-                            .getSongsByCategoryId(widget.category.id!);
+                    _songsFuture = Provider.of<SongRepository>(
+                      context,
+                      listen: false,
+                    ).getSongsByCategoryId(widget.category.id!);
                   });
                 },
               );
             } else if (!snapshot.hasData || snapshot.data!.isEmpty) {
-               return Stack(
+              return Stack(
                 children: [
                   ListView(), // Enable pull to refresh on empty
                   Center(
@@ -74,7 +79,7 @@ class _SongListScreenState extends State<SongListScreen> {
                 ],
               );
             }
-  
+
             final songs = snapshot.data!;
             return Scrollbar(
               child: ListView.separated(
@@ -82,9 +87,15 @@ class _SongListScreenState extends State<SongListScreen> {
                 itemCount: songs.length,
                 itemBuilder: (context, index) {
                   final song = songs[index];
-                  final useEnglish = lyricsLang == LyricsLanguage.english && song.hasEnglishContent;
-                  final displayTitle = useEnglish ? (song.englishTitle ?? song.title) : song.title;
-                  final displayPlace = useEnglish ? (song.englishVenue ?? song.place) : song.place;
+                  final useEnglish =
+                      lyricsLang == LyricsLanguage.english &&
+                      song.hasEnglishContent;
+                  final displayTitle = useEnglish
+                      ? (song.englishTitle ?? song.title)
+                      : song.title;
+                  final displayPlace = useEnglish
+                      ? (song.englishVenue ?? song.place)
+                      : song.place;
                   return ListTile(
                     title: Padding(
                       // Add padding to the bottom of the title
@@ -97,7 +108,9 @@ class _SongListScreenState extends State<SongListScreen> {
                       horizontal: 12.0,
                     ),
                     subtitle: Text(
-                      displayPlace.isNotEmpty ? displayPlace : 'Tune not available',
+                      displayPlace.isNotEmpty
+                          ? displayPlace
+                          : 'Tune not available',
                       //change text size
                       style: Theme.of(context).textTheme.bodySmall,
                     ),
@@ -116,17 +129,16 @@ class _SongListScreenState extends State<SongListScreen> {
                     height: 1, // The height of the divider space
                     thickness: 1, // The thickness of the line
                     indent: 12, // The empty space on the left of the divider
-                    endIndent: 12, // The empty space on the right of the divider
-                    color: Theme.of(context).dividerColor, 
+                    endIndent:
+                        12, // The empty space on the right of the divider
+                    color: Theme.of(context).dividerColor,
                   );
                 },
               ),
             );
-  
           },
         ),
       ),
     );
-
   }
 }

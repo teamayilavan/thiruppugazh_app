@@ -29,7 +29,7 @@ class BackupService {
       // Filter out 'Favorites' category (ID 1) from explicit export if handled via isFavorite flag,
       // generally ID 1 is reserved.
       final customCategories = categories.where((c) => c.id != 1).toList();
-      
+
       final Map<String, dynamic> exportMap = {
         'version': 1,
         'exported_at': DateTime.now().toIso8601String(),
@@ -40,10 +40,7 @@ class BackupService {
               .where((sc) => sc['category_id'] == c.id)
               .map((sc) => sc['song_id'])
               .toList();
-          return {
-            'name': c.name,
-            'songs': songIds,
-          };
+          return {'name': c.name, 'songs': songIds};
         }).toList(),
         'notes': notes.map((n) => n.toMap()).toList(),
         'highlights': highlights.map((h) => h.toMap()).toList(),
@@ -67,12 +64,11 @@ class BackupService {
 
       if (result.status == ShareResultStatus.success) {
         if (context.mounted) {
-           ScaffoldMessenger.of(context).showSnackBar(
-            const SnackBar(content: Text('Export successful')),
-          );
+          ScaffoldMessenger.of(
+            context,
+          ).showSnackBar(const SnackBar(content: Text('Export successful')));
         }
       }
-      
     } catch (e, stackTrace) {
       AppLogger.error('Export failed', error: e, stackTrace: stackTrace);
       if (context.mounted) {
@@ -114,12 +110,12 @@ class BackupService {
       }
 
       // 2. Process Data
-      
+
       // Favorites
       final List<dynamic> favIds = importMap['favorites'] ?? [];
       for (final id in favIds) {
         if (id is int) {
-          // Check if song exists first? Database toggleFavorite updates based on ID. 
+          // Check if song exists first? Database toggleFavorite updates based on ID.
           // If ID doesn't exist, update returns 0 rows. Safe.
           await _dbHelper.toggleFavorite(id, true);
         }
@@ -143,7 +139,7 @@ class BackupService {
         // Add songs to category
         for (final songId in songs) {
           if (songId is int) {
-             await _dbHelper.addSongToCategory(songId, catId);
+            await _dbHelper.addSongToCategory(songId, catId);
           }
         }
       }
@@ -172,7 +168,6 @@ class BackupService {
           const SnackBar(content: Text('Import completed successfully')),
         );
       }
-
     } catch (e, stackTrace) {
       if (context.mounted) {
         // Close progress dialog if open (can be tricky to know state, but usually fine here)
@@ -189,7 +184,9 @@ class BackupService {
 
   void _validateBackupMap(Map<String, dynamic> map) {
     if (!map.containsKey('favorites') || !map.containsKey('categories')) {
-      throw const FormatException('Missing required keys: favorites, categories');
+      throw const FormatException(
+        'Missing required keys: favorites, categories',
+      );
     }
 
     final favorites = map['favorites'];
@@ -208,13 +205,21 @@ class BackupService {
       throw const FormatException('categories must be a list');
     }
     for (final cat in categories) {
-      if (cat is! Map) throw const FormatException('each category must be an object');
-      if (cat['name'] is! String) throw const FormatException('category name must be a string');
+      if (cat is! Map) {
+        throw const FormatException('each category must be an object');
+      }
+      if (cat['name'] is! String) {
+        throw const FormatException('category name must be a string');
+      }
       final songs = cat['songs'];
       if (songs != null) {
-        if (songs is! List) throw const FormatException('category songs must be a list');
+        if (songs is! List) {
+          throw const FormatException('category songs must be a list');
+        }
         if (songs.any((e) => e is! int)) {
-          throw const FormatException('category songs must contain only integers');
+          throw const FormatException(
+            'category songs must contain only integers',
+          );
         }
       }
     }

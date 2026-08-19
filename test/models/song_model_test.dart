@@ -83,9 +83,18 @@ void main() {
     group('English content', () {
       test('hasEnglishContent is true when englishLyricsList is non-empty', () {
         final song = Song(
-          id: 1, kaumaramId: '1', title: 'T', place: 'P',
-          tune: '', lyrics: '', lyricsList: [], tuneList: [],
-          words: [], meanings: [], pathavurai: '', patham: [],
+          id: 1,
+          kaumaramId: '1',
+          title: 'T',
+          place: 'P',
+          tune: '',
+          lyrics: '',
+          lyricsList: [],
+          tuneList: [],
+          words: [],
+          meanings: [],
+          pathavurai: '',
+          patham: [],
           englishLyricsList: ['line one', 'line two'],
         );
         expect(song.hasEnglishContent, isTrue);
@@ -93,18 +102,36 @@ void main() {
 
       test('hasEnglishContent is false when englishLyricsList is empty', () {
         final song = Song(
-          id: 1, kaumaramId: '1', title: 'T', place: 'P',
-          tune: '', lyrics: '', lyricsList: [], tuneList: [],
-          words: [], meanings: [], pathavurai: '', patham: [],
+          id: 1,
+          kaumaramId: '1',
+          title: 'T',
+          place: 'P',
+          tune: '',
+          lyrics: '',
+          lyricsList: [],
+          tuneList: [],
+          words: [],
+          meanings: [],
+          pathavurai: '',
+          patham: [],
         );
         expect(song.hasEnglishContent, isFalse);
       });
 
       test('englishLyrics joins englishLyricsList with newlines', () {
         final song = Song(
-          id: 1, kaumaramId: '1', title: 'T', place: 'P',
-          tune: '', lyrics: '', lyricsList: [], tuneList: [],
-          words: [], meanings: [], pathavurai: '', patham: [],
+          id: 1,
+          kaumaramId: '1',
+          title: 'T',
+          place: 'P',
+          tune: '',
+          lyrics: '',
+          lyricsList: [],
+          tuneList: [],
+          words: [],
+          meanings: [],
+          pathavurai: '',
+          patham: [],
           englishLyricsList: ['line one', 'line two'],
         );
         expect(song.englishLyrics, 'line one\nline two');

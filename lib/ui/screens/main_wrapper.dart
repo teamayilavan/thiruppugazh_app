@@ -31,9 +31,7 @@ class _MainWrapperState extends State<MainWrapper> {
     SettingsScreen(),
   ];
 
-// ... (omitted AppLinks code) ...
-
-
+  // ... (omitted AppLinks code) ...
 
   late AppLinks _appLinks;
 
@@ -59,24 +57,24 @@ class _MainWrapperState extends State<MainWrapper> {
   }
 
   Future<void> _handleDeepLink(Uri uri) async {
-    // Expected formats: 
+    // Expected formats:
     // 1. Custom Scheme: thiruppugazh://song/{id} (Legacy/Internal)
     // 2. App Link: https://thiruppugazh.ayilavan.org/song/{id}
-    
+
     bool isSongLink = false;
     String? songIdString;
 
     if (uri.scheme == 'thiruppugazh' && uri.host == 'song') {
-       // Legacy format
-       if (uri.pathSegments.isNotEmpty) songIdString = uri.pathSegments.first;
-       isSongLink = true;
-    } else if ((uri.scheme == 'https' || uri.scheme == 'http') && 
-               uri.host == AppConstants.deepLinkDomain &&
-               uri.pathSegments.isNotEmpty && 
-               uri.pathSegments[0] == 'song') {
-       // HTTPS format: /song/{id}
-       if (uri.pathSegments.length > 1) songIdString = uri.pathSegments[1];
-       isSongLink = true;
+      // Legacy format
+      if (uri.pathSegments.isNotEmpty) songIdString = uri.pathSegments.first;
+      isSongLink = true;
+    } else if ((uri.scheme == 'https' || uri.scheme == 'http') &&
+        uri.host == AppConstants.deepLinkDomain &&
+        uri.pathSegments.isNotEmpty &&
+        uri.pathSegments[0] == 'song') {
+      // HTTPS format: /song/{id}
+      if (uri.pathSegments.length > 1) songIdString = uri.pathSegments[1];
+      isSongLink = true;
     }
 
     if (isSongLink && songIdString != null) {
@@ -87,7 +85,7 @@ class _MainWrapperState extends State<MainWrapper> {
         final song = await repo.getSongById(songId);
 
         if (song != null && mounted) {
-           Navigator.of(context).push(
+          Navigator.of(context).push(
             MaterialPageRoute(
               builder: (context) => SongDetailScreen(song: song),
             ),
@@ -144,7 +142,9 @@ class _MainWrapperState extends State<MainWrapper> {
                 );
               },
               child: IndexedStack(
-                  index: _selectedIndex, children: _widgetOptions),
+                index: _selectedIndex,
+                children: _widgetOptions,
+              ),
             ),
           ),
         ],

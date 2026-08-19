@@ -16,17 +16,18 @@ class HighlightsNotesScreen extends StatelessWidget {
           title: Text(AppLocalizations.of(context)!.myLibrary),
           bottom: TabBar(
             tabs: [
-              Tab(icon: const Icon(Icons.highlight), text: AppLocalizations.of(context)!.highlights),
-              Tab(icon: const Icon(Icons.note), text: AppLocalizations.of(context)!.notes),
+              Tab(
+                icon: const Icon(Icons.highlight),
+                text: AppLocalizations.of(context)!.highlights,
+              ),
+              Tab(
+                icon: const Icon(Icons.note),
+                text: AppLocalizations.of(context)!.notes,
+              ),
             ],
           ),
         ),
-        body: const TabBarView(
-          children: [
-            HighlightsList(),
-            NotesList(),
-          ],
-        ),
+        body: const TabBarView(children: [HighlightsList(), NotesList()]),
       ),
     );
   }
@@ -49,8 +50,10 @@ class _HighlightsListState extends State<HighlightsList> {
   }
 
   void _load() {
-    _future = Provider.of<SongRepository>(context, listen: false)
-        .getHighlightsWithSongs();
+    _future = Provider.of<SongRepository>(
+      context,
+      listen: false,
+    ).getHighlightsWithSongs();
   }
 
   void _refresh() {
@@ -105,8 +108,10 @@ class _HighlightsListState extends State<HighlightsList> {
                 ),
               ),
               onTap: () async {
-                final repo =
-                    Provider.of<SongRepository>(context, listen: false);
+                final repo = Provider.of<SongRepository>(
+                  context,
+                  listen: false,
+                );
                 final song = await repo.getSongById(songId);
                 if (song != null && context.mounted) {
                   await Navigator.push(
@@ -144,8 +149,10 @@ class _NotesListState extends State<NotesList> {
   }
 
   void _load() {
-    _future = Provider.of<SongRepository>(context, listen: false)
-        .getNotesWithSongs();
+    _future = Provider.of<SongRepository>(
+      context,
+      listen: false,
+    ).getNotesWithSongs();
   }
 
   void _refresh() {
@@ -193,8 +200,10 @@ class _NotesListState extends State<NotesList> {
                 ),
               ),
               onTap: () async {
-                final repo =
-                    Provider.of<SongRepository>(context, listen: false);
+                final repo = Provider.of<SongRepository>(
+                  context,
+                  listen: false,
+                );
                 final song = await repo.getSongById(songId);
                 if (song != null && context.mounted) {
                   await Navigator.push(
@@ -230,8 +239,10 @@ class _NotesListState extends State<NotesList> {
                     ),
                   );
                   if (confirm == true && context.mounted) {
-                    final repo =
-                        Provider.of<SongRepository>(context, listen: false);
+                    final repo = Provider.of<SongRepository>(
+                      context,
+                      listen: false,
+                    );
                     await repo.deleteNote(songId);
                     _refresh();
                   }

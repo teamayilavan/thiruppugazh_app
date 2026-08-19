@@ -6,9 +6,7 @@ class PrivacyPolicyScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Privacy Policy'),
-      ),
+      appBar: AppBar(title: const Text('Privacy Policy')),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16.0),
         child: Column(
@@ -30,12 +28,16 @@ class PrivacyPolicyScreen extends StatelessWidget {
       children: [
         Text(
           'தனியுரிமைக் கொள்கை',
-          style: Theme.of(context).textTheme.headlineMedium?.copyWith(fontWeight: FontWeight.bold),
+          style: Theme.of(
+            context,
+          ).textTheme.headlineMedium?.copyWith(fontWeight: FontWeight.bold),
         ),
         const SizedBox(height: 8),
         Text(
           'கடைசியாகப் புதுப்பிக்கப்பட்டது: 18 பிப்ரவரி 2026',
-          style: Theme.of(context).textTheme.titleSmall?.copyWith(color: Colors.grey),
+          style: Theme.of(
+            context,
+          ).textTheme.titleSmall?.copyWith(color: Colors.grey),
         ),
         const SizedBox(height: 16),
         Text(
@@ -82,12 +84,16 @@ class PrivacyPolicyScreen extends StatelessWidget {
       children: [
         Text(
           'Privacy Policy',
-          style: Theme.of(context).textTheme.headlineMedium?.copyWith(fontWeight: FontWeight.bold),
+          style: Theme.of(
+            context,
+          ).textTheme.headlineMedium?.copyWith(fontWeight: FontWeight.bold),
         ),
         const SizedBox(height: 8),
         Text(
           'Last updated: 18 February 2026',
-          style: Theme.of(context).textTheme.titleSmall?.copyWith(color: Colors.grey),
+          style: Theme.of(
+            context,
+          ).textTheme.titleSmall?.copyWith(color: Colors.grey),
         ),
         const SizedBox(height: 16),
         Text(

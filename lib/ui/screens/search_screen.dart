@@ -45,11 +45,14 @@ class _SearchScreenState extends State<SearchScreen> {
 
   void _onSearchChanged(String query) {
     if (_debounce?.isActive ?? false) _debounce!.cancel();
-    _debounce = Timer(const Duration(milliseconds: AppConstants.searchDebounceMs), () {
-      if (mounted) {
-        _performSearch(query);
-      }
-    });
+    _debounce = Timer(
+      const Duration(milliseconds: AppConstants.searchDebounceMs),
+      () {
+        if (mounted) {
+          _performSearch(query);
+        }
+      },
+    );
   }
 
   Future<void> _performSearch(String query) async {
@@ -76,7 +79,9 @@ class _SearchScreenState extends State<SearchScreen> {
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
-    final lyricsLang = Provider.of<LyricsLanguageProvider>(context).lyricsLanguage;
+    final lyricsLang = Provider.of<LyricsLanguageProvider>(
+      context,
+    ).lyricsLanguage;
     return GestureDetector(
       onTap: () {
         _searchFocusNode.unfocus();
@@ -139,9 +144,15 @@ class _SearchScreenState extends State<SearchScreen> {
                         itemCount: _results.length,
                         itemBuilder: (context, index) {
                           final song = _results[index];
-                          final useEnglish = lyricsLang == LyricsLanguage.english && song.hasEnglishContent;
-                          final displayTitle = useEnglish ? (song.englishTitle ?? song.title) : song.title;
-                          final displayPlace = useEnglish ? (song.englishVenue ?? song.place) : song.place;
+                          final useEnglish =
+                              lyricsLang == LyricsLanguage.english &&
+                              song.hasEnglishContent;
+                          final displayTitle = useEnglish
+                              ? (song.englishTitle ?? song.title)
+                              : song.title;
+                          final displayPlace = useEnglish
+                              ? (song.englishVenue ?? song.place)
+                              : song.place;
                           return ListTile(
                             leading: Text(
                               (index + 1).toString(),
@@ -196,21 +207,27 @@ class SearchFilterOptions extends StatelessWidget {
             label: Text(l10n.searchFilterTitle),
             selected: filter.searchTitle,
             onSelected: (_) {
-              onFilterChanged(filter.copyWith(searchTitle: !filter.searchTitle));
+              onFilterChanged(
+                filter.copyWith(searchTitle: !filter.searchTitle),
+              );
             },
           ),
           FilterChip(
             label: Text(l10n.searchFilterLyrics),
             selected: filter.searchLyrics,
             onSelected: (_) {
-              onFilterChanged(filter.copyWith(searchLyrics: !filter.searchLyrics));
+              onFilterChanged(
+                filter.copyWith(searchLyrics: !filter.searchLyrics),
+              );
             },
           ),
           FilterChip(
             label: Text(l10n.searchFilterTemple),
             selected: filter.searchPlace,
             onSelected: (_) {
-              onFilterChanged(filter.copyWith(searchPlace: !filter.searchPlace));
+              onFilterChanged(
+                filter.copyWith(searchPlace: !filter.searchPlace),
+              );
             },
           ),
           FilterChip(

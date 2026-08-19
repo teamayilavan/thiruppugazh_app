@@ -21,14 +21,14 @@ class SearchFilter {
   /// Gets active fields for FTS search.
   String getSearchFields() {
     final fields = <String>[];
-    
+
     if (searchTitle) fields.add('title');
     if (searchLyrics) fields.add('lyrics');
     if (searchPlace) fields.add('place');
     if (searchTune) fields.add('tune');
     if (searchKaumaramId) fields.add('kaumaram_id');
     if (searchPathavurai) fields.add('pathavurai');
-    
+
     return fields.join(', ');
   }
 

@@ -63,7 +63,10 @@ class _AddToCategoryDialogState extends State<AddToCategoryDialog> {
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
     return FutureBuilder(
-      future: Provider.of<SongRepository>(context, listen: false).getAllCategories(),
+      future: Provider.of<SongRepository>(
+        context,
+        listen: false,
+      ).getAllCategories(),
       builder: (context, snapshot) {
         if (!snapshot.hasData) {
           return const AlertDialog(
@@ -142,8 +145,12 @@ class _AddToCategoryDialogState extends State<AddToCategoryDialog> {
                     ListView(
                       shrinkWrap: true,
                       children: [
-                        ...allCategories.where((c) => c.id != 1).map((category) {
-                          final isSelected = currentCategoryIds.contains(category.id);
+                        ...allCategories.where((c) => c.id != 1).map((
+                          category,
+                        ) {
+                          final isSelected = currentCategoryIds.contains(
+                            category.id,
+                          );
                           return CheckboxListTile(
                             title: Text(category.name),
                             value: isSelected,
@@ -186,7 +193,10 @@ class _AddToCategoryDialogState extends State<AddToCategoryDialog> {
                   onPressed: _isSaving
                       ? null
                       : () async {
-                          final repo = Provider.of<SongRepository>(context, listen: false);
+                          final repo = Provider.of<SongRepository>(
+                            context,
+                            listen: false,
+                          );
                           final messenger = ScaffoldMessenger.of(context);
                           final navigator = Navigator.of(context);
 
@@ -199,7 +209,9 @@ class _AddToCategoryDialogState extends State<AddToCategoryDialog> {
                               if (cat.id != 1) {
                                 if (currentCategoryIds.contains(cat.id)) {
                                   await repo.addSongToCategory(
-                                      widget.song.id, cat.id!);
+                                    widget.song.id,
+                                    cat.id!,
+                                  );
                                 } else {
                                   await repo.removeSongFromCategory(
                                     widget.song.id,
@@ -212,7 +224,10 @@ class _AddToCategoryDialogState extends State<AddToCategoryDialog> {
                             final newlyCreatedIds = <int>[];
                             for (final name in pendingNewCategories) {
                               final newId = await repo.createCategory(name);
-                              await repo.addSongToCategory(widget.song.id, newId);
+                              await repo.addSongToCategory(
+                                widget.song.id,
+                                newId,
+                              );
                               newlyCreatedIds.add(newId);
                             }
 
@@ -228,9 +243,9 @@ class _AddToCategoryDialogState extends State<AddToCategoryDialog> {
                             messenger.showSnackBar(
                               SnackBar(
                                 content: Text(
-                                    l10n.categoriesUpdated(widget.song.title),
-                                  ),
+                                  l10n.categoriesUpdated(widget.song.title),
                                 ),
+                              ),
                             );
                           } catch (e) {
                             if (!mounted) return;
@@ -239,7 +254,9 @@ class _AddToCategoryDialogState extends State<AddToCategoryDialog> {
                             });
                             messenger.showSnackBar(
                               SnackBar(
-                                content: Text('${l10n.errorUpdatingCategories}: $e'),
+                                content: Text(
+                                  '${l10n.errorUpdatingCategories}: $e',
+                                ),
                               ),
                             );
                           }
@@ -248,9 +265,7 @@ class _AddToCategoryDialogState extends State<AddToCategoryDialog> {
                       ? const SizedBox(
                           width: 16,
                           height: 16,
-                          child: CircularProgressIndicator(
-                            strokeWidth: 2,
-                          ),
+                          child: CircularProgressIndicator(strokeWidth: 2),
                         )
                       : Text(l10n.save),
                 ),

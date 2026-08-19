@@ -12,7 +12,8 @@ class AppStrings {
 
   // ==================== Main Wrapper ====================
   static const String exitAppTitle = 'Exit App?';
-  static const String exitAppMessage = 'Are you sure you want to close Thiruppugazh?';
+  static const String exitAppMessage =
+      'Are you sure you want to close Thiruppugazh?';
   static const String no = 'No';
   static const String yes = 'Yes';
 
@@ -20,7 +21,6 @@ class AppStrings {
   static const String thiruppugazhTitle = 'திருப்புகழ்';
   static const String noSongsFound = 'No songs found in the database.';
   static const String tuneNotAvailable = 'Tune not available';
-
 
   // ==================== Error Handling ====================
   static const String anErrorOccurred = 'An error occurred';
@@ -60,7 +60,8 @@ class ValidationStrings {
 
   static const String required = 'This field is required.';
   static const String emailInvalid = 'Please enter a valid email address.';
-  static const String passwordTooShort = 'Password must be at least 8 characters.';
+  static const String passwordTooShort =
+      'Password must be at least 8 characters.';
   static const String passwordMismatch = 'Passwords do not match.';
   static const String phoneInvalid = 'Please enter a valid phone number.';
 }

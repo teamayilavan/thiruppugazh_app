@@ -36,11 +36,11 @@ class _TemplesScreenState extends State<TemplesScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final lyricsLang = Provider.of<LyricsLanguageProvider>(context).lyricsLanguage;
+    final lyricsLang = Provider.of<LyricsLanguageProvider>(
+      context,
+    ).lyricsLanguage;
     return Scaffold(
-      appBar: AppBar(
-        title: Text(AppLocalizations.of(context)!.temples),
-      ),
+      appBar: AppBar(title: Text(AppLocalizations.of(context)!.temples)),
       body: FutureBuilder<List<Map<String, dynamic>>>(
         future: _templesFuture,
         builder: (context, snapshot) {
@@ -49,13 +49,19 @@ class _TemplesScreenState extends State<TemplesScreen> {
           }
 
           if (snapshot.hasError) {
-             return Center(child: Text('${AppLocalizations.of(context)!.anErrorOccurred}: ${snapshot.error}'));
+            return Center(
+              child: Text(
+                '${AppLocalizations.of(context)!.anErrorOccurred}: ${snapshot.error}',
+              ),
+            );
           }
 
           final temples = snapshot.data ?? [];
 
           if (temples.isEmpty) {
-            return Center(child: Text(AppLocalizations.of(context)!.noTemplesFound));
+            return Center(
+              child: Text(AppLocalizations.of(context)!.noTemplesFound),
+            );
           }
 
           return Scrollbar(
@@ -70,11 +76,13 @@ class _TemplesScreenState extends State<TemplesScreen> {
               separatorBuilder: (context, index) => const SizedBox(height: 8),
               itemBuilder: (context, index) {
                 final temple = temples[index];
-                final name        = temple['name'] as String;
+                final name = temple['name'] as String;
                 final englishName = temple['english_name'] as String?;
-                final count       = temple['song_count'] as int;
+                final count = temple['song_count'] as int;
 
-                final displayName = (lyricsLang == LyricsLanguage.english && englishName != null)
+                final displayName =
+                    (lyricsLang == LyricsLanguage.english &&
+                        englishName != null)
                     ? englishName
                     : name;
 

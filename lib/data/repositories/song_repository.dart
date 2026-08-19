@@ -13,24 +13,24 @@ class SongRepository extends ChangeNotifier {
   final dbHelper = DatabaseHelper();
 
   // --- Song and Meaning Methods ---
-  
+
   // --- Highlights Methods ---
-  
+
   Future<int> addHighlight(Highlight highlight) async {
     final id = await dbHelper.addHighlight(highlight);
     notifyListeners();
     return id;
   }
-  
+
   Future<void> removeHighlight(int songId, int verseIndex) async {
     await dbHelper.removeHighlight(songId, verseIndex);
     notifyListeners();
   }
-  
+
   Future<List<Highlight>> getHighlightsForSong(int songId) async {
     return await dbHelper.getHighlightsForSong(songId);
   }
-  
+
   Future<List<Highlight>> getAllHighlights() async {
     return await dbHelper.getAllHighlights();
   }
@@ -45,11 +45,11 @@ class SongRepository extends ChangeNotifier {
     notifyListeners();
     return id;
   }
-  
+
   Future<Note?> getNoteForSong(int songId) async {
     return await dbHelper.getNoteForSong(songId);
   }
-  
+
   Future<List<Note>> getAllNotes() async {
     return await dbHelper.getAllNotes();
   }
@@ -85,10 +85,7 @@ class SongRepository extends ChangeNotifier {
     int page = 0,
     int pageSize = 20,
   }) async {
-    return await dbHelper.getSongsPaginated(
-      page: page,
-      pageSize: pageSize,
-    );
+    return await dbHelper.getSongsPaginated(page: page, pageSize: pageSize);
   }
 
   /// Gets total count of songs.
@@ -171,10 +168,9 @@ class SongRepository extends ChangeNotifier {
     await dbHelper.toggleFavorite(songId, isFavorite);
     notifyListeners();
   }
+
   /// Triggers a UI update for listeners.
   void refresh() {
     notifyListeners();
   }
-
-
 }

@@ -24,14 +24,24 @@ class SettingsScreen extends StatelessWidget {
           ListTile(
             leading: const Icon(Icons.translate_outlined),
             title: Text(l10n.appLanguage),
-            subtitle: Text(_getLanguageDisplayName(context, languageProvider.currentLanguage)),
+            subtitle: Text(
+              _getLanguageDisplayName(
+                context,
+                languageProvider.currentLanguage,
+              ),
+            ),
             onTap: () => _showLanguageDialog(context, languageProvider),
           ),
           ListTile(
             leading: const Icon(Icons.menu_book_outlined),
             title: Text(l10n.lyricsLanguage),
-            subtitle: Text(_getLyricsLanguageDisplayName(lyricsLanguageProvider.lyricsLanguage)),
-            onTap: () => _showLyricsLanguageDialog(context, lyricsLanguageProvider),
+            subtitle: Text(
+              _getLyricsLanguageDisplayName(
+                lyricsLanguageProvider.lyricsLanguage,
+              ),
+            ),
+            onTap: () =>
+                _showLyricsLanguageDialog(context, lyricsLanguageProvider),
           ),
           const Divider(),
           ListTile(
@@ -52,11 +62,16 @@ class SettingsScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(l10n.creditsTitle, style: Theme.of(context).textTheme.titleMedium),
+                Text(
+                  l10n.creditsTitle,
+                  style: Theme.of(context).textTheme.titleMedium,
+                ),
                 const SizedBox(height: 24.0),
                 Text(
                   l10n.sriGopalaSundaram,
-                  style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold),
+                  style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
                 const SizedBox(height: 12.0),
                 Text(
@@ -66,7 +81,9 @@ class SettingsScreen extends StatelessWidget {
                 const SizedBox(height: 24.0),
                 Text(
                   l10n.thiruSendhan,
-                  style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold),
+                  style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
                 const SizedBox(height: 12.0),
                 Text(
@@ -76,7 +93,9 @@ class SettingsScreen extends StatelessWidget {
                 const SizedBox(height: 24.0),
                 Text(
                   l10n.kaumaramTeam,
-                  style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold),
+                  style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
                 const SizedBox(height: 12.0),
                 Text(
@@ -87,23 +106,36 @@ class SettingsScreen extends StatelessWidget {
                 const SizedBox(height: 24.0),
                 Text(
                   l10n.appDevelopment,
-                  style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold),
+                  style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
                 const SizedBox(height: 12.0),
-                Text(l10n.ayilavanAni, style: Theme.of(context).textTheme.bodyLarge),
+                Text(
+                  l10n.ayilavanAni,
+                  style: Theme.of(context).textTheme.bodyLarge,
+                ),
                 const SizedBox(height: 24.0),
                 Text(
                   l10n.contact,
-                  style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold),
+                  style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
                 const SizedBox(height: 12.0),
-                Text(l10n.contactEmail, style: Theme.of(context).textTheme.bodyLarge),
+                Text(
+                  l10n.contactEmail,
+                  style: Theme.of(context).textTheme.bodyLarge,
+                ),
               ],
             ),
           ),
           const Divider(),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 16.0),
+            padding: const EdgeInsets.symmetric(
+              horizontal: 16.0,
+              vertical: 16.0,
+            ),
             child: SizedBox(
               width: double.infinity,
               child: FilledButton(
@@ -159,7 +191,10 @@ class SettingsScreen extends StatelessWidget {
     );
   }
 
-  void _showLyricsLanguageDialog(BuildContext context, LyricsLanguageProvider provider) {
+  void _showLyricsLanguageDialog(
+    BuildContext context,
+    LyricsLanguageProvider provider,
+  ) {
     showDialog(
       context: context,
       builder: (BuildContext context) {
@@ -238,7 +273,10 @@ class SettingsScreen extends StatelessWidget {
     );
   }
 
-  Widget _buildDataManagementSection(BuildContext context, AppLocalizations l10n) {
+  Widget _buildDataManagementSection(
+    BuildContext context,
+    AppLocalizations l10n,
+  ) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -294,6 +332,7 @@ class SettingsScreen extends StatelessWidget {
       ),
     );
   }
+
   String _getLanguageDisplayName(BuildContext context, AppLanguage language) {
     final l10n = AppLocalizations.of(context)!;
     switch (language) {

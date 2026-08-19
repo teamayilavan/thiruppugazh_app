@@ -22,7 +22,8 @@ class CategoriesScreen extends StatelessWidget {
           // The Consumer rebuilds this whenever notifyListeners() is called,
           // giving the FutureBuilder a new future and causing it to reload.
           return FutureBuilder<List<Category>>(
-            future: repository.getAllCategories(), // ✨ Get future from the repository
+            future: repository
+                .getAllCategories(), // ✨ Get future from the repository
             builder: (context, snapshot) {
               if (snapshot.connectionState == ConnectionState.waiting) {
                 return const Center(child: CircularProgressIndicator());
@@ -38,28 +39,34 @@ class CategoriesScreen extends StatelessWidget {
               final categories = snapshot.data!;
               // Split categories into favorites and custom
               final favorites = categories.where((c) => c.id == 1).toList();
-              final customCategories = categories.where((c) => c.id != 1).toList();
+              final customCategories = categories
+                  .where((c) => c.id != 1)
+                  .toList();
 
               return Scrollbar(
                 child: ListView(
                   padding: const EdgeInsets.only(bottom: 80), // Space for FAB
                   children: [
                     // Favorites Section
-                    if (favorites.isNotEmpty) ...favorites.map((category) => _buildCategoryTile(context, category)),
-                    
+                    if (favorites.isNotEmpty)
+                      ...favorites.map(
+                        (category) => _buildCategoryTile(context, category),
+                      ),
+
                     if (favorites.isNotEmpty) const Divider(),
 
                     // Custom Categories Header
-                      Padding(
-                        padding: const EdgeInsets.fromLTRB(16, 16, 16, 8),
-                        child: Text(
-                          l10n.customCategories,
-                          style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                                color: Theme.of(context).colorScheme.primary,
-                                fontWeight: FontWeight.bold,
-                              ),
-                        ),
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(16, 16, 16, 8),
+                      child: Text(
+                        l10n.customCategories,
+                        style: Theme.of(context).textTheme.titleMedium
+                            ?.copyWith(
+                              color: Theme.of(context).colorScheme.primary,
+                              fontWeight: FontWeight.bold,
+                            ),
                       ),
+                    ),
 
                     // Custom Categories List or Empty State
                     if (customCategories.isEmpty)
@@ -69,14 +76,19 @@ class CategoriesScreen extends StatelessWidget {
                           child: Text(
                             l10n.noCustomCategories,
                             textAlign: TextAlign.center,
-                            style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                                  color: Theme.of(context).colorScheme.onSurfaceVariant,
+                            style: Theme.of(context).textTheme.bodyMedium
+                                ?.copyWith(
+                                  color: Theme.of(
+                                    context,
+                                  ).colorScheme.onSurfaceVariant,
                                 ),
                           ),
                         ),
                       )
                     else
-                      ...customCategories.map((category) => _buildCategoryTile(context, category)),
+                      ...customCategories.map(
+                        (category) => _buildCategoryTile(context, category),
+                      ),
                   ],
                 ),
               );
@@ -110,9 +122,7 @@ class CategoriesScreen extends StatelessWidget {
       hint: '${category.songCount} songs',
       child: ListTile(
         leading: Icon(
-          category.id == 1
-              ? Icons.favorite
-              : Icons.folder_open_outlined,
+          category.id == 1 ? Icons.favorite : Icons.folder_open_outlined,
         ),
         title: Text(category.id == 1 ? l10n.favorites : category.name),
         trailing: Row(
@@ -125,7 +135,8 @@ class CategoriesScreen extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            if (category.id != 1) ...[ // ID 1 is Favorites
+            if (category.id != 1) ...[
+              // ID 1 is Favorites
               const SizedBox(width: 8),
               PopupMenuButton<String>(
                 icon: const Icon(Icons.more_vert),
@@ -153,7 +164,10 @@ class CategoriesScreen extends StatelessWidget {
                       children: [
                         const Icon(Icons.delete, size: 20, color: Colors.red),
                         const SizedBox(width: 8),
-                        Text(l10n.delete, style: const TextStyle(color: Colors.red)),
+                        Text(
+                          l10n.delete,
+                          style: const TextStyle(color: Colors.red),
+                        ),
                       ],
                     ),
                   ),
@@ -215,7 +229,9 @@ class CategoriesScreen extends StatelessWidget {
                     }
 
                     // Sanitize: Remove special characters (keep letters, numbers, spaces)
-                    final sanitized = trimmed.replaceAll(RegExp(r'[^\w\s]'), '').trim();
+                    final sanitized = trimmed
+                        .replaceAll(RegExp(r'[^\w\s]'), '')
+                        .trim();
                     if (sanitized.isEmpty) {
                       return l10n.enterValidCategoryName;
                     }
@@ -226,7 +242,9 @@ class CategoriesScreen extends StatelessWidget {
               ),
               actions: [
                 TextButton(
-                  onPressed: isCreating ? null : () => Navigator.of(dialogContext).pop(),
+                  onPressed: isCreating
+                      ? null
+                      : () => Navigator.of(dialogContext).pop(),
                   child: Text(l10n.cancel),
                 ),
                 FilledButton(
@@ -235,8 +253,9 @@ class CategoriesScreen extends StatelessWidget {
                       : () async {
                           if (formKey.currentState!.validate()) {
                             final repo = Provider.of<SongRepository>(
-                                context,
-                                listen: false);
+                              context,
+                              listen: false,
+                            );
                             final categoryName = controller.text.trim();
 
                             setState(() {
@@ -247,7 +266,8 @@ class CategoriesScreen extends StatelessWidget {
                             try {
                               final categories = await repo.getAllCategories();
                               final isDuplicate = categories.any(
-                                (cat) => cat.name.toLowerCase() ==
+                                (cat) =>
+                                    cat.name.toLowerCase() ==
                                     categoryName.toLowerCase(),
                               );
 
@@ -256,7 +276,9 @@ class CategoriesScreen extends StatelessWidget {
                                   isCreating = false;
                                 });
                                 if (dialogContext.mounted) {
-                                  ScaffoldMessenger.of(dialogContext).showSnackBar(
+                                  ScaffoldMessenger.of(
+                                    dialogContext,
+                                  ).showSnackBar(
                                     SnackBar(
                                       content: Text(l10n.categoryExists),
                                     ),
@@ -276,10 +298,13 @@ class CategoriesScreen extends StatelessWidget {
                                 isCreating = false;
                               });
                               if (dialogContext.mounted) {
-                                ScaffoldMessenger.of(dialogContext).showSnackBar(
+                                ScaffoldMessenger.of(
+                                  dialogContext,
+                                ).showSnackBar(
                                   SnackBar(
                                     content: Text(
-                                        '${l10n.errorCreatingCategory}: $e'),
+                                      '${l10n.errorCreatingCategory}: $e',
+                                    ),
                                   ),
                                 );
                               }
@@ -290,9 +315,7 @@ class CategoriesScreen extends StatelessWidget {
                       ? const SizedBox(
                           width: 16,
                           height: 16,
-                          child: CircularProgressIndicator(
-                            strokeWidth: 2,
-                          ),
+                          child: CircularProgressIndicator(strokeWidth: 2),
                         )
                       : Text(l10n.create),
                 ),
@@ -305,7 +328,9 @@ class CategoriesScreen extends StatelessWidget {
   }
 
   void _showRenameCategoryDialog(BuildContext context, Category category) {
-    final TextEditingController controller = TextEditingController(text: category.name);
+    final TextEditingController controller = TextEditingController(
+      text: category.name,
+    );
     final formKey = GlobalKey<FormState>();
     final l10n = AppLocalizations.of(context)!;
 
@@ -337,7 +362,9 @@ class CategoriesScreen extends StatelessWidget {
                     if (trimmed.length > AppConstants.categoryMaxNameLength) {
                       return l10n.categoryMaxLength;
                     }
-                    final sanitized = trimmed.replaceAll(RegExp(r'[^\w\s]'), '').trim();
+                    final sanitized = trimmed
+                        .replaceAll(RegExp(r'[^\w\s]'), '')
+                        .trim();
                     if (sanitized.isEmpty) {
                       return l10n.enterValidCategoryName;
                     }
@@ -347,7 +374,9 @@ class CategoriesScreen extends StatelessWidget {
               ),
               actions: [
                 TextButton(
-                  onPressed: isSaving ? null : () => Navigator.of(dialogContext).pop(),
+                  onPressed: isSaving
+                      ? null
+                      : () => Navigator.of(dialogContext).pop(),
                   child: Text(l10n.cancel),
                 ),
                 FilledButton(
@@ -355,7 +384,10 @@ class CategoriesScreen extends StatelessWidget {
                       ? null
                       : () async {
                           if (formKey.currentState!.validate()) {
-                            final repo = Provider.of<SongRepository>(context, listen: false);
+                            final repo = Provider.of<SongRepository>(
+                              context,
+                              listen: false,
+                            );
                             final newName = controller.text.trim();
 
                             if (newName == category.name) {
@@ -371,8 +403,10 @@ class CategoriesScreen extends StatelessWidget {
                               // Check for duplicates
                               final categories = await repo.getAllCategories();
                               final isDuplicate = categories.any(
-                                (cat) => cat.id != category.id && 
-                                        cat.name.toLowerCase() == newName.toLowerCase(),
+                                (cat) =>
+                                    cat.id != category.id &&
+                                    cat.name.toLowerCase() ==
+                                        newName.toLowerCase(),
                               );
 
                               if (isDuplicate) {
@@ -380,8 +414,12 @@ class CategoriesScreen extends StatelessWidget {
                                   isSaving = false;
                                 });
                                 if (dialogContext.mounted) {
-                                  ScaffoldMessenger.of(dialogContext).showSnackBar(
-                                    SnackBar(content: Text(l10n.categoryExists)),
+                                  ScaffoldMessenger.of(
+                                    dialogContext,
+                                  ).showSnackBar(
+                                    SnackBar(
+                                      content: Text(l10n.categoryExists),
+                                    ),
                                   );
                                 }
                                 return;
@@ -397,8 +435,14 @@ class CategoriesScreen extends StatelessWidget {
                                 isSaving = false;
                               });
                               if (dialogContext.mounted) {
-                                ScaffoldMessenger.of(dialogContext).showSnackBar(
-                                  SnackBar(content: Text('Error updating category: $e')),
+                                ScaffoldMessenger.of(
+                                  dialogContext,
+                                ).showSnackBar(
+                                  SnackBar(
+                                    content: Text(
+                                      'Error updating category: $e',
+                                    ),
+                                  ),
                                 );
                               }
                             }
@@ -429,19 +473,22 @@ class CategoriesScreen extends StatelessWidget {
           title: Text(l10n.deleteCategoryTitle),
           content: Text(l10n.deleteCategoryConfirmation(category.name)),
           actions: [
-             TextButton(
+            TextButton(
               onPressed: () => Navigator.of(dialogContext).pop(),
               child: Text(l10n.cancel),
             ),
             FilledButton(
               onPressed: () async {
-                 final repo = Provider.of<SongRepository>(context, listen: false);
-                 await repo.deleteCategory(category.id!);
-                 if (dialogContext.mounted) {
-                   Navigator.of(dialogContext).pop();
-                 }
+                final repo = Provider.of<SongRepository>(
+                  context,
+                  listen: false,
+                );
+                await repo.deleteCategory(category.id!);
+                if (dialogContext.mounted) {
+                  Navigator.of(dialogContext).pop();
+                }
               },
-               style: FilledButton.styleFrom(backgroundColor: Colors.red),
+              style: FilledButton.styleFrom(backgroundColor: Colors.red),
               child: Text(l10n.delete),
             ),
           ],

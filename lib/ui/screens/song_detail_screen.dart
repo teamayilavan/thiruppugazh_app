@@ -31,13 +31,16 @@ class _SongDetailScreenState extends State<SongDetailScreen> {
   LyricsLanguage _lyricsLanguage = LyricsLanguage.tamil;
 
   bool get _useEnglish =>
-      _lyricsLanguage == LyricsLanguage.english && widget.song.hasEnglishContent;
+      _lyricsLanguage == LyricsLanguage.english &&
+      widget.song.hasEnglishContent;
 
-  String get _displayTitle =>
-      _useEnglish ? (widget.song.englishTitle ?? widget.song.title) : widget.song.title;
+  String get _displayTitle => _useEnglish
+      ? (widget.song.englishTitle ?? widget.song.title)
+      : widget.song.title;
 
-  String get _displayPlace =>
-      _useEnglish ? (widget.song.englishVenue ?? widget.song.place) : widget.song.place;
+  String get _displayPlace => _useEnglish
+      ? (widget.song.englishVenue ?? widget.song.place)
+      : widget.song.place;
 
   String get _displayTune =>
       _useEnglish ? widget.song.englishTune : widget.song.tune;
@@ -64,7 +67,9 @@ class _SongDetailScreenState extends State<SongDetailScreen> {
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
-    _lyricsLanguage = Provider.of<LyricsLanguageProvider>(context).lyricsLanguage;
+    _lyricsLanguage = Provider.of<LyricsLanguageProvider>(
+      context,
+    ).lyricsLanguage;
   }
 
   Future<void> _loadCategoryInfo(SongRepository repo) async {
@@ -116,20 +121,19 @@ class _SongDetailScreenState extends State<SongDetailScreen> {
         _isFavoriteLoading = false;
       });
       messenger.showSnackBar(
-        SnackBar(
-          content: Text('Error updating favorite: $e'),
-        ),
+        SnackBar(content: Text('Error updating favorite: $e')),
       );
     }
-    }
-
+  }
 
   Future<void> _toggleHighlights(List<int> indices) async {
     final repo = Provider.of<SongRepository>(context, listen: false);
-    
+
     // Check if all selected verses are already highlighted
-    final allHighlighted = indices.every((i) => _highlights.any((h) => h.verseIndex == i));
-    
+    final allHighlighted = indices.every(
+      (i) => _highlights.any((h) => h.verseIndex == i),
+    );
+
     if (allHighlighted) {
       // Remove highlights
       for (final index in indices) {
@@ -171,64 +175,67 @@ class _SongDetailScreenState extends State<SongDetailScreen> {
     final tuneLength = _displayTuneList.length;
 
     for (int i = 0; i < _displayLyricsList.length; i++) {
-        final paragraph = _displayLyricsList[i];
-        if (paragraph.trim().isEmpty) continue;
+      final paragraph = _displayLyricsList[i];
+      if (paragraph.trim().isEmpty) continue;
 
-        // Determine style
-        final isHighlighted = _highlights.any((h) => h.verseIndex == i);
-        // Using a light yellow background for highlighted text
-        final bgColor = isHighlighted ? Colors.yellow.withValues(alpha: 0.3) : null;
-        
-        final style = Theme.of(context).textTheme.bodyLarge?.copyWith(
-            height: 1.5,
-            backgroundColor: bgColor,
-            color: Theme.of(context).colorScheme.onSurface,
-        );
+      // Determine style
+      final isHighlighted = _highlights.any((h) => h.verseIndex == i);
+      // Using a light yellow background for highlighted text
+      final bgColor = isHighlighted
+          ? Colors.yellow.withValues(alpha: 0.3)
+          : null;
 
-        final span = TextSpan(text: paragraph, style: style);
-        spans.add(span);
-        
-        final start = currentIndex;
-        final end = currentIndex + paragraph.length;
-        _verseRanges.add(VerseRange(start: start, end: end, index: i));
-        currentIndex += paragraph.length;
+      final style = Theme.of(context).textTheme.bodyLarge?.copyWith(
+        height: 1.5,
+        backgroundColor: bgColor,
+        color: Theme.of(context).colorScheme.onSurface,
+      );
 
-        // Add separator
-        if (tuneLength > 0 && (i + 1) % tuneLength == 0) {
-             const sep = '\n\n';
-             spans.add(const TextSpan(text: sep));
-             currentIndex += sep.length;
-        } else {
-             const sep = '\n';
-             spans.add(const TextSpan(text: sep));
-             currentIndex += sep.length;
-        }
+      final span = TextSpan(text: paragraph, style: style);
+      spans.add(span);
+
+      final start = currentIndex;
+      final end = currentIndex + paragraph.length;
+      _verseRanges.add(VerseRange(start: start, end: end, index: i));
+      currentIndex += paragraph.length;
+
+      // Add separator
+      if (tuneLength > 0 && (i + 1) % tuneLength == 0) {
+        const sep = '\n\n';
+        spans.add(const TextSpan(text: sep));
+        currentIndex += sep.length;
+      } else {
+        const sep = '\n';
+        spans.add(const TextSpan(text: sep));
+        currentIndex += sep.length;
+      }
     }
     return spans;
   }
 
   void _showNoteDialog() {
-    final TextEditingController noteController = 
-        TextEditingController(text: _note?.content ?? '');
-        
+    final TextEditingController noteController = TextEditingController(
+      text: _note?.content ?? '',
+    );
+
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
-          title: Text(AppLocalizations.of(context)!.songNote),
-          content: SizedBox(
-            height: MediaQuery.of(context).size.height * 0.7,
-            width: double.maxFinite,
-            child: TextField(
-              controller: noteController,
-              maxLines: null,
-              expands: true,
-              textAlignVertical: TextAlignVertical.top,
-              decoration: InputDecoration(
-                hintText: AppLocalizations.of(context)!.enterThoughts,
-                border: const OutlineInputBorder(),
-              ),
+        title: Text(AppLocalizations.of(context)!.songNote),
+        content: SizedBox(
+          height: MediaQuery.of(context).size.height * 0.7,
+          width: double.maxFinite,
+          child: TextField(
+            controller: noteController,
+            maxLines: null,
+            expands: true,
+            textAlignVertical: TextAlignVertical.top,
+            decoration: InputDecoration(
+              hintText: AppLocalizations.of(context)!.enterThoughts,
+              border: const OutlineInputBorder(),
             ),
           ),
+        ),
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(context),
@@ -238,7 +245,7 @@ class _SongDetailScreenState extends State<SongDetailScreen> {
             onPressed: () async {
               final content = noteController.text.trim();
               final repo = Provider.of<SongRepository>(context, listen: false);
-              
+
               if (content.isEmpty) {
                 if (_note != null) {
                   await repo.deleteNote(widget.song.id);
@@ -252,7 +259,7 @@ class _SongDetailScreenState extends State<SongDetailScreen> {
                 );
                 await repo.saveNote(note);
               }
-              
+
               // Reload note
               final updatedNote = await repo.getNoteForSong(widget.song.id);
               if (context.mounted) {
@@ -269,11 +276,10 @@ class _SongDetailScreenState extends State<SongDetailScreen> {
     );
   }
 
-
-
   void _shareSongText() {
     final l10n = AppLocalizations.of(context)!;
-    final textToShare = '''${l10n.title}:
+    final textToShare =
+        '''${l10n.title}:
 $_displayTitle
 
 ${l10n.temple}:
@@ -293,14 +299,15 @@ ${_displayLyricsList.join('\n')}''';
   void _shareSongLink() {
     final song = widget.song;
     final l10n = AppLocalizations.of(context)!;
-    
+
     // Custom scheme URI that MainWrapper detects
     // Updated to use https domain for App Links / Universal Links
     final deepLink = 'https://${AppConstants.deepLinkDomain}/song/${song.id}';
     // Fallback Play Store URL (using standard ID format, replace if actual ID differs)
-    const playStoreUrl = 'https://play.google.com/store/apps/details?id=org.ayilavan.thiruppugazh';
+    const playStoreUrl =
+        'https://play.google.com/store/apps/details?id=org.ayilavan.thiruppugazh';
 
-    final textToShare = 
+    final textToShare =
         '${l10n.checkOutSong(song.title)}\n\n'
         '${l10n.tapToOpenInApp}\n$deepLink\n\n'
         '${l10n.getTheAppHere}\n$playStoreUrl';
@@ -319,9 +326,7 @@ ${_displayLyricsList.join('\n')}''';
     );
 
     if (!_isValidUrl(url, ['youtube.com', 'www.youtube.com'])) {
-      messenger.showSnackBar(
-        const SnackBar(content: Text('Invalid URL')),
-      );
+      messenger.showSnackBar(const SnackBar(content: Text('Invalid URL')));
       return;
     }
 
@@ -346,9 +351,7 @@ ${_displayLyricsList.join('\n')}''';
     );
 
     if (!_isValidUrl(url, ['google.com', 'www.google.com'])) {
-      messenger.showSnackBar(
-        const SnackBar(content: Text('Invalid URL')),
-      );
+      messenger.showSnackBar(const SnackBar(content: Text('Invalid URL')));
       return;
     }
 
@@ -368,14 +371,10 @@ ${_displayLyricsList.join('\n')}''';
     final messenger = ScaffoldMessenger.of(context);
 
     final kaumaramId = widget.song.kaumaramId.padLeft(4, '0');
-    final url = Uri.parse(
-      'https://kaumaram.com/thiru/nnt${kaumaramId}_u.html',
-    );
+    final url = Uri.parse('https://kaumaram.com/thiru/nnt${kaumaramId}_u.html');
 
     if (!_isValidUrl(url, ['kaumaram.com', 'www.kaumaram.com'])) {
-      messenger.showSnackBar(
-        const SnackBar(content: Text('Invalid URL')),
-      );
+      messenger.showSnackBar(const SnackBar(content: Text('Invalid URL')));
       return;
     }
 
@@ -394,22 +393,27 @@ ${_displayLyricsList.join('\n')}''';
     if (url.scheme != 'https') {
       return false;
     }
-    
+
     if (!allowedDomains.contains(url.host)) {
       return false;
     }
-    
+
     return true;
   }
 
   /// Shows a confirmation dialog before launching external URLs.
-  Future<bool?> _showUrlConfirmationDialog(BuildContext context, String domain) {
+  Future<bool?> _showUrlConfirmationDialog(
+    BuildContext context,
+    String domain,
+  ) {
     return showDialog<bool>(
       context: context,
       builder: (dialogContext) {
         return AlertDialog(
           title: Text(AppLocalizations.of(context)!.openExternalLink),
-          content: Text(AppLocalizations.of(context)!.openExternalLinkConfirmation(domain)),
+          content: Text(
+            AppLocalizations.of(context)!.openExternalLinkConfirmation(domain),
+          ),
           actions: [
             TextButton(
               onPressed: () => Navigator.of(dialogContext).pop(false),
@@ -443,7 +447,9 @@ ${_displayLyricsList.join('\n')}''';
                 const SizedBox(height: 32),
                 Text(
                   _displayTitle,
-                  style: Theme.of(context).textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.bold),
+                  style: Theme.of(context).textTheme.headlineSmall?.copyWith(
+                    fontWeight: FontWeight.bold,
+                  ),
                   textAlign: TextAlign.center,
                 ),
                 if (_lyricsLanguage == LyricsLanguage.english &&
@@ -455,8 +461,9 @@ ${_displayLyricsList.join('\n')}''';
                         AppLocalizations.of(context)!.englishLyricsUnavailable,
                         style: Theme.of(context).textTheme.bodySmall,
                       ),
-                      backgroundColor:
-                          Theme.of(context).colorScheme.surfaceContainerHighest,
+                      backgroundColor: Theme.of(
+                        context,
+                      ).colorScheme.surfaceContainerHighest,
                     ),
                   ),
                 const SizedBox(height: 32),
@@ -465,14 +472,17 @@ ${_displayLyricsList.join('\n')}''';
               ],
             ),
           ),
-          
+
           SliverToBoxAdapter(
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(l10n.lyrics, style: Theme.of(context).textTheme.bodyLarge),
+                  Text(
+                    l10n.lyrics,
+                    style: Theme.of(context).textTheme.bodyLarge,
+                  ),
                   const SizedBox(height: 8),
                   const Divider(height: 16),
                   const SizedBox(height: 16),
@@ -480,34 +490,37 @@ ${_displayLyricsList.join('\n')}''';
               ),
             ),
           ),
-          
+
           SliverToBoxAdapter(
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16.0),
               child: SelectableText.rich(
-                TextSpan(
-                  children: _buildLyricsTextSpans(context),
+                TextSpan(children: _buildLyricsTextSpans(context)),
+                style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                  height: 1.5,
+                  color: Colors.black,
                 ),
-                style: Theme.of(context).textTheme.bodyLarge?.copyWith(height: 1.5, color: Colors.black),
                 contextMenuBuilder: (context, editableTextState) {
                   return AdaptiveTextSelectionToolbar.buttonItems(
                     anchors: editableTextState.contextMenuAnchors,
                     buttonItems: [
-                      ...editableTextState.contextMenuButtonItems
-                          .where((item) => item.type == ContextMenuButtonType.copy),
+                      ...editableTextState.contextMenuButtonItems.where(
+                        (item) => item.type == ContextMenuButtonType.copy,
+                      ),
                       ContextMenuButtonItem(
                         onPressed: () {
-                          final selection = editableTextState.textEditingValue.selection;
+                          final selection =
+                              editableTextState.textEditingValue.selection;
                           if (!selection.isValid) {
-                             editableTextState.hideToolbar();
-                             return;
+                            editableTextState.hideToolbar();
+                            return;
                           }
-                          
+
                           // Find affected verses
                           final start = selection.start;
                           final end = selection.end;
                           final affectedIndices = <int>[];
-                          
+
                           for (final range in _verseRanges) {
                             // Check for intersection
                             if (range.start < end && range.end > start) {
@@ -528,11 +541,11 @@ ${_displayLyricsList.join('\n')}''';
               ),
             ),
           ),
-          
+
           SliverToBoxAdapter(
             child: Padding(
               padding: const EdgeInsets.symmetric(vertical: 32.0),
-               child: _buildMeaningsCard(
+              child: _buildMeaningsCard(
                 l10n.meaning,
                 _displayWords,
                 _displayMeanings,
@@ -548,7 +561,9 @@ ${_displayLyricsList.join('\n')}''';
                 children: [
                   FilledButton.tonalIcon(
                     style: buttonStyle,
-                    icon: Icon(_note != null ? Icons.note : Icons.note_add_outlined),
+                    icon: Icon(
+                      _note != null ? Icons.note : Icons.note_add_outlined,
+                    ),
                     label: Text(l10n.songNote),
                     onPressed: _showNoteDialog,
                   ),
@@ -621,7 +636,11 @@ ${_displayLyricsList.join('\n')}''';
                         valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
                       ),
                     )
-                  : Icon((_isFavorite || _categoryIds.contains(1)) ? Icons.favorite : Icons.favorite_border),
+                  : Icon(
+                      (_isFavorite || _categoryIds.contains(1))
+                          ? Icons.favorite
+                          : Icons.favorite_border,
+                    ),
             ),
           ),
           const SizedBox(height: 16),
@@ -665,7 +684,9 @@ ${_displayLyricsList.join('\n')}''';
           const SizedBox(height: 8),
           Text(
             _displayPlace,
-            style: Theme.of(context).textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.w600),
+            style: Theme.of(
+              context,
+            ).textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.w600),
           ),
           const SizedBox(height: 24),
           Text(l10n.tune, style: Theme.of(context).textTheme.bodyLarge),
@@ -695,7 +716,12 @@ ${_displayLyricsList.join('\n')}''';
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(title, style: Theme.of(context).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold)),
+          Text(
+            title,
+            style: Theme.of(
+              context,
+            ).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold),
+          ),
           const SizedBox(height: 8),
           const Divider(height: 16),
           const SizedBox(height: 16),
@@ -720,7 +746,9 @@ ${_displayLyricsList.join('\n')}''';
                     ),
                   SelectableText(
                     meaning,
-                    style: Theme.of(context).textTheme.bodyLarge?.copyWith(height: 1.5),
+                    style: Theme.of(
+                      context,
+                    ).textTheme.bodyLarge?.copyWith(height: 1.5),
                   ),
                 ],
               ),

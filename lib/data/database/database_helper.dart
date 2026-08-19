@@ -38,17 +38,22 @@ class DatabaseHelper {
       AppLogger.info("Creating new copy from asset");
       try {
         await Directory(dirname(path)).create(recursive: true);
-        
+
         // Copy from asset
         ByteData data = await rootBundle.load('assets/thiruppugazh.db');
-        List<int> bytes =
-            data.buffer.asUint8List(data.offsetInBytes, data.lengthInBytes);
-            
+        List<int> bytes = data.buffer.asUint8List(
+          data.offsetInBytes,
+          data.lengthInBytes,
+        );
+
         await File(path).writeAsBytes(bytes, flush: true);
         AppLogger.info("Database copied from assets");
-
       } catch (e, stackTrace) {
-        AppLogger.error("Fatal: failed to copy bundled database", error: e, stackTrace: stackTrace);
+        AppLogger.error(
+          "Fatal: failed to copy bundled database",
+          error: e,
+          stackTrace: stackTrace,
+        );
         rethrow;
       }
     } else {
@@ -59,8 +64,8 @@ class DatabaseHelper {
       path,
       version: _dbVersion,
       onConfigure: (db) async {
-         // Enable foreign keys
-         await db.execute('PRAGMA foreign_keys = ON');
+        // Enable foreign keys
+        await db.execute('PRAGMA foreign_keys = ON');
       },
       onCreate: (db, version) async {
         // Since we copied the asset, 'songs' table should exist.
@@ -77,10 +82,10 @@ class DatabaseHelper {
         }
       },
       onOpen: (db) async {
-         // Ensure schema is up to date even on open if needed
-         // (Optional, but safe for dev environments where asset might be replaced)
-         // For now, we rely on onCreate/onUpgrade
-      }
+        // Ensure schema is up to date even on open if needed
+        // (Optional, but safe for dev environments where asset might be replaced)
+        // For now, we rely on onCreate/onUpgrade
+      },
     );
   }
 
@@ -177,7 +182,9 @@ class DatabaseHelper {
     // We only want to populate if it's empty to avoid re-calculating on every open/upgrade unnecessarily,
     // unless we want to ensure sync.
     // Let's check count first.
-    final count = Sqflite.firstIntValue(await db.rawQuery('SELECT COUNT(*) FROM temples'));
+    final count = Sqflite.firstIntValue(
+      await db.rawQuery('SELECT COUNT(*) FROM temples'),
+    );
 
     if (count == 0) {
       AppLogger.info('Populating temples table');
@@ -192,7 +199,7 @@ class DatabaseHelper {
       for (final place in places) {
         batch.insert('temples', {
           'name': place['place'],
-          'song_count': place['count']
+          'song_count': place['count'],
         }, conflictAlgorithm: ConflictAlgorithm.replace);
       }
       await batch.commit(noResult: true);
@@ -204,7 +211,9 @@ class DatabaseHelper {
     } catch (_) {
       // Column doesn't exist, add it
       AppLogger.info('Adding is_favorite column to songs');
-       await db.execute('ALTER TABLE songs ADD COLUMN is_favorite INTEGER DEFAULT 0');
+      await db.execute(
+        'ALTER TABLE songs ADD COLUMN is_favorite INTEGER DEFAULT 0',
+      );
     }
   }
 
@@ -256,7 +265,9 @@ class DatabaseHelper {
 
     // Step 3: Populate songs English columns from bundled JSON asset
     try {
-      final jsonString = await rootBundle.loadString(AppConstants.englishDataAsset);
+      final jsonString = await rootBundle.loadString(
+        AppConstants.englishDataAsset,
+      );
       final Map<String, dynamic> patch = jsonDecode(jsonString);
 
       final batch = db.batch();
@@ -267,22 +278,28 @@ class DatabaseHelper {
         batch.update(
           'songs',
           {
-            'english_title':         fields['english_title'],
-            'english_venue':         fields['english_venue'],
-            'english_tune_list':     fields['english_tune_list'],
-            'english_lyrics_list':   fields['english_lyrics_list'],
-            'english_words':         fields['english_words'],
+            'english_title': fields['english_title'],
+            'english_venue': fields['english_venue'],
+            'english_tune_list': fields['english_tune_list'],
+            'english_lyrics_list': fields['english_lyrics_list'],
+            'english_words': fields['english_words'],
             'english_meanings_list': fields['english_meanings_list'],
-            'english_pathavurai':    fields['english_pathavurai'],
+            'english_pathavurai': fields['english_pathavurai'],
           },
           where: 'id = ?',
           whereArgs: [id],
         );
       }
       await batch.commit(noResult: true);
-      AppLogger.info('v3 migration: populated English data for ${patch.length} songs');
+      AppLogger.info(
+        'v3 migration: populated English data for ${patch.length} songs',
+      );
     } catch (e, st) {
-      AppLogger.error('v3 migration: failed to populate English data', error: e, stackTrace: st);
+      AppLogger.error(
+        'v3 migration: failed to populate English data',
+        error: e,
+        stackTrace: st,
+      );
       // Non-fatal: English columns remain NULL, app falls back to Tamil
     }
 
@@ -301,21 +318,21 @@ class DatabaseHelper {
   }
 
   // --- Highlights Methods ---
-  
+
   Future<int> addHighlight(Highlight highlight) async {
     final db = await database;
     return await db.insert('highlights', highlight.toMap());
   }
-  
+
   Future<void> removeHighlight(int songId, int verseIndex) async {
     final db = await database;
     await db.delete(
-      'highlights', 
+      'highlights',
       where: 'song_id = ? AND verse_index = ?',
-      whereArgs: [songId, verseIndex]
+      whereArgs: [songId, verseIndex],
     );
   }
-  
+
   Future<List<Highlight>> getHighlightsForSong(int songId) async {
     final db = await database;
     final maps = await db.query(
@@ -325,7 +342,7 @@ class DatabaseHelper {
     );
     return List.generate(maps.length, (i) => Highlight.fromMap(maps[i]));
   }
-  
+
   Future<List<Highlight>> getAllHighlights() async {
     final db = await database;
     final maps = await db.query('highlights', orderBy: 'created_at DESC');
@@ -349,23 +366,27 @@ class DatabaseHelper {
 
   Future<int> saveNote(Note note) async {
     final db = await database;
-    final existing = await db.query('notes', where: 'song_id = ?', whereArgs: [note.songId]);
-    
+    final existing = await db.query(
+      'notes',
+      where: 'song_id = ?',
+      whereArgs: [note.songId],
+    );
+
     if (existing.isNotEmpty) {
       return await db.update(
-        'notes', 
+        'notes',
         {
           'content': note.content,
           'updated_at': DateTime.now().toIso8601String(),
         },
         where: 'song_id = ?',
-        whereArgs: [note.songId]
+        whereArgs: [note.songId],
       );
     } else {
       return await db.insert('notes', note.toMap());
     }
   }
-  
+
   Future<Note?> getNoteForSong(int songId) async {
     final db = await database;
     final maps = await db.query(
@@ -376,7 +397,7 @@ class DatabaseHelper {
     if (maps.isEmpty) return null;
     return Note.fromMap(maps.first);
   }
-  
+
   Future<List<Note>> getAllNotes() async {
     final db = await database;
     final maps = await db.query('notes', orderBy: 'updated_at DESC');
@@ -397,8 +418,8 @@ class DatabaseHelper {
   }
 
   Future<void> deleteNote(int songId) async {
-     final db = await database;
-     await db.delete('notes', where: 'song_id = ?', whereArgs: [songId]);
+    final db = await database;
+    await db.delete('notes', where: 'song_id = ?', whereArgs: [songId]);
   }
 
   // --- Query Methods ---
@@ -445,10 +466,16 @@ class DatabaseHelper {
         limit: pageSize,
         offset: offset,
       );
-      AppLogger.info('Retrieved ${maps.length} songs (page $page, pageSize $pageSize)');
+      AppLogger.info(
+        'Retrieved ${maps.length} songs (page $page, pageSize $pageSize)',
+      );
       return List.generate(maps.length, (i) => Song.fromMap(maps[i]));
     } catch (e, stackTrace) {
-      AppLogger.error('Error fetching paginated songs: $e', error: e, stackTrace: stackTrace);
+      AppLogger.error(
+        'Error fetching paginated songs: $e',
+        error: e,
+        stackTrace: stackTrace,
+      );
       rethrow;
     }
   }
@@ -461,7 +488,11 @@ class DatabaseHelper {
       AppLogger.info('Total songs in database: $count');
       return count;
     } catch (e, stackTrace) {
-      AppLogger.error('Error getting songs count: $e', error: e, stackTrace: stackTrace);
+      AppLogger.error(
+        'Error getting songs count: $e',
+        error: e,
+        stackTrace: stackTrace,
+      );
       rethrow;
     }
   }
@@ -537,14 +568,14 @@ class DatabaseHelper {
     }
 
     // If no specific filter is selected, fallback... (handled by returning empty above if conditions empty)
-    
+
     if (conditions.isEmpty) {
-      return []; 
+      return [];
     }
 
     final whereClause = conditions.join(' OR ');
 
-    // AppLogger.info('Searching with Clause: $whereClause'); 
+    // AppLogger.info('Searching with Clause: $whereClause');
     // AppLogger.info('Args: $args');
 
     final List<Map<String, dynamic>> results = await db.rawQuery('''
@@ -562,7 +593,7 @@ class DatabaseHelper {
   /// - ன (U+0BA9) <-> ந (U+0BA8)
   List<String> _getTamilVariations(String query) {
     final Set<String> variations = {query};
-    
+
     // Handle ன (Nna - Alveolar) vs ந (Na - Dental) mismatch
     // These are often confused in spelling (e.g., Palani: பழனி vs பழநி)
     if (query.contains('ன')) {
@@ -571,9 +602,9 @@ class DatabaseHelper {
     if (query.contains('ந')) {
       variations.add(query.replaceAll('ந', 'ன'));
     }
-    
+
     // We could add more here (ra/Ra, la/La/zha) if needed later.
-    
+
     return variations.toList();
   }
 
@@ -672,7 +703,7 @@ class DatabaseHelper {
 
   Future<List<Song>> getSongsByCategoryId(int categoryId) async {
     final db = await database;
-    
+
     if (categoryId == 1) {
       final List<Map<String, dynamic>> maps = await db.query(
         'songs',
@@ -682,7 +713,7 @@ class DatabaseHelper {
       );
       return List.generate(maps.length, (i) => Song.fromMap(maps[i]));
     }
-    
+
     final List<Map<String, dynamic>> maps = await db.rawQuery(
       '''
       SELECT s.* FROM songs s

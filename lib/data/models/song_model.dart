@@ -32,7 +32,7 @@ class Song {
 
   // Computed — not stored in DB
   String get englishLyrics => englishLyricsList.join('\n');
-  String get englishTune   => englishTuneList.join('\n');
+  String get englishTune => englishTuneList.join('\n');
 
   bool get hasEnglishContent => englishLyricsList.isNotEmpty;
 
@@ -82,13 +82,19 @@ class Song {
       // categoryIds are populated separately by the repository.
       categoryIds: const [],
 
-      englishTitle:        map['english_title'] as String?,
-      englishVenue:        map['english_venue'] as String?,
-      englishTuneList:     List<String>.from(jsonDecode(map['english_tune_list']     ?? '[]')),
-      englishLyricsList:   List<String>.from(jsonDecode(map['english_lyrics_list']   ?? '[]')),
-      englishWords:        List<String>.from(jsonDecode(map['english_words']         ?? '[]')),
-      englishMeaningsList: List<String>.from(jsonDecode(map['english_meanings_list'] ?? '[]')),
-      englishPathavurai:   map['english_pathavurai'] ?? '',
+      englishTitle: map['english_title'] as String?,
+      englishVenue: map['english_venue'] as String?,
+      englishTuneList: List<String>.from(
+        jsonDecode(map['english_tune_list'] ?? '[]'),
+      ),
+      englishLyricsList: List<String>.from(
+        jsonDecode(map['english_lyrics_list'] ?? '[]'),
+      ),
+      englishWords: List<String>.from(jsonDecode(map['english_words'] ?? '[]')),
+      englishMeaningsList: List<String>.from(
+        jsonDecode(map['english_meanings_list'] ?? '[]'),
+      ),
+      englishPathavurai: map['english_pathavurai'] ?? '',
     );
   }
 }
