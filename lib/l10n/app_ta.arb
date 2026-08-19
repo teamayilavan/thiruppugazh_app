@@ -150,5 +150,6 @@
   "delete": "நீக்கு",
   "highlight": "வண்ணமிடு",
   "highlights": "சிறப்பம்சங்கள்",
-  "privacyPolicy": "தனியுரிமைக் கொள்கை"
+  "privacyPolicy": "தனியுரிமைக் கொள்கை",
+  "viewSourceCode": "GitHub-இல் மூலக் குறியீட்டைக் காண்க"
 }

@@ -449,4 +449,7 @@ class AppLocalizationsTa extends AppLocalizations {
 
   @override
   String get privacyPolicy => 'தனியுரிமைக் கொள்கை';
+
+  @override
+  String get viewSourceCode => 'GitHub-இல் மூலக் குறியீட்டைக் காண்க';
 }

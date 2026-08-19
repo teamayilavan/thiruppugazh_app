@@ -159,5 +159,6 @@
   "delete": "Delete",
   "highlight": "Highlight",
   "highlights": "Highlights",
-  "privacyPolicy": "Privacy Policy"
+  "privacyPolicy": "Privacy Policy",
+  "viewSourceCode": "View Source Code on GitHub"
 }

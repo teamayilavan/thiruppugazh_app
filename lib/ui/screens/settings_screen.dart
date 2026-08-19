@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:url_launcher/url_launcher.dart';
 import '../../providers/theme_provider.dart';
 import '../../providers/language_provider.dart';
 import '../../providers/lyrics_language_provider.dart';
@@ -9,6 +10,10 @@ import 'privacy_policy_screen.dart';
 
 class SettingsScreen extends StatelessWidget {
   const SettingsScreen({super.key});
+
+  static final Uri _githubRepoUrl = Uri.parse(
+    'https://github.com/teamayilavan/thiruppugazh_app',
+  );
 
   @override
   Widget build(BuildContext context) {
@@ -151,9 +156,35 @@ class SettingsScreen extends StatelessWidget {
               ),
             ),
           ),
+          Padding(
+            padding: const EdgeInsets.symmetric(
+              horizontal: 16.0,
+              vertical: 0.0,
+            ),
+            child: SizedBox(
+              width: double.infinity,
+              child: OutlinedButton.icon(
+                onPressed: () => _launchGitHubRepo(context),
+                icon: const Icon(Icons.code),
+                label: Text(l10n.viewSourceCode),
+              ),
+            ),
+          ),
         ],
       ),
     );
+  }
+
+  Future<void> _launchGitHubRepo(BuildContext context) async {
+    final messenger = ScaffoldMessenger.of(context);
+    if (!await launchUrl(
+      _githubRepoUrl,
+      mode: LaunchMode.externalApplication,
+    )) {
+      messenger.showSnackBar(
+        const SnackBar(content: Text('Could not open GitHub repository')),
+      );
+    }
   }
 
   void _showLanguageDialog(BuildContext context, LanguageProvider provider) {
