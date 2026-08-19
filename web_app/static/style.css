@@ -90,6 +90,7 @@ h1 {
 .song-meta .value {
   display: block;
   font-weight: 400;
+  white-space: pre-line;
 }
 
 h2 {
