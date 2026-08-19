@@ -115,6 +115,8 @@
   "removeFromFavorites": "Remove from favorites",
   "addToFavorites": "Add to favorites",
   "tapToToggleFavorite": "Tap to toggle favorite status",
+  "randomSong": "Random song",
+  "tapToViewRandomSong": "Tap to view a random song",
   "loading": "Loading",
   "tapToAddCategories": "Tap to add song to categories",
   "renameCategory": "Rename Category",

@@ -328,6 +328,12 @@ class AppLocalizationsTa extends AppLocalizations {
   String get tapToToggleFavorite => 'பிடித்தவை நிலையை மாற்ற தட்டவும்';
 
   @override
+  String get randomSong => 'சீரற்ற பாடல்';
+
+  @override
+  String get tapToViewRandomSong => 'ஒரு சீரற்ற பாடலைக் காண தட்டவும்';
+
+  @override
   String get loading => 'ஏற்றப்படுகிறது';
 
   @override

@@ -423,6 +423,15 @@ class DatabaseHelper {
     return Song.fromMap(maps.first);
   }
 
+  Future<Song?> getRandomSong() async {
+    final db = await database;
+    final List<Map<String, dynamic>> maps = await db.rawQuery(
+      'SELECT * FROM songs ORDER BY RANDOM() LIMIT 1',
+    );
+    if (maps.isEmpty) return null;
+    return Song.fromMap(maps.first);
+  }
+
   Future<List<Song>> getSongsPaginated({
     int page = 0,
     int pageSize = 20,

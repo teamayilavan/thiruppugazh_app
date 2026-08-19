@@ -75,6 +75,11 @@ class SongRepository extends ChangeNotifier {
     return await dbHelper.getSongById(id);
   }
 
+  /// Fetches a single random song.
+  Future<Song?> getRandomSong() async {
+    return await dbHelper.getRandomSong();
+  }
+
   /// Fetches songs with pagination.
   Future<List<Song>> getSongsPaginated({
     int page = 0,

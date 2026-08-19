@@ -328,6 +328,12 @@ class AppLocalizationsEn extends AppLocalizations {
   String get tapToToggleFavorite => 'Tap to toggle favorite status';
 
   @override
+  String get randomSong => 'Random song';
+
+  @override
+  String get tapToViewRandomSong => 'Tap to view a random song';
+
+  @override
   String get loading => 'Loading';
 
   @override

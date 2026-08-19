@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import '../../data/repositories/song_repository.dart';
 import '../../providers/song_list_provider.dart';
 import '../../providers/lyrics_language_provider.dart';
 import 'song_detail_screen.dart';
@@ -15,6 +16,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   final ScrollController _scrollController = ScrollController();
+  bool _isRandomLoading = false;
 
   @override
   void initState() {
@@ -34,7 +36,45 @@ class _HomeScreenState extends State<HomeScreen> {
     super.dispose();
   }
 
+  Future<void> _openRandomSong() async {
+    if (_isRandomLoading) return;
 
+    final repo = Provider.of<SongRepository>(context, listen: false);
+    final messenger = ScaffoldMessenger.of(context);
+    final l10n = AppLocalizations.of(context)!;
+
+    setState(() {
+      _isRandomLoading = true;
+    });
+
+    try {
+      final randomSong = await repo.getRandomSong();
+
+      if (!mounted) return;
+      setState(() {
+        _isRandomLoading = false;
+      });
+
+      if (randomSong == null) {
+        messenger.showSnackBar(SnackBar(content: Text(l10n.noSongsFound)));
+        return;
+      }
+
+      Navigator.of(context).push(
+        MaterialPageRoute(
+          builder: (context) => SongDetailScreen(song: randomSong),
+        ),
+      );
+    } catch (e) {
+      if (!mounted) return;
+      setState(() {
+        _isRandomLoading = false;
+      });
+      messenger.showSnackBar(
+        SnackBar(content: Text('Error loading random song: $e')),
+      );
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -185,15 +225,38 @@ class _HomeScreenState extends State<HomeScreen> {
           );
         },
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          Navigator.of(context).push(
-            MaterialPageRoute(
-               builder: (context) => const SearchScreen(),
+      floatingActionButton: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Semantics(
+            button: true,
+            label: l10n.randomSong,
+            hint: _isRandomLoading ? l10n.loading : l10n.tapToViewRandomSong,
+            child: FloatingActionButton.small(
+              heroTag: 'fab_random_song',
+              onPressed: _isRandomLoading ? null : _openRandomSong,
+              child: _isRandomLoading
+                  ? const SizedBox(
+                      width: 18,
+                      height: 18,
+                      child: CircularProgressIndicator(strokeWidth: 2),
+                    )
+                  : const Icon(Icons.shuffle),
             ),
-          );
-        },
-        child: const Icon(Icons.search),
+          ),
+          const SizedBox(height: 16),
+          FloatingActionButton(
+            heroTag: 'fab_search',
+            onPressed: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                   builder: (context) => const SearchScreen(),
+                ),
+              );
+            },
+            child: const Icon(Icons.search),
+          ),
+        ],
       ),
     );
   }

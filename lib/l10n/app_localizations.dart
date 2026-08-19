@@ -704,6 +704,18 @@ abstract class AppLocalizations {
   /// **'Tap to toggle favorite status'**
   String get tapToToggleFavorite;
 
+  /// No description provided for @randomSong.
+  ///
+  /// In en, this message translates to:
+  /// **'Random song'**
+  String get randomSong;
+
+  /// No description provided for @tapToViewRandomSong.
+  ///
+  /// In en, this message translates to:
+  /// **'Tap to view a random song'**
+  String get tapToViewRandomSong;
+
   /// No description provided for @loading.
   ///
   /// In en, this message translates to:
