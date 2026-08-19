@@ -5,7 +5,7 @@
   
   <br/>
   
-  [![Get it on Google Play](https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png)](https://play.google.com/store/apps/details?id=com.ayilavan.thiruppugazh)
+  [![Get it on Google Play](https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png)](https://play.google.com/store/apps/details?id=org.ayilavan.thiruppugazh)
 
   <br/>
 </div>
@@ -51,6 +51,8 @@ We welcome contributions! Whether you want to fix a bug, add a feature, or impro
 -   [**Setup Guide**](docs/setup.md): How to build and run the app locally.
 -   [**Architecture**](docs/architecture.md): Understanding the code structure and navigation.
 -   [**Database Schema**](docs/database.md): Details on the SQLite database and data models.
+-   [**Web App**](docs/web-app.md): The static fallback site for shared song links.
+-   [**Changelog**](CHANGELOG.md): Notable changes by version.
 
 ### Tech Stack
 -   **Framework**: Flutter & Dart

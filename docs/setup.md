@@ -52,6 +52,8 @@ This guide explains how to set up and run the Thiruppugazh application on your l
     -   `utils/`: Helper utilities.
 -   `assets/`: Images, fonts, and the pre-populated database (`thiruppugazh.db`).
 -   `test/`: Unit and widget tests.
+-   `scripts/build_db.py`: Rebuilds `assets/thiruppugazh.db` and `assets/english_data.json` from `songs/*.json`.
+-   `web_app/`: Static fallback website for shared song links — see [`docs/web-app.md`](web-app.md). Separate from the app build; requires only Python (stdlib, no `pip install`), not Flutter.
 
 ## Troubleshooting
 

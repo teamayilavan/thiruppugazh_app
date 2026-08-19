@@ -1,6 +1,6 @@
 # Fixing "App must target Android 16 (API level 36)" — Play Console Warning
 
-**Status:** Not yet fixed — this is a planning document only. No code has been changed.
+**Status:** ✅ Fixed and shipped — merged via PR #1 (`chore/target-sdk-36` → `main`, commit `3580d5e`), version `1.2.0+4`. Kept below as a historical record of the investigation; see the addendum at the bottom for what happened after.
 **Date written:** 2026-08-09
 **Deadline from Google:** Aug 31, 2026 (after this date you cannot publish ANY update — including bug fixes — until the app targets API 36). A one-time extension to Nov 1, 2026 can be requested from within Play Console if needed.
 
@@ -232,3 +232,16 @@ Once the local build confirms `targetSdk = 36` and the regression pass in step 1
 - [Android Gradle Plugin release notes / Gradle compatibility table](https://developer.android.com/build/releases/gradle-plugin)
 - Flutter SDK source inspected directly: `packages/flutter_tools/gradle/src/main/kotlin/FlutterExtension.kt` (confirms Flutter 3.32.8 defaults to compileSdk/targetSdk 35)
 - [flutter/flutter issue #174516](https://github.com/flutter/flutter/issues/174516) — notes on some Flutter versions not honoring manual SDK overrides, hence the verification step in Section 5
+
+---
+
+## Addendum (2026-08-19): AGP 9.3.0 upgrade
+
+A separate, later round addressed two Play Console *performance* recommendations (distinct from the compliance warning above): enabling optimized resource shrinking, and upgrading AGP past 9.0. That work:
+
+- Bumped AGP `8.13.0` → `9.3.0`, Gradle wrapper `8.13` → `9.7.0`, Kotlin `2.1.0` → `2.2.20`.
+- Added `android.r8.optimizedResourceShrinking=true` to `android/gradle.properties`.
+- Deliberately kept `android.builtInKotlin=false` / `android.newDsl=false` (Flutter's AGP-9 compatibility shim) rather than doing the full built-in-Kotlin migration, since several plugins (`dynamic_color`, `file_picker`, `share_plus`, `shared_preferences_android`) still apply their own Kotlin Gradle Plugin and haven't migrated yet — flipping those flags would have broken the build on plugins outside this repo's control.
+- Along the way, found and fixed two latent issues the AGP 9 upgrade exposed: `android/app/build.gradle.kts` referenced a `proguard-rules.pro` that never actually existed in the repo (AGP 8 silently tolerated the missing file; AGP 9 fails the build on it), and `ndkVersion` was pinned to `27.0.12077973` while every installed plugin requested `28.2.13676358` (AGP 8 didn't warn about the mismatch; AGP 9 does).
+
+Not written up as its own planning doc since it was a same-session, already-completed piece of work — see the commit history around `chore: upgrade to AGP 9.3.0 and enable optimized resource shrinking` for the full detail.

@@ -2,8 +2,7 @@
 
 The application uses SQLite via the `sqflite` package. The database file `thiruppugazh.db` is pre-populated and bundled as an asset, then copied to the device on first launch.
 
-**Current version:** 2  
-**Planned version:** 3 (bilingual content feature — see `docs/superpowers/specs/2026-05-28-bilingual-content-design.md`)
+**Current version:** 3 (bilingual content — English columns added to `songs` and `temples`)
 
 ---
 
@@ -32,7 +31,7 @@ Stores the main content of all Thiruppugazh songs.
 | `search_content` | TEXT | Denormalized search text |
 | `is_favorite` | INTEGER | 0 or 1 |
 
-**English content (added in v3):**
+**English content (v3):**
 
 | Column | Type | Notes |
 |---|---|---|
@@ -139,7 +138,13 @@ User notes attached to songs (one note per song).
 |---|---|
 | 1 | Initial schema |
 | 2 | Added indexes (`idx_songs_is_favorite`, `idx_song_categories_category_id`, `idx_highlights_song_id`, `idx_notes_song_id`) |
-| 3 (planned) | Added 7 English columns to `songs`; added `english_name` to `temples`; populated via `assets/english_data.json` migration asset |
+| 3 | Added 7 English columns to `songs`; added `english_name` to `temples`; populated via `assets/english_data.json` migration asset |
+
+---
+
+## Known Data Issues
+
+- **Song 1328** (`ஏறுமயிலேறி`, திருவருணை): the `tune`/`tune_list` columns contain what looks like the song's full lyrics and meaning text, while `lyrics_list`/`lyrics`/`pathavurai` are empty. This affects both the app's `SongDetailScreen` (renders the misplaced text under "சந்தம்") and the fallback web app (`web_app/`), since both read the same columns. Root cause is in the source data (`songs/*.json`, rebuilt via `scripts/build_db.py`), not a rendering bug — found while building the web app's static pages (2026-08-19), not yet fixed.
 
 ---
 
