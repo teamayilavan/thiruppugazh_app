@@ -1,0 +1,30 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  analyze-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      - name: Analyze
+        # --no-fatal-infos: don't fail the build on info-level lints (e.g.
+        # deprecation notices from a recent Flutter release) -- only on
+        # real warnings/errors. Remove this flag once the current info-level
+        # findings (see `flutter analyze` locally) are cleaned up.
+        run: flutter analyze --no-fatal-infos
+
+      - name: Run tests
+        run: flutter test

@@ -28,10 +28,10 @@ BASE_URL = "https://thiruppugazh.ayilavan.org"
 DEEP_LINK_SCHEME = "thiruppugazh"
 PLAY_STORE_URL = "https://play.google.com/store/apps/details?id=org.ayilavan.thiruppugazh"
 ANDROID_PACKAGE = "org.ayilavan.thiruppugazh"
-# SHA-256 fingerprint of the release signing certificate (D:\upload-keystore.jks,
-# alias ayilavan_key). Required for Android to auto-verify this domain as an
-# App Link. Re-extract with:
-#   keytool -list -v -keystore <path> -alias ayilavan_key | grep SHA256
+# SHA-256 fingerprint of the release signing certificate (alias ayilavan_key).
+# Required for Android to auto-verify this domain as an App Link. Re-extract
+# with:
+#   keytool -list -v -keystore <path-to-release-keystore> -alias ayilavan_key | grep SHA256
 RELEASE_CERT_SHA256 = (
     "D6:73:FA:D0:26:3C:63:3C:BE:27:EE:A2:E8:E5:BF:C0:"
     "10:D0:27:90:DF:2E:80:1B:3A:86:77:06:3B:07:AF:5F"
