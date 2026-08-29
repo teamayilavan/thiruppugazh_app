@@ -60,6 +60,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get lyrics => 'Lyrics';
 
   @override
+  String get wordSeparatedLyrics => 'Word-separated Lyrics';
+
+  @override
   String get meaning => 'Meaning';
 
   @override
@@ -70,6 +73,9 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get openKaumaramPage => 'Open Kaumaram Page';
+
+  @override
+  String get openMayuragiriPage => 'Open Mayuragiri Page';
 
   @override
   String get share => 'Share';
@@ -208,6 +214,12 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get kaumaramCoFounders => 'Kaumaram website founders';
+
+  @override
+  String get mayuragiriTeam => 'Mayuragiri.com Team';
+
+  @override
+  String get mayuragiriCredit => 'Thiru. Subramaniyan, Devakottai';
 
   @override
   String get appDevelopment => 'App Development';
@@ -450,6 +462,9 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get viewSourceCode => 'View Source Code on GitHub';
+
+  @override
+  String get visitMayuragiriWebsite => 'Visit Mayuragiri.com';
 
   @override
   String get increaseLyricsFontSize => 'Increase lyrics font size';
