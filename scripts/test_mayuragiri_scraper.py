@@ -121,3 +121,84 @@ def test_detects_gutenberg_layout():
 def test_detects_missing_layout():
     soup = BeautifulSoup(MISSING_FRAGMENT, "html.parser")
     assert determine_source_layout(soup) == "missing"
+
+
+from mayuragiri_scraper import extract_section
+
+LEGACY_FULL_SECTION = """
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+<h3 style="text-align: center;"><span style="color: #a10000;">பதம் பிரித்தது</span></h3>
+<p><span style="color: #0000d6;"><strong>தனதந்தன தந்தன தந்தன</strong></span></p>
+<p><span style="color: #67009b;"><strong>சருவும்படி வந்தனன்</strong></span><br /><span style="color: #67009b;"><strong>மதன் நின்றிட</strong></span></p>
+<p><strong>சயிலம் கொளும் மன்றல்</strong><br /><strong>பொழிலின் பயில்</strong></p>
+</div>
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+<h3 style="text-align: center;"><strong><span style="color: #a10000;">English</span></strong></h3>
+<p><span><strong>should not be included</strong></span></p>
+</div>
+"""
+
+GUTENBERG_FULL_SECTION = """
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+<div class="wp-block-group"><div class="wp-block-group__inner-container is-layout-flow wp-block-group-is-layout-flow">
+<p class="has-text-align-left has-medium-font-size wp-block-paragraph">
+<strong><mark class="has-inline-color has-vivid-red-color">பதம் பிரித்தது</mark></strong></p>
+<p class="has-text-color wp-block-paragraph" style="color:#00058c"><strong>meter line</strong></p>
+<p class="wp-block-paragraph"><strong>lyric one<br>lyric two</strong><br><strong>lyric three</strong></p>
+<p class="wp-block-paragraph">lyric four<br>lyric five</p>
+</div></div>
+</div>
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+<div class="wp-block-group"><div class="wp-block-group__inner-container is-layout-flow wp-block-group-is-layout-flow">
+<p class="has-vivid-red-color has-text-color has-medium-font-size wp-block-paragraph"><strong><strong><em>English</em></strong></strong></p>
+<p class="wp-block-paragraph">should not be included</p>
+</div></div>
+</div>
+"""
+
+
+def test_extract_section_drops_meter_line_legacy():
+    soup = BeautifulSoup(LEGACY_FULL_SECTION, "html.parser")
+    assert extract_section(soup, "பதம் பிரித்தது") == [
+        "சருவும்படி வந்தனன்",
+        "மதன் நின்றிட",
+        "சயிலம் கொளும் மன்றல்",
+        "பொழிலின் பயில்",
+    ]
+
+
+def test_extract_section_stops_at_next_column_legacy():
+    soup = BeautifulSoup(LEGACY_FULL_SECTION, "html.parser")
+    lines = extract_section(soup, "பதம் பிரித்தது")
+    assert "should not be included" not in lines
+
+
+def test_extract_section_drops_meter_line_gutenberg():
+    soup = BeautifulSoup(GUTENBERG_FULL_SECTION, "html.parser")
+    assert extract_section(soup, "பதம் பிரித்தது") == [
+        "lyric one",
+        "lyric two",
+        "lyric three",
+        "lyric four",
+        "lyric five",
+    ]
+
+
+def test_extract_section_stops_at_next_column_gutenberg():
+    soup = BeautifulSoup(GUTENBERG_FULL_SECTION, "html.parser")
+    lines = extract_section(soup, "பதம் பிரித்தது")
+    assert "should not be included" not in lines
+
+
+def test_extract_section_returns_none_when_heading_missing():
+    soup = BeautifulSoup(MISSING_FRAGMENT, "html.parser")
+    assert extract_section(soup, "பதம் பிரித்தது") is None
+
+
+def test_extract_section_returns_none_when_only_meter_line_present():
+    html = """
+    <div><h3><span>பதம் பிரித்தது</span></h3>
+    <p><strong>only the meter line</strong></p></div>
+    """
+    soup = BeautifulSoup(html, "html.parser")
+    assert extract_section(soup, "பதம் பிரித்தது") is None

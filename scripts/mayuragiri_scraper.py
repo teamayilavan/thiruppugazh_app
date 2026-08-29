@@ -63,3 +63,27 @@ def determine_source_layout(soup: BeautifulSoup) -> str:
     if heading is None:
         return "missing"
     return "legacy" if heading.name == "h3" else "gutenberg"
+
+
+def extract_section(soup: BeautifulSoup, heading_text: str) -> list[str] | None:
+    """Extracts all lyric lines under a heading, dropping the meter line.
+
+    The heading's subsequent <p> siblings (within its own immediate
+    parent) are exactly the section's content on both known page layouts:
+    the meter line first, then one or more stanza paragraphs. This also
+    naturally stops at the section boundary, since the next language's
+    heading and paragraphs live in a sibling container, not as further
+    siblings of this heading.
+    """
+    heading = find_heading_by_text(soup, heading_text)
+    if heading is None:
+        return None
+
+    paragraphs = heading.find_next_siblings("p")
+    if len(paragraphs) <= 1:
+        return None
+
+    lines: list[str] = []
+    for p in paragraphs[1:]:
+        lines.extend(split_paragraph_into_lines(p))
+    return lines if lines else None
