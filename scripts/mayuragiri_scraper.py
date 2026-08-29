@@ -33,3 +33,33 @@ def split_paragraph_into_lines(p_tag: Tag) -> list[str]:
     text = p_soup.get_text().replace("\xa0", " ")
     lines = [line.strip() for line in text.split("\n")]
     return [line for line in lines if line]
+
+
+_HEADING_CANDIDATE_TAGS = ["h2", "h3", "h4", "p", "mark", "span"]
+
+
+def find_heading_by_text(soup: BeautifulSoup, text: str) -> Tag | None:
+    """Finds the first tag whose exact stripped text matches `text`.
+
+    Deliberately not anchored to a fixed tag/class — the site uses an
+    <h3><span> heading on older pages and a <p><strong><mark> heading on
+    newer ones. Matching on exact text (not substring) also avoids the
+    site's nav breadcrumb, which contains this text as part of a longer
+    string.
+    """
+    target = text.strip()
+    for tag in soup.find_all(_HEADING_CANDIDATE_TAGS):
+        if tag.get_text(strip=True) == target:
+            return tag
+    return None
+
+
+def determine_source_layout(soup: BeautifulSoup) -> str:
+    """Classifies which page template rendered the பதம் பிரித்தது section.
+
+    QA/debugging field only — never shipped into the app database.
+    """
+    heading = find_heading_by_text(soup, "பதம் பிரித்தது")
+    if heading is None:
+        return "missing"
+    return "legacy" if heading.name == "h3" else "gutenberg"
