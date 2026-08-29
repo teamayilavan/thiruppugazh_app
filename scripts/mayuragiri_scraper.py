@@ -190,3 +190,98 @@ class RateLimitedFetcher:
             html_path.write_text(response.text, encoding="utf-8")
             return response.text, 200
         return None, response.status_code
+
+
+def run(songs_dir: Path, fetcher: RateLimitedFetcher, output_path: Path) -> dict:
+    """Scrapes every locally-known song and writes the combined JSON."""
+    songs = load_local_songs(songs_dir)
+    results: dict[str, dict] = {}
+
+    for kid in sorted(songs, key=int):
+        html, status = fetcher.fetch(kid)
+        if html is None:
+            results[kid] = {
+                "mayuragiri_url": f"https://mayuragiri.com/thiruppugal{kid}",
+                "lyrics_separated": None,
+                "lyrics_separated_line_count_match": None,
+                "english_lyrics_separated": None,
+                "english_lyrics_separated_line_count_match": None,
+                "source_layout": "not_found",
+                "http_status": status,
+            }
+            continue
+
+        record = scrape_song(
+            html, kid, songs[kid]["lyrics_list"], songs[kid]["english_lyrics_list"]
+        )
+        record["http_status"] = status
+        results[kid] = record
+
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    output_path.write_text(
+        json.dumps(results, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
+    return results
+
+
+def print_summary(results: dict) -> None:
+    total = len(results)
+    ta_found = sum(1 for r in results.values() if r["lyrics_separated"] is not None)
+    ta_match = sum(
+        1 for r in results.values() if r["lyrics_separated_line_count_match"] is True
+    )
+    ta_mismatch = sum(
+        1 for r in results.values() if r["lyrics_separated_line_count_match"] is False
+    )
+    en_found = sum(
+        1 for r in results.values() if r["english_lyrics_separated"] is not None
+    )
+    en_match = sum(
+        1
+        for r in results.values()
+        if r["english_lyrics_separated_line_count_match"] is True
+    )
+    en_mismatch = sum(
+        1
+        for r in results.values()
+        if r["english_lyrics_separated_line_count_match"] is False
+    )
+    missing = sum(
+        1 for r in results.values() if r["source_layout"] in ("missing", "not_found")
+    )
+    mismatched_ids = sorted(
+        (
+            kid
+            for kid, r in results.items()
+            if r["lyrics_separated_line_count_match"] is False
+            or r["english_lyrics_separated_line_count_match"] is False
+        ),
+        key=int,
+    )
+
+    print(f"Total songs processed: {total}")
+    print(
+        f"Tamil lyrics_separated found: {ta_found} "
+        f"(matched: {ta_match}, mismatched: {ta_mismatch})"
+    )
+    print(
+        f"English lyrics_separated found: {en_found} "
+        f"(matched: {en_match}, mismatched: {en_mismatch})"
+    )
+    print(f"Songs with no padham section (missing/not_found): {missing}")
+    print(f"Mismatched IDs: {mismatched_ids}")
+
+
+def main() -> None:
+    root = Path(__file__).resolve().parent.parent
+    fetcher = RateLimitedFetcher(root / "scripts" / "mayuragiri_cache")
+    results = run(
+        root / "songs",
+        fetcher,
+        root / "scripts" / "output" / "mayuragiri_lyrics_separated.json",
+    )
+    print_summary(results)
+
+
+if __name__ == "__main__":
+    main()

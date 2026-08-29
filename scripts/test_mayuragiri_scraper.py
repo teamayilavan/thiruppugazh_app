@@ -347,3 +347,72 @@ def test_fetch_builds_unpadded_url(tmp_path):
     fetcher.fetch("14")
 
     assert seen_urls == ["https://mayuragiri.com/thiruppugal14"]
+
+
+from mayuragiri_scraper import print_summary, run
+
+
+def test_run_writes_output_json_and_returns_results(tmp_path, capsys):
+    songs_dir = tmp_path / "songs"
+    songs_dir.mkdir()
+    (songs_dir / "0014.json").write_text(
+        json.dumps({"kaumaram_id": "14", "lyrics_list": ["line one", "line two"]}),
+        encoding="utf-8",
+    )
+    (songs_dir / "1340.json").write_text(
+        json.dumps({"kaumaram_id": "1340", "lyrics_list": ["only line"]}),
+        encoding="utf-8",
+    )
+
+    def fake_get(url, headers, timeout):
+        if "1340" in url:
+            return _FakeResponse(404, "not found")
+        return _FakeResponse(200, SONG_14_STYLE_HTML)
+
+    fetcher = RateLimitedFetcher(tmp_path / "cache", min_interval=0, get_func=fake_get)
+    output_path = tmp_path / "output" / "mayuragiri_lyrics_separated.json"
+
+    results = run(songs_dir, fetcher, output_path)
+
+    assert output_path.exists()
+    written = json.loads(output_path.read_text(encoding="utf-8"))
+    assert written == results
+    assert results["14"]["lyrics_separated"] == ["line one", "line two"]
+    assert results["14"]["lyrics_separated_line_count_match"] is True
+    assert results["1340"]["source_layout"] == "not_found"
+    assert results["1340"]["lyrics_separated"] is None
+
+
+def test_print_summary_reports_counts_and_mismatches(capsys):
+    results = {
+        "14": {
+            "lyrics_separated": ["a", "b"],
+            "lyrics_separated_line_count_match": True,
+            "english_lyrics_separated": None,
+            "english_lyrics_separated_line_count_match": None,
+            "source_layout": "legacy",
+        },
+        "15": {
+            "lyrics_separated": ["a"],
+            "lyrics_separated_line_count_match": False,
+            "english_lyrics_separated": ["x"],
+            "english_lyrics_separated_line_count_match": True,
+            "source_layout": "gutenberg",
+        },
+        "1340": {
+            "lyrics_separated": None,
+            "lyrics_separated_line_count_match": None,
+            "english_lyrics_separated": None,
+            "english_lyrics_separated_line_count_match": None,
+            "source_layout": "not_found",
+        },
+    }
+
+    print_summary(results)
+
+    out = capsys.readouterr().out
+    assert "Total songs processed: 3" in out
+    assert "Tamil lyrics_separated found: 2 (matched: 1, mismatched: 1)" in out
+    assert "English lyrics_separated found: 1 (matched: 1, mismatched: 0)" in out
+    assert "Songs with no padham section (missing/not_found): 1" in out
+    assert "['15']" in out
