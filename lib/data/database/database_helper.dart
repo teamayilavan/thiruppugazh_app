@@ -80,6 +80,9 @@ class DatabaseHelper {
         if (oldVersion < 3) {
           await _migrateToV3(db);
         }
+        if (oldVersion < 4) {
+          await _migrateToV4(db);
+        }
       },
       onOpen: (db) async {
         // Ensure schema is up to date even on open if needed
@@ -116,7 +119,9 @@ class DatabaseHelper {
         english_lyrics_list   TEXT,
         english_words         TEXT,
         english_meanings_list TEXT,
-        english_pathavurai    TEXT
+        english_pathavurai    TEXT,
+        mayuragiri_lyrics_separated         TEXT,
+        mayuragiri_english_lyrics_separated TEXT
       )
     ''');
 
@@ -315,6 +320,55 @@ class DatabaseHelper {
     ''');
 
     AppLogger.info('v3 migration complete');
+  }
+
+  Future<void> _migrateToV4(Database db) async {
+    AppLogger.info(
+      'Running v4 migration: adding Mayuragiri word-separated lyrics columns',
+    );
+
+    for (final col in [
+      'mayuragiri_lyrics_separated',
+      'mayuragiri_english_lyrics_separated',
+    ]) {
+      await db.execute('ALTER TABLE songs ADD COLUMN $col TEXT');
+    }
+
+    try {
+      final jsonString = await rootBundle.loadString(
+        AppConstants.mayuragiriDataAsset,
+      );
+      final Map<String, dynamic> patch = jsonDecode(jsonString);
+
+      final batch = db.batch();
+      for (final entry in patch.entries) {
+        final id = int.tryParse(entry.key);
+        if (id == null) continue;
+        final fields = entry.value as Map<String, dynamic>;
+        batch.update(
+          'songs',
+          {
+            'mayuragiri_lyrics_separated':
+                fields['mayuragiri_lyrics_separated'],
+            'mayuragiri_english_lyrics_separated':
+                fields['mayuragiri_english_lyrics_separated'],
+          },
+          where: 'id = ?',
+          whereArgs: [id],
+        );
+      }
+      await batch.commit(noResult: true);
+      AppLogger.info(
+        'v4 migration: populated Mayuragiri data for ${patch.length} songs',
+      );
+    } catch (e, st) {
+      AppLogger.error(
+        'v4 migration: failed to populate Mayuragiri data',
+        error: e,
+        stackTrace: st,
+      );
+      // Non-fatal: Mayuragiri columns remain NULL, section stays hidden
+    }
   }
 
   // --- Highlights Methods ---
