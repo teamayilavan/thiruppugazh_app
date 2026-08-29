@@ -127,3 +127,20 @@ def scrape_song(
         ),
         "source_layout": determine_source_layout(soup),
     }
+
+
+def load_local_songs(songs_dir: Path) -> dict[str, dict]:
+    """Reads songs/*.json to get each song's kaumaram_id and local lyric
+    line counts, used to validate the scraped data against.
+    """
+    songs: dict[str, dict] = {}
+    for f in sorted(songs_dir.glob("*.json")):
+        data = json.loads(f.read_text(encoding="utf-8"))
+        kid = str(data.get("kaumaram_id"))
+        en_raw = data.get("english_lyrics")
+        en_list = [line for line in en_raw if line != ""] if en_raw is not None else None
+        songs[kid] = {
+            "lyrics_list": data.get("lyrics_list", []),
+            "english_lyrics_list": en_list,
+        }
+    return songs

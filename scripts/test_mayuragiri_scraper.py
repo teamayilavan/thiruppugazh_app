@@ -255,3 +255,34 @@ def test_scrape_song_no_sections_present():
         "english_lyrics_separated_line_count_match": None,
         "source_layout": "missing",
     }
+
+
+import json
+
+from mayuragiri_scraper import load_local_songs
+
+
+def test_load_local_songs_reads_lyrics_list_and_filters_blank_english(tmp_path):
+    songs_dir = tmp_path / "songs"
+    songs_dir.mkdir()
+    (songs_dir / "0014.json").write_text(
+        json.dumps(
+            {
+                "kaumaram_id": "14",
+                "lyrics_list": ["a", "b"],
+                "english_lyrics": ["x", "", "y", ""],
+            }
+        ),
+        encoding="utf-8",
+    )
+    (songs_dir / "0007.json").write_text(
+        json.dumps({"kaumaram_id": "7", "lyrics_list": ["c"]}), encoding="utf-8"
+    )
+
+    songs = load_local_songs(songs_dir)
+
+    assert songs["14"] == {
+        "lyrics_list": ["a", "b"],
+        "english_lyrics_list": ["x", "y"],
+    }
+    assert songs["7"] == {"lyrics_list": ["c"], "english_lyrics_list": None}
