@@ -231,11 +231,14 @@ class RateLimitedFetcher:
         response = self.get_func(url, {"User-Agent": USER_AGENT}, 30)
         self._last_request_time = time.monotonic()
 
-        if response.status_code == 429:
-            # Transient rate-limit response, not a permanent outcome like
-            # 404 — don't cache it, so a later run retries this id instead
-            # of replaying a stale 429 forever.
-            return None, 429
+        if response.status_code in (429, 0):
+            # 429 is a transient rate-limit response, and 0 is what
+            # `_default_get` reports when curl itself fails to get a real
+            # HTTP response (timeout, DNS failure, connection reset, ...).
+            # Neither is a permanent outcome like 404 — don't cache them,
+            # so a later run retries this id instead of replaying a stale
+            # result forever.
+            return None, response.status_code
 
         status_path.write_text(str(response.status_code), encoding="utf-8")
         if response.status_code == 200:
@@ -334,9 +337,9 @@ def main(argv: list[str] | None = None) -> None:
         default=1.0,
         help=(
             "Minimum seconds between live HTTP requests to mayuragiri.com "
-            "(default: 1.0). A 1 req/sec pace triggered site-wide HTTP 429 "
-            "rate-limiting in practice; a much slower pace (e.g. 60) is "
-            "needed for a full run to complete without being blocked."
+            "(default: 1.0). A general politeness/pacing knob for being a "
+            "considerate scraper; raise it (e.g. 60) if you want an even "
+            "gentler request rate against the live site."
         ),
     )
     args = parser.parse_args(argv)

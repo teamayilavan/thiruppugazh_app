@@ -404,6 +404,35 @@ def test_fetch_does_not_cache_429_and_retries_on_next_call(tmp_path):
     assert not (tmp_path / "cache" / "7.html").exists()
 
 
+def test_fetch_does_not_cache_curl_failure_and_retries_on_next_call(tmp_path):
+    # curl reports a connection failure (timeout, DNS failure, connection
+    # reset, etc.) as %{http_code} 000, which _default_get parses as status
+    # 0. That's a transient local/network failure, not a real "page doesn't
+    # exist" — caching it to disk would make every future run replay a
+    # stale 0 forever instead of retrying once the network issue clears.
+    calls = []
+
+    def fake_get(url, headers, timeout):
+        calls.append(url)
+        return _FakeResponse(0, "")
+
+    fetcher = RateLimitedFetcher(tmp_path / "cache", min_interval=0, get_func=fake_get)
+
+    html1, status1 = fetcher.fetch("7")
+    html2, status2 = fetcher.fetch("7")
+
+    assert html1 is None
+    assert status1 == 0
+    assert html2 is None
+    assert status2 == 0
+    assert calls == [
+        "https://mayuragiri.com/thiruppugal7",
+        "https://mayuragiri.com/thiruppugal7",
+    ]  # not cached, so the second fetch() call retried over the network
+    assert not (tmp_path / "cache" / "7.status").exists()
+    assert not (tmp_path / "cache" / "7.html").exists()
+
+
 def test_fetch_builds_unpadded_url(tmp_path):
     seen_urls = []
 
