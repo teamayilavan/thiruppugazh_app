@@ -29,6 +29,8 @@ class Song {
   final List<String> englishWords;
   final List<String> englishMeaningsList;
   final String englishPathavurai;
+  final List<String> mayuragiriLyricsSeparatedList;
+  final List<String> mayuragiriEnglishLyricsSeparatedList;
 
   // Computed — not stored in DB
   String get englishLyrics => englishLyricsList.join('\n');
@@ -58,6 +60,8 @@ class Song {
     this.englishWords = const [],
     this.englishMeaningsList = const [],
     this.englishPathavurai = '',
+    this.mayuragiriLyricsSeparatedList = const [],
+    this.mayuragiriEnglishLyricsSeparatedList = const [],
   });
 
   /// Factory constructor to create a Song instance from a database map.
@@ -95,6 +99,12 @@ class Song {
         jsonDecode(map['english_meanings_list'] ?? '[]'),
       ),
       englishPathavurai: map['english_pathavurai'] ?? '',
+      mayuragiriLyricsSeparatedList: List<String>.from(
+        jsonDecode(map['mayuragiri_lyrics_separated'] ?? '[]'),
+      ),
+      mayuragiriEnglishLyricsSeparatedList: List<String>.from(
+        jsonDecode(map['mayuragiri_english_lyrics_separated'] ?? '[]'),
+      ),
     );
   }
 }

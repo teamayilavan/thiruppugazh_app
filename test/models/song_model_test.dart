@@ -189,5 +189,50 @@ void main() {
         expect(song.hasEnglishContent, isFalse);
       });
     });
+
+    group('Mayuragiri content', () {
+      test('Song.fromMap reads mayuragiri columns with null safety', () {
+        final map = {
+          'id': 14,
+          'kaumaram_id': 14,
+          'title': 'T',
+          'place': 'P',
+          'tune': '',
+          'lyrics': '',
+          'tune_list': '[]',
+          'lyrics_list': '[]',
+          'words': '[]',
+          'meanings': '[]',
+          'pathavurai': '',
+          'patham': '[]',
+          'mayuragiri_lyrics_separated': '["line one","line two"]',
+          'mayuragiri_english_lyrics_separated': '["eng one"]',
+        };
+        final song = Song.fromMap(map);
+        expect(song.mayuragiriLyricsSeparatedList, ['line one', 'line two']);
+        expect(song.mayuragiriEnglishLyricsSeparatedList, ['eng one']);
+      });
+
+      test('Song.fromMap handles missing mayuragiri columns gracefully', () {
+        final map = {
+          'id': 67,
+          'kaumaram_id': 67,
+          'title': 'T',
+          'place': 'P',
+          'tune': '',
+          'lyrics': '',
+          'tune_list': '[]',
+          'lyrics_list': '[]',
+          'words': '[]',
+          'meanings': '[]',
+          'pathavurai': '',
+          'patham': '[]',
+          // No mayuragiri fields
+        };
+        final song = Song.fromMap(map);
+        expect(song.mayuragiriLyricsSeparatedList, isEmpty);
+        expect(song.mayuragiriEnglishLyricsSeparatedList, isEmpty);
+      });
+    });
   });
 }
