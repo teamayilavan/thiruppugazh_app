@@ -185,6 +185,12 @@ class RateLimitedFetcher:
         response = self.get_func(url, {"User-Agent": USER_AGENT}, 30)
         self._last_request_time = time.monotonic()
 
+        if response.status_code == 429:
+            # Transient rate-limit response, not a permanent outcome like
+            # 404 — don't cache it, so a later run retries this id instead
+            # of replaying a stale 429 forever.
+            return None, 429
+
         status_path.write_text(str(response.status_code), encoding="utf-8")
         if response.status_code == 200:
             html_path.write_text(response.text, encoding="utf-8")
