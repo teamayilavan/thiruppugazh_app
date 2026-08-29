@@ -1,3 +1,5 @@
+import subprocess
+
 from bs4 import BeautifulSoup
 
 from mayuragiri_scraper import split_paragraph_into_lines, determine_source_layout, find_heading_by_text
@@ -443,3 +445,48 @@ def test_print_summary_reports_counts_and_mismatches(capsys):
     assert "English lyrics_separated found: 1 (matched: 1, mismatched: 0)" in out
     assert "Songs with no padham section (missing/not_found): 1" in out
     assert "['15']" in out
+
+
+from mayuragiri_scraper import _default_get
+
+
+def test_default_get_parses_curl_status_and_body(monkeypatch):
+    captured_args = []
+
+    class _FakeCompletedProcess:
+        stdout = "<html>body text</html>\n__MAYURAGIRI_HTTP_STATUS__:200".encode(
+            "utf-8"
+        )
+
+    def fake_run(args, capture_output):
+        captured_args.append(args)
+        assert capture_output is True
+        return _FakeCompletedProcess()
+
+    monkeypatch.setattr(subprocess, "run", fake_run)
+
+    response = _default_get(
+        "https://mayuragiri.com/thiruppugal14", {"User-Agent": "test-agent"}, 30
+    )
+
+    assert response.status_code == 200
+    assert response.text == "<html>body text</html>"
+    args = captured_args[0]
+    assert args[0] == "curl"
+    assert "-A" in args and args[args.index("-A") + 1] == "test-agent"
+    assert "--max-time" in args and args[args.index("--max-time") + 1] == "30"
+    assert args[-1] == "https://mayuragiri.com/thiruppugal14"
+
+
+def test_default_get_parses_non_200_status(monkeypatch):
+    class _FakeCompletedProcess:
+        stdout = "\n__MAYURAGIRI_HTTP_STATUS__:429".encode("utf-8")
+
+    monkeypatch.setattr(
+        subprocess, "run", lambda args, capture_output: _FakeCompletedProcess()
+    )
+
+    response = _default_get("https://mayuragiri.com/thiruppugal14", {}, 30)
+
+    assert response.status_code == 429
+    assert response.text == ""
