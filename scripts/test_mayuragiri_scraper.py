@@ -159,6 +159,45 @@ GUTENBERG_FULL_SECTION = """
 """
 
 
+# Mirrors a real page structure found in the live scrape (e.g. id 216):
+# the heading <p> is NOT a direct sibling of the stanza paragraphs — an
+# extra wrapping <div class="wp-block-group"> sits between them.
+GUTENBERG_NESTED_CONTENT_SECTION = """
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+<div class="wp-block-group"><div class="wp-block-group__inner-container is-layout-flow wp-block-group-is-layout-flow">
+<div class="wp-block-group"><div class="wp-block-group__inner-container is-layout-flow wp-block-group-is-layout-flow">
+<p class="has-text-align-left has-medium-font-size wp-block-paragraph">
+<strong><mark class="has-inline-color has-vivid-red-color">பதம் பிரித்தது</mark></strong></p>
+<div class="wp-block-group"><div class="wp-block-group__inner-container is-layout-flow wp-block-group-is-layout-flow">
+<p class="has-text-color wp-block-paragraph" style="color:#00058c"><strong>meter line</strong></p>
+<p class="wp-block-paragraph"><strong>nested lyric one<br>nested lyric two</strong></p>
+</div></div>
+</div></div>
+</div></div>
+</div>
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+<div class="wp-block-group"><div class="wp-block-group__inner-container is-layout-flow wp-block-group-is-layout-flow">
+<p class="has-vivid-red-color has-text-color has-medium-font-size wp-block-paragraph"><strong><strong><em>English</em></strong></strong></p>
+<p class="wp-block-paragraph">should not be included</p>
+</div></div>
+</div>
+"""
+
+
+def test_extract_section_finds_nested_content_not_just_direct_siblings():
+    soup = BeautifulSoup(GUTENBERG_NESTED_CONTENT_SECTION, "html.parser")
+    assert extract_section(soup, "பதம் பிரித்தது") == [
+        "nested lyric one",
+        "nested lyric two",
+    ]
+
+
+def test_extract_section_nested_content_stops_at_next_column():
+    soup = BeautifulSoup(GUTENBERG_NESTED_CONTENT_SECTION, "html.parser")
+    lines = extract_section(soup, "பதம் பிரித்தது")
+    assert "should not be included" not in lines
+
+
 def test_extract_section_drops_meter_line_legacy():
     soup = BeautifulSoup(LEGACY_FULL_SECTION, "html.parser")
     assert extract_section(soup, "பதம் பிரித்தது") == [

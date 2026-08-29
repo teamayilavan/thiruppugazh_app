@@ -69,18 +69,25 @@ def determine_source_layout(soup: BeautifulSoup) -> str:
 def extract_section(soup: BeautifulSoup, heading_text: str) -> list[str] | None:
     """Extracts all lyric lines under a heading, dropping the meter line.
 
-    The heading's subsequent <p> siblings (within its own immediate
-    parent) are exactly the section's content on both known page layouts:
-    the meter line first, then one or more stanza paragraphs. This also
-    naturally stops at the section boundary, since the next language's
-    heading and paragraphs live in a sibling container, not as further
-    siblings of this heading.
+    Each language's heading and its stanza paragraphs live inside their
+    own `wp-block-column` div (verified against real pages — every
+    language section, in every layout variant seen, gets its own column),
+    so scoping the paragraph search to that ancestor is what naturally
+    stops at the section boundary without pulling in the next language's
+    content.
+
+    The heading's content is NOT always its direct `<p>` siblings: some
+    pages nest the stanza paragraphs one level deeper inside an extra
+    wrapping `<div>` alongside the heading, rather than as siblings of the
+    heading itself. Searching the whole column (not just direct siblings)
+    handles both shapes.
     """
     heading = find_heading_by_text(soup, heading_text)
     if heading is None:
         return None
 
-    paragraphs = heading.find_next_siblings("p")
+    column = heading.find_parent(class_="wp-block-column") or heading.parent
+    paragraphs = [p for p in column.find_all("p") if p is not heading]
     if len(paragraphs) <= 1:
         return None
 
