@@ -15,10 +15,10 @@ Widget _wrapped() {
       ChangeNotifierProvider(create: (_) => LanguageProvider()),
       ChangeNotifierProvider(create: (_) => LyricsLanguageProvider()),
     ],
-    child: MaterialApp(
+    child: const MaterialApp(
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
-      home: const SettingsScreen(),
+      home: SettingsScreen(),
     ),
   );
 }

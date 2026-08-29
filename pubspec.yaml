@@ -92,9 +92,10 @@ flutter:
   # Enable code generation for localization
   generate: true
   
-  assets: 
+  assets:
     - assets/thiruppugazh.db
     - assets/english_data.json
+    - assets/mayuragiri_data.json
     - assets/images/hero.png
 
 
