@@ -202,3 +202,56 @@ def test_extract_section_returns_none_when_only_meter_line_present():
     """
     soup = BeautifulSoup(html, "html.parser")
     assert extract_section(soup, "பதம் பிரித்தது") is None
+
+
+from mayuragiri_scraper import scrape_song
+
+SONG_14_STYLE_HTML = """
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+<h3 style="text-align: center;"><span style="color: #a10000;">பதம் பிரித்தது</span></h3>
+<p><span><strong>meter</strong></span></p>
+<p><span><strong>line one</strong></span><br /><span><strong>line two</strong></span></p>
+</div>
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+<h3 style="text-align: center;"><span style="color: #a10000;">English Easy Version</span></h3>
+<p><span><strong>meter</strong></span></p>
+<p><span><strong>english one</strong></span><br /><span><strong>english two</strong></span></p>
+</div>
+"""
+
+
+def test_scrape_song_matching_line_counts():
+    result = scrape_song(SONG_14_STYLE_HTML, "14", ["a", "b"], ["x", "y"])
+    assert result == {
+        "mayuragiri_url": "https://mayuragiri.com/thiruppugal14",
+        "lyrics_separated": ["line one", "line two"],
+        "lyrics_separated_line_count_match": True,
+        "english_lyrics_separated": ["english one", "english two"],
+        "english_lyrics_separated_line_count_match": True,
+        "source_layout": "legacy",
+    }
+
+
+def test_scrape_song_mismatched_line_count_is_stored_and_flagged():
+    result = scrape_song(SONG_14_STYLE_HTML, "14", ["a", "b", "c"], ["x", "y"])
+    assert result["lyrics_separated"] == ["line one", "line two"]
+    assert result["lyrics_separated_line_count_match"] is False
+
+
+def test_scrape_song_no_local_english_list_gives_none_match():
+    result = scrape_song(SONG_14_STYLE_HTML, "14", ["a", "b"], None)
+    assert result["english_lyrics_separated"] == ["english one", "english two"]
+    assert result["english_lyrics_separated_line_count_match"] is None
+
+
+def test_scrape_song_no_sections_present():
+    html = "<div><h3><span>பாடல்</span></h3><p><strong>x</strong></p></div>"
+    result = scrape_song(html, "999", ["a"], ["x"])
+    assert result == {
+        "mayuragiri_url": "https://mayuragiri.com/thiruppugal999",
+        "lyrics_separated": None,
+        "lyrics_separated_line_count_match": None,
+        "english_lyrics_separated": None,
+        "english_lyrics_separated_line_count_match": None,
+        "source_layout": "missing",
+    }

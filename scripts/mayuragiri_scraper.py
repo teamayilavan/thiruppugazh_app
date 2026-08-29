@@ -87,3 +87,43 @@ def extract_section(soup: BeautifulSoup, heading_text: str) -> list[str] | None:
     for p in paragraphs[1:]:
         lines.extend(split_paragraph_into_lines(p))
     return lines if lines else None
+
+
+def _line_count_match(
+    extracted: list[str] | None, local: list[str] | None
+) -> bool | None:
+    if extracted is None or local is None:
+        return None
+    return len(extracted) == len(local)
+
+
+def scrape_song(
+    html: str,
+    kaumaram_id: str,
+    local_lyrics_list: list[str] | None,
+    local_english_lyrics_list: list[str] | None,
+) -> dict:
+    """Extracts one song's Mayuragiri data from its already-fetched HTML.
+
+    Never raises on missing sections — absence is represented as None
+    fields, and line-count mismatches are stored anyway with their match
+    flag set to False (per the "store + flag for review" decision), so a
+    parsing surprise on one song can't silently drop its data or crash the
+    batch run.
+    """
+    soup = BeautifulSoup(html, "html.parser")
+    lyrics_separated = extract_section(soup, "பதம் பிரித்தது")
+    english_lyrics_separated = extract_section(soup, "English Easy Version")
+
+    return {
+        "mayuragiri_url": f"https://mayuragiri.com/thiruppugal{kaumaram_id}",
+        "lyrics_separated": lyrics_separated,
+        "lyrics_separated_line_count_match": _line_count_match(
+            lyrics_separated, local_lyrics_list
+        ),
+        "english_lyrics_separated": english_lyrics_separated,
+        "english_lyrics_separated_line_count_match": _line_count_match(
+            english_lyrics_separated, local_english_lyrics_list
+        ),
+        "source_layout": determine_source_layout(soup),
+    }
