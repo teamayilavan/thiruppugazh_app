@@ -7,6 +7,7 @@ kaumaram_id, for manual review. Makes no changes to the Flutter app.
 
 from __future__ import annotations
 
+import argparse
 import json
 import time
 from pathlib import Path
@@ -278,9 +279,27 @@ def print_summary(results: dict) -> None:
     print(f"Mismatched IDs: {mismatched_ids}")
 
 
-def main() -> None:
+def main(argv: list[str] | None = None) -> None:
+    parser = argparse.ArgumentParser(
+        description="Scrape mayuragiri.com padham-separated lyrics for all local songs."
+    )
+    parser.add_argument(
+        "--min-interval",
+        type=float,
+        default=1.0,
+        help=(
+            "Minimum seconds between live HTTP requests to mayuragiri.com "
+            "(default: 1.0). A 1 req/sec pace triggered site-wide HTTP 429 "
+            "rate-limiting in practice; a much slower pace (e.g. 60) is "
+            "needed for a full run to complete without being blocked."
+        ),
+    )
+    args = parser.parse_args(argv)
+
     root = Path(__file__).resolve().parent.parent
-    fetcher = RateLimitedFetcher(root / "scripts" / "mayuragiri_cache")
+    fetcher = RateLimitedFetcher(
+        root / "scripts" / "mayuragiri_cache", min_interval=args.min_interval
+    )
     results = run(
         root / "songs",
         fetcher,
