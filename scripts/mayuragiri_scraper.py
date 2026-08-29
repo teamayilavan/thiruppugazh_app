@@ -144,3 +144,49 @@ def load_local_songs(songs_dir: Path) -> dict[str, dict]:
             "english_lyrics_list": en_list,
         }
     return songs
+
+
+def _default_get(url: str, headers: dict, timeout: int):
+    return requests.get(url, headers=headers, timeout=timeout)
+
+
+class RateLimitedFetcher:
+    """Fetches Mayuragiri song pages, caching HTML to disk and rate-
+    limiting live requests. `get_func` is injectable so tests never hit
+    the network; it defaults to a real `requests.get` call.
+    """
+
+    def __init__(
+        self,
+        cache_dir: Path,
+        min_interval: float = 1.0,
+        get_func=None,
+    ):
+        self.cache_dir = cache_dir
+        self.cache_dir.mkdir(parents=True, exist_ok=True)
+        self.min_interval = min_interval
+        self.get_func = get_func or _default_get
+        self._last_request_time = 0.0
+
+    def fetch(self, kaumaram_id: str) -> tuple[str | None, int]:
+        html_path = self.cache_dir / f"{kaumaram_id}.html"
+        status_path = self.cache_dir / f"{kaumaram_id}.status"
+
+        if status_path.exists():
+            status = int(status_path.read_text().strip())
+            html = html_path.read_text(encoding="utf-8") if status == 200 else None
+            return html, status
+
+        elapsed = time.monotonic() - self._last_request_time
+        if elapsed < self.min_interval:
+            time.sleep(self.min_interval - elapsed)
+
+        url = f"https://mayuragiri.com/thiruppugal{kaumaram_id}"
+        response = self.get_func(url, {"User-Agent": USER_AGENT}, 30)
+        self._last_request_time = time.monotonic()
+
+        status_path.write_text(str(response.status_code), encoding="utf-8")
+        if response.status_code == 200:
+            html_path.write_text(response.text, encoding="utf-8")
+            return response.text, 200
+        return None, response.status_code

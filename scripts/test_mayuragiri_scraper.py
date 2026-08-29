@@ -286,3 +286,64 @@ def test_load_local_songs_reads_lyrics_list_and_filters_blank_english(tmp_path):
         "english_lyrics_list": ["x", "y"],
     }
     assert songs["7"] == {"lyrics_list": ["c"], "english_lyrics_list": None}
+
+
+from mayuragiri_scraper import RateLimitedFetcher
+
+
+class _FakeResponse:
+    def __init__(self, status_code: int, text: str = ""):
+        self.status_code = status_code
+        self.text = text
+
+
+def test_fetch_caches_html_and_reuses_cache_on_second_call(tmp_path):
+    calls = []
+
+    def fake_get(url, headers, timeout):
+        calls.append(url)
+        return _FakeResponse(200, "<html>page content</html>")
+
+    fetcher = RateLimitedFetcher(tmp_path / "cache", min_interval=0, get_func=fake_get)
+
+    html1, status1 = fetcher.fetch("14")
+    html2, status2 = fetcher.fetch("14")
+
+    assert html1 == "<html>page content</html>"
+    assert status1 == 200
+    assert html2 == html1
+    assert status2 == 200
+    assert calls == ["https://mayuragiri.com/thiruppugal14"]  # fetched once, cached after
+    assert (tmp_path / "cache" / "14.html").exists()
+
+
+def test_fetch_returns_none_and_caches_404(tmp_path):
+    calls = []
+
+    def fake_get(url, headers, timeout):
+        calls.append(url)
+        return _FakeResponse(404, "not found")
+
+    fetcher = RateLimitedFetcher(tmp_path / "cache", min_interval=0, get_func=fake_get)
+
+    html1, status1 = fetcher.fetch("1340")
+    html2, status2 = fetcher.fetch("1340")
+
+    assert html1 is None
+    assert status1 == 404
+    assert html2 is None
+    assert status2 == 404
+    assert calls == ["https://mayuragiri.com/thiruppugal1340"]  # 404 cached too
+
+
+def test_fetch_builds_unpadded_url(tmp_path):
+    seen_urls = []
+
+    def fake_get(url, headers, timeout):
+        seen_urls.append(url)
+        return _FakeResponse(200, "ok")
+
+    fetcher = RateLimitedFetcher(tmp_path / "cache", min_interval=0, get_func=fake_get)
+    fetcher.fetch("14")
+
+    assert seen_urls == ["https://mayuragiri.com/thiruppugal14"]
