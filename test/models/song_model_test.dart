@@ -234,43 +234,49 @@ void main() {
         expect(song.mayuragiriEnglishLyricsSeparatedList, isEmpty);
       });
 
-      test('hasMayuragiriContent is true when either mayuragiri list is non-empty', () {
-        final song = Song(
-          id: 1,
-          kaumaramId: '1',
-          title: 'T',
-          place: 'P',
-          tune: '',
-          lyrics: '',
-          lyricsList: [],
-          tuneList: [],
-          words: [],
-          meanings: [],
-          pathavurai: '',
-          patham: [],
-          mayuragiriLyricsSeparatedList: ['line one', 'line two'],
-          mayuragiriEnglishLyricsSeparatedList: [],
-        );
-        expect(song.hasMayuragiriContent, isTrue);
-      });
+      test(
+        'hasMayuragiriContent is true when either mayuragiri list is non-empty',
+        () {
+          final song = Song(
+            id: 1,
+            kaumaramId: '1',
+            title: 'T',
+            place: 'P',
+            tune: '',
+            lyrics: '',
+            lyricsList: [],
+            tuneList: [],
+            words: [],
+            meanings: [],
+            pathavurai: '',
+            patham: [],
+            mayuragiriLyricsSeparatedList: ['line one', 'line two'],
+            mayuragiriEnglishLyricsSeparatedList: [],
+          );
+          expect(song.hasMayuragiriContent, isTrue);
+        },
+      );
 
-      test('hasMayuragiriContent is false when both mayuragiri lists are empty', () {
-        final song = Song(
-          id: 1,
-          kaumaramId: '1',
-          title: 'T',
-          place: 'P',
-          tune: '',
-          lyrics: '',
-          lyricsList: [],
-          tuneList: [],
-          words: [],
-          meanings: [],
-          pathavurai: '',
-          patham: [],
-        );
-        expect(song.hasMayuragiriContent, isFalse);
-      });
+      test(
+        'hasMayuragiriContent is false when both mayuragiri lists are empty',
+        () {
+          final song = Song(
+            id: 1,
+            kaumaramId: '1',
+            title: 'T',
+            place: 'P',
+            tune: '',
+            lyrics: '',
+            lyricsList: [],
+            tuneList: [],
+            words: [],
+            meanings: [],
+            pathavurai: '',
+            patham: [],
+          );
+          expect(song.hasMayuragiriContent, isFalse);
+        },
+      );
     });
   });
 }

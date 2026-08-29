@@ -37,7 +37,9 @@ class Song {
   String get englishTune => englishTuneList.join('\n');
 
   bool get hasEnglishContent => englishLyricsList.isNotEmpty;
-  bool get hasMayuragiriContent => mayuragiriLyricsSeparatedList.isNotEmpty || mayuragiriEnglishLyricsSeparatedList.isNotEmpty;
+  bool get hasMayuragiriContent =>
+      mayuragiriLyricsSeparatedList.isNotEmpty ||
+      mayuragiriEnglishLyricsSeparatedList.isNotEmpty;
 
   Song({
     required this.id,
