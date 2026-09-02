@@ -604,6 +604,8 @@ ${_displayLyricsList.join('\n')}''';
             ),
           ),
 
+          SliverToBoxAdapter(child: _buildMayuragiriLyricsSection(context)),
+
           SliverToBoxAdapter(
             child: Padding(
               padding: const EdgeInsets.symmetric(vertical: 32.0),
@@ -614,7 +616,6 @@ ${_displayLyricsList.join('\n')}''';
               ),
             ),
           ),
-          SliverToBoxAdapter(child: _buildMayuragiriLyricsSection(context)),
 
           SliverToBoxAdapter(
             child: Padding(
@@ -829,12 +830,38 @@ ${_displayLyricsList.join('\n')}''';
     );
   }
 
+  List<InlineSpan> _buildMayuragiriTextSpans(
+    BuildContext context,
+    List<String> lines,
+  ) {
+    final spans = <InlineSpan>[];
+    final tuneLength = _displayTuneList.length;
+    final lyricsFontSize = context.watch<LyricsFontSizeProvider>().fontSize;
+    final style = Theme.of(context).textTheme.bodyLarge?.copyWith(
+      fontSize: lyricsFontSize,
+      height: 1.5,
+      color: Theme.of(context).colorScheme.onSurface,
+    );
+
+    for (int i = 0; i < lines.length; i++) {
+      final paragraph = lines[i];
+      if (paragraph.trim().isEmpty) continue;
+
+      spans.add(TextSpan(text: paragraph, style: style));
+
+      final sep = (tuneLength > 0 && (i + 1) % tuneLength == 0)
+          ? '\n\n'
+          : '\n';
+      spans.add(TextSpan(text: sep));
+    }
+    return spans;
+  }
+
   Widget _buildMayuragiriLyricsSection(BuildContext context) {
     final lines = _displayMayuragiriLyricsSeparated;
     if (lines.isEmpty) return const SizedBox.shrink();
 
     final l10n = AppLocalizations.of(context)!;
-    final lyricsFontSize = context.watch<LyricsFontSizeProvider>().fontSize;
 
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 16.0),
@@ -850,13 +877,8 @@ ${_displayLyricsList.join('\n')}''';
           const SizedBox(height: 8),
           const Divider(height: 16),
           const SizedBox(height: 16),
-          SelectableText(
-            lines.join('\n'),
-            style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-              fontSize: lyricsFontSize,
-              height: 1.5,
-              color: Theme.of(context).colorScheme.onSurface,
-            ),
+          SelectableText.rich(
+            TextSpan(children: _buildMayuragiriTextSpans(context, lines)),
           ),
         ],
       ),
