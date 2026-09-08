@@ -28,14 +28,21 @@ BASE_URL = "https://thiruppugazh.ayilavan.org"
 DEEP_LINK_SCHEME = "thiruppugazh"
 PLAY_STORE_URL = "https://play.google.com/store/apps/details?id=org.ayilavan.thiruppugazh"
 ANDROID_PACKAGE = "org.ayilavan.thiruppugazh"
-# SHA-256 fingerprint of the release signing certificate (alias ayilavan_key).
-# Required for Android to auto-verify this domain as an App Link. Re-extract
-# with:
-#   keytool -list -v -keystore <path-to-release-keystore> -alias ayilavan_key | grep SHA256
-RELEASE_CERT_SHA256 = (
+# SHA-256 fingerprints allowed to auto-verify this domain as an App Link.
+# BOTH are required:
+#   1. The local release / upload certificate (alias ayilavan_key). Re-extract:
+#      keytool -list -v -keystore <release-keystore> -alias ayilavan_key | grep SHA256
+#   2. The Google Play app-signing certificate. Play re-signs the uploaded AAB
+#      with this key, so apps installed from Play present it -- App Link
+#      verification fails without it. Copy it from Play Console >
+#      Test and release > App integrity > Play app signing (or use the exact
+#      assetlinks.json shown there under Setup > Deep links).
+CERT_SHA256_FINGERPRINTS = [
     "D6:73:FA:D0:26:3C:63:3C:BE:27:EE:A2:E8:E5:BF:C0:"
-    "10:D0:27:90:DF:2E:80:1B:3A:86:77:06:3B:07:AF:5F"
-)
+    "10:D0:27:90:DF:2E:80:1B:3A:86:77:06:3B:07:AF:5F",
+    "B8:DA:1D:28:F2:6F:39:19:4A:3F:EE:A1:E8:07:20:92:"
+    "D1:02:74:B0:2A:ED:60:32:D2:46:D4:F2:09:FA:ED:8C",
+]
 APP_ICON = "assets/icons/icon.png"
 HERO_IMAGE = "assets/images/hero.png"
 
@@ -245,11 +252,14 @@ def main():
     assetlinks_json = json.dumps(
         [
             {
-                "relation": ["delegate_permission/common.handle_all_urls"],
+                "relation": [
+                    "delegate_permission/common.handle_all_urls",
+                    "delegate_permission/common.get_login_creds",
+                ],
                 "target": {
                     "namespace": "android_app",
                     "package_name": ANDROID_PACKAGE,
-                    "sha256_cert_fingerprints": [RELEASE_CERT_SHA256],
+                    "sha256_cert_fingerprints": CERT_SHA256_FINGERPRINTS,
                 },
             }
         ],
