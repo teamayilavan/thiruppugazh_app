@@ -2,10 +2,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:thiruppugazh/data/models/song_model.dart';
 import 'package:thiruppugazh/ui/screens/song_detail_screen.dart';
 
-Song _song({
-  List<String> tamil = const [],
-  List<String> english = const [],
-}) {
+Song _song({List<String> tamil = const [], List<String> english = const []}) {
   return Song(
     id: 1,
     kaumaramId: '1',

@@ -217,7 +217,10 @@ class SettingsScreen extends StatelessWidget {
 
   Future<void> _launchMayuragiriWebsite(BuildContext context) async {
     final messenger = ScaffoldMessenger.of(context);
-    if (!await launchUrl(_mayuragiriUrl, mode: LaunchMode.externalApplication)) {
+    if (!await launchUrl(
+      _mayuragiriUrl,
+      mode: LaunchMode.externalApplication,
+    )) {
       messenger.showSnackBar(
         const SnackBar(content: Text('Could not open Mayuragiri.com')),
       );

@@ -42,7 +42,9 @@ void main() {
     await tester.scrollUntilVisible(find.byIcon(Icons.language), 300.0);
     await tester.pumpAndSettle();
 
-    expect(find.widgetWithText(OutlinedButton, 'Visit Mayuragiri.com'),
-        findsOneWidget);
+    expect(
+      find.widgetWithText(OutlinedButton, 'Visit Mayuragiri.com'),
+      findsOneWidget,
+    );
   });
 }

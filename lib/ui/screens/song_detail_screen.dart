@@ -849,9 +849,7 @@ ${_displayLyricsList.join('\n')}''';
 
       spans.add(TextSpan(text: paragraph, style: style));
 
-      final sep = (tuneLength > 0 && (i + 1) % tuneLength == 0)
-          ? '\n\n'
-          : '\n';
+      final sep = (tuneLength > 0 && (i + 1) % tuneLength == 0) ? '\n\n' : '\n';
       spans.add(TextSpan(text: sep));
     }
     return spans;
