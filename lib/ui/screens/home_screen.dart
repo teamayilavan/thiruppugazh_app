@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import '../../data/repositories/song_repository.dart';
 import '../../providers/song_list_provider.dart';
 import '../../providers/lyrics_language_provider.dart';
+import '../widgets/daily_practice_card.dart';
 import 'song_detail_screen.dart';
 import 'search_screen.dart';
 import '../../l10n/app_localizations.dart';
@@ -134,6 +135,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: CustomScrollView(
                   controller: _scrollController,
                   slivers: [
+                    const SliverToBoxAdapter(child: DailyPracticeCard()),
                     SliverToBoxAdapter(
                       child: Semantics(
                         image: true,

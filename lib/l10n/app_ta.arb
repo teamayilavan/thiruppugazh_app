@@ -160,5 +160,10 @@
   "increaseLyricsFontSize": "பாடல் வரிகளின் எழுத்துருவை பெரிதாக்கு",
   "decreaseLyricsFontSize": "பாடல் வரிகளின் எழுத்துருவை சிறிதாக்கு",
   "dailyPractice": "தினசரி பயிற்சி",
-  "dailyPracticeSubtitle": "இன்றைய பாடல், படித்தவை மற்றும் தொகுப்புகள். எளிய நூலகத்திற்கு அணைக்கவும்."
+  "dailyPracticeSubtitle": "இன்றைய பாடல், படித்தவை மற்றும் தொகுப்புகள். எளிய நூலகத்திற்கு அணைக்கவும்.",
+  "todaysGrace": "இன்றைய அருள்",
+  "todaysHymn": "இன்றைய பாடல்",
+  "completedToday": "இன்று நிறைவு",
+  "practiceProgressLabel": "படித்தவை: {completed} / {total}",
+  "totalDaysKeptLabel": "{days} நாட்கள் பயிற்சி"
 }

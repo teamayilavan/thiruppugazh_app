@@ -169,5 +169,10 @@
   "increaseLyricsFontSize": "Increase lyrics font size",
   "decreaseLyricsFontSize": "Decrease lyrics font size",
   "dailyPractice": "Daily practice",
-  "dailyPracticeSubtitle": "Daily verse, reading progress and collections. Turn off for a plain library."
+  "dailyPracticeSubtitle": "Daily verse, reading progress and collections. Turn off for a plain library.",
+  "todaysGrace": "Today's Grace",
+  "todaysHymn": "Today's Hymn",
+  "completedToday": "Completed today",
+  "practiceProgressLabel": "Read: {completed} / {total}",
+  "totalDaysKeptLabel": "{days} days of practice"
 }

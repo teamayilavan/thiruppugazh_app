@@ -173,4 +173,14 @@ class SongRepository extends ChangeNotifier {
   void refresh() {
     notifyListeners();
   }
+
+  // --- Daily Practice Card support (T1.7) ---
+
+  /// All song ids in the corpus -- lightweight, for the daily selection
+  /// service's deterministic index mapping.
+  Future<List<int>> getAllSongIds() => dbHelper.getAllSongIds();
+
+  /// Ids of songs ever marked complete -- for the daily hymn's "lowest
+  /// uncompleted" fallback selection.
+  Future<List<int>> getCompletedSongIds() => dbHelper.getCompletedSongIds();
 }

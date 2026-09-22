@@ -1039,6 +1039,15 @@ class DatabaseHelper {
     return rows.map((row) => row['song_id'] as int).toList();
   }
 
+  /// All song ids -- lightweight, no full song bodies. Used by the daily
+  /// selection service (T1.5/T1.7) to map a deterministic index onto an
+  /// actual id without loading the whole corpus.
+  Future<List<int>> getAllSongIds() async {
+    final db = await database;
+    final rows = await db.query('songs', columns: ['id']);
+    return rows.map((row) => row['id'] as int).toList();
+  }
+
   /// Whether [day]'s `practice_days` row shows at least one completed
   /// song -- the "today complete" state PracticeProvider caches for the
   /// daily card (T1.4/T1.7).

@@ -997,6 +997,36 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Daily verse, reading progress and collections. Turn off for a plain library.'**
   String get dailyPracticeSubtitle;
+
+  /// No description provided for @todaysGrace.
+  ///
+  /// In en, this message translates to:
+  /// **'Today\'s Grace'**
+  String get todaysGrace;
+
+  /// No description provided for @todaysHymn.
+  ///
+  /// In en, this message translates to:
+  /// **'Today\'s Hymn'**
+  String get todaysHymn;
+
+  /// No description provided for @completedToday.
+  ///
+  /// In en, this message translates to:
+  /// **'Completed today'**
+  String get completedToday;
+
+  /// No description provided for @practiceProgressLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Read: {completed} / {total}'**
+  String practiceProgressLabel(Object completed, Object total);
+
+  /// No description provided for @totalDaysKeptLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'{days} days of practice'**
+  String totalDaysKeptLabel(Object days);
 }
 
 class _AppLocalizationsDelegate
