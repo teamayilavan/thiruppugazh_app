@@ -23,6 +23,10 @@ class AppConstants {
 
   // ==================== Practice Constants ====================
   static const int dwellSecondsToComplete = 90;
+  // Minimum real foreground seconds before scroll-to-end alone can
+  // complete a song. Without this, a quick flick through a short song
+  // completes it in a couple of seconds -- credit on tap in disguise.
+  static const int minSecondsBeforeScrollCompletion = 20;
   static const int corpusSize = 1334; // total songs; asserted in tests
   static const int mandalamDays = 48;
   static const List<int> milestoneCounts = [

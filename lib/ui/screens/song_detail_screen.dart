@@ -166,6 +166,17 @@ class _SongDetailScreenState extends State<SongDetailScreen>
     _resumedAt = null;
   }
 
+  /// Real foreground seconds spent on this screen right now, including
+  /// the still-open current interval -- unlike [_accumulatedForegroundSeconds]
+  /// alone, which only updates on pause/resume/dispose and would read 0
+  /// for a screen that has been continuously open and foregrounded.
+  int _liveForegroundSeconds() {
+    final resumedAt = _resumedAt;
+    if (resumedAt == null) return _accumulatedForegroundSeconds;
+    final live = DateTime.now().difference(resumedAt).inSeconds;
+    return _accumulatedForegroundSeconds + (live > 0 ? live : 0);
+  }
+
   void _onScroll() {
     if (!_practiceTrackingEnabled ||
         _completedThisVisit ||
@@ -178,9 +189,18 @@ class _SongDetailScreenState extends State<SongDetailScreen>
     // instead of completing instantly on open (never credit on tap,
     // standing rule 5).
     if (position.maxScrollExtent <= 0) return;
-    if (position.pixels >= position.maxScrollExtent - _scrollEndEpsilon) {
-      _markCompleteIfNeeded();
+    if (position.pixels < position.maxScrollExtent - _scrollEndEpsilon) {
+      return;
     }
+    // A quick flick to the bottom of a short song took only a couple of
+    // real seconds -- that isn't reading. Require a minimum stretch of
+    // genuine foreground time before scroll-to-end alone can complete it;
+    // the 90s dwell timer is always still running in parallel regardless.
+    if (_liveForegroundSeconds() <
+        AppConstants.minSecondsBeforeScrollCompletion) {
+      return;
+    }
+    _markCompleteIfNeeded();
   }
 
   void _markCompleteIfNeeded() {

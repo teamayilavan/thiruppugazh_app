@@ -100,64 +100,72 @@ class _DailyPracticeCardState extends State<DailyPracticeCard> {
     final title = useEnglish ? (hymn.englishTitle ?? hymn.title) : hymn.title;
     final place = useEnglish ? (hymn.englishVenue ?? hymn.place) : hymn.place;
 
-    return Card(
-      margin: const EdgeInsets.fromLTRB(16, 16, 16, 0),
-      color: colors.container,
-      clipBehavior: Clip.antiAlias,
-      child: InkWell(
-        onTap: () {
-          Navigator.of(context).push(
-            MaterialPageRoute(builder: (_) => SongDetailScreen(song: hymn)),
-          );
-        },
-        child: Padding(
-          padding: const EdgeInsets.all(20.0),
-          child: Row(
-            children: [
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      l10n.todaysHymn,
-                      style: Theme.of(context).textTheme.labelMedium?.copyWith(
-                        color: colors.textMuted,
-                        letterSpacing: 0.5,
-                      ),
-                    ),
-                    const SizedBox(height: 6),
-                    Text(
-                      title,
-                      style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                        color: colors.textHigh,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                    if (place.isNotEmpty) ...[
-                      const SizedBox(height: 2),
-                      Text(
-                        place,
-                        style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                          color: colors.textMuted,
-                        ),
-                      ),
-                    ],
-                  ],
+    return Column(
+      children: [
+        const Divider(height: 1),
+        InkWell(
+          onTap: () {
+            Navigator.of(context).push(
+              MaterialPageRoute(builder: (_) => SongDetailScreen(song: hymn)),
+            );
+          },
+          child: Padding(
+            padding: const EdgeInsets.symmetric(
+              horizontal: 16.0,
+              vertical: 16.0,
+            ),
+            child: Row(
+              children: [
+                Icon(
+                  Icons.auto_stories_outlined,
+                  color: colors.textHigh,
+                  size: 28,
                 ),
-              ),
-              const SizedBox(width: 12),
-              Icon(
-                practice.todayComplete
-                    ? Icons.check_circle_outline
-                    : Icons.chevron_right,
-                color: practice.todayComplete
-                    ? Theme.of(context).colorScheme.primary
-                    : colors.textMuted,
-              ),
-            ],
+                const SizedBox(width: 16),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        l10n.todaysHymn,
+                        style: Theme.of(context).textTheme.labelMedium
+                            ?.copyWith(
+                              color: colors.textMuted,
+                              letterSpacing: 0.5,
+                            ),
+                      ),
+                      const SizedBox(height: 4),
+                      Text(
+                        title,
+                        style: Theme.of(context).textTheme.titleMedium
+                            ?.copyWith(
+                              color: colors.textHigh,
+                              fontWeight: FontWeight.bold,
+                            ),
+                      ),
+                      if (place.isNotEmpty)
+                        Text(
+                          place,
+                          style: Theme.of(context).textTheme.bodySmall
+                              ?.copyWith(color: colors.textMuted),
+                        ),
+                    ],
+                  ),
+                ),
+                const SizedBox(width: 8),
+                Icon(
+                  practice.todayComplete
+                      ? Icons.check_circle_outline
+                      : Icons.chevron_right,
+                  color: practice.todayComplete
+                      ? Theme.of(context).colorScheme.primary
+                      : colors.textMuted,
+                ),
+              ],
+            ),
           ),
         ),
-      ),
+      ],
     );
   }
 }
