@@ -8,6 +8,7 @@ import '../models/category_model.dart';
 import '../models/search_filter.dart';
 import '../models/highlight_model.dart';
 import '../models/note_model.dart';
+import '../models/reading_log_model.dart';
 import '../../utils/app_logger.dart';
 import '../../constants/app_constants.dart';
 
@@ -867,5 +868,174 @@ class DatabaseHelper {
       where: 'id = ?',
       whereArgs: [songId],
     );
+  }
+
+  // --- Practice Tracking Methods (T1.3) ---
+
+  /// Upserts today's reading progress for [songId] on `UNIQUE(song_id,
+  /// read_on)`: keeps the maximum dwell seconds seen for that day and
+  /// never downgrades `completed` from 1 to 0. Recomputes
+  /// `practice_days.songs_completed` for [day] in the same transaction,
+  /// and creates the `practice_days` row for [day] if it doesn't exist
+  /// yet -- reading (even a partial, uncompleted dwell) is what makes a
+  /// day "kept" for the continuity count.
+  Future<void> recordDwell(
+    int songId,
+    String day,
+    int dwellSeconds,
+    bool completed,
+  ) async {
+    final db = await database;
+    await db.transaction((txn) async {
+      final existing = await txn.query(
+        'reading_log',
+        where: 'song_id = ? AND read_on = ?',
+        whereArgs: [songId, day],
+      );
+
+      if (existing.isEmpty) {
+        await txn.insert('reading_log', {
+          'song_id': songId,
+          'read_on': day,
+          'dwell_seconds': dwellSeconds,
+          'completed': completed ? 1 : 0,
+        });
+      } else {
+        final current = ReadingLogEntry.fromMap(existing.first);
+        final newDwell = dwellSeconds > current.dwellSeconds
+            ? dwellSeconds
+            : current.dwellSeconds;
+        final newCompleted = current.completed || completed;
+        await txn.update(
+          'reading_log',
+          {'dwell_seconds': newDwell, 'completed': newCompleted ? 1 : 0},
+          where: 'song_id = ? AND read_on = ?',
+          whereArgs: [songId, day],
+        );
+      }
+
+      await txn.insert('practice_days', {
+        'day': day,
+        'songs_completed': 0,
+        'verse_seen': 0,
+      }, conflictAlgorithm: ConflictAlgorithm.ignore);
+
+      await txn.rawUpdate(
+        '''
+        UPDATE practice_days
+        SET songs_completed = (
+          SELECT COUNT(*) FROM reading_log
+          WHERE read_on = ? AND completed = 1
+        )
+        WHERE day = ?
+        ''',
+        [day, day],
+      );
+    });
+  }
+
+  /// `COUNT(DISTINCT song_id)` of songs ever marked complete -- the
+  /// corpus-progress number (`n / 1334`).
+  Future<int> getCompletedSongCount() async {
+    final db = await database;
+    final result = await db.rawQuery(
+      'SELECT COUNT(DISTINCT song_id) as count FROM reading_log WHERE completed = 1',
+    );
+    return Sqflite.firstIntValue(result) ?? 0;
+  }
+
+  Future<bool> isSongCompleted(int songId) async {
+    final db = await database;
+    final result = await db.query(
+      'reading_log',
+      columns: ['id'],
+      where: 'song_id = ? AND completed = 1',
+      whereArgs: [songId],
+      limit: 1,
+    );
+    return result.isNotEmpty;
+  }
+
+  /// `COUNT(*) FROM practice_days` -- total days kept, the permanent
+  /// number that never resets (strategy §6.8).
+  Future<int> getTotalPracticeDays() async {
+    final db = await database;
+    final result = await db.rawQuery(
+      'SELECT COUNT(*) as count FROM practice_days',
+    );
+    return Sqflite.firstIntValue(result) ?? 0;
+  }
+
+  /// Walks `practice_days` backwards from today. If today has no row yet
+  /// (the devotee hasn't opened the app today), starts from yesterday
+  /// instead so an in-progress day doesn't zero out an unbroken streak.
+  Future<int> getCurrentContinuity() async {
+    final db = await database;
+    final rows = await db.query('practice_days', columns: ['day']);
+    final keptDays = rows.map((row) => row['day'] as String).toSet();
+
+    final now = DateTime.now();
+    var cursor = DateTime(now.year, now.month, now.day);
+    if (!keptDays.contains(_isoDate(cursor))) {
+      cursor = cursor.subtract(const Duration(days: 1));
+    }
+
+    var continuity = 0;
+    while (keptDays.contains(_isoDate(cursor))) {
+      continuity++;
+      cursor = cursor.subtract(const Duration(days: 1));
+    }
+    return continuity;
+  }
+
+  String _isoDate(DateTime date) {
+    final y = date.year.toString().padLeft(4, '0');
+    final m = date.month.toString().padLeft(2, '0');
+    final d = date.day.toString().padLeft(2, '0');
+    return '$y-$m-$d';
+  }
+
+  Future<List<String>> getPracticeDaysInRange(String from, String to) async {
+    final db = await database;
+    final rows = await db.query(
+      'practice_days',
+      columns: ['day'],
+      where: 'day >= ? AND day <= ?',
+      whereArgs: [from, to],
+      orderBy: 'day',
+    );
+    return rows.map((row) => row['day'] as String).toList();
+  }
+
+  /// Completed-song counts grouped by temple (`songs.place`), for the
+  /// per-temple progress bars (T2.5) and Arupadai Veedu panels (T2.3).
+  Future<Map<String, int>> getCompletedCountByTemple() async {
+    final db = await database;
+    final rows = await db.rawQuery('''
+      SELECT s.place as place, COUNT(DISTINCT rl.song_id) as count
+      FROM reading_log rl
+      INNER JOIN songs s ON s.id = rl.song_id
+      WHERE rl.completed = 1
+      GROUP BY s.place
+    ''');
+
+    final result = <String, int>{};
+    for (final row in rows) {
+      final place = row['place'] as String?;
+      if (place == null || place.isEmpty) continue;
+      result[place] = (row['count'] as int?) ?? 0;
+    }
+    return result;
+  }
+
+  Future<List<int>> getCompletedSongIds() async {
+    final db = await database;
+    final rows = await db.query(
+      'reading_log',
+      columns: ['song_id'],
+      where: 'completed = 1',
+      distinct: true,
+    );
+    return rows.map((row) => row['song_id'] as int).toList();
   }
 }
