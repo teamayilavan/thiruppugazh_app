@@ -16,13 +16,17 @@ pre-1.5.0 experience with no observer, no timer, no writes.
   picker (daily practice / meanings / temples / just looking), then immediately the corpus framed as
   heritage ("Arunagirinathar composed over 16,000 hymns, 1,334 survived") plus one verse and its
   meaning — value before any ask.
-- **Daily practice card** on the home screen — local date, one deterministic daily verse
-  ("இன்றைய அருள்"), today's hymn ("இன்றைய பாடல்" — the lowest uncompleted song, tap to open),
-  a quiet completed-today state, and the `n / 1334` progress bar with total days kept. The same
-  verse/date pick is deterministic across every device worldwide — no server, no RNG.
+- **Daily practice card** on the home screen — a flat, divider-bounded row (no card chrome) showing
+  today's hymn ("இன்றைய பாடல்" — the lowest uncompleted song, tap to open) with a quiet
+  completed-today state. Pinned for the whole calendar day: finishing it does not advance the pick
+  to a new song, only the next local date does.
+- **Practice stats section** below the daily practice card — days practiced and songs read side by
+  side, each with an icon, plus a small caption naming the corpus size (1334 total).
 - **Reading dwell tracking** on the song detail screen — a song is marked read after 90 seconds of
-  genuine foreground reading or scrolling to the end, never on tap; time does not accrue while the
-  app is backgrounded.
+  genuine foreground reading, or after scrolling to the end once at least 20 real seconds have
+  passed (a bare scroll-to-end with no minimum time let a quick flick through a short song complete
+  it in a handful of seconds — credit on tap in disguise). Time does not accrue while the app is
+  backgrounded.
 - **Practice data in backup export/import** (`BackupService` version 1 → 2) — a reinstall no longer
   loses reading history. A v1 backup file still imports cleanly.
 - New `reading_log`, `practice_days`, `milestones` tables (DB schema v5 — v4 was already claimed by
