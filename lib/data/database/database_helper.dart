@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'dart:io';
+import 'package:flutter/foundation.dart' show visibleForTesting;
 import 'package:flutter/services.dart';
 import 'package:path/path.dart';
 import 'package:sqflite/sqflite.dart';
@@ -61,6 +62,14 @@ class DatabaseHelper {
       AppLogger.info("Opening existing database");
     }
 
+    return _openDatabaseWithMigrations(path);
+  }
+
+  /// The real onCreate/onUpgrade migration chain, factored out of
+  /// [_initDatabase] so [openDatabaseAtPathForTesting] can exercise the
+  /// exact same code against a path a test controls, instead of the
+  /// singleton's fixed asset-copy path.
+  Future<Database> _openDatabaseWithMigrations(String path) async {
     return await openDatabase(
       path,
       version: _dbVersion,
@@ -95,6 +104,31 @@ class DatabaseHelper {
         // For now, we rely on onCreate/onUpgrade
       },
     );
+  }
+
+  /// Test-only entry point: opens [path] through the same migration logic
+  /// production uses, bypassing the singleton's fixed asset-copy path.
+  /// Lets a test seed a database file at a specific schema/user_version
+  /// and exercise the real onCreate/onUpgrade callbacks against it -- see
+  /// test/data/database_migration_test.dart.
+  @visibleForTesting
+  Future<Database> openDatabaseAtPathForTesting(String path) {
+    return _openDatabaseWithMigrations(path);
+  }
+
+  /// Points the singleton's cached database at [db], so calls through the
+  /// normal `database` getter (every query method in this class) operate
+  /// on a test-controlled instance instead of the real asset-copy path.
+  /// Reset with [resetDatabaseForTesting] in the test's tearDown, since
+  /// `_databaseFuture` is a static field shared process-wide.
+  @visibleForTesting
+  void setDatabaseForTesting(Database db) {
+    _databaseFuture = Future.value(db);
+  }
+
+  @visibleForTesting
+  void resetDatabaseForTesting() {
+    _databaseFuture = null;
   }
 
   Future<void> _initializeSchema(Database db) async {
