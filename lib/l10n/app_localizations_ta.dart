@@ -473,4 +473,11 @@ class AppLocalizationsTa extends AppLocalizations {
 
   @override
   String get decreaseLyricsFontSize => 'பாடல் வரிகளின் எழுத்துருவை சிறிதாக்கு';
+
+  @override
+  String get dailyPractice => 'தினசரி பயிற்சி';
+
+  @override
+  String get dailyPracticeSubtitle =>
+      'இன்றைய பாடல், படித்தவை மற்றும் தொகுப்புகள். எளிய நூலகத்திற்கு அணைக்கவும்.';
 }

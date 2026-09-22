@@ -4,6 +4,7 @@ import 'package:url_launcher/url_launcher.dart';
 import '../../providers/theme_provider.dart';
 import '../../providers/language_provider.dart';
 import '../../providers/lyrics_language_provider.dart';
+import '../../providers/practice_settings_provider.dart';
 import '../../l10n/app_localizations.dart';
 import '../../services/backup_service.dart';
 import 'privacy_policy_screen.dart';
@@ -21,12 +22,23 @@ class SettingsScreen extends StatelessWidget {
     final themeProvider = Provider.of<ThemeProvider>(context);
     final languageProvider = Provider.of<LanguageProvider>(context);
     final lyricsLanguageProvider = Provider.of<LyricsLanguageProvider>(context);
+    final practiceSettingsProvider = Provider.of<PracticeSettingsProvider>(
+      context,
+    );
     final l10n = AppLocalizations.of(context)!;
 
     return Scaffold(
       appBar: AppBar(title: Text(l10n.settings)),
       body: ListView(
         children: [
+          SwitchListTile(
+            secondary: const Icon(Icons.self_improvement_outlined),
+            title: Text(l10n.dailyPractice),
+            subtitle: Text(l10n.dailyPracticeSubtitle),
+            value: practiceSettingsProvider.enabled,
+            onChanged: (value) => practiceSettingsProvider.setEnabled(value),
+          ),
+          const Divider(),
           ListTile(
             leading: const Icon(Icons.translate_outlined),
             title: Text(l10n.appLanguage),

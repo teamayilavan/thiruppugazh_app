@@ -471,4 +471,11 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get decreaseLyricsFontSize => 'Decrease lyrics font size';
+
+  @override
+  String get dailyPractice => 'Daily practice';
+
+  @override
+  String get dailyPracticeSubtitle =>
+      'Daily verse, reading progress and collections. Turn off for a plain library.';
 }

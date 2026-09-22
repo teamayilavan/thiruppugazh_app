@@ -167,5 +167,7 @@
   "viewSourceCode": "View Source Code on GitHub",
   "visitMayuragiriWebsite": "Visit Mayuragiri.com",
   "increaseLyricsFontSize": "Increase lyrics font size",
-  "decreaseLyricsFontSize": "Decrease lyrics font size"
+  "decreaseLyricsFontSize": "Decrease lyrics font size",
+  "dailyPractice": "Daily practice",
+  "dailyPracticeSubtitle": "Daily verse, reading progress and collections. Turn off for a plain library."
 }

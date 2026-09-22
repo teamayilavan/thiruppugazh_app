@@ -985,6 +985,18 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Decrease lyrics font size'**
   String get decreaseLyricsFontSize;
+
+  /// No description provided for @dailyPractice.
+  ///
+  /// In en, this message translates to:
+  /// **'Daily practice'**
+  String get dailyPractice;
+
+  /// No description provided for @dailyPracticeSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Daily verse, reading progress and collections. Turn off for a plain library.'**
+  String get dailyPracticeSubtitle;
 }
 
 class _AppLocalizationsDelegate

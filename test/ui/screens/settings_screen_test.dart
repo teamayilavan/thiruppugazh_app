@@ -5,6 +5,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:thiruppugazh/l10n/app_localizations.dart';
 import 'package:thiruppugazh/providers/language_provider.dart';
 import 'package:thiruppugazh/providers/lyrics_language_provider.dart';
+import 'package:thiruppugazh/providers/practice_settings_provider.dart';
 import 'package:thiruppugazh/providers/theme_provider.dart';
 import 'package:thiruppugazh/ui/screens/settings_screen.dart';
 
@@ -14,6 +15,7 @@ Widget _wrapped() {
       ChangeNotifierProvider(create: (_) => ThemeProvider()),
       ChangeNotifierProvider(create: (_) => LanguageProvider()),
       ChangeNotifierProvider(create: (_) => LyricsLanguageProvider()),
+      ChangeNotifierProvider(create: (_) => PracticeSettingsProvider()),
     ],
     child: const MaterialApp(
       localizationsDelegates: AppLocalizations.localizationsDelegates,
