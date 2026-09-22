@@ -20,6 +20,9 @@ class AppConstants {
   static const String practiceFirstRunPrefsKey = 'practice_first_run_date';
   static const String practiceReminderTimePrefsKey = 'practice_reminder_time';
   static const String practiceNotifyAskedPrefsKey = 'practice_notify_asked';
+  static const String practiceTodaysHymnDatePrefsKey =
+      'practice_todays_hymn_date';
+  static const String practiceTodaysHymnIdPrefsKey = 'practice_todays_hymn_id';
 
   // ==================== Practice Constants ====================
   static const int dwellSecondsToComplete = 90;

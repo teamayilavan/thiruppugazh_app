@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import '../constants/app_constants.dart';
 import '../data/database/database_helper.dart';
+import '../services/daily_selection_service.dart';
 
 /// Cached practice-progress numbers for the home screen and daily card.
 /// Loads once on construction and after every write; the home screen reads
@@ -18,9 +21,16 @@ class PracticeProvider with ChangeNotifier {
   int get continuity => _continuity;
   bool get todayComplete => _todayComplete;
 
+  /// Resolves once the constructor's initial [refresh] completes. Exists
+  /// so callers (tests especially) can join that exact load instead of
+  /// triggering a second, concurrent one -- awaiting a fresh [refresh]
+  /// call right after construction doesn't cancel the constructor's own
+  /// fire-and-forget one, which can then still be in flight later.
+  late final Future<void> ready;
+
   PracticeProvider({DatabaseHelper? databaseHelper})
     : _db = databaseHelper ?? DatabaseHelper() {
-    refresh();
+    ready = refresh();
   }
 
   Future<void> refresh() async {
@@ -38,6 +48,35 @@ class PracticeProvider with ChangeNotifier {
   ) async {
     await _db.recordDwell(songId, _today(), dwellSeconds, completed);
     await refresh();
+  }
+
+  /// Today's hymn, pinned for the whole calendar day: picked once (lowest
+  /// uncompleted song id, per [todaysHymnSongId]) and persisted, so
+  /// finishing it mid-day does not advance the pick to the next song --
+  /// it just shows completed until the day rolls over. Only a new local
+  /// date triggers a fresh pick. Returns null when the corpus is empty.
+  Future<int?> resolveTodaysHymnId() async {
+    final allIds = await _db.getAllSongIds();
+    if (allIds.isEmpty) return null;
+
+    final prefs = await SharedPreferences.getInstance();
+    final today = _today();
+    if (prefs.getString(AppConstants.practiceTodaysHymnDatePrefsKey) == today) {
+      final storedId = prefs.getInt(AppConstants.practiceTodaysHymnIdPrefsKey);
+      if (storedId != null && allIds.contains(storedId)) {
+        return storedId;
+      }
+    }
+
+    final completedIds = await _db.getCompletedSongIds();
+    final hymnId = todaysHymnSongId(
+      allSongIds: allIds,
+      completedSongIds: completedIds.toSet(),
+      date: DateTime.now(),
+    );
+    await prefs.setString(AppConstants.practiceTodaysHymnDatePrefsKey, today);
+    await prefs.setInt(AppConstants.practiceTodaysHymnIdPrefsKey, hymnId);
+    return hymnId;
   }
 
   String _today() {

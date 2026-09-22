@@ -7,12 +7,13 @@ import '../../l10n/app_localizations.dart';
 import '../../providers/lyrics_language_provider.dart';
 import '../../providers/practice_provider.dart';
 import '../../providers/practice_settings_provider.dart';
-import '../../services/daily_selection_service.dart';
 import '../../theme/app_theme.dart';
 import '../screens/song_detail_screen.dart';
 
-/// Today's hymn (இன்றைய பாடல்) as a clean, tappable card: the lowest
-/// uncompleted song id, with a quiet completed-today state. Deliberately
+/// Today's hymn (இன்றைய பாடல்), pinned for the whole calendar day via
+/// [PracticeProvider.resolveTodaysHymnId] -- finishing it does not advance
+/// the pick to a new song; only the next local date does. Shown as a
+/// clean, tappable row with a quiet completed-today state. Deliberately
 /// minimal -- no date, no daily verse -- see [PracticeStatsSection] for
 /// the days-practiced/songs-read numbers, now a separate block below it.
 ///
@@ -45,20 +46,14 @@ class _DailyPracticeCardState extends State<DailyPracticeCard> {
 
   Future<void> _loadTodaysHymn() async {
     final repo = Provider.of<SongRepository>(context, listen: false);
+    final practice = Provider.of<PracticeProvider>(context, listen: false);
 
     try {
-      final allIds = await repo.getAllSongIds();
-      if (allIds.isEmpty) {
+      final hymnId = await practice.resolveTodaysHymnId();
+      if (hymnId == null) {
         if (mounted) setState(() => _loading = false);
         return;
       }
-      final completedIds = await repo.getCompletedSongIds();
-
-      final hymnId = todaysHymnSongId(
-        allSongIds: allIds,
-        completedSongIds: completedIds.toSet(),
-        date: DateTime.now(),
-      );
       final hymn = await repo.getSongById(hymnId);
 
       if (!mounted) return;
