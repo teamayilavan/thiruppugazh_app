@@ -1027,6 +1027,48 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'{days} days of practice'**
   String totalDaysKeptLabel(Object days);
+
+  /// No description provided for @onboardingTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Why are you here?'**
+  String get onboardingTitle;
+
+  /// No description provided for @sankalpamDailyPractice.
+  ///
+  /// In en, this message translates to:
+  /// **'A daily practice'**
+  String get sankalpamDailyPractice;
+
+  /// No description provided for @sankalpamMeanings.
+  ///
+  /// In en, this message translates to:
+  /// **'To understand the meanings'**
+  String get sankalpamMeanings;
+
+  /// No description provided for @sankalpamTemples.
+  ///
+  /// In en, this message translates to:
+  /// **'Temple by temple'**
+  String get sankalpamTemples;
+
+  /// No description provided for @sankalpamJustLooking.
+  ///
+  /// In en, this message translates to:
+  /// **'Just looking'**
+  String get sankalpamJustLooking;
+
+  /// No description provided for @onboardingHeritageLine.
+  ///
+  /// In en, this message translates to:
+  /// **'Arunagirinathar composed over 16,000 hymns. 1,334 survived. You are one of the people keeping them read.'**
+  String get onboardingHeritageLine;
+
+  /// No description provided for @onboardingContinue.
+  ///
+  /// In en, this message translates to:
+  /// **'Continue'**
+  String get onboardingContinue;
 }
 
 class _AppLocalizationsDelegate

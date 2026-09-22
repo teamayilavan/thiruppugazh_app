@@ -3,6 +3,7 @@ import 'dart:io';
 
 import 'categories_screen.dart';
 import 'home_screen.dart';
+import 'onboarding_screen.dart';
 import 'temples_screen.dart';
 import 'settings_screen.dart';
 import 'highlights_notes_screen.dart';
@@ -12,6 +13,7 @@ import '../../data/repositories/song_repository.dart';
 import 'song_detail_screen.dart';
 import '../../constants/app_constants.dart';
 import '../../l10n/app_localizations.dart';
+import '../../providers/practice_settings_provider.dart';
 
 class MainWrapper extends StatefulWidget {
   const MainWrapper({super.key});
@@ -108,6 +110,16 @@ class _MainWrapperState extends State<MainWrapper> {
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
     final l10n = AppLocalizations.of(context)!;
+
+    // Shown once, before any of the app's normal navigation -- swaps
+    // away on its own once PracticeSettingsProvider.onboardingComplete
+    // flips true (T1.9), no explicit navigation call needed.
+    final onboardingComplete = context
+        .watch<PracticeSettingsProvider>()
+        .onboardingComplete;
+    if (!onboardingComplete) {
+      return const OnboardingScreen();
+    }
 
     return Scaffold(
       body: Column(

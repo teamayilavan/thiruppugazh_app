@@ -165,5 +165,12 @@
   "todaysHymn": "இன்றைய பாடல்",
   "completedToday": "இன்று நிறைவு",
   "practiceProgressLabel": "படித்தவை: {completed} / {total}",
-  "totalDaysKeptLabel": "{days} நாட்கள் பயிற்சி"
+  "totalDaysKeptLabel": "{days} நாட்கள் பயிற்சி",
+  "onboardingTitle": "ஏன் இங்கு வந்தீர்கள்?",
+  "sankalpamDailyPractice": "தினசரி பாராயணம்",
+  "sankalpamMeanings": "பொருள் அறிய",
+  "sankalpamTemples": "கோயில் தொடர்பு",
+  "sankalpamJustLooking": "சும்மா பார்க்க",
+  "onboardingHeritageLine": "அருணகிரிநாதர் இயற்றிய 16,000-க்கும் மேற்பட்ட திருப்புகழ் பாடல்களில் 1,334 மட்டுமே நமக்குக் கிடைத்துள்ளன. அவற்றைப் படித்துப் பாதுகாக்கும் ஒருவராக நீங்களும் இணைகிறீர்கள்.",
+  "onboardingContinue": "தொடர்வோம்"
 }

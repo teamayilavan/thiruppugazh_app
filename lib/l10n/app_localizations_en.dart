@@ -497,4 +497,26 @@ class AppLocalizationsEn extends AppLocalizations {
   String totalDaysKeptLabel(Object days) {
     return '$days days of practice';
   }
+
+  @override
+  String get onboardingTitle => 'Why are you here?';
+
+  @override
+  String get sankalpamDailyPractice => 'A daily practice';
+
+  @override
+  String get sankalpamMeanings => 'To understand the meanings';
+
+  @override
+  String get sankalpamTemples => 'Temple by temple';
+
+  @override
+  String get sankalpamJustLooking => 'Just looking';
+
+  @override
+  String get onboardingHeritageLine =>
+      'Arunagirinathar composed over 16,000 hymns. 1,334 survived. You are one of the people keeping them read.';
+
+  @override
+  String get onboardingContinue => 'Continue';
 }

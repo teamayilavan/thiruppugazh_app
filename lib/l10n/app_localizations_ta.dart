@@ -499,4 +499,26 @@ class AppLocalizationsTa extends AppLocalizations {
   String totalDaysKeptLabel(Object days) {
     return '$days நாட்கள் பயிற்சி';
   }
+
+  @override
+  String get onboardingTitle => 'ஏன் இங்கு வந்தீர்கள்?';
+
+  @override
+  String get sankalpamDailyPractice => 'தினசரி பாராயணம்';
+
+  @override
+  String get sankalpamMeanings => 'பொருள் அறிய';
+
+  @override
+  String get sankalpamTemples => 'கோயில் தொடர்பு';
+
+  @override
+  String get sankalpamJustLooking => 'சும்மா பார்க்க';
+
+  @override
+  String get onboardingHeritageLine =>
+      'அருணகிரிநாதர் இயற்றிய 16,000-க்கும் மேற்பட்ட திருப்புகழ் பாடல்களில் 1,334 மட்டுமே நமக்குக் கிடைத்துள்ளன. அவற்றைப் படித்துப் பாதுகாக்கும் ஒருவராக நீங்களும் இணைகிறீர்கள்.';
+
+  @override
+  String get onboardingContinue => 'தொடர்வோம்';
 }

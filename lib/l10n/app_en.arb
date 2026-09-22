@@ -174,5 +174,12 @@
   "todaysHymn": "Today's Hymn",
   "completedToday": "Completed today",
   "practiceProgressLabel": "Read: {completed} / {total}",
-  "totalDaysKeptLabel": "{days} days of practice"
+  "totalDaysKeptLabel": "{days} days of practice",
+  "onboardingTitle": "Why are you here?",
+  "sankalpamDailyPractice": "A daily practice",
+  "sankalpamMeanings": "To understand the meanings",
+  "sankalpamTemples": "Temple by temple",
+  "sankalpamJustLooking": "Just looking",
+  "onboardingHeritageLine": "Arunagirinathar composed over 16,000 hymns. 1,334 survived. You are one of the people keeping them read.",
+  "onboardingContinue": "Continue"
 }
