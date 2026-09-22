@@ -482,22 +482,20 @@ class AppLocalizationsTa extends AppLocalizations {
       'இன்றைய பாடல், படித்தவை மற்றும் தொகுப்புகள். எளிய நூலகத்திற்கு அணைக்கவும்.';
 
   @override
-  String get todaysGrace => 'இன்றைய அருள்';
-
-  @override
   String get todaysHymn => 'இன்றைய பாடல்';
 
   @override
   String get completedToday => 'இன்று நிறைவு';
 
   @override
-  String practiceProgressLabel(Object completed, Object total) {
-    return 'படித்தவை: $completed / $total';
-  }
+  String get daysPracticedLabel => 'பயின்ற நாட்கள்';
 
   @override
-  String totalDaysKeptLabel(Object days) {
-    return '$days நாட்கள் பயிற்சி';
+  String get songsReadLabel => 'படித்த பாடல்கள்';
+
+  @override
+  String totalSongsCaption(Object total) {
+    return 'மொத்தம் $total பாடல்கள்';
   }
 
   @override

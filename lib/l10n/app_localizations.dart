@@ -998,12 +998,6 @@ abstract class AppLocalizations {
   /// **'Daily verse, reading progress and collections. Turn off for a plain library.'**
   String get dailyPracticeSubtitle;
 
-  /// No description provided for @todaysGrace.
-  ///
-  /// In en, this message translates to:
-  /// **'Today\'s Grace'**
-  String get todaysGrace;
-
   /// No description provided for @todaysHymn.
   ///
   /// In en, this message translates to:
@@ -1016,17 +1010,23 @@ abstract class AppLocalizations {
   /// **'Completed today'**
   String get completedToday;
 
-  /// No description provided for @practiceProgressLabel.
+  /// No description provided for @daysPracticedLabel.
   ///
   /// In en, this message translates to:
-  /// **'Read: {completed} / {total}'**
-  String practiceProgressLabel(Object completed, Object total);
+  /// **'Days practiced'**
+  String get daysPracticedLabel;
 
-  /// No description provided for @totalDaysKeptLabel.
+  /// No description provided for @songsReadLabel.
   ///
   /// In en, this message translates to:
-  /// **'{days} days of practice'**
-  String totalDaysKeptLabel(Object days);
+  /// **'Songs read'**
+  String get songsReadLabel;
+
+  /// No description provided for @totalSongsCaption.
+  ///
+  /// In en, this message translates to:
+  /// **'{total} songs in total'**
+  String totalSongsCaption(Object total);
 
   /// No description provided for @onboardingTitle.
   ///

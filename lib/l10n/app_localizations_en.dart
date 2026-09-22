@@ -480,22 +480,20 @@ class AppLocalizationsEn extends AppLocalizations {
       'Daily verse, reading progress and collections. Turn off for a plain library.';
 
   @override
-  String get todaysGrace => 'Today\'s Grace';
-
-  @override
   String get todaysHymn => 'Today\'s Hymn';
 
   @override
   String get completedToday => 'Completed today';
 
   @override
-  String practiceProgressLabel(Object completed, Object total) {
-    return 'Read: $completed / $total';
-  }
+  String get daysPracticedLabel => 'Days practiced';
 
   @override
-  String totalDaysKeptLabel(Object days) {
-    return '$days days of practice';
+  String get songsReadLabel => 'Songs read';
+
+  @override
+  String totalSongsCaption(Object total) {
+    return '$total songs in total';
   }
 
   @override
