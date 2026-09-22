@@ -15,6 +15,26 @@ class AppConstants {
   static const String languagePrefsKey = 'app_language';
   static const String lyricsLanguagePrefsKey = 'lyrics_language';
   static const String lyricsFontSizePrefsKey = 'lyrics_font_size';
+  static const String practiceEnabledPrefsKey = 'practice_enabled';
+  static const String practiceSankalpamPrefsKey = 'practice_sankalpam';
+  static const String practiceFirstRunPrefsKey = 'practice_first_run_date';
+  static const String practiceReminderTimePrefsKey = 'practice_reminder_time';
+  static const String practiceNotifyAskedPrefsKey = 'practice_notify_asked';
+
+  // ==================== Practice Constants ====================
+  static const int dwellSecondsToComplete = 90;
+  static const int corpusSize = 1334; // total songs; asserted in tests
+  static const int mandalamDays = 48;
+  static const List<int> milestoneCounts = [
+    6,
+    21,
+    48,
+    108,
+    216,
+    540,
+    1008,
+    1334,
+  ];
 
   // ==================== Deep Link ====================
   static const String deepLinkDomain = 'thiruppugazh.ayilavan.org';
