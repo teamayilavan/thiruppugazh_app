@@ -2,6 +2,48 @@
 
 Notable changes to this project. Format loosely follows [Keep a Changelog](https://keepachangelog.com/).
 
+## [1.5.0+7] — Phase 1 of the gamification plan: "The Daily Loop"
+
+Everything below landed after `1.4.0+6` (the mayuragiri word-separated lyrics release). Implements
+Phase 1 of [`docs/gamification-implementation-plan.md`](docs/gamification-implementation-plan.md) —
+see [`docs/gamification-strategy.md`](docs/gamification-strategy.md) for the *why*. The whole layer
+is opt-in: off by default, and `PracticeSettingsProvider.enabled == false` restores the exact
+pre-1.5.0 experience with no observer, no timer, no writes.
+
+### Added
+- **Daily practice toggle** in Settings — the master opt-out, first item in the list, off by default.
+- **Sankalpam onboarding** — shown once on first run, before the normal app UI: a four-option intent
+  picker (daily practice / meanings / temples / just looking), then immediately the corpus framed as
+  heritage ("Arunagirinathar composed over 16,000 hymns, 1,334 survived") plus one verse and its
+  meaning — value before any ask.
+- **Daily practice card** on the home screen — local date, one deterministic daily verse
+  ("இன்றைய அருள்"), today's hymn ("இன்றைய பாடல்" — the lowest uncompleted song, tap to open),
+  a quiet completed-today state, and the `n / 1334` progress bar with total days kept. The same
+  verse/date pick is deterministic across every device worldwide — no server, no RNG.
+- **Reading dwell tracking** on the song detail screen — a song is marked read after 90 seconds of
+  genuine foreground reading or scrolling to the end, never on tap; time does not accrue while the
+  app is backgrounded.
+- **Practice data in backup export/import** (`BackupService` version 1 → 2) — a reinstall no longer
+  loses reading history. A v1 backup file still imports cleanly.
+- New `reading_log`, `practice_days`, `milestones` tables (DB schema v5 — v4 was already claimed by
+  the mayuragiri merge; see the revision note at the top of the implementation plan).
+
+### Privacy
+- Nothing new leaves the device. No network call transmits reading history, streaks, or the
+  onboarding choice — same offline-only posture as the rest of the app.
+
+## [1.4.0+6] — Mayuragiri word-separated lyrics
+
+Everything below landed after `1.3.0+5`.
+
+### Added
+- **Word-separated (padham) lyrics** for all 1,334 songs, sourced from mayuragiri.info and scraped
+  offline at build time (`scripts/mayuragiri_scraper.py`, patched into the DB by
+  `scripts/build_db.py` via `assets/mayuragiri_data.json`). Shown on the song detail screen ahead of
+  the meaning section, with a link back to the source page; credited on the Settings screen.
+- New `mayuragiri_lyrics_separated` / `mayuragiri_english_lyrics_separated` columns on `songs`
+  (DB schema v4).
+
 ## [1.3.0+5] — 2026-08-25
 
 Everything below landed after `1.2.0+4` (the last version bump, part of the Android 16 target SDK compliance fix).

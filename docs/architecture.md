@@ -4,13 +4,17 @@ The application follows a standard Flutter navigation pattern using a `BottomNav
 
 ## Screen Hierarchy
 
+### Onboarding (`OnboardingScreen`)
+Shown by `MainWrapper` **in place of** its normal `Scaffold` whenever `PracticeSettingsProvider.onboardingComplete` is false — a first-run gate, not a tab. One screen, one in-place state transition (picker → value-first reveal), no carousel: a sankalpam picker (four options: daily practice, meanings, temples, just looking), then immediately the corpus framed as heritage ("16,000 composed, 1,334 survived") plus one date-seeded verse and its meaning. The chosen sankalpam is persisted only on the final "continue" tap (`PracticeSettingsProvider.setSankalpam` + `markFirstRunIfUnset`) — committing on tile-tap instead would flip `onboardingComplete` immediately and `MainWrapper` (which watches it) would swap the screen away before the reveal ever showed. No explicit navigation call dismisses it; `MainWrapper` reacts to the provider flipping. See `docs/gamification-implementation-plan.md` T1.9.
+
 ### Main Wrapper (`MainWrapper`)
-The root widget for the authenticated/main flow. It manages the bottom navigation state and switches between the following tabs:
+The root widget for the authenticated/main flow (once onboarding is complete). It manages the bottom navigation state and switches between the following tabs:
 
 1.  **Home (`HomeScreen`)**
     -   Displays the list of all songs.
     -   Key Features: Search bar, Filter options, Pull-to-refresh.
     -   **Random song**: a small FAB (shuffle icon) stacked above the search FAB opens a uniformly random song, queried DB-wide (`SELECT * FROM songs ORDER BY RANDOM() LIMIT 1` — `DatabaseHelper.getRandomSong()`), not just from whatever page happens to be loaded.
+    -   **Daily practice card** (`DailyPracticeCard`, T1.7): the first sliver above the song list, entirely absent (`SizedBox.shrink()`) when `PracticeSettingsProvider.enabled` is false. Shows the local date, one date-seeded verse+meaning ("இன்றைய அருள்"), today's hymn ("இன்றைய பாடல்" — the lowest uncompleted song id, tap opens `SongDetailScreen`) with a quiet completed-today state, and the `n / corpus` progress bar with total days kept. Colors come from `AppColorExtension`, never hardcoded.
     -   **Navigation**: Tapping a song navigates to `SongDetailScreen`.
 
 2.  **Temples (`TemplesScreen`)**
@@ -26,10 +30,10 @@ The root widget for the authenticated/main flow. It manages the bottom navigatio
     -   **Navigation**: Tapping an item navigates to the respective `SongDetailScreen`.
 
 5.  **Settings (`SettingsScreen`)**
-    -   App configuration: Theme, App Language (UI), Lyrics Language (content — Tamil or, where available, English), Privacy Policy, Credits.
+    -   App configuration: **Daily practice** (master opt-out for the whole gamification layer, first item, off by default — see below), Theme, App Language (UI), Lyrics Language (content — Tamil or, where available, English), Privacy Policy, Credits.
     -   **Navigation**: 
         -   Privacy Policy -> `PrivacyPolicyScreen`
-        -   Data Import/Export -> `BackupService`
+        -   Data Import/Export -> `BackupService` (also covers `reading_log`/`practice_days`/`milestones` as of backup version 2 — T1.8)
 
 ### Detail Screens
 
@@ -41,6 +45,7 @@ The core view for reading a song.
     -   Create Highlights (text selection).
     -   Add/Edit Notes.
     -   Share content.
+    -   **Dwell tracking** (T1.6, only when `PracticeSettingsProvider.enabled`): a `WidgetsBindingObserver` pauses a wall-clock accumulator on `inactive`/`hidden`/`paused`/`detached` and resumes it on `resumed` — never a `Timer.periodic`, which overcounts. Completes on either 90s of accumulated foreground time or the lyrics scroll controller reaching `maxScrollExtent` (guarded so a song short enough to need no scrolling falls through to the dwell timer instead of completing on open). Flushes to `PracticeProvider.recordCompletion` on completion and in `dispose`.
 
 #### `AddToCategoryDialog`
 Shown from `SongDetailScreen`'s "add to categories" FAB.
@@ -71,3 +76,5 @@ Displays the privacy policy in Tamil and English.
 -   `ThemeProvider`: Manages light/dark mode.
 -   `LanguageProvider`: Manages the app's UI localization (English/Tamil).
 -   `LyricsLanguageProvider`: Manages which language *song content* (lyrics, meanings, tune) displays in — independent of the UI language above; falls back to Tamil for the 7 songs without English content.
+-   `PracticeSettingsProvider`: Master opt-out (`enabled`, default `false`) and onboarding state (`sankalpam`, `daysSinceFirstRun`) for the practice-tracking layer. Every practice feature checks `enabled` and renders/does nothing when it's false.
+-   `PracticeProvider`: Caches `completedCount` / `totalDays` / `continuity` / `todayComplete` for the home screen, loaded on construction and refreshed after `recordCompletion` — never scans `reading_log` on build.
