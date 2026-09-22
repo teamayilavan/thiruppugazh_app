@@ -24,6 +24,9 @@ class BackupService {
       final songCategories = await _dbHelper.getAllSongCategories();
       final notes = await _dbHelper.getAllNotes();
       final highlights = await _dbHelper.getAllHighlights();
+      final readingLog = await _dbHelper.getAllReadingLog();
+      final practiceDays = await _dbHelper.getAllPracticeDays();
+      final milestones = await _dbHelper.getAllMilestones();
 
       // 2. Structure data
       // Filter out 'Favorites' category (ID 1) from explicit export if handled via isFavorite flag,
@@ -31,7 +34,11 @@ class BackupService {
       final customCategories = categories.where((c) => c.id != 1).toList();
 
       final Map<String, dynamic> exportMap = {
-        'version': 1,
+        // v2 (T1.8): adds reading_log/practice_days/milestones. A v1 file
+        // has none of those keys and must still import cleanly -- losing
+        // years of practice to a reinstall is the one place in this
+        // design where loss would be real.
+        'version': 2,
         'exported_at': DateTime.now().toIso8601String(),
         'app_name': 'Thiruppugazh',
         'favorites': favoriteSongs.map((s) => s.id).toList(),
@@ -44,6 +51,9 @@ class BackupService {
         }).toList(),
         'notes': notes.map((n) => n.toMap()).toList(),
         'highlights': highlights.map((h) => h.toMap()).toList(),
+        'reading_log': readingLog,
+        'practice_days': practiceDays,
+        'milestones': milestones,
       };
 
       // 3. Create JSON file
@@ -161,6 +171,22 @@ class BackupService {
         await _dbHelper.addHighlight(hl);
       }
 
+      // Practice data (T1.8, absent in a v1 backup -- ?? [] covers that)
+      final List<dynamic> readingLogList = importMap['reading_log'] ?? [];
+      for (final row in readingLogList) {
+        await _dbHelper.upsertReadingLogRow(Map<String, dynamic>.from(row));
+      }
+
+      final List<dynamic> practiceDaysList = importMap['practice_days'] ?? [];
+      for (final row in practiceDaysList) {
+        await _dbHelper.upsertPracticeDayRow(Map<String, dynamic>.from(row));
+      }
+
+      final List<dynamic> milestonesList = importMap['milestones'] ?? [];
+      for (final row in milestonesList) {
+        await _dbHelper.upsertMilestoneRow(Map<String, dynamic>.from(row));
+      }
+
       // Close progress dialog
       if (context.mounted) {
         Navigator.of(context).pop(); // Close dialog
@@ -232,6 +258,70 @@ class BackupService {
     final highlights = map['highlights'];
     if (highlights != null && highlights is! List) {
       throw const FormatException('highlights must be a list');
+    }
+
+    // v2 keys (T1.8) -- absent entirely in a v1 backup, which must still
+    // import cleanly, so each is only checked when present.
+    final readingLog = map['reading_log'];
+    if (readingLog != null) {
+      if (readingLog is! List) {
+        throw const FormatException('reading_log must be a list');
+      }
+      if (readingLog.length > 2000000) {
+        throw const FormatException('reading_log list is unexpectedly large');
+      }
+      for (final row in readingLog) {
+        if (row is! Map) {
+          throw const FormatException('each reading_log row must be an object');
+        }
+        if (row['song_id'] is! int || row['read_on'] is! String) {
+          throw const FormatException(
+            'reading_log rows must have an int song_id and string read_on',
+          );
+        }
+      }
+    }
+
+    final practiceDays = map['practice_days'];
+    if (practiceDays != null) {
+      if (practiceDays is! List) {
+        throw const FormatException('practice_days must be a list');
+      }
+      if (practiceDays.length > 100000) {
+        throw const FormatException('practice_days list is unexpectedly large');
+      }
+      for (final row in practiceDays) {
+        if (row is! Map) {
+          throw const FormatException(
+            'each practice_days row must be an object',
+          );
+        }
+        if (row['day'] is! String) {
+          throw const FormatException(
+            'practice_days rows must have a string day',
+          );
+        }
+      }
+    }
+
+    final milestones = map['milestones'];
+    if (milestones != null) {
+      if (milestones is! List) {
+        throw const FormatException('milestones must be a list');
+      }
+      if (milestones.length > 10000) {
+        throw const FormatException('milestones list is unexpectedly large');
+      }
+      for (final row in milestones) {
+        if (row is! Map) {
+          throw const FormatException('each milestone row must be an object');
+        }
+        if (row['key'] is! String || row['achieved_on'] is! String) {
+          throw const FormatException(
+            'milestone rows must have a string key and achieved_on',
+          );
+        }
+      }
     }
   }
 }

@@ -1063,4 +1063,56 @@ class DatabaseHelper {
     if (rows.isEmpty) return false;
     return ((rows.first['songs_completed'] as int?) ?? 0) > 0;
   }
+
+  // --- Practice Backup Support (T1.8) ---
+  // Raw rows in, raw rows out: BackupService round-trips these tables
+  // unmodified, so there is no model conversion here (mirrors
+  // getAllSongCategories()'s raw-map style, not the Note/Highlight
+  // toMap()/fromMap() style).
+
+  Future<List<Map<String, dynamic>>> getAllReadingLog() async {
+    final db = await database;
+    return db.query('reading_log');
+  }
+
+  Future<List<Map<String, dynamic>>> getAllPracticeDays() async {
+    final db = await database;
+    return db.query('practice_days');
+  }
+
+  Future<List<Map<String, dynamic>>> getAllMilestones() async {
+    final db = await database;
+    return db.query('milestones');
+  }
+
+  /// Upserts one `reading_log` row on import. `id` is AUTOINCREMENT and
+  /// not part of the row's real identity (`UNIQUE(song_id, read_on)` is),
+  /// so it's deliberately omitted -- a conflicting row is replaced, a new
+  /// one gets a fresh id.
+  Future<void> upsertReadingLogRow(Map<String, dynamic> row) async {
+    final db = await database;
+    await db.insert('reading_log', {
+      'song_id': row['song_id'],
+      'read_on': row['read_on'],
+      'dwell_seconds': row['dwell_seconds'],
+      'completed': row['completed'],
+    }, conflictAlgorithm: ConflictAlgorithm.replace);
+  }
+
+  Future<void> upsertPracticeDayRow(Map<String, dynamic> row) async {
+    final db = await database;
+    await db.insert('practice_days', {
+      'day': row['day'],
+      'songs_completed': row['songs_completed'],
+      'verse_seen': row['verse_seen'],
+    }, conflictAlgorithm: ConflictAlgorithm.replace);
+  }
+
+  Future<void> upsertMilestoneRow(Map<String, dynamic> row) async {
+    final db = await database;
+    await db.insert('milestones', {
+      'key': row['key'],
+      'achieved_on': row['achieved_on'],
+    }, conflictAlgorithm: ConflictAlgorithm.replace);
+  }
 }
