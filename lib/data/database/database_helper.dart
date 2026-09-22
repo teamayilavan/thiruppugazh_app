@@ -1038,4 +1038,20 @@ class DatabaseHelper {
     );
     return rows.map((row) => row['song_id'] as int).toList();
   }
+
+  /// Whether [day]'s `practice_days` row shows at least one completed
+  /// song -- the "today complete" state PracticeProvider caches for the
+  /// daily card (T1.4/T1.7).
+  Future<bool> isDayComplete(String day) async {
+    final db = await database;
+    final rows = await db.query(
+      'practice_days',
+      columns: ['songs_completed'],
+      where: 'day = ?',
+      whereArgs: [day],
+      limit: 1,
+    );
+    if (rows.isEmpty) return false;
+    return ((rows.first['songs_completed'] as int?) ?? 0) > 0;
+  }
 }
