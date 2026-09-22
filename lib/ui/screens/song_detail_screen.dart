@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:share_plus/share_plus.dart';
@@ -13,6 +15,8 @@ import '../../constants/app_constants.dart';
 import '../../l10n/app_localizations.dart';
 import '../../providers/lyrics_language_provider.dart';
 import '../../providers/lyrics_font_size_provider.dart';
+import '../../providers/practice_provider.dart';
+import '../../providers/practice_settings_provider.dart';
 
 List<String> selectMayuragiriLyrics(Song song, bool useEnglish) {
   return useEnglish
@@ -28,7 +32,8 @@ class SongDetailScreen extends StatefulWidget {
   State<SongDetailScreen> createState() => _SongDetailScreenState();
 }
 
-class _SongDetailScreenState extends State<SongDetailScreen> {
+class _SongDetailScreenState extends State<SongDetailScreen>
+    with WidgetsBindingObserver {
   bool _isFavorite = false;
   bool _isFavoriteLoading = false;
   List<int> _categoryIds = [];
@@ -36,6 +41,19 @@ class _SongDetailScreenState extends State<SongDetailScreen> {
   Note? _note;
   final List<VerseRange> _verseRanges = [];
   LyricsLanguage _lyricsLanguage = LyricsLanguage.tamil;
+
+  // --- Dwell tracking (T1.6) ---
+  // Wall-clock accumulator, not Timer.periodic: a periodic tick keeps
+  // running in ways that overcount (isolate scheduling, debugger pauses),
+  // so instead we stamp DateTime on resume and add the delta on pause.
+  static const double _scrollEndEpsilon = 24.0; // px
+  final ScrollController _scrollController = ScrollController();
+  late final bool _practiceTrackingEnabled;
+  late final PracticeProvider _practiceProvider;
+  DateTime? _resumedAt;
+  int _accumulatedForegroundSeconds = 0;
+  bool _completedThisVisit = false;
+  Timer? _completionTimer;
 
   bool get _useEnglish =>
       _lyricsLanguage == LyricsLanguage.english &&
@@ -72,6 +90,20 @@ class _SongDetailScreenState extends State<SongDetailScreen> {
     super.initState();
     final repo = Provider.of<SongRepository>(context, listen: false);
     _loadCategoryInfo(repo);
+
+    _practiceTrackingEnabled = Provider.of<PracticeSettingsProvider>(
+      context,
+      listen: false,
+    ).enabled;
+    _practiceProvider = Provider.of<PracticeProvider>(context, listen: false);
+
+    // Entirely inert when the practice layer is off: no observer, no
+    // timer, no writes (standing rule 7).
+    if (_practiceTrackingEnabled) {
+      WidgetsBinding.instance.addObserver(this);
+      _scrollController.addListener(_onScroll);
+      _resumeForegroundTracking();
+    }
   }
 
   @override
@@ -80,6 +112,108 @@ class _SongDetailScreenState extends State<SongDetailScreen> {
     _lyricsLanguage = Provider.of<LyricsLanguageProvider>(
       context,
     ).lyricsLanguage;
+  }
+
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    if (!_practiceTrackingEnabled) return;
+    switch (state) {
+      case AppLifecycleState.resumed:
+        _resumeForegroundTracking();
+        break;
+      // A song must not accrue time while the phone is locked in a
+      // pocket -- pause on all three of these, not just `paused`.
+      case AppLifecycleState.inactive:
+      case AppLifecycleState.hidden:
+      case AppLifecycleState.paused:
+      case AppLifecycleState.detached:
+        _pauseForegroundTracking();
+        break;
+    }
+  }
+
+  /// Marks the start of a foreground interval and arms a one-shot timer
+  /// for however long remains until the dwell threshold -- not a
+  /// polling loop, a single deferred check that gets cancelled and
+  /// rearmed on every pause/resume.
+  void _resumeForegroundTracking() {
+    _resumedAt = DateTime.now();
+    if (_completedThisVisit) return;
+    final remaining =
+        AppConstants.dwellSecondsToComplete - _accumulatedForegroundSeconds;
+    _completionTimer?.cancel();
+    if (remaining <= 0) {
+      _markCompleteIfNeeded();
+    } else {
+      _completionTimer = Timer(Duration(seconds: remaining), () {
+        _accumulateForegroundTime();
+        _markCompleteIfNeeded();
+      });
+    }
+  }
+
+  void _pauseForegroundTracking() {
+    _completionTimer?.cancel();
+    _completionTimer = null;
+    _accumulateForegroundTime();
+  }
+
+  void _accumulateForegroundTime() {
+    final resumedAt = _resumedAt;
+    if (resumedAt == null) return;
+    final delta = DateTime.now().difference(resumedAt).inSeconds;
+    if (delta > 0) _accumulatedForegroundSeconds += delta;
+    _resumedAt = null;
+  }
+
+  void _onScroll() {
+    if (!_practiceTrackingEnabled ||
+        _completedThisVisit ||
+        !_scrollController.hasClients) {
+      return;
+    }
+    final position = _scrollController.position;
+    // maxScrollExtent stays 0 for a song short enough to need no
+    // scrolling -- guard so that case falls through to the dwell timer
+    // instead of completing instantly on open (never credit on tap,
+    // standing rule 5).
+    if (position.maxScrollExtent <= 0) return;
+    if (position.pixels >= position.maxScrollExtent - _scrollEndEpsilon) {
+      _markCompleteIfNeeded();
+    }
+  }
+
+  void _markCompleteIfNeeded() {
+    if (_completedThisVisit) return;
+    _completedThisVisit = true;
+    _completionTimer?.cancel();
+    _completionTimer = null;
+    _flushDwell();
+  }
+
+  void _flushDwell() {
+    if (!_practiceTrackingEnabled) return;
+    _practiceProvider.recordCompletion(
+      widget.song.id,
+      _accumulatedForegroundSeconds,
+      _completedThisVisit,
+    );
+  }
+
+  @override
+  void dispose() {
+    if (_practiceTrackingEnabled) {
+      WidgetsBinding.instance.removeObserver(this);
+      _completionTimer?.cancel();
+      // Popping this screen doesn't fire an app-lifecycle pause event --
+      // only backgrounding the whole app does -- so capture any trailing
+      // open interval here before the final flush.
+      _accumulateForegroundTime();
+      _flushDwell();
+      _scrollController.removeListener(_onScroll);
+    }
+    _scrollController.dispose();
+    super.dispose();
   }
 
   Future<void> _loadCategoryInfo(SongRepository repo) async {
@@ -473,6 +607,7 @@ ${_displayLyricsList.join('\n')}''';
 
     return Scaffold(
       body: CustomScrollView(
+        controller: _scrollController,
         slivers: [
           SliverToBoxAdapter(
             child: Column(
