@@ -72,6 +72,7 @@ class DatabaseHelper {
         // We need to ensure other tables exist and populate temples.
         await _initializeSchema(db);
         await _addIndexes(db);
+        await _createPracticeTables(db);
       },
       onUpgrade: (db, oldVersion, newVersion) async {
         if (oldVersion < 2) {
@@ -82,6 +83,9 @@ class DatabaseHelper {
         }
         if (oldVersion < 4) {
           await _migrateToV4(db);
+        }
+        if (oldVersion < 5) {
+          await _migrateToV5(db);
         }
       },
       onOpen: (db) async {
@@ -369,6 +373,53 @@ class DatabaseHelper {
       );
       // Non-fatal: Mayuragiri columns remain NULL, section stays hidden
     }
+  }
+
+  /// Creates the v5 practice-tracking tables (reading_log, practice_days,
+  /// milestones). Called from both onCreate and _migrateToV5 -- see the
+  /// migration trap note in docs/gamification-implementation-plan.md: a
+  /// fresh install never runs onUpgrade, so every new table must exist in
+  /// both paths or fresh installs crash on first read.
+  ///
+  /// `read_on` and `day` are local-date ISO strings (yyyy-MM-dd), never UTC
+  /// timestamps -- a practice day is a human day in the user's own timezone.
+  Future<void> _createPracticeTables(Database db) async {
+    await db.execute('''
+      CREATE TABLE IF NOT EXISTS reading_log(
+        id            INTEGER PRIMARY KEY AUTOINCREMENT,
+        song_id       INTEGER NOT NULL REFERENCES songs(id) ON DELETE CASCADE,
+        read_on       TEXT    NOT NULL,
+        dwell_seconds INTEGER NOT NULL DEFAULT 0,
+        completed     INTEGER NOT NULL DEFAULT 0,
+        UNIQUE(song_id, read_on)
+      )
+    ''');
+    await db.execute('''
+      CREATE INDEX IF NOT EXISTS idx_reading_log_read_on ON reading_log(read_on)
+    ''');
+    await db.execute('''
+      CREATE INDEX IF NOT EXISTS idx_reading_log_song_id ON reading_log(song_id)
+    ''');
+
+    await db.execute('''
+      CREATE TABLE IF NOT EXISTS practice_days(
+        day             TEXT PRIMARY KEY,
+        songs_completed INTEGER NOT NULL DEFAULT 0,
+        verse_seen      INTEGER NOT NULL DEFAULT 0
+      )
+    ''');
+
+    await db.execute('''
+      CREATE TABLE IF NOT EXISTS milestones(
+        key         TEXT PRIMARY KEY,
+        achieved_on TEXT NOT NULL
+      )
+    ''');
+  }
+
+  Future<void> _migrateToV5(Database db) async {
+    AppLogger.info('Running v5 migration: adding practice tracking tables');
+    await _createPracticeTables(db);
   }
 
   // --- Highlights Methods ---
