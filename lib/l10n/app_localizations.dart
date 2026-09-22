@@ -200,6 +200,12 @@ abstract class AppLocalizations {
   /// **'Lyrics'**
   String get lyrics;
 
+  /// No description provided for @wordSeparatedLyrics.
+  ///
+  /// In en, this message translates to:
+  /// **'Word-separated Lyrics'**
+  String get wordSeparatedLyrics;
+
   /// No description provided for @meaning.
   ///
   /// In en, this message translates to:
@@ -223,6 +229,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Open Kaumaram Page'**
   String get openKaumaramPage;
+
+  /// No description provided for @openMayuragiriPage.
+  ///
+  /// In en, this message translates to:
+  /// **'Open Mayuragiri Page'**
+  String get openMayuragiriPage;
 
   /// No description provided for @share.
   ///
@@ -475,6 +487,18 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Kaumaram website founders'**
   String get kaumaramCoFounders;
+
+  /// No description provided for @mayuragiriTeam.
+  ///
+  /// In en, this message translates to:
+  /// **'Mayuragiri.com Team'**
+  String get mayuragiriTeam;
+
+  /// No description provided for @mayuragiriCredit.
+  ///
+  /// In en, this message translates to:
+  /// **'Thiru. Subramaniyan, Devakottai'**
+  String get mayuragiriCredit;
 
   /// No description provided for @appDevelopment.
   ///
@@ -943,6 +967,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'View Source Code on GitHub'**
   String get viewSourceCode;
+
+  /// No description provided for @visitMayuragiriWebsite.
+  ///
+  /// In en, this message translates to:
+  /// **'Visit Mayuragiri.com'**
+  String get visitMayuragiriWebsite;
 
   /// No description provided for @increaseLyricsFontSize.
   ///

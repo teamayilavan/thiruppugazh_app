@@ -60,6 +60,9 @@ class AppLocalizationsTa extends AppLocalizations {
   String get lyrics => 'பாடல்';
 
   @override
+  String get wordSeparatedLyrics => 'பதம் பிரித்தது';
+
+  @override
   String get meaning => 'பொருள்';
 
   @override
@@ -70,6 +73,9 @@ class AppLocalizationsTa extends AppLocalizations {
 
   @override
   String get openKaumaramPage => 'கௌமாரம் பக்கத்தை திற';
+
+  @override
+  String get openMayuragiriPage => 'மயூரகிரி பக்கத்தை திற';
 
   @override
   String get share => 'பகிர்';
@@ -208,6 +214,12 @@ class AppLocalizationsTa extends AppLocalizations {
 
   @override
   String get kaumaramCoFounders => 'கௌமாரம் இணையதளம் நிறுவுனர்';
+
+  @override
+  String get mayuragiriTeam => 'மயூரகிரி.காம் குழுவினர்';
+
+  @override
+  String get mayuragiriCredit => 'திரு. சுப்பிரமணியன், தேவகோட்டை';
 
   @override
   String get appDevelopment => 'செயலி உருவாக்கம்';
@@ -452,6 +464,9 @@ class AppLocalizationsTa extends AppLocalizations {
 
   @override
   String get viewSourceCode => 'GitHub-இல் மூலக் குறியீட்டைக் காண்க';
+
+  @override
+  String get visitMayuragiriWebsite => 'மயூரகிரி.காம்-ஐப் பார்வையிடவும்';
 
   @override
   String get increaseLyricsFontSize => 'பாடல் வரிகளின் எழுத்துருவை பெரிதாக்கு';

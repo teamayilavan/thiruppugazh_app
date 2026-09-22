@@ -14,6 +14,12 @@ import '../../l10n/app_localizations.dart';
 import '../../providers/lyrics_language_provider.dart';
 import '../../providers/lyrics_font_size_provider.dart';
 
+List<String> selectMayuragiriLyrics(Song song, bool useEnglish) {
+  return useEnglish
+      ? song.mayuragiriEnglishLyricsSeparatedList
+      : song.mayuragiriLyricsSeparatedList;
+}
+
 class SongDetailScreen extends StatefulWidget {
   final Song song;
   const SongDetailScreen({super.key, required this.song});
@@ -57,6 +63,9 @@ class _SongDetailScreenState extends State<SongDetailScreen> {
 
   List<String> get _displayMeanings =>
       _useEnglish ? widget.song.englishMeaningsList : widget.song.meanings;
+
+  List<String> get _displayMayuragiriLyricsSeparated =>
+      selectMayuragiriLyrics(widget.song, _useEnglish);
 
   @override
   void initState() {
@@ -391,6 +400,28 @@ ${_displayLyricsList.join('\n')}''';
     }
   }
 
+  Future<void> _launchMayuragiriUrl() async {
+    final messenger = ScaffoldMessenger.of(context);
+
+    final url = Uri.parse(
+      'https://mayuragiri.com/thiruppugal${widget.song.kaumaramId}',
+    );
+
+    if (!_isValidUrl(url, ['mayuragiri.com', 'www.mayuragiri.com'])) {
+      messenger.showSnackBar(const SnackBar(content: Text('Invalid URL')));
+      return;
+    }
+
+    final confirmed = await _showUrlConfirmationDialog(context, 'Mayuragiri');
+    if (confirmed == true) {
+      if (!await launchUrl(url)) {
+        messenger.showSnackBar(
+          const SnackBar(content: Text('Could not launch Mayuragiri')),
+        );
+      }
+    }
+  }
+
   /// Validates URL against whitelist of trusted domains.
   bool _isValidUrl(Uri url, List<String> allowedDomains) {
     if (url.scheme != 'https') {
@@ -573,6 +604,8 @@ ${_displayLyricsList.join('\n')}''';
             ),
           ),
 
+          SliverToBoxAdapter(child: _buildMayuragiriLyricsSection(context)),
+
           SliverToBoxAdapter(
             child: Padding(
               padding: const EdgeInsets.symmetric(vertical: 32.0),
@@ -626,6 +659,13 @@ ${_displayLyricsList.join('\n')}''';
                     icon: const Icon(Icons.language),
                     label: Text(l10n.openKaumaramPage),
                     onPressed: _launchCustomUrl,
+                  ),
+                  const SizedBox(height: 12),
+                  FilledButton.tonalIcon(
+                    style: buttonStyle,
+                    icon: const Icon(Icons.language),
+                    label: Text(l10n.openMayuragiriPage),
+                    onPressed: _launchMayuragiriUrl,
                   ),
                   const SizedBox(height: 12),
                   FilledButton.tonalIcon(
@@ -785,6 +825,61 @@ ${_displayLyricsList.join('\n')}''';
               ),
             );
           }),
+        ],
+      ),
+    );
+  }
+
+  List<InlineSpan> _buildMayuragiriTextSpans(
+    BuildContext context,
+    List<String> lines,
+  ) {
+    final spans = <InlineSpan>[];
+    final tuneLength = _displayTuneList.length;
+    final lyricsFontSize = context.watch<LyricsFontSizeProvider>().fontSize;
+    final style = Theme.of(context).textTheme.bodyLarge?.copyWith(
+      fontSize: lyricsFontSize,
+      height: 1.5,
+      color: Theme.of(context).colorScheme.onSurface,
+    );
+
+    for (int i = 0; i < lines.length; i++) {
+      final paragraph = lines[i];
+      if (paragraph.trim().isEmpty) continue;
+
+      spans.add(TextSpan(text: paragraph, style: style));
+
+      final sep = (tuneLength > 0 && (i + 1) % tuneLength == 0)
+          ? '\n\n'
+          : '\n';
+      spans.add(TextSpan(text: sep));
+    }
+    return spans;
+  }
+
+  Widget _buildMayuragiriLyricsSection(BuildContext context) {
+    final lines = _displayMayuragiriLyricsSeparated;
+    if (lines.isEmpty) return const SizedBox.shrink();
+
+    final l10n = AppLocalizations.of(context)!;
+
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 16.0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            l10n.wordSeparatedLyrics,
+            style: Theme.of(
+              context,
+            ).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold),
+          ),
+          const SizedBox(height: 8),
+          const Divider(height: 16),
+          const SizedBox(height: 16),
+          SelectableText.rich(
+            TextSpan(children: _buildMayuragiriTextSpans(context, lines)),
+          ),
         ],
       ),
     );

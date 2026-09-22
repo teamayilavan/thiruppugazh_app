@@ -81,7 +81,9 @@ CREATE TABLE IF NOT EXISTS songs (
     english_lyrics_list  TEXT,
     english_words        TEXT,
     english_meanings_list TEXT,
-    english_pathavurai   TEXT
+    english_pathavurai   TEXT,
+    mayuragiri_lyrics_separated         TEXT,
+    mayuragiri_english_lyrics_separated TEXT
 )
 """
 
@@ -147,6 +149,7 @@ SONG_COLUMNS = [
     'english_title', 'english_venue', 'english_tune_list',
     'english_lyrics_list', 'english_words', 'english_meanings_list',
     'english_pathavurai',
+    'mayuragiri_lyrics_separated', 'mayuragiri_english_lyrics_separated',
 ]
 
 
@@ -211,6 +214,8 @@ def extract_song_row(data: dict) -> dict:
         'english_words':        json.dumps(en_words, ensure_ascii=False) if en_words is not None else None,
         'english_meanings_list': json.dumps(en_meanings, ensure_ascii=False) if en_meanings is not None else None,
         'english_pathavurai':   en_pathavurai,
+        'mayuragiri_lyrics_separated':         None,
+        'mayuragiri_english_lyrics_separated': None,
     }
 
 
@@ -225,6 +230,24 @@ def extract_english_patch(song_id: int, row: dict) -> dict | None:
         'english_words':         row['english_words'],
         'english_meanings_list': row['english_meanings_list'],
         'english_pathavurai':    row['english_pathavurai'],
+    }
+
+
+def extract_mayuragiri_patch(kaumaram_id: str, mayuragiri_data: dict) -> dict | None:
+    entry = mayuragiri_data.get(kaumaram_id)
+    if entry is None:
+        return None
+
+    tamil = entry.get('lyrics_separated')
+    english = entry.get('english_lyrics_separated')
+    if tamil is None and english is None:
+        return None
+
+    return {
+        'mayuragiri_lyrics_separated':
+            json.dumps(tamil, ensure_ascii=False) if tamil is not None else None,
+        'mayuragiri_english_lyrics_separated':
+            json.dumps(english, ensure_ascii=False) if english is not None else None,
     }
 
 
@@ -258,6 +281,14 @@ def build(songs_dir: Path, db_path: Path, patch_path: Path):
     english_patch = {}
     temple_english: dict = {}
 
+    mayuragiri_patch = {}
+    mayuragiri_path = songs_dir.parent / 'scripts' / 'output' / 'mayuragiri_lyrics_separated.json'
+    mayuragiri_data = {}
+    if mayuragiri_path.exists():
+        mayuragiri_data = json.loads(mayuragiri_path.read_text(encoding='utf-8'))
+    else:
+        print(f"WARNING: {mayuragiri_path} not found; mayuragiri_data.json will be empty")
+
     rows = []
     for f in json_files:
         try:
@@ -269,6 +300,17 @@ def build(songs_dir: Path, db_path: Path, patch_path: Path):
             patch = extract_english_patch(sid, row)
             if patch:
                 english_patch[str(sid)] = patch
+
+            mpatch = extract_mayuragiri_patch(str(sid), mayuragiri_data)
+            if mpatch:
+                mayuragiri_patch[str(sid)] = mpatch
+                # Mutate the same dict already appended to `rows` above (Python
+                # dicts are by-reference) so the freshly-built DB itself has
+                # real values too — not just the upgrade-patch JSON. Without
+                # this, a brand-new install (which uses this DB directly, not
+                # the migration path) would see NULL for everyone.
+                row['mayuragiri_lyrics_separated'] = mpatch['mayuragiri_lyrics_separated']
+                row['mayuragiri_english_lyrics_separated'] = mpatch['mayuragiri_english_lyrics_separated']
 
             place = row.get('place')
             venue = row.get('english_venue')
@@ -312,6 +354,13 @@ def build(songs_dir: Path, db_path: Path, patch_path: Path):
         json.dumps(english_patch, ensure_ascii=False, indent=2),
         encoding='utf-8'
     )
+
+    mayuragiri_patch_path = db_path.parent / 'mayuragiri_data.json'
+    mayuragiri_patch_path.write_text(
+        json.dumps(mayuragiri_patch, ensure_ascii=False, indent=2),
+        encoding='utf-8'
+    )
+    print(f"Mayuragiri patch written: {mayuragiri_patch_path}  ({len(mayuragiri_patch)} songs)")
 
     print(f"DB written to:           {db_path}  ({db_path.stat().st_size // 1024} KB)")
     print(f"Migration patch written: {patch_path}  ({len(english_patch)} songs with English data)")
