@@ -346,6 +346,12 @@ class AppLocalizationsTa extends AppLocalizations {
   String get tapToViewRandomSong => 'ஒரு சீரற்ற பாடலைக் காண தட்டவும்';
 
   @override
+  String get todaysSong => 'இன்றைய பாடல்';
+
+  @override
+  String get tapToViewTodaysSong => 'இன்றைய பாடலைக் காண தட்டவும்';
+
+  @override
   String get loading => 'ஏற்றப்படுகிறது';
 
   @override

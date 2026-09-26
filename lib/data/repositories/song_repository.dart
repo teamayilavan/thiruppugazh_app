@@ -80,6 +80,11 @@ class SongRepository extends ChangeNotifier {
     return await dbHelper.getRandomSong();
   }
 
+  /// Fetches the song at [index] in a stable id-ordered sequence.
+  Future<Song?> getSongByIndex(int index) async {
+    return await dbHelper.getSongByIndex(index);
+  }
+
   /// Fetches songs with pagination.
   Future<List<Song>> getSongsPaginated({
     int page = 0,

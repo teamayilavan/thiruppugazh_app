@@ -507,6 +507,22 @@ class DatabaseHelper {
     return Song.fromMap(maps.first);
   }
 
+  /// Fetches the song at [index] in a stable id-ordered sequence -- used by
+  /// the date-seeded "song of the day" pick, which needs an actual song for
+  /// an index in `[0, getSongsCount())` without loading every song into
+  /// memory.
+  Future<Song?> getSongByIndex(int index) async {
+    final db = await database;
+    final List<Map<String, dynamic>> maps = await db.query(
+      'songs',
+      orderBy: 'id',
+      limit: 1,
+      offset: index,
+    );
+    if (maps.isEmpty) return null;
+    return Song.fromMap(maps.first);
+  }
+
   Future<List<Song>> getSongsPaginated({
     int page = 0,
     int pageSize = 20,

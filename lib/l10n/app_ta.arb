@@ -112,6 +112,8 @@
   "tapToToggleFavorite": "பிடித்தவை நிலையை மாற்ற தட்டவும்",
   "randomSong": "சீரற்ற பாடல்",
   "tapToViewRandomSong": "ஒரு சீரற்ற பாடலைக் காண தட்டவும்",
+  "todaysSong": "இன்றைய பாடல்",
+  "tapToViewTodaysSong": "இன்றைய பாடலைக் காண தட்டவும்",
   "loading": "ஏற்றப்படுகிறது",
   "tapToAddCategories": "வகைகளில் சேர்க்க தட்டவும்",
   "renameCategory": "வகையை மறுபெயரிடு",

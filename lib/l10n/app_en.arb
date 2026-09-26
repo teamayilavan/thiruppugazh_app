@@ -121,6 +121,8 @@
   "tapToToggleFavorite": "Tap to toggle favorite status",
   "randomSong": "Random song",
   "tapToViewRandomSong": "Tap to view a random song",
+  "todaysSong": "Today's Song",
+  "tapToViewTodaysSong": "Tap to view today's song",
   "loading": "Loading",
   "tapToAddCategories": "Tap to add song to categories",
   "renameCategory": "Rename Category",

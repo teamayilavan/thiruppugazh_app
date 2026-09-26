@@ -740,6 +740,18 @@ abstract class AppLocalizations {
   /// **'Tap to view a random song'**
   String get tapToViewRandomSong;
 
+  /// No description provided for @todaysSong.
+  ///
+  /// In en, this message translates to:
+  /// **'Today\'s Song'**
+  String get todaysSong;
+
+  /// No description provided for @tapToViewTodaysSong.
+  ///
+  /// In en, this message translates to:
+  /// **'Tap to view today\'s song'**
+  String get tapToViewTodaysSong;
+
   /// No description provided for @loading.
   ///
   /// In en, this message translates to:

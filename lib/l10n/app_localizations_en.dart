@@ -346,6 +346,12 @@ class AppLocalizationsEn extends AppLocalizations {
   String get tapToViewRandomSong => 'Tap to view a random song';
 
   @override
+  String get todaysSong => 'Today\'s Song';
+
+  @override
+  String get tapToViewTodaysSong => 'Tap to view today\'s song';
+
+  @override
   String get loading => 'Loading';
 
   @override

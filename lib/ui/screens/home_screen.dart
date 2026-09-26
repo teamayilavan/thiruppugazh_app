@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import '../../data/repositories/song_repository.dart';
 import '../../providers/song_list_provider.dart';
 import '../../providers/lyrics_language_provider.dart';
+import '../widgets/todays_song_card.dart';
 import 'song_detail_screen.dart';
 import 'search_screen.dart';
 import '../../l10n/app_localizations.dart';
@@ -160,6 +161,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                       ),
                     ),
+                    const SliverToBoxAdapter(child: TodaysSongCard()),
                     SliverPadding(
                       padding: const EdgeInsets.symmetric(
                         horizontal: 16.0,
