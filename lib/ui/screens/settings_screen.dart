@@ -4,6 +4,7 @@ import 'package:url_launcher/url_launcher.dart';
 import '../../providers/theme_provider.dart';
 import '../../providers/language_provider.dart';
 import '../../providers/lyrics_language_provider.dart';
+import '../../providers/reminder_settings_provider.dart';
 import '../../l10n/app_localizations.dart';
 import '../../services/backup_service.dart';
 import 'privacy_policy_screen.dart';
@@ -20,6 +21,7 @@ class SettingsScreen extends StatelessWidget {
     final themeProvider = Provider.of<ThemeProvider>(context);
     final languageProvider = Provider.of<LanguageProvider>(context);
     final lyricsLanguageProvider = Provider.of<LyricsLanguageProvider>(context);
+    final reminderProvider = Provider.of<ReminderSettingsProvider>(context);
     final l10n = AppLocalizations.of(context)!;
 
     return Scaffold(
@@ -59,6 +61,22 @@ class SettingsScreen extends StatelessWidget {
               _showThemeDialog(context, themeProvider);
             },
           ),
+          const Divider(),
+          SwitchListTile(
+            secondary: const Icon(Icons.notifications_outlined),
+            title: Text(l10n.dailyReminder),
+            subtitle: Text(l10n.dailyReminderSubtitle),
+            value: reminderProvider.enabled,
+            onChanged: (value) =>
+                _handleReminderToggle(context, reminderProvider, value),
+          ),
+          if (reminderProvider.enabled)
+            ListTile(
+              contentPadding: const EdgeInsets.only(left: 72, right: 16),
+              title: Text(l10n.reminderTimeLabel),
+              subtitle: Text(reminderProvider.reminderTime.format(context)),
+              onTap: () => _pickReminderTime(context, reminderProvider),
+            ),
           const Divider(),
           _buildDataManagementSection(context, l10n),
           const Divider(),
@@ -315,6 +333,43 @@ class SettingsScreen extends StatelessWidget {
         );
       },
     );
+  }
+
+  /// Handles the daily-reminder toggle. Turning it on requests the OS
+  /// notification permission first; if denied, the toggle stays off and
+  /// the devotee is told why, rather than silently claiming to be "on"
+  /// when nothing will actually fire.
+  Future<void> _handleReminderToggle(
+    BuildContext context,
+    ReminderSettingsProvider provider,
+    bool value,
+  ) async {
+    final l10n = AppLocalizations.of(context)!;
+    final messenger = ScaffoldMessenger.of(context);
+
+    if (value) {
+      final granted = await provider.enable();
+      if (!granted) {
+        messenger.showSnackBar(
+          SnackBar(content: Text(l10n.reminderPermissionDenied)),
+        );
+      }
+    } else {
+      await provider.disable();
+    }
+  }
+
+  Future<void> _pickReminderTime(
+    BuildContext context,
+    ReminderSettingsProvider provider,
+  ) async {
+    final picked = await showTimePicker(
+      context: context,
+      initialTime: provider.reminderTime,
+    );
+    if (picked != null) {
+      await provider.setReminderTime(picked);
+    }
   }
 
   Widget _buildDataManagementSection(

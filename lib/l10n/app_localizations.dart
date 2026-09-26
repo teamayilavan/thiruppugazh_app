@@ -446,6 +446,42 @@ abstract class AppLocalizations {
   /// **'System Default'**
   String get systemDefault;
 
+  /// No description provided for @dailyReminder.
+  ///
+  /// In en, this message translates to:
+  /// **'Daily Reminder'**
+  String get dailyReminder;
+
+  /// No description provided for @dailyReminderSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'A daily nudge to open Thiruppugazh — entirely offline, on this device'**
+  String get dailyReminderSubtitle;
+
+  /// No description provided for @reminderTimeLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Reminder time'**
+  String get reminderTimeLabel;
+
+  /// No description provided for @reminderPermissionDenied.
+  ///
+  /// In en, this message translates to:
+  /// **'Notifications are blocked for this app, so the reminder can\'t turn on. Allow notifications in system Settings and try again.'**
+  String get reminderPermissionDenied;
+
+  /// No description provided for @reminderNotificationTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Thiruppugazh'**
+  String get reminderNotificationTitle;
+
+  /// No description provided for @reminderNotificationBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Time for your daily Thiruppugazh reading.'**
+  String get reminderNotificationBody;
+
   /// No description provided for @creditsTitle.
   ///
   /// In en, this message translates to:

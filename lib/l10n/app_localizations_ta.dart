@@ -195,6 +195,27 @@ class AppLocalizationsTa extends AppLocalizations {
   String get systemDefault => 'கணினி இயல்புநிலை';
 
   @override
+  String get dailyReminder => 'தினசரி நினைவூட்டல்';
+
+  @override
+  String get dailyReminderSubtitle =>
+      'திருப்புகழ் திறக்க தினசரி நினைவூட்டல் — முழுவதுமாக ஆஃப்லைனில், இந்தச் சாதனத்திலேயே';
+
+  @override
+  String get reminderTimeLabel => 'நினைவூட்டல் நேரம்';
+
+  @override
+  String get reminderPermissionDenied =>
+      'இந்த செயலிக்கான அறிவிப்புகள் தடுக்கப்பட்டுள்ளன, எனவே நினைவூட்டலை இயக்க முடியவில்லை. கணினி அமைப்புகளில் அறிவிப்புகளை அனுமதித்து மீண்டும் முயற்சிக்கவும்.';
+
+  @override
+  String get reminderNotificationTitle => 'திருப்புகழ்';
+
+  @override
+  String get reminderNotificationBody =>
+      'இன்றைய திருப்புகழ் பாராயணத்திற்கான நேரம்.';
+
+  @override
   String get creditsTitle => 'நன்றிகள்';
 
   @override

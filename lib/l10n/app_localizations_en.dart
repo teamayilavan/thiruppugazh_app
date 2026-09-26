@@ -194,6 +194,27 @@ class AppLocalizationsEn extends AppLocalizations {
   String get systemDefault => 'System Default';
 
   @override
+  String get dailyReminder => 'Daily Reminder';
+
+  @override
+  String get dailyReminderSubtitle =>
+      'A daily nudge to open Thiruppugazh — entirely offline, on this device';
+
+  @override
+  String get reminderTimeLabel => 'Reminder time';
+
+  @override
+  String get reminderPermissionDenied =>
+      'Notifications are blocked for this app, so the reminder can\'t turn on. Allow notifications in system Settings and try again.';
+
+  @override
+  String get reminderNotificationTitle => 'Thiruppugazh';
+
+  @override
+  String get reminderNotificationBody =>
+      'Time for your daily Thiruppugazh reading.';
+
+  @override
   String get creditsTitle => 'Credits';
 
   @override

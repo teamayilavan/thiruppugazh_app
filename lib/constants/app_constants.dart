@@ -15,6 +15,8 @@ class AppConstants {
   static const String languagePrefsKey = 'app_language';
   static const String lyricsLanguagePrefsKey = 'lyrics_language';
   static const String lyricsFontSizePrefsKey = 'lyrics_font_size';
+  static const String reminderEnabledPrefsKey = 'reminder_enabled';
+  static const String reminderTimePrefsKey = 'reminder_time_minutes';
 
   // ==================== Deep Link ====================
   static const String deepLinkDomain = 'thiruppugazh.ayilavan.org';

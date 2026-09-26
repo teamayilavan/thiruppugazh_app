@@ -67,7 +67,14 @@
   "light": "Light",
   "dark": "Dark",
   "systemDefault": "System Default",
-  
+
+  "dailyReminder": "Daily Reminder",
+  "dailyReminderSubtitle": "A daily nudge to open Thiruppugazh — entirely offline, on this device",
+  "reminderTimeLabel": "Reminder time",
+  "reminderPermissionDenied": "Notifications are blocked for this app, so the reminder can't turn on. Allow notifications in system Settings and try again.",
+  "reminderNotificationTitle": "Thiruppugazh",
+  "reminderNotificationBody": "Time for your daily Thiruppugazh reading.",
+
   "creditsTitle": "Credits",
   "sriGopalaSundaram": "Sri Gopala Sundaram",
   "thiruppugazhExplanatoryText": "Thiruppugazh explanatory text author",
