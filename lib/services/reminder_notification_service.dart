@@ -25,8 +25,12 @@ class ReminderNotificationService {
 
   Future<void> _ensureInitialized() async {
     if (_pluginInitialized) return;
+    // Not the launcher mipmap: Android ignores color on status-bar icons
+    // and renders anything but a plain alpha silhouette as a solid blob,
+    // so this points at a dedicated white-on-transparent drawable instead
+    // (cropped from the app's own vel emblem).
     const androidSettings = AndroidInitializationSettings(
-      '@mipmap/launcher_icon',
+      '@drawable/ic_stat_reminder',
     );
     const initSettings = InitializationSettings(
       android: androidSettings,
