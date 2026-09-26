@@ -26,6 +26,14 @@ class DatabaseHelper {
   /// Caches the Future itself so concurrent callers all await the same init.
   Future<Database> get database => _databaseFuture ??= _initDatabase();
 
+  /// How many times [_copyDatabaseFromAssets] will (re)try a fresh copy if
+  /// the result doesn't verify. A second attempt is cheap insurance against
+  /// a one-off partial write (e.g. a device briefly out of storage); it's
+  /// not expected to help if the device is persistently out of space, but
+  /// in that case the final attempt's exception still surfaces instead of
+  /// silently leaving every screen empty.
+  static const int _copyVerifyMaxAttempts = 2;
+
   Future<Database> _initDatabase() async {
     final dbPath = await getDatabasesPath();
     final path = join(dbPath, _dbName);
@@ -34,28 +42,7 @@ class DatabaseHelper {
     final exists = await databaseExists(path);
 
     if (!exists) {
-      // If not, copy from assets
-      AppLogger.info("Creating new copy from asset");
-      try {
-        await Directory(dirname(path)).create(recursive: true);
-
-        // Copy from asset
-        ByteData data = await rootBundle.load('assets/thiruppugazh.db');
-        List<int> bytes = data.buffer.asUint8List(
-          data.offsetInBytes,
-          data.lengthInBytes,
-        );
-
-        await File(path).writeAsBytes(bytes, flush: true);
-        AppLogger.info("Database copied from assets");
-      } catch (e, stackTrace) {
-        AppLogger.error(
-          "Fatal: failed to copy bundled database",
-          error: e,
-          stackTrace: stackTrace,
-        );
-        rethrow;
-      }
+      await _copyDatabaseFromAssets(path);
     } else {
       AppLogger.info("Opening existing database");
     }
@@ -90,6 +77,82 @@ class DatabaseHelper {
         // For now, we rely on onCreate/onUpgrade
       },
     );
+  }
+
+  /// Copies the bundled database asset to [path] and verifies the result
+  /// is actually readable and non-empty before trusting it. A silently
+  /// partial/corrupted copy (device low on storage, process killed
+  /// mid-write, etc.) would otherwise leave every screen looking empty
+  /// with no error anywhere -- this makes that failure mode loud (and
+  /// gives it one retry) instead of silent.
+  Future<void> _copyDatabaseFromAssets(String path) async {
+    Object? lastError;
+    StackTrace? lastStackTrace;
+
+    for (
+      var attempt = 1;
+      attempt <= _copyVerifyMaxAttempts;
+      attempt++
+    ) {
+      try {
+        AppLogger.info("Creating new copy from asset (attempt $attempt)");
+        await Directory(dirname(path)).create(recursive: true);
+
+        ByteData data = await rootBundle.load('assets/thiruppugazh.db');
+        List<int> bytes = data.buffer.asUint8List(
+          data.offsetInBytes,
+          data.lengthInBytes,
+        );
+        await File(path).writeAsBytes(bytes, flush: true);
+
+        final verifyDb = await openReadOnlyDatabase(path);
+        try {
+          final count =
+              Sqflite.firstIntValue(
+                await verifyDb.rawQuery('SELECT COUNT(*) FROM songs'),
+              ) ??
+              0;
+          if (count == 0) {
+            throw StateError(
+              'Copied database has no songs -- likely a partial/corrupt copy',
+            );
+          }
+          AppLogger.info("Database copied from assets ($count songs)");
+          return;
+        } finally {
+          await verifyDb.close();
+        }
+      } catch (e, stackTrace) {
+        lastError = e;
+        lastStackTrace = stackTrace;
+        AppLogger.error(
+          "Failed to copy/verify bundled database (attempt $attempt)",
+          error: e,
+          stackTrace: stackTrace,
+        );
+        // Don't leave a partial/corrupt file behind for the next attempt
+        // (or for a future launch, if this was the last attempt) to
+        // mistake for a valid, already-copied database.
+        final partialFile = File(path);
+        if (await partialFile.exists()) {
+          try {
+            await partialFile.delete();
+          } catch (_) {
+            // Best-effort cleanup; the rethrow below still surfaces the
+            // original failure either way.
+          }
+        }
+      }
+    }
+
+    AppLogger.error(
+      "Fatal: failed to copy bundled database after "
+      "$_copyVerifyMaxAttempts attempts",
+      error: lastError,
+      stackTrace: lastStackTrace,
+    );
+    // ignore: only_throw_errors
+    throw lastError ?? StateError('Failed to copy bundled database');
   }
 
   Future<void> _initializeSchema(Database db) async {
@@ -211,14 +274,40 @@ class DatabaseHelper {
     }
 
     // 8. Ensure is_favorite column exists in songs (if asset didn't have it)
+    await _addColumnIfMissing(
+      db,
+      table: 'songs',
+      column: 'is_favorite',
+      definition: 'INTEGER DEFAULT 0',
+    );
+  }
+
+  /// Adds `$column` to `$table` only if it isn't already there.
+  ///
+  /// Every migration below ships a bundled asset database that, by the
+  /// time a given app version reaches most devices, may *already* have
+  /// gone through this migration once -- either because a fresh install's
+  /// onCreate path uses the current, already-up-to-date bundled schema
+  /// (fresh installs never run these migrations, see [_initDatabase]'s
+  /// version-0-vs-onCreate handling), or because a future migration is
+  /// added that overlaps one already applied. A bare `ALTER TABLE ADD
+  /// COLUMN` throws "duplicate column name" in that case, and since these
+  /// calls sit outside any try/catch, that exception used to propagate
+  /// all the way up through the single cached `database` Future --
+  /// poisoning every future call to it and leaving every screen silently
+  /// empty with no visible error. Checking first makes this idempotent.
+  Future<void> _addColumnIfMissing(
+    Database db, {
+    required String table,
+    required String column,
+    required String definition,
+  }) async {
     try {
-      await db.rawQuery('SELECT is_favorite FROM songs LIMIT 1');
+      await db.rawQuery('SELECT $column FROM $table LIMIT 1');
+      // Column already exists -- nothing to do.
     } catch (_) {
-      // Column doesn't exist, add it
-      AppLogger.info('Adding is_favorite column to songs');
-      await db.execute(
-        'ALTER TABLE songs ADD COLUMN is_favorite INTEGER DEFAULT 0',
-      );
+      AppLogger.info('Adding $column column to $table');
+      await db.execute('ALTER TABLE $table ADD COLUMN $column $definition');
     }
   }
 
@@ -262,11 +351,21 @@ class DatabaseHelper {
       'english_meanings_list',
       'english_pathavurai',
     ]) {
-      await db.execute('ALTER TABLE songs ADD COLUMN $col TEXT');
+      await _addColumnIfMissing(
+        db,
+        table: 'songs',
+        column: col,
+        definition: 'TEXT',
+      );
     }
 
     // Step 2: Add english_name to temples
-    await db.execute('ALTER TABLE temples ADD COLUMN english_name TEXT');
+    await _addColumnIfMissing(
+      db,
+      table: 'temples',
+      column: 'english_name',
+      definition: 'TEXT',
+    );
 
     // Step 3: Populate songs English columns from bundled JSON asset
     try {
@@ -331,7 +430,12 @@ class DatabaseHelper {
       'mayuragiri_lyrics_separated',
       'mayuragiri_english_lyrics_separated',
     ]) {
-      await db.execute('ALTER TABLE songs ADD COLUMN $col TEXT');
+      await _addColumnIfMissing(
+        db,
+        table: 'songs',
+        column: col,
+        definition: 'TEXT',
+      );
     }
 
     try {
