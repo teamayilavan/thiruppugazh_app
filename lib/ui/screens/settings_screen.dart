@@ -71,7 +71,13 @@ class SettingsScreen extends StatelessWidget {
           ),
           if (reminderProvider.enabled)
             ListTile(
-              contentPadding: const EdgeInsets.only(left: 72, right: 16),
+              // An invisible leading icon the same size as the toggle's
+              // bell icon above, so this row's title lines up with it
+              // exactly -- more reliable than guessing a fixed indent.
+              leading: const Opacity(
+                opacity: 0,
+                child: Icon(Icons.notifications_outlined),
+              ),
               title: Text(l10n.reminderTimeLabel),
               subtitle: Text(reminderProvider.reminderTime.format(context)),
               onTap: () => _pickReminderTime(context, reminderProvider),
