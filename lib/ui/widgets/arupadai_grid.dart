@@ -48,7 +48,7 @@ class ArupadaiGrid extends StatelessWidget {
               crossAxisCount: 2,
               mainAxisSpacing: 12,
               crossAxisSpacing: 12,
-              childAspectRatio: 1.6,
+              childAspectRatio: 1.35,
             ),
             itemCount: ArupadaiVeedu.abodes.length,
             itemBuilder: (context, index) {
@@ -75,6 +75,7 @@ class _ArupadaiTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     final lyricsLang = Provider.of<LyricsLanguageProvider>(
       context,
     ).lyricsLanguage;
@@ -82,6 +83,7 @@ class _ArupadaiTile extends StatelessWidget {
     final displayName = (lyricsLang == LyricsLanguage.english && englishName != null)
         ? englishName
         : abode.tamilName;
+    final songCount = temple?['song_count'] as int?;
     final colors = Theme.of(context).extension<AppColorExtension>()!;
     final onCard = Theme.of(context).colorScheme.onSurface;
 
@@ -119,6 +121,15 @@ class _ArupadaiTile extends StatelessWidget {
                   fontWeight: FontWeight.w600,
                 ),
               ),
+              if (songCount != null) ...[
+                const SizedBox(height: 2),
+                Text(
+                  l10n.songCountLabel(songCount),
+                  style: Theme.of(
+                    context,
+                  ).textTheme.bodySmall?.copyWith(color: onCard),
+                ),
+              ],
             ],
           ),
         ),

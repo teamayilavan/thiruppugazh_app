@@ -448,6 +448,11 @@ class AppLocalizationsTa extends AppLocalizations {
   String get arupadaiVeeduSubtitle => 'முருகப் பெருமானின் ஆறு படை வீடுகள்';
 
   @override
+  String songCountLabel(Object count) {
+    return '$count பாடல்கள்';
+  }
+
+  @override
   String get noSongsFoundForTemple => 'இந்த கோயிலுக்கான பாடல்கள் எதுவும் இல்லை';
 
   @override

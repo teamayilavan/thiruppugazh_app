@@ -446,6 +446,11 @@ class AppLocalizationsEn extends AppLocalizations {
   String get arupadaiVeeduSubtitle => 'The six sacred abodes of Lord Murugan';
 
   @override
+  String songCountLabel(Object count) {
+    return '$count songs';
+  }
+
+  @override
   String get noSongsFoundForTemple => 'No songs found for this temple';
 
   @override

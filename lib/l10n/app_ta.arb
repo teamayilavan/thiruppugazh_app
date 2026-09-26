@@ -144,6 +144,7 @@
   "noTemplesFound": "கோயில்கள் எதுவும் காணப்படவில்லை",
   "arupadaiVeedu": "அறுபடை வீடு",
   "arupadaiVeeduSubtitle": "முருகப் பெருமானின் ஆறு படை வீடுகள்",
+  "songCountLabel": "{count} பாடல்கள்",
   "noSongsFoundForTemple": "இந்த கோயிலுக்கான பாடல்கள் எதுவும் இல்லை",
   "thiruppugazhHeroImage": "திருப்புகழ் முகப்பு படம்",
   "tapToViewSongDetails": "பாடல் விவரங்களைக் காண தட்டவும்",

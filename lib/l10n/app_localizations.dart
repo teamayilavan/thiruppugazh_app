@@ -932,6 +932,12 @@ abstract class AppLocalizations {
   /// **'The six sacred abodes of Lord Murugan'**
   String get arupadaiVeeduSubtitle;
 
+  /// No description provided for @songCountLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'{count} songs'**
+  String songCountLabel(Object count);
+
   /// No description provided for @noSongsFoundForTemple.
   ///
   /// In en, this message translates to:
