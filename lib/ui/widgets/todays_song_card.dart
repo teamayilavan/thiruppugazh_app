@@ -81,6 +81,14 @@ class _TodaysSongCardState extends State<TodaysSongCard> {
     final title = useEnglish ? (song.englishTitle ?? song.title) : song.title;
     final place = useEnglish ? (song.englishVenue ?? song.place) : song.place;
 
+    // The card's fill (colors.card) is a mid-tone green in both themes, so
+    // the app's general-purpose textHigh/textMuted colors (tuned for the
+    // plain surface background) don't have enough contrast against it.
+    // onSurface is the same high-contrast color the app already uses for
+    // ordinary readable text, and it reads clearly on colors.card in both
+    // light and dark mode.
+    final onCard = Theme.of(context).colorScheme.onSurface;
+
     return Padding(
       padding: const EdgeInsets.fromLTRB(16, 16, 16, 0),
       child: Semantics(
@@ -104,11 +112,7 @@ class _TodaysSongCardState extends State<TodaysSongCard> {
               ),
               child: Row(
                 children: [
-                  Icon(
-                    Icons.wb_sunny_outlined,
-                    color: colors.textHigh,
-                    size: 28,
-                  ),
+                  Icon(Icons.calendar_today_outlined, color: onCard, size: 26),
                   const SizedBox(width: 16),
                   Expanded(
                     child: Column(
@@ -117,17 +121,14 @@ class _TodaysSongCardState extends State<TodaysSongCard> {
                         Text(
                           l10n.todaysSong,
                           style: Theme.of(context).textTheme.labelMedium
-                              ?.copyWith(
-                                color: colors.textMuted,
-                                letterSpacing: 0.5,
-                              ),
+                              ?.copyWith(color: onCard, letterSpacing: 0.5),
                         ),
                         const SizedBox(height: 4),
                         Text(
                           title,
                           style: Theme.of(context).textTheme.titleMedium
                               ?.copyWith(
-                                color: colors.textHigh,
+                                color: onCard,
                                 fontWeight: FontWeight.bold,
                               ),
                         ),
@@ -135,13 +136,13 @@ class _TodaysSongCardState extends State<TodaysSongCard> {
                           Text(
                             place,
                             style: Theme.of(context).textTheme.bodySmall
-                                ?.copyWith(color: colors.textMuted),
+                                ?.copyWith(color: onCard),
                           ),
                       ],
                     ),
                   ),
                   const SizedBox(width: 8),
-                  Icon(Icons.chevron_right, color: colors.textMuted),
+                  Icon(Icons.chevron_right, color: onCard),
                 ],
               ),
             ),
