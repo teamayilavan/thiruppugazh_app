@@ -442,6 +442,12 @@ class AppLocalizationsTa extends AppLocalizations {
   String get noTemplesFound => 'கோயில்கள் எதுவும் காணப்படவில்லை';
 
   @override
+  String get arupadaiVeedu => 'அறுபடை வீடு';
+
+  @override
+  String get arupadaiVeeduSubtitle => 'முருகப் பெருமானின் ஆறு படை வீடுகள்';
+
+  @override
   String get noSongsFoundForTemple => 'இந்த கோயிலுக்கான பாடல்கள் எதுவும் இல்லை';
 
   @override

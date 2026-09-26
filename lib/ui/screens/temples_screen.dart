@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../../data/database/database_helper.dart';
 import '../../providers/lyrics_language_provider.dart';
+import '../widgets/arupadai_grid.dart';
 import 'temple_songs_screen.dart';
 import '../../l10n/app_localizations.dart';
 
@@ -70,45 +71,54 @@ class _TemplesScreenState extends State<TemplesScreen> {
             interactive: true,
             thickness: 10.0,
             radius: const Radius.circular(10.0),
-            child: ListView.separated(
+            child: CustomScrollView(
               controller: _scrollController,
-              itemCount: temples.length,
-              separatorBuilder: (context, index) => const SizedBox(height: 8),
-              itemBuilder: (context, index) {
-                final temple = temples[index];
-                final name = temple['name'] as String;
-                final englishName = temple['english_name'] as String?;
-                final count = temple['song_count'] as int;
+              slivers: [
+                SliverToBoxAdapter(child: ArupadaiGrid(temples: temples)),
+                SliverPadding(
+                  padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                  sliver: SliverList.separated(
+                    itemCount: temples.length,
+                    separatorBuilder: (context, index) =>
+                        const SizedBox(height: 8),
+                    itemBuilder: (context, index) {
+                      final temple = temples[index];
+                      final name = temple['name'] as String;
+                      final englishName = temple['english_name'] as String?;
+                      final count = temple['song_count'] as int;
 
-                final displayName =
-                    (lyricsLang == LyricsLanguage.english &&
-                        englishName != null)
-                    ? englishName
-                    : name;
+                      final displayName =
+                          (lyricsLang == LyricsLanguage.english &&
+                              englishName != null)
+                          ? englishName
+                          : name;
 
-                return ListTile(
-                  leading: Text(
-                    '${index + 1}',
-                    style: Theme.of(context).textTheme.bodyMedium,
-                  ),
-                  title: Text(displayName),
-                  trailing: Text(
-                    '$count',
-                    style: Theme.of(context).textTheme.bodyMedium,
-                  ),
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => TempleSongsScreen(
-                          templeName: name,
-                          templeDisplayName: displayName,
+                      return ListTile(
+                        leading: Text(
+                          '${index + 1}',
+                          style: Theme.of(context).textTheme.bodyMedium,
                         ),
-                      ),
-                    );
-                  },
-                );
-              },
+                        title: Text(displayName),
+                        trailing: Text(
+                          '$count',
+                          style: Theme.of(context).textTheme.bodyMedium,
+                        ),
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => TempleSongsScreen(
+                                templeName: name,
+                                templeDisplayName: displayName,
+                              ),
+                            ),
+                          );
+                        },
+                      );
+                    },
+                  ),
+                ),
+              ],
             ),
           );
         },

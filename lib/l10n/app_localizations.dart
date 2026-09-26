@@ -920,6 +920,18 @@ abstract class AppLocalizations {
   /// **'No temples found'**
   String get noTemplesFound;
 
+  /// No description provided for @arupadaiVeedu.
+  ///
+  /// In en, this message translates to:
+  /// **'Arupadai Veedu'**
+  String get arupadaiVeedu;
+
+  /// No description provided for @arupadaiVeeduSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'The six sacred abodes of Lord Murugan'**
+  String get arupadaiVeeduSubtitle;
+
   /// No description provided for @noSongsFoundForTemple.
   ///
   /// In en, this message translates to:

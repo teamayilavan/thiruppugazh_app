@@ -440,6 +440,12 @@ class AppLocalizationsEn extends AppLocalizations {
   String get noTemplesFound => 'No temples found';
 
   @override
+  String get arupadaiVeedu => 'Arupadai Veedu';
+
+  @override
+  String get arupadaiVeeduSubtitle => 'The six sacred abodes of Lord Murugan';
+
+  @override
   String get noSongsFoundForTemple => 'No songs found for this temple';
 
   @override
