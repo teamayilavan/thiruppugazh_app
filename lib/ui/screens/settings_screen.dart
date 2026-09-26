@@ -14,7 +14,6 @@ class SettingsScreen extends StatelessWidget {
   static final Uri _githubRepoUrl = Uri.parse(
     'https://github.com/teamayilavan/thiruppugazh_app',
   );
-  static final Uri _mayuragiriUrl = Uri.parse('https://mayuragiri.com');
 
   @override
   Widget build(BuildContext context) {
@@ -184,20 +183,6 @@ class SettingsScreen extends StatelessWidget {
               ),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.symmetric(
-              horizontal: 16.0,
-              vertical: 8.0,
-            ),
-            child: SizedBox(
-              width: double.infinity,
-              child: OutlinedButton.icon(
-                onPressed: () => _launchMayuragiriWebsite(context),
-                icon: const Icon(Icons.language),
-                label: Text(l10n.visitMayuragiriWebsite),
-              ),
-            ),
-          ),
         ],
       ),
     );
@@ -211,15 +196,6 @@ class SettingsScreen extends StatelessWidget {
     )) {
       messenger.showSnackBar(
         const SnackBar(content: Text('Could not open GitHub repository')),
-      );
-    }
-  }
-
-  Future<void> _launchMayuragiriWebsite(BuildContext context) async {
-    final messenger = ScaffoldMessenger.of(context);
-    if (!await launchUrl(_mayuragiriUrl, mode: LaunchMode.externalApplication)) {
-      messenger.showSnackBar(
-        const SnackBar(content: Text('Could not open Mayuragiri.com')),
       );
     }
   }
