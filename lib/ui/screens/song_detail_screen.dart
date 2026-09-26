@@ -722,8 +722,14 @@ ${_displayLyricsList.join('\n')}''';
             child: FloatingActionButton(
               heroTag: 'fab_add_category',
               onPressed: () {
-                showDialog(
+                showModalBottomSheet(
                   context: context,
+                  isScrollControlled: true,
+                  shape: const RoundedRectangleBorder(
+                    borderRadius: BorderRadius.vertical(
+                      top: Radius.circular(16),
+                    ),
+                  ),
                   builder: (context) => AddToCategoryDialog(
                     song: widget.song,
                     currentCategoryIds: _categoryIds,
