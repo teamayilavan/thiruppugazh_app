@@ -28,7 +28,7 @@ void main() {
     SharedPreferences.setMockInitialValues({});
   });
 
-  testWidgets('shows the Mayuragiri credit block and link button', (
+  testWidgets('shows the Mayuragiri credit block but no link button', (
     tester,
   ) async {
     await tester.pumpWidget(_wrapped());
@@ -37,12 +37,10 @@ void main() {
     expect(find.text('Mayuragiri.com Team'), findsOneWidget);
     expect(find.text('Thiru. Subramaniyan, Devakottai'), findsOneWidget);
 
-    // The link button lives further down the ListView than the default
-    // cacheExtent builds eagerly, so scroll it into view before asserting.
-    await tester.scrollUntilVisible(find.byIcon(Icons.language), 300.0);
-    await tester.pumpAndSettle();
-
+    // The outbound link button was intentionally removed -- the credit
+    // text is enough, no button to visit mayuragiri.com.
+    expect(find.byIcon(Icons.language), findsNothing);
     expect(find.widgetWithText(OutlinedButton, 'Visit Mayuragiri.com'),
-        findsOneWidget);
+        findsNothing);
   });
 }
