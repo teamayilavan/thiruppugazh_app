@@ -43,8 +43,21 @@ class DatabaseHelper {
 
     if (!exists) {
       await _copyDatabaseFromAssets(path);
-    } else {
+    } else if (await _isDatabaseUsable(path)) {
       AppLogger.info("Opening existing database");
+    } else {
+      // A file is there, but it's not a usable songs database (corrupted,
+      // truncated, or otherwise broken -- e.g. from an interrupted copy
+      // on some past launch). databaseExists() only checks that *some*
+      // file is present at this path, not that it's valid, so without
+      // this check a bad file here would be silently trusted forever:
+      // every future launch would open it, find no data, and show every
+      // screen empty with no error and no way to recover short of
+      // clearing app data. Re-copy from the bundled asset instead.
+      AppLogger.error(
+        "Existing database failed verification; re-copying from assets",
+      );
+      await _copyDatabaseFromAssets(path);
     }
 
     return await openDatabase(
@@ -105,23 +118,14 @@ class DatabaseHelper {
         );
         await File(path).writeAsBytes(bytes, flush: true);
 
-        final verifyDb = await openReadOnlyDatabase(path);
-        try {
-          final count =
-              Sqflite.firstIntValue(
-                await verifyDb.rawQuery('SELECT COUNT(*) FROM songs'),
-              ) ??
-              0;
-          if (count == 0) {
-            throw StateError(
-              'Copied database has no songs -- likely a partial/corrupt copy',
-            );
-          }
-          AppLogger.info("Database copied from assets ($count songs)");
-          return;
-        } finally {
-          await verifyDb.close();
+        final count = await _countSongs(path);
+        if (count == 0) {
+          throw StateError(
+            'Copied database has no songs -- likely a partial/corrupt copy',
+          );
         }
+        AppLogger.info("Database copied from assets ($count songs)");
+        return;
       } catch (e, stackTrace) {
         lastError = e;
         lastStackTrace = stackTrace;
@@ -153,6 +157,45 @@ class DatabaseHelper {
     );
     // ignore: only_throw_errors
     throw lastError ?? StateError('Failed to copy bundled database');
+  }
+
+  /// Opens the sqlite file at [path] read-only and returns how many rows
+  /// are in `songs`. Throws if the file can't be opened at all (not a
+  /// valid sqlite file, corrupted header, etc.) or doesn't have a `songs`
+  /// table -- callers decide whether that should be fatal or just mean
+  /// "not usable, try recopying".
+  Future<int> _countSongs(String path) async {
+    final db = await openReadOnlyDatabase(path);
+    try {
+      return Sqflite.firstIntValue(
+            await db.rawQuery('SELECT COUNT(*) FROM songs'),
+          ) ??
+          0;
+    } finally {
+      await db.close();
+    }
+  }
+
+  /// Whether the sqlite file already at [path] is a valid, non-empty
+  /// songs database -- i.e. safe to open and use as-is. `databaseExists`
+  /// only checks that *some* file is present at this path, not that it's
+  /// usable, so a corrupted/truncated file left over from some past
+  /// launch (e.g. an interrupted copy, before [_copyDatabaseFromAssets]
+  /// grew its own verification) would otherwise be trusted forever: every
+  /// future launch would open it, find no data, and show every screen
+  /// empty with no error and no way to recover short of clearing app
+  /// data.
+  Future<bool> _isDatabaseUsable(String path) async {
+    try {
+      return await _countSongs(path) > 0;
+    } catch (e, stackTrace) {
+      AppLogger.error(
+        'Existing database failed usability check',
+        error: e,
+        stackTrace: stackTrace,
+      );
+      return false;
+    }
   }
 
   Future<void> _initializeSchema(Database db) async {
