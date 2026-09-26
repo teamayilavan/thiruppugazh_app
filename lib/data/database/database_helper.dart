@@ -621,6 +621,20 @@ class DatabaseHelper {
 
     if (filter.searchPlace) {
       addLikeConditions('place', 'english_venue');
+
+      // Temple names are stored in english_venue using a formal scholarly
+      // transliteration (e.g. "thiruchchendhUr" for திருச்செந்தூர்), which
+      // rarely matches a casual "Tanglish" spelling like "thiruchendur"
+      // via plain substring LIKE. Add a second, additive condition that
+      // compares a simplified/normalized form of both sides instead --
+      // this only widens matches (the exact-substring condition above
+      // still applies), so it can't cause an existing search to lose
+      // results.
+      final normalizedQuery = _normalizeTanglish(sanitizedQuery);
+      if (normalizedQuery.isNotEmpty) {
+        conditions.add('${_tanglishNormalizedSql('english_venue')} LIKE ?');
+        args.add('%$normalizedQuery%');
+      }
     }
 
     if (filter.searchTune) {
@@ -676,6 +690,65 @@ class DatabaseHelper {
     // We could add more here (ra/Ra, la/La/zha) if needed later.
 
     return variations.toList();
+  }
+
+  /// Ordered find/replace pairs collapsing the formal scholarly
+  /// transliteration scheme used throughout `english_venue` (and
+  /// elsewhere) toward a casual "Tanglish" spelling -- e.g.
+  /// "thiruchchendhUr" -> "tiruchendur", matching how most people would
+  /// actually type Thiruchendur. Order matters: digraph-doubling and
+  /// single-letter-doubling collapse first, so a later single-letter rule
+  /// (like th -> t) doesn't interfere with an earlier digraph rule (like
+  /// thth -> th). Verified against every temple name currently in the
+  /// bundled database (see PR description / commit message for the check
+  /// script) -- every entry's own casually-simplified spelling matches
+  /// itself after normalization.
+  static const List<List<String>> _tanglishNormalizationRules = [
+    ['chch', 'ch'],
+    ['thth', 'th'],
+    ['dhdh', 'dh'],
+    ['shsh', 'sh'],
+    ['aa', 'a'],
+    ['ee', 'e'],
+    ['kk', 'k'],
+    ['ll', 'l'],
+    ['mm', 'm'],
+    ['nn', 'n'],
+    ['pp', 'p'],
+    ['tt', 't'],
+    ['uu', 'u'],
+    ['dh', 'd'],
+    // zh (ழ) is very commonly typed as a plain "l" rather than "zh"/"z"
+    // (e.g. Palani for பழநி, "pazhani"), so both collapse to the same
+    // letter for matching purposes.
+    ['zh', 'l'],
+    ['th', 't'],
+    ['ngk', 'nk'],
+    ['ng', 'n'],
+  ];
+
+  /// Applies [_tanglishNormalizationRules] to a Dart string -- used to
+  /// normalize the incoming search query. See [_tanglishNormalizedSql]
+  /// for the equivalent transformation applied to a database column.
+  String _normalizeTanglish(String s) {
+    var result = s.toLowerCase();
+    for (final rule in _tanglishNormalizationRules) {
+      result = result.replaceAll(rule[0], rule[1]);
+    }
+    return result;
+  }
+
+  /// Builds a SQL expression that applies [_tanglishNormalizationRules]
+  /// to [column] via chained `REPLACE()` calls, so it can be compared
+  /// against a query already normalized by [_normalizeTanglish]. SQLite
+  /// has no regex support, but every rule here is a plain substring
+  /// replacement, so a REPLACE() chain is exact.
+  String _tanglishNormalizedSql(String column) {
+    var expr = 'LOWER($column)';
+    for (final rule in _tanglishNormalizationRules) {
+      expr = "REPLACE($expr, '${rule[0]}', '${rule[1]}')";
+    }
+    return expr;
   }
 
   /// Trims and length-limits the search query.
