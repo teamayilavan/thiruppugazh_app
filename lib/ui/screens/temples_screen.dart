@@ -76,7 +76,7 @@ class _TemplesScreenState extends State<TemplesScreen> {
               slivers: [
                 SliverToBoxAdapter(child: ArupadaiGrid(temples: temples)),
                 SliverPadding(
-                  padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                  padding: const EdgeInsets.fromLTRB(16.0, 24.0, 16.0, 0),
                   sliver: SliverList.separated(
                     itemCount: temples.length,
                     separatorBuilder: (context, index) =>
