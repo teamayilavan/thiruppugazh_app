@@ -132,12 +132,14 @@ class _TodaysSongCardState extends State<TodaysSongCard> {
                                 fontWeight: FontWeight.bold,
                               ),
                         ),
-                        if (place.isNotEmpty)
+                        if (place.isNotEmpty) ...[
+                          const SizedBox(height: 4),
                           Text(
                             place,
                             style: Theme.of(context).textTheme.bodySmall
                                 ?.copyWith(color: onCard),
                           ),
+                        ],
                       ],
                     ),
                   ),
