@@ -251,17 +251,25 @@ class _AddToCategoryDialogState extends State<AddToCategoryDialog> {
                               );
                             }),
                             ...pendingNewCategories.map((name) {
-                              return ListTile(
-                                leading: const Icon(Icons.fiber_new_outlined),
+                              return CheckboxListTile(
+                                secondary: const Icon(
+                                  Icons.fiber_new_outlined,
+                                ),
                                 title: Text(name),
-                                trailing: IconButton(
-                                  icon: const Icon(Icons.close),
-                                  onPressed: () {
+                                // Always checked: a newly typed category is
+                                // being added by definition. Unchecking it
+                                // removes it from the pending list -- the
+                                // same effect the old trailing close button
+                                // had, just consistent with how every other
+                                // row in this list is toggled.
+                                value: true,
+                                onChanged: (bool? checked) {
+                                  if (checked != true) {
                                     setDialogState(() {
                                       pendingNewCategories.remove(name);
                                     });
-                                  },
-                                ),
+                                  }
+                                },
                               );
                             }),
                           ],
