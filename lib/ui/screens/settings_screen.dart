@@ -65,7 +65,6 @@ class SettingsScreen extends StatelessWidget {
           SwitchListTile(
             secondary: const Icon(Icons.notifications_outlined),
             title: Text(l10n.dailyReminder),
-            subtitle: Text(l10n.dailyReminderSubtitle),
             value: reminderProvider.enabled,
             onChanged: (value) =>
                 _handleReminderToggle(context, reminderProvider, value),

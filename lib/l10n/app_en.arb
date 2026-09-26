@@ -68,8 +68,7 @@
   "dark": "Dark",
   "systemDefault": "System Default",
 
-  "dailyReminder": "Daily Reminder",
-  "dailyReminderSubtitle": "A daily nudge to open Thiruppugazh — entirely offline, on this device",
+  "dailyReminder": "Daily notification",
   "reminderTimeLabel": "Reminder time",
   "reminderPermissionDenied": "Notifications are blocked for this app, so the reminder can't turn on. Allow notifications in system Settings and try again.",
   "reminderNotificationTitle": "Thiruppugazh",

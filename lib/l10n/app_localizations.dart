@@ -449,14 +449,8 @@ abstract class AppLocalizations {
   /// No description provided for @dailyReminder.
   ///
   /// In en, this message translates to:
-  /// **'Daily Reminder'**
+  /// **'Daily notification'**
   String get dailyReminder;
-
-  /// No description provided for @dailyReminderSubtitle.
-  ///
-  /// In en, this message translates to:
-  /// **'A daily nudge to open Thiruppugazh — entirely offline, on this device'**
-  String get dailyReminderSubtitle;
 
   /// No description provided for @reminderTimeLabel.
   ///

@@ -194,11 +194,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get systemDefault => 'System Default';
 
   @override
-  String get dailyReminder => 'Daily Reminder';
-
-  @override
-  String get dailyReminderSubtitle =>
-      'A daily nudge to open Thiruppugazh — entirely offline, on this device';
+  String get dailyReminder => 'Daily notification';
 
   @override
   String get reminderTimeLabel => 'Reminder time';
