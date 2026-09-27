@@ -17,6 +17,7 @@ class AppConstants {
   static const String lyricsFontSizePrefsKey = 'lyrics_font_size';
   static const String reminderEnabledPrefsKey = 'reminder_enabled';
   static const String reminderTimePrefsKey = 'reminder_time_minutes';
+  static const String autoBackupLastWriteAtPrefsKey = 'auto_backup_last_write_at';
 
   // ==================== Deep Link ====================
   static const String deepLinkDomain = 'thiruppugazh.ayilavan.org';
