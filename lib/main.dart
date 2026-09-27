@@ -1,16 +1,20 @@
+import 'dart:async';
 import 'dart:io' show Platform;
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:sqflite_common_ffi/sqflite_ffi.dart';
 import 'l10n/app_localizations.dart';
 
+import 'data/database/database_helper.dart';
 import 'data/repositories/song_repository.dart';
+import 'providers/auto_backup_status_provider.dart';
 import 'providers/theme_provider.dart';
 import 'providers/language_provider.dart';
 import 'providers/lyrics_language_provider.dart';
 import 'providers/lyrics_font_size_provider.dart';
 import 'providers/reminder_settings_provider.dart';
 import 'providers/song_list_provider.dart';
+import 'services/auto_backup_service.dart';
 import 'ui/screens/main_wrapper.dart';
 import 'theme/app_theme.dart';
 
@@ -22,6 +26,9 @@ Future<void> main() async {
     databaseFactory = databaseFactoryFfi;
   }
 
+  final autoBackupStatus = AutoBackupStatusProvider();
+  final autoBackupService = AutoBackupService(statusProvider: autoBackupStatus);
+
   runApp(
     MultiProvider(
       providers: [
@@ -31,6 +38,7 @@ Future<void> main() async {
         ChangeNotifierProvider(create: (context) => LyricsLanguageProvider()),
         ChangeNotifierProvider(create: (context) => LyricsFontSizeProvider()),
         ChangeNotifierProvider(create: (context) => ReminderSettingsProvider()),
+        ChangeNotifierProvider.value(value: autoBackupStatus),
         ChangeNotifierProvider(
           create: (context) => SongListProvider(
             Provider.of<SongRepository>(context, listen: false),
@@ -40,6 +48,20 @@ Future<void> main() async {
       child: const MyApp(),
     ),
   );
+
+  // Fire-and-forget: the database self-heal/copy logic (see
+  // DatabaseHelper._initDatabase) must run first so wasFreshlyCreated is
+  // accurate, then the one-shot silent restore check, then start watching
+  // for future mutations and do the opportunistic staleness check. None of
+  // this blocks the first frame.
+  unawaited(() async {
+    await DatabaseHelper().database;
+    await autoBackupService.maybeRestore(
+      isFreshDatabase: DatabaseHelper().wasFreshlyCreated,
+    );
+    autoBackupService.startWatchingMutations();
+    await autoBackupService.runOpportunisticCheck();
+  }());
 }
 
 class MyApp extends StatelessWidget {

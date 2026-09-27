@@ -3,6 +3,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:thiruppugazh/l10n/app_localizations.dart';
+import 'package:thiruppugazh/providers/auto_backup_status_provider.dart';
 import 'package:thiruppugazh/providers/language_provider.dart';
 import 'package:thiruppugazh/providers/lyrics_language_provider.dart';
 import 'package:thiruppugazh/providers/reminder_settings_provider.dart';
@@ -16,6 +17,7 @@ Widget _wrapped() {
       ChangeNotifierProvider(create: (_) => LanguageProvider()),
       ChangeNotifierProvider(create: (_) => LyricsLanguageProvider()),
       ChangeNotifierProvider(create: (_) => ReminderSettingsProvider()),
+      ChangeNotifierProvider(create: (_) => AutoBackupStatusProvider()),
     ],
     child: const MaterialApp(
       localizationsDelegates: AppLocalizations.localizationsDelegates,

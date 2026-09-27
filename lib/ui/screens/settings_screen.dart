@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
+import '../../providers/auto_backup_status_provider.dart';
 import '../../providers/theme_provider.dart';
 import '../../providers/language_provider.dart';
 import '../../providers/lyrics_language_provider.dart';
@@ -381,6 +383,9 @@ class SettingsScreen extends StatelessWidget {
     BuildContext context,
     AppLocalizations l10n,
   ) {
+    final autoBackupStatus = Provider.of<AutoBackupStatusProvider>(context);
+    final lastBackupAt = autoBackupStatus.lastBackupAt;
+
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -408,6 +413,17 @@ class SettingsScreen extends StatelessWidget {
                 ),
               ),
             ],
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16.0),
+          child: Text(
+            lastBackupAt == null
+                ? l10n.lastAutoBackupNever
+                : l10n.lastAutoBackupLabel(
+                    DateFormat.yMMMd().add_jm().format(lastBackupAt),
+                  ),
+            style: Theme.of(context).textTheme.bodySmall,
           ),
         ),
       ],
