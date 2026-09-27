@@ -321,10 +321,47 @@ class AppLocalizationsEn extends AppLocalizations {
       'This will import data from a backup file.\n\n• Categories and Favorites will be merged.\n• Notes and Highlights will be overwritten for existing songs.\n\nDo you want to continue?';
 
   @override
+  String importConfirmationDetailedMessage(
+    int favorites,
+    int categories,
+    int notes,
+    int highlights,
+    String date,
+  ) {
+    return 'This backup has $favorites favorites, $categories categories, $notes notes and $highlights highlights, from $date.\n\nCategories and Favorites will be merged. Notes and Highlights will be overwritten for existing songs.\n\nContinue?';
+  }
+
+  @override
+  String get importResultSuccess => 'Import completed successfully';
+
+  @override
+  String importResultWithSkips(int skipped) {
+    return 'Import completed. $skipped item(s) skipped (song no longer available).';
+  }
+
+  @override
+  String get importFileInvalid =>
+      'This file isn\'t a valid Thiruppugazh backup.';
+
+  @override
+  String get importFileReadError => 'Couldn\'t read that file.';
+
+  @override
+  String lastAutoBackupLabel(String time) {
+    return 'Last automatic backup: $time';
+  }
+
+  @override
+  String get lastAutoBackupNever => 'Last automatic backup: not yet';
+
+  @override
   String get exportSuccess => 'Export successful';
 
   @override
   String get exportFailed => 'Export failed';
+
+  @override
+  String get exportFailedGeneric => 'Export failed. Please try again.';
 
   @override
   String get importSuccess => 'Import completed successfully';

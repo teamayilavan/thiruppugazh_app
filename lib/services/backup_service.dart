@@ -9,6 +9,7 @@ import '../data/database/database_helper.dart';
 import '../data/models/category_model.dart';
 import '../data/models/highlight_model.dart';
 import '../data/models/note_model.dart';
+import '../l10n/app_localizations.dart';
 import '../utils/app_logger.dart';
 
 /// The only backup format version this app understands. A backup written
@@ -71,6 +72,27 @@ class ImportResult {
       favoritesSkipped + categorySongsSkipped + notesSkipped + highlightsSkipped;
   int get totalImported =>
       favoritesImported + categorySongsImported + notesImported + highlightsImported;
+}
+
+/// What's inside a backup file, computed after parsing but before writing
+/// anything -- shown to the user in the pre-import confirmation dialog so
+/// picking the wrong (or an old) file is visible before it overwrites data.
+class BackupPreview {
+  const BackupPreview({
+    required this.favorites,
+    required this.categories,
+    required this.notes,
+    required this.highlights,
+    required this.exportedAt,
+    required this.rawMap,
+  });
+
+  final int favorites;
+  final int categories;
+  final int notes;
+  final int highlights;
+  final DateTime? exportedAt;
+  final Map<String, dynamic> rawMap;
 }
 
 class BackupService {
@@ -142,55 +164,137 @@ class BackupService {
     }
   }
 
-  /// Imports data from a JSON file selected by the user.
-  /// Merges Categories/Favorites, Overwrites Notes/Highlights.
-  Future<void> importData(BuildContext context) async {
+  /// Picks a backup file, parses and validates it, and returns a preview
+  /// of its contents -- or null if the user canceled or the file was
+  /// invalid (in which case an error is already shown via [context]).
+  Future<BackupPreview?> pickAndPreviewBackup(BuildContext context) async {
+    final l10n = AppLocalizations.of(context)!;
     try {
-      // 1. Pick file
-      FilePickerResult? result = await FilePicker.platform.pickFiles(
+      final FilePickerResult? result = await FilePicker.platform.pickFiles(
         type: FileType.custom,
         allowedExtensions: ['json'],
       );
-
       if (result == null || result.files.single.path == null) {
-        // User canceled
-        return;
+        return null;
       }
 
       final file = File(result.files.single.path!);
       final content = await file.readAsString();
       final Map<String, dynamic> importMap = jsonDecode(content);
-
       _validateBackupMap(importMap);
 
+      final favIds = (importMap['favorites'] as List).whereType<int>();
+      final cats = (importMap['categories'] as List);
+      final notes = (importMap['notes'] as List?) ?? const [];
+      final highlights = (importMap['highlights'] as List?) ?? const [];
+      final exportedAtRaw = importMap['exported_at'];
+
+      return BackupPreview(
+        favorites: favIds.length,
+        categories: cats.length,
+        notes: notes.length,
+        highlights: highlights.length,
+        exportedAt: exportedAtRaw is String
+            ? DateTime.tryParse(exportedAtRaw)
+            : null,
+        rawMap: importMap,
+      );
+    } on FormatException catch (e, stackTrace) {
+      AppLogger.error('Import file invalid', error: e, stackTrace: stackTrace);
       if (context.mounted) {
-        showDialog(
-          context: context,
-          barrierDismissible: false,
-          builder: (c) => const Center(child: CircularProgressIndicator()),
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text(l10n.importFileInvalid)),
         );
       }
+      return null;
+    } catch (e, stackTrace) {
+      AppLogger.error('Import file read failed', error: e, stackTrace: stackTrace);
+      if (context.mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text(l10n.importFileReadError)),
+        );
+      }
+      return null;
+    }
+  }
 
-      final importResult = await applyImport(importMap);
+  /// Picks a backup file, shows the user what's in it, and -- only if they
+  /// confirm -- applies it inside a transaction and reports what happened.
+  Future<void> importData(BuildContext context) async {
+    final l10n = AppLocalizations.of(context)!;
+    final preview = await pickAndPreviewBackup(context);
+    if (preview == null) return;
 
+    if (!context.mounted) return;
+    final confirmed = await _showImportConfirmation(context, l10n, preview);
+    if (confirmed != true) return;
+
+    if (context.mounted) {
+      showDialog(
+        context: context,
+        barrierDismissible: false,
+        builder: (c) => const Center(child: CircularProgressIndicator()),
+      );
+    }
+
+    try {
+      final result = await applyImport(preview.rawMap);
       if (context.mounted) {
         Navigator.of(context).pop();
         ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text(_importResultMessage(importResult))),
+          SnackBar(
+            content: Text(
+              result.totalSkipped == 0
+                  ? l10n.importResultSuccess
+                  : l10n.importResultWithSkips(result.totalSkipped),
+            ),
+          ),
         );
       }
     } catch (e, stackTrace) {
+      AppLogger.error('Import failed', error: e, stackTrace: stackTrace);
       if (context.mounted) {
-        // Close progress dialog if open (can be tricky to know state, but usually fine here)
-        // A better way is using a stateful widget or provider, but for this simple action:
         Navigator.of(context).maybePop();
-
-        AppLogger.error('Import failed', error: e, stackTrace: stackTrace);
         ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text('Import failed: ${e.toString()}')),
+          SnackBar(content: Text(l10n.importFileReadError)),
         );
       }
     }
+  }
+
+  Future<bool?> _showImportConfirmation(
+    BuildContext context,
+    AppLocalizations l10n,
+    BackupPreview preview,
+  ) {
+    final dateStr = preview.exportedAt != null
+        ? DateFormat.yMMMd().format(preview.exportedAt!)
+        : 'an unknown date';
+    return showDialog<bool>(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: Text(l10n.importConfirmationTitle),
+        content: Text(
+          l10n.importConfirmationDetailedMessage(
+            preview.favorites,
+            preview.categories,
+            preview.notes,
+            preview.highlights,
+            dateStr,
+          ),
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(context, false),
+            child: Text(l10n.cancel),
+          ),
+          FilledButton(
+            onPressed: () => Navigator.pop(context, true),
+            child: Text(l10n.yes),
+          ),
+        ],
+      ),
+    );
   }
 
   /// Applies a parsed, already-validated backup [map] to the database
@@ -278,14 +382,6 @@ class BackupService {
         highlightsSkipped: highlightsSkipped,
       );
     });
-  }
-
-  String _importResultMessage(ImportResult result) {
-    if (result.totalSkipped == 0) {
-      return 'Import completed successfully';
-    }
-    return 'Import completed. ${result.totalSkipped} item(s) skipped '
-        '(song no longer available).';
   }
 
   void _validateBackupMap(Map<String, dynamic> map) {

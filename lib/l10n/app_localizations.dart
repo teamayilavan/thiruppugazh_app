@@ -686,6 +686,54 @@ abstract class AppLocalizations {
   /// **'This will import data from a backup file.\n\n• Categories and Favorites will be merged.\n• Notes and Highlights will be overwritten for existing songs.\n\nDo you want to continue?'**
   String get importConfirmationMessage;
 
+  /// No description provided for @importConfirmationDetailedMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'This backup has {favorites} favorites, {categories} categories, {notes} notes and {highlights} highlights, from {date}.\n\nCategories and Favorites will be merged. Notes and Highlights will be overwritten for existing songs.\n\nContinue?'**
+  String importConfirmationDetailedMessage(
+    int favorites,
+    int categories,
+    int notes,
+    int highlights,
+    String date,
+  );
+
+  /// No description provided for @importResultSuccess.
+  ///
+  /// In en, this message translates to:
+  /// **'Import completed successfully'**
+  String get importResultSuccess;
+
+  /// No description provided for @importResultWithSkips.
+  ///
+  /// In en, this message translates to:
+  /// **'Import completed. {skipped} item(s) skipped (song no longer available).'**
+  String importResultWithSkips(int skipped);
+
+  /// No description provided for @importFileInvalid.
+  ///
+  /// In en, this message translates to:
+  /// **'This file isn\'t a valid Thiruppugazh backup.'**
+  String get importFileInvalid;
+
+  /// No description provided for @importFileReadError.
+  ///
+  /// In en, this message translates to:
+  /// **'Couldn\'t read that file.'**
+  String get importFileReadError;
+
+  /// No description provided for @lastAutoBackupLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Last automatic backup: {time}'**
+  String lastAutoBackupLabel(String time);
+
+  /// No description provided for @lastAutoBackupNever.
+  ///
+  /// In en, this message translates to:
+  /// **'Last automatic backup: not yet'**
+  String get lastAutoBackupNever;
+
   /// No description provided for @exportSuccess.
   ///
   /// In en, this message translates to:
@@ -697,6 +745,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Export failed'**
   String get exportFailed;
+
+  /// No description provided for @exportFailedGeneric.
+  ///
+  /// In en, this message translates to:
+  /// **'Export failed. Please try again.'**
+  String get exportFailedGeneric;
 
   /// No description provided for @importSuccess.
   ///

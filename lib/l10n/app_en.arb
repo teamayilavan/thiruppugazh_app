@@ -112,6 +112,36 @@
   "importData": "Import Data",
   "importConfirmationTitle": "Import Backup",
   "importConfirmationMessage": "This will import data from a backup file.\n\n• Categories and Favorites will be merged.\n• Notes and Highlights will be overwritten for existing songs.\n\nDo you want to continue?",
+  "importConfirmationDetailedMessage": "This backup has {favorites} favorites, {categories} categories, {notes} notes and {highlights} highlights, from {date}.\n\nCategories and Favorites will be merged. Notes and Highlights will be overwritten for existing songs.\n\nContinue?",
+  "@importConfirmationDetailedMessage": {
+    "placeholders": {
+      "favorites": {"type": "int"},
+      "categories": {"type": "int"},
+      "notes": {"type": "int"},
+      "highlights": {"type": "int"},
+      "date": {"type": "String"}
+    }
+  },
+  "importResultSuccess": "Import completed successfully",
+  "@importResultSuccess": {},
+  "importResultWithSkips": "Import completed. {skipped} item(s) skipped (song no longer available).",
+  "@importResultWithSkips": {
+    "placeholders": {
+      "skipped": {"type": "int"}
+    }
+  },
+  "importFileInvalid": "This file isn't a valid Thiruppugazh backup.",
+  "@importFileInvalid": {},
+  "importFileReadError": "Couldn't read that file.",
+  "@importFileReadError": {},
+  "lastAutoBackupLabel": "Last automatic backup: {time}",
+  "@lastAutoBackupLabel": {
+    "placeholders": {
+      "time": {"type": "String"}
+    }
+  },
+  "lastAutoBackupNever": "Last automatic backup: not yet",
+  "@lastAutoBackupNever": {},
   "exportSuccess": "Export successful",
   "exportFailed": "Export failed",
   "exportFailedGeneric": "Export failed. Please try again.",

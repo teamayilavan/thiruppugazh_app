@@ -402,7 +402,7 @@ class SettingsScreen extends StatelessWidget {
               const SizedBox(width: 16),
               Expanded(
                 child: FilledButton.icon(
-                  onPressed: () => _confirmAndImport(context, l10n),
+                  onPressed: () => BackupService().importData(context),
                   icon: const Icon(Icons.download),
                   label: Text(l10n.importData),
                 ),
@@ -411,29 +411,6 @@ class SettingsScreen extends StatelessWidget {
           ),
         ),
       ],
-    );
-  }
-
-  void _confirmAndImport(BuildContext context, AppLocalizations l10n) {
-    showDialog(
-      context: context,
-      builder: (context) => AlertDialog(
-        title: Text(l10n.importConfirmationTitle),
-        content: Text(l10n.importConfirmationMessage),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.pop(context),
-            child: Text(l10n.cancel),
-          ),
-          FilledButton(
-            onPressed: () {
-              Navigator.pop(context); // Close dialog
-              BackupService().importData(context);
-            },
-            child: Text(l10n.yes),
-          ),
-        ],
-      ),
     );
   }
 
