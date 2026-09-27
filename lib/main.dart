@@ -16,6 +16,7 @@ import 'providers/reminder_settings_provider.dart';
 import 'providers/song_list_provider.dart';
 import 'services/auto_backup_service.dart';
 import 'ui/screens/main_wrapper.dart';
+import 'utils/app_logger.dart';
 import 'theme/app_theme.dart';
 
 Future<void> main() async {
@@ -55,12 +56,23 @@ Future<void> main() async {
   // for future mutations and do the opportunistic staleness check. None of
   // this blocks the first frame.
   unawaited(() async {
-    await DatabaseHelper().database;
-    await autoBackupService.maybeRestore(
-      isFreshDatabase: DatabaseHelper().wasFreshlyCreated,
-    );
-    autoBackupService.startWatchingMutations();
-    await autoBackupService.runOpportunisticCheck();
+    try {
+      await DatabaseHelper().database;
+      await autoBackupService.maybeRestore(
+        isFreshDatabase: DatabaseHelper().wasFreshlyCreated,
+      );
+      autoBackupService.startWatchingMutations();
+      // The staleness check reads lastBackupAt, so wait for the provider's
+      // initial SharedPreferences load to finish first.
+      await autoBackupStatus.ready;
+      await autoBackupService.runOpportunisticCheck();
+    } catch (e, stackTrace) {
+      AppLogger.error(
+        'Auto-backup startup sequence failed',
+        error: e,
+        stackTrace: stackTrace,
+      );
+    }
   }());
 }
 

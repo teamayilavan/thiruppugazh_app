@@ -10,8 +10,13 @@ import '../constants/app_constants.dart';
 /// live without the screen needing to be rebuilt from scratch.
 class AutoBackupStatusProvider extends ChangeNotifier {
   AutoBackupStatusProvider() {
-    _load();
+    ready = _load();
   }
+
+  /// Completes once the persisted last-backup time has been loaded, so
+  /// callers that read [lastBackupAt] at startup (the opportunistic
+  /// staleness check) don't race the initial load.
+  late final Future<void> ready;
 
   DateTime? _lastBackupAt;
   DateTime? get lastBackupAt => _lastBackupAt;

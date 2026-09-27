@@ -146,6 +146,8 @@
   "exportFailed": "Export failed",
   "exportFailedGeneric": "Export failed. Please try again.",
   "@exportFailedGeneric": {},
+  "importFailedGeneric": "Import failed. Please try again.",
+  "@importFailedGeneric": {},
   "importSuccess": "Import completed successfully",
   "importFailed": "Import failed",
   

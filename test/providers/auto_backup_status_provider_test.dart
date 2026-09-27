@@ -26,6 +26,16 @@ void main() {
       expect(provider.lastBackupAt, saved);
     });
 
+    test('ready completes only after the saved time is loaded', () async {
+      final saved = DateTime(2026, 9, 1, 12, 30);
+      SharedPreferences.setMockInitialValues({
+        'auto_backup_last_write_at': saved.toIso8601String(),
+      });
+      final provider = AutoBackupStatusProvider();
+      await provider.ready;
+      expect(provider.lastBackupAt, saved);
+    });
+
     test('recordBackup persists and notifies listeners', () async {
       final provider = AutoBackupStatusProvider();
       await Future.delayed(Duration.zero);

@@ -42,6 +42,18 @@ List<int> filterExistingIds(List<int> requested, Set<int> existingIds) {
   return requested.where(existingIds.contains).toList();
 }
 
+/// Returns a copy of a backed-up note/highlight row with its `id` removed,
+/// so the importing database assigns a fresh autoincrement id instead of
+/// reusing the source device's -- which could collide with an existing
+/// local row and (inside the import transaction) roll back the whole
+/// import. Everything else, including `song_id`, is preserved.
+Map<String, dynamic> withoutRowId(Map<dynamic, dynamic> row) {
+  return {
+    for (final entry in row.entries)
+      if (entry.key != 'id') entry.key as String: entry.value,
+  };
+}
+
 /// Summary of what a call to [BackupService.applyImport] actually did,
 /// so the caller can tell the user "imported 40 of 42 favorites" instead
 /// of a bare "done".
@@ -256,7 +268,7 @@ class BackupService {
       if (context.mounted) {
         Navigator.of(context).maybePop();
         ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text(l10n.importFileReadError)),
+          SnackBar(content: Text(l10n.importFailedGeneric)),
         );
       }
     }
@@ -347,7 +359,9 @@ class BackupService {
       int notesSkipped = 0;
       final List<dynamic> notesList = map['notes'] ?? [];
       for (final noteMap in notesList) {
-        final note = Note.fromMap(noteMap);
+        // Drop the backup's id; saveNote merges by song_id, and a fresh
+        // insert gets a locally assigned id.
+        final note = Note.fromMap(withoutRowId(noteMap as Map));
         if (validSongIds.contains(note.songId)) {
           await _dbHelper.saveNote(note, executor: txn);
           notesImported++;
@@ -360,7 +374,7 @@ class BackupService {
       int highlightsSkipped = 0;
       final List<dynamic> highlightsList = map['highlights'] ?? [];
       for (final hlMap in highlightsList) {
-        final hl = Highlight.fromMap(hlMap);
+        final hl = Highlight.fromMap(withoutRowId(hlMap as Map));
         if (validSongIds.contains(hl.songId)) {
           await _dbHelper.removeHighlight(hl.songId, hl.verseIndex, executor: txn);
           await _dbHelper.addHighlight(hl, executor: txn);

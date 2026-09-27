@@ -658,6 +658,7 @@ class DatabaseHelper {
   Future<void> deleteNote(int songId) async {
     final db = await database;
     await db.delete('notes', where: 'song_id = ?', whereArgs: [songId]);
+    DatabaseHelper.onMutation?.call();
   }
 
   // --- Query Methods ---

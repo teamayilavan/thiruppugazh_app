@@ -752,6 +752,12 @@ abstract class AppLocalizations {
   /// **'Export failed. Please try again.'**
   String get exportFailedGeneric;
 
+  /// No description provided for @importFailedGeneric.
+  ///
+  /// In en, this message translates to:
+  /// **'Import failed. Please try again.'**
+  String get importFailedGeneric;
+
   /// No description provided for @importSuccess.
   ///
   /// In en, this message translates to:

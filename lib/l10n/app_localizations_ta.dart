@@ -364,6 +364,9 @@ class AppLocalizationsTa extends AppLocalizations {
   String get exportFailedGeneric => 'Export failed. Please try again.';
 
   @override
+  String get importFailedGeneric => 'Import failed. Please try again.';
+
+  @override
   String get importSuccess => 'Import completed successfully';
 
   @override

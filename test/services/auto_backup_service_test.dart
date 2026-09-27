@@ -70,77 +70,124 @@ void main() {
     service.dispose();
   });
 
-  test('maybeRestore imports the file when eligible and sets the attempted flag', () async {
-    final backupFile = File(p.join(tempDir.path, 'thiruppugazh_auto_backup.json'));
-    await backupFile.writeAsString(jsonEncode({'version': 1, 'favorites': [7]}));
+  group('maybeRestore', () {
+    // Mirrors the production layout: tempDir plays the role of the base
+    // (application support) directory, backups go in tempDir/auto_backup,
+    // and the one-shot marker sits directly in tempDir.
+    late Directory backupDir;
+    late File backupFile;
+    late File markerFile;
 
-    final statusProvider = AutoBackupStatusProvider();
-    await Future.delayed(Duration.zero);
+    setUp(() async {
+      backupDir = Directory(p.join(tempDir.path, 'auto_backup'));
+      await backupDir.create(recursive: true);
+      backupFile = File(p.join(backupDir.path, 'thiruppugazh_auto_backup.json'));
+      markerFile = File(p.join(tempDir.path, 'auto_restore_attempted.marker'));
+    });
 
-    Map<String, dynamic>? importedMap;
-    final service = AutoBackupService(
-      backupJsonBuilder: () async => {'version': 1},
-      applyImport: (map) async {
+    AutoBackupService buildService(
+      Future<dynamic> Function(Map<String, dynamic>) applyImport,
+    ) {
+      return AutoBackupService(
+        backupJsonBuilder: () async => {'version': 1},
+        applyImport: applyImport,
+        statusProvider: AutoBackupStatusProvider(),
+        backupDirectory: backupDir,
+        attemptedMarkerDirectory: tempDir,
+      );
+    }
+
+    test('imports the file when eligible and creates the attempted marker', () async {
+      await backupFile.writeAsString(jsonEncode({'version': 1, 'favorites': [7]}));
+
+      Map<String, dynamic>? importedMap;
+      final service = buildService((map) async {
         importedMap = map;
         return null;
-      },
-      statusProvider: statusProvider,
-      backupDirectory: tempDir,
-    );
+      });
 
-    await service.maybeRestore(isFreshDatabase: true);
+      await service.maybeRestore(isFreshDatabase: true);
 
-    expect(importedMap, isNotNull);
-    expect(importedMap!['favorites'], [7]);
+      expect(importedMap, isNotNull);
+      expect(importedMap!['favorites'], [7]);
+      expect(await markerFile.exists(), true);
+    });
 
-    final prefs = await SharedPreferences.getInstance();
-    expect(prefs.getBool('auto_restore_attempted'), true);
-  });
+    test('does nothing on an ordinary reopen', () async {
+      await backupFile.writeAsString(jsonEncode({'version': 1, 'favorites': [7]}));
 
-  test('maybeRestore does nothing on an ordinary reopen', () async {
-    final backupFile = File(p.join(tempDir.path, 'thiruppugazh_auto_backup.json'));
-    await backupFile.writeAsString(jsonEncode({'version': 1, 'favorites': [7]}));
-
-    final statusProvider = AutoBackupStatusProvider();
-    await Future.delayed(Duration.zero);
-
-    var importCalled = false;
-    final service = AutoBackupService(
-      backupJsonBuilder: () async => {'version': 1},
-      applyImport: (map) async {
+      var importCalled = false;
+      final service = buildService((map) async {
         importCalled = true;
         return null;
-      },
-      statusProvider: statusProvider,
-      backupDirectory: tempDir,
-    );
+      });
 
-    await service.maybeRestore(isFreshDatabase: false);
+      await service.maybeRestore(isFreshDatabase: false);
 
-    expect(importCalled, false);
-  });
+      expect(importCalled, false);
+      expect(await markerFile.exists(), false);
+    });
 
-  test('maybeRestore never runs twice even if called again on a fresh DB', () async {
-    final backupFile = File(p.join(tempDir.path, 'thiruppugazh_auto_backup.json'));
-    await backupFile.writeAsString(jsonEncode({'version': 1, 'favorites': [7]}));
+    test('never runs twice even if called again on a fresh DB', () async {
+      await backupFile.writeAsString(jsonEncode({'version': 1, 'favorites': [7]}));
+      await markerFile.writeAsString('');
 
-    SharedPreferences.setMockInitialValues({'auto_restore_attempted': true});
-    final statusProvider = AutoBackupStatusProvider();
-    await Future.delayed(Duration.zero);
-
-    var importCalled = false;
-    final service = AutoBackupService(
-      backupJsonBuilder: () async => {'version': 1},
-      applyImport: (map) async {
+      var importCalled = false;
+      final service = buildService((map) async {
         importCalled = true;
         return null;
-      },
-      statusProvider: statusProvider,
-      backupDirectory: tempDir,
-    );
+      });
 
-    await service.maybeRestore(isFreshDatabase: true);
+      await service.maybeRestore(isFreshDatabase: true);
 
-    expect(importCalled, false);
+      expect(importCalled, false);
+    });
+
+    test('ignores a restore-attempted flag in SharedPreferences (it is backed up, so must not gate restore)', () async {
+      SharedPreferences.setMockInitialValues({'auto_restore_attempted': true});
+      await backupFile.writeAsString(jsonEncode({'version': 1, 'favorites': [7]}));
+
+      var importCalled = false;
+      final service = buildService((map) async {
+        importCalled = true;
+        return null;
+      });
+
+      await service.maybeRestore(isFreshDatabase: true);
+
+      expect(importCalled, true);
+    });
+
+    test('the marker is a sibling of the backup directory, not inside it', () async {
+      await backupFile.writeAsString(jsonEncode({'version': 1, 'favorites': [7]}));
+      final service = buildService((_) async => null);
+
+      await service.maybeRestore(isFreshDatabase: true);
+
+      expect(await markerFile.exists(), true);
+      expect(p.isWithin(backupDir.path, markerFile.path), false);
+      expect(p.equals(markerFile.parent.path, backupDir.parent.path), true);
+      // Nothing other than the backup file itself ends up in auto_backup/.
+      final backupDirContents = await backupDir
+          .list()
+          .map((e) => p.basename(e.path))
+          .toList();
+      expect(backupDirContents, ['thiruppugazh_auto_backup.json']);
+    });
+
+    test('rejects an unsupported backup version without importing, but still marks attempted', () async {
+      await backupFile.writeAsString(jsonEncode({'version': 2, 'favorites': [7]}));
+
+      var importCalled = false;
+      final service = buildService((map) async {
+        importCalled = true;
+        return null;
+      });
+
+      await service.maybeRestore(isFreshDatabase: true);
+
+      expect(importCalled, false);
+      expect(await markerFile.exists(), true);
+    });
   });
 }
