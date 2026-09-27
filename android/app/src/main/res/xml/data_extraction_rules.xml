@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Auto Backup + device-to-device transfer rules for API 31+. Same intent
+  as backup_rules.xml (kept in sync with it): only the user-data snapshot
+  and settings, never the bundled read-only database.
+  See docs/automated-backup-plan.md.
+-->
+<data-extraction-rules>
+    <cloud-backup>
+        <include domain="file" path="auto_backup/" />
+        <include domain="sharedpref" path="." />
+        <exclude domain="database" path="thiruppugazh.db" />
+    </cloud-backup>
+    <device-transfer>
+        <include domain="file" path="auto_backup/" />
+        <include domain="sharedpref" path="." />
+        <exclude domain="database" path="thiruppugazh.db" />
+    </device-transfer>
+</data-extraction-rules>

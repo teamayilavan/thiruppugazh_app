@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Auto Backup rules for API 30 and below. Only the small user-data JSON
+  snapshot and settings are backed up - the bundled, read-only ~38MB
+  song database is explicitly excluded so it doesn't waste the backup
+  quota on data that ships with every install anyway.
+  See docs/automated-backup-plan.md.
+-->
+<full-backup-content>
+    <include domain="file" path="auto_backup/" />
+    <include domain="sharedpref" path="." />
+    <exclude domain="database" path="thiruppugazh.db" />
+</full-backup-content>
