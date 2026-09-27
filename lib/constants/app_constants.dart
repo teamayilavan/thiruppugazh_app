@@ -18,6 +18,7 @@ class AppConstants {
   static const String reminderEnabledPrefsKey = 'reminder_enabled';
   static const String reminderTimePrefsKey = 'reminder_time_minutes';
   static const String autoBackupLastWriteAtPrefsKey = 'auto_backup_last_write_at';
+  static const String autoRestoreAttemptedPrefsKey = 'auto_restore_attempted';
 
   // ==================== Deep Link ====================
   static const String deepLinkDomain = 'thiruppugazh.ayilavan.org';
