@@ -114,6 +114,8 @@
   "importConfirmationMessage": "This will import data from a backup file.\n\n• Categories and Favorites will be merged.\n• Notes and Highlights will be overwritten for existing songs.\n\nDo you want to continue?",
   "exportSuccess": "Export successful",
   "exportFailed": "Export failed",
+  "exportFailedGeneric": "Export failed. Please try again.",
+  "@exportFailedGeneric": {},
   "importSuccess": "Import completed successfully",
   "importFailed": "Import failed",
   

@@ -14,39 +14,41 @@ import '../utils/app_logger.dart';
 class BackupService {
   final DatabaseHelper _dbHelper = DatabaseHelper();
 
+  /// Gathers favorites, categories, notes, and highlights into the backup
+  /// JSON shape. Pure data-gathering, no file I/O or UI -- shared by the
+  /// manual share-sheet export and the silent auto-backup writer, so both
+  /// paths produce byte-identical output for the same data.
+  Future<Map<String, dynamic>> buildBackupJson() async {
+    final favoriteSongs = await _dbHelper.getFavoriteSongs();
+    final categories = await _dbHelper.getCategoriesWithSongCounts();
+    final songCategories = await _dbHelper.getAllSongCategories();
+    final notes = await _dbHelper.getAllNotes();
+    final highlights = await _dbHelper.getAllHighlights();
+
+    final customCategories = categories.where((c) => c.id != 1).toList();
+
+    return {
+      'version': 1,
+      'exported_at': DateTime.now().toIso8601String(),
+      'app_name': 'Thiruppugazh',
+      'favorites': favoriteSongs.map((s) => s.id).toList(),
+      'categories': customCategories.map((c) {
+        final songIds = songCategories
+            .where((sc) => sc['category_id'] == c.id)
+            .map((sc) => sc['song_id'])
+            .toList();
+        return {'name': c.name, 'songs': songIds};
+      }).toList(),
+      'notes': notes.map((n) => n.toMap()).toList(),
+      'highlights': highlights.map((h) => h.toMap()).toList(),
+    };
+  }
+
   /// Exports user data (Favorites, Categories, Notes, Highlights) to a JSON file
   /// and prompts the user to share/save it.
   Future<void> exportData(BuildContext context) async {
     try {
-      // 1. Fetch all data
-      final favoriteSongs = await _dbHelper.getFavoriteSongs();
-      final categories = await _dbHelper.getCategoriesWithSongCounts();
-      final songCategories = await _dbHelper.getAllSongCategories();
-      final notes = await _dbHelper.getAllNotes();
-      final highlights = await _dbHelper.getAllHighlights();
-
-      // 2. Structure data
-      // Filter out 'Favorites' category (ID 1) from explicit export if handled via isFavorite flag,
-      // generally ID 1 is reserved.
-      final customCategories = categories.where((c) => c.id != 1).toList();
-
-      final Map<String, dynamic> exportMap = {
-        'version': 1,
-        'exported_at': DateTime.now().toIso8601String(),
-        'app_name': 'Thiruppugazh',
-        'favorites': favoriteSongs.map((s) => s.id).toList(),
-        'categories': customCategories.map((c) {
-          final songIds = songCategories
-              .where((sc) => sc['category_id'] == c.id)
-              .map((sc) => sc['song_id'])
-              .toList();
-          return {'name': c.name, 'songs': songIds};
-        }).toList(),
-        'notes': notes.map((n) => n.toMap()).toList(),
-        'highlights': highlights.map((h) => h.toMap()).toList(),
-      };
-
-      // 3. Create JSON file
+      final exportMap = await buildBackupJson();
       final jsonString = jsonEncode(exportMap);
       final directory = await getTemporaryDirectory();
       final dateStr = DateFormat('yyyyMMdd_HHmm').format(DateTime.now());
@@ -54,7 +56,6 @@ class BackupService {
       final file = File('${directory.path}/$fileName');
       await file.writeAsString(jsonString);
 
-      // 4. Share file
       // ignore: deprecated_member_use
       final result = await Share.shareXFiles(
         [XFile(file.path)],
@@ -73,7 +74,7 @@ class BackupService {
       AppLogger.error('Export failed', error: e, stackTrace: stackTrace);
       if (context.mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text('Export failed: ${e.toString()}')),
+          const SnackBar(content: Text('Export failed. Please try again.')),
         );
       }
     }
