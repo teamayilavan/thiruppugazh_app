@@ -22,9 +22,33 @@ class DatabaseHelper {
   static const String _dbName = "thiruppugazh.db";
   static const int _dbVersion = AppConstants.dbVersion;
 
+  /// True if this run's [_initDatabase] had to (re)copy the database from
+  /// the bundled asset -- i.e. there was no usable database on disk before
+  /// this launch. Used by the auto-backup restore check to distinguish a
+  /// genuinely fresh install from an ordinary reopen; only meaningful after
+  /// [database] has been awaited at least once.
+  bool _wasFreshlyCreated = false;
+  bool get wasFreshlyCreated => _wasFreshlyCreated;
+
+  /// Called after any write that changes backup-relevant data (favorites,
+  /// categories, notes, highlights). Set by [AutoBackupService] at startup
+  /// to schedule a debounced re-write of the auto-backup snapshot.
+  static void Function()? onMutation;
+
   /// Returns the singleton database instance, initializing it if necessary.
   /// Caches the Future itself so concurrent callers all await the same init.
   Future<Database> get database => _databaseFuture ??= _initDatabase();
+
+  /// Runs [action] inside a single sqflite transaction. Pass the given
+  /// [Transaction] as the `executor` argument to the executor-aware helper
+  /// methods below so their writes participate in the same transaction and
+  /// roll back together on failure.
+  Future<T> runInTransaction<T>(
+    Future<T> Function(Transaction txn) action,
+  ) async {
+    final db = await database;
+    return db.transaction(action);
+  }
 
   /// How many times [_copyDatabaseFromAssets] will (re)try a fresh copy if
   /// the result doesn't verify. A second attempt is cheap insurance against
@@ -43,6 +67,7 @@ class DatabaseHelper {
 
     if (!exists) {
       await _copyDatabaseFromAssets(path);
+      _wasFreshlyCreated = true;
     } else if (await _isDatabaseUsable(path)) {
       AppLogger.info("Opening existing database");
     } else {
@@ -58,6 +83,7 @@ class DatabaseHelper {
         "Existing database failed verification; re-copying from assets",
       );
       await _copyDatabaseFromAssets(path);
+      _wasFreshlyCreated = true;
     }
 
     return await openDatabase(
@@ -520,18 +546,26 @@ class DatabaseHelper {
 
   // --- Highlights Methods ---
 
-  Future<int> addHighlight(Highlight highlight) async {
-    final db = await database;
-    return await db.insert('highlights', highlight.toMap());
+  Future<int> addHighlight(Highlight highlight, {DatabaseExecutor? executor}) async {
+    final DatabaseExecutor db = executor ?? await database;
+    final rows = await db.insert('highlights', highlight.toMap());
+    DatabaseHelper.onMutation?.call();
+    return rows;
   }
 
-  Future<void> removeHighlight(int songId, int verseIndex) async {
-    final db = await database;
-    await db.delete(
+  Future<int> removeHighlight(
+    int songId,
+    int verseIndex, {
+    DatabaseExecutor? executor,
+  }) async {
+    final DatabaseExecutor db = executor ?? await database;
+    final rows = await db.delete(
       'highlights',
       where: 'song_id = ? AND verse_index = ?',
       whereArgs: [songId, verseIndex],
     );
+    DatabaseHelper.onMutation?.call();
+    return rows;
   }
 
   Future<List<Highlight>> getHighlightsForSong(int songId) async {
@@ -565,16 +599,17 @@ class DatabaseHelper {
 
   // --- Notes Methods ---
 
-  Future<int> saveNote(Note note) async {
-    final db = await database;
+  Future<int> saveNote(Note note, {DatabaseExecutor? executor}) async {
+    final DatabaseExecutor db = executor ?? await database;
     final existing = await db.query(
       'notes',
       where: 'song_id = ?',
       whereArgs: [note.songId],
     );
 
+    late int rows;
     if (existing.isNotEmpty) {
-      return await db.update(
+      rows = await db.update(
         'notes',
         {
           'content': note.content,
@@ -584,8 +619,10 @@ class DatabaseHelper {
         whereArgs: [note.songId],
       );
     } else {
-      return await db.insert('notes', note.toMap());
+      rows = await db.insert('notes', note.toMap());
     }
+    DatabaseHelper.onMutation?.call();
+    return rows;
   }
 
   Future<Note?> getNoteForSong(int songId) async {
@@ -924,35 +961,46 @@ class DatabaseHelper {
     return List.generate(maps.length, (i) => Category.fromMap(maps[i]));
   }
 
-  Future<int> createCategory(String name) async {
-    final db = await database;
-    return await db.insert('categories', {
+  Future<int> createCategory(String name, {DatabaseExecutor? executor}) async {
+    final DatabaseExecutor db = executor ?? await database;
+    final rows = await db.insert('categories', {
       'name': name,
     }, conflictAlgorithm: ConflictAlgorithm.ignore);
+    DatabaseHelper.onMutation?.call();
+    return rows;
   }
 
   Future<int> updateCategory(int id, String name) async {
     final db = await database;
-    return await db.update(
+    final rows = await db.update(
       'categories',
       {'name': name},
       where: 'id = ?',
       whereArgs: [id],
       conflictAlgorithm: ConflictAlgorithm.fail,
     );
+    DatabaseHelper.onMutation?.call();
+    return rows;
   }
 
   Future<void> deleteCategory(int id) async {
     final db = await database;
     await db.delete('categories', where: 'id = ?', whereArgs: [id]);
+    DatabaseHelper.onMutation?.call();
   }
 
-  Future<void> addSongToCategory(int songId, int categoryId) async {
-    final db = await database;
-    await db.insert('song_categories', {
+  Future<int> addSongToCategory(
+    int songId,
+    int categoryId, {
+    DatabaseExecutor? executor,
+  }) async {
+    final DatabaseExecutor db = executor ?? await database;
+    final rows = await db.insert('song_categories', {
       'song_id': songId,
       'category_id': categoryId,
     }, conflictAlgorithm: ConflictAlgorithm.ignore);
+    DatabaseHelper.onMutation?.call();
+    return rows;
   }
 
   Future<void> removeSongFromCategory(int songId, int categoryId) async {
@@ -962,6 +1010,7 @@ class DatabaseHelper {
       where: 'song_id = ? AND category_id = ?',
       whereArgs: [songId, categoryId],
     );
+    DatabaseHelper.onMutation?.call();
   }
 
   Future<List<int>> getCategoryIdsForSong(int songId) async {
@@ -980,8 +1029,8 @@ class DatabaseHelper {
     return await db.query('song_categories');
   }
 
-  Future<Category?> getCategoryByName(String name) async {
-    final db = await database;
+  Future<Category?> getCategoryByName(String name, {DatabaseExecutor? executor}) async {
+    final DatabaseExecutor db = executor ?? await database;
     final maps = await db.query(
       'categories',
       where: 'name = ?',
@@ -1026,6 +1075,16 @@ class DatabaseHelper {
     return List.generate(maps.length, (i) => Song.fromMap(maps[i]));
   }
 
+  /// All song IDs currently in the (read-only, bundled) songs table. Used
+  /// by import to skip backup entries that reference a song no longer
+  /// present in this install, instead of letting a foreign-key violation
+  /// abort the whole import.
+  Future<Set<int>> getAllSongIds({DatabaseExecutor? executor}) async {
+    final DatabaseExecutor db = executor ?? await database;
+    final maps = await db.query('songs', columns: ['id']);
+    return maps.map((m) => m['id'] as int).toSet();
+  }
+
   // --- Temples Methods ---
 
   Future<List<Map<String, dynamic>>> getAllTemples() async {
@@ -1044,13 +1103,19 @@ class DatabaseHelper {
     return List.generate(maps.length, (i) => Song.fromMap(maps[i]));
   }
 
-  Future<void> toggleFavorite(int songId, bool isFavorite) async {
-    final db = await database;
-    await db.update(
+  Future<int> toggleFavorite(
+    int songId,
+    bool isFavorite, {
+    DatabaseExecutor? executor,
+  }) async {
+    final DatabaseExecutor db = executor ?? await database;
+    final rows = await db.update(
       'songs',
       {'is_favorite': isFavorite ? 1 : 0},
       where: 'id = ?',
       whereArgs: [songId],
     );
+    DatabaseHelper.onMutation?.call();
+    return rows;
   }
 }
