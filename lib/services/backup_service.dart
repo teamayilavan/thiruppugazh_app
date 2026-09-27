@@ -11,6 +11,68 @@ import '../data/models/highlight_model.dart';
 import '../data/models/note_model.dart';
 import '../utils/app_logger.dart';
 
+/// The only backup format version this app understands. A backup written
+/// by a future app version with a higher `version` would otherwise be
+/// silently mis-imported (or vice versa for an older one); this makes
+/// that loud instead.
+const int supportedBackupVersion = 1;
+
+/// Validates the `version` field of a parsed backup map and returns it.
+/// Throws [FormatException] if it's missing or not [supportedBackupVersion].
+int validateBackupVersion(Map<String, dynamic> map) {
+  final version = map['version'];
+  if (version is! int) {
+    throw const FormatException('Backup is missing a version number');
+  }
+  if (version != supportedBackupVersion) {
+    throw FormatException(
+      'Unsupported backup version $version -- this app version only '
+      'understands version $supportedBackupVersion backups',
+    );
+  }
+  return version;
+}
+
+/// Returns the subset of [requested] that's present in [existingIds],
+/// preserving order. Used to skip backup entries that reference a song no
+/// longer in this install instead of letting a foreign-key violation abort
+/// the whole import.
+List<int> filterExistingIds(List<int> requested, Set<int> existingIds) {
+  return requested.where(existingIds.contains).toList();
+}
+
+/// Summary of what a call to [BackupService.applyImport] actually did,
+/// so the caller can tell the user "imported 40 of 42 favorites" instead
+/// of a bare "done".
+class ImportResult {
+  const ImportResult({
+    required this.favoritesImported,
+    required this.favoritesSkipped,
+    required this.categoriesImported,
+    required this.categorySongsImported,
+    required this.categorySongsSkipped,
+    required this.notesImported,
+    required this.notesSkipped,
+    required this.highlightsImported,
+    required this.highlightsSkipped,
+  });
+
+  final int favoritesImported;
+  final int favoritesSkipped;
+  final int categoriesImported;
+  final int categorySongsImported;
+  final int categorySongsSkipped;
+  final int notesImported;
+  final int notesSkipped;
+  final int highlightsImported;
+  final int highlightsSkipped;
+
+  int get totalSkipped =>
+      favoritesSkipped + categorySongsSkipped + notesSkipped + highlightsSkipped;
+  int get totalImported =>
+      favoritesImported + categorySongsImported + notesImported + highlightsImported;
+}
+
 class BackupService {
   final DatabaseHelper _dbHelper = DatabaseHelper();
 
@@ -101,7 +163,6 @@ class BackupService {
 
       _validateBackupMap(importMap);
 
-      // Show progress
       if (context.mounted) {
         showDialog(
           context: context,
@@ -110,63 +171,12 @@ class BackupService {
         );
       }
 
-      // 2. Process Data
+      final importResult = await applyImport(importMap);
 
-      // Favorites
-      final List<dynamic> favIds = importMap['favorites'] ?? [];
-      for (final id in favIds) {
-        if (id is int) {
-          // Check if song exists first? Database toggleFavorite updates based on ID.
-          // If ID doesn't exist, update returns 0 rows. Safe.
-          await _dbHelper.toggleFavorite(id, true);
-        }
-      }
-
-      // Categories
-      final List<dynamic> cats = importMap['categories'] ?? [];
-      for (final catMap in cats) {
-        final String name = catMap['name'];
-        final List<dynamic> songs = catMap['songs'] ?? [];
-
-        // Find or Create Category
-        Category? existingCat = await _dbHelper.getCategoryByName(name);
-        int catId;
-        if (existingCat != null && existingCat.id != null) {
-          catId = existingCat.id!;
-        } else {
-          catId = await _dbHelper.createCategory(name);
-        }
-
-        // Add songs to category
-        for (final songId in songs) {
-          if (songId is int) {
-            await _dbHelper.addSongToCategory(songId, catId);
-          }
-        }
-      }
-
-      // Notes (Overwrite)
-      final List<dynamic> notesList = importMap['notes'] ?? [];
-      for (final noteMap in notesList) {
-        final note = Note.fromMap(noteMap);
-        // saveNote handles update if exists
-        await _dbHelper.saveNote(note);
-      }
-
-      // Highlights (Overwrite/Merge)
-      final List<dynamic> highlightsList = importMap['highlights'] ?? [];
-      for (final hlMap in highlightsList) {
-        final hl = Highlight.fromMap(hlMap);
-        // Remove existing for this verse to "overwrite"
-        await _dbHelper.removeHighlight(hl.songId, hl.verseIndex);
-        await _dbHelper.addHighlight(hl);
-      }
-
-      // Close progress dialog
       if (context.mounted) {
-        Navigator.of(context).pop(); // Close dialog
+        Navigator.of(context).pop();
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text('Import completed successfully')),
+          SnackBar(content: Text(_importResultMessage(importResult))),
         );
       }
     } catch (e, stackTrace) {
@@ -183,7 +193,104 @@ class BackupService {
     }
   }
 
+  /// Applies a parsed, already-validated backup [map] to the database
+  /// inside a single transaction: either it all lands, or none of it does.
+  /// Entries referencing a song ID no longer in this install are skipped
+  /// (and counted) rather than left to trip the songs foreign-key
+  /// constraint and abort the whole import. No [BuildContext] -- this is
+  /// also called by the silent auto-restore path at startup.
+  Future<ImportResult> applyImport(Map<String, dynamic> map) async {
+    return _dbHelper.runInTransaction((txn) async {
+      final validSongIds = await _dbHelper.getAllSongIds(executor: txn);
+
+      final List<dynamic> favIdsRaw = map['favorites'] ?? [];
+      final favIds = favIdsRaw.whereType<int>().toList();
+      final favIdsToApply = filterExistingIds(favIds, validSongIds);
+      for (final id in favIdsToApply) {
+        await _dbHelper.toggleFavorite(id, true, executor: txn);
+      }
+
+      int categoriesImported = 0;
+      int categorySongsImported = 0;
+      int categorySongsSkipped = 0;
+      final List<dynamic> cats = map['categories'] ?? [];
+      for (final catMap in cats) {
+        final String name = catMap['name'];
+        final List<dynamic> songsRaw = catMap['songs'] ?? [];
+        final songs = songsRaw.whereType<int>().toList();
+
+        Category? existingCat = await _dbHelper.getCategoryByName(
+          name,
+          executor: txn,
+        );
+        int catId;
+        if (existingCat != null && existingCat.id != null) {
+          catId = existingCat.id!;
+        } else {
+          catId = await _dbHelper.createCategory(name, executor: txn);
+        }
+        categoriesImported++;
+
+        final songsToApply = filterExistingIds(songs, validSongIds);
+        categorySongsSkipped += songs.length - songsToApply.length;
+        for (final songId in songsToApply) {
+          await _dbHelper.addSongToCategory(songId, catId, executor: txn);
+          categorySongsImported++;
+        }
+      }
+
+      int notesImported = 0;
+      int notesSkipped = 0;
+      final List<dynamic> notesList = map['notes'] ?? [];
+      for (final noteMap in notesList) {
+        final note = Note.fromMap(noteMap);
+        if (validSongIds.contains(note.songId)) {
+          await _dbHelper.saveNote(note, executor: txn);
+          notesImported++;
+        } else {
+          notesSkipped++;
+        }
+      }
+
+      int highlightsImported = 0;
+      int highlightsSkipped = 0;
+      final List<dynamic> highlightsList = map['highlights'] ?? [];
+      for (final hlMap in highlightsList) {
+        final hl = Highlight.fromMap(hlMap);
+        if (validSongIds.contains(hl.songId)) {
+          await _dbHelper.removeHighlight(hl.songId, hl.verseIndex, executor: txn);
+          await _dbHelper.addHighlight(hl, executor: txn);
+          highlightsImported++;
+        } else {
+          highlightsSkipped++;
+        }
+      }
+
+      return ImportResult(
+        favoritesImported: favIdsToApply.length,
+        favoritesSkipped: favIds.length - favIdsToApply.length,
+        categoriesImported: categoriesImported,
+        categorySongsImported: categorySongsImported,
+        categorySongsSkipped: categorySongsSkipped,
+        notesImported: notesImported,
+        notesSkipped: notesSkipped,
+        highlightsImported: highlightsImported,
+        highlightsSkipped: highlightsSkipped,
+      );
+    });
+  }
+
+  String _importResultMessage(ImportResult result) {
+    if (result.totalSkipped == 0) {
+      return 'Import completed successfully';
+    }
+    return 'Import completed. ${result.totalSkipped} item(s) skipped '
+        '(song no longer available).';
+  }
+
   void _validateBackupMap(Map<String, dynamic> map) {
+    validateBackupVersion(map);
+
     if (!map.containsKey('favorites') || !map.containsKey('categories')) {
       throw const FormatException(
         'Missing required keys: favorites, categories',
