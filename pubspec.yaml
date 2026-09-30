@@ -98,6 +98,7 @@ flutter:
     - assets/thiruppugazh.db
     - assets/english_data.json
     - assets/mayuragiri_data.json
+    - assets/song_fixes_v5.json
     - assets/images/hero.png
 
 

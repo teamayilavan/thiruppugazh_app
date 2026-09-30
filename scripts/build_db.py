@@ -152,6 +152,16 @@ SONG_COLUMNS = [
     'mayuragiri_lyrics_separated', 'mayuragiri_english_lyrics_separated',
 ]
 
+# Songs whose source data was corrected after release (v5 migration). Devices
+# that already have the database get these rows patched in place from
+# assets/song_fixes_v5.json; fresh installs get them from the rebuilt DB.
+# Only these columns are patched -- never is_favorite or any user table.
+SONG_FIX_IDS_V5 = [1328, 1338]
+SONG_FIX_COLUMNS_V5 = [
+    'lyrics', 'tune', 'tune_list', 'lyrics_list', 'pathavurai',
+    'search_content', 'mayuragiri_lyrics_separated',
+]
+
 
 # ---------------------------------------------------------------------------
 # Per-song data extraction
@@ -233,6 +243,10 @@ def extract_english_patch(song_id: int, row: dict) -> dict | None:
     }
 
 
+def extract_song_fix_patch(row: dict) -> dict:
+    return {c: row[c] for c in SONG_FIX_COLUMNS_V5}
+
+
 def extract_mayuragiri_patch(kaumaram_id: str, mayuragiri_data: dict) -> dict | None:
     entry = mayuragiri_data.get(kaumaram_id)
     if entry is None:
@@ -282,6 +296,7 @@ def build(songs_dir: Path, db_path: Path, patch_path: Path):
     temple_english: dict = {}
 
     mayuragiri_patch = {}
+    song_fixes_v5 = {}
     mayuragiri_path = songs_dir.parent / 'scripts' / 'output' / 'mayuragiri_lyrics_separated.json'
     mayuragiri_data = {}
     if mayuragiri_path.exists():
@@ -311,6 +326,9 @@ def build(songs_dir: Path, db_path: Path, patch_path: Path):
                 # the migration path) would see NULL for everyone.
                 row['mayuragiri_lyrics_separated'] = mpatch['mayuragiri_lyrics_separated']
                 row['mayuragiri_english_lyrics_separated'] = mpatch['mayuragiri_english_lyrics_separated']
+
+            if sid in SONG_FIX_IDS_V5:
+                song_fixes_v5[str(sid)] = extract_song_fix_patch(row)
 
             place = row.get('place')
             venue = row.get('english_venue')
@@ -360,6 +378,13 @@ def build(songs_dir: Path, db_path: Path, patch_path: Path):
         json.dumps(mayuragiri_patch, ensure_ascii=False, indent=2),
         encoding='utf-8'
     )
+    song_fixes_path = db_path.parent / 'song_fixes_v5.json'
+    song_fixes_path.write_text(
+        json.dumps(song_fixes_v5, ensure_ascii=False, indent=2),
+        encoding='utf-8'
+    )
+    print(f"v5 song fixes written:   {song_fixes_path}  ({len(song_fixes_v5)} songs)")
+
     print(f"Mayuragiri patch written: {mayuragiri_patch_path}  ({len(mayuragiri_patch)} songs)")
 
     print(f"DB written to:           {db_path}  ({db_path.stat().st_size // 1024} KB)")

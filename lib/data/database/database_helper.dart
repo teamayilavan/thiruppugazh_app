@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'dart:io';
+import 'package:flutter/foundation.dart' show visibleForTesting;
 import 'package:flutter/services.dart';
 import 'package:path/path.dart';
 import 'package:sqflite/sqflite.dart';
@@ -108,6 +109,9 @@ class DatabaseHelper {
         }
         if (oldVersion < 4) {
           await _migrateToV4(db);
+        }
+        if (oldVersion < 5) {
+          await migrateToV5(db);
         }
       },
       onOpen: (db) async {
@@ -488,6 +492,59 @@ class DatabaseHelper {
     ''');
 
     AppLogger.info('v3 migration complete');
+  }
+
+  /// Columns a v5 song-fix patch is allowed to touch. Deliberately excludes
+  /// `is_favorite` (user data) and identity columns.
+  static const List<String> _v5PatchableColumns = [
+    'lyrics',
+    'tune',
+    'tune_list',
+    'lyrics_list',
+    'pathavurai',
+    'search_content',
+    'mayuragiri_lyrics_separated',
+  ];
+
+  /// v5: corrects songs whose source data was mis-parsed at release (lyrics
+  /// stored in the tune column, etc.). Patches rows in place with UPDATE
+  /// only -- never delete/replace, since notes, highlights and category
+  /// links cascade-delete with the song row. Idempotent.
+  ///
+  /// [loadPatch] exists so tests can supply the patch without an asset bundle.
+  @visibleForTesting
+  Future<void> migrateToV5(
+    Database db, {
+    Future<String> Function()? loadPatch,
+  }) async {
+    AppLogger.info('Running v5 migration: correcting mis-parsed songs');
+    try {
+      final jsonString = await (loadPatch ??
+          () => rootBundle.loadString(AppConstants.songFixesV5Asset))();
+      final Map<String, dynamic> patch = jsonDecode(jsonString);
+
+      final batch = db.batch();
+      for (final entry in patch.entries) {
+        final id = int.tryParse(entry.key);
+        if (id == null) continue;
+        final fields = entry.value as Map<String, dynamic>;
+        final values = {
+          for (final col in _v5PatchableColumns)
+            if (fields.containsKey(col)) col: fields[col],
+        };
+        if (values.isEmpty) continue;
+        batch.update('songs', values, where: 'id = ?', whereArgs: [id]);
+      }
+      await batch.commit(noResult: true);
+      AppLogger.info('v5 migration: corrected ${patch.length} songs');
+    } catch (e, st) {
+      AppLogger.error(
+        'v5 migration: failed to apply song fixes',
+        error: e,
+        stackTrace: st,
+      );
+      // Non-fatal: songs keep their previous (flawed) content.
+    }
   }
 
   Future<void> _migrateToV4(Database db) async {

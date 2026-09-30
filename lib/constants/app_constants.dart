@@ -4,11 +4,12 @@ class AppConstants {
   AppConstants._();
 
   // ==================== Database Constants ====================
-  static const int dbVersion = 4;
+  static const int dbVersion = 5;
   static const String dbName = 'thiruppugazh.db';
   static const String assetsPath = 'assets';
   static const String englishDataAsset = 'assets/english_data.json';
   static const String mayuragiriDataAsset = 'assets/mayuragiri_data.json';
+  static const String songFixesV5Asset = 'assets/song_fixes_v5.json';
 
   // ==================== Preferences Keys ====================
   static const String themePrefsKey = 'themeMode';

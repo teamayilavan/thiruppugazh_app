@@ -49,3 +49,16 @@ def test_returns_none_when_both_languages_absent():
     }
     patch = extract_mayuragiri_patch("1330", mayuragiri_data)
     assert patch is None
+
+
+def test_song_fix_patch_covers_only_the_corrected_columns():
+    from build_db import SONG_FIX_COLUMNS_V5, extract_song_fix_patch, extract_song_row
+
+    row = extract_song_row({
+        "kaumaram_id": "1338", "title": "t", "lyrics": "a\nb", "tune": "x",
+        "tune_list": ["x"], "lyrics_list": ["a", "b"], "place": "p",
+    })
+    patch = extract_song_fix_patch(row)
+    assert list(patch) == SONG_FIX_COLUMNS_V5
+    assert "is_favorite" not in patch
+    assert patch["lyrics"] == "a\nb"
