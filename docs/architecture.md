@@ -10,12 +10,14 @@ The root widget for the authenticated/main flow. It manages the bottom navigatio
 1.  **Home (`HomeScreen`)**
     -   Displays the list of all songs.
     -   Key Features: Search bar, Filter options, Pull-to-refresh.
+    -   **Today's Song card**: a deterministic, date-seeded pick shown below the title — the same song for every install for the whole calendar day, changing at the next local date.
     -   **Random song**: a small FAB (shuffle icon) stacked above the search FAB opens a uniformly random song, queried DB-wide (`SELECT * FROM songs ORDER BY RANDOM() LIMIT 1` — `DatabaseHelper.getRandomSong()`), not just from whatever page happens to be loaded.
     -   **Navigation**: Tapping a song navigates to `SongDetailScreen`.
 
 2.  **Temples (`TemplesScreen`)**
-    -   Lists temples based on song metadata.
-    -   **Navigation**: Tapping a temple navigates to a filtered list of songs for that temple.
+    -   **Arupadai Veedu grid**: a fixed 2×3 grid of the six Arupadai Veedu abodes at the top of the screen, with song counts, as quick shortcuts into each abode's song list.
+    -   Below that, the full alphabetical list of temples derived from song metadata.
+    -   **Navigation**: Tapping a temple (grid or list) navigates to a filtered list of songs for that temple.
 
 3.  **Categories (`CategoriesScreen`)**
     -   Displays system (Favorites) and user-defined categories.
@@ -27,9 +29,11 @@ The root widget for the authenticated/main flow. It manages the bottom navigatio
 
 5.  **Settings (`SettingsScreen`)**
     -   App configuration: Theme, App Language (UI), Lyrics Language (content — Tamil or, where available, English), Privacy Policy, Credits.
+    -   **Daily Reminder**: opt-in toggle + time picker scheduling a single recurring local notification (`ReminderNotificationService`, `flutter_local_notifications`) — fully offline, no server. Denying the OS permission leaves the toggle off with an explanation.
+    -   **Data Management**: manual Export/Import buttons (`BackupService`) plus a read-only "Last automatic backup: …" line reflecting `AutoBackupStatusProvider`. See `docs/automated-backup-plan.md` for the automated side (Android Auto Backup) that runs invisibly alongside the manual buttons.
     -   **Navigation**: 
         -   Privacy Policy -> `PrivacyPolicyScreen`
-        -   Data Import/Export -> `BackupService`
+        -   Data Import/Export -> `BackupService` (`pickAndPreviewBackup` → confirmation dialog with the real file contents → `applyImport`, transactional)
 
 ### Detail Screens
 
@@ -43,9 +47,9 @@ The core view for reading a song.
     -   Share content.
 
 #### `AddToCategoryDialog`
-Shown from `SongDetailScreen`'s "add to categories" FAB.
+Shown from `SongDetailScreen`'s "add to categories" FAB, as a **modal bottom sheet** (drag handle, scrollable list, Cancel/Save pinned in a fixed footer) — replaced a centered `AlertDialog` that got cramped once the keyboard opened for the new-category field.
 -   Checkbox list of existing categories (Favorites excluded — that's a separate FAB).
--   **Create inline**: a text field + "+" button lets you type a new category name without leaving the dialog. It's staged locally (removable via an ✕ icon) until the dialog's Save button is tapped — Cancel discards it, same as unchecking an existing category. On Save, staged names are created (`SongRepository.createCategory`) and the song is linked to them in the same pass. Added to remove the friction of having no categories to pick from on first use.
+-   **Create inline**: a text field + "+" button lets you type a new category name without leaving the sheet. It's staged locally, shown as a `CheckboxListTile` matching the existing-category rows (checked by default; unchecking removes it from the pending list) until the sheet's Save button is tapped — Cancel discards it. On Save, staged names are created (`SongRepository.createCategory`) and the song is linked to them in the same pass. Added to remove the friction of having no categories to pick from on first use.
 
 #### `PrivacyPolicyScreen`
 Displays the privacy policy in Tamil and English.
@@ -71,3 +75,6 @@ Displays the privacy policy in Tamil and English.
 -   `ThemeProvider`: Manages light/dark mode.
 -   `LanguageProvider`: Manages the app's UI localization (English/Tamil).
 -   `LyricsLanguageProvider`: Manages which language *song content* (lyrics, meanings, tune) displays in — independent of the UI language above; falls back to Tamil for the 7 songs without English content.
+-   `ReminderSettingsProvider`: Manages the Daily Reminder toggle/time, and requests/tracks the OS notification permission.
+-   `AutoBackupStatusProvider`: Exposes the "Last automatic backup" timestamp shown in Settings — updated by `AutoBackupService`, not the UI, whenever a debounced backup write succeeds.
+-   `AutoBackupService` (not a `Provider` — a plain service wired up in `main.dart`): hooks `DatabaseHelper.onMutation` to debounce a backup snapshot write after any data change, does the one-shot silent restore check on a freshly-copied database, and an opportunistic staleness check on startup. See `docs/automated-backup-plan.md`.

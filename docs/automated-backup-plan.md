@@ -1,8 +1,22 @@
 # Automated Data Backup: Plan
 
-**Status:** 🟡 Planned, not started — write-up for review before implementation.
+**Status:** ✅ Shipped (2026-09-27) — implemented via `superpowers:subagent-driven-development` across 9 tasks, then a whole-branch review, one fix wave, and manual on-device verification. Landed on `next` as commits `f0722be`..`521a61f`; the notification icon fix landed separately as `de03d82`.
 **Date written:** 2026-09-26
-**Branch:** `next`
+
+---
+
+## 0. Post-implementation notes
+
+Two Critical defects were found and fixed during the final whole-branch review, before this ever shipped — both traced to this plan's own assumptions, not implementation slips:
+
+1. **Wrong backup directory.** `getApplicationDocumentsDirectory()` (what §3.2 below specifies) resolves to `app_flutter/` on Android, not `files/` — but the Android backup rules only cover `files/`. Fixed by switching to `getApplicationSupportDirectory()`, which actually maps to `files/`. Verified against `path_provider_android`'s own plugin source before fixing, not just inferred.
+2. **The one-shot restore flag was itself getting backed up.** It lived in `SharedPreferences`, which the backup rules fully include (so settings/theme/language restore too) — meaning after one successful restore, the flag rode along in every later backup and silently disabled restore forever on a user's *second* reinstall. Fixed by moving the flag to a plain marker file that sits outside the `auto_backup/` directory the rules whitelist.
+
+Both were verified fixed on a real emulator using Android's local backup transport (a faithful proxy for the real cloud transport — same OS file-selection and restore-before-first-launch code paths, different upload destination): favorited a song, ran a real backup pass, confirmed only the small JSON + shared-prefs got backed up (not the 38MB database), uninstalled/reinstalled, and watched Android's own `BackupManagerService` restore the file *before first launch* — the app then silently imported it with zero dialogs, visible in the UI.
+
+**Not verified:** the actual Google Drive network leg with a real signed-in account and the real cloud transport — the test emulator image doesn't include Play Store. This is a Play Services implementation detail outside the app's own code, and the on-device test above exercises everything this app's code controls.
+
+The rest of this document is the original design write-up, kept as-is for the reasoning behind each decision — it does not reflect the two fixes above inline.
 
 ---
 
@@ -106,8 +120,8 @@ Found while reading `backup_service.dart` end to end, unrelated to Part A but wo
 
 ---
 
-## 6. Open questions for the user
+## 6. Open questions for the user — resolved (2026-09-27)
 
-- Any objection to the minimal Settings addition ("Last automatic backup: ...")?
-- Confirm: no opt-out toggle needed for Part A specifically (unlike the earlier crash-reporting discussion, this isn't sending data anywhere new — it's the user's own device data going to their own Google account via a standard OS feature already on by default). Flag if this reasoning feels wrong.
-- Part B's confirmation-before-import step adds one extra tap to the existing manual flow — fine, or prefer to keep it a single tap and only add the post-import summary?
+- Settings addition: **approved**, shipped as-is.
+- Opt-out toggle for Part A: **confirmed not needed**, none added.
+- Part B confirmation step: **approved**, shipped as a real dialog showing the file's actual contents (counts, export date), not just a generic message.

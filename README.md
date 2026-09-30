@@ -21,6 +21,7 @@ A modern Thiruppugazh app offering lot of simple and purposeful features.
 -   **Favorites**: Mark songs you love for quick access.
 -   **Highlights & Notes**: Select text to highlight or add personal notes to any song.
 -   **Advanced Search**: Find songs by title, lyrics, temple, or Kaumaram ID.
+-   **Daily Reminder**: An opt-in local notification at a time you choose — entirely offline, no server involved.
 
 
 ### 🛡️ Privacy Friendly
@@ -28,6 +29,7 @@ From the beginning we kept privacy and user rights in mind. So,
 -   **No Tracking**: We do not collect any personal usage data.
 -   **Offline First**: The app works entirely offline.
 -   **No Ads**: A clean, distraction-free spiritual experience.
+-   **Your Data, Protected**: Favorites, notes, and highlights are backed up automatically to your own Google account via Android's Auto Backup — no server of ours involved — plus manual export/import whenever you want it.
 
 
 ### 🔓 Open Source

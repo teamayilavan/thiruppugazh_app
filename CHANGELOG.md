@@ -2,6 +2,30 @@
 
 Notable changes to this project. Format loosely follows [Keep a Changelog](https://keepachangelog.com/).
 
+## [1.4.0+6] — 2026-09-27
+
+Everything below landed after `1.3.0+5`.
+
+### Added
+- **Automated backup via Android Auto Backup**, on top of the existing manual Export/Import: favorites, categories, notes, highlights, and settings are now silently snapshotted on-device (debounced ~5s after any change, plus a catch-up write if the last one is over a day old) and handed to Android's own Auto Backup system — the user's own Google account, no server, no new permission prompt. On a reinstall or new device signed into the same account, it's restored automatically, once, before the app even finishes its first launch. A quiet "Last automatic backup: …" line was added to Settings for visibility. See [`docs/automated-backup-plan.md`](docs/automated-backup-plan.md).
+- **Hardened the existing manual Export/Import** alongside the above, since both now share the same code path: import is transactional (an interrupted or invalid import no longer leaves the database half-written), a backup file with an unsupported format version is rejected with a clear message instead of silently mis-imported, a favorite/category/note/highlight referencing a song no longer present is skipped and counted instead of aborting the whole import, and the import confirmation dialog now shows the real contents of the picked file (counts, export date) instead of a generic message.
+- **Daily reminder notification** — opt-in "Daily Reminder" toggle in Settings schedules a single recurring local notification at a devotee-chosen time (default 8:00 AM). Fully offline (`flutter_local_notifications`); denying the OS permission leaves the toggle off with an explanation.
+- **Today's Song card** on the Home screen — a deterministic, date-seeded pick shown below the title; the same song for everyone for the whole calendar day.
+- **Arupadai Veedu grid** at the top of the Temples screen — a fixed 2×3 grid of the six Arupadai Veedu abodes, with song counts, as quick shortcuts into each abode's song list.
+- **Add-to-category dialog is now a modal bottom sheet** instead of a cramped centered `AlertDialog`, with a proper scrollable list and a pinned Cancel/Save footer — noticeably better once the keyboard opens for the inline new-category field.
+- **A real vel icon for the daily reminder notification**, replacing a placeholder cropped from the launcher emblem that read as a raindrop rather than a vel. Ships as two tiers: a bold simplified version for the small mdpi/hdpi/xhdpi status-bar sizes (the full detail turns to illegible gray mush that small) and the full detailed artwork for xxhdpi/xxxhdpi.
+
+### Fixed
+- **Songs 1328 and 1338 showed their lyrics under "சந்தம்" (tune)** (DB v5). Upgraded installs are corrected in place by a data-only migration (`assets/song_fixes_v5.json`) that never touches favorites, notes, highlights or categories; fresh installs get the corrected rows from the rebuilt bundled database.
+- **A corrupted or partially-copied bundled database silently showed every screen empty, with no error and no recovery**, on fresh installs and reinstalls alike (root-caused from a real user report on a Redmi 10/MIUI device). Three related issues, each independently verified live on-device: the first-run asset copy wasn't checked for actual usability before being trusted; an *existing* file at the DB path was assumed valid without the same check, so a bad file left over from any past failure was never self-corrected; and the v3/v4 migrations' `ALTER TABLE ADD COLUMN` calls were unguarded, so a "duplicate column name" exception from an unexpected DB state would poison the app's single cached database connection outside any try/catch. See [`docs/crash-reporting-decision.md`](docs/crash-reporting-decision.md) for the full incident writeup (also covers a still-open recommendation to add Crashlytics so incidents like this surface automatically next time, not decided yet).
+- **Casual "Tanglish" spelling didn't match temple search** — e.g. searching "thiruchendur" (Temple filter) returned nothing, because the stored transliteration is the formal scholarly form ("thiruchchendhUr"). Added an additive, query-time-only normalization (both the query and the stored name run through the same substring rules) — no schema change.
+- Filled checkbox (matching existing-category rows) instead of a close/✕ button for a pending new category in the add-to-category sheet.
+- Reminder time row's left alignment under the toggle above it (was a guessed fixed padding that didn't quite line up).
+- Daily reminder toggle's label simplified — dropped the offline-explanation subtitle, since the local/offline nature doesn't need spelling out on the toggle itself.
+
+### Known issues
+- See [`docs/database.md`](docs/database.md) → Known Data Issues for remaining incomplete records (missing word meanings / English data on a few newer songs).
+
 ## [1.3.0+5] — 2026-08-25
 
 Everything below landed after `1.2.0+4` (the last version bump, part of the Android 16 target SDK compliance fix).

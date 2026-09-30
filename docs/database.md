@@ -2,7 +2,7 @@
 
 The application uses SQLite via the `sqflite` package. The database file `thiruppugazh.db` is pre-populated and bundled as an asset, then copied to the device on first launch.
 
-**Current version:** 3 (bilingual content — English columns added to `songs` and `temples`)
+**Current version:** 5 (in-place data fix for mis-parsed songs 1328 and 1338; no schema change)
 
 ---
 
@@ -44,6 +44,15 @@ Stores the main content of all Thiruppugazh songs.
 | `english_pathavurai` | TEXT | All English meanings joined (search use only) |
 
 All v3 English columns are nullable. Songs without English data (7 songs as of v3) have NULL in these columns; the app falls back to Tamil for those.
+
+**Mayuragiri word-separated lyrics (v4):**
+
+| Column | Type | Notes |
+|---|---|---|
+| `mayuragiri_lyrics_separated` | TEXT | Tamil lyrics with padham (word) separation, sourced from mayuragiri.com |
+| `mayuragiri_english_lyrics_separated` | TEXT | English/romanized equivalent |
+
+Both nullable, populated via `assets/mayuragiri_data.json` (a patch keyed by song ID, applied in the v4 migration) rather than the main `songs/*.json` rebuild — the section stays hidden for any song where scraping didn't succeed.
 
 ---
 
@@ -139,22 +148,32 @@ User notes attached to songs (one note per song).
 | 1 | Initial schema |
 | 2 | Added indexes (`idx_songs_is_favorite`, `idx_song_categories_category_id`, `idx_highlights_song_id`, `idx_notes_song_id`) |
 | 3 | Added 7 English columns to `songs`; added `english_name` to `temples`; populated via `assets/english_data.json` migration asset |
+| 4 | Added `mayuragiri_lyrics_separated`/`mayuragiri_english_lyrics_separated` to `songs`; populated via `assets/mayuragiri_data.json` migration asset |
+| 5 | Data-only fix: `UPDATE`s songs 1328 and 1338 from `assets/song_fixes_v5.json` (`migrateToV5`). Touches only `lyrics`, `tune`, `tune_list`, `lyrics_list`, `pathavurai`, `search_content`, `mayuragiri_lyrics_separated` — never `is_favorite`, and never delete/replace (notes, highlights and category links cascade-delete with the song row). Fresh installs get the same rows from the rebuilt bundled DB. |
 
 ---
 
 ## Known Data Issues
 
-- **Song 1328** (`ஏறுமயிலேறி`, திருவருணை): the `tune`/`tune_list` columns contain what looks like the song's full lyrics and meaning text, while `lyrics_list`/`lyrics`/`pathavurai` are empty. This affects both the app's `SongDetailScreen` (renders the misplaced text under "சந்தம்") and the fallback web app (`web_app/`), since both read the same columns. Root cause is in the source data (`songs/*.json`, rebuilt via `scripts/build_db.py`), not a rendering bug — found while building the web app's static pages (2026-08-19), not yet fixed.
+- **Fixed in v5 (2026-09-30):** songs **1328** (`ஏறுமயிலேறி`) and **1338** (`சிவணிதா வியமனது`) had their lyrics stored in the `tune` column. 1338's `tune` also held the word-separated (சொற்பிரிவு) block, now recovered into `mayuragiri_lyrics_separated`. 1328's `tune`/`tune_list` held 8 lyric lines plus prose meaning; the lyrics moved to `lyrics`/`lyrics_list` and the meaning to `pathavurai`. 1328's `tune` is now empty (the true tāḷa isn't in the source data) and it still has no `words`/`meanings` or English data; four trailing lines of its prose (`6. என்னை உன்னோடு…`) belonged to a different verse and were dropped.
+- **Still open:** no word-by-word meanings for 1328–1333, 1338–1340; no English data for 67, 340, 444, 1327–1334; 1326 has no tune (intentional, not a tāḷa song); 1305 has 14 lyric lines / 6 tune lines (possibly two merged songs).
 
 ---
 
 ## `DatabaseHelper` API
 
+**Transactions:** `runInTransaction<T>(Future<T> Function(Transaction txn) action)` runs a block atomically. The favorites/notes/highlights/categories mutation methods below all accept an optional trailing `{DatabaseExecutor? executor}` — pass the `Transaction` from `runInTransaction` to make a write participate in it instead of running against the default connection. Used by backup import (`BackupService.applyImport`, see [`automated-backup-plan.md`](automated-backup-plan.md)) so a failed or interrupted import can't leave the database half-written.
+
+**Mutation hook:** `DatabaseHelper.onMutation` is a static `void Function()?` callback fired after every favorite/category/note/highlight write (regardless of whether it ran inside a transaction). `AutoBackupService` sets this at app startup to debounce a fresh backup snapshot write on any change.
+
 ### Songs
 - `getAllSongs()` — all songs sorted by Tamil title
 - `getSongById(int id)` — single song by ID
+- `getRandomSong()` — one uniformly random song, queried DB-wide (`ORDER BY RANDOM() LIMIT 1`), not just from whatever page is loaded — backs the Home screen's random-song shuffle FAB
+- `getSongByIndex(int index)` — single song by row position
 - `getSongsPaginated({int page, int pageSize})` — paginated list
-- `searchSongsWithFilter(SearchFilter filter)` — LIKE-based search across title, lyrics, words, place, tune, kaumaram\_id, pathavurai; handles Tamil ன/ந variation; v3 also searches English columns in parallel
+- `getAllSongIds({DatabaseExecutor? executor})` — every song ID as a `Set<int>`, used by backup import to skip entries referencing a song no longer in this install instead of tripping a foreign-key constraint
+- `searchSongsWithFilter(SearchFilter filter)` — LIKE-based search across title, lyrics, words, place, tune, kaumaram\_id, pathavurai; handles Tamil ன/ந variation and casual "Tanglish" spelling (place/temple search only) for English/romanized fields; v3 also searches English columns in parallel
 
 ### Categories
 - `getCategoriesWithSongCounts()` — categories with song counts
