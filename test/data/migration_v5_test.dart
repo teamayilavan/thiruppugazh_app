@@ -16,7 +16,7 @@ Future<Database> _openV4Fixture({bool withSearchContent = true}) async {
   );
   await db.execute('''CREATE TABLE songs(
     id INTEGER PRIMARY KEY, title TEXT NOT NULL, lyrics TEXT, tune TEXT,
-    tune_list TEXT, lyrics_list TEXT, pathavurai TEXT,
+    tune_list TEXT, lyrics_list TEXT, pathavurai TEXT, place TEXT,
     ${withSearchContent ? 'search_content TEXT,' : ''}
     is_favorite INTEGER DEFAULT 0, mayuragiri_lyrics_separated TEXT)''');
   await db.execute('''CREATE TABLE notes(
@@ -70,7 +70,8 @@ void main() {
 
   test('fixes the listed songs and leaves user data intact', () async {
     final db = await _openV4Fixture();
-    await DatabaseHelper().migrateToV5(db, loadPatch: () async => _patch());
+    await DatabaseHelper().migrateToV5(db,
+        loadPatch: () async => _patch(), loadRestore: () async => '{}');
 
     final s1338 = (await db.query('songs', where: 'id = 1338')).single;
     expect(s1338['lyrics'], 'L');
@@ -100,7 +101,8 @@ void main() {
   test('patches songs even when the table lacks optional columns', () async {
     // Devices that upgraded from the 1.1.0 release have no search_content.
     final db = await _openV4Fixture(withSearchContent: false);
-    await DatabaseHelper().migrateToV5(db, loadPatch: () async => _patch());
+    await DatabaseHelper().migrateToV5(db,
+        loadPatch: () async => _patch(), loadRestore: () async => '{}');
     final s1338 = (await db.query('songs', where: 'id = 1338')).single;
     expect(s1338['lyrics'], 'L');
     expect(s1338['tune'], 'tune');
@@ -108,12 +110,84 @@ void main() {
     await db.close();
   });
 
+  group('restoring songs dropped in 1.2.0', () {
+    String restore() => jsonEncode({
+          '3': {
+            'id': 3, 'title': 'restored', 'lyrics': 'r', 'place': 'P',
+            'tune': 't', 'tune_list': '["t"]', 'lyrics_list': '["r"]',
+            'pathavurai': '', 'is_favorite': 1, // must be ignored
+            'not_a_column': 'x',
+          },
+          '7': {'id': 7, 'title': 'OVERWRITE', 'lyrics': 'BAD', 'place': 'P'},
+        });
+
+    Future<Database> withTemples() async {
+      final db = await _openV4Fixture();
+      await db.execute('''CREATE TABLE temples(
+        id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT NOT NULL UNIQUE,
+        song_count INTEGER DEFAULT 0, english_name TEXT)''');
+      return db;
+    }
+
+    test('inserts absent songs, never overwrites existing ones', () async {
+      final db = await withTemples();
+      await DatabaseHelper().migrateToV5(
+        db,
+        loadPatch: () async => '{}',
+        loadRestore: () async => restore(),
+      );
+      final s3 = (await db.query('songs', where: 'id = 3')).single;
+      expect(s3['title'], 'restored');
+      expect(s3['is_favorite'], 0);
+      // Song 7 already existed: untouched, still a favorite.
+      final s7 = (await db.query('songs', where: 'id = 7')).single;
+      expect(s7['title'], 'healthy');
+      expect(s7['lyrics'], 'keep');
+      expect(s7['is_favorite'], 1);
+      // User data intact.
+      expect((await db.query('notes')).length, 3);
+      expect((await db.query('highlights')).length, 3);
+      await db.close();
+    });
+
+    test('creates the temple and counts its songs', () async {
+      final db = await withTemples();
+      await DatabaseHelper().migrateToV5(
+        db,
+        loadPatch: () async => '{}',
+        loadRestore: () async => restore(),
+      );
+      final temple = (await db.query('temples', where: "name = 'P'")).single;
+      // Restored song 3 plus the pre-existing song 7 share place 'P'? Only 3
+      // has place 'P' in the fixture, so the count is exactly 1.
+      expect(temple['song_count'], 1);
+      await db.close();
+    });
+
+    test('is idempotent and a broken restore patch is non-fatal', () async {
+      final db = await withTemples();
+      final helper = DatabaseHelper();
+      await helper.migrateToV5(db,
+          loadPatch: () async => '{}', loadRestore: () async => restore());
+      final once = await db.query('songs', orderBy: 'id');
+      await helper.migrateToV5(db,
+          loadPatch: () async => '{}', loadRestore: () async => restore());
+      expect(await db.query('songs', orderBy: 'id'), once);
+      await helper.migrateToV5(db,
+          loadPatch: () async => '{}', loadRestore: () async => 'not json');
+      expect(await db.query('songs', orderBy: 'id'), once);
+      await db.close();
+    });
+  });
+
   test('is idempotent', () async {
     final db = await _openV4Fixture();
     final helper = DatabaseHelper();
-    await helper.migrateToV5(db, loadPatch: () async => _patch());
+    await helper.migrateToV5(db,
+        loadPatch: () async => _patch(), loadRestore: () async => '{}');
     final once = await db.query('songs', orderBy: 'id');
-    await helper.migrateToV5(db, loadPatch: () async => _patch());
+    await helper.migrateToV5(db,
+        loadPatch: () async => _patch(), loadRestore: () async => '{}');
     expect(await db.query('songs', orderBy: 'id'), once);
     await db.close();
   });
@@ -121,7 +195,8 @@ void main() {
   test('a broken patch is non-fatal and changes nothing', () async {
     final db = await _openV4Fixture();
     final before = await db.query('songs', orderBy: 'id');
-    await DatabaseHelper().migrateToV5(db, loadPatch: () async => 'not json');
+    await DatabaseHelper().migrateToV5(db,
+        loadPatch: () async => 'not json', loadRestore: () async => '{}');
     expect(await db.query('songs', orderBy: 'id'), before);
     await db.close();
   });

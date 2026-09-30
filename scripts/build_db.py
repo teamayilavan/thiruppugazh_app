@@ -157,6 +157,10 @@ SONG_COLUMNS = [
 # assets/song_fixes_v5.json; fresh installs get them from the rebuilt DB.
 # Only these columns are patched -- never is_favorite or any user table.
 SONG_FIX_IDS_V5 = [1328, 1338]
+# Songs 1-6 were silently dropped from the bundled DB when it was first rebuilt
+# from songs/*.json (which began at 0007.json), so installs since 1.2.0 lack
+# them. v5 re-inserts them (INSERT OR IGNORE) from assets/song_restore_v5.json.
+SONG_RESTORE_IDS_V5 = [1, 2, 3, 4, 5, 6]
 SONG_FIX_COLUMNS_V5 = [
     'lyrics', 'tune', 'tune_list', 'lyrics_list', 'pathavurai',
     'search_content', 'mayuragiri_lyrics_separated',
@@ -247,6 +251,11 @@ def extract_song_fix_patch(row: dict) -> dict:
     return {c: row[c] for c in SONG_FIX_COLUMNS_V5}
 
 
+def extract_song_restore_row(row: dict) -> dict:
+    # Everything except is_favorite: a restored song always starts unfavorited.
+    return {c: row[c] for c in SONG_COLUMNS if c != 'is_favorite'}
+
+
 def extract_mayuragiri_patch(kaumaram_id: str, mayuragiri_data: dict) -> dict | None:
     entry = mayuragiri_data.get(kaumaram_id)
     if entry is None:
@@ -297,6 +306,7 @@ def build(songs_dir: Path, db_path: Path, patch_path: Path):
 
     mayuragiri_patch = {}
     song_fixes_v5 = {}
+    song_restore_v5 = {}
     mayuragiri_path = songs_dir.parent / 'scripts' / 'output' / 'mayuragiri_lyrics_separated.json'
     mayuragiri_data = {}
     if mayuragiri_path.exists():
@@ -329,6 +339,8 @@ def build(songs_dir: Path, db_path: Path, patch_path: Path):
 
             if sid in SONG_FIX_IDS_V5:
                 song_fixes_v5[str(sid)] = extract_song_fix_patch(row)
+            if sid in SONG_RESTORE_IDS_V5:
+                song_restore_v5[str(sid)] = extract_song_restore_row(row)
 
             place = row.get('place')
             venue = row.get('english_venue')
@@ -383,6 +395,12 @@ def build(songs_dir: Path, db_path: Path, patch_path: Path):
         json.dumps(song_fixes_v5, ensure_ascii=False, indent=2),
         encoding='utf-8'
     )
+    song_restore_path = db_path.parent / 'song_restore_v5.json'
+    song_restore_path.write_text(
+        json.dumps(song_restore_v5, ensure_ascii=False, indent=2),
+        encoding='utf-8'
+    )
+    print(f"v5 song restore written: {song_restore_path}  ({len(song_restore_v5)} songs)")
     print(f"v5 song fixes written:   {song_fixes_path}  ({len(song_fixes_v5)} songs)")
 
     print(f"Mayuragiri patch written: {mayuragiri_patch_path}  ({len(mayuragiri_patch)} songs)")

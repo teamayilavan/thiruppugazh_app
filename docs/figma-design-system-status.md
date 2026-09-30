@@ -41,7 +41,7 @@ Onboarding, Home, MainWrapper (nav shell), SongList, SongDetail, Categories, Sea
 
 ## Real content to use when building screens (from codebase research)
 
-- **App title**: "திருப்புகழ்" (Thiruppugazh). Onboarding heritage line: "Arunagirinathar composed over 16,000 hymns. 1,334 survived. You are one of the people keeping them read."
+- **App title**: "திருப்புகழ்" (Thiruppugazh). Onboarding heritage line: "Arunagirinathar composed over 16,000 hymns. 1,340 survived. You are one of the people keeping them read."
 - **Bottom nav (5, in order)**: Songs (music_note) / Temples (temple_hindu) / Categories (category) / Library (library_books) / More (more_horiz)
 - **6 Arupadai Veedu temples** (Tamil / romanized / song count): திருப்பரங்குன்றம்/thirupparangkundRam (14), திருச்செந்தூர்/thiruchchendhUr (84), பழநி/pazhani (98), சுவாமிமலை/SwAmimalai (40), திருத்தணிகை/thiruththaNigai (64), பழமுதிர்ச்சோலை/pazhamudhirchOlai (16)
 - **Sample real song titles** (from திருப்பரங்குன்றம்): அருக்கு மங்கையர், உனைத் தினம், கருவடைந்து, கறுக்கும் அஞ்சன, கனகந்திரள்கின்ற

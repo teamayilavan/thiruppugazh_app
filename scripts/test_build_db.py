@@ -62,3 +62,16 @@ def test_song_fix_patch_covers_only_the_corrected_columns():
     assert list(patch) == SONG_FIX_COLUMNS_V5
     assert "is_favorite" not in patch
     assert patch["lyrics"] == "a\nb"
+
+
+def test_song_restore_row_excludes_is_favorite_and_keeps_content():
+    from build_db import extract_song_restore_row, extract_song_row
+
+    row = extract_song_row({
+        "kaumaram_id": "6", "title": "t", "lyrics": "a", "tune": "x",
+        "tune_list": ["x"], "lyrics_list": ["a"], "place": "p",
+    })
+    restored = extract_song_restore_row(row)
+    assert "is_favorite" not in restored
+    assert restored["id"] == 6
+    assert restored["lyrics"] == "a"

@@ -2,7 +2,7 @@
 
 The application uses SQLite via the `sqflite` package. The database file `thiruppugazh.db` is pre-populated and bundled as an asset, then copied to the device on first launch.
 
-**Current version:** 5 (in-place data fix for mis-parsed songs 1328 and 1338; no schema change)
+**Current version:** 5 (data-only: fixes mis-parsed songs 1328 and 1338, restores songs 1–6; no schema change)
 
 ---
 
@@ -149,14 +149,15 @@ User notes attached to songs (one note per song).
 | 2 | Added indexes (`idx_songs_is_favorite`, `idx_song_categories_category_id`, `idx_highlights_song_id`, `idx_notes_song_id`) |
 | 3 | Added 7 English columns to `songs`; added `english_name` to `temples`; populated via `assets/english_data.json` migration asset |
 | 4 | Added `mayuragiri_lyrics_separated`/`mayuragiri_english_lyrics_separated` to `songs`; populated via `assets/mayuragiri_data.json` migration asset |
-| 5 | Data-only fix: `UPDATE`s songs 1328 and 1338 from `assets/song_fixes_v5.json` (`migrateToV5`). Touches only `lyrics`, `tune`, `tune_list`, `lyrics_list`, `pathavurai`, `search_content`, `mayuragiri_lyrics_separated` — never `is_favorite`, and never delete/replace (notes, highlights and category links cascade-delete with the song row). Fresh installs get the same rows from the rebuilt bundled DB. |
+| 5 | Data-only fix: `UPDATE`s songs 1328 and 1338 from `assets/song_fixes_v5.json` (`migrateToV5`). Touches only `lyrics`, `tune`, `tune_list`, `lyrics_list`, `pathavurai`, `search_content`, `mayuragiri_lyrics_separated` — never `is_favorite`, and never delete/replace (notes, highlights and category links cascade-delete with the song row). Also re-inserts songs 1–6 (`assets/song_restore_v5.json`, `INSERT OR IGNORE`, never overwriting an existing row, `is_favorite` always 0) and refreshes their temples' `song_count`. Fresh installs get the same rows from the rebuilt bundled DB. |
 
 ---
 
 ## Known Data Issues
 
 - **Fixed in v5 (2026-09-30):** songs **1328** (`ஏறுமயிலேறி`) and **1338** (`சிவணிதா வியமனது`) had their lyrics stored in the `tune` column. 1338's `tune` also held the word-separated (சொற்பிரிவு) block, now recovered into `mayuragiri_lyrics_separated`. 1328's `tune`/`tune_list` held 8 lyric lines plus prose meaning; the lyrics moved to `lyrics`/`lyrics_list` and the meaning to `pathavurai`. 1328's `tune` is now empty (the true tāḷa isn't in the source data) and it still has no `words`/`meanings` or English data; four trailing lines of its prose (`6. என்னை உன்னோடு…`) belonged to a different verse and were dropped.
-- **Still open:** no word-by-word meanings for 1328–1333, 1338–1340; no English data for 67, 340, 444, 1327–1334; 1326 has no tune (intentional, not a tāḷa song); 1305 has 14 lyric lines / 6 tune lines (possibly two merged songs).
+- **Songs 1–6 restored in v5 (2026-09-30):** `கைத்தல நிறைகனி`, `பக்கரை விசித்ரமணி`, `உம்பர் தரு`, `நினது திருவடி`, `விடமடைசு வேலை` (place `விநாயகர்`) and `முத்தைத்தரு` (`திருவருணை`) were in the 1.1.0 database but silently missing from every bundled DB since 1.2.0, because the rebuild from `songs/*.json` started at `0007.json`. Recreated from the 1.1.0 DB as `songs/0001–0006.json` (stray whitespace trimmed). They have no English data (the app falls back to Tamil) and no Mayuragiri word-separated lyrics yet. Upgraders from 1.1.0 kept their original rows; their song 1 has place `" விநாயகர்"` (leading space), so the temple list shows two `விநாயகர்` entries for them — a 1.1.0-era quirk.
+- **Still open:** no word-by-word meanings for 1328–1333, 1338–1340; no English data for 1–6, 67, 340, 444, 1327–1334; 1326 has no tune (intentional, not a tāḷa song); 1305 has 14 lyric lines / 6 tune lines (possibly two merged songs).
 
 ---
 

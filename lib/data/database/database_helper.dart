@@ -516,7 +516,16 @@ class DatabaseHelper {
   Future<void> migrateToV5(
     Database db, {
     Future<String> Function()? loadPatch,
+    Future<String> Function()? loadRestore,
   }) async {
+    await _applySongFixesV5(db, loadPatch);
+    await _restoreMissingSongsV5(db, loadRestore);
+  }
+
+  Future<void> _applySongFixesV5(
+    Database db,
+    Future<String> Function()? loadPatch,
+  ) async {
     AppLogger.info('Running v5 migration: correcting mis-parsed songs');
     try {
       final jsonString = await (loadPatch ??
@@ -553,6 +562,72 @@ class DatabaseHelper {
         stackTrace: st,
       );
       // Non-fatal: songs keep their previous (flawed) content.
+    }
+  }
+
+  /// v5: songs 1-6 were dropped from the bundled DB at the 1.2.0 rebuild, so
+  /// installs since then lack them. Re-insert them with INSERT OR IGNORE:
+  /// devices that already have a row (upgraders from 1.1.0) are left exactly
+  /// as they are, and a restored song always starts unfavorited. Temples are
+  /// brought in line afterwards. Idempotent and non-fatal.
+  Future<void> _restoreMissingSongsV5(
+    Database db,
+    Future<String> Function()? loadRestore,
+  ) async {
+    AppLogger.info('Running v5 migration: restoring songs dropped in 1.2.0');
+    try {
+      final jsonString = await (loadRestore ??
+          () => rootBundle.loadString(AppConstants.songRestoreV5Asset))();
+      final Map<String, dynamic> restore = jsonDecode(jsonString);
+
+      final existing = {
+        for (final row in await db.rawQuery('PRAGMA table_info(songs)'))
+          row['name'] as String,
+      };
+
+      final places = <String>{};
+      final batch = db.batch();
+      for (final entry in restore.entries) {
+        final id = int.tryParse(entry.key);
+        if (id == null) continue;
+        final fields = entry.value as Map<String, dynamic>;
+        final values = <String, Object?>{
+          for (final e in fields.entries)
+            if (existing.contains(e.key) && e.key != 'is_favorite')
+              e.key: e.value,
+          'id': id,
+        };
+        batch.insert(
+          'songs',
+          values,
+          conflictAlgorithm: ConflictAlgorithm.ignore,
+        );
+        final place = fields['place'];
+        if (place is String && place.isNotEmpty) places.add(place);
+      }
+      await batch.commit(noResult: true);
+
+      // Keep the temples list in step with the songs table.
+      for (final place in places) {
+        await db.insert(
+          'temples',
+          {'name': place},
+          conflictAlgorithm: ConflictAlgorithm.ignore,
+        );
+        await db.rawUpdate(
+          'UPDATE temples SET song_count = '
+          '(SELECT COUNT(*) FROM songs WHERE place = ?) WHERE name = ?',
+          [place, place],
+        );
+      }
+      AppLogger.info('v5 migration: processed ${restore.length} restored songs');
+    } catch (e, st) {
+      AppLogger.error(
+        'v5 migration: failed to restore songs',
+        error: e,
+        stackTrace: st,
+      );
+      // Non-fatal: the songs stay absent, as before.
     }
   }
 
