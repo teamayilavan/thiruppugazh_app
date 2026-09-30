@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  The daily-reminder notification icon is referenced only by the string
+  '@drawable/ic_stat_reminder' (flutter_local_notifications resolves it by
+  name at runtime), so the release resource shrinker would otherwise strip it
+  and the notification would fail. See lib/services/reminder_notification_service.dart.
+-->
+<resources xmlns:tools="http://schemas.android.com/tools"
+    tools:keep="@drawable/ic_stat_reminder" />

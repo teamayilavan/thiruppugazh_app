@@ -3,17 +3,18 @@
   Auto Backup + device-to-device transfer rules for API 31+. Same intent
   as backup_rules.xml (kept in sync with it): only the user-data snapshot
   and settings, never the bundled read-only database.
+  Only the paths listed below are backed up or transferred; the bundled song
+  database is deliberately not among them (an <exclude> for it would be
+  redundant and fails release lint: "not in an included path").
   See docs/automated-backup-plan.md.
 -->
 <data-extraction-rules>
     <cloud-backup>
         <include domain="file" path="auto_backup/" />
         <include domain="sharedpref" path="." />
-        <exclude domain="database" path="thiruppugazh.db" />
     </cloud-backup>
     <device-transfer>
         <include domain="file" path="auto_backup/" />
         <include domain="sharedpref" path="." />
-        <exclude domain="database" path="thiruppugazh.db" />
     </device-transfer>
 </data-extraction-rules>

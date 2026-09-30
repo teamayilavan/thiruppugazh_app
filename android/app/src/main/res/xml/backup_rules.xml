@@ -4,10 +4,12 @@
   snapshot and settings are backed up - the bundled, read-only ~38MB
   song database is explicitly excluded so it doesn't waste the backup
   quota on data that ships with every install anyway.
+  Only the paths listed below are backed up; the bundled song database is
+  deliberately not among them (an <exclude> for it would be redundant and
+  fails release lint: "not in an included path").
   See docs/automated-backup-plan.md.
 -->
 <full-backup-content>
     <include domain="file" path="auto_backup/" />
     <include domain="sharedpref" path="." />
-    <exclude domain="database" path="thiruppugazh.db" />
 </full-backup-content>
