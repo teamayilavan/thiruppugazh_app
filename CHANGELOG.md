@@ -2,9 +2,9 @@
 
 Notable changes to this project. Format loosely follows [Keep a Changelog](https://keepachangelog.com/).
 
-## [1.4.0+6] — 2026-09-27
+## [1.5.0+7] — 2026-09-30
 
-Everything below landed after `1.3.0+5`.
+Everything below landed after `1.4.0+6`.
 
 ### Added
 - **Automated backup via Android Auto Backup**, on top of the existing manual Export/Import: favorites, categories, notes, highlights, and settings are now silently snapshotted on-device (debounced ~5s after any change, plus a catch-up write if the last one is over a day old) and handed to Android's own Auto Backup system — the user's own Google account, no server, no new permission prompt. On a reinstall or new device signed into the same account, it's restored automatically, once, before the app even finishes its first launch. A quiet "Last automatic backup: …" line was added to Settings for visibility. See [`docs/automated-backup-plan.md`](docs/automated-backup-plan.md).
@@ -26,6 +26,16 @@ Everything below landed after `1.3.0+5`.
 
 ### Known issues
 - See [`docs/database.md`](docs/database.md) → Known Data Issues for remaining incomplete records (missing word meanings / English data on a few newer songs).
+
+## [1.4.0+6] — 2026-09-02 (shipped to Play Store)
+
+Everything below landed after `1.3.0+5`.
+
+### Added
+- **Word-separated (padham) lyrics section** on the song detail screen, sourced from mayuragiri.com and shown after the lyrics and before the meaning, grouped into the same stanzas as the main lyrics; hidden for songs where no data was scraped. DB v4 adds the `mayuragiri_*` columns; a Mayuragiri credit block was added to Settings.
+
+### Fixed
+- Digital Asset Links now include the Play app-signing certificate, so App Link verification for `thiruppugazh.ayilavan.org` passes on Play-signed installs.
 
 ## [1.3.0+5] — 2026-08-25
 
