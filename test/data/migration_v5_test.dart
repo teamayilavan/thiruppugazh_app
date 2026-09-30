@@ -7,7 +7,7 @@ import 'package:thiruppugazh/data/database/database_helper.dart';
 
 /// Builds a database shaped like a released v4 device: the two mis-parsed
 /// songs plus a healthy song, with user data attached to each.
-Future<Database> _openV4Fixture() async {
+Future<Database> _openV4Fixture({bool withSearchContent = true}) async {
   final db = await databaseFactoryFfi.openDatabase(
     inMemoryDatabasePath,
     options: OpenDatabaseOptions(
@@ -16,7 +16,8 @@ Future<Database> _openV4Fixture() async {
   );
   await db.execute('''CREATE TABLE songs(
     id INTEGER PRIMARY KEY, title TEXT NOT NULL, lyrics TEXT, tune TEXT,
-    tune_list TEXT, lyrics_list TEXT, pathavurai TEXT, search_content TEXT,
+    tune_list TEXT, lyrics_list TEXT, pathavurai TEXT,
+    ${withSearchContent ? 'search_content TEXT,' : ''}
     is_favorite INTEGER DEFAULT 0, mayuragiri_lyrics_separated TEXT)''');
   await db.execute('''CREATE TABLE notes(
     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -93,6 +94,17 @@ void main() {
     expect((await db.query('notes')).length, 3);
     expect((await db.query('highlights')).length, 3);
     expect((await db.query('song_categories')).length, 3);
+    await db.close();
+  });
+
+  test('patches songs even when the table lacks optional columns', () async {
+    // Devices that upgraded from the 1.1.0 release have no search_content.
+    final db = await _openV4Fixture(withSearchContent: false);
+    await DatabaseHelper().migrateToV5(db, loadPatch: () async => _patch());
+    final s1338 = (await db.query('songs', where: 'id = 1338')).single;
+    expect(s1338['lyrics'], 'L');
+    expect(s1338['tune'], 'tune');
+    expect((await db.query('notes')).length, 3);
     await db.close();
   });
 

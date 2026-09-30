@@ -523,6 +523,14 @@ class DatabaseHelper {
           () => rootBundle.loadString(AppConstants.songFixesV5Asset))();
       final Map<String, dynamic> patch = jsonDecode(jsonString);
 
+      // Devices upgrading from very old releases may lack some columns
+      // (e.g. `search_content`); patch only what actually exists so one
+      // missing column can't make the whole batch fail.
+      final existing = {
+        for (final row in await db.rawQuery('PRAGMA table_info(songs)'))
+          row['name'] as String,
+      };
+
       final batch = db.batch();
       for (final entry in patch.entries) {
         final id = int.tryParse(entry.key);
@@ -530,7 +538,8 @@ class DatabaseHelper {
         final fields = entry.value as Map<String, dynamic>;
         final values = {
           for (final col in _v5PatchableColumns)
-            if (fields.containsKey(col)) col: fields[col],
+            if (fields.containsKey(col) && existing.contains(col))
+              col: fields[col],
         };
         if (values.isEmpty) continue;
         batch.update('songs', values, where: 'id = ?', whereArgs: [id]);
