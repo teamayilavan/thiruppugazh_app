@@ -112,6 +112,7 @@ class _AddLinkSheetState extends State<_AddLinkSheet> {
             decoration: InputDecoration(
               labelText: l10n.linkUrl,
               errorText: _error,
+              errorMaxLines: 2,
               border: const OutlineInputBorder(),
               suffixIcon: IconButton(
                 tooltip: l10n.pasteLink,

@@ -260,7 +260,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 );
               },
-              child: const Icon(Icons.favorite),
+              child: const Icon(Icons.favorite_border),
             ),
           ),
           const SizedBox(height: 16),

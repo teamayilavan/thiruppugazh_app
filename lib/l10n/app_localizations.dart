@@ -1298,6 +1298,18 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Last opened'**
   String get continueLastOpened;
+
+  /// No description provided for @chantOneMinute.
+  ///
+  /// In en, this message translates to:
+  /// **'1 min'**
+  String get chantOneMinute;
+
+  /// No description provided for @noSongsInCategory.
+  ///
+  /// In en, this message translates to:
+  /// **'No songs found in \"{name}\".'**
+  String noSongsInCategory(String name);
 }
 
 class _AppLocalizationsDelegate

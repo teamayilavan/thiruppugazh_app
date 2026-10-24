@@ -529,6 +529,52 @@ ${_displayLyricsList.join('\n')}''';
     );
   }
 
+  /// One row of two equal-height action tiles. Every tile in the detail
+  /// screen's button block goes through here so they line up and balance.
+  Widget _actionRow(ButtonStyle style, _ActionSpec left, _ActionSpec right) {
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 12),
+      child: Row(
+        children: [
+          Expanded(child: _actionTile(style, left)),
+          const SizedBox(width: 12),
+          Expanded(child: _actionTile(style, right)),
+        ],
+      ),
+    );
+  }
+
+  Widget _actionTile(ButtonStyle style, _ActionSpec spec) {
+    return SizedBox(
+      height: 84,
+      child: FilledButton.tonal(
+        style: style.copyWith(
+          padding: const WidgetStatePropertyAll(
+            EdgeInsets.symmetric(horizontal: 8, vertical: 10),
+          ),
+          shape: WidgetStatePropertyAll(
+            RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+          ),
+        ),
+        onPressed: spec.onPressed,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(spec.icon, size: 24),
+            const SizedBox(height: 6),
+            Text(
+              spec.label,
+              textAlign: TextAlign.center,
+              maxLines: 2,
+              overflow: TextOverflow.ellipsis,
+              style: const TextStyle(height: 1.2),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     final buttonStyle = FilledButton.styleFrom(
@@ -588,7 +634,7 @@ ${_displayLyricsList.join('\n')}''';
                         ),
                       ),
                       IconButton(
-                        icon: const Icon(Icons.self_improvement),
+                        icon: const Icon(Icons.play_circle_outline),
                         tooltip: l10n.chantingMode,
                         onPressed: () {
                           Navigator.of(context).push(
@@ -703,82 +749,60 @@ ${_displayLyricsList.join('\n')}''';
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  Row(
-                    children: [
-                      Expanded(
-                        child: FilledButton.tonalIcon(
-                          style: buttonStyle,
-                          icon: Icon(
-                            _note != null
-                                ? Icons.note
-                                : Icons.note_add_outlined,
-                          ),
-                          label: Text(l10n.songNote),
-                          onPressed: _showNoteDialog,
-                        ),
-                      ),
-                      const SizedBox(width: 8),
-                      Expanded(
-                        child: FilledButton.tonalIcon(
-                          style: buttonStyle,
-                          icon: const Icon(Icons.add_link),
-                          label: Text(l10n.addLink),
-                          onPressed: _addLink,
-                        ),
-                      ),
-                    ],
+                  _actionRow(
+                    buttonStyle,
+                    _ActionSpec(
+                      icon: _note != null ? Icons.note : Icons.note_add_outlined,
+                      label: l10n.songNote,
+                      onPressed: _showNoteDialog,
+                    ),
+                    _ActionSpec(
+                      icon: Icons.add_link,
+                      label: l10n.addLink,
+                      onPressed: _addLink,
+                    ),
                   ),
-                  const SizedBox(height: 12),
-                  Row(
-                    children: [
-                      Expanded(
-                        child: FilledButton.tonalIcon(
-                          style: buttonStyle,
-                          icon: const Icon(Icons.share_outlined),
-                          label: Text(l10n.shareText),
-                          onPressed: _shareSongText,
-                        ),
-                      ),
-                      const SizedBox(width: 8),
-                      Expanded(
-                        child: FilledButton.tonalIcon(
-                          style: buttonStyle,
-                          icon: const Icon(Icons.install_mobile),
-                          label: Text(l10n.shareLink),
-                          onPressed: _shareSongLink,
-                        ),
-                      ),
-                    ],
+                  _actionRow(
+                    buttonStyle,
+                    _ActionSpec(
+                      icon: Icons.share_outlined,
+                      label: l10n.shareText,
+                      onPressed: _shareSongText,
+                    ),
+                    _ActionSpec(
+                      icon: Icons.install_mobile,
+                      label: l10n.shareLink,
+                      onPressed: _shareSongLink,
+                    ),
                   ),
-                  const SizedBox(height: 12),
-                  FilledButton.tonalIcon(
-                    style: buttonStyle,
-                    icon: const Icon(Icons.language),
-                    label: Text(l10n.openKaumaramPage),
-                    onPressed: _launchCustomUrl,
+                  _actionRow(
+                    buttonStyle,
+                    _ActionSpec(
+                      icon: Icons.language,
+                      label: l10n.openKaumaramPage,
+                      onPressed: _launchCustomUrl,
+                    ),
+                    _ActionSpec(
+                      icon: Icons.language,
+                      label: l10n.openMayuragiriPage,
+                      onPressed: _launchMayuragiriUrl,
+                    ),
                   ),
-                  const SizedBox(height: 12),
-                  FilledButton.tonalIcon(
-                    style: buttonStyle,
-                    icon: const Icon(Icons.language),
-                    label: Text(l10n.openMayuragiriPage),
-                    onPressed: _launchMayuragiriUrl,
+                  _actionRow(
+                    buttonStyle,
+                    _ActionSpec(
+                      icon: Icons.smart_display,
+                      label: l10n.searchOnYouTube,
+                      onPressed: _launchYouTubeSearch,
+                    ),
+                    _ActionSpec(
+                      icon: Icons.search,
+                      label: l10n.searchInGoogle,
+                      onPressed: _launchGoogleSearch,
+                    ),
                   ),
-                  const SizedBox(height: 12),
-                  FilledButton.tonalIcon(
-                    style: buttonStyle,
-                    icon: const Icon(Icons.smart_display),
-                    label: Text(l10n.searchOnYouTube),
-                    onPressed: _launchYouTubeSearch,
-                  ),
-                  const SizedBox(height: 12),
-                  FilledButton.tonalIcon(
-                    style: buttonStyle,
-                    icon: const Icon(Icons.search),
-                    label: Text(l10n.searchInGoogle),
-                    onPressed: _launchGoogleSearch,
-                  ),
-                  const SizedBox(height: 48),
+                  // Clear the floating buttons so the last row stays tappable.
+                  const SizedBox(height: 150),
                 ],
               ),
             ),
@@ -995,4 +1019,16 @@ class VerseRange {
   final int index;
 
   VerseRange({required this.start, required this.end, required this.index});
+}
+
+class _ActionSpec {
+  const _ActionSpec({
+    required this.icon,
+    required this.label,
+    required this.onPressed,
+  });
+
+  final IconData icon;
+  final String label;
+  final VoidCallback onPressed;
 }

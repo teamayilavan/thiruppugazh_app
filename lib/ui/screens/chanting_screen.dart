@@ -24,7 +24,7 @@ class ChantingScreen extends StatefulWidget {
   final int initialIndex;
 
   /// Seconds per verse the user can choose from in auto mode.
-  static const List<int> paceOptions = [10, 15, 20, 30, 45, 60];
+  static const List<int> paceOptions = [5, 10, 15, 20, 25, 30, 60];
   static const int defaultPaceSeconds = 20;
 
   @override
@@ -293,11 +293,18 @@ class _ChantingScreenState extends State<ChantingScreen>
               Text(l10n.chantPace, style: theme.textTheme.labelMedium),
               const SizedBox(height: 4),
               Wrap(
+                alignment: WrapAlignment.center,
                 spacing: 8,
+                runSpacing: 0,
                 children: [
                   for (final seconds in ChantingScreen.paceOptions)
                     ChoiceChip(
-                      label: Text(l10n.chantSeconds(seconds)),
+                      visualDensity: VisualDensity.compact,
+                      label: Text(
+                        seconds == 60
+                            ? l10n.chantOneMinute
+                            : l10n.chantSeconds(seconds),
+                      ),
                       selected: _paceSeconds == seconds,
                       onSelected: (_) => _setPace(seconds),
                     ),
@@ -335,6 +342,9 @@ class _ChantingScreenState extends State<ChantingScreen>
         children: [
           Text(l10n.chantFinished, style: theme.textTheme.titleMedium),
           TextButton.icon(
+            style: TextButton.styleFrom(
+              foregroundColor: theme.colorScheme.onSurface,
+            ),
             onPressed: _startAgain,
             icon: const Icon(Icons.replay),
             label: Text(l10n.chantStartAgain),

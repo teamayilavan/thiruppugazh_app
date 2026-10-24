@@ -160,6 +160,28 @@ void main() {
     expect(find.text('2 of 3'), findsOneWidget);
   });
 
+  testWidgets('offers 5 second to 1 minute paces', (tester) async {
+    await _pump(tester);
+    await tester.tap(find.text('Auto'));
+    await tester.pump();
+    for (final label in ['5s', '10s', '15s', '20s', '25s', '30s', '1 min']) {
+      expect(find.text(label), findsOneWidget, reason: label);
+    }
+    expect(find.text('45s'), findsNothing);
+  });
+
+  testWidgets('the 5 second pace advances after 5 seconds', (tester) async {
+    await _pump(tester);
+    await tester.tap(find.text('Auto'));
+    await tester.pump();
+    await tester.tap(find.text('5s'));
+    await tester.pump();
+
+    await tester.pump(const Duration(seconds: 6));
+    await tester.pumpAndSettle(const Duration(milliseconds: 100));
+    expect(find.text('2 of 3'), findsOneWidget);
+  });
+
   testWidgets('auto mode finishes at the last verse and can start again', (tester) async {
     await _pump(tester, initialIndex: 2);
     await tester.tap(find.text('Auto'));

@@ -74,6 +74,13 @@ final lightTheme = ThemeData(
     brightness: Brightness.light,
     primary: AppColors.accent,
     onPrimary: AppColors.text,
+    // Without these, Material falls back to its default teal for anything
+    // that uses the secondary colours (segmented buttons, chips, tonal
+    // buttons, selection highlights).
+    secondary: AppColors.accent,
+    onSecondary: AppColors.text,
+    secondaryContainer: AppColors.accent,
+    onSecondaryContainer: AppColors.text,
     surface: AppColors.background, // Often same as background
     onSurface: AppColors.text,
     error: Colors.red,
@@ -115,6 +122,10 @@ final darkTheme = ThemeData(
     brightness: Brightness.dark,
     primary: AppColors.daccent,
     onPrimary: AppColors.dtext,
+    secondary: AppColors.daccent,
+    onSecondary: AppColors.dtext,
+    secondaryContainer: AppColors.daccent,
+    onSecondaryContainer: AppColors.dtext,
     surface: AppColors.dbackground,
     onSurface: AppColors.dtext,
     error: Colors.red,

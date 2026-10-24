@@ -201,5 +201,7 @@
   "chantShowTune": "சந்தம் காட்டு",
   "continueWhereLeftOff": "விட்ட இடத்திலிருந்து தொடரவும்",
   "continueChantingAt": "பாராயணம்: {total} இல் {current}",
-  "continueLastOpened": "கடைசியாகத் திறந்தது"
+  "continueLastOpened": "கடைசியாகத் திறந்தது",
+  "chantOneMinute": "1 நிமி",
+  "noSongsInCategory": "\"{name}\" இல் பாடல்கள் எதுவும் இல்லை."
 }

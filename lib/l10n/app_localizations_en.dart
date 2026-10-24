@@ -652,4 +652,12 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get continueLastOpened => 'Last opened';
+
+  @override
+  String get chantOneMinute => '1 min';
+
+  @override
+  String noSongsInCategory(String name) {
+    return 'No songs found in \"$name\".';
+  }
 }

@@ -655,4 +655,12 @@ class AppLocalizationsTa extends AppLocalizations {
 
   @override
   String get continueLastOpened => 'கடைசியாகத் திறந்தது';
+
+  @override
+  String get chantOneMinute => '1 நிமி';
+
+  @override
+  String noSongsInCategory(String name) {
+    return '\"$name\" இல் பாடல்கள் எதுவும் இல்லை.';
+  }
 }

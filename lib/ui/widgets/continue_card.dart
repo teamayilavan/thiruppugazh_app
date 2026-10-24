@@ -104,8 +104,8 @@ class _ContinueCardState extends State<ContinueCard> {
                 children: [
                   Icon(
                     resumeChanting
-                        ? Icons.self_improvement
-                        : Icons.play_circle_outline,
+                        ? Icons.play_circle_outline
+                        : Icons.menu_book_outlined,
                     color: onCard,
                     size: 26,
                   ),

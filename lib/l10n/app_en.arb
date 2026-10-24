@@ -259,5 +259,12 @@
   },
   "@continueChantingAt": {
     "placeholders": {"current": {"type": "int"}, "total": {"type": "int"}}
+  },
+  "chantOneMinute": "1 min",
+  "noSongsInCategory": "No songs found in \"{name}\".",
+  "@noSongsInCategory": {
+    "placeholders": {
+      "name": {"type": "String"}
+    }
   }
 }

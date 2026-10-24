@@ -72,7 +72,9 @@ class _SongListScreenState extends State<SongListScreen> {
                   ListView(), // Enable pull to refresh on empty
                   Center(
                     child: Text(
-                      'No songs found in "${widget.category.name}".',
+                      AppLocalizations.of(
+                        context,
+                      )!.noSongsInCategory(widget.category.name),
                       style: Theme.of(context).textTheme.bodyLarge,
                     ),
                   ),
