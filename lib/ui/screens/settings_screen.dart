@@ -232,28 +232,26 @@ class SettingsScreen extends StatelessWidget {
         final l10n = AppLocalizations.of(context)!;
         return AlertDialog(
           title: Text(l10n.language),
-          content: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              RadioListTile<AppLanguage>(
-                title: Text(l10n.tamil),
-                value: AppLanguage.tamil,
-                groupValue: provider.currentLanguage,
-                onChanged: (AppLanguage? value) {
-                  provider.setLanguage(value!);
-                  Navigator.of(context).pop();
-                },
-              ),
-              RadioListTile<AppLanguage>(
-                title: Text(l10n.english),
-                value: AppLanguage.english,
-                groupValue: provider.currentLanguage,
-                onChanged: (AppLanguage? value) {
-                  provider.setLanguage(value!);
-                  Navigator.of(context).pop();
-                },
-              ),
-            ],
+          content: RadioGroup<AppLanguage>(
+            groupValue: provider.currentLanguage,
+            onChanged: (AppLanguage? value) {
+              if (value == null) return;
+              provider.setLanguage(value);
+              Navigator.of(context).pop();
+            },
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                RadioListTile<AppLanguage>(
+                  title: Text(l10n.tamil),
+                  value: AppLanguage.tamil,
+                ),
+                RadioListTile<AppLanguage>(
+                  title: Text(l10n.english),
+                  value: AppLanguage.english,
+                ),
+              ],
+            ),
           ),
         );
       },
@@ -270,28 +268,26 @@ class SettingsScreen extends StatelessWidget {
         final l10n = AppLocalizations.of(context)!;
         return AlertDialog(
           title: Text(l10n.lyricsLanguage),
-          content: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              RadioListTile<LyricsLanguage>(
-                title: const Text('தமிழ்'),
-                value: LyricsLanguage.tamil,
-                groupValue: provider.lyricsLanguage,
-                onChanged: (LyricsLanguage? value) {
-                  provider.setLyricsLanguage(value!);
-                  Navigator.of(context).pop();
-                },
-              ),
-              RadioListTile<LyricsLanguage>(
-                title: const Text('English'),
-                value: LyricsLanguage.english,
-                groupValue: provider.lyricsLanguage,
-                onChanged: (LyricsLanguage? value) {
-                  provider.setLyricsLanguage(value!);
-                  Navigator.of(context).pop();
-                },
-              ),
-            ],
+          content: RadioGroup<LyricsLanguage>(
+            groupValue: provider.lyricsLanguage,
+            onChanged: (LyricsLanguage? value) {
+              if (value == null) return;
+              provider.setLyricsLanguage(value);
+              Navigator.of(context).pop();
+            },
+            child: const Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                RadioListTile<LyricsLanguage>(
+                  title: Text('தமிழ்'),
+                  value: LyricsLanguage.tamil,
+                ),
+                RadioListTile<LyricsLanguage>(
+                  title: Text('English'),
+                  value: LyricsLanguage.english,
+                ),
+              ],
+            ),
           ),
         );
       },
@@ -305,37 +301,30 @@ class SettingsScreen extends StatelessWidget {
         final l10n = AppLocalizations.of(context)!;
         return AlertDialog(
           title: Text(l10n.chooseTheme),
-          content: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              RadioListTile<ThemeMode>(
-                title: Text(l10n.light),
-                value: ThemeMode.light,
-                groupValue: provider.themeMode,
-                onChanged: (ThemeMode? value) {
-                  provider.setThemeMode(value!);
-                  Navigator.of(context).pop();
-                },
-              ),
-              RadioListTile<ThemeMode>(
-                title: Text(l10n.dark),
-                value: ThemeMode.dark,
-                groupValue: provider.themeMode,
-                onChanged: (ThemeMode? value) {
-                  provider.setThemeMode(value!);
-                  Navigator.of(context).pop();
-                },
-              ),
-              RadioListTile<ThemeMode>(
-                title: Text(l10n.systemDefault),
-                value: ThemeMode.system,
-                groupValue: provider.themeMode,
-                onChanged: (ThemeMode? value) {
-                  provider.setThemeMode(value!);
-                  Navigator.of(context).pop();
-                },
-              ),
-            ],
+          content: RadioGroup<ThemeMode>(
+            groupValue: provider.themeMode,
+            onChanged: (ThemeMode? value) {
+              if (value == null) return;
+              provider.setThemeMode(value);
+              Navigator.of(context).pop();
+            },
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                RadioListTile<ThemeMode>(
+                  title: Text(l10n.light),
+                  value: ThemeMode.light,
+                ),
+                RadioListTile<ThemeMode>(
+                  title: Text(l10n.dark),
+                  value: ThemeMode.dark,
+                ),
+                RadioListTile<ThemeMode>(
+                  title: Text(l10n.systemDefault),
+                  value: ThemeMode.system,
+                ),
+              ],
+            ),
           ),
         );
       },
