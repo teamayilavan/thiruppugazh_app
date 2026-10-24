@@ -16,11 +16,17 @@
 A modern Thiruppugazh app offering lot of simple and purposeful features. 
 
 ### 📚 Rich Content & Tools
--   **Song Library**: Complete collection of Thiruppugazh songs with *Padal* (Lyrics), *Porul* (Meaning), and *Thiruthalam* (Temple).
--   **Custom Categories**: Organize songs into your own lists.
--   **Favorites**: Mark songs you love for quick access.
--   **Highlights & Notes**: Select text to highlight or add personal notes to any song.
--   **Advanced Search**: Find songs by title, lyrics, temple, or Kaumaram ID.
+-   **Song Library**: All 1,340 Thiruppugazh songs with *Padal* (Lyrics), *Porul* (Meaning), *Santham* (tune pattern) and *Thiruthalam* (Temple).
+-   **Word-by-word Meanings**: Meanings alongside the word-separated lyrics (*Padham*), so you can read each line the way it is meant to be understood.
+-   **Temples**: Browse songs by temple, with the six *Arupadai Veedu* abodes right at the top.
+-   **Today's Song & Random Song**: A song picked for the day, and a shuffle button for when you want a surprise.
+-   **Favorites & Custom Categories**: Keep the songs you love at hand, organize the rest into your own lists, and reach your favorites from the heart button on the home screen.
+-   **Highlights, Notes & Links**: Highlight verses, add personal notes, and attach web links (a recital, a discourse, a post) to any song. Paste a link, or share it straight from YouTube, Instagram or a browser to the app — it shows a quick confirmation and returns you to where you were.
+-   **Smart Search**: Results are ranked: song number first, then title, then opening words, followed by matches in the rest of the lyrics, temples and tunes. It forgives spelling: type `muthaitharu` or `thirupugazh` in plain English letters, mix up ன/ந or ல/ள/ழ in Tamil, or type the words in any order.
+-   **Chanting Mode**: One verse at a time in large text, with the tune pattern as a cue and the screen kept awake. Move through by hand, or let it advance on its own at a pace you choose (5 seconds to 1 minute).
+-   **Continue Where You Left Off**: The home screen remembers your last song, and the verse you were chanting.
+-   **Adjustable Text**: Increase or decrease the lyrics size to suit you.
+-   **Share**: Share a song's text or a link that opens it in the app.
 -   **Daily Reminder**: An opt-in local notification at a time you choose — entirely offline, no server involved.
 
 
@@ -29,7 +35,7 @@ From the beginning we kept privacy and user rights in mind. So,
 -   **No Tracking**: We do not collect any personal usage data.
 -   **Offline First**: The app works entirely offline.
 -   **No Ads**: A clean, distraction-free spiritual experience.
--   **Your Data, Protected**: Favorites, notes, and highlights are backed up automatically to your own Google account via Android's Auto Backup — no server of ours involved — plus manual export/import whenever you want it.
+-   **Your Data, Protected**: Favorites, categories, notes, highlights and links are backed up automatically to your own Google account via Android's Auto Backup — no server of ours involved — plus manual export/import whenever you want it. App updates are built to keep your data intact, and are tested against every earlier version.
 
 
 ### 🔓 Open Source
@@ -43,8 +49,8 @@ Designed with **Material 3**, the app offers a stunning visual experience.
 
 ### 🌏 Bilingual Support
 Seamlessly switch between languages.
--   **Tamil (தமிழ்) & English**: App is available in both languages.
--   **Content**: Lyrics, meanings, and explanations available only in Tamil for now.
+-   **Tamil (தமிழ்) & English**: The app is available in both languages, and you can choose the app language and the lyrics language independently.
+-   **Content**: Lyrics, meanings and explanations are in Tamil. English transliteration of the lyrics, titles and temples is available for most songs (a few are Tamil only for now).
 
 
 
@@ -58,7 +64,9 @@ We welcome contributions! Whether you want to fix a bug, add a feature, or impro
 -   [**Architecture**](docs/architecture.md): Understanding the code structure and navigation.
 -   [**Database Schema**](docs/database.md): Details on the SQLite database and data models.
 -   [**Web App**](docs/web-app.md): The static fallback site for shared song links.
+-   [**Automated Backup**](docs/automated-backup-plan.md): How Android Auto Backup and manual export/import fit together.
 -   [**Changelog**](CHANGELOG.md): Notable changes by version.
+-   [**Working Agreements**](CLAUDE.md): How we make changes (confirm first, protect user data, test upgrades).
 
 ### Tech Stack
 -   **Framework**: Flutter & Dart
