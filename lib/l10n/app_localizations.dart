@@ -1202,6 +1202,102 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'This song already has that link.'**
   String get linkAlreadyAdded;
+
+  /// No description provided for @chantingMode.
+  ///
+  /// In en, this message translates to:
+  /// **'Chanting mode'**
+  String get chantingMode;
+
+  /// No description provided for @chantManual.
+  ///
+  /// In en, this message translates to:
+  /// **'Manual'**
+  String get chantManual;
+
+  /// No description provided for @chantAuto.
+  ///
+  /// In en, this message translates to:
+  /// **'Auto'**
+  String get chantAuto;
+
+  /// No description provided for @chantPace.
+  ///
+  /// In en, this message translates to:
+  /// **'Time per verse'**
+  String get chantPace;
+
+  /// No description provided for @chantSeconds.
+  ///
+  /// In en, this message translates to:
+  /// **'{seconds}s'**
+  String chantSeconds(int seconds);
+
+  /// No description provided for @chantPlay.
+  ///
+  /// In en, this message translates to:
+  /// **'Play'**
+  String get chantPlay;
+
+  /// No description provided for @chantPause.
+  ///
+  /// In en, this message translates to:
+  /// **'Pause'**
+  String get chantPause;
+
+  /// No description provided for @chantPrevious.
+  ///
+  /// In en, this message translates to:
+  /// **'Previous verse'**
+  String get chantPrevious;
+
+  /// No description provided for @chantNext.
+  ///
+  /// In en, this message translates to:
+  /// **'Next verse'**
+  String get chantNext;
+
+  /// No description provided for @chantProgress.
+  ///
+  /// In en, this message translates to:
+  /// **'{current} of {total}'**
+  String chantProgress(int current, int total);
+
+  /// No description provided for @chantFinished.
+  ///
+  /// In en, this message translates to:
+  /// **'Song complete'**
+  String get chantFinished;
+
+  /// No description provided for @chantStartAgain.
+  ///
+  /// In en, this message translates to:
+  /// **'Start again'**
+  String get chantStartAgain;
+
+  /// No description provided for @chantShowTune.
+  ///
+  /// In en, this message translates to:
+  /// **'Show tune'**
+  String get chantShowTune;
+
+  /// No description provided for @continueWhereLeftOff.
+  ///
+  /// In en, this message translates to:
+  /// **'Continue where you left off'**
+  String get continueWhereLeftOff;
+
+  /// No description provided for @continueChantingAt.
+  ///
+  /// In en, this message translates to:
+  /// **'Chanting: {current} of {total}'**
+  String continueChantingAt(int current, int total);
+
+  /// No description provided for @continueLastOpened.
+  ///
+  /// In en, this message translates to:
+  /// **'Last opened'**
+  String get continueLastOpened;
 }
 
 class _AppLocalizationsDelegate

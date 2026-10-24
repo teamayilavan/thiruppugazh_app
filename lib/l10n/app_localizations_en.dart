@@ -598,4 +598,58 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get linkAlreadyAdded => 'This song already has that link.';
+
+  @override
+  String get chantingMode => 'Chanting mode';
+
+  @override
+  String get chantManual => 'Manual';
+
+  @override
+  String get chantAuto => 'Auto';
+
+  @override
+  String get chantPace => 'Time per verse';
+
+  @override
+  String chantSeconds(int seconds) {
+    return '${seconds}s';
+  }
+
+  @override
+  String get chantPlay => 'Play';
+
+  @override
+  String get chantPause => 'Pause';
+
+  @override
+  String get chantPrevious => 'Previous verse';
+
+  @override
+  String get chantNext => 'Next verse';
+
+  @override
+  String chantProgress(int current, int total) {
+    return '$current of $total';
+  }
+
+  @override
+  String get chantFinished => 'Song complete';
+
+  @override
+  String get chantStartAgain => 'Start again';
+
+  @override
+  String get chantShowTune => 'Show tune';
+
+  @override
+  String get continueWhereLeftOff => 'Continue where you left off';
+
+  @override
+  String continueChantingAt(int current, int total) {
+    return 'Chanting: $current of $total';
+  }
+
+  @override
+  String get continueLastOpened => 'Last opened';
 }

@@ -16,6 +16,8 @@ import '../../constants/app_constants.dart';
 import '../../l10n/app_localizations.dart';
 import '../../providers/lyrics_language_provider.dart';
 import '../../providers/lyrics_font_size_provider.dart';
+import '../../providers/reading_state_provider.dart';
+import 'chanting_screen.dart';
 
 List<String> selectMayuragiriLyrics(Song song, bool useEnglish) {
   return useEnglish
@@ -76,6 +78,8 @@ class _SongDetailScreenState extends State<SongDetailScreen> {
     super.initState();
     final repo = Provider.of<SongRepository>(context, listen: false);
     _loadCategoryInfo(repo);
+    // Remember this song so Home can offer "Continue".
+    context.read<ReadingStateProvider>().recordOpened(widget.song.id);
   }
 
   @override
@@ -582,6 +586,18 @@ ${_displayLyricsList.join('\n')}''';
                           l10n.lyrics,
                           style: Theme.of(context).textTheme.bodyLarge,
                         ),
+                      ),
+                      IconButton(
+                        icon: const Icon(Icons.self_improvement),
+                        tooltip: l10n.chantingMode,
+                        onPressed: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) =>
+                                  ChantingScreen(song: widget.song),
+                            ),
+                          );
+                        },
                       ),
                       Consumer<LyricsFontSizeProvider>(
                         builder: (context, fontSizeProvider, _) => Row(

@@ -234,5 +234,30 @@
     "placeholders": {
       "song": {"type": "String"}
     }
+  },
+  "chantingMode": "Chanting mode",
+  "chantManual": "Manual",
+  "chantAuto": "Auto",
+  "chantPace": "Time per verse",
+  "chantSeconds": "{seconds}s",
+  "chantPlay": "Play",
+  "chantPause": "Pause",
+  "chantPrevious": "Previous verse",
+  "chantNext": "Next verse",
+  "chantProgress": "{current} of {total}",
+  "chantFinished": "Song complete",
+  "chantStartAgain": "Start again",
+  "chantShowTune": "Show tune",
+  "continueWhereLeftOff": "Continue where you left off",
+  "continueChantingAt": "Chanting: {current} of {total}",
+  "continueLastOpened": "Last opened",
+  "@chantSeconds": {
+    "placeholders": {"seconds": {"type": "int"}}
+  },
+  "@chantProgress": {
+    "placeholders": {"current": {"type": "int"}, "total": {"type": "int"}}
+  },
+  "@continueChantingAt": {
+    "placeholders": {"current": {"type": "int"}, "total": {"type": "int"}}
   }
 }

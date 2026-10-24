@@ -601,4 +601,58 @@ class AppLocalizationsTa extends AppLocalizations {
 
   @override
   String get linkAlreadyAdded => 'இந்தப் பாடலில் அந்த இணைப்பு ஏற்கனவே உள்ளது.';
+
+  @override
+  String get chantingMode => 'பாராயண முறை';
+
+  @override
+  String get chantManual => 'கைமுறை';
+
+  @override
+  String get chantAuto => 'தானியங்கி';
+
+  @override
+  String get chantPace => 'ஒவ்வொரு பகுதிக்கும் நேரம்';
+
+  @override
+  String chantSeconds(int seconds) {
+    return '$seconds வி';
+  }
+
+  @override
+  String get chantPlay => 'இயக்கு';
+
+  @override
+  String get chantPause => 'நிறுத்து';
+
+  @override
+  String get chantPrevious => 'முந்தைய பகுதி';
+
+  @override
+  String get chantNext => 'அடுத்த பகுதி';
+
+  @override
+  String chantProgress(int current, int total) {
+    return '$total இல் $current';
+  }
+
+  @override
+  String get chantFinished => 'பாடல் நிறைவு';
+
+  @override
+  String get chantStartAgain => 'மீண்டும் தொடங்கு';
+
+  @override
+  String get chantShowTune => 'சந்தம் காட்டு';
+
+  @override
+  String get continueWhereLeftOff => 'விட்ட இடத்திலிருந்து தொடரவும்';
+
+  @override
+  String continueChantingAt(int current, int total) {
+    return 'பாராயணம்: $total இல் $current';
+  }
+
+  @override
+  String get continueLastOpened => 'கடைசியாகத் திறந்தது';
 }

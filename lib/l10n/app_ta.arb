@@ -185,5 +185,21 @@
   "pickSongForLink": "இந்த இணைப்பிற்கான பாடலைத் தேர்ந்தெடுக்கவும்",
   "searchSongsHint": "பாடல்களைத் தேடு",
   "sharedLinkNotFound": "நீங்கள் பகிர்ந்ததில் இணைய இணைப்பு எதுவும் இல்லை.",
-  "linkAlreadyAdded": "இந்தப் பாடலில் அந்த இணைப்பு ஏற்கனவே உள்ளது."
+  "linkAlreadyAdded": "இந்தப் பாடலில் அந்த இணைப்பு ஏற்கனவே உள்ளது.",
+  "chantingMode": "பாராயண முறை",
+  "chantManual": "கைமுறை",
+  "chantAuto": "தானியங்கி",
+  "chantPace": "ஒவ்வொரு பகுதிக்கும் நேரம்",
+  "chantSeconds": "{seconds} வி",
+  "chantPlay": "இயக்கு",
+  "chantPause": "நிறுத்து",
+  "chantPrevious": "முந்தைய பகுதி",
+  "chantNext": "அடுத்த பகுதி",
+  "chantProgress": "{total} இல் {current}",
+  "chantFinished": "பாடல் நிறைவு",
+  "chantStartAgain": "மீண்டும் தொடங்கு",
+  "chantShowTune": "சந்தம் காட்டு",
+  "continueWhereLeftOff": "விட்ட இடத்திலிருந்து தொடரவும்",
+  "continueChantingAt": "பாராயணம்: {total} இல் {current}",
+  "continueLastOpened": "கடைசியாகத் திறந்தது"
 }

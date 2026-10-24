@@ -9,6 +9,10 @@ Notable changes to this project. Format loosely follows [Keep a Changelog](https
 - **Share into the app.** Share a link from YouTube, Instagram, a browser or any app and choose Thiruppugazh: the app asks which song it belongs to (with search) and saves it. Works whether the app is closed or already open. Implemented as a small native Android share target in `MainActivity` — no new plugin.
 - Links are part of Export/Import and Auto Backup. Older backups without links still import, re-importing never duplicates a link, and a backup entry with a non-http(s) URL is skipped.
 - DB v6: new `links` table (additive; see [`docs/database.md`](docs/database.md)).
+- **Chanting mode** (the figure-meditating icon beside "Lyrics" on a song). A distraction-free view: one verse at a time in large text, the tune pattern as a cue (can be hidden), the screen kept awake, and the existing font-size and lyrics-language settings. Move by hand (swipe or the next/previous buttons) or switch to **Auto**, which advances at a pace you choose (10 to 60 seconds per verse) with play/pause and a "song complete" end state. Verses are grouped by the tune pattern length, exactly as on the song page.
+- **Continue where you left off** card on Home: the last song you opened and, if you were chanting it, the verse you were on. Stored on the device in preferences only (no database change).
+- **Favorites shortcut**: a heart button on Home opens your Favorites list directly.
+- **Smarter search.** Results are now ranked: a song number finds that song first, then title matches, then opening-line matches, then the rest of the text. Spelling is forgiving in both scripts: casual English spellings and missing spaces now match (e.g. `muthaitharu`, `thirupugazh`, `dh`/`th`, `zh`/`l`, doubled letters), and Tamil letters that are easy to confuse (ன/ண/ந, ர/ற, ல/ள/ழ) match each other. Typing several words matches them in any order. On the bundled songs, typing a title or opening words with casual spelling or no spaces went from finding the song about 10% of the time to about 100%.
 
 ## [1.5.0+7] — 2026-09-30
 

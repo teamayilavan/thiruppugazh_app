@@ -50,6 +50,8 @@ Fields available per song that this feature can use: `lyrics_list`, `tune_list` 
 
 ## 3. Core design
 
+> **Update (2026-10-24, after building chanting mode):** the natural unit is the **verse**, not a fixed pair of lines. Lines are grouped by the length of the song's tune pattern (`tune_list`), exactly as the song detail page already shows them; this agrees with the `......` line-break marker for 1,295 of 1,340 songs and gives the more sensible grouping for most of the rest. Typical verses are 2 or 3 lines. The helper `splitIntoVerses` (`lib/utils/verses.dart`) implements it and should be reused for chunking. Wherever this document says "couplet", read "verse". Open question 3 below is answered by this.
+
 ### 3.1 The unit: a chunk
 - A **chunk** is one couplet (two consecutive lyric lines).
 - If a song has an odd number of lines, or the grouping from the source data is unclear, fall back to single lines for the odd one out rather than guessing.

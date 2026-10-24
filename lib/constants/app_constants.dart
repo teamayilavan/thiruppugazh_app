@@ -20,6 +20,10 @@ class AppConstants {
   static const String reminderEnabledPrefsKey = 'reminder_enabled';
   static const String reminderTimePrefsKey = 'reminder_time_minutes';
   static const String autoBackupLastWriteAtPrefsKey = 'auto_backup_last_write_at';
+  static const String readingStatePrefsKey = 'reading_state';
+  static const String chantPaceSecondsPrefsKey = 'chant_pace_seconds';
+  static const String chantAutoPrefsKey = 'chant_auto';
+  static const String chantShowTunePrefsKey = 'chant_show_tune';
 
   // ==================== Deep Link ====================
   static const String deepLinkDomain = 'thiruppugazh.ayilavan.org';

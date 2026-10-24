@@ -12,6 +12,7 @@ import 'providers/theme_provider.dart';
 import 'providers/language_provider.dart';
 import 'providers/lyrics_language_provider.dart';
 import 'providers/lyrics_font_size_provider.dart';
+import 'providers/reading_state_provider.dart';
 import 'providers/reminder_settings_provider.dart';
 import 'providers/song_list_provider.dart';
 import 'services/auto_backup_service.dart';
@@ -39,6 +40,7 @@ Future<void> main() async {
         ChangeNotifierProvider(create: (context) => LyricsLanguageProvider()),
         ChangeNotifierProvider(create: (context) => LyricsFontSizeProvider()),
         ChangeNotifierProvider(create: (context) => ReminderSettingsProvider()),
+        ChangeNotifierProvider(create: (context) => ReadingStateProvider()),
         ChangeNotifierProvider.value(value: autoBackupStatus),
         ChangeNotifierProvider(
           create: (context) => SongListProvider(

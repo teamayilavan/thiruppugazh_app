@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import '../../data/models/category_model.dart';
 import '../../data/repositories/song_repository.dart';
 import '../../providers/song_list_provider.dart';
 import '../../providers/lyrics_language_provider.dart';
+import '../widgets/continue_card.dart';
 import '../widgets/todays_song_card.dart';
 import 'song_detail_screen.dart';
 import 'search_screen.dart';
+import 'song_list_screen.dart';
 import '../../l10n/app_localizations.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -161,6 +164,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                       ),
                     ),
+                    const SliverToBoxAdapter(child: ContinueCard()),
                     const SliverToBoxAdapter(child: TodaysSongCard()),
                     SliverPadding(
                       padding: const EdgeInsets.symmetric(
@@ -240,6 +244,26 @@ class _HomeScreenState extends State<HomeScreen> {
       floatingActionButton: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
+          Semantics(
+            button: true,
+            label: l10n.favorites,
+            child: FloatingActionButton.small(
+              heroTag: 'fab_favorites',
+              tooltip: l10n.favorites,
+              onPressed: () {
+                // Favorites is the built-in category with id 1.
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => SongListScreen(
+                      category: Category(id: 1, name: l10n.favorites),
+                    ),
+                  ),
+                );
+              },
+              child: const Icon(Icons.favorite),
+            ),
+          ),
+          const SizedBox(height: 16),
           Semantics(
             button: true,
             label: l10n.randomSong,
