@@ -10,6 +10,7 @@ import 'song_detail_screen.dart';
 import 'search_screen.dart';
 import 'song_list_screen.dart';
 import '../../l10n/app_localizations.dart';
+import '../../utils/app_logger.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -69,13 +70,14 @@ class _HomeScreenState extends State<HomeScreen> {
           builder: (context) => SongDetailScreen(song: randomSong),
         ),
       );
-    } catch (e) {
+    } catch (e, st) {
+      AppLogger.error('Opening a random song failed', error: e, stackTrace: st);
       if (!mounted) return;
       setState(() {
         _isRandomLoading = false;
       });
       messenger.showSnackBar(
-        SnackBar(content: Text('Error loading random song: $e')),
+        SnackBar(content: Text(l10n.errorLoadingRandomSong)),
       );
     }
   }
@@ -143,10 +145,16 @@ class _HomeScreenState extends State<HomeScreen> {
                         image: true,
                         label: l10n.thiruppugazhHeroImage,
                         child: Image.asset(
-                          'assets/images/hero.png',
+                          'assets/images/hero.webp',
                           width: double.infinity,
                           height: 350,
                           fit: BoxFit.cover,
+                          // The source is 2048x2048; decode only what the
+                          // screen can show instead of ~16 MB of bitmap.
+                          cacheWidth:
+                              (MediaQuery.sizeOf(context).width *
+                                      MediaQuery.devicePixelRatioOf(context))
+                                  .round(),
                         ),
                       ),
                     ),

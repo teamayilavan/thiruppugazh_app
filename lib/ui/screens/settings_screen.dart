@@ -9,6 +9,7 @@ import '../../providers/lyrics_language_provider.dart';
 import '../../providers/reminder_settings_provider.dart';
 import '../../l10n/app_localizations.dart';
 import '../../services/backup_service.dart';
+import '../widgets/link_actions.dart';
 import 'privacy_policy_screen.dart';
 
 class SettingsScreen extends StatelessWidget {
@@ -215,13 +216,13 @@ class SettingsScreen extends StatelessWidget {
 
   Future<void> _launchGitHubRepo(BuildContext context) async {
     final messenger = ScaffoldMessenger.of(context);
+    final failure = AppLocalizations.of(context)!.couldNotOpenGithub;
+    if (!await confirmOpenLink(context, _githubRepoUrl.toString())) return;
     if (!await launchUrl(
       _githubRepoUrl,
       mode: LaunchMode.externalApplication,
     )) {
-      messenger.showSnackBar(
-        const SnackBar(content: Text('Could not open GitHub repository')),
-      );
+      messenger.showSnackBar(SnackBar(content: Text(failure)));
     }
   }
 

@@ -87,6 +87,14 @@ final lightTheme = ThemeData(
     onError: Colors.white,
   ),
   scaffoldBackgroundColor: AppColors.background,
+  // Button text defaults to the (mid-green) primary colour, which is faint
+  // on the pale background; use the darker text colours instead.
+  textButtonTheme: TextButtonThemeData(
+    style: TextButton.styleFrom(foregroundColor: AppColors.textHigh),
+  ),
+  outlinedButtonTheme: OutlinedButtonThemeData(
+    style: OutlinedButton.styleFrom(foregroundColor: AppColors.text),
+  ),
   extensions: const <ThemeExtension<dynamic>>[
     AppColorExtension(
       container: AppColors.container,
@@ -132,6 +140,12 @@ final darkTheme = ThemeData(
     onError: Colors.white,
   ),
   scaffoldBackgroundColor: AppColors.dbackground,
+  textButtonTheme: TextButtonThemeData(
+    style: TextButton.styleFrom(foregroundColor: AppColors.dtext),
+  ),
+  outlinedButtonTheme: OutlinedButtonThemeData(
+    style: OutlinedButton.styleFrom(foregroundColor: AppColors.dtext),
+  ),
   extensions: const <ThemeExtension<dynamic>>[
     AppColorExtension(
       container: AppColors.dcontainer,

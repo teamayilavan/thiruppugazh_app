@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:share_plus/share_plus.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 import '../../data/models/song_model.dart';
 import '../../data/models/highlight_model.dart';
@@ -11,9 +10,12 @@ import '../../data/repositories/song_repository.dart';
 import '../widgets/add_to_category_dialog.dart';
 import '../widgets/add_link_sheet.dart';
 import '../widgets/link_actions.dart';
+import '../widgets/song_sections.dart';
+import '../widgets/song_web_links.dart';
 
 import '../../constants/app_constants.dart';
 import '../../l10n/app_localizations.dart';
+import '../../utils/app_logger.dart';
 import '../../providers/lyrics_language_provider.dart';
 import '../../providers/lyrics_font_size_provider.dart';
 import '../../providers/reading_state_provider.dart';
@@ -184,20 +186,26 @@ class _SongDetailScreenState extends State<SongDetailScreen> {
         _isFavoriteLoading = false;
       });
 
+      final l10n = AppLocalizations.of(context)!;
       messenger.showSnackBar(
         SnackBar(
           content: Text(
-            'Song ${widget.song.title} ${wasFavorite ? 'removed from Favorites' : 'added to Favorites'}',
+            wasFavorite
+                ? l10n.songRemovedFromFavorites(widget.song.title)
+                : l10n.songAddedToFavorites(widget.song.title),
           ),
         ),
       );
-    } catch (e) {
+    } catch (e, st) {
+      AppLogger.error('Updating favorite failed', error: e, stackTrace: st);
       if (!mounted) return;
       setState(() {
         _isFavoriteLoading = false;
       });
       messenger.showSnackBar(
-        SnackBar(content: Text('Error updating favorite: $e')),
+        SnackBar(
+          content: Text(AppLocalizations.of(context)!.errorUpdatingFavorite),
+        ),
       );
     }
   }
@@ -395,140 +403,6 @@ ${_displayLyricsList.join('\n')}''';
     );
   }
 
-  Future<void> _launchYouTubeSearch() async {
-    final messenger = ScaffoldMessenger.of(context);
-
-    final songTitle = Uri.encodeComponent(widget.song.title);
-    final url = Uri.parse(
-      'https://www.youtube.com/results?search_query=திருப்புகழ்%20$songTitle',
-    );
-
-    if (!_isValidUrl(url, ['youtube.com', 'www.youtube.com'])) {
-      messenger.showSnackBar(const SnackBar(content: Text('Invalid URL')));
-      return;
-    }
-
-    final confirmed = await _showUrlConfirmationDialog(context, 'YouTube');
-    if (confirmed == true) {
-      if (!await launchUrl(url)) {
-        messenger.showSnackBar(
-          SnackBar(
-            content: Text('Could not launch YouTube for ${widget.song.title}'),
-          ),
-        );
-      }
-    }
-  }
-
-  Future<void> _launchGoogleSearch() async {
-    final messenger = ScaffoldMessenger.of(context);
-
-    final songTitle = Uri.encodeComponent(widget.song.title);
-    final url = Uri.parse(
-      'https://www.google.com/search?q=திருப்புகழ்%20$songTitle',
-    );
-
-    if (!_isValidUrl(url, ['google.com', 'www.google.com'])) {
-      messenger.showSnackBar(const SnackBar(content: Text('Invalid URL')));
-      return;
-    }
-
-    final confirmed = await _showUrlConfirmationDialog(context, 'Google');
-    if (confirmed == true) {
-      if (!await launchUrl(url)) {
-        messenger.showSnackBar(
-          SnackBar(
-            content: Text('Could not launch Google for ${widget.song.title}'),
-          ),
-        );
-      }
-    }
-  }
-
-  Future<void> _launchCustomUrl() async {
-    final messenger = ScaffoldMessenger.of(context);
-
-    final kaumaramId = widget.song.kaumaramId.padLeft(4, '0');
-    final url = Uri.parse('https://kaumaram.com/thiru/nnt${kaumaramId}_u.html');
-
-    if (!_isValidUrl(url, ['kaumaram.com', 'www.kaumaram.com'])) {
-      messenger.showSnackBar(const SnackBar(content: Text('Invalid URL')));
-      return;
-    }
-
-    final confirmed = await _showUrlConfirmationDialog(context, 'Kaumaram');
-    if (confirmed == true) {
-      if (!await launchUrl(url)) {
-        messenger.showSnackBar(
-          const SnackBar(content: Text('Could not launch the custom URL')),
-        );
-      }
-    }
-  }
-
-  Future<void> _launchMayuragiriUrl() async {
-    final messenger = ScaffoldMessenger.of(context);
-
-    final url = Uri.parse(
-      'https://mayuragiri.com/thiruppugal${widget.song.kaumaramId}',
-    );
-
-    if (!_isValidUrl(url, ['mayuragiri.com', 'www.mayuragiri.com'])) {
-      messenger.showSnackBar(const SnackBar(content: Text('Invalid URL')));
-      return;
-    }
-
-    final confirmed = await _showUrlConfirmationDialog(context, 'Mayuragiri');
-    if (confirmed == true) {
-      if (!await launchUrl(url)) {
-        messenger.showSnackBar(
-          const SnackBar(content: Text('Could not launch Mayuragiri')),
-        );
-      }
-    }
-  }
-
-  /// Validates URL against whitelist of trusted domains.
-  bool _isValidUrl(Uri url, List<String> allowedDomains) {
-    if (url.scheme != 'https') {
-      return false;
-    }
-
-    if (!allowedDomains.contains(url.host)) {
-      return false;
-    }
-
-    return true;
-  }
-
-  /// Shows a confirmation dialog before launching external URLs.
-  Future<bool?> _showUrlConfirmationDialog(
-    BuildContext context,
-    String domain,
-  ) {
-    return showDialog<bool>(
-      context: context,
-      builder: (dialogContext) {
-        return AlertDialog(
-          title: Text(AppLocalizations.of(context)!.openExternalLink),
-          content: Text(
-            AppLocalizations.of(context)!.openExternalLinkConfirmation(domain),
-          ),
-          actions: [
-            TextButton(
-              onPressed: () => Navigator.of(dialogContext).pop(false),
-              child: Text(AppLocalizations.of(context)!.cancel),
-            ),
-            FilledButton(
-              onPressed: () => Navigator.of(dialogContext).pop(true),
-              child: Text(AppLocalizations.of(context)!.open),
-            ),
-          ],
-        );
-      },
-    );
-  }
-
   /// One row of two equal-height action tiles. Every tile in the detail
   /// screen's button block goes through here so they line up and balance.
   Widget _actionRow(ButtonStyle style, _ActionSpec left, _ActionSpec right) {
@@ -613,7 +487,7 @@ ${_displayLyricsList.join('\n')}''';
                     ),
                   ),
                 const SizedBox(height: 32),
-                _buildInfoCard(context),
+                SongInfoCard(place: _displayPlace, tune: _displayTune),
                 const SizedBox(height: 32),
               ],
             ),
@@ -728,15 +602,20 @@ ${_displayLyricsList.join('\n')}''';
             ),
           ),
 
-          SliverToBoxAdapter(child: _buildMayuragiriLyricsSection(context)),
+          SliverToBoxAdapter(
+            child: MayuragiriLyricsSection(
+              lines: _displayMayuragiriLyricsSeparated,
+              tuneLength: _displayTuneList.length,
+            ),
+          ),
 
           SliverToBoxAdapter(
             child: Padding(
               padding: const EdgeInsets.symmetric(vertical: 32.0),
-              child: _buildMeaningsCard(
-                l10n.meaning,
-                _displayWords,
-                _displayMeanings,
+              child: SongMeaningsCard(
+                title: l10n.meaning,
+                words: _displayWords,
+                meanings: _displayMeanings,
               ),
             ),
           ),
@@ -780,12 +659,12 @@ ${_displayLyricsList.join('\n')}''';
                     _ActionSpec(
                       icon: Icons.language,
                       label: l10n.openKaumaramPage,
-                      onPressed: _launchCustomUrl,
+                      onPressed: () => openOnKaumaram(context, widget.song),
                     ),
                     _ActionSpec(
                       icon: Icons.language,
                       label: l10n.openMayuragiriPage,
-                      onPressed: _launchMayuragiriUrl,
+                      onPressed: () => openOnMayuragiri(context, widget.song),
                     ),
                   ),
                   _actionRow(
@@ -793,12 +672,12 @@ ${_displayLyricsList.join('\n')}''';
                     _ActionSpec(
                       icon: Icons.smart_display,
                       label: l10n.searchOnYouTube,
-                      onPressed: _launchYouTubeSearch,
+                      onPressed: () => searchOnYouTube(context, widget.song),
                     ),
                     _ActionSpec(
                       icon: Icons.search,
                       label: l10n.searchInGoogle,
-                      onPressed: _launchGoogleSearch,
+                      onPressed: () => searchOnGoogle(context, widget.song),
                     ),
                   ),
                   // Clear the floating buttons so the last row stays tappable.
@@ -865,147 +744,6 @@ ${_displayLyricsList.join('\n')}''';
               },
               child: const Icon(Icons.playlist_add),
             ),
-          ),
-        ],
-      ),
-    );
-  }
-
-  Widget _buildInfoCard(BuildContext context) {
-    final l10n = AppLocalizations.of(context)!;
-    return Padding(
-      padding: const EdgeInsets.all(16.0),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(l10n.temple, style: Theme.of(context).textTheme.bodyLarge),
-          const SizedBox(height: 8),
-          Text(
-            _displayPlace,
-            style: Theme.of(
-              context,
-            ).textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.w600),
-          ),
-          const SizedBox(height: 24),
-          Text(l10n.tune, style: Theme.of(context).textTheme.bodyLarge),
-          Text(_displayTune, style: Theme.of(context).textTheme.bodyLarge),
-        ],
-      ),
-    );
-  }
-
-  Widget _buildMeaningsCard(
-    String title,
-    List<String> words,
-    List<String> meanings,
-  ) {
-    // Assert that both lists have the same length.
-    // This helps catch errors during development.
-    assert(
-      words.length == meanings.length,
-      'The words and meanings lists must have the same length.',
-    );
-
-    if (words.isEmpty || meanings.isEmpty) return const SizedBox.shrink();
-
-    final textTheme = Theme.of(context).textTheme;
-    return Padding(
-      padding: const EdgeInsets.all(16.0),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            title,
-            style: Theme.of(
-              context,
-            ).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold),
-          ),
-          const SizedBox(height: 8),
-          const Divider(height: 16),
-          const SizedBox(height: 16),
-          ...List.generate(meanings.length, (index) {
-            final word = index < words.length ? words[index] : '';
-            final meaning = meanings[index];
-            return Padding(
-              padding: const EdgeInsets.only(bottom: 24.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  if (word.isNotEmpty)
-                    Padding(
-                      padding: const EdgeInsets.only(bottom: 4.0),
-                      child: SelectableText(
-                        word,
-                        style: textTheme.titleMedium?.copyWith(
-                          fontWeight: FontWeight.bold,
-                          color: Theme.of(context).colorScheme.primary,
-                        ),
-                      ),
-                    ),
-                  SelectableText(
-                    meaning,
-                    style: Theme.of(
-                      context,
-                    ).textTheme.bodyLarge?.copyWith(height: 1.5),
-                  ),
-                ],
-              ),
-            );
-          }),
-        ],
-      ),
-    );
-  }
-
-  List<InlineSpan> _buildMayuragiriTextSpans(
-    BuildContext context,
-    List<String> lines,
-  ) {
-    final spans = <InlineSpan>[];
-    final tuneLength = _displayTuneList.length;
-    final lyricsFontSize = context.watch<LyricsFontSizeProvider>().fontSize;
-    final style = Theme.of(context).textTheme.bodyLarge?.copyWith(
-      fontSize: lyricsFontSize,
-      height: 1.5,
-      color: Theme.of(context).colorScheme.onSurface,
-    );
-
-    for (int i = 0; i < lines.length; i++) {
-      final paragraph = lines[i];
-      if (paragraph.trim().isEmpty) continue;
-
-      spans.add(TextSpan(text: paragraph, style: style));
-
-      final sep = (tuneLength > 0 && (i + 1) % tuneLength == 0)
-          ? '\n\n'
-          : '\n';
-      spans.add(TextSpan(text: sep));
-    }
-    return spans;
-  }
-
-  Widget _buildMayuragiriLyricsSection(BuildContext context) {
-    final lines = _displayMayuragiriLyricsSeparated;
-    if (lines.isEmpty) return const SizedBox.shrink();
-
-    final l10n = AppLocalizations.of(context)!;
-
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 16.0),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            l10n.wordSeparatedLyrics,
-            style: Theme.of(
-              context,
-            ).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold),
-          ),
-          const SizedBox(height: 8),
-          const Divider(height: 16),
-          const SizedBox(height: 16),
-          SelectableText.rich(
-            TextSpan(children: _buildMayuragiriTextSpans(context, lines)),
           ),
         ],
       ),

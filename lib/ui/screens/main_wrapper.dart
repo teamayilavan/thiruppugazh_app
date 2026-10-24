@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'dart:async';
-import 'dart:io';
 
 import 'categories_screen.dart';
 import 'home_screen.dart';
@@ -36,9 +36,8 @@ class _MainWrapperState extends State<MainWrapper> {
     SettingsScreen(),
   ];
 
-  // ... (omitted AppLinks code) ...
-
   late AppLinks _appLinks;
+  StreamSubscription<Uri>? _linkSubscription;
   StreamSubscription<String>? _shareSubscription;
 
   @override
@@ -51,6 +50,7 @@ class _MainWrapperState extends State<MainWrapper> {
   @override
   void dispose() {
     _shareSubscription?.cancel();
+    _linkSubscription?.cancel();
     super.dispose();
   }
 
@@ -115,7 +115,7 @@ class _MainWrapperState extends State<MainWrapper> {
     }
 
     // Listen for deep links while app is running
-    _appLinks.uriLinkStream.listen((uri) {
+    _linkSubscription = _appLinks.uriLinkStream.listen((uri) {
       _handleDeepLink(uri);
     });
   }
@@ -132,7 +132,7 @@ class _MainWrapperState extends State<MainWrapper> {
       // Legacy format
       if (uri.pathSegments.isNotEmpty) songIdString = uri.pathSegments.first;
       isSongLink = true;
-    } else if ((uri.scheme == 'https' || uri.scheme == 'http') &&
+    } else if (uri.scheme == 'https' &&
         uri.host == AppConstants.deepLinkDomain &&
         uri.pathSegments.isNotEmpty &&
         uri.pathSegments[0] == 'song') {
@@ -170,7 +170,6 @@ class _MainWrapperState extends State<MainWrapper> {
 
   @override
   Widget build(BuildContext context) {
-    final colorScheme = Theme.of(context).colorScheme;
     final l10n = AppLocalizations.of(context)!;
 
     return Scaffold(
@@ -192,13 +191,10 @@ class _MainWrapperState extends State<MainWrapper> {
                         child: Text(l10n.no),
                       ),
                       TextButton(
-                        onPressed: () => exit(0),
+                        onPressed: () => SystemNavigator.pop(),
                         child: Text(
                           l10n.yes,
-                          style: TextStyle(
-                            color: colorScheme.primary,
-                            fontWeight: FontWeight.bold,
-                          ),
+                          style: const TextStyle(fontWeight: FontWeight.bold),
                         ),
                       ),
                     ],

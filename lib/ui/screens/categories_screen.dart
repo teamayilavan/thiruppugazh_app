@@ -6,6 +6,7 @@ import 'song_list_screen.dart';
 import '../widgets/error_display_widget.dart';
 import '../../l10n/app_localizations.dart';
 import '../../constants/app_constants.dart';
+import '../../theme/app_theme.dart';
 
 // ✨ It's now a simpler StatelessWidget
 class CategoriesScreen extends StatelessWidget {
@@ -62,7 +63,11 @@ class CategoriesScreen extends StatelessWidget {
                         l10n.customCategories,
                         style: Theme.of(context).textTheme.titleMedium
                             ?.copyWith(
-                              color: Theme.of(context).colorScheme.primary,
+                              color:
+                                  Theme.of(
+                                    context,
+                                  ).extension<AppColorExtension>()?.textHigh ??
+                                  Theme.of(context).colorScheme.onSurface,
                               fontWeight: FontWeight.bold,
                             ),
                       ),
@@ -131,7 +136,11 @@ class CategoriesScreen extends StatelessWidget {
             Text(
               category.songCount.toString(),
               style: TextStyle(
-                color: Theme.of(context).colorScheme.primary,
+                color:
+                    Theme.of(
+                      context,
+                    ).extension<AppColorExtension>()?.textHigh ??
+                    Theme.of(context).colorScheme.onSurface,
                 fontWeight: FontWeight.bold,
               ),
             ),

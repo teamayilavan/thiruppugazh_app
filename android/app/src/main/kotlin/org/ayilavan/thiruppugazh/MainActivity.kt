@@ -68,7 +68,9 @@ class MainActivity : FlutterActivity() {
     /** Returns the text of an ACTION_SEND text/plain intent, consuming it. */
     private fun takeSharedText(intent: Intent?): String? {
         if (intent?.action != Intent.ACTION_SEND || intent.type != "text/plain") return null
-        val text = intent.getCharSequenceExtra(Intent.EXTRA_TEXT)?.toString()
+        // A shared link or caption is short; don't pass an enormous string
+        // through the channel and into a regex.
+        val text = intent.getCharSequenceExtra(Intent.EXTRA_TEXT)?.toString()?.take(MAX_SHARED_TEXT)
         // Clear the action so recreating the activity doesn't re-deliver it.
         intent.action = null
         return text?.takeIf { it.isNotBlank() }
@@ -77,5 +79,6 @@ class MainActivity : FlutterActivity() {
     companion object {
         private const val SHARE_CHANNEL = "org.ayilavan.thiruppugazh/share"
         private const val SCREEN_CHANNEL = "org.ayilavan.thiruppugazh/screen"
+        private const val MAX_SHARED_TEXT = 8192
     }
 }

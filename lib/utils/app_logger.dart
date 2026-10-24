@@ -50,7 +50,8 @@ class AppLogger {
     dynamic error,
     StackTrace? stackTrace,
   }) {
-    if (level.index < _minLogLevel.index) {
+    // Release builds emit nothing (see below), so don't build the strings.
+    if (!_debugMode || level.index < _minLogLevel.index) {
       return;
     }
 
