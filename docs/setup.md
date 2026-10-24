@@ -34,12 +34,10 @@ This guide explains how to set up and run the Thiruppugazh application on your l
         # Or:
         flutter run -d <device-id>
         ```
-    -   **Windows / Linux / macOS** (Desktop):
-        ```bash
-        flutter run -d windows
-        flutter run -d linux
-        flutter run -d macos
-        ```
+    -   The app targets **Android** (the `ios/` folder is kept for a possible
+        future iOS build). There are no Windows, Linux or macOS builds; those
+        folders were removed. `flutter test` runs the database tests on your
+        computer through `sqflite_common_ffi`, a dev-only dependency.
 
 ## Project Structure
 

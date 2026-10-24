@@ -2,15 +2,18 @@ name: CI
 
 on:
   push:
-    branches: [main]
+    branches: [main, next]
   pull_request:
-    branches: [main]
+    branches: [main, next]
 
 jobs:
   analyze-and-test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          # The upgrade tests read old bundled databases from git history.
+          fetch-depth: 0
 
       - uses: subosito/flutter-action@v2
         with:
@@ -20,11 +23,7 @@ jobs:
         run: flutter pub get
 
       - name: Analyze
-        # --no-fatal-infos: don't fail the build on info-level lints (e.g.
-        # deprecation notices from a recent Flutter release) -- only on
-        # real warnings/errors. Remove this flag once the current info-level
-        # findings (see `flutter analyze` locally) are cleaned up.
-        run: flutter analyze --no-fatal-infos
+        run: flutter analyze
 
       - name: Run tests
         run: flutter test
