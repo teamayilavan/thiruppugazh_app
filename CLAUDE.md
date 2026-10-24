@@ -47,8 +47,6 @@ An update must never lose a user's favorites, categories, notes, highlights, lin
   emulator. Before a release, build the signed release APK too (code shrinking and lint only
   run there) and smoke-test it. State plainly what was and was not verified.
 - Keep `CHANGELOG.md` (`[Unreleased]`) current.
-- Flutter commands touch `macos/Flutter/GeneratedPluginRegistrant.swift` and
-  `windows/flutter/generated_plugins.cmake`. Revert them (`git checkout --`) before committing.
 
 ## Conventions
 
