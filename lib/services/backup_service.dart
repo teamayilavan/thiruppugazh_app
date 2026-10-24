@@ -12,6 +12,7 @@ import '../data/models/highlight_model.dart';
 import '../data/models/link_model.dart';
 import '../data/models/note_model.dart';
 import '../l10n/app_localizations.dart';
+import '../constants/app_constants.dart';
 import '../utils/app_logger.dart';
 import '../utils/link_utils.dart';
 
@@ -55,6 +56,17 @@ Map<String, dynamic> withoutRowId(Map<dynamic, dynamic> row) {
     for (final entry in row.entries)
       if (entry.key != 'id') entry.key as String: entry.value,
   };
+}
+
+/// Runs [parse], returning null if the row is malformed (wrong types, missing
+/// fields, an unparseable date). Lets one bad row be skipped and counted
+/// instead of aborting the whole import.
+T? _tryParse<T>(T Function() parse) {
+  try {
+    return parse();
+  } catch (_) {
+    return null;
+  }
 }
 
 /// Summary of what a call to [BackupService.applyImport] actually did,
@@ -132,7 +144,7 @@ class BackupService {
   /// manual share-sheet export and the silent auto-backup writer, so both
   /// paths produce byte-identical output for the same data.
   Future<Map<String, dynamic>> buildBackupJson() async {
-    final favoriteSongs = await _dbHelper.getFavoriteSongs();
+    final favoriteIds = await _dbHelper.getFavoriteSongIds();
     final categories = await _dbHelper.getCategoriesWithSongCounts();
     final songCategories = await _dbHelper.getAllSongCategories();
     final notes = await _dbHelper.getAllNotes();
@@ -145,7 +157,7 @@ class BackupService {
       'version': 1,
       'exported_at': DateTime.now().toIso8601String(),
       'app_name': 'Thiruppugazh',
-      'favorites': favoriteSongs.map((s) => s.id).toList(),
+      'favorites': favoriteIds,
       'categories': customCategories.map((c) {
         final songIds = songCategories
             .where((sc) => sc['category_id'] == c.id)
@@ -162,36 +174,72 @@ class BackupService {
   /// Exports user data (Favorites, Categories, Notes, Highlights, Links) to a JSON file
   /// and prompts the user to share/save it.
   Future<void> exportData(BuildContext context) async {
+    final l10n = AppLocalizations.of(context)!;
     try {
+      await deleteStaleExports();
       final exportMap = await buildBackupJson();
       final jsonString = jsonEncode(exportMap);
       final directory = await getTemporaryDirectory();
       final dateStr = DateFormat('yyyyMMdd_HHmm').format(DateTime.now());
-      final fileName = 'thiruppugazh_backup_$dateStr.json';
+      final fileName = '$_exportFilePrefix$dateStr.json';
       final file = File('${directory.path}/$fileName');
       await file.writeAsString(jsonString);
 
-      // ignore: deprecated_member_use
-      final result = await Share.shareXFiles(
-        [XFile(file.path)],
-        subject: 'Thiruppugazh Backup',
-        text: 'Backup of Thiruppugazh app data created on $dateStr',
+      final result = await SharePlus.instance.share(
+        ShareParams(
+          files: [XFile(file.path)],
+          subject: l10n.backupShareSubject,
+          text: l10n.backupShareText(dateStr),
+        ),
       );
 
       if (result.status == ShareResultStatus.success) {
         if (context.mounted) {
           ScaffoldMessenger.of(
             context,
-          ).showSnackBar(const SnackBar(content: Text('Export successful')));
+          ).showSnackBar(SnackBar(content: Text(l10n.exportSuccess)));
         }
       }
     } catch (e, stackTrace) {
       AppLogger.error('Export failed', error: e, stackTrace: stackTrace);
       if (context.mounted) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text('Export failed. Please try again.')),
-        );
+        ScaffoldMessenger.of(
+          context,
+        ).showSnackBar(SnackBar(content: Text(l10n.exportFailedGeneric)));
       }
+    }
+  }
+
+  static const String _exportFilePrefix = 'thiruppugazh_backup_';
+
+  /// Deletes backup export files left in the cache directory by earlier
+  /// exports. They hold all notes and links in plain text. They can't be
+  /// removed right after sharing, because the receiving app may still be
+  /// reading the file, so anything older than [minAge] is swept instead --
+  /// at startup and before each new export.
+  Future<void> deleteStaleExports({
+    Directory? directory,
+    Duration minAge = const Duration(hours: 1),
+  }) async {
+    try {
+      final dir = directory ?? await getTemporaryDirectory();
+      final cutoff = DateTime.now().subtract(minAge);
+      await for (final entity in dir.list(followLinks: false)) {
+        if (entity is! File) continue;
+        final name = entity.uri.pathSegments.last;
+        if (!name.startsWith(_exportFilePrefix) || !name.endsWith('.json')) {
+          continue;
+        }
+        if ((await entity.lastModified()).isBefore(cutoff)) {
+          await entity.delete();
+        }
+      }
+    } catch (e, stackTrace) {
+      AppLogger.error(
+        'Cleaning up old export files failed',
+        error: e,
+        stackTrace: stackTrace,
+      );
     }
   }
 
@@ -201,18 +249,21 @@ class BackupService {
   Future<BackupPreview?> pickAndPreviewBackup(BuildContext context) async {
     final l10n = AppLocalizations.of(context)!;
     try {
-      final FilePickerResult? result = await FilePicker.platform.pickFiles(
+      final PlatformFile? picked = await FilePicker.pickFile(
         type: FileType.custom,
         allowedExtensions: ['json'],
       );
-      if (result == null || result.files.single.path == null) {
+      if (picked == null || picked.path == null) {
         return null;
       }
 
-      final file = File(result.files.single.path!);
+      final file = File(picked.path!);
+      if (await file.length() > maxBackupFileBytes) {
+        throw const FormatException('Backup file is unexpectedly large');
+      }
       final content = await file.readAsString();
       final Map<String, dynamic> importMap = jsonDecode(content);
-      _validateBackupMap(importMap);
+      validateBackupMap(importMap);
 
       final favIds = (importMap['favorites'] as List).whereType<int>();
       final cats = (importMap['categories'] as List);
@@ -235,17 +286,21 @@ class BackupService {
     } on FormatException catch (e, stackTrace) {
       AppLogger.error('Import file invalid', error: e, stackTrace: stackTrace);
       if (context.mounted) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text(l10n.importFileInvalid)),
-        );
+        ScaffoldMessenger.of(
+          context,
+        ).showSnackBar(SnackBar(content: Text(l10n.importFileInvalid)));
       }
       return null;
     } catch (e, stackTrace) {
-      AppLogger.error('Import file read failed', error: e, stackTrace: stackTrace);
+      AppLogger.error(
+        'Import file read failed',
+        error: e,
+        stackTrace: stackTrace,
+      );
       if (context.mounted) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text(l10n.importFileReadError)),
-        );
+        ScaffoldMessenger.of(
+          context,
+        ).showSnackBar(SnackBar(content: Text(l10n.importFileReadError)));
       }
       return null;
     }
@@ -288,9 +343,9 @@ class BackupService {
       AppLogger.error('Import failed', error: e, stackTrace: stackTrace);
       if (context.mounted) {
         Navigator.of(context).maybePop();
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text(l10n.importFailedGeneric)),
-        );
+        ScaffoldMessenger.of(
+          context,
+        ).showSnackBar(SnackBar(content: Text(l10n.importFailedGeneric)));
       }
     }
   }
@@ -302,7 +357,7 @@ class BackupService {
   ) {
     final dateStr = preview.exportedAt != null
         ? DateFormat.yMMMd().format(preview.exportedAt!)
-        : 'an unknown date';
+        : l10n.importUnknownDate;
     return showDialog<bool>(
       context: context,
       builder: (context) => AlertDialog(
@@ -338,6 +393,21 @@ class BackupService {
   /// constraint and abort the whole import. No [BuildContext] -- this is
   /// also called by the silent auto-restore path at startup.
   Future<ImportResult> applyImport(Map<String, dynamic> map) async {
+    // Every row written fires the mutation hook; pause it for the import
+    // and fire it once afterwards so the auto-backup is rewritten once.
+    final hook = DatabaseHelper.onMutation;
+    DatabaseHelper.onMutation = null;
+    try {
+      return await _applyImportInTransaction(map);
+    } finally {
+      DatabaseHelper.onMutation = hook;
+      hook?.call();
+    }
+  }
+
+  Future<ImportResult> _applyImportInTransaction(
+    Map<String, dynamic> map,
+  ) async {
     return _dbHelper.runInTransaction((txn) async {
       final validSongIds = await _dbHelper.getAllSongIds(executor: txn);
 
@@ -353,9 +423,17 @@ class BackupService {
       int categorySongsSkipped = 0;
       final List<dynamic> cats = map['categories'] ?? [];
       for (final catMap in cats) {
-        final String name = catMap['name'];
+        final String name = (catMap['name'] as String).trim();
         final List<dynamic> songsRaw = catMap['songs'] ?? [];
         final songs = songsRaw.whereType<int>().toList();
+
+        // Same length rule as creating a category in the app; a hand-edited
+        // backup can't smuggle in an empty or enormous name.
+        if (name.length < AppConstants.categoryMinNameLength ||
+            name.length > AppConstants.categoryMaxNameLength) {
+          categorySongsSkipped += songs.length;
+          continue;
+        }
 
         Category? existingCat = await _dbHelper.getCategoryByName(
           name,
@@ -383,8 +461,8 @@ class BackupService {
       for (final noteMap in notesList) {
         // Drop the backup's id; saveNote merges by song_id, and a fresh
         // insert gets a locally assigned id.
-        final note = Note.fromMap(withoutRowId(noteMap as Map));
-        if (validSongIds.contains(note.songId)) {
+        final Note? note = _tryParse(() => Note.fromMap(withoutRowId(noteMap as Map)));
+        if (note != null && validSongIds.contains(note.songId)) {
           await _dbHelper.saveNote(note, executor: txn);
           notesImported++;
         } else {
@@ -396,9 +474,13 @@ class BackupService {
       int highlightsSkipped = 0;
       final List<dynamic> highlightsList = map['highlights'] ?? [];
       for (final hlMap in highlightsList) {
-        final hl = Highlight.fromMap(withoutRowId(hlMap as Map));
-        if (validSongIds.contains(hl.songId)) {
-          await _dbHelper.removeHighlight(hl.songId, hl.verseIndex, executor: txn);
+        final Highlight? hl = _tryParse(() => Highlight.fromMap(withoutRowId(hlMap as Map)));
+        if (hl != null && validSongIds.contains(hl.songId)) {
+          await _dbHelper.removeHighlight(
+            hl.songId,
+            hl.verseIndex,
+            executor: txn,
+          );
           await _dbHelper.addHighlight(hl, executor: txn);
           highlightsImported++;
         } else {
@@ -443,12 +525,7 @@ class BackupService {
     var imported = 0;
     var skipped = 0;
     for (final linkMap in linksList) {
-      SongLink? link;
-      try {
-        link = SongLink.fromMap(withoutRowId(linkMap as Map));
-      } catch (_) {
-        link = null;
-      }
+      final SongLink? link = _tryParse(() => SongLink.fromMap(withoutRowId(linkMap as Map)));
       if (link == null ||
           !validSongIds.contains(link.songId) ||
           !LinkUtils.isValidUrl(link.url)) {
@@ -460,64 +537,86 @@ class BackupService {
     }
     return (imported: imported, skipped: skipped);
   }
+}
 
-  void _validateBackupMap(Map<String, dynamic> map) {
-    validateBackupVersion(map);
+/// Largest backup file the app will read. A real backup is a few KB to a few
+/// hundred KB; this only stops a wrong or hostile file from exhausting memory.
+const int maxBackupFileBytes = 5 * 1024 * 1024;
 
-    if (!map.containsKey('favorites') || !map.containsKey('categories')) {
-      throw const FormatException(
-        'Missing required keys: favorites, categories',
-      );
-    }
+/// Largest number of entries accepted in any one list of a backup.
+const int maxBackupListLength = 10000;
 
-    final favorites = map['favorites'];
-    if (favorites is! List) {
-      throw const FormatException('favorites must be a list');
-    }
-    if (favorites.any((e) => e is! int)) {
-      throw const FormatException('favorites must contain only integers');
-    }
-    if (favorites.length > 10000) {
-      throw const FormatException('favorites list is unexpectedly large');
-    }
+/// Validates the structure of a parsed backup map. Throws [FormatException]
+/// if it can't be imported safely. Shared by the manual import and the
+/// silent auto-restore, so both apply the same checks.
+void validateBackupMap(Map<String, dynamic> map) {
+  validateBackupVersion(map);
 
-    final categories = map['categories'];
-    if (categories is! List) {
-      throw const FormatException('categories must be a list');
+  if (!map.containsKey('favorites') || !map.containsKey('categories')) {
+    throw const FormatException(
+      'Missing required keys: favorites, categories',
+    );
+  }
+
+  final favorites = map['favorites'];
+  if (favorites is! List) {
+    throw const FormatException('favorites must be a list');
+  }
+  if (favorites.any((e) => e is! int)) {
+    throw const FormatException('favorites must contain only integers');
+  }
+  if (favorites.length > maxBackupListLength) {
+    throw const FormatException('favorites list is unexpectedly large');
+  }
+
+  final categories = map['categories'];
+  if (categories is! List) {
+    throw const FormatException('categories must be a list');
+  }
+  if (categories.length > maxBackupListLength) {
+    throw const FormatException('categories list is unexpectedly large');
+  }
+  for (final cat in categories) {
+    if (cat is! Map) {
+      throw const FormatException('each category must be an object');
     }
-    for (final cat in categories) {
-      if (cat is! Map) {
-        throw const FormatException('each category must be an object');
+    if (cat['name'] is! String) {
+      throw const FormatException('category name must be a string');
+    }
+    final songs = cat['songs'];
+    if (songs != null) {
+      if (songs is! List) {
+        throw const FormatException('category songs must be a list');
       }
-      if (cat['name'] is! String) {
-        throw const FormatException('category name must be a string');
-      }
-      final songs = cat['songs'];
-      if (songs != null) {
-        if (songs is! List) {
-          throw const FormatException('category songs must be a list');
-        }
-        if (songs.any((e) => e is! int)) {
-          throw const FormatException(
-            'category songs must contain only integers',
-          );
-        }
+      if (songs.any((e) => e is! int)) {
+        throw const FormatException(
+          'category songs must contain only integers',
+        );
       }
     }
+  }
 
-    final notes = map['notes'];
-    if (notes != null && notes is! List) {
-      throw const FormatException('notes must be a list');
-    }
+  final notes = map['notes'];
+  if (notes != null && notes is! List) {
+    throw const FormatException('notes must be a list');
+  }
+  if (notes is List && notes.length > maxBackupListLength) {
+    throw const FormatException('notes list is unexpectedly large');
+  }
 
-    final highlights = map['highlights'];
-    if (highlights != null && highlights is! List) {
-      throw const FormatException('highlights must be a list');
-    }
+  final highlights = map['highlights'];
+  if (highlights != null && highlights is! List) {
+    throw const FormatException('highlights must be a list');
+  }
+  if (highlights is List && highlights.length > maxBackupListLength) {
+    throw const FormatException('highlights list is unexpectedly large');
+  }
 
-    final links = map['links'];
-    if (links != null && links is! List) {
-      throw const FormatException('links must be a list');
-    }
+  final links = map['links'];
+  if (links != null && links is! List) {
+    throw const FormatException('links must be a list');
+  }
+  if (links is List && links.length > maxBackupListLength) {
+    throw const FormatException('links list is unexpectedly large');
   }
 }

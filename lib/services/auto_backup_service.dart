@@ -48,7 +48,8 @@ class AutoBackupService {
     Directory? backupDirectory,
     Directory? attemptedMarkerDirectory,
     this.debounceDuration = const Duration(seconds: 5),
-  }) : _backupJsonBuilder = backupJsonBuilder ?? BackupService().buildBackupJson,
+  }) : _backupJsonBuilder =
+           backupJsonBuilder ?? BackupService().buildBackupJson,
        _applyImport = applyImport ?? BackupService().applyImport,
        _statusProvider = statusProvider,
        _injectedBackupDirectory = backupDirectory,
@@ -94,7 +95,8 @@ class AutoBackupService {
   /// a sibling of `auto_backup/` (never inside it), so the Android backup
   /// rules never select it -- it's purely local state.
   Future<File> _attemptedMarkerFile() async {
-    final dir = _injectedAttemptedMarkerDirectory ?? await _resolveBaseDirectory();
+    final dir =
+        _injectedAttemptedMarkerDirectory ?? await _resolveBaseDirectory();
     return File(p.join(dir.path, _autoRestoreAttemptedMarkerFileName));
   }
 
@@ -116,10 +118,18 @@ class AutoBackupService {
       final map = await _backupJsonBuilder();
       final file = await _backupFile();
       await file.parent.create(recursive: true);
-      await file.writeAsString(jsonEncode(map));
+      // Write to a sibling temp file and rename over the snapshot, so a
+      // crash mid-write can never leave the only snapshot truncated.
+      final tmp = File('${file.path}.tmp');
+      await tmp.writeAsString(jsonEncode(map), flush: true);
+      await tmp.rename(file.path);
       await _statusProvider.recordBackup(DateTime.now());
     } catch (e, stackTrace) {
-      AppLogger.error('Auto-backup write failed', error: e, stackTrace: stackTrace);
+      AppLogger.error(
+        'Auto-backup write failed',
+        error: e,
+        stackTrace: stackTrace,
+      );
     }
   }
 
@@ -127,9 +137,16 @@ class AutoBackupService {
   /// silently imports it exactly once. Must be called after the app's
   /// database has been confirmed usable this run (so [isFreshDatabase]
   /// reflects [DatabaseHelper.wasFreshlyCreated] correctly).
-  Future<void> maybeRestore({required bool isFreshDatabase}) async {
+  ///
+  /// [databaseWasRecovered] is true when an unusable database file was just
+  /// replaced: the user's data is gone again, so the one-shot gate is lifted
+  /// and the snapshot may be restored a further time.
+  Future<void> maybeRestore({
+    required bool isFreshDatabase,
+    bool databaseWasRecovered = false,
+  }) async {
     final marker = await _attemptedMarkerFile();
-    final alreadyAttempted = await marker.exists();
+    final alreadyAttempted = !databaseWasRecovered && await marker.exists();
     final file = await _backupFile();
     final fileExists = await file.exists();
 
@@ -144,9 +161,9 @@ class AutoBackupService {
     try {
       final content = await file.readAsString();
       final map = jsonDecode(content) as Map<String, dynamic>;
-      // Same version gate as the manual import path; an unsupported or
-      // missing version throws FormatException and is logged below.
-      validateBackupVersion(map);
+      // Same validation as the manual import path; anything unsupported or
+      // malformed throws FormatException and is logged below.
+      validateBackupMap(map);
       await _applyImport(map);
       AppLogger.info('Silently restored auto-backup on fresh install');
     } catch (e, stackTrace) {

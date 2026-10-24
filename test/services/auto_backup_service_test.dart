@@ -43,6 +43,24 @@ void main() {
     expect(statusProvider.lastBackupAt, isNotNull);
   });
 
+  test('writeNow replaces the snapshot atomically and leaves no temp file', () async {
+    final statusProvider = AutoBackupStatusProvider();
+    await Future.delayed(Duration.zero);
+    final file = File(p.join(tempDir.path, 'thiruppugazh_auto_backup.json'));
+    await file.writeAsString('{"version": 1, "favorites": [9]}');
+
+    final service = AutoBackupService(
+      backupJsonBuilder: () async => {'version': 1, 'favorites': [1]},
+      applyImport: (_) async => throw UnimplementedError(),
+      statusProvider: statusProvider,
+      backupDirectory: tempDir,
+    );
+    await service.writeNow();
+
+    expect(jsonDecode(await file.readAsString())['favorites'], [1]);
+    expect(File('${file.path}.tmp').existsSync(), false);
+  });
+
   test('a mutation debounces to a single write after the configured delay', () async {
     final statusProvider = AutoBackupStatusProvider();
     await Future.delayed(Duration.zero);
@@ -98,7 +116,7 @@ void main() {
     }
 
     test('imports the file when eligible and creates the attempted marker', () async {
-      await backupFile.writeAsString(jsonEncode({'version': 1, 'favorites': [7]}));
+      await backupFile.writeAsString(jsonEncode({'version': 1, 'favorites': [7], 'categories': []}));
 
       Map<String, dynamic>? importedMap;
       final service = buildService((map) async {
@@ -113,8 +131,41 @@ void main() {
       expect(await markerFile.exists(), true);
     });
 
+    test('a recovered database lifts the one-shot gate and restores again', () async {
+      await backupFile.writeAsString(
+        jsonEncode({'version': 1, 'favorites': [7], 'categories': []}),
+      );
+      await markerFile.writeAsString('');
+
+      var imports = 0;
+      final service = buildService((map) async {
+        imports++;
+        return null;
+      });
+
+      await service.maybeRestore(isFreshDatabase: true);
+      expect(imports, 0, reason: 'the marker still blocks an ordinary fresh DB');
+
+      await service.maybeRestore(isFreshDatabase: true, databaseWasRecovered: true);
+      expect(imports, 1);
+    });
+
+    test('rejects a structurally invalid backup without importing', () async {
+      await backupFile.writeAsString(jsonEncode({'version': 1, 'favorites': 'x'}));
+      var imports = 0;
+      final service = buildService((map) async {
+        imports++;
+        return null;
+      });
+
+      await service.maybeRestore(isFreshDatabase: true);
+
+      expect(imports, 0);
+      expect(markerFile.existsSync(), true);
+    });
+
     test('does nothing on an ordinary reopen', () async {
-      await backupFile.writeAsString(jsonEncode({'version': 1, 'favorites': [7]}));
+      await backupFile.writeAsString(jsonEncode({'version': 1, 'favorites': [7], 'categories': []}));
 
       var importCalled = false;
       final service = buildService((map) async {
@@ -129,7 +180,7 @@ void main() {
     });
 
     test('never runs twice even if called again on a fresh DB', () async {
-      await backupFile.writeAsString(jsonEncode({'version': 1, 'favorites': [7]}));
+      await backupFile.writeAsString(jsonEncode({'version': 1, 'favorites': [7], 'categories': []}));
       await markerFile.writeAsString('');
 
       var importCalled = false;
@@ -145,7 +196,7 @@ void main() {
 
     test('ignores a restore-attempted flag in SharedPreferences (it is backed up, so must not gate restore)', () async {
       SharedPreferences.setMockInitialValues({'auto_restore_attempted': true});
-      await backupFile.writeAsString(jsonEncode({'version': 1, 'favorites': [7]}));
+      await backupFile.writeAsString(jsonEncode({'version': 1, 'favorites': [7], 'categories': []}));
 
       var importCalled = false;
       final service = buildService((map) async {
@@ -159,7 +210,7 @@ void main() {
     });
 
     test('the marker is a sibling of the backup directory, not inside it', () async {
-      await backupFile.writeAsString(jsonEncode({'version': 1, 'favorites': [7]}));
+      await backupFile.writeAsString(jsonEncode({'version': 1, 'favorites': [7], 'categories': []}));
       final service = buildService((_) async => null);
 
       await service.maybeRestore(isFreshDatabase: true);

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../../data/database/database_helper.dart';
+import '../../data/repositories/song_repository.dart';
 import '../../data/models/song_model.dart';
 import '../../l10n/app_localizations.dart';
 import '../../providers/lyrics_language_provider.dart';
@@ -26,7 +26,10 @@ class _TempleSongsScreenState extends State<TempleSongsScreen> {
   @override
   void initState() {
     super.initState();
-    _songsFuture = DatabaseHelper().getSongsByTemple(widget.templeName);
+    _songsFuture = Provider.of<SongRepository>(
+      context,
+      listen: false,
+    ).getSongsByTemple(widget.templeName);
   }
 
   @override

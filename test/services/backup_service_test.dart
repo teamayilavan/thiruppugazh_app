@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter_test/flutter_test.dart';
 import 'package:thiruppugazh/data/models/highlight_model.dart';
 import 'package:thiruppugazh/data/models/note_model.dart';
@@ -77,6 +79,26 @@ void main() {
       final stripped = withoutRowId(decoded);
       expect(stripped, {'song_id': 9});
       expect(decoded, {'id': 5, 'song_id': 9});
+    });
+  });
+
+  group('deleteStaleExports', () {
+    test('removes old export files only, keeping recent and unrelated files', () async {
+      final dir = await Directory.systemTemp.createTemp('export_sweep');
+      addTearDown(() => dir.delete(recursive: true));
+      final old = File('${dir.path}/thiruppugazh_backup_20260101_0900.json')
+        ..writeAsStringSync('{}');
+      old.setLastModifiedSync(DateTime.now().subtract(const Duration(days: 2)));
+      final recent = File('${dir.path}/thiruppugazh_backup_20260102_0900.json')
+        ..writeAsStringSync('{}');
+      final other = File('${dir.path}/other.json')..writeAsStringSync('{}');
+      other.setLastModifiedSync(DateTime.now().subtract(const Duration(days: 2)));
+
+      await BackupService().deleteStaleExports(directory: dir);
+
+      expect(old.existsSync(), false);
+      expect(recent.existsSync(), true);
+      expect(other.existsSync(), true);
     });
   });
 }

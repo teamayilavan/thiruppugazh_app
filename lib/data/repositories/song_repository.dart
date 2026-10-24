@@ -1,4 +1,3 @@
-// import 'package:flutter/foundation.dart';
 import 'package:flutter/foundation.dart' hide Category;
 import '../database/database_helper.dart';
 import '../models/category_model.dart';
@@ -214,6 +213,14 @@ class SongRepository extends ChangeNotifier {
   /// Gets all category IDs that a specific song belongs to.
   Future<List<int>> getCategoryIdsForSong(int songId) async {
     return await dbHelper.getCategoryIdsForSong(songId);
+  }
+
+  /// Fetches all temples (rows from the `temples` table).
+  Future<List<Map<String, dynamic>>> getAllTemples() => dbHelper.getAllTemples();
+
+  /// Fetches all songs sung at a temple (by its Tamil name).
+  Future<List<Song>> getSongsByTemple(String templeName) async {
+    return await dbHelper.getSongsByTemple(templeName);
   }
 
   /// Fetches all songs belonging to a specific category ID.

@@ -50,10 +50,21 @@ class HighlightsList extends StatefulWidget {
 class _HighlightsListState extends State<HighlightsList> {
   late Future<List<Map<String, dynamic>>> _future;
 
+  late final SongRepository _repo;
+
   @override
   void initState() {
     super.initState();
+    _repo = Provider.of<SongRepository>(context, listen: false);
+    // Reload when anything changes (notes added elsewhere, a restore).
+    _repo.addListener(_refresh);
     _load();
+  }
+
+  @override
+  void dispose() {
+    _repo.removeListener(_refresh);
+    super.dispose();
   }
 
   void _load() {
@@ -95,7 +106,7 @@ class _HighlightsListState extends State<HighlightsList> {
 
         return ListView.separated(
           itemCount: songIds.length,
-          separatorBuilder: (_, __) => const Divider(),
+          separatorBuilder: (_, _) => const Divider(),
           itemBuilder: (context, index) {
             final songId = songIds[index];
             final songRows = grouped[songId]!;
@@ -149,10 +160,21 @@ class NotesList extends StatefulWidget {
 class _NotesListState extends State<NotesList> {
   late Future<List<Map<String, dynamic>>> _future;
 
+  late final SongRepository _repo;
+
   @override
   void initState() {
     super.initState();
+    _repo = Provider.of<SongRepository>(context, listen: false);
+    // Reload when anything changes (notes added elsewhere, a restore).
+    _repo.addListener(_refresh);
     _load();
+  }
+
+  @override
+  void dispose() {
+    _repo.removeListener(_refresh);
+    super.dispose();
   }
 
   void _load() {
@@ -186,7 +208,7 @@ class _NotesListState extends State<NotesList> {
 
         return ListView.separated(
           itemCount: rows.length,
-          separatorBuilder: (_, __) => const Divider(),
+          separatorBuilder: (_, _) => const Divider(),
           itemBuilder: (context, index) {
             final row = rows[index];
             final songId = row['song_id'] as int;
@@ -273,10 +295,21 @@ class LinksList extends StatefulWidget {
 class _LinksListState extends State<LinksList> {
   late Future<List<Map<String, dynamic>>> _future;
 
+  late final SongRepository _repo;
+
   @override
   void initState() {
     super.initState();
+    _repo = Provider.of<SongRepository>(context, listen: false);
+    // Reload when anything changes (notes added elsewhere, a restore).
+    _repo.addListener(_refresh);
     _load();
+  }
+
+  @override
+  void dispose() {
+    _repo.removeListener(_refresh);
+    super.dispose();
   }
 
   void _load() {
@@ -310,7 +343,7 @@ class _LinksListState extends State<LinksList> {
 
         return ListView.separated(
           itemCount: rows.length,
-          separatorBuilder: (_, __) => const Divider(),
+          separatorBuilder: (_, _) => const Divider(),
           itemBuilder: (context, index) {
             final row = rows[index];
             final songId = row['song_id'] as int;

@@ -1,5 +1,5 @@
-import 'dart:convert';
 import 'dart:io';
+import 'dart:math' show Random;
 import 'package:flutter/foundation.dart' show visibleForTesting;
 import 'package:flutter/services.dart';
 import 'package:path/path.dart';
@@ -12,6 +12,8 @@ import '../models/note_model.dart';
 import '../models/link_model.dart';
 import '../../utils/app_logger.dart';
 import '../../constants/app_constants.dart';
+import 'database_schema.dart';
+import 'search_text.dart';
 
 /// A singleton class to manage the SQLite database connection and queries.
 class DatabaseHelper {
@@ -21,7 +23,15 @@ class DatabaseHelper {
   DatabaseHelper._internal();
 
   static Future<Database>? _databaseFuture;
-  static const String _dbName = "thiruppugazh.db";
+
+  /// Forgets the cached connection so a test can open a different database
+  /// file through the normal startup path.
+  @visibleForTesting
+  static void resetForTesting() {
+    _databaseFuture = null;
+    _instance._wasFreshlyCreated = false;
+    _instance._wasRecovered = false;
+  }
   static const int _dbVersion = AppConstants.dbVersion;
 
   /// True if this run's [_initDatabase] had to (re)copy the database from
@@ -31,6 +41,12 @@ class DatabaseHelper {
   /// [database] has been awaited at least once.
   bool _wasFreshlyCreated = false;
   bool get wasFreshlyCreated => _wasFreshlyCreated;
+
+  /// True if an existing but unusable database file was set aside and
+  /// replaced this run. The auto-backup restore uses it to run again even
+  /// though it may already have run once on this device.
+  bool _wasRecovered = false;
+  bool get wasRecovered => _wasRecovered;
 
   /// Called after any write that changes backup-relevant data (favorites,
   /// categories, notes, highlights). Set by [AutoBackupService] at startup
@@ -62,10 +78,11 @@ class DatabaseHelper {
 
   Future<Database> _initDatabase() async {
     final dbPath = await getDatabasesPath();
-    final path = join(dbPath, _dbName);
+    final path = join(dbPath, AppConstants.dbName);
 
     // Check if the database exists
     final exists = await databaseExists(path);
+    String? setAside;
 
     if (!exists) {
       await _copyDatabaseFromAssets(path);
@@ -84,11 +101,15 @@ class DatabaseHelper {
       AppLogger.error(
         "Existing database failed verification; re-copying from assets",
       );
+      // Keep the old file rather than deleting it: it may still hold the
+      // user's notes, highlights, categories and links.
+      setAside = await _setAsideUnusableDatabase(path);
       await _copyDatabaseFromAssets(path);
       _wasFreshlyCreated = true;
+      _wasRecovered = true;
     }
 
-    return await openDatabase(
+    final db = await openDatabase(
       path,
       version: _dbVersion,
       onConfigure: (db) async {
@@ -98,24 +119,24 @@ class DatabaseHelper {
       onCreate: (db, version) async {
         // Since we copied the asset, 'songs' table should exist.
         // We need to ensure other tables exist and populate temples.
-        await _initializeSchema(db);
-        await _addIndexes(db);
+        await DatabaseSchema.initializeSchema(db);
+        await DatabaseSchema.addIndexes(db);
       },
       onUpgrade: (db, oldVersion, newVersion) async {
         if (oldVersion < 2) {
-          await _addIndexes(db);
+          await DatabaseSchema.migrateToV2(db);
         }
         if (oldVersion < 3) {
-          await _migrateToV3(db);
+          await DatabaseSchema.migrateToV3(db);
         }
         if (oldVersion < 4) {
-          await _migrateToV4(db);
+          await DatabaseSchema.migrateToV4(db);
         }
         if (oldVersion < 5) {
-          await migrateToV5(db);
+          await DatabaseSchema.migrateToV5(db);
         }
         if (oldVersion < 6) {
-          await migrateToV6(db);
+          await DatabaseSchema.migrateToV6(db);
         }
       },
       onOpen: (db) async {
@@ -125,7 +146,7 @@ class DatabaseHelper {
         // failing. Re-creating it is idempotent and costs next to nothing, so
         // do it on every open and the table can't stay missing.
         try {
-          await _createLinksTable(db);
+          await DatabaseSchema.createLinksTable(db);
         } catch (e, st) {
           AppLogger.error(
             'Could not ensure the links table on open',
@@ -135,6 +156,115 @@ class DatabaseHelper {
         }
       },
     );
+
+    if (setAside != null) {
+      final rescued = await _rescueUserData(db, setAside);
+      if (rescued) {
+        await _deleteQuietly(setAside);
+      }
+    }
+    return db;
+  }
+
+  /// Prefix of the name an unusable database is renamed to.
+  static const String _setAsideInfix = '.corrupt-';
+
+  /// Renames the unusable database at [path] out of the way (keeping at most
+  /// one such file) and returns its new path, or null if that wasn't
+  /// possible -- in which case the caller's copy simply overwrites it, as
+  /// before.
+  Future<String?> _setAsideUnusableDatabase(String path) async {
+    try {
+      final dir = Directory(dirname(path));
+      await for (final entity in dir.list(followLinks: false)) {
+        if (entity is File &&
+            basename(entity.path).startsWith('${basename(path)}$_setAsideInfix')) {
+          await _deleteQuietly(entity.path);
+        }
+      }
+      final target =
+          '$path$_setAsideInfix${DateTime.now().millisecondsSinceEpoch}';
+      await File(path).rename(target);
+      return target;
+    } catch (e, st) {
+      AppLogger.error(
+        'Could not set the unusable database aside',
+        error: e,
+        stackTrace: st,
+      );
+      return null;
+    }
+  }
+
+  Future<void> _deleteQuietly(String path) async {
+    try {
+      final file = File(path);
+      if (await file.exists()) await file.delete();
+    } catch (_) {
+      // Best-effort.
+    }
+  }
+
+  /// Best-effort copy of the user's own tables from the set-aside database
+  /// [oldPath] into the freshly copied [db]. Each table is tried on its own,
+  /// so one unreadable table doesn't lose the others. Returns true only if
+  /// every table copied cleanly (so the old file can then be deleted).
+  Future<bool> _rescueUserData(Database db, String oldPath) async {
+    var allOk = true;
+    try {
+      await db.execute('ATTACH DATABASE ? AS old', [oldPath]);
+    } catch (e, st) {
+      AppLogger.error(
+        'Could not open the set-aside database for rescue',
+        error: e,
+        stackTrace: st,
+      );
+      return false;
+    }
+    const statements = <String, String>{
+      'categories':
+          'INSERT OR IGNORE INTO main.categories(id, name) '
+          'SELECT id, name FROM old.categories',
+      'song_categories':
+          'INSERT OR IGNORE INTO main.song_categories(song_id, category_id) '
+          'SELECT song_id, category_id FROM old.song_categories '
+          'WHERE song_id IN (SELECT id FROM main.songs) '
+          'AND category_id IN (SELECT id FROM main.categories)',
+      'notes':
+          'INSERT INTO main.notes(song_id, content, created_at, updated_at) '
+          'SELECT song_id, content, created_at, updated_at FROM old.notes '
+          'WHERE song_id IN (SELECT id FROM main.songs)',
+      'highlights':
+          'INSERT INTO main.highlights'
+          '(song_id, verse_index, text_content, created_at) '
+          'SELECT song_id, verse_index, text_content, created_at '
+          'FROM old.highlights WHERE song_id IN (SELECT id FROM main.songs)',
+      'links':
+          'INSERT INTO main.links(song_id, url, title, created_at) '
+          'SELECT song_id, url, title, created_at FROM old.links '
+          'WHERE song_id IN (SELECT id FROM main.songs)',
+      'favorites':
+          'UPDATE main.songs SET is_favorite = 1 WHERE id IN '
+          '(SELECT id FROM old.songs WHERE is_favorite = 1)',
+    };
+    for (final entry in statements.entries) {
+      try {
+        await db.execute(entry.value);
+      } catch (e, st) {
+        allOk = false;
+        AppLogger.error(
+          'Rescuing ${entry.key} from the set-aside database failed',
+          error: e,
+          stackTrace: st,
+        );
+      }
+    }
+    try {
+      await db.execute('DETACH DATABASE old');
+    } catch (_) {
+      allOk = false;
+    }
+    return allOk;
   }
 
   /// Copies the bundled database asset to [path] and verifies the result
@@ -243,499 +373,21 @@ class DatabaseHelper {
     }
   }
 
-  Future<void> _initializeSchema(Database db) async {
-    AppLogger.info("Initializing database schema");
-
-    // 1. Ensure 'songs' table exists (it should from asset)
-    // If not, we have a problem, but let's define it just in case of empty db creation
-    await db.execute('''
-      CREATE TABLE IF NOT EXISTS songs(
-        id                    INTEGER PRIMARY KEY,
-        title                 TEXT NOT NULL,
-        lyrics                TEXT,
-        tune                  TEXT,
-        place                 TEXT,
-        kaumaram_id           TEXT,
-        tune_list             TEXT,
-        lyrics_list           TEXT,
-        words                 TEXT,
-        meanings              TEXT,
-        pathavurai            TEXT,
-        patham                TEXT,
-        search_content        TEXT,
-        is_favorite           INTEGER DEFAULT 0,
-        english_title         TEXT,
-        english_venue         TEXT,
-        english_tune_list     TEXT,
-        english_lyrics_list   TEXT,
-        english_words         TEXT,
-        english_meanings_list TEXT,
-        english_pathavurai    TEXT,
-        mayuragiri_lyrics_separated         TEXT,
-        mayuragiri_english_lyrics_separated TEXT
-      )
-    ''');
-
-    // 2. Create Categories table
-    await db.execute('''
-      CREATE TABLE IF NOT EXISTS categories(
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
-        name TEXT NOT NULL UNIQUE
-      )
-    ''');
-
-    // Insert default 'Favorites' category if it doesn't exist
-    await db.execute('''
-      INSERT OR IGNORE INTO categories (id, name) VALUES (1, 'Favorites')
-    ''');
-
-    // 3. Create Song Categories mapping table
-    await db.execute('''
-      CREATE TABLE IF NOT EXISTS song_categories(
-        song_id INTEGER,
-        category_id INTEGER,
-        PRIMARY KEY (song_id, category_id),
-        FOREIGN KEY(song_id) REFERENCES songs(id) ON DELETE CASCADE,
-        FOREIGN KEY(category_id) REFERENCES categories(id) ON DELETE CASCADE
-      )
-    ''');
-
-    // 4. Create Temples table
-    await db.execute('''
-      CREATE TABLE IF NOT EXISTS temples(
-        id           INTEGER PRIMARY KEY AUTOINCREMENT,
-        name         TEXT NOT NULL UNIQUE,
-        song_count   INTEGER DEFAULT 0,
-        english_name TEXT
-      )
-    ''');
-
-    // 5. Create Highlights table
-    await db.execute('''
-      CREATE TABLE IF NOT EXISTS highlights(
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
-        song_id INTEGER NOT NULL,
-        verse_index INTEGER NOT NULL,
-        text_content TEXT,
-        created_at TEXT NOT NULL,
-        FOREIGN KEY(song_id) REFERENCES songs(id) ON DELETE CASCADE
-      )
-    ''');
-
-    // 6. Create Notes table
-    await db.execute('''
-      CREATE TABLE IF NOT EXISTS notes(
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
-        song_id INTEGER NOT NULL,
-        content TEXT NOT NULL,
-        created_at TEXT NOT NULL,
-        updated_at TEXT NOT NULL,
-        FOREIGN KEY(song_id) REFERENCES songs(id) ON DELETE CASCADE
-      )
-    ''');
-
-    // 6b. Create Links table
-    await _createLinksTable(db);
-
-    // 7. Populate Temples Table
-    // We only want to populate if it's empty to avoid re-calculating on every open/upgrade unnecessarily,
-    // unless we want to ensure sync.
-    // Let's check count first.
-    final count = Sqflite.firstIntValue(
-      await db.rawQuery('SELECT COUNT(*) FROM temples'),
-    );
-
-    if (count == 0) {
-      AppLogger.info('Populating temples table');
-      final List<Map<String, dynamic>> places = await db.rawQuery('''
-        SELECT place, COUNT(*) as count
-        FROM songs
-        WHERE place IS NOT NULL AND place != ''
-        GROUP BY place
-      ''');
-
-      final batch = db.batch();
-      for (final place in places) {
-        batch.insert('temples', {
-          'name': place['place'],
-          'song_count': place['count'],
-        }, conflictAlgorithm: ConflictAlgorithm.replace);
-      }
-      await batch.commit(noResult: true);
-    }
-
-    // 8. Ensure is_favorite column exists in songs (if asset didn't have it)
-    await _addColumnIfMissing(
-      db,
-      table: 'songs',
-      column: 'is_favorite',
-      definition: 'INTEGER DEFAULT 0',
-    );
-  }
-
-  /// Adds `$column` to `$table` only if it isn't already there.
-  ///
-  /// Every migration below ships a bundled asset database that, by the
-  /// time a given app version reaches most devices, may *already* have
-  /// gone through this migration once -- either because a fresh install's
-  /// onCreate path uses the current, already-up-to-date bundled schema
-  /// (fresh installs never run these migrations, see [_initDatabase]'s
-  /// version-0-vs-onCreate handling), or because a future migration is
-  /// added that overlaps one already applied. A bare `ALTER TABLE ADD
-  /// COLUMN` throws "duplicate column name" in that case, and since these
-  /// calls sit outside any try/catch, that exception used to propagate
-  /// all the way up through the single cached `database` Future --
-  /// poisoning every future call to it and leaving every screen silently
-  /// empty with no visible error. Checking first makes this idempotent.
-  Future<void> _addColumnIfMissing(
-    Database db, {
-    required String table,
-    required String column,
-    required String definition,
-  }) async {
-    try {
-      await db.rawQuery('SELECT $column FROM $table LIMIT 1');
-      // Column already exists -- nothing to do.
-    } catch (_) {
-      AppLogger.info('Adding $column column to $table');
-      await db.execute('ALTER TABLE $table ADD COLUMN $column $definition');
-    }
-  }
-
-  Future<void> _addIndexes(Database db) async {
-    // Index for fast favorite lookups (WHERE is_favorite = 1)
-    await db.execute('''
-      CREATE INDEX IF NOT EXISTS idx_songs_is_favorite
-      ON songs(is_favorite)
-    ''');
-
-    // Index for fast category-based song lookups
-    // (composite PK covers song_id first; this covers category_id queries)
-    await db.execute('''
-      CREATE INDEX IF NOT EXISTS idx_song_categories_category_id
-      ON song_categories(category_id)
-    ''');
-
-    // Index for fast highlight lookups by song
-    await db.execute('''
-      CREATE INDEX IF NOT EXISTS idx_highlights_song_id
-      ON highlights(song_id)
-    ''');
-
-    // Index for fast note lookups by song
-    await db.execute('''
-      CREATE INDEX IF NOT EXISTS idx_notes_song_id
-      ON notes(song_id)
-    ''');
-  }
-
-  Future<void> _createLinksTable(DatabaseExecutor db) async {
-    await db.execute('''
-      CREATE TABLE IF NOT EXISTS links(
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
-        song_id INTEGER NOT NULL,
-        url TEXT NOT NULL,
-        title TEXT,
-        created_at TEXT NOT NULL,
-        FOREIGN KEY(song_id) REFERENCES songs(id) ON DELETE CASCADE
-      )
-    ''');
-    await db.execute('''
-      CREATE INDEX IF NOT EXISTS idx_links_song_id
-      ON links(song_id)
-    ''');
-  }
-
-  /// v6: adds the user-owned `links` table. Purely additive; existing data is
-  /// untouched. Idempotent, and non-fatal so a failure here can't block the
-  /// app from opening (links would simply be unavailable).
-  @visibleForTesting
-  Future<void> migrateToV6(Database db) async {
-    AppLogger.info('Running v6 migration: adding links table');
-    try {
-      await _createLinksTable(db);
-    } catch (e, st) {
-      AppLogger.error(
-        'v6 migration: failed to create links table',
-        error: e,
-        stackTrace: st,
-      );
-    }
-  }
-
-  Future<void> _migrateToV3(Database db) async {
-    AppLogger.info('Running v3 migration: adding English content columns');
-
-    // Step 1: Add English columns to songs (all nullable)
-    for (final col in [
-      'english_title',
-      'english_venue',
-      'english_tune_list',
-      'english_lyrics_list',
-      'english_words',
-      'english_meanings_list',
-      'english_pathavurai',
-    ]) {
-      await _addColumnIfMissing(
-        db,
-        table: 'songs',
-        column: col,
-        definition: 'TEXT',
-      );
-    }
-
-    // Step 2: Add english_name to temples
-    await _addColumnIfMissing(
-      db,
-      table: 'temples',
-      column: 'english_name',
-      definition: 'TEXT',
-    );
-
-    // Step 3: Populate songs English columns from bundled JSON asset
-    try {
-      final jsonString = await rootBundle.loadString(
-        AppConstants.englishDataAsset,
-      );
-      final Map<String, dynamic> patch = jsonDecode(jsonString);
-
-      final batch = db.batch();
-      for (final entry in patch.entries) {
-        final id = int.tryParse(entry.key);
-        if (id == null) continue;
-        final fields = entry.value as Map<String, dynamic>;
-        batch.update(
-          'songs',
-          {
-            'english_title': fields['english_title'],
-            'english_venue': fields['english_venue'],
-            'english_tune_list': fields['english_tune_list'],
-            'english_lyrics_list': fields['english_lyrics_list'],
-            'english_words': fields['english_words'],
-            'english_meanings_list': fields['english_meanings_list'],
-            'english_pathavurai': fields['english_pathavurai'],
-          },
-          where: 'id = ?',
-          whereArgs: [id],
-        );
-      }
-      await batch.commit(noResult: true);
-      AppLogger.info(
-        'v3 migration: populated English data for ${patch.length} songs',
-      );
-    } catch (e, st) {
-      AppLogger.error(
-        'v3 migration: failed to populate English data',
-        error: e,
-        stackTrace: st,
-      );
-      // Non-fatal: English columns remain NULL, app falls back to Tamil
-    }
-
-    // Step 4: Populate temples.english_name from songs (runs after Step 3)
-    await db.execute('''
-      UPDATE temples
-      SET english_name = (
-        SELECT english_venue FROM songs
-        WHERE songs.place = temples.name
-          AND songs.english_venue IS NOT NULL
-        LIMIT 1
-      )
-    ''');
-
-    AppLogger.info('v3 migration complete');
-  }
-
-  /// Columns a v5 song-fix patch is allowed to touch. Deliberately excludes
-  /// `is_favorite` (user data) and identity columns.
-  static const List<String> _v5PatchableColumns = [
-    'lyrics',
-    'tune',
-    'tune_list',
-    'lyrics_list',
-    'pathavurai',
-    'search_content',
-    'mayuragiri_lyrics_separated',
-  ];
-
-  /// v5: corrects songs whose source data was mis-parsed at release (lyrics
-  /// stored in the tune column, etc.). Patches rows in place with UPDATE
-  /// only -- never delete/replace, since notes, highlights and category
-  /// links cascade-delete with the song row. Idempotent.
-  ///
-  /// [loadPatch] exists so tests can supply the patch without an asset bundle.
+  /// Kept on the helper for tests; see [DatabaseSchema.migrateToV5].
   @visibleForTesting
   Future<void> migrateToV5(
     Database db, {
     Future<String> Function()? loadPatch,
     Future<String> Function()? loadRestore,
-  }) async {
-    await _applySongFixesV5(db, loadPatch);
-    await _restoreMissingSongsV5(db, loadRestore);
-  }
+  }) => DatabaseSchema.migrateToV5(
+    db,
+    loadPatch: loadPatch,
+    loadRestore: loadRestore,
+  );
 
-  Future<void> _applySongFixesV5(
-    Database db,
-    Future<String> Function()? loadPatch,
-  ) async {
-    AppLogger.info('Running v5 migration: correcting mis-parsed songs');
-    try {
-      final jsonString = await (loadPatch ??
-          () => rootBundle.loadString(AppConstants.songFixesV5Asset))();
-      final Map<String, dynamic> patch = jsonDecode(jsonString);
-
-      // Devices upgrading from very old releases may lack some columns
-      // (e.g. `search_content`); patch only what actually exists so one
-      // missing column can't make the whole batch fail.
-      final existing = {
-        for (final row in await db.rawQuery('PRAGMA table_info(songs)'))
-          row['name'] as String,
-      };
-
-      final batch = db.batch();
-      for (final entry in patch.entries) {
-        final id = int.tryParse(entry.key);
-        if (id == null) continue;
-        final fields = entry.value as Map<String, dynamic>;
-        final values = {
-          for (final col in _v5PatchableColumns)
-            if (fields.containsKey(col) && existing.contains(col))
-              col: fields[col],
-        };
-        if (values.isEmpty) continue;
-        batch.update('songs', values, where: 'id = ?', whereArgs: [id]);
-      }
-      await batch.commit(noResult: true);
-      AppLogger.info('v5 migration: corrected ${patch.length} songs');
-    } catch (e, st) {
-      AppLogger.error(
-        'v5 migration: failed to apply song fixes',
-        error: e,
-        stackTrace: st,
-      );
-      // Non-fatal: songs keep their previous (flawed) content.
-    }
-  }
-
-  /// v5: songs 1-6 were dropped from the bundled DB at the 1.2.0 rebuild, so
-  /// installs since then lack them. Re-insert them with INSERT OR IGNORE:
-  /// devices that already have a row (upgraders from 1.1.0) are left exactly
-  /// as they are, and a restored song always starts unfavorited. Temples are
-  /// brought in line afterwards. Idempotent and non-fatal.
-  Future<void> _restoreMissingSongsV5(
-    Database db,
-    Future<String> Function()? loadRestore,
-  ) async {
-    AppLogger.info('Running v5 migration: restoring songs dropped in 1.2.0');
-    try {
-      final jsonString = await (loadRestore ??
-          () => rootBundle.loadString(AppConstants.songRestoreV5Asset))();
-      final Map<String, dynamic> restore = jsonDecode(jsonString);
-
-      final existing = {
-        for (final row in await db.rawQuery('PRAGMA table_info(songs)'))
-          row['name'] as String,
-      };
-
-      final places = <String>{};
-      final batch = db.batch();
-      for (final entry in restore.entries) {
-        final id = int.tryParse(entry.key);
-        if (id == null) continue;
-        final fields = entry.value as Map<String, dynamic>;
-        final values = <String, Object?>{
-          for (final e in fields.entries)
-            if (existing.contains(e.key) && e.key != 'is_favorite')
-              e.key: e.value,
-          'id': id,
-        };
-        batch.insert(
-          'songs',
-          values,
-          conflictAlgorithm: ConflictAlgorithm.ignore,
-        );
-        final place = fields['place'];
-        if (place is String && place.isNotEmpty) places.add(place);
-      }
-      await batch.commit(noResult: true);
-
-      // Keep the temples list in step with the songs table.
-      for (final place in places) {
-        await db.insert(
-          'temples',
-          {'name': place},
-          conflictAlgorithm: ConflictAlgorithm.ignore,
-        );
-        await db.rawUpdate(
-          'UPDATE temples SET song_count = '
-          '(SELECT COUNT(*) FROM songs WHERE place = ?) WHERE name = ?',
-          [place, place],
-        );
-      }
-      AppLogger.info('v5 migration: processed ${restore.length} restored songs');
-    } catch (e, st) {
-      AppLogger.error(
-        'v5 migration: failed to restore songs',
-        error: e,
-        stackTrace: st,
-      );
-      // Non-fatal: the songs stay absent, as before.
-    }
-  }
-
-  Future<void> _migrateToV4(Database db) async {
-    AppLogger.info(
-      'Running v4 migration: adding Mayuragiri word-separated lyrics columns',
-    );
-
-    for (final col in [
-      'mayuragiri_lyrics_separated',
-      'mayuragiri_english_lyrics_separated',
-    ]) {
-      await _addColumnIfMissing(
-        db,
-        table: 'songs',
-        column: col,
-        definition: 'TEXT',
-      );
-    }
-
-    try {
-      final jsonString = await rootBundle.loadString(
-        AppConstants.mayuragiriDataAsset,
-      );
-      final Map<String, dynamic> patch = jsonDecode(jsonString);
-
-      final batch = db.batch();
-      for (final entry in patch.entries) {
-        final id = int.tryParse(entry.key);
-        if (id == null) continue;
-        final fields = entry.value as Map<String, dynamic>;
-        batch.update(
-          'songs',
-          {
-            'mayuragiri_lyrics_separated':
-                fields['mayuragiri_lyrics_separated'],
-            'mayuragiri_english_lyrics_separated':
-                fields['mayuragiri_english_lyrics_separated'],
-          },
-          where: 'id = ?',
-          whereArgs: [id],
-        );
-      }
-      await batch.commit(noResult: true);
-      AppLogger.info(
-        'v4 migration: populated Mayuragiri data for ${patch.length} songs',
-      );
-    } catch (e, st) {
-      AppLogger.error(
-        'v4 migration: failed to populate Mayuragiri data',
-        error: e,
-        stackTrace: st,
-      );
-      // Non-fatal: Mayuragiri columns remain NULL, section stays hidden
-    }
-  }
+  /// Kept on the helper for tests; see [DatabaseSchema.migrateToV6].
+  @visibleForTesting
+  Future<void> migrateToV6(Database db) => DatabaseSchema.migrateToV6(db);
 
   // --- Highlights Methods ---
 
@@ -942,12 +594,13 @@ class DatabaseHelper {
   }
 
   Future<Song?> getRandomSong() async {
-    final db = await database;
-    final List<Map<String, dynamic>> maps = await db.rawQuery(
-      'SELECT * FROM songs ORDER BY RANDOM() LIMIT 1',
+    // A random offset into an id-ordered scan; ORDER BY RANDOM() would sort
+    // every (wide) song row just to keep one.
+    final count = Sqflite.firstIntValue(
+      await (await database).rawQuery('SELECT COUNT(*) FROM songs'),
     );
-    if (maps.isEmpty) return null;
-    return Song.fromMap(maps.first);
+    if (count == null || count == 0) return null;
+    return getSongByIndex(Random().nextInt(count));
   }
 
   /// Fetches the song at [index] in a stable id-ordered sequence -- used by
@@ -1052,7 +705,7 @@ class DatabaseHelper {
     }
 
     // Validate and sanitize search query
-    final sanitizedQuery = _sanitizeSearchQuery(filter.query);
+    final sanitizedQuery = SearchText.sanitizeQuery(filter.query);
 
     if (sanitizedQuery.isEmpty) {
       return [];
@@ -1064,19 +717,19 @@ class DatabaseHelper {
     final exactQuery = sanitizedQuery;
 
     // Generate variations for Tamil spelling tolerance (e.g. ன vs ந)
-    final variations = _getTamilVariations(sanitizedQuery);
+    final variations = SearchText.tamilVariations(sanitizedQuery);
 
     void addLikeConditions(String tamilField, [String? englishField]) {
       if (variations.isEmpty) return;
       final fieldConditions = <String>[];
       for (var _ in variations) {
-        fieldConditions.add('$tamilField LIKE ?');
+        fieldConditions.add("$tamilField LIKE ? ESCAPE '\\'");
       }
-      args.addAll(variations.map((v) => '%$v%'));
+      args.addAll(variations.map((v) => '%${SearchText.escapeLike(v)}%'));
 
       if (englishField != null) {
-        fieldConditions.add('$englishField LIKE ?');
-        args.add('%$sanitizedQuery%');
+        fieldConditions.add("$englishField LIKE ? ESCAPE '\\'");
+        args.add('%${SearchText.escapeLike(sanitizedQuery)}%');
       }
       conditions.add('(${fieldConditions.join(' OR ')})');
     }
@@ -1102,10 +755,12 @@ class DatabaseHelper {
       // this only widens matches (the exact-substring condition above
       // still applies), so it can't cause an existing search to lose
       // results.
-      final normalizedQuery = _normalizeTanglish(sanitizedQuery);
+      final normalizedQuery = SearchText.normalizeTanglish(sanitizedQuery);
       if (normalizedQuery.isNotEmpty) {
-        conditions.add('${_tanglishNormalizedSql('english_venue')} LIKE ?');
-        args.add('%$normalizedQuery%');
+        conditions.add(
+          "${SearchText.tanglishNormalizedSql('english_venue')} LIKE ? ESCAPE '\\'",
+        );
+        args.add('%${SearchText.escapeLike(normalizedQuery)}%');
       }
     }
 
@@ -1142,96 +797,6 @@ class DatabaseHelper {
     ''', args);
 
     return results.map((songMap) => Song.fromMap(songMap)).toList();
-  }
-
-  /// Generates variations for common Tamil spelling differences.
-  /// Currently handles:
-  /// - ன (U+0BA9) <-> ந (U+0BA8)
-  List<String> _getTamilVariations(String query) {
-    final Set<String> variations = {query};
-
-    // Handle ன (Nna - Alveolar) vs ந (Na - Dental) mismatch
-    // These are often confused in spelling (e.g., Palani: பழனி vs பழநி)
-    if (query.contains('ன')) {
-      variations.add(query.replaceAll('ன', 'ந'));
-    }
-    if (query.contains('ந')) {
-      variations.add(query.replaceAll('ந', 'ன'));
-    }
-
-    // We could add more here (ra/Ra, la/La/zha) if needed later.
-
-    return variations.toList();
-  }
-
-  /// Ordered find/replace pairs collapsing the formal scholarly
-  /// transliteration scheme used throughout `english_venue` (and
-  /// elsewhere) toward a casual "Tanglish" spelling -- e.g.
-  /// "thiruchchendhUr" -> "tiruchendur", matching how most people would
-  /// actually type Thiruchendur. Order matters: digraph-doubling and
-  /// single-letter-doubling collapse first, so a later single-letter rule
-  /// (like th -> t) doesn't interfere with an earlier digraph rule (like
-  /// thth -> th). Verified against every temple name currently in the
-  /// bundled database (see PR description / commit message for the check
-  /// script) -- every entry's own casually-simplified spelling matches
-  /// itself after normalization.
-  static const List<List<String>> _tanglishNormalizationRules = [
-    ['chch', 'ch'],
-    ['thth', 'th'],
-    ['dhdh', 'dh'],
-    ['shsh', 'sh'],
-    ['aa', 'a'],
-    ['ee', 'e'],
-    ['kk', 'k'],
-    ['ll', 'l'],
-    ['mm', 'm'],
-    ['nn', 'n'],
-    ['pp', 'p'],
-    ['tt', 't'],
-    ['uu', 'u'],
-    ['dh', 'd'],
-    // zh (ழ) is very commonly typed as a plain "l" rather than "zh"/"z"
-    // (e.g. Palani for பழநி, "pazhani"), so both collapse to the same
-    // letter for matching purposes.
-    ['zh', 'l'],
-    ['th', 't'],
-    ['ngk', 'nk'],
-    ['ng', 'n'],
-  ];
-
-  /// Applies [_tanglishNormalizationRules] to a Dart string -- used to
-  /// normalize the incoming search query. See [_tanglishNormalizedSql]
-  /// for the equivalent transformation applied to a database column.
-  String _normalizeTanglish(String s) {
-    var result = s.toLowerCase();
-    for (final rule in _tanglishNormalizationRules) {
-      result = result.replaceAll(rule[0], rule[1]);
-    }
-    return result;
-  }
-
-  /// Builds a SQL expression that applies [_tanglishNormalizationRules]
-  /// to [column] via chained `REPLACE()` calls, so it can be compared
-  /// against a query already normalized by [_normalizeTanglish]. SQLite
-  /// has no regex support, but every rule here is a plain substring
-  /// replacement, so a REPLACE() chain is exact.
-  String _tanglishNormalizedSql(String column) {
-    var expr = 'LOWER($column)';
-    for (final rule in _tanglishNormalizationRules) {
-      expr = "REPLACE($expr, '${rule[0]}', '${rule[1]}')";
-    }
-    return expr;
-  }
-
-  /// Trims and length-limits the search query.
-  /// SQL injection is prevented by parameterised queries (whereArgs),
-  /// not by character removal.
-  String _sanitizeSearchQuery(String query) {
-    final trimmed = query.trim();
-    if (trimmed.length > AppConstants.maxSearchQueryLength) {
-      return trimmed.substring(0, AppConstants.maxSearchQueryLength);
-    }
-    return trimmed;
   }
 
   Future<List<Category>> getCategoriesWithSongCounts() async {
@@ -1350,6 +915,19 @@ class DatabaseHelper {
       [categoryId],
     );
     return List.generate(maps.length, (i) => Song.fromMap(maps[i]));
+  }
+
+  /// Ids of the favorite songs, without loading their (large) text columns.
+  Future<List<int>> getFavoriteSongIds() async {
+    final db = await database;
+    final maps = await db.query(
+      'songs',
+      columns: ['id'],
+      where: 'is_favorite = ?',
+      whereArgs: [1],
+      orderBy: 'title',
+    );
+    return maps.map((m) => m['id'] as int).toList();
   }
 
   Future<List<Song>> getFavoriteSongs() async {

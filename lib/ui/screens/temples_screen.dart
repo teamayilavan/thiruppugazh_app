@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../../data/database/database_helper.dart';
+import '../../data/repositories/song_repository.dart';
 import '../../providers/lyrics_language_provider.dart';
 import '../widgets/arupadai_grid.dart';
 import 'temple_songs_screen.dart';
@@ -25,7 +25,10 @@ class _TemplesScreenState extends State<TemplesScreen> {
 
   void _refreshTemples() {
     setState(() {
-      _templesFuture = DatabaseHelper().getAllTemples();
+      _templesFuture = Provider.of<SongRepository>(
+        context,
+        listen: false,
+      ).getAllTemples();
     });
   }
 

@@ -161,11 +161,15 @@ Web links a user attached to a song (a video, a discourse, a shared post). Many 
 | Version | Change |
 |---|---|
 | 1 | Initial schema |
-| 2 | Added indexes (`idx_songs_is_favorite`, `idx_song_categories_category_id`, `idx_highlights_song_id`, `idx_notes_song_id`) |
+| 2 | Added indexes (`idx_songs_is_favorite`, `idx_song_categories_category_id`, `idx_highlights_song_id`, `idx_notes_song_id`). A v1 (1.0.0) database predates `is_favorite` and the notes/highlights tables, so this step first runs the idempotent schema setup (`CREATE TABLE IF NOT EXISTS`, add `is_favorite` if missing), then the indexes. Non-fatal. |
 | 3 | Added 7 English columns to `songs`; added `english_name` to `temples`; populated via `assets/english_data.json` migration asset |
 | 4 | Added `mayuragiri_lyrics_separated`/`mayuragiri_english_lyrics_separated` to `songs`; populated via `assets/mayuragiri_data.json` migration asset |
 | 5 | Data-only fix: `UPDATE`s songs 1328 and 1338 from `assets/song_fixes_v5.json` (`migrateToV5`). Touches only `lyrics`, `tune`, `tune_list`, `lyrics_list`, `pathavurai`, `search_content`, `mayuragiri_lyrics_separated` — never `is_favorite`, and never delete/replace (notes, highlights and category links cascade-delete with the song row). Also re-inserts songs 1–6 (`assets/song_restore_v5.json`, `INSERT OR IGNORE`, never overwriting an existing row, `is_favorite` always 0) and refreshes their temples' `song_count`. Fresh installs get the same rows from the rebuilt bundled DB. |
 | 6 | Added the `links` table and `idx_links_song_id` (`migrateToV6`). Purely additive, idempotent, and non-fatal; existing data is untouched. Fresh installs create it in `onCreate`. |
+
+### Recovery of an unusable database file
+
+On open, a file that is not a valid songs database (corrupt, or no songs) is **not deleted**. It is renamed to `thiruppugazh.db.corrupt-<timestamp>`, a fresh copy of the bundled database is put in place, and the user's own tables (`categories`, `song_categories`, `notes`, `highlights`, `links`, and `is_favorite`) are copied back from the old file table by table (`ATTACH`, best effort). If every table copied cleanly the old file is deleted; otherwise it is kept (one at most). `DatabaseHelper.wasRecovered` is then true, which lets the Auto Backup restore run again even if its one-shot marker already exists. No schema change.
 
 ---
 
@@ -186,7 +190,7 @@ Web links a user attached to a song (a video, a discourse, a shared post). Many 
 ### Songs
 - `getAllSongs()` — all songs sorted by Tamil title
 - `getSongById(int id)` — single song by ID
-- `getRandomSong()` — one uniformly random song, queried DB-wide (`ORDER BY RANDOM() LIMIT 1`), not just from whatever page is loaded — backs the Home screen's random-song shuffle FAB
+- `getRandomSong()` — one uniformly random song, chosen DB-wide (a random offset into the id-ordered table via `getSongByIndex`, not `ORDER BY RANDOM()`), not just from whatever page is loaded — backs the Home screen's random-song shuffle FAB
 - `getSongByIndex(int index)` — single song by row position
 - `getSongsPaginated({int page, int pageSize})` — paginated list
 - `getAllSongIds({DatabaseExecutor? executor})` — every song ID as a `Set<int>`, used by backup import to skip entries referencing a song no longer in this install instead of tripping a foreign-key constraint
@@ -205,6 +209,7 @@ Web links a user attached to a song (a video, a discourse, a shared post). Many 
 ### Favorites
 - `toggleFavorite(int songId, bool isFavorite)`
 - `getFavoriteSongs()`
+- `getFavoriteSongIds()` — just the ids, without the song text; used by backup export
 
 ### Highlights
 - `addHighlight(Highlight highlight)`

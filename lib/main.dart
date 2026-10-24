@@ -1,8 +1,6 @@
 import 'dart:async';
-import 'dart:io' show Platform;
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:sqflite_common_ffi/sqflite_ffi.dart';
 import 'l10n/app_localizations.dart';
 
 import 'data/database/database_helper.dart';
@@ -16,6 +14,7 @@ import 'providers/reading_state_provider.dart';
 import 'providers/reminder_settings_provider.dart';
 import 'providers/song_list_provider.dart';
 import 'services/auto_backup_service.dart';
+import 'services/backup_service.dart';
 import 'ui/screens/main_wrapper.dart';
 import 'utils/app_logger.dart';
 import 'theme/app_theme.dart';
@@ -23,18 +22,14 @@ import 'theme/app_theme.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  if (Platform.isWindows || Platform.isLinux || Platform.isMacOS) {
-    sqfliteFfiInit();
-    databaseFactory = databaseFactoryFfi;
-  }
-
+  final repository = SongRepository();
   final autoBackupStatus = AutoBackupStatusProvider();
   final autoBackupService = AutoBackupService(statusProvider: autoBackupStatus);
 
   runApp(
     MultiProvider(
       providers: [
-        ChangeNotifierProvider(create: (context) => SongRepository()),
+        ChangeNotifierProvider.value(value: repository),
         ChangeNotifierProvider(create: (context) => ThemeProvider()),
         ChangeNotifierProvider(create: (context) => LanguageProvider()),
         ChangeNotifierProvider(create: (context) => LyricsLanguageProvider()),
@@ -43,9 +38,7 @@ Future<void> main() async {
         ChangeNotifierProvider(create: (context) => ReadingStateProvider()),
         ChangeNotifierProvider.value(value: autoBackupStatus),
         ChangeNotifierProvider(
-          create: (context) => SongListProvider(
-            Provider.of<SongRepository>(context, listen: false),
-          ),
+          create: (context) => SongListProvider(repository),
         ),
       ],
       child: const MyApp(),
@@ -60,9 +53,13 @@ Future<void> main() async {
   unawaited(() async {
     try {
       await DatabaseHelper().database;
+      await BackupService().deleteStaleExports();
       await autoBackupService.maybeRestore(
         isFreshDatabase: DatabaseHelper().wasFreshlyCreated,
+        databaseWasRecovered: DatabaseHelper().wasRecovered,
       );
+      // A restore changes data behind screens that already loaded.
+      repository.refresh();
       autoBackupService.startWatchingMutations();
       // The staleness check reads lastBackupAt, so wait for the provider's
       // initial SharedPreferences load to finish first.
