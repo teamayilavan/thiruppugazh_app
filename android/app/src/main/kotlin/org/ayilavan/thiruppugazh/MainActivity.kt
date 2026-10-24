@@ -2,6 +2,7 @@ package org.ayilavan.thiruppugazh
 
 import android.content.Intent
 import android.view.WindowManager
+import android.widget.Toast
 import io.flutter.embedding.android.FlutterActivity
 import io.flutter.embedding.engine.FlutterEngine
 import io.flutter.plugin.common.MethodChannel
@@ -20,6 +21,17 @@ class MainActivity : FlutterActivity() {
                 // can't replay a share the user already dealt with.
                 result.success(pendingSharedText)
                 pendingSharedText = null
+            } else if (call.method == "finishShare") {
+                // Confirm with a system toast (it stays visible over the app
+                // the user came from), then step back to that app.
+                val message = call.arguments as? String ?: ""
+                runOnUiThread {
+                    if (message.isNotEmpty()) {
+                        Toast.makeText(applicationContext, message, Toast.LENGTH_LONG).show()
+                    }
+                    moveTaskToBack(true)
+                }
+                result.success(null)
             } else {
                 result.notImplemented()
             }

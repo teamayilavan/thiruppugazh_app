@@ -14,6 +14,7 @@ import 'song_detail_screen.dart';
 import 'pick_song_screen.dart';
 import '../../services/share_intent_service.dart';
 import '../../utils/link_utils.dart';
+import '../../providers/lyrics_language_provider.dart';
 import '../../constants/app_constants.dart';
 import '../../l10n/app_localizations.dart';
 
@@ -74,8 +75,7 @@ class _MainWrapperState extends State<MainWrapper> {
       );
       return;
     }
-    final navigator = Navigator.of(context);
-    final song = await navigator.push<dynamic>(
+    final result = await Navigator.of(context).push<PickSongResult>(
       MaterialPageRoute(
         builder: (context) => PickSongScreen(
           url: url,
@@ -83,10 +83,24 @@ class _MainWrapperState extends State<MainWrapper> {
         ),
       ),
     );
-    // Take the user to the song so they see the link they just attached.
-    if (song != null && mounted) {
-      navigator.push(
-        MaterialPageRoute(builder: (context) => SongDetailScreen(song: song)),
+    if (result == null || !mounted) return;
+
+    // Confirm and put the user back where they were -- they came from another
+    // app and still have something to do there, so don't pull them into ours.
+    final l10n = AppLocalizations.of(context)!;
+    final song = result.song;
+    final useEnglish =
+        context.read<LyricsLanguageProvider>().lyricsLanguage ==
+            LyricsLanguage.english &&
+        song.hasEnglishContent;
+    final songTitle = useEnglish ? (song.englishTitle ?? song.title) : song.title;
+    final message = result.added
+        ? l10n.linkAddedToSong(songTitle)
+        : l10n.linkAlreadyAdded;
+    final handledNatively = await ShareIntentService.finishShare(message);
+    if (!handledNatively && mounted) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text(message)),
       );
     }
   }

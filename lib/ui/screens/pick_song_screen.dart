@@ -10,8 +10,18 @@ import '../../data/repositories/song_repository.dart';
 import '../../l10n/app_localizations.dart';
 import '../../providers/lyrics_language_provider.dart';
 
+/// What the picker hands back once a link has been saved.
+class PickSongResult {
+  const PickSongResult({required this.song, required this.added});
+
+  final Song song;
+
+  /// False if the song already had this link (nothing new was saved).
+  final bool added;
+}
+
 /// Lets the user choose which song a shared [url] belongs to. Saves the link
-/// on selection and pops with the chosen [Song]; pops with null if the user
+/// on selection and pops with a [PickSongResult]; pops with null if the user
 /// backs out.
 class PickSongScreen extends StatefulWidget {
   const PickSongScreen({super.key, required this.url, this.title});
@@ -67,8 +77,6 @@ class _PickSongScreenState extends State<PickSongScreen> {
   Future<void> _choose(Song song) async {
     if (_saving) return;
     setState(() => _saving = true);
-    final l10n = AppLocalizations.of(context)!;
-    final messenger = ScaffoldMessenger.of(context);
     final navigator = Navigator.of(context);
     final repo = Provider.of<SongRepository>(context, listen: false);
 
@@ -80,14 +88,7 @@ class _PickSongScreenState extends State<PickSongScreen> {
         createdAt: DateTime.now(),
       ),
     );
-    messenger.showSnackBar(
-      SnackBar(
-        content: Text(
-          added ? l10n.linkAdded : l10n.linkAlreadyAdded,
-        ),
-      ),
-    );
-    navigator.pop(song);
+    navigator.pop(PickSongResult(song: song, added: added));
   }
 
   @override

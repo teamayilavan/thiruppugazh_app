@@ -36,6 +36,23 @@ class ShareIntentService {
     }
   }
 
+  /// Ends a share: shows [message] as a short system toast and sends this app
+  /// to the background, so the user lands back in the app they shared from
+  /// (YouTube, a browser...) instead of being pulled into ours. Returns false
+  /// where that isn't possible, so the caller can show the message itself.
+  static Future<bool> finishShare(String message) async {
+    if (!_supported) return false;
+    try {
+      await _channel.invokeMethod<void>('finishShare', message);
+      return true;
+    } on MissingPluginException {
+      return false;
+    } catch (e, st) {
+      AppLogger.error('Finishing share failed', error: e, stackTrace: st);
+      return false;
+    }
+  }
+
   /// Text shared while the app is running.
   static Stream<String> get sharedText {
     if (_supported && !_listening) {
