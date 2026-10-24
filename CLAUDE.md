@@ -41,10 +41,11 @@ An update must never lose a user's favorites, categories, notes, highlights, lin
 
 ## Build and verify
 
-- Before saying "done": `flutter analyze` (only the known deprecation infos may remain)
-  and `flutter test` must pass. Add tests with the change.
+- Before saying "done": `flutter analyze` (must be clean) and `flutter test` must pass.
+  Add tests with the change.
 - For UI or native (Kotlin/manifest) changes, also build a debug APK and check it on the
-  emulator. State plainly what was and was not verified.
+  emulator. Before a release, build the signed release APK too (code shrinking and lint only
+  run there) and smoke-test it. State plainly what was and was not verified.
 - Keep `CHANGELOG.md` (`[Unreleased]`) current.
 - Flutter commands touch `macos/Flutter/GeneratedPluginRegistrant.swift` and
   `windows/flutter/generated_plugins.cmake`. Revert them (`git checkout --`) before committing.
@@ -57,6 +58,8 @@ An update must never lose a user's favorites, categories, notes, highlights, lin
   defaults; unset secondary colors render as teal.
 - **External links:** open only http(s), and always confirm first, naming the site.
 - **Providers:** never `notifyListeners()` during a build. Defer to the end of the frame.
+- **Text size:** fixed at 90% on purpose (`main.dart`). The app deliberately ignores the
+  phone's font-size setting (owner's decision); do not change this without asking.
 - **Offline first:** no network features, no tracking, no accounts.
 - **Verses:** group lyric lines with `splitIntoVerses` (`lib/utils/verses.dart`), the same
   rule the song page uses.
