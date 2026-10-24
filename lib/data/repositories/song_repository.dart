@@ -7,6 +7,7 @@ import '../models/search_filter.dart';
 import '../models/highlight_model.dart';
 import '../models/note_model.dart';
 import '../models/link_model.dart';
+import '../../services/song_search_index.dart';
 
 /// A repository that acts as a mediator between UI and data source (DatabaseHelper).
 /// It extends ChangeNotifier to notify of data changes.
@@ -128,16 +129,45 @@ class SongRepository extends ChangeNotifier {
     return await dbHelper.getSongsCount();
   }
 
-  /// Searches songs using FTS table.
-  Future<List<Song>> searchSongs(String query) async {
-    if (query.trim().isEmpty) return [];
-    return await dbHelper.searchSongs(query);
+  SongSearchIndex? _searchIndex;
+
+  Future<SongSearchIndex> _getSearchIndex() async {
+    return _searchIndex ??= SongSearchIndex.fromRows(
+      await dbHelper.getSearchIndexRows(),
+    );
   }
 
-  /// Searches songs with custom filter.
+  /// Searches songs by title, opening lines and the rest of the text.
+  Future<List<Song>> searchSongs(String query) =>
+      searchSongsWithFilter(SearchFilter(query: query));
+
+  /// Searches songs with a custom filter. The best matches -- by song
+  /// number, title, or opening words, however they are spelled -- come first
+  /// (see [SongSearchIndex]); the database search then adds anything else
+  /// that matches in the lyrics, meanings, temple or tune.
   Future<List<Song>> searchSongsWithFilter(SearchFilter filter) async {
     if (filter.query.trim().isEmpty) return [];
-    return await dbHelper.searchSongsWithFilter(filter);
+
+    List<Song> top = const [];
+    try {
+      final index = await _getSearchIndex();
+      final rankedIds = index.rank(
+        filter.query,
+        searchTitle: filter.searchTitle,
+        searchLyrics: filter.searchLyrics,
+      );
+      top = await dbHelper.getSongsByIds(rankedIds);
+    } catch (e) {
+      // Ranking is an enhancement; fall back to the plain search below.
+      if (kDebugMode) debugPrint('Search ranking failed: $e');
+    }
+
+    final deeper = await dbHelper.searchSongsWithFilter(filter);
+    final seen = {for (final song in top) song.id};
+    return [
+      ...top,
+      ...deeper.where((song) => !seen.contains(song.id)),
+    ];
   }
 
   // --- Category Management ---

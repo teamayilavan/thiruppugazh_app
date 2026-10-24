@@ -999,6 +999,35 @@ class DatabaseHelper {
     }
   }
 
+  /// Rows for the in-memory ranking index: titles plus only the first few
+  /// hundred characters of the lyric lists, so building it never loads the
+  /// full text of every song.
+  Future<List<Map<String, Object?>>> getSearchIndexRows() async {
+    final db = await database;
+    return db.rawQuery('''
+      SELECT id, kaumaram_id, title, english_title,
+             substr(lyrics_list, 1, 400) AS lyrics_list_head,
+             substr(english_lyrics_list, 1, 400) AS english_lyrics_list_head
+      FROM songs
+    ''');
+  }
+
+  /// Songs for [ids], in the order given. Ids with no song are skipped.
+  Future<List<Song>> getSongsByIds(List<int> ids) async {
+    if (ids.isEmpty) return [];
+    final db = await database;
+    final placeholders = List.filled(ids.length, '?').join(',');
+    final rows = await db.rawQuery(
+      'SELECT * FROM songs WHERE id IN ($placeholders)',
+      ids,
+    );
+    final byId = {for (final r in rows) r['id'] as int: Song.fromMap(r)};
+    return [
+      for (final id in ids)
+        if (byId[id] != null) byId[id]!,
+    ];
+  }
+
   Future<List<Song>> searchSongs(String query) async {
     final filter = SearchFilter(query: query);
     return searchSongsWithFilter(filter);
