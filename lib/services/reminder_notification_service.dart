@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
+import 'package:flutter_timezone/flutter_timezone.dart';
+import 'package:timezone/data/latest_10y.dart' as tzdata;
 import 'package:timezone/timezone.dart' as tz;
 
 import '../utils/app_logger.dart';
@@ -22,6 +24,54 @@ class ReminderNotificationService {
   static const int _notificationId = 8000;
 
   bool _pluginInitialized = false;
+
+  /// The device's time zone, so the reminder follows local daylight-saving
+  /// changes. Falls back to UTC (the previous behaviour) if the zone can't
+  /// be resolved.
+  Future<tz.Location> _localLocation() async {
+    try {
+      tzdata.initializeTimeZones();
+      final info = await FlutterTimezone.getLocalTimezone();
+      return tz.getLocation(info.identifier);
+    } catch (e, st) {
+      AppLogger.error(
+        'Could not resolve the device time zone; using UTC',
+        error: e,
+        stackTrace: st,
+      );
+      return tz.UTC;
+    }
+  }
+
+  /// The next moment [time] occurs on the wall clock of [location], after
+  /// [now]. Built from calendar fields, so a daylight-saving change between
+  /// now and then can't shift it.
+  @visibleForTesting
+  static tz.TZDateTime nextFireTime(
+    tz.Location location,
+    TimeOfDay time,
+    tz.TZDateTime now,
+  ) {
+    var fireAt = tz.TZDateTime(
+      location,
+      now.year,
+      now.month,
+      now.day,
+      time.hour,
+      time.minute,
+    );
+    if (!fireAt.isAfter(now)) {
+      fireAt = tz.TZDateTime(
+        location,
+        now.year,
+        now.month,
+        now.day + 1,
+        time.hour,
+        time.minute,
+      );
+    }
+    return fireAt;
+  }
 
   Future<void> _ensureInitialized() async {
     if (_pluginInitialized) return;
@@ -86,26 +136,18 @@ class ReminderNotificationService {
     await _ensureInitialized();
     await cancel();
 
-    final now = DateTime.now();
-    var fireAt = DateTime(now.year, now.month, now.day, time.hour, time.minute);
-    if (!fireAt.isAfter(now)) {
-      fireAt = fireAt.add(const Duration(days: 1));
-    }
+    final location = await _localLocation();
+    final fireAt = nextFireTime(location, time, tz.TZDateTime.now(location));
 
     try {
       await _plugin.zonedSchedule(
         id: _notificationId,
         title: title,
         body: body,
-        // TZDateTime.from() converts using fireAt.toUtc() -- Dart's own,
-        // always-correct local-to-UTC conversion -- so the *instant* is
-        // right no matter which Location is attached; the Location only
-        // controls what zone name gets sent to the native side. tz.UTC
-        // ('Etc/UTC') is used deliberately: it is the one zone name
-        // guaranteed to resolve on both Android and iOS without needing a
-        // device timezone-name lookup package, which isn't in this app's
-        // dependency set.
-        scheduledDate: tz.TZDateTime.from(fireAt, tz.UTC),
+        // Scheduled in the device's own zone: the daily repeat matches the
+        // wall-clock time in that zone, so it stays put across daylight
+        // saving changes.
+        scheduledDate: fireAt,
         notificationDetails: const NotificationDetails(
           android: AndroidNotificationDetails(
             _channelId,
