@@ -119,9 +119,20 @@ class DatabaseHelper {
         }
       },
       onOpen: (db) async {
-        // Ensure schema is up to date even on open if needed
-        // (Optional, but safe for dev environments where asset might be replaced)
-        // For now, we rely on onCreate/onUpgrade
+        // Safety net for the v6 migration, which is deliberately non-fatal:
+        // if creating `links` ever failed once, the database would still be
+        // marked v6 and never retried, leaving backups (which read links)
+        // failing. Re-creating it is idempotent and costs next to nothing, so
+        // do it on every open and the table can't stay missing.
+        try {
+          await _createLinksTable(db);
+        } catch (e, st) {
+          AppLogger.error(
+            'Could not ensure the links table on open',
+            error: e,
+            stackTrace: st,
+          );
+        }
       },
     );
   }
