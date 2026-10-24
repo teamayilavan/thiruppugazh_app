@@ -248,7 +248,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get contact => 'Contact';
 
   @override
-  String get contactEmail => 'teamayilvan@gmail.com';
+  String get contactEmail => 'teamayilavan@gmail.com';
 
   @override
   String get anErrorOccurred => 'An error occurred';

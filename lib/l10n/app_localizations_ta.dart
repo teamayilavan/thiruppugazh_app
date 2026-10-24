@@ -248,7 +248,7 @@ class AppLocalizationsTa extends AppLocalizations {
   String get contact => 'தொடர்பிற்கு';
 
   @override
-  String get contactEmail => 'teamayilvan@gmail.com';
+  String get contactEmail => 'teamayilavan@gmail.com';
 
   @override
   String get anErrorOccurred => 'ஒரு பிழை ஏற்பட்டது';

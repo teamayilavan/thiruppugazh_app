@@ -551,7 +551,7 @@ abstract class AppLocalizations {
   /// No description provided for @contactEmail.
   ///
   /// In en, this message translates to:
-  /// **'teamayilvan@gmail.com'**
+  /// **'teamayilavan@gmail.com'**
   String get contactEmail;
 
   /// No description provided for @anErrorOccurred.
