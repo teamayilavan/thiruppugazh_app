@@ -4,7 +4,7 @@ class AppConstants {
   AppConstants._();
 
   // ==================== Database Constants ====================
-  static const int dbVersion = 5;
+  static const int dbVersion = 6;
   static const String dbName = 'thiruppugazh.db';
   static const String assetsPath = 'assets';
   static const String englishDataAsset = 'assets/english_data.json';

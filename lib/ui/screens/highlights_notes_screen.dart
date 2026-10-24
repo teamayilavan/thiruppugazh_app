@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import '../../data/repositories/song_repository.dart';
 import 'song_detail_screen.dart';
 import '../../l10n/app_localizations.dart';
+import '../widgets/link_actions.dart';
 
 class HighlightsNotesScreen extends StatelessWidget {
   const HighlightsNotesScreen({super.key});
@@ -10,7 +11,7 @@ class HighlightsNotesScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 2,
+      length: 3,
       child: Scaffold(
         appBar: AppBar(
           title: Text(AppLocalizations.of(context)!.myLibrary),
@@ -24,10 +25,16 @@ class HighlightsNotesScreen extends StatelessWidget {
                 icon: const Icon(Icons.note),
                 text: AppLocalizations.of(context)!.notes,
               ),
+              Tab(
+                icon: const Icon(Icons.link),
+                text: AppLocalizations.of(context)!.links,
+              ),
             ],
           ),
         ),
-        body: const TabBarView(children: [HighlightsList(), NotesList()]),
+        body: const TabBarView(
+          children: [HighlightsList(), NotesList(), LinksList()],
+        ),
       ),
     );
   }
@@ -247,6 +254,122 @@ class _NotesListState extends State<NotesList> {
                     _refresh();
                   }
                 },
+              ),
+            );
+          },
+        );
+      },
+    );
+  }
+}
+
+class LinksList extends StatefulWidget {
+  const LinksList({super.key});
+
+  @override
+  State<LinksList> createState() => _LinksListState();
+}
+
+class _LinksListState extends State<LinksList> {
+  late Future<List<Map<String, dynamic>>> _future;
+
+  @override
+  void initState() {
+    super.initState();
+    _load();
+  }
+
+  void _load() {
+    _future = Provider.of<SongRepository>(
+      context,
+      listen: false,
+    ).getLinksWithSongs();
+  }
+
+  void _refresh() {
+    if (!mounted) return;
+    setState(_load);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
+    return FutureBuilder<List<Map<String, dynamic>>>(
+      future: _future,
+      builder: (context, snapshot) {
+        if (snapshot.connectionState == ConnectionState.waiting) {
+          return const Center(child: CircularProgressIndicator());
+        }
+        if (snapshot.hasError) {
+          return Center(child: Text(l10n.anErrorOccurred));
+        }
+        final rows = snapshot.data ?? [];
+        if (rows.isEmpty) {
+          return Center(child: Text(l10n.noLinksFound));
+        }
+
+        return ListView.separated(
+          itemCount: rows.length,
+          separatorBuilder: (_, __) => const Divider(),
+          itemBuilder: (context, index) {
+            final row = rows[index];
+            final songId = row['song_id'] as int;
+            final songTitle = row['song_title'] as String;
+            final url = row['url'] as String;
+            final label = (row['title'] as String?)?.trim();
+            final shown = (label != null && label.isNotEmpty)
+                ? label
+                : (Uri.tryParse(url)?.host.isNotEmpty ?? false)
+                ? Uri.parse(url).host
+                : url;
+
+            return ListTile(
+              title: Text(
+                songTitle,
+                style: const TextStyle(fontWeight: FontWeight.bold),
+              ),
+              subtitle: Padding(
+                padding: const EdgeInsets.only(top: 4.0),
+                child: Text(shown, maxLines: 2, overflow: TextOverflow.ellipsis),
+              ),
+              onTap: () async {
+                final repo = Provider.of<SongRepository>(
+                  context,
+                  listen: false,
+                );
+                final song = await repo.getSongById(songId);
+                if (song != null && context.mounted) {
+                  await Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => SongDetailScreen(song: song),
+                    ),
+                  );
+                  _refresh();
+                }
+              },
+              trailing: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  IconButton(
+                    tooltip: l10n.links,
+                    icon: const Icon(Icons.open_in_new),
+                    onPressed: () => openSavedLink(context, url),
+                  ),
+                  IconButton(
+                    tooltip: l10n.deleteLink,
+                    icon: const Icon(Icons.delete_outline),
+                    onPressed: () async {
+                      if (!await confirmDeleteLink(context)) return;
+                      if (!context.mounted) return;
+                      await Provider.of<SongRepository>(
+                        context,
+                        listen: false,
+                      ).deleteLink(row['id'] as int);
+                      _refresh();
+                    },
+                  ),
+                ],
               ),
             );
           },

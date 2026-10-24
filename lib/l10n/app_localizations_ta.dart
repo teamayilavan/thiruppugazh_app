@@ -326,9 +326,10 @@ class AppLocalizationsTa extends AppLocalizations {
     int categories,
     int notes,
     int highlights,
+    int links,
     String date,
   ) {
-    return 'This backup has $favorites favorites, $categories categories, $notes notes and $highlights highlights, from $date.\n\nCategories and Favorites will be merged. Notes and Highlights will be overwritten for existing songs.\n\nContinue?';
+    return 'This backup has $favorites favorites, $categories categories, $notes notes, $highlights highlights and $links links, from $date.\n\nCategories, Favorites and Links will be merged. Notes and Highlights will be overwritten for existing songs.\n\nContinue?';
   }
 
   @override
@@ -547,4 +548,57 @@ class AppLocalizationsTa extends AppLocalizations {
 
   @override
   String get decreaseLyricsFontSize => 'பாடல் வரிகளின் எழுத்துருவை சிறிதாக்கு';
+
+  @override
+  String get links => 'இணைப்புகள்';
+
+  @override
+  String get addLink => 'இணைப்பைச் சேர்';
+
+  @override
+  String get linkUrl => 'இணைப்பு (URL)';
+
+  @override
+  String get linkLabelOptional => 'பெயர் (விருப்பம்)';
+
+  @override
+  String get pasteLink => 'ஒட்டு';
+
+  @override
+  String get linkInvalid =>
+      'http:// அல்லது https:// உடன் தொடங்கும் சரியான இணைய இணைப்பை உள்ளிடவும்';
+
+  @override
+  String get linkCouldNotOpen => 'இந்த இணைப்பைத் திறக்க முடியவில்லை';
+
+  @override
+  String get noLinksFound => 'இணைப்புகள் எதுவும் இல்லை.';
+
+  @override
+  String get deleteLink => 'இணைப்பை நீக்கு';
+
+  @override
+  String get deleteLinkConfirmation =>
+      'இந்த இணைப்பை நிச்சயமாக நீக்க விரும்புகிறீர்களா?';
+
+  @override
+  String get linkAdded => 'இணைப்பு சேர்க்கப்பட்டது';
+
+  @override
+  String linkAddedToSong(String song) {
+    return '$song பாடலில் இணைப்பு சேர்க்கப்பட்டது';
+  }
+
+  @override
+  String get pickSongForLink => 'இந்த இணைப்பிற்கான பாடலைத் தேர்ந்தெடுக்கவும்';
+
+  @override
+  String get searchSongsHint => 'பாடல்களைத் தேடு';
+
+  @override
+  String get sharedLinkNotFound =>
+      'நீங்கள் பகிர்ந்ததில் இணைய இணைப்பு எதுவும் இல்லை.';
+
+  @override
+  String get linkAlreadyAdded => 'இந்தப் பாடலில் அந்த இணைப்பு ஏற்கனவே உள்ளது.';
 }

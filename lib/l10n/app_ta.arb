@@ -169,5 +169,21 @@
   "viewSourceCode": "GitHub-இல் மூலக் குறியீட்டைக் காண்க",
   "visitMayuragiriWebsite": "மயூரகிரி.காம்-ஐப் பார்வையிடவும்",
   "increaseLyricsFontSize": "பாடல் வரிகளின் எழுத்துருவை பெரிதாக்கு",
-  "decreaseLyricsFontSize": "பாடல் வரிகளின் எழுத்துருவை சிறிதாக்கு"
+  "decreaseLyricsFontSize": "பாடல் வரிகளின் எழுத்துருவை சிறிதாக்கு",
+  "links": "இணைப்புகள்",
+  "addLink": "இணைப்பைச் சேர்",
+  "linkUrl": "இணைப்பு (URL)",
+  "linkLabelOptional": "பெயர் (விருப்பம்)",
+  "pasteLink": "ஒட்டு",
+  "linkInvalid": "http:// அல்லது https:// உடன் தொடங்கும் சரியான இணைய இணைப்பை உள்ளிடவும்",
+  "linkCouldNotOpen": "இந்த இணைப்பைத் திறக்க முடியவில்லை",
+  "noLinksFound": "இணைப்புகள் எதுவும் இல்லை.",
+  "deleteLink": "இணைப்பை நீக்கு",
+  "deleteLinkConfirmation": "இந்த இணைப்பை நிச்சயமாக நீக்க விரும்புகிறீர்களா?",
+  "linkAdded": "இணைப்பு சேர்க்கப்பட்டது",
+  "linkAddedToSong": "{song} பாடலில் இணைப்பு சேர்க்கப்பட்டது",
+  "pickSongForLink": "இந்த இணைப்பிற்கான பாடலைத் தேர்ந்தெடுக்கவும்",
+  "searchSongsHint": "பாடல்களைத் தேடு",
+  "sharedLinkNotFound": "நீங்கள் பகிர்ந்ததில் இணைய இணைப்பு எதுவும் இல்லை.",
+  "linkAlreadyAdded": "இந்தப் பாடலில் அந்த இணைப்பு ஏற்கனவே உள்ளது."
 }

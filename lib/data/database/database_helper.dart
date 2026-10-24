@@ -9,6 +9,7 @@ import '../models/category_model.dart';
 import '../models/search_filter.dart';
 import '../models/highlight_model.dart';
 import '../models/note_model.dart';
+import '../models/link_model.dart';
 import '../../utils/app_logger.dart';
 import '../../constants/app_constants.dart';
 
@@ -112,6 +113,9 @@ class DatabaseHelper {
         }
         if (oldVersion < 5) {
           await migrateToV5(db);
+        }
+        if (oldVersion < 6) {
+          await migrateToV6(db);
         }
       },
       onOpen: (db) async {
@@ -319,6 +323,9 @@ class DatabaseHelper {
       )
     ''');
 
+    // 6b. Create Links table
+    await _createLinksTable(db);
+
     // 7. Populate Temples Table
     // We only want to populate if it's empty to avoid re-calculating on every open/upgrade unnecessarily,
     // unless we want to ensure sync.
@@ -409,6 +416,40 @@ class DatabaseHelper {
       CREATE INDEX IF NOT EXISTS idx_notes_song_id
       ON notes(song_id)
     ''');
+  }
+
+  Future<void> _createLinksTable(DatabaseExecutor db) async {
+    await db.execute('''
+      CREATE TABLE IF NOT EXISTS links(
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        song_id INTEGER NOT NULL,
+        url TEXT NOT NULL,
+        title TEXT,
+        created_at TEXT NOT NULL,
+        FOREIGN KEY(song_id) REFERENCES songs(id) ON DELETE CASCADE
+      )
+    ''');
+    await db.execute('''
+      CREATE INDEX IF NOT EXISTS idx_links_song_id
+      ON links(song_id)
+    ''');
+  }
+
+  /// v6: adds the user-owned `links` table. Purely additive; existing data is
+  /// untouched. Idempotent, and non-fatal so a failure here can't block the
+  /// app from opening (links would simply be unavailable).
+  @visibleForTesting
+  Future<void> migrateToV6(Database db) async {
+    AppLogger.info('Running v6 migration: adding links table');
+    try {
+      await _createLinksTable(db);
+    } catch (e, st) {
+      AppLogger.error(
+        'v6 migration: failed to create links table',
+        error: e,
+        stackTrace: st,
+      );
+    }
   }
 
   Future<void> _migrateToV3(Database db) async {
@@ -800,6 +841,71 @@ class DatabaseHelper {
     final db = await database;
     await db.delete('notes', where: 'song_id = ?', whereArgs: [songId]);
     DatabaseHelper.onMutation?.call();
+  }
+
+  // --- Links Methods ---
+
+  Future<int> addLink(SongLink link, {DatabaseExecutor? executor}) async {
+    final DatabaseExecutor db = executor ?? await database;
+    final id = await db.insert('links', link.toMap()..remove('id'));
+    DatabaseHelper.onMutation?.call();
+    return id;
+  }
+
+  /// Inserts [link] unless this song already has the same URL. Returns true
+  /// if a row was added. Used by backup import so re-importing a backup never
+  /// duplicates links.
+  Future<bool> addLinkIfAbsent(
+    SongLink link, {
+    DatabaseExecutor? executor,
+  }) async {
+    final DatabaseExecutor db = executor ?? await database;
+    final existing = await db.query(
+      'links',
+      columns: ['id'],
+      where: 'song_id = ? AND url = ?',
+      whereArgs: [link.songId, link.url],
+      limit: 1,
+    );
+    if (existing.isNotEmpty) return false;
+    await addLink(link, executor: db);
+    return true;
+  }
+
+  Future<void> deleteLink(int id) async {
+    final db = await database;
+    await db.delete('links', where: 'id = ?', whereArgs: [id]);
+    DatabaseHelper.onMutation?.call();
+  }
+
+  Future<List<SongLink>> getLinksForSong(int songId) async {
+    final db = await database;
+    final maps = await db.query(
+      'links',
+      where: 'song_id = ?',
+      whereArgs: [songId],
+      orderBy: 'created_at ASC',
+    );
+    return List.generate(maps.length, (i) => SongLink.fromMap(maps[i]));
+  }
+
+  Future<List<SongLink>> getAllLinks() async {
+    final db = await database;
+    final maps = await db.query('links', orderBy: 'created_at DESC');
+    return List.generate(maps.length, (i) => SongLink.fromMap(maps[i]));
+  }
+
+  /// Returns all links joined with their song titles in one query.
+  /// Each map contains all link columns plus `song_title`.
+  Future<List<Map<String, dynamic>>> getLinksWithSongs() async {
+    final db = await database;
+    return await db.rawQuery('''
+      SELECT l.id, l.song_id, l.url, l.title, l.created_at,
+             s.title AS song_title
+      FROM links l
+      INNER JOIN songs s ON l.song_id = s.id
+      ORDER BY l.created_at DESC
+    ''');
   }
 
   // --- Query Methods ---

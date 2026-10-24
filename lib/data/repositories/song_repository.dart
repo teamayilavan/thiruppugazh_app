@@ -6,6 +6,7 @@ import '../models/song_model.dart';
 import '../models/search_filter.dart';
 import '../models/highlight_model.dart';
 import '../models/note_model.dart';
+import '../models/link_model.dart';
 
 /// A repository that acts as a mediator between UI and data source (DatabaseHelper).
 /// It extends ChangeNotifier to notify of data changes.
@@ -61,6 +62,35 @@ class SongRepository extends ChangeNotifier {
     await dbHelper.deleteNote(songId);
     notifyListeners();
   }
+
+  // --- Links Methods ---
+
+  Future<int> addLink(SongLink link) async {
+    final id = await dbHelper.addLink(link);
+    notifyListeners();
+    return id;
+  }
+
+  /// Adds the link unless the song already has that URL. Returns whether a
+  /// row was added.
+  Future<bool> addLinkIfAbsent(SongLink link) async {
+    final added = await dbHelper.addLinkIfAbsent(link);
+    if (added) notifyListeners();
+    return added;
+  }
+
+  Future<void> deleteLink(int id) async {
+    await dbHelper.deleteLink(id);
+    notifyListeners();
+  }
+
+  Future<List<SongLink>> getLinksForSong(int songId) =>
+      dbHelper.getLinksForSong(songId);
+
+  Future<List<SongLink>> getAllLinks() => dbHelper.getAllLinks();
+
+  Future<List<Map<String, dynamic>>> getLinksWithSongs() =>
+      dbHelper.getLinksWithSongs();
 
   // --- Song and Meaning Methods ---
 

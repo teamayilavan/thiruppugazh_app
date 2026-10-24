@@ -2,7 +2,7 @@
 
 The application uses SQLite via the `sqflite` package. The database file `thiruppugazh.db` is pre-populated and bundled as an asset, then copied to the device on first launch.
 
-**Current version:** 5 (data-only: fixes mis-parsed songs 1328 and 1338, restores songs 1–6; no schema change)
+**Current version:** 6 (adds the user-owned `links` table; v5 was data-only: fixed mis-parsed songs 1328 and 1338, restored songs 1–6)
 
 ---
 
@@ -130,6 +130,20 @@ User notes attached to songs (one note per song).
 
 ---
 
+### `links`
+
+Web links a user attached to a song (a video, a discourse, a shared post). Many per song. Stores only the URL and an optional label — nothing is fetched, so it works fully offline; tapping a link opens it externally. Only `http`/`https` URLs are stored.
+
+| Column | Type | Notes |
+|---|---|---|
+| `id` | INTEGER PK AutoIncrement | |
+| `song_id` | INTEGER FK → `songs.id` | Cascade delete |
+| `url` | TEXT | Absolute http(s) URL |
+| `title` | TEXT | Optional user label; the UI falls back to the domain |
+| `created_at` | TEXT | ISO 8601 timestamp |
+
+---
+
 ## Indexes
 
 | Index | Table | Column | Purpose |
@@ -138,6 +152,7 @@ User notes attached to songs (one note per song).
 | `idx_song_categories_category_id` | `song_categories` | `category_id` | Fast category song list |
 | `idx_highlights_song_id` | `highlights` | `song_id` | Fast highlight lookup per song |
 | `idx_notes_song_id` | `notes` | `song_id` | Fast note lookup per song |
+| `idx_links_song_id` | `links` | `song_id` | Fast link lookup per song |
 
 ---
 
@@ -150,6 +165,7 @@ User notes attached to songs (one note per song).
 | 3 | Added 7 English columns to `songs`; added `english_name` to `temples`; populated via `assets/english_data.json` migration asset |
 | 4 | Added `mayuragiri_lyrics_separated`/`mayuragiri_english_lyrics_separated` to `songs`; populated via `assets/mayuragiri_data.json` migration asset |
 | 5 | Data-only fix: `UPDATE`s songs 1328 and 1338 from `assets/song_fixes_v5.json` (`migrateToV5`). Touches only `lyrics`, `tune`, `tune_list`, `lyrics_list`, `pathavurai`, `search_content`, `mayuragiri_lyrics_separated` — never `is_favorite`, and never delete/replace (notes, highlights and category links cascade-delete with the song row). Also re-inserts songs 1–6 (`assets/song_restore_v5.json`, `INSERT OR IGNORE`, never overwriting an existing row, `is_favorite` always 0) and refreshes their temples' `song_count`. Fresh installs get the same rows from the rebuilt bundled DB. |
+| 6 | Added the `links` table and `idx_links_song_id` (`migrateToV6`). Purely additive, idempotent, and non-fatal; existing data is untouched. Fresh installs create it in `onCreate`. |
 
 ---
 
@@ -203,6 +219,14 @@ User notes attached to songs (one note per song).
 - `getAllNotes()`
 - `getNotesWithSongs()` — notes joined with song titles
 - `deleteNote(int songId)`
+
+### Links
+- `addLink(SongLink link)` — insert
+- `addLinkIfAbsent(SongLink link)` — insert unless the song already has that URL; returns whether a row was added (used by backup import and the share flow)
+- `deleteLink(int id)`
+- `getLinksForSong(int songId)` — oldest first
+- `getAllLinks()`
+- `getLinksWithSongs()` — links joined with song titles
 
 ### Temples
 - `getAllTemples()` — all temples sorted by Tamil name; returns `english_name` column in v3

@@ -326,9 +326,10 @@ class AppLocalizationsEn extends AppLocalizations {
     int categories,
     int notes,
     int highlights,
+    int links,
     String date,
   ) {
-    return 'This backup has $favorites favorites, $categories categories, $notes notes and $highlights highlights, from $date.\n\nCategories and Favorites will be merged. Notes and Highlights will be overwritten for existing songs.\n\nContinue?';
+    return 'This backup has $favorites favorites, $categories categories, $notes notes, $highlights highlights and $links links, from $date.\n\nCategories, Favorites and Links will be merged. Notes and Highlights will be overwritten for existing songs.\n\nContinue?';
   }
 
   @override
@@ -545,4 +546,56 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get decreaseLyricsFontSize => 'Decrease lyrics font size';
+
+  @override
+  String get links => 'Links';
+
+  @override
+  String get addLink => 'Add Link';
+
+  @override
+  String get linkUrl => 'Link (URL)';
+
+  @override
+  String get linkLabelOptional => 'Label (optional)';
+
+  @override
+  String get pasteLink => 'Paste';
+
+  @override
+  String get linkInvalid =>
+      'Enter a valid web link starting with http:// or https://';
+
+  @override
+  String get linkCouldNotOpen => 'Couldn\'t open this link';
+
+  @override
+  String get noLinksFound => 'No links yet.';
+
+  @override
+  String get deleteLink => 'Delete Link';
+
+  @override
+  String get deleteLinkConfirmation =>
+      'Are you sure you want to remove this link?';
+
+  @override
+  String get linkAdded => 'Link added';
+
+  @override
+  String linkAddedToSong(String song) {
+    return 'Link added to $song';
+  }
+
+  @override
+  String get pickSongForLink => 'Pick a song for this link';
+
+  @override
+  String get searchSongsHint => 'Search songs';
+
+  @override
+  String get sharedLinkNotFound => 'No web link found in what you shared.';
+
+  @override
+  String get linkAlreadyAdded => 'This song already has that link.';
 }

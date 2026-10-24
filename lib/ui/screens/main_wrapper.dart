@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'dart:async';
 import 'dart:io';
 
 import 'categories_screen.dart';
@@ -10,6 +11,9 @@ import 'package:app_links/app_links.dart';
 import 'package:provider/provider.dart';
 import '../../data/repositories/song_repository.dart';
 import 'song_detail_screen.dart';
+import 'pick_song_screen.dart';
+import '../../services/share_intent_service.dart';
+import '../../utils/link_utils.dart';
 import '../../constants/app_constants.dart';
 import '../../l10n/app_localizations.dart';
 
@@ -34,11 +38,57 @@ class _MainWrapperState extends State<MainWrapper> {
   // ... (omitted AppLinks code) ...
 
   late AppLinks _appLinks;
+  StreamSubscription<String>? _shareSubscription;
 
   @override
   void initState() {
     super.initState();
     _initDeepLinks();
+    _initShareIntake();
+  }
+
+  @override
+  void dispose() {
+    _shareSubscription?.cancel();
+    super.dispose();
+  }
+
+  /// Handles web links shared into the app from other apps: both the share
+  /// that launched us and any that arrive while we're running.
+  Future<void> _initShareIntake() async {
+    _shareSubscription = ShareIntentService.sharedText.listen(
+      _handleSharedText,
+    );
+    final initial = await ShareIntentService.getInitialSharedText();
+    if (initial != null) await _handleSharedText(initial);
+  }
+
+  Future<void> _handleSharedText(String text) async {
+    if (!mounted) return;
+    final url = LinkUtils.extractUrl(text);
+    if (url == null) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text(AppLocalizations.of(context)!.sharedLinkNotFound),
+        ),
+      );
+      return;
+    }
+    final navigator = Navigator.of(context);
+    final song = await navigator.push<dynamic>(
+      MaterialPageRoute(
+        builder: (context) => PickSongScreen(
+          url: url,
+          title: LinkUtils.suggestTitle(text, url),
+        ),
+      ),
+    );
+    // Take the user to the song so they see the link they just attached.
+    if (song != null && mounted) {
+      navigator.push(
+        MaterialPageRoute(builder: (context) => SongDetailScreen(song: song)),
+      );
+    }
   }
 
   Future<void> _initDeepLinks() async {

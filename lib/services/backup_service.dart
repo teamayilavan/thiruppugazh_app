@@ -5,12 +5,15 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:share_plus/share_plus.dart';
+import 'package:sqflite/sqflite.dart' show DatabaseExecutor;
 import '../data/database/database_helper.dart';
 import '../data/models/category_model.dart';
 import '../data/models/highlight_model.dart';
+import '../data/models/link_model.dart';
 import '../data/models/note_model.dart';
 import '../l10n/app_localizations.dart';
 import '../utils/app_logger.dart';
+import '../utils/link_utils.dart';
 
 /// The only backup format version this app understands. A backup written
 /// by a future app version with a higher `version` would otherwise be
@@ -68,6 +71,8 @@ class ImportResult {
     required this.notesSkipped,
     required this.highlightsImported,
     required this.highlightsSkipped,
+    this.linksImported = 0,
+    this.linksSkipped = 0,
   });
 
   final int favoritesImported;
@@ -79,11 +84,21 @@ class ImportResult {
   final int notesSkipped;
   final int highlightsImported;
   final int highlightsSkipped;
+  final int linksImported;
+  final int linksSkipped;
 
   int get totalSkipped =>
-      favoritesSkipped + categorySongsSkipped + notesSkipped + highlightsSkipped;
+      favoritesSkipped +
+      categorySongsSkipped +
+      notesSkipped +
+      highlightsSkipped +
+      linksSkipped;
   int get totalImported =>
-      favoritesImported + categorySongsImported + notesImported + highlightsImported;
+      favoritesImported +
+      categorySongsImported +
+      notesImported +
+      highlightsImported +
+      linksImported;
 }
 
 /// What's inside a backup file, computed after parsing but before writing
@@ -97,12 +112,14 @@ class BackupPreview {
     required this.highlights,
     required this.exportedAt,
     required this.rawMap,
+    this.links = 0,
   });
 
   final int favorites;
   final int categories;
   final int notes;
   final int highlights;
+  final int links;
   final DateTime? exportedAt;
   final Map<String, dynamic> rawMap;
 }
@@ -110,7 +127,7 @@ class BackupPreview {
 class BackupService {
   final DatabaseHelper _dbHelper = DatabaseHelper();
 
-  /// Gathers favorites, categories, notes, and highlights into the backup
+  /// Gathers favorites, categories, notes, highlights, and links into the backup
   /// JSON shape. Pure data-gathering, no file I/O or UI -- shared by the
   /// manual share-sheet export and the silent auto-backup writer, so both
   /// paths produce byte-identical output for the same data.
@@ -120,6 +137,7 @@ class BackupService {
     final songCategories = await _dbHelper.getAllSongCategories();
     final notes = await _dbHelper.getAllNotes();
     final highlights = await _dbHelper.getAllHighlights();
+    final links = await _dbHelper.getAllLinks();
 
     final customCategories = categories.where((c) => c.id != 1).toList();
 
@@ -137,10 +155,11 @@ class BackupService {
       }).toList(),
       'notes': notes.map((n) => n.toMap()).toList(),
       'highlights': highlights.map((h) => h.toMap()).toList(),
+      'links': links.map((l) => l.toMap()).toList(),
     };
   }
 
-  /// Exports user data (Favorites, Categories, Notes, Highlights) to a JSON file
+  /// Exports user data (Favorites, Categories, Notes, Highlights, Links) to a JSON file
   /// and prompts the user to share/save it.
   Future<void> exportData(BuildContext context) async {
     try {
@@ -199,6 +218,7 @@ class BackupService {
       final cats = (importMap['categories'] as List);
       final notes = (importMap['notes'] as List?) ?? const [];
       final highlights = (importMap['highlights'] as List?) ?? const [];
+      final links = (importMap['links'] as List?) ?? const [];
       final exportedAtRaw = importMap['exported_at'];
 
       return BackupPreview(
@@ -206,6 +226,7 @@ class BackupService {
         categories: cats.length,
         notes: notes.length,
         highlights: highlights.length,
+        links: links.length,
         exportedAt: exportedAtRaw is String
             ? DateTime.tryParse(exportedAtRaw)
             : null,
@@ -292,6 +313,7 @@ class BackupService {
             preview.categories,
             preview.notes,
             preview.highlights,
+            preview.links,
             dateStr,
           ),
         ),
@@ -384,6 +406,12 @@ class BackupService {
         }
       }
 
+      final linksResult = await importLinks(
+        map['links'] ?? [],
+        validSongIds,
+        executor: txn,
+      );
+
       return ImportResult(
         favoritesImported: favIdsToApply.length,
         favoritesSkipped: favIds.length - favIdsToApply.length,
@@ -394,8 +422,43 @@ class BackupService {
         notesSkipped: notesSkipped,
         highlightsImported: highlightsImported,
         highlightsSkipped: highlightsSkipped,
+        linksImported: linksResult.imported,
+        linksSkipped: linksResult.skipped,
       );
     });
+  }
+
+  /// Merges the backup's `links` into the database. Malformed rows, rows for
+  /// songs this install doesn't have, and rows whose URL isn't http(s) are
+  /// skipped (and counted) rather than aborting the import -- the URL is
+  /// re-validated because a hand-edited backup must not be able to smuggle in
+  /// another scheme. A link the song already has counts as imported, not
+  /// skipped, so re-importing a backup never duplicates links.
+  @visibleForTesting
+  Future<({int imported, int skipped})> importLinks(
+    List<dynamic> linksList,
+    Set<int> validSongIds, {
+    required DatabaseExecutor executor,
+  }) async {
+    var imported = 0;
+    var skipped = 0;
+    for (final linkMap in linksList) {
+      SongLink? link;
+      try {
+        link = SongLink.fromMap(withoutRowId(linkMap as Map));
+      } catch (_) {
+        link = null;
+      }
+      if (link == null ||
+          !validSongIds.contains(link.songId) ||
+          !LinkUtils.isValidUrl(link.url)) {
+        skipped++;
+        continue;
+      }
+      await _dbHelper.addLinkIfAbsent(link, executor: executor);
+      imported++;
+    }
+    return (imported: imported, skipped: skipped);
   }
 
   void _validateBackupMap(Map<String, dynamic> map) {
@@ -450,6 +513,11 @@ class BackupService {
     final highlights = map['highlights'];
     if (highlights != null && highlights is! List) {
       throw const FormatException('highlights must be a list');
+    }
+
+    final links = map['links'];
+    if (links != null && links is! List) {
+      throw const FormatException('links must be a list');
     }
   }
 }

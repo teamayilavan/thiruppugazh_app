@@ -6,8 +6,11 @@ import 'package:url_launcher/url_launcher.dart';
 import '../../data/models/song_model.dart';
 import '../../data/models/highlight_model.dart';
 import '../../data/models/note_model.dart';
+import '../../data/models/link_model.dart';
 import '../../data/repositories/song_repository.dart';
 import '../widgets/add_to_category_dialog.dart';
+import '../widgets/add_link_sheet.dart';
+import '../widgets/link_actions.dart';
 
 import '../../constants/app_constants.dart';
 import '../../l10n/app_localizations.dart';
@@ -34,6 +37,7 @@ class _SongDetailScreenState extends State<SongDetailScreen> {
   List<int> _categoryIds = [];
   List<Highlight> _highlights = [];
   Note? _note;
+  List<SongLink> _links = [];
   final List<VerseRange> _verseRanges = [];
   LyricsLanguage _lyricsLanguage = LyricsLanguage.tamil;
 
@@ -86,6 +90,7 @@ class _SongDetailScreenState extends State<SongDetailScreen> {
     final categoryIds = await repo.getCategoryIdsForSong(widget.song.id);
     final highlights = await repo.getHighlightsForSong(widget.song.id);
     final note = await repo.getNoteForSong(widget.song.id);
+    final links = await repo.getLinksForSong(widget.song.id);
 
     if (mounted) {
       setState(() {
@@ -93,8 +98,65 @@ class _SongDetailScreenState extends State<SongDetailScreen> {
         _isFavorite = widget.song.isFavorite;
         _highlights = highlights;
         _note = note;
+        _links = links;
       });
     }
+  }
+
+  Future<void> _reloadLinks() async {
+    final repo = Provider.of<SongRepository>(context, listen: false);
+    final links = await repo.getLinksForSong(widget.song.id);
+    if (mounted) setState(() => _links = links);
+  }
+
+  Future<void> _addLink() async {
+    final added = await showAddLinkSheet(context, songId: widget.song.id);
+    if (added) await _reloadLinks();
+  }
+
+  Future<void> _deleteLink(SongLink link) async {
+    if (link.id == null || !await confirmDeleteLink(context)) return;
+    if (!mounted) return;
+    await Provider.of<SongRepository>(context, listen: false)
+        .deleteLink(link.id!);
+    await _reloadLinks();
+  }
+
+  Widget _buildLinksSection(AppLocalizations l10n) {
+    if (_links.isEmpty) return const SizedBox.shrink();
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(16, 16, 16, 0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(l10n.links, style: Theme.of(context).textTheme.titleMedium),
+          const SizedBox(height: 8),
+          for (final link in _links)
+            Card(
+              margin: const EdgeInsets.only(bottom: 8),
+              child: ListTile(
+                leading: const Icon(Icons.link),
+                title: Text(
+                  link.displayTitle,
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
+                ),
+                subtitle: Text(
+                  link.url,
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                ),
+                onTap: () => openSavedLink(context, link.url),
+                trailing: IconButton(
+                  tooltip: l10n.deleteLink,
+                  icon: const Icon(Icons.delete_outline),
+                  onPressed: () => _deleteLink(link),
+                ),
+              ),
+            ),
+        ],
+      ),
+    );
   }
 
   Future<void> _toggleFavorite() async {
@@ -617,19 +679,38 @@ ${_displayLyricsList.join('\n')}''';
             ),
           ),
 
+          SliverToBoxAdapter(child: _buildLinksSection(l10n)),
+
           SliverToBoxAdapter(
             child: Padding(
               padding: const EdgeInsets.all(16.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  FilledButton.tonalIcon(
-                    style: buttonStyle,
-                    icon: Icon(
-                      _note != null ? Icons.note : Icons.note_add_outlined,
-                    ),
-                    label: Text(l10n.songNote),
-                    onPressed: _showNoteDialog,
+                  Row(
+                    children: [
+                      Expanded(
+                        child: FilledButton.tonalIcon(
+                          style: buttonStyle,
+                          icon: Icon(
+                            _note != null
+                                ? Icons.note
+                                : Icons.note_add_outlined,
+                          ),
+                          label: Text(l10n.songNote),
+                          onPressed: _showNoteDialog,
+                        ),
+                      ),
+                      const SizedBox(width: 8),
+                      Expanded(
+                        child: FilledButton.tonalIcon(
+                          style: buttonStyle,
+                          icon: const Icon(Icons.add_link),
+                          label: Text(l10n.addLink),
+                          onPressed: _addLink,
+                        ),
+                      ),
+                    ],
                   ),
                   const SizedBox(height: 12),
                   Row(

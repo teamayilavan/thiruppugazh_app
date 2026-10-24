@@ -112,13 +112,14 @@
   "importData": "Import Data",
   "importConfirmationTitle": "Import Backup",
   "importConfirmationMessage": "This will import data from a backup file.\n\n• Categories and Favorites will be merged.\n• Notes and Highlights will be overwritten for existing songs.\n\nDo you want to continue?",
-  "importConfirmationDetailedMessage": "This backup has {favorites} favorites, {categories} categories, {notes} notes and {highlights} highlights, from {date}.\n\nCategories and Favorites will be merged. Notes and Highlights will be overwritten for existing songs.\n\nContinue?",
+  "importConfirmationDetailedMessage": "This backup has {favorites} favorites, {categories} categories, {notes} notes, {highlights} highlights and {links} links, from {date}.\n\nCategories, Favorites and Links will be merged. Notes and Highlights will be overwritten for existing songs.\n\nContinue?",
   "@importConfirmationDetailedMessage": {
     "placeholders": {
       "favorites": {"type": "int"},
       "categories": {"type": "int"},
       "notes": {"type": "int"},
       "highlights": {"type": "int"},
+      "links": {"type": "int"},
       "date": {"type": "String"}
     }
   },
@@ -212,5 +213,26 @@
   "viewSourceCode": "View Source Code on GitHub",
   "visitMayuragiriWebsite": "Visit Mayuragiri.com",
   "increaseLyricsFontSize": "Increase lyrics font size",
-  "decreaseLyricsFontSize": "Decrease lyrics font size"
+  "decreaseLyricsFontSize": "Decrease lyrics font size",
+  "links": "Links",
+  "addLink": "Add Link",
+  "linkUrl": "Link (URL)",
+  "linkLabelOptional": "Label (optional)",
+  "pasteLink": "Paste",
+  "linkInvalid": "Enter a valid web link starting with http:// or https://",
+  "linkCouldNotOpen": "Couldn't open this link",
+  "noLinksFound": "No links yet.",
+  "deleteLink": "Delete Link",
+  "deleteLinkConfirmation": "Are you sure you want to remove this link?",
+  "linkAdded": "Link added",
+  "linkAddedToSong": "Link added to {song}",
+  "pickSongForLink": "Pick a song for this link",
+  "searchSongsHint": "Search songs",
+  "sharedLinkNotFound": "No web link found in what you shared.",
+  "linkAlreadyAdded": "This song already has that link.",
+  "@linkAddedToSong": {
+    "placeholders": {
+      "song": {"type": "String"}
+    }
+  }
 }

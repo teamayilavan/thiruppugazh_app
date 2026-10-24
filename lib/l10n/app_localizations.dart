@@ -689,12 +689,13 @@ abstract class AppLocalizations {
   /// No description provided for @importConfirmationDetailedMessage.
   ///
   /// In en, this message translates to:
-  /// **'This backup has {favorites} favorites, {categories} categories, {notes} notes and {highlights} highlights, from {date}.\n\nCategories and Favorites will be merged. Notes and Highlights will be overwritten for existing songs.\n\nContinue?'**
+  /// **'This backup has {favorites} favorites, {categories} categories, {notes} notes, {highlights} highlights and {links} links, from {date}.\n\nCategories, Favorites and Links will be merged. Notes and Highlights will be overwritten for existing songs.\n\nContinue?'**
   String importConfirmationDetailedMessage(
     int favorites,
     int categories,
     int notes,
     int highlights,
+    int links,
     String date,
   );
 
@@ -1105,6 +1106,102 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Decrease lyrics font size'**
   String get decreaseLyricsFontSize;
+
+  /// No description provided for @links.
+  ///
+  /// In en, this message translates to:
+  /// **'Links'**
+  String get links;
+
+  /// No description provided for @addLink.
+  ///
+  /// In en, this message translates to:
+  /// **'Add Link'**
+  String get addLink;
+
+  /// No description provided for @linkUrl.
+  ///
+  /// In en, this message translates to:
+  /// **'Link (URL)'**
+  String get linkUrl;
+
+  /// No description provided for @linkLabelOptional.
+  ///
+  /// In en, this message translates to:
+  /// **'Label (optional)'**
+  String get linkLabelOptional;
+
+  /// No description provided for @pasteLink.
+  ///
+  /// In en, this message translates to:
+  /// **'Paste'**
+  String get pasteLink;
+
+  /// No description provided for @linkInvalid.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter a valid web link starting with http:// or https://'**
+  String get linkInvalid;
+
+  /// No description provided for @linkCouldNotOpen.
+  ///
+  /// In en, this message translates to:
+  /// **'Couldn\'t open this link'**
+  String get linkCouldNotOpen;
+
+  /// No description provided for @noLinksFound.
+  ///
+  /// In en, this message translates to:
+  /// **'No links yet.'**
+  String get noLinksFound;
+
+  /// No description provided for @deleteLink.
+  ///
+  /// In en, this message translates to:
+  /// **'Delete Link'**
+  String get deleteLink;
+
+  /// No description provided for @deleteLinkConfirmation.
+  ///
+  /// In en, this message translates to:
+  /// **'Are you sure you want to remove this link?'**
+  String get deleteLinkConfirmation;
+
+  /// No description provided for @linkAdded.
+  ///
+  /// In en, this message translates to:
+  /// **'Link added'**
+  String get linkAdded;
+
+  /// No description provided for @linkAddedToSong.
+  ///
+  /// In en, this message translates to:
+  /// **'Link added to {song}'**
+  String linkAddedToSong(String song);
+
+  /// No description provided for @pickSongForLink.
+  ///
+  /// In en, this message translates to:
+  /// **'Pick a song for this link'**
+  String get pickSongForLink;
+
+  /// No description provided for @searchSongsHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Search songs'**
+  String get searchSongsHint;
+
+  /// No description provided for @sharedLinkNotFound.
+  ///
+  /// In en, this message translates to:
+  /// **'No web link found in what you shared.'**
+  String get sharedLinkNotFound;
+
+  /// No description provided for @linkAlreadyAdded.
+  ///
+  /// In en, this message translates to:
+  /// **'This song already has that link.'**
+  String get linkAlreadyAdded;
 }
 
 class _AppLocalizationsDelegate

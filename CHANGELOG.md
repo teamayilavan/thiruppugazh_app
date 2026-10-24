@@ -2,6 +2,14 @@
 
 Notable changes to this project. Format loosely follows [Keep a Changelog](https://keepachangelog.com/).
 
+## [Unreleased]
+
+### Added
+- **Links.** Attach web links (a kirtan video, a discourse, a post) to any song. A **Add Link** button sits beside Note on the song detail screen; a song's links are listed inline just above the buttons, and tapping one opens it in the browser or the app that handles it. A new **Links** tab in My Library lists them all, grouped by song. Links store only the URL and an optional label, so everything works offline, and only `http`/`https` URLs are accepted.
+- **Share into the app.** Share a link from YouTube, Instagram, a browser or any app and choose Thiruppugazh: the app asks which song it belongs to (with search) and saves it. Works whether the app is closed or already open. Implemented as a small native Android share target in `MainActivity` — no new plugin.
+- Links are part of Export/Import and Auto Backup. Older backups without links still import, re-importing never duplicates a link, and a backup entry with a non-http(s) URL is skipped.
+- DB v6: new `links` table (additive; see [`docs/database.md`](docs/database.md)).
+
 ## [1.5.0+7] — 2026-09-30
 
 Everything below landed after `1.4.0+6`.
