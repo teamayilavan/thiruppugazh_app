@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'package:flutter/foundation.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../constants/app_constants.dart';
 import '../utils/app_logger.dart';
@@ -23,6 +24,31 @@ class ReadingStateProvider with ChangeNotifier {
 
   /// Completes when the saved state has been read (or found unusable).
   late final Future<void> ready;
+
+  bool _disposed = false;
+
+  @override
+  void dispose() {
+    _disposed = true;
+    super.dispose();
+  }
+
+  /// Notifies listeners, but never in the middle of a frame. A song page
+  /// records itself as opened from initState, i.e. while Flutter is
+  /// building; a notification sent then is dropped for the widgets above it
+  /// (in debug builds), leaving the Home "Continue" card stale. Waiting for
+  /// the end of the frame makes it reach everyone.
+  void _notify() {
+    if (_disposed) return;
+    final binding = SchedulerBinding.instance;
+    if (binding.schedulerPhase == SchedulerPhase.persistentCallbacks) {
+      binding.addPostFrameCallback((_) {
+        if (!_disposed) notifyListeners();
+      });
+    } else {
+      notifyListeners();
+    }
+  }
 
   ReadingStateProvider() {
     ready = _load();
@@ -68,7 +94,7 @@ class ReadingStateProvider with ChangeNotifier {
           _chantPositions[id] = index;
         }
       }
-      notifyListeners();
+      _notify();
     } catch (e, st) {
       // A corrupt blob must never break the app; start clean.
       AppLogger.error('Reading state unreadable; resetting', error: e, stackTrace: st);
@@ -110,7 +136,7 @@ class ReadingStateProvider with ChangeNotifier {
   }
 
   Future<void> _save() async {
-    notifyListeners();
+    _notify();
     try {
       final prefs = await SharedPreferences.getInstance();
       await prefs.setString(
