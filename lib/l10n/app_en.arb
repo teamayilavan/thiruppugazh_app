@@ -266,5 +266,14 @@
     "placeholders": {
       "name": {"type": "String"}
     }
-  }
+  },
+  "couldNotLaunchGoogle": "Could not launch Google for {songTitle}",
+  "@couldNotLaunchGoogle": {"placeholders": {"songTitle": {"type": "String"}}},
+  "couldNotLaunchMayuragiri": "Could not launch Mayuragiri",
+  "errorLoadingRandomSong": "Couldn't load a song. Please try again.",
+  "backupShareSubject": "Thiruppugazh Backup",
+  "backupShareText": "Backup of Thiruppugazh app data created on {date}",
+  "@backupShareText": {"placeholders": {"date": {"type": "String"}}},
+  "importUnknownDate": "an unknown date",
+  "couldNotOpenGithub": "Couldn't open the GitHub repository"
 }

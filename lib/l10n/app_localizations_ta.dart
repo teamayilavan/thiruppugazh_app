@@ -305,20 +305,20 @@ class AppLocalizationsTa extends AppLocalizations {
   String get english => 'English';
 
   @override
-  String get dataManagement => 'Data Management';
+  String get dataManagement => 'தரவு மேலாண்மை';
 
   @override
-  String get exportData => 'Export Data';
+  String get exportData => 'தரவை ஏற்றுமதி செய்';
 
   @override
-  String get importData => 'Import Data';
+  String get importData => 'தரவை இறக்குமதி செய்';
 
   @override
-  String get importConfirmationTitle => 'Import Backup';
+  String get importConfirmationTitle => 'காப்புப்பிரதியை இறக்குமதி செய்';
 
   @override
   String get importConfirmationMessage =>
-      'This will import data from a backup file.\n\n• Categories and Favorites will be merged.\n• Notes and Highlights will be overwritten for existing songs.\n\nDo you want to continue?';
+      'இது காப்புப்பிரதிக் கோப்பிலிருந்து தரவை இறக்குமதி செய்யும்.\n\n• வகைகளும் பிடித்தவையும் இணைக்கப்படும்.\n• ஏற்கெனவே உள்ள பாடல்களின் குறிப்புகளும் சிறப்பிடங்களும் மாற்றப்படும்.\n\nதொடரவா?';
 
   @override
   String importConfirmationDetailedMessage(
@@ -329,49 +329,52 @@ class AppLocalizationsTa extends AppLocalizations {
     int links,
     String date,
   ) {
-    return 'This backup has $favorites favorites, $categories categories, $notes notes, $highlights highlights and $links links, from $date.\n\nCategories, Favorites and Links will be merged. Notes and Highlights will be overwritten for existing songs.\n\nContinue?';
+    return 'இந்தக் காப்புப்பிரதியில் $favorites பிடித்தவை, $categories வகைகள், $notes குறிப்புகள், $highlights சிறப்பிடங்கள், $links இணைப்புகள் உள்ளன ($date).\n\nவகைகள், பிடித்தவை, இணைப்புகள் ஏற்கெனவே உள்ளவற்றுடன் இணைக்கப்படும். ஏற்கெனவே உள்ள பாடல்களின் குறிப்புகளும் சிறப்பிடங்களும் மாற்றப்படும்.\n\nதொடரவா?';
   }
 
   @override
-  String get importResultSuccess => 'Import completed successfully';
+  String get importResultSuccess => 'இறக்குமதி வெற்றிகரமாக முடிந்தது';
 
   @override
   String importResultWithSkips(int skipped) {
-    return 'Import completed. $skipped item(s) skipped (song no longer available).';
+    return 'இறக்குமதி முடிந்தது. $skipped உருப்படி(கள்) தவிர்க்கப்பட்டன (பாடல் இனி இல்லை).';
   }
 
   @override
   String get importFileInvalid =>
-      'This file isn\'t a valid Thiruppugazh backup.';
+      'இது செல்லுபடியாகும் திருப்புகழ் காப்புப்பிரதிக் கோப்பு அல்ல.';
 
   @override
-  String get importFileReadError => 'Couldn\'t read that file.';
+  String get importFileReadError => 'அந்தக் கோப்பைப் படிக்க முடியவில்லை.';
 
   @override
   String lastAutoBackupLabel(String time) {
-    return 'Last automatic backup: $time';
+    return 'கடைசி தானியங்கி காப்புப்பிரதி: $time';
   }
 
   @override
-  String get lastAutoBackupNever => 'Last automatic backup: not yet';
+  String get lastAutoBackupNever =>
+      'கடைசி தானியங்கி காப்புப்பிரதி: இன்னும் இல்லை';
 
   @override
-  String get exportSuccess => 'Export successful';
+  String get exportSuccess => 'ஏற்றுமதி வெற்றிகரமாக முடிந்தது';
 
   @override
-  String get exportFailed => 'Export failed';
+  String get exportFailed => 'ஏற்றுமதி தோல்வியடைந்தது';
 
   @override
-  String get exportFailedGeneric => 'Export failed. Please try again.';
+  String get exportFailedGeneric =>
+      'ஏற்றுமதி தோல்வியடைந்தது. மீண்டும் முயலவும்.';
 
   @override
-  String get importFailedGeneric => 'Import failed. Please try again.';
+  String get importFailedGeneric =>
+      'இறக்குமதி தோல்வியடைந்தது. மீண்டும் முயலவும்.';
 
   @override
-  String get importSuccess => 'Import completed successfully';
+  String get importSuccess => 'இறக்குமதி வெற்றிகரமாக முடிந்தது';
 
   @override
-  String get importFailed => 'Import failed';
+  String get importFailed => 'இறக்குமதி தோல்வியடைந்தது';
 
   @override
   String get songNote => 'பாடல் குறிப்பு';
@@ -663,4 +666,30 @@ class AppLocalizationsTa extends AppLocalizations {
   String noSongsInCategory(String name) {
     return '\"$name\" இல் பாடல்கள் எதுவும் இல்லை.';
   }
+
+  @override
+  String couldNotLaunchGoogle(String songTitle) {
+    return '$songTitle க்காக Google ஐத் திறக்க முடியவில்லை';
+  }
+
+  @override
+  String get couldNotLaunchMayuragiri => 'Mayuragiri ஐத் திறக்க முடியவில்லை';
+
+  @override
+  String get errorLoadingRandomSong =>
+      'பாடலை ஏற்ற முடியவில்லை. மீண்டும் முயலவும்.';
+
+  @override
+  String get backupShareSubject => 'திருப்புகழ் காப்புப்பிரதி';
+
+  @override
+  String backupShareText(String date) {
+    return '$date அன்று உருவாக்கப்பட்ட திருப்புகழ் செயலித் தரவின் காப்புப்பிரதி';
+  }
+
+  @override
+  String get importUnknownDate => 'தெரியாத தேதி';
+
+  @override
+  String get couldNotOpenGithub => 'GitHub களஞ்சியத்தைத் திறக்க முடியவில்லை';
 }

@@ -660,4 +660,30 @@ class AppLocalizationsEn extends AppLocalizations {
   String noSongsInCategory(String name) {
     return 'No songs found in \"$name\".';
   }
+
+  @override
+  String couldNotLaunchGoogle(String songTitle) {
+    return 'Could not launch Google for $songTitle';
+  }
+
+  @override
+  String get couldNotLaunchMayuragiri => 'Could not launch Mayuragiri';
+
+  @override
+  String get errorLoadingRandomSong =>
+      'Couldn\'t load a song. Please try again.';
+
+  @override
+  String get backupShareSubject => 'Thiruppugazh Backup';
+
+  @override
+  String backupShareText(String date) {
+    return 'Backup of Thiruppugazh app data created on $date';
+  }
+
+  @override
+  String get importUnknownDate => 'an unknown date';
+
+  @override
+  String get couldNotOpenGithub => 'Couldn\'t open the GitHub repository';
 }

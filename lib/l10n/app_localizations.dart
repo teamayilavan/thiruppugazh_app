@@ -1310,6 +1310,48 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'No songs found in \"{name}\".'**
   String noSongsInCategory(String name);
+
+  /// No description provided for @couldNotLaunchGoogle.
+  ///
+  /// In en, this message translates to:
+  /// **'Could not launch Google for {songTitle}'**
+  String couldNotLaunchGoogle(String songTitle);
+
+  /// No description provided for @couldNotLaunchMayuragiri.
+  ///
+  /// In en, this message translates to:
+  /// **'Could not launch Mayuragiri'**
+  String get couldNotLaunchMayuragiri;
+
+  /// No description provided for @errorLoadingRandomSong.
+  ///
+  /// In en, this message translates to:
+  /// **'Couldn\'t load a song. Please try again.'**
+  String get errorLoadingRandomSong;
+
+  /// No description provided for @backupShareSubject.
+  ///
+  /// In en, this message translates to:
+  /// **'Thiruppugazh Backup'**
+  String get backupShareSubject;
+
+  /// No description provided for @backupShareText.
+  ///
+  /// In en, this message translates to:
+  /// **'Backup of Thiruppugazh app data created on {date}'**
+  String backupShareText(String date);
+
+  /// No description provided for @importUnknownDate.
+  ///
+  /// In en, this message translates to:
+  /// **'an unknown date'**
+  String get importUnknownDate;
+
+  /// No description provided for @couldNotOpenGithub.
+  ///
+  /// In en, this message translates to:
+  /// **'Couldn\'t open the GitHub repository'**
+  String get couldNotOpenGithub;
 }
 
 class _AppLocalizationsDelegate
