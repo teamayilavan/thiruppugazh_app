@@ -1,0 +1,20 @@
+# Large media stays out of git; scripts, plans, tap scripts and the Remotion
+# project source stay in so any version can be rebuilt later.
+*.mp4
+*.mov
+*.mkv
+*.webm
+*.avi
+*.wav
+*.mp3
+*.m4a
+*.aac
+*.flac
+*.ogg
+*.psd
+remotion/node_modules/
+remotion/out/
+remotion/.cache/
+
+# Raw emulator captures
+recordings/raw/
