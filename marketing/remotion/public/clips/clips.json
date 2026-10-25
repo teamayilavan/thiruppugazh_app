@@ -1,0 +1,82 @@
+{
+  "b00_hook": {
+    "raw_seconds": 7.88,
+    "active_seconds": 7.32,
+    "windows": 2
+  },
+  "b01_library": {
+    "raw_seconds": 6.85,
+    "active_seconds": 6.17,
+    "windows": 2
+  },
+  "b01b_meaning": {
+    "raw_seconds": 4.24,
+    "active_seconds": 3.33,
+    "windows": 2
+  },
+  "b02_padham": {
+    "raw_seconds": 12.49,
+    "active_seconds": 11.67,
+    "windows": 5
+  },
+  "b03_search": {
+    "raw_seconds": 7.61,
+    "active_seconds": 8.41,
+    "windows": 1
+  },
+  "b04_temples": {
+    "raw_seconds": 4.96,
+    "active_seconds": 2.83,
+    "windows": 2
+  },
+  "b05_language_theme": {
+    "raw_seconds": 42.03,
+    "active_seconds": 34.04,
+    "windows": 17
+  },
+  "b06_notes": {
+    "raw_seconds": 18.18,
+    "active_seconds": 15.77,
+    "windows": 3
+  },
+  "b07_lists": {
+    "raw_seconds": 16.11,
+    "active_seconds": 11.17,
+    "windows": 5
+  },
+  "b08_share_in": {
+    "raw_seconds": 47.72,
+    "active_seconds": 34.56,
+    "windows": 9
+  },
+  "b08b_links": {
+    "raw_seconds": 2.97,
+    "active_seconds": 2.42,
+    "windows": 2
+  },
+  "b09_today": {
+    "raw_seconds": 10.87,
+    "active_seconds": 5.53,
+    "windows": 4
+  },
+  "b10_chanting": {
+    "raw_seconds": 24.55,
+    "active_seconds": 14.44,
+    "windows": 7
+  },
+  "b11_continue": {
+    "raw_seconds": 3.89,
+    "active_seconds": 2.23,
+    "windows": 2
+  },
+  "b12_reminder": {
+    "raw_seconds": 10.18,
+    "active_seconds": 7.66,
+    "windows": 6
+  },
+  "b13_share": {
+    "raw_seconds": 12.12,
+    "active_seconds": 8.13,
+    "windows": 5
+  }
+}

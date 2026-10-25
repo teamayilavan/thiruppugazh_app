@@ -1,0 +1,22 @@
+{
+  "name": "thiruppugazh-video",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Marketing video for the Thiruppugazh app (Remotion). Not part of the app build.",
+  "scripts": {
+    "prep": "python scripts/prep_clips.py",
+    "studio": "remotion studio src/index.ts",
+    "still": "remotion still src/index.ts Cut-music",
+    "render": "remotion render src/index.ts Cut-music ../exports/thiruppugazh-music-v1.mp4 --crf=18 --pixel-format=yuv420p"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.538",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "remotion": "4.0.538"
+  },
+  "devDependencies": {
+    "@types/react": "18.3.12",
+    "typescript": "5.6.3"
+  }
+}
