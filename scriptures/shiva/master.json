@@ -1,0 +1,4709 @@
+{
+ "stats": {
+  "episodes_defined": 20,
+  "stories_with_songs": 20,
+  "with_primary_text": 12,
+  "with_confirmed_dp": 19,
+  "with_both": 11,
+  "only_primary": 1,
+  "only_dp": 8,
+  "neither": 0,
+  "songs_total": 309,
+  "songs_with_story": 238,
+  "songs_without_story": 71
+ },
+ "stories": {
+  "deeds-tripura": {
+   "id": "deeds-tripura",
+   "domain": "deeds",
+   "eid": "tripura",
+   "title": "Burning of the three cities (Tripura)",
+   "brief": "Three flying cities of the demons Tarakaksha, Kamalaksha and Vidyunmali made them unconquerable. The gods made Shiva a chariot: Meru the bow, Vishnu the arrow, Vasuki the string. When the cities aligned he destroyed them with one smile or arrow. A Tamil tradition has Ganesha breaking the chariot's axle before the battle (song 1).",
+   "note": "",
+   "refs": [
+    {
+     "src": "Bhagavata Purana",
+     "ref": "SB 7.10.51-69",
+     "gist": "Narada tells how Maya built the three cities of gold, silver and iron; Shiva's arrows burn them, Maya revives the dead in a nectar well, Vishnu intervenes",
+     "quote": "",
+     "pinned": true,
+     "url": "https://vedabase.io/en/library/sb/7/10/"
+    },
+    {
+     "src": "Mahabharata (Critical Edition)",
+     "ref": "MBh 8,24 (esp. 8,24.114-115)",
+     "gist": "Karna parva: Shiva with the Pashupata missile and the divine chariot burns the Tripura; told as a model for Karna's chariot",
+     "quote": "",
+     "pinned": true,
+     "url": "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/2_epic/mbh/mbh_08_u.htm"
+    },
+    {
+     "src": "Mahabharata (Critical Edition)",
+     "ref": "MBh 7,173.37; 13,14.128",
+     "gist": "Short allusions: Shiva as destroyer of Tripura",
+     "quote": "",
+     "pinned": true,
+     "url": "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/2_epic/mbh/mbh_13_u.htm"
+    },
+    {
+     "src": "Valmiki Ramayana",
+     "ref": "Ramayana 1.75.12-16",
+     "gist": "Allusion: Shiva's bow given by the gods for the Tripura fight; Shiva-Vishnu bow contest",
+     "quote": "",
+     "pinned": true,
+     "url": "https://www.valmikiramayan.net/utf8/baala/sarga75/balasans75.htm"
+    },
+    {
+     "src": "Linga Purana",
+     "ref": "Linga Purana 1.71-72 (wisdomlib Sec.1 ch.71-72)",
+     "gist": "Nandikeshvara narrates the Tripura demons and the construction of Rudra's chariot for their burning",
+     "quote": "",
+     "pinned": true,
+     "url": "https://www.wisdomlib.org/hinduism/book/the-linga-purana/d/doc1196051.html"
+    },
+    {
+     "src": "Shiva Purana",
+     "ref": "Shiva Purana, Rudra-samhita 5 (Yuddha-khanda) ch.1, 3, 4, 10",
+     "gist": "The three cities, the Tripuras' virtue and Vishnu's guile, and the burning of the Tripuras",
+     "quote": "",
+     "pinned": true,
+     "url": "https://www.wisdomlib.org/hinduism/book/shiva-purana-english/d/doc226151.html"
+    }
+   ],
+   "dp": [
+    {
+     "prabandham": "Tevaram (Sambandar)",
+     "ref": "Tirumurai 1, pathigam 1.131 (திருமுதுகுன்றம்), verse 4; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "வெம்மைமிகு புரவாணர் மிகைசெய்ய",
+     "gist": "The gods become Shiva's chariot, Mount Meru the bow, the serpent Vasuki the string and Vishnu the fire-tipped arrow; he reduces the three cities to ash in a moment.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=1&Song_idField=1131",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram (Appar)",
+     "ref": "Tirumurai 6, pathigam 6.19 (திருஆலவாய்), verse 1; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "முளைத்தானை யெல்லார்க்கும் முன்னே",
+     "gist": "Meru as bow and Vasuki as bowstring, he pierced the three cities of the mighty asuras with a burning arrow and turned them to ash.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=6&Song_idField=6019",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram (Appar)",
+     "ref": "Tirumurai 6, pathigam 6.66 (திருநாகேச்சரம்), verse 4; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "தலையானை எவ்வுலகுந் தானா",
+     "gist": "Appar at Tirunageswaram: the serpent as string, the mountain as bow, he shot and destroyed the three cities of the strong asuras.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=6&Song_idField=6066",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram (Sundarar)",
+     "ref": "Tirumurai 7, pathigam 7.99 (திருநாகேச்சரம்), verse 8; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "வரியர நாணதாக மா",
+     "gist": "Sundarar at Tirunageswaram asks why the serpent had to be the string and Meru the bow just to put the three cities into the fire.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=7&Song_idField=7099",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tiruvasagam (Manikkavasagar)",
+     "ref": "Tirumurai 8, Tiruvasagam section 14 (திருவுந்தியார்), verse 1; section order as listed on thevaaram.org",
+     "first": "வளைந்தது வில்லு விளைந்தது",
+     "gist": "Tiruvundiyar: the bow bends, the battle breaks out, the three cities burn together.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=8&Song_idField=8114",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tiruvasagam (Manikkavasagar)",
+     "ref": "Tirumurai 8, Tiruvasagam section 14 (திருவுந்தியார்), verse 2; section order as listed on thevaaram.org",
+     "first": "ஈரம்பு கண்டிலம் ஏகம்பர்",
+     "gist": "Tiruvundiyar: we saw no second arrow in Ekambar's hand; a single arrow was enough for the three cities.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=8&Song_idField=8114",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tiruvasagam (Manikkavasagar)",
+     "ref": "Tirumurai 8, Tiruvasagam section 14 (திருவுந்தியார்), verse 3; section order as listed on thevaaram.org",
+     "first": "தச்சு விடுத்தலும் தாமடி",
+     "gist": "Tiruvundiyar: the chariot is let go and set aside, the axle snaps, and the three cities are destroyed (compare the broken-axle motif in Thiruppugazh song 1).",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=8&Song_idField=8114",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram (Appar)",
+     "ref": "Tirumurai 5, pathigam 5.4 (திருஅண்ணாமலை), verse 1; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "வட்ட னைம்மதி சூடியை",
+     "gist": "Appar's Annamalai pathigam: almost every verse recalls that he destroyed the three cities of those who scorned him (refrain: how could I forget him).",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=5&Song_idField=5004",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram (Appar)",
+     "ref": "Tirumurai 5, pathigam 5.4 (திருஅண்ணாமலை), verse 9; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "அருத்த னையர வைந்தலை",
+     "gist": "Same pathigam: he shot the three cities of the scornful with one arrow; lord of Annamalai.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=5&Song_idField=5004",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram (Appar)",
+     "ref": "Tirumurai 5, pathigam 5.53 (திருஅதிகைவீரட்டம்), verse 4; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "முற்றா வெண்மதி சூடும்",
+     "gist": "Appar at Atigai Virattam: he set the cities of his enemies afire with his bow.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=5&Song_idField=5053",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram (Appar)",
+     "ref": "Tirumurai 5, pathigam 5.53 (திருஅதிகைவீரட்டம்), verse 5; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "பல்லா ரும்பல தேவர்",
+     "gist": "Appar at Atigai Virattam: with the bow he shot the three cities.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=5&Song_idField=5053",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram (Sambandar)",
+     "ref": "Tirumurai 3, pathigam 3.13 (திருப்பூந்தராய்), verse 2; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "மூதணி முப்புரத் தெண்ணி",
+     "gist": "Sambandar at Poonthurai: with fiery arrows he destroyed the countless foes in the three ancient cities.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=3&Song_idField=3013",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram (Sambandar)",
+     "ref": "Tirumurai 3, pathigam 3.13 (திருப்பூந்தராய்), verse 3; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "தருக்கிய திரிபுரத் தவர்கள்",
+     "gist": "Sambandar at Poonthurai: the proud dwellers of the three cities perished when he took up the bow.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=3&Song_idField=3013",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram (Sambandar)",
+     "ref": "Tirumurai 1, pathigam 1.82 (திருவீழிமிழலை), verse 1; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "இரும்பொன் மலைவில்லா வெரியம்",
+     "gist": "Sambandar at Tiruveezhimizhalai: the great golden mountain as bow, fire as arrow, he destroyed the roaming three cities.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=1&Song_idField=1082",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram (Appar)",
+     "ref": "Tirumurai 6, pathigam 6.86 (திருவாலம்பொழில்), verse 9; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "கையிலுண் டுழல்வாருஞ் சாக்கியருங்",
+     "gist": "Appar at Alampozhil: the serpent as string, the mountain as bow, a fire-arrow shot, he felled the great fortresses with flame.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=6&Song_idField=6086",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tirumandiram (Tirumular)",
+     "ref": "Tirumurai 10, Tirumandiram, இரண்டாம் தந்திரம் - 2. பதிவலியில் வீரட்டம் எட்டு (thevaaram.org id 10202), verse 5 within the section; absolute verse number not checked",
+     "first": "அப்பணி செஞ்சடை ஆதி",
+     "gist": "Tirumandiram (eight Virattam deeds): the three cities are read as the three impurities (mala); only the wise know what burning them means.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=10&Song_idField=10202",
+     "confirmed": true
+    }
+   ],
+   "songs": {
+    "1": {
+     "conf": "h",
+     "note": "Ganesha shattered the axle of the chariot of Shiva who burned the three cities (முப்புரமெரிசெய்த அச்சிவன் உறை ரதம் அச்சு பொடிசெய்த)"
+    },
+    "11": {
+     "conf": "h",
+     "note": "Son of him who burned the three cities (திரிபுரம் வென்றிட அழலும் தகும் திறல் கொண்டவர் புதல்வோனே)"
+    },
+    "52": {
+     "conf": "h",
+     "note": "Burned the cities; Ganga in the matted hair, konrai, Uma on his left; Murugan the god that Shiva worships (புரமெரிய விண்டிடும்... கங்கை சடிலம்)"
+    },
+    "71": {
+     "conf": "h",
+     "note": "Laughed and destroyed the cities; danced in the hall holding the axe (புரம் சிரித்துக் கொன்றிடும்... மன்றினிலாடி மழுக்கைக்கொண்ட சங்கரர்)"
+    },
+    "78": {
+     "conf": "m",
+     "note": "The destroyer of the three cities worships Murugan the Guru (திரிபுர தகனரும் வந்திக்கும் குருநாதா)"
+    },
+    "124": {
+     "conf": "h",
+     "note": "Burned the cities with the elephant-bow and Kama with the eye; Guru Murugan (திரிபுரமெரிய வேழசிலை மதனெரிய)"
+    },
+    "130": {
+     "conf": "h",
+     "note": "Reduced the cities to ash and Kama with the eye, Maheswara's son (திரிபுராதிகள் நீறெழ மதனை விழியால்)"
+    },
+    "131": {
+     "conf": "h",
+     "note": "Burned the three cities with a laugh, Murugan his son (திரிபுரக்கோல வெற்பு அழல்கொளச் சீர்நகை)"
+    },
+    "205": {
+     "conf": "m",
+     "note": "Nataraja dances; Hari and Brahma did not know his feet; Siva Purari's son"
+    },
+    "207": {
+     "conf": "h",
+     "note": "Saw the cities and Kama's body turned to ash; the young bull-rider Nataraja (திரிபுரமும் மதனுடலும் நீறு கண்டவன்... நடராஜன்)"
+    },
+    "261": {
+     "conf": "h",
+     "note": "Sambandar of Pugali scattered holy ash and defeated the Jains; son of him who burned the cities with his laugh"
+    },
+    "263": {
+     "conf": "h",
+     "note": "Burned the three cities with his eye; the axe-handed who clipped Brahma's head (அயனை முடித்தலை அரியும் மழுக்கையன்)"
+    },
+    "264": {
+     "conf": "h",
+     "note": "Burned the three cities, wears the axe, tiger and elephant hide, held the poison in the throat for the devas; taught the matted-hair God"
+    },
+    "280": {
+     "conf": "h",
+     "note": "Laughed and burned the cities of the demons (முப்புரத்து அரக்கரைச் சிரித்தெரித்த)"
+    },
+    "291": {
+     "conf": "m",
+     "note": "Burned the cities with laughter and fire; his consort the Devi"
+    },
+    "292": {
+     "conf": "m",
+     "note": "Burned the cities in a moment (Devi as the Abhirami); the dancing Siva"
+    },
+    "321": {
+     "conf": "l",
+     "note": "Devi who burns the cities (Kamakshi hymn)"
+    },
+    "327": {
+     "conf": "h",
+     "note": "Burned the cities and gave grace to the one he instructed (புரத்தைச் சுட்டெரித்து... கற்பித்தருள்வோனே)"
+    },
+    "343": {
+     "conf": "h",
+     "note": "Trampled and burned the cities; trident, deer and axe in hand (முப்புரக் காடு நீறெழச் சாடி... சூல மான்மழு)"
+    },
+    "345": {
+     "conf": "h",
+     "note": "Burned the cities with a bow"
+    },
+    "365": {
+     "conf": "l",
+     "note": "Devi taking the bow against the cities (Narayani hymn)"
+    },
+    "391": {
+     "conf": "h",
+     "note": "Destroyer of the cities who shares the body with Tripurai"
+    },
+    "401": {
+     "conf": "h",
+     "note": "The cities fell and Kama's body was destroyed by his smile; the bull-rider"
+    },
+    "404": {
+     "conf": "h",
+     "note": "Burned the cities with a smile, Murugan his son and Guru"
+    },
+    "412": {
+     "conf": "h",
+     "note": "Burned the cities, wears the tiger skin and Ganga with the crescent"
+    },
+    "419": {
+     "conf": "h",
+     "note": "Burned the cities of the demons with the wrath of his forehead"
+    },
+    "423": {
+     "conf": "m",
+     "note": "The Devi power with Siva burned the cities"
+    },
+    "428": {
+     "conf": "h",
+     "note": "Smiled and burned the cities; Murugan is Siva's child (மலையை வளைத்து... புரத்தைச் சிவந்து வறிது நகைத்திட்ட சிவனார்தம் மதலை)"
+    },
+    "458": {
+     "conf": "h",
+     "note": "Destroyed the cities, flayed the elephant, cut off angry Daksha's head, learned the true meaning in his ear from Murugan; Chidambaram"
+    },
+    "461": {
+     "conf": "h",
+     "note": "Burned the cities, flayed the elephant, destroyed the enemy Daksha's penance"
+    },
+    "462": {
+     "conf": "h",
+     "note": "Flayed the elephant; burned the cities and Kama with a laugh; cut Brahma's head; Chidambaram"
+    },
+    "463": {
+     "conf": "h",
+     "note": "Burned the cities; Devi Sankari in his half"
+    },
+    "470": {
+     "conf": "m",
+     "note": "Salutation to the Lord who burned the cities, Hara Hara"
+    },
+    "491": {
+     "conf": "h",
+     "note": "Yama's life taken; cities burned; Kama's body burned by the eye; Daksha and Surya and the Moon fell"
+    },
+    "517": {
+     "conf": "h",
+     "note": "Burned the cities with a flame-laugh; danced the holy dance while Adisesha's hood bowed; trident, axe, deer; Uma on his left; Kailasa"
+    },
+    "525": {
+     "conf": "h",
+     "note": "Lord who burned the cities, the father of Murugan"
+    },
+    "533": {
+     "conf": "m",
+     "note": "Son of Thillai's Purari"
+    },
+    "541": {
+     "conf": "h",
+     "note": "Laughed and burned Kama and the cities with the fire from his eye"
+    },
+    "577": {
+     "conf": "m",
+     "note": "Epithet list of Shiva: elephant-slayer, Kama's foe, burner of the three cities, dancer in fire, Lord of Kailasa, Kapali"
+    },
+    "617": {
+     "conf": "h",
+     "note": "Bent the Meru and bound the serpent to burn the cities; pushed away Yama; reduced Kama to ash; destroyed Daksha's sacrifice and gave a goat's head; the Jains impaled"
+    },
+    "651": {
+     "conf": "h",
+     "note": "Reduced the mighty three cities to ash and smoke"
+    },
+    "702": {
+     "conf": "h",
+     "note": "Plucked the middle head of the lotus Brahma and begged with it; laughed and burned the cities; Siva with Uma"
+    },
+    "709": {
+     "conf": "l",
+     "note": "Son of Purari who burned the cities"
+    },
+    "738": {
+     "conf": "h",
+     "note": "Burned the cities of the cruel demons"
+    },
+    "750": {
+     "conf": "h",
+     "note": "Cut Brahma's head, burned the cities (அறுத்தாரயனார் தலையே புரமெரித்தார்)"
+    },
+    "756": {
+     "conf": "h",
+     "note": "Carried the sand of the Vaigai in Madurai with an axe; father burned the cities and rules Siva-loka; Sivakami who raged at Yama"
+    },
+    "797": {
+     "conf": "h",
+     "note": "Plucked Brahma's head with a nail; smiled and burned the cities"
+    },
+    "815": {
+     "conf": "h",
+     "note": "Purari burned the cities with a smile before Meru bent; eyes that burned Kama; Ganga"
+    },
+    "846": {
+     "conf": "m",
+     "note": "Burned the cities with the bow; Guru worshipped by Siva"
+    },
+    "887": {
+     "conf": "h",
+     "note": "Reduced the three cities to dust to the delight of the devas"
+    },
+    "895": {
+     "conf": "l",
+     "note": "Devi on the peacock; the cities burned"
+    },
+    "966": {
+     "conf": "h",
+     "note": "Burner of the cities, the beautiful Sokkan with half Uma; taught the meaning in his ear"
+    },
+    "1075": {
+     "conf": "h",
+     "note": "Burned the three cities in a moment, Siva's son"
+    },
+    "1125": {
+     "conf": "h",
+     "note": "Burned the cities with a laugh; the Lord Hara who dances in the common hall"
+    },
+    "1135": {
+     "conf": "h",
+     "note": "Laughed and burned the cities, kicked Yama, destroyed Kama, held the ocean's poison in his throat; Siva's grace to Murugan"
+    },
+    "1166": {
+     "conf": "h",
+     "note": "With the green Devi; went begging; swallowed the ocean poison; burned the three cities; binds the serpent; Ganga with the moon in the hair"
+    },
+    "1194": {
+     "conf": "h",
+     "note": "Shankara who reduced the cities to ash"
+    },
+    "1195": {
+     "conf": "m",
+     "note": "The cities of the demons burned"
+    },
+    "1203": {
+     "conf": "h",
+     "note": "Bull-rider with Ganga in his hair, fire-bodied; laughed and burned the three cities"
+    },
+    "1277": {
+     "conf": "h",
+     "note": "Became the Guru and spoke in Hara's one ear; Kali burns the cities"
+    }
+   }
+  },
+  "deeds-kama": {
+   "id": "deeds-kama",
+   "domain": "deeds",
+   "eid": "kama",
+   "title": "Kama burned by the forehead eye",
+   "brief": "The gods sent Kama, god of love, to break Shiva's meditation so that he would marry Parvati and father a commander for their army. Shiva opened his forehead eye and burned Kama to ash; Rati's grief won Kama a bodiless life (Ananga).",
+   "note": "",
+   "refs": [
+    {
+     "src": "Valmiki Ramayana",
+     "ref": "Ramayana 1.23.10-14",
+     "gist": "Kama attacked Shiva, was burned by his eye, became Ananga; origin of the Anga country",
+     "quote": "",
+     "pinned": true,
+     "url": "https://www.valmikiramayan.net/utf8/baala/sarga23/balasans23.htm"
+    },
+    {
+     "src": "Bhagavata Purana",
+     "ref": "SB 10.55.1",
+     "gist": "Passing statement: Kama earlier burned to ashes by Rudra's anger (Pradyumna's birth)",
+     "quote": "",
+     "pinned": true,
+     "url": "https://vedabase.io/en/library/sb/10/55/"
+    },
+    {
+     "src": "Linga Purana",
+     "ref": "Linga Purana 1.101 (wisdomlib Sec.1 ch.101)",
+     "gist": "Destruction of Kama by Shiva (title and opening read)",
+     "quote": "",
+     "pinned": true,
+     "url": "https://www.wisdomlib.org/hinduism/book/the-linga-purana/d/doc1196081.html"
+    },
+    {
+     "src": "Shiva Purana",
+     "ref": "Shiva Purana, Rudra-samhita 3 (Parvati-khanda) ch.19; ch.51 revival",
+     "gist": "Kama's destruction by Shiva's third eye; later revival",
+     "quote": "",
+     "pinned": true,
+     "url": "https://www.wisdomlib.org/hinduism/book/shiva-purana-english/d/doc226083.html"
+    },
+    {
+     "src": "Skanda Purana",
+     "ref": "Skanda Purana, Maheshvara-khanda, Kaumarika-khanda ch.24",
+     "gist": "Kama is burned",
+     "quote": "",
+     "pinned": true,
+     "url": "https://www.wisdomlib.org/hinduism/book/the-skanda-purana/d/doc366010.html"
+    }
+   ],
+   "dp": [
+    {
+     "prabandham": "Tevaram (Sambandar)",
+     "ref": "Tirumurai 2, pathigam 2.31 (திருக்கருப்பறியலூர்), verse 6; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "விண்ணவர்கள் வெற்பரசு பெற்றமகண்",
+     "gist": "Sambandar at Karuppariyalur: Kama came to unite the mountain king's daughter with Shiva; the fire-spitting eye burned his body.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=2&Song_idField=2031",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram (Sambandar)",
+     "ref": "Tirumurai 2, pathigam 2.3 (திருத்தெளிச்சேரி), verse 2; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "விளைக்கும் பத்திக்கு விண்ணவர்",
+     "gist": "Sambandar at Tiruttelicheri: asks how he burned with a glance the Kama who had shot five arrows from his bow.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=2&Song_idField=2003",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram (Appar)",
+     "ref": "Tirumurai 4, pathigam 4.14 (பொது), verse 9; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "கழைபடு காடுதென்றல் குயில்கூவவஞ்சு",
+     "gist": "Appar (general pathigam): spring and cuckoo accompany Kama; sent by Vishnu he shoots; the fire of the single forehead eye reduces him to ash while the gods pray.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=4&Song_idField=4014",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram (Appar)",
+     "ref": "Tirumurai 4, pathigam 4.25 (திருவதிகை வீரட்டானம்), verse 8; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "எல்லியும் பகலு மெல்லாந்",
+     "gist": "Appar at Atigai: Kama, the archer, came to the heart; Shiva burned him up with a look.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=4&Song_idField=4025",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram (Appar)",
+     "ref": "Tirumurai 4, pathigam 4.37 (திருநெய்த்தானம்), verse 2; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "காமனை யன்றுகண் ணாற்",
+     "gist": "Appar at Neythanam: he burned Kama with a fire-glance, and gives grace to those who worship him.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=4&Song_idField=4037",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram (Sambandar)",
+     "ref": "Tirumurai 1, pathigam 1.82 (திருவீழிமிழலை), verse 5; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "கண்ணிற் கனலாலே காமன்",
+     "gist": "Sambandar at Tiruveezhimizhalai: Kama became ash by the fire of his eye, and he granted grace to the Lady.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=1&Song_idField=1082",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram (Sundarar)",
+     "ref": "Tirumurai 7, pathigam 7.9 (திருவரிசிற்கரைப்புத்தூர்), verse 4; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "கொடியுடை மும்மதில் வெந்தழியக்",
+     "gist": "Sundarar at Arisilkarai-puttur: burned the three cities with one arrow, and burned the sugar-cane-bow Kama with a sidelong glance.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=7&Song_idField=7009",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tirumandiram (Tirumular)",
+     "ref": "Tirumurai 10, Tirumandiram, இரண்டாம் தந்திரம் - 2. பதிவலியில் வீரட்டம் எட்டு (thevaaram.org id 10202), verse 8 within the section; absolute verse number not checked",
+     "first": "இருந்த மனத்தை இசைய",
+     "gist": "Tirumandiram (eight Virattam deeds): Kama's work is undone at Kurukkai; read as yogic restraint.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=10&Song_idField=10202",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tiruvasagam (Manikkavasagar)",
+     "ref": "Tirumurai 8, Tiruvasagam section 15 (திருத்தோணோக்கம்), verse 11; section order as listed on thevaaram.org",
+     "first": "காமன் உடலுயிர் காலன்பல்",
+     "gist": "Tiruvasagam (Thonokkam): a list of those he purified/punished: Kama's body, Yama, Brahma, Daksha, Eccan, the sun and the moon.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=8&Song_idField=8115",
+     "confirmed": true
+    }
+   ],
+   "songs": {
+    "124": {
+     "conf": "h",
+     "note": "Burned the cities with the elephant-bow and Kama with the eye; Guru Murugan (திரிபுரமெரிய வேழசிலை மதனெரிய)"
+    },
+    "130": {
+     "conf": "h",
+     "note": "Reduced the cities to ash and Kama with the eye, Maheswara's son (திரிபுராதிகள் நீறெழ மதனை விழியால்)"
+    },
+    "207": {
+     "conf": "h",
+     "note": "Saw the cities and Kama's body turned to ash; the young bull-rider Nataraja (திரிபுரமும் மதனுடலும் நீறு கண்டவன்... நடராஜன்)"
+    },
+    "401": {
+     "conf": "h",
+     "note": "The cities fell and Kama's body was destroyed by his smile; the bull-rider"
+    },
+    "462": {
+     "conf": "h",
+     "note": "Flayed the elephant; burned the cities and Kama with a laugh; cut Brahma's head; Chidambaram"
+    },
+    "491": {
+     "conf": "h",
+     "note": "Yama's life taken; cities burned; Kama's body burned by the eye; Daksha and Surya and the Moon fell"
+    },
+    "541": {
+     "conf": "h",
+     "note": "Laughed and burned Kama and the cities with the fire from his eye"
+    },
+    "577": {
+     "conf": "m",
+     "note": "Epithet list of Shiva: elephant-slayer, Kama's foe, burner of the three cities, dancer in fire, Lord of Kailasa, Kapali"
+    },
+    "617": {
+     "conf": "h",
+     "note": "Bent the Meru and bound the serpent to burn the cities; pushed away Yama; reduced Kama to ash; destroyed Daksha's sacrifice and gave a goat's head; the Jains impaled"
+    },
+    "815": {
+     "conf": "h",
+     "note": "Purari burned the cities with a smile before Meru bent; eyes that burned Kama; Ganga"
+    },
+    "1135": {
+     "conf": "h",
+     "note": "Laughed and burned the cities, kicked Yama, destroyed Kama, held the ocean's poison in his throat; Siva's grace to Murugan"
+    },
+    "70": {
+     "conf": "m",
+     "note": "Kama burned by the gaze; blue-throated Shiva taught by Murugan (காமன் ஐந்து பாணமோடு வேமின் ... காளகண்டரோடு வேதம் மொழிவோனே)"
+    },
+    "77": {
+     "conf": "h",
+     "note": "Ganga in the matted hair; reduced Kama to ash (பொடிசெய்தருள் மதன்)"
+    },
+    "103": {
+     "conf": "l",
+     "note": "Kama (Sambarari) burnt of old; eyes compared to his arrows"
+    },
+    "242": {
+     "conf": "h",
+     "note": "Burned Kama with the fire of the forehead eye; Lord of Kailasa with Uma (நெற்றிக் கனற்கண் எரித்தவர் கயிலாயப் பொருப்பினிலிருப்பவர்)"
+    },
+    "302": {
+     "conf": "l",
+     "note": "Dancer whose forehead eye burned something (நெற்றிவிழி பட்டெரிய நட்டமிடும் உத்தமர்)"
+    },
+    "386": {
+     "conf": "h",
+     "note": "Elephant hide and serpent on his body, moon and Ganga in the hair, fire, axe and deer; hates Kama; the Kailasa Lord"
+    },
+    "444": {
+     "conf": "h",
+     "note": "Dancer with the anklet sound; Brahma's head in his hand; skinned the elephant; Ganga, moon, konrai in the hair; burned Kama with his eye; stain of poison in the throat; gave Ganesha; Devi who tramples Muyalakan"
+    },
+    "649": {
+     "conf": "h",
+     "note": "Cut a head off Brahma in wrath and burned Kama with the fire of his eye; Murugan the Guru of that father (வேதனை அதிர்த்து ஓர்முடி கரத்து... காமனை எரித்த தாதையர்)"
+    },
+    "884": {
+     "conf": "h",
+     "note": "The Shambhu whose fire-eye burned Kama (Sambarari) is taught by Murugan; கிராதி is Valli"
+    },
+    "911": {
+     "conf": "h",
+     "note": "Burned Kama with the fire eye; Ganga in the hair; Appar with the snake-ears Guru (காமனை எரித்த தீநயன நெற்றி... சுவர்க்க நதி வேணி)"
+    },
+    "986": {
+     "conf": "m",
+     "note": "Fought Sambarari (Kama) with the eye; Pasupati praised him"
+    },
+    "1105": {
+     "conf": "h",
+     "note": "Kama shot Kalakala-prabhu (Siva) for Uma's sake; Kama's brother-in-law is Vishnu"
+    },
+    "1106": {
+     "conf": "h",
+     "note": "The Lord kicked Yama in the chest; Kama's brother-in-law"
+    },
+    "1160": {
+     "conf": "h",
+     "note": "Kicked Yama with his foot, burned Kama, and wrote on Brahma's head"
+    },
+    "1176": {
+     "conf": "h",
+     "note": "Kicked Yama and showed death; poison in the throat; burned Kama; danced in the forest"
+    },
+    "1177": {
+     "conf": "h",
+     "note": "Sage's son; three-eyed Lord who burned Kama; Ganga and crescent on his hair"
+    }
+   }
+  },
+  "deeds-poison": {
+   "id": "deeds-poison",
+   "domain": "deeds",
+   "eid": "poison",
+   "title": "Shiva drinks the Halahala poison",
+   "brief": "When the gods and demons churned the milk ocean, the Halahala poison rose and threatened the worlds. Shiva drank it at the gods' plea; Parvati held his throat and the poison stayed there, turning it blue (Neelakantha).",
+   "note": "",
+   "refs": [
+    {
+     "src": "Bhagavata Purana",
+     "ref": "SB 8.7.19-46",
+     "gist": "Devas approach Shiva; Bhavani consents; Shiva drinks the poison, his throat turns blue",
+     "quote": "",
+     "pinned": true,
+     "url": "https://vedabase.io/en/library/sb/8/7/"
+    },
+    {
+     "src": "Valmiki Ramayana",
+     "ref": "Ramayana 1.45.19-26",
+     "gist": "Vasuki's venom/Halahala burns the world; Vishnu asks Shiva to take it; Shiva drinks it and returns to Kailasa",
+     "quote": "",
+     "pinned": true,
+     "url": "https://www.valmikiramayan.net/utf8/baala/sarga45/balasans45.htm"
+    },
+    {
+     "src": "Valmiki Ramayana",
+     "ref": "Ramayana 1.36.5",
+     "gist": "Allusion: Shiva's throat blue from the poison of the churning",
+     "quote": "",
+     "pinned": true,
+     "url": "https://www.valmikiramayan.net/utf8/baala/sarga36/balasans36.htm"
+    },
+    {
+     "src": "Skanda Purana",
+     "ref": "Skanda Purana, Maheshvara-khanda, Kedara-khanda ch.9-10",
+     "gist": "Churning of the ocean; Shiva swallows the poison",
+     "quote": "",
+     "pinned": true,
+     "url": "https://www.wisdomlib.org/hinduism/book/the-skanda-purana/d/doc365957.html"
+    },
+    {
+     "src": "Mahabharata (Critical Edition)",
+     "ref": "MBh 13,14.116; 13,17.40",
+     "gist": "Only the epithet Nilakantha; no poison narrative found in CE Adi 1,15-17 by keyword search",
+     "quote": "",
+     "pinned": false,
+     "url": "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/2_epic/mbh/mbh_13_u.htm"
+    }
+   ],
+   "dp": [
+    {
+     "prabandham": "Tevaram (Sambandar)",
+     "ref": "Tirumurai 2, pathigam 2.91 (திருமறைக்காடு), verse 7; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "நாகந் தான்கயி றாக",
+     "gist": "Sambandar at Maraikkadu: serpent as rope, mountain as churning rod, gods and asuras churn; the poison rises and they flee; Shiva makes the nectar available.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=2&Song_idField=2091",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram (Sambandar)",
+     "ref": "Tirumurai 2, pathigam 2.95 (திருவரசிலி), verse 6; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "பரிய மாசுணங் கயிறாப்",
+     "gist": "Sambandar at Tiruvarasili: the gods churn the sea, black poison arises, and he turns it into nectar for the frightened gods.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=2&Song_idField=2095",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram (Sambandar)",
+     "ref": "Tirumurai 2, pathigam 2.45 (திருக்கைச்சினம்), verse 4; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "பண்டமரர் கூடிக் கடைந்த",
+     "gist": "Sambandar at Kaichchinam: the gods gathered and churned; the Lord swallowed the sea-poison.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=2&Song_idField=2045",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram (Appar)",
+     "ref": "Tirumurai 4, pathigam 4.65 (திருச்சாய்க்காடு), verse 2; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "வடங்கெழு மலைமத் தாக",
+     "gist": "Appar at Chaikkadu: the gods saw the poison that rose from the churning, took refuge, and he drank it.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=4&Song_idField=4065",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram (Appar)",
+     "ref": "Tirumurai 4, pathigam 4.70 (திருநனிபள்ளி), verse 7; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "அரவத்தால் வரையைச் சுற்றி",
+     "gist": "Appar at Nanipalli: gods and asuras churned with the serpent and mountain; he ate the poison like nectar.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=4&Song_idField=4070",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram (Appar)",
+     "ref": "Tirumurai 6, pathigam 6.83 (திருப்பாசூர்), verse 8; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "அண்டவர்கள் கடல்கடைய அதனுள்",
+     "gist": "Appar at Pasur: when the gods churned the sea the Alakala poison rose and scorched the world; he swallowed it in a blink, throat darkened.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=6&Song_idField=6083",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram (Appar)",
+     "ref": "Tirumurai 6, pathigam 6.4 (திரு அதிகை வீரட்டானம்), verse 8; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "மாலாகி மதமிக்க களிறு",
+     "gist": "Appar at Atigai: he churned the sea with the serpent around a mountain and swallowed the poison.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=6&Song_idField=6004",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram (Sundarar)",
+     "ref": "Tirumurai 7, pathigam 7.55 (திருப்புன்கூர்), verse 5; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "கோல மால்வரை மத்தென",
+     "gist": "Sundarar at Punkur: Meru as rod and serpent as rope, the poison rose; to save the gods he drank it and held it in his throat.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=7&Song_idField=7055",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tiruvasagam (Manikkavasagar)",
+     "ref": "Tirumurai 8, Tiruvasagam section 12 (திருச்சாழல்), verse 8; section order as listed on thevaaram.org",
+     "first": "கோலால மாகிக் குரைகடல்வாய்",
+     "gist": "Tiruchchazhal: the poison that rose from the roaring sea; had he not eaten it, Brahma, Vishnu and all the gods would have died.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=8&Song_idField=8112",
+     "confirmed": true
+    }
+   ],
+   "songs": {
+    "264": {
+     "conf": "h",
+     "note": "Burned the three cities, wears the axe, tiger and elephant hide, held the poison in the throat for the devas; taught the matted-hair God"
+    },
+    "1135": {
+     "conf": "h",
+     "note": "Laughed and burned the cities, kicked Yama, destroyed Kama, held the ocean's poison in his throat; Siva's grace to Murugan"
+    },
+    "1166": {
+     "conf": "h",
+     "note": "With the green Devi; went begging; swallowed the ocean poison; burned the three cities; binds the serpent; Ganga with the moon in the hair"
+    },
+    "70": {
+     "conf": "m",
+     "note": "Kama burned by the gaze; blue-throated Shiva taught by Murugan (காமன் ஐந்து பாணமோடு வேமின் ... காளகண்டரோடு வேதம் மொழிவோனே)"
+    },
+    "444": {
+     "conf": "h",
+     "note": "Dancer with the anklet sound; Brahma's head in his hand; skinned the elephant; Ganga, moon, konrai in the hair; burned Kama with his eye; stain of poison in the throat; gave Ganesha; Devi who tramples Muyalakan"
+    },
+    "1176": {
+     "conf": "h",
+     "note": "Kicked Yama and showed death; poison in the throat; burned Kama; danced in the forest"
+    },
+    "27": {
+     "conf": "m",
+     "note": "Hara Hara Siva Shankara; he who swallowed the poison, Murugan his son (நஞ்சினை உண்டவர் அருள்பாலா)"
+    },
+    "46": {
+     "conf": "h",
+     "note": "Alakalam (poison) swallowed by Shiva so the devas live (ஆலகாலம் பரன்... அமுதீயும்)"
+    },
+    "99": {
+     "conf": "h",
+     "note": "Moon-wearer who swallowed the poison, rides the bull (மதிசூடி... ஆலமுண்டு விடையேறி)"
+    },
+    "197": {
+     "conf": "h",
+     "note": "Swallowed the black poison so the devas might live; Kalakanda Mahadeva's son (கார்விடந்தனை ஊணாக... காளகண்ட மகாதேவனார் தரு முருகோனே)"
+    },
+    "199": {
+     "conf": "h",
+     "note": "Drank the poison from the ocean; Ganga in his hair, rides the bull (பரவைவரு விடமருந்தும் மிடறுடைய கடவுள் கங்கை படர்சடையர்)"
+    },
+    "389": {
+     "conf": "h",
+     "note": "Ate the poison to free the devas, bull rider; moon and Ganga in the matted hair"
+    },
+    "907": {
+     "conf": "l",
+     "note": "Lord of Tiruvottiyur, blue-throated Mahadeva"
+    },
+    "1108": {
+     "conf": "h",
+     "note": "Drank the poison from the ocean, danced with the ghosts, rode the bull; serpent, crescent, water; his consort"
+    },
+    "1330": {
+     "conf": "h",
+     "note": "Son of the dark-throated skull-bearing Lord who beat Yama"
+    }
+   }
+  },
+  "deeds-daksha": {
+   "id": "deeds-daksha",
+   "domain": "deeds",
+   "eid": "daksha",
+   "title": "Destruction of Daksha's sacrifice",
+   "brief": "Daksha insulted Shiva and held a sacrifice to which Shiva was not invited. His daughter Sati died there. Shiva sent Virabhadra, who wrecked the sacrifice and cut off Daksha's head; Daksha was later revived with a goat's head.",
+   "note": "",
+   "refs": [
+    {
+     "src": "Bhagavata Purana",
+     "ref": "SB 4.2-4.7 (4.2.1-19 insult; 4.5.1-20 Virabhadra; 4.6-4.7 pacified, Daksha gets a goat head)",
+     "gist": "Daksha slights Shiva, Sati dies, Virabhadra wrecks the sacrifice, Brahma propitiates Shiva",
+     "quote": "",
+     "pinned": true,
+     "url": "https://vedabase.io/en/library/sb/4/5/"
+    },
+    {
+     "src": "Valmiki Ramayana",
+     "ref": "Ramayana 1.66.9-12",
+     "gist": "Rudra strings his bow at Daksha's sacrifice, threatens the gods, is appeased (origin of Shiva's bow)",
+     "quote": "",
+     "pinned": true,
+     "url": "https://www.valmikiramayan.net/utf8/baala/sarga66/balasans66.htm"
+    },
+    {
+     "src": "Mahabharata (Critical Edition)",
+     "ref": "MBh 7,173.29-64; 12,274.18ff; 12,330.42-44",
+     "gist": "Drona: Rudra and the gods' sacrifice share; Shanti: Daksha's sacrifice and the Jvara fever; Rudra destroys it",
+     "quote": "",
+     "pinned": true,
+     "url": "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/2_epic/mbh/mbh_07_u.htm"
+    },
+    {
+     "src": "Linga Purana",
+     "ref": "Linga Purana 1.99-100",
+     "gist": "Destruction of Daksha's sacrifice",
+     "quote": "",
+     "pinned": true,
+     "url": "https://www.wisdomlib.org/hinduism/book/the-linga-purana/d/doc1196079.html"
+    },
+    {
+     "src": "Shiva Purana",
+     "ref": "Shiva Purana, Rudra-samhita 2 (Sati-khanda) ch.26-37",
+     "gist": "Estrangement, Sati's death, Virabhadra's march, destruction of the sacrifice",
+     "quote": "",
+     "pinned": true,
+     "url": "https://www.wisdomlib.org/hinduism/book/shiva-purana-english/d/doc226057.html"
+    },
+    {
+     "src": "Skanda Purana",
+     "ref": "Skanda Purana, Maheshvara-khanda, Kedara-khanda ch.1-4; Kashi-khanda ch.87",
+     "gist": "Daksha's insolence, Sati, Virabhadra and the sacrifice",
+     "quote": "",
+     "pinned": true,
+     "url": "https://www.wisdomlib.org/hinduism/book/the-skanda-purana/d/doc365948.html"
+    }
+   ],
+   "dp": [
+    {
+     "prabandham": "Tirumandiram (Tirumular)",
+     "ref": "Tirumurai 10, Tirumandiram, இரண்டாம் தந்திரம் - 4. தக்கன் வேள்வி (thevaaram.org id 10204), verse 1 within the section; absolute verse number not checked",
+     "first": "தந்தைபி ரான்வெகுண் டான்தக்கன்",
+     "gist": "Tirumandiram, whole section 'Daksha's sacrifice' (9 verses): Shiva's wrath rises from the fire, and the gods scatter; opening verse.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=10&Song_idField=10204",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tirumandiram (Tirumular)",
+     "ref": "Tirumurai 10, Tirumandiram, இரண்டாம் தந்திரம் - 4. தக்கன் வேள்வி (thevaaram.org id 10204), verse 6 within the section; absolute verse number not checked",
+     "first": "அரிபிர மன்தக்கன் அற்க",
+     "gist": "Tirumandiram: Vishnu, Brahma, Daksha, the sun, the fire, the moon and Indra lose head, face, hand and shoulder without Hara's grace.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=10&Song_idField=10204",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tiruvasagam (Manikkavasagar)",
+     "ref": "Tirumurai 8, Tiruvasagam section 14 (திருவுந்தியார்), verse 8; section order as listed on thevaaram.org",
+     "first": "பார்ப்பதி யைப்பகை சாற்றிய",
+     "gist": "Tiruvundiyar: Daksha, who spoke ill of Parvati's lord, is not worth looking at.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=8&Song_idField=8114",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tiruvasagam (Manikkavasagar)",
+     "ref": "Tirumurai 8, Tiruvasagam section 14 (திருவுந்தியார்), verse 16; section order as listed on thevaaram.org",
+     "first": "தக்கனார் அன்றே தலையிழந்",
+     "gist": "Tiruvundiyar: Daksha lost his head that day and his sons stood around; the sacrifice was ruined.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=8&Song_idField=8114",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tiruvasagam (Manikkavasagar)",
+     "ref": "Tirumurai 8, Tiruvasagam section 12 (திருச்சாழல்), verse 5; section order as listed on thevaaram.org",
+     "first": "தக்கனையும் எச்சனையுந் தலையறுத்துத்",
+     "gist": "Tiruchchazhal: why did he cut off the heads of Daksha and Eccan and kill the gathered gods? Because he then gave them grace.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=8&Song_idField=8112",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tiruvasagam (Manikkavasagar)",
+     "ref": "Tirumurai 8, Tiruvasagam section 8 (திருவம்மானை), verse 15; section order as listed on thevaaram.org",
+     "first": "சந்திரனைத் தேய்த்தருளித் தக்கன்றன்",
+     "gist": "Tiruvammanai: moon ground down, Indra's shoulders crushed, Eccan's head cut, the sun's teeth broken, at Daksha's sacrifice.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=8&Song_idField=8108",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram (Appar)",
+     "ref": "Tirumurai 4, pathigam 4.65 (திருச்சாய்க்காடு), verse 5; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "இந்திரன் பிரம னங்கி",
+     "gist": "Appar at Chaikkadu: while the gods chanted, he destroyed the sacrifice of the cunning Daksha and favoured the moon.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=4&Song_idField=4065",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram (Appar)",
+     "ref": "Tirumurai 6, pathigam 6.34 (திருவாரூர்), verse 4; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "ஓங்கி உயர்ந்தெழுந்து நின்ற",
+     "gist": "Appar at Tiruvarur: recalls the day he destroyed the great sacrifice of Daksha.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=6&Song_idField=6034",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram (Appar)",
+     "ref": "Tirumurai 6, pathigam 6.43 (திருப்பூந்துருத்தி), verse 9; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "ஆண்டானை வானோ ருலக",
+     "gist": "Appar at Poonthuruthi: he turned back Daksha's sacrifice, which the gods had not understood.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=6&Song_idField=6043",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram (Appar)",
+     "ref": "Tirumurai 6, pathigam 6.85 (திருமுண்டீச்சரம்), verse 7; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "உதைத்தவன்காண் உணராத தக்கன்",
+     "gist": "Appar at Mundicchuram: kicked Daksha's sacrifice apart and cut off Daksha's head.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=6&Song_idField=6085",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram (Sambandar)",
+     "ref": "Tirumurai 1, pathigam 1.113 (திருவல்லம்), verse 6; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "பதைத்தெழு காலனைப் பாதமொன்றால்",
+     "gist": "Sambandar at Tiruvallam: kicked Yama for the sage, and shattered Daksha's sacrifice.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=1&Song_idField=1113",
+     "confirmed": true
+    }
+   ],
+   "songs": {
+    "458": {
+     "conf": "h",
+     "note": "Destroyed the cities, flayed the elephant, cut off angry Daksha's head, learned the true meaning in his ear from Murugan; Chidambaram"
+    },
+    "461": {
+     "conf": "h",
+     "note": "Burned the cities, flayed the elephant, destroyed the enemy Daksha's penance"
+    },
+    "491": {
+     "conf": "h",
+     "note": "Yama's life taken; cities burned; Kama's body burned by the eye; Daksha and Surya and the Moon fell"
+    },
+    "617": {
+     "conf": "h",
+     "note": "Bent the Meru and bound the serpent to burn the cities; pushed away Yama; reduced Kama to ash; destroyed Daksha's sacrifice and gave a goat's head; the Jains impaled"
+    },
+    "309": {
+     "conf": "h",
+     "note": "Daksha ruined and his ear lost in the fire sacrifice; the wrathful Lord who worships Murugan at Kanchi"
+    },
+    "904": {
+     "conf": "h",
+     "note": "Golden-form Lord who shot Daksha's head with a mighty arrow (மன்னான தக்கனை முன்னாள் முடித்தலை வன்வாளியிற் கொளும் தங்கரூபன்)"
+    }
+   }
+  },
+  "deeds-yama": {
+   "id": "deeds-yama",
+   "domain": "deeds",
+   "eid": "yama",
+   "title": "Shiva kicks Yama (Markandeya)",
+   "brief": "The boy sage Markandeya, fated to die at sixteen, held the Shiva linga. Yama threw his noose and it fell around the linga as well. Shiva came out of it, kicked Yama down (Kalantaka, Kalasamharamurti) and gave Markandeya lasting youth.",
+   "note": "",
+   "refs": [
+    {
+     "src": "Bhagavata Purana",
+     "ref": "SB 12.10.3-19",
+     "gist": "Markandeya in trance seen by Shiva and Uma and granted a boon (no Yama kicking in the Bhagavata)",
+     "quote": "",
+     "pinned": false,
+     "url": "https://vedabase.io/en/library/sb/12/10/"
+    },
+    {
+     "src": "Linga Purana",
+     "ref": "Linga Purana 1.30 (Sage Shveta)",
+     "gist": "Shiva appears and humbles Kala/Yama who came for the devotee Shveta: same motif as Markandeya, different devotee",
+     "quote": "",
+     "pinned": false,
+     "url": "https://www.wisdomlib.org/hinduism/book/the-linga-purana/d/doc1195243.html"
+    },
+    {
+     "src": "Skanda Purana",
+     "ref": "Skanda Purana, Kedara-khanda ch.32 (Burning of Kala)",
+     "gist": "Shiva burns Kala to save King Shveta: Markandeya-type story",
+     "quote": "",
+     "pinned": false,
+     "url": "https://www.wisdomlib.org/hinduism/book/the-skanda-purana/d/doc365981.html"
+    }
+   ],
+   "dp": [
+    {
+     "prabandham": "Tevaram (Appar)",
+     "ref": "Tirumurai 4, pathigam 4.107 (திருக்கடவூர் வீரட்டம்), verse 1; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "மருட்டுயர் தீரவன் றர்ச்சித்த",
+     "gist": "Appar at Kadavur Virattam: for the boy Markandeya he kicked fierce Yama, whose tongue lolled and fangs showed.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=4&Song_idField=4107",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram (Appar)",
+     "ref": "Tirumurai 4, pathigam 4.107 (திருக்கடவூர் வீரட்டம்), verse 2; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "பதத்தெழு மந்திர மஞ்செழுத்",
+     "gist": "Appar at Kadavur: the boy worshipped chanting the five letters; Shiva kicked angry Yama so that blood ran from his eyes.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=4&Song_idField=4107",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram (Appar)",
+     "ref": "Tirumurai 4, pathigam 4.31 (திருக்கடவூர் வீரட்டம்), verse 9; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "சேலினே ரனையகண்ணார் திறம்விட்டுச்",
+     "gist": "Appar at Kadavur Virattam: for Markandeya, who worshipped with milk, curd and ghee, he kicked Yama.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=4&Song_idField=4031",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram (Appar)",
+     "ref": "Tirumurai 4, pathigam 4.65 (திருச்சாய்க்காடு), verse 1; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "தோடுலா மலர்கள் தூவித்",
+     "gist": "Appar at Chaikkadu: Markandeya worshipped with flowers; when Yama came for his appointed day, Shiva struck Yama down.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=4&Song_idField=4065",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram (Appar)",
+     "ref": "Tirumurai 5, pathigam 5.66 (திருவலஞ்சுழி), verse 4; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "நறைகொள் பூம்புனல் கொண்டெழு",
+     "gist": "Appar at Valanchuli: he kicked cruel Yama for the boy who brought water and flowers.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=5&Song_idField=5066",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram (Sundarar)",
+     "ref": "Tirumurai 7, pathigam 7.69 (வடதிருமுல்லைவாயில்), verse 9; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "மட்டுலா மலர்கொண் டடியிணை",
+     "gist": "Sundarar at Mullaivayil: when Yama came against the boy worshipping with flowers, Shiva ended Yama with his foot.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=7&Song_idField=7069",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram (Sambandar)",
+     "ref": "Tirumurai 2, pathigam 2.61 (திருவெண்காடு), verse 7; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "கோள்வித் தனைய கூற்றந்",
+     "gist": "Sambandar at Venkadu: he destroyed Yama by his will for the boy's sake.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=2&Song_idField=2061",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram (Sambandar)",
+     "ref": "Tirumurai 2, pathigam 2.101 (திருவாரூர்), verse 3; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "கறுத்தநஞ்ச முண்டிருண்ட கண்டர்கால",
+     "gist": "Sambandar at Tiruvarur: the Lord who drank poison also took away Yama's claim on the boy's life.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=2&Song_idField=2101",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tirumandiram (Tirumular)",
+     "ref": "Tirumurai 10, Tirumandiram, இரண்டாம் தந்திரம் - 2. பதிவலியில் வீரட்டம் எட்டு (thevaaram.org id 10202), verse 7 within the section; absolute verse number not checked",
+     "first": "மூலத் துவாரத்து மூளும்",
+     "gist": "Tirumandiram (eight Virattam deeds): at Kadavur he subdues Yama; read as yogic control of breath.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=10&Song_idField=10202",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tiruvasagam (Manikkavasagar)",
+     "ref": "Tirumurai 8, Tiruvasagam section 9 (திருப்பொற்சுண்ணம்), verse 18; section order as listed on thevaaram.org",
+     "first": "அயன்தலை கொண்டுசெண் டாடல்",
+     "gist": "Tiruporchunnam: kicking Yama is one of the sung deeds along with Brahma's head, the elephant hide and the burning of the cities.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=8&Song_idField=8109",
+     "confirmed": true
+    }
+   ],
+   "songs": {
+    "491": {
+     "conf": "h",
+     "note": "Yama's life taken; cities burned; Kama's body burned by the eye; Daksha and Surya and the Moon fell"
+    },
+    "617": {
+     "conf": "h",
+     "note": "Bent the Meru and bound the serpent to burn the cities; pushed away Yama; reduced Kama to ash; destroyed Daksha's sacrifice and gave a goat's head; the Jains impaled"
+    },
+    "1135": {
+     "conf": "h",
+     "note": "Laughed and burned the cities, kicked Yama, destroyed Kama, held the ocean's poison in his throat; Siva's grace to Murugan"
+    },
+    "1106": {
+     "conf": "h",
+     "note": "The Lord kicked Yama in the chest; Kama's brother-in-law"
+    },
+    "1160": {
+     "conf": "h",
+     "note": "Kicked Yama with his foot, burned Kama, and wrote on Brahma's head"
+    },
+    "1176": {
+     "conf": "h",
+     "note": "Kicked Yama and showed death; poison in the throat; burned Kama; danced in the forest"
+    },
+    "1330": {
+     "conf": "h",
+     "note": "Son of the dark-throated skull-bearing Lord who beat Yama"
+    },
+    "214": {
+     "conf": "m",
+     "note": "Feet that took the life of Yama; the Ganga-matted Lord's Guru (நமனை உயிர்கொளும் அழலின் இணைகழல் நதிகொள் சடையினர் குருநாதா)"
+    },
+    "1063": {
+     "conf": "m",
+     "note": "The Lord who overthrew Yama; Vishnu could not see him (மறலி சாய்த்தவர் இறை... மால் காணாதே)"
+    }
+   }
+  },
+  "deeds-brahma-head": {
+   "id": "deeds-brahma-head",
+   "domain": "deeds",
+   "eid": "brahma-head",
+   "title": "Brahma's fifth head cut off",
+   "brief": "Brahma's fifth head spoke proudly, or the head claimed equality with Shiva. Shiva, as Bhairava, cut it off with his fingernail; the skull stuck to his hand as a begging bowl and he was driven to wander until it fell away.",
+   "note": "",
+   "refs": [
+    {
+     "src": "Shiva Purana",
+     "ref": "Shiva Purana, Vidyesvara-samhita ch.8",
+     "gist": "Bhairava, made from Shiva's brow, seizes Brahma's fifth head for his lie",
+     "quote": "",
+     "pinned": true,
+     "url": "https://www.wisdomlib.org/hinduism/book/shiva-purana-english/d/doc225553.html"
+    },
+    {
+     "src": "Skanda Purana",
+     "ref": "Skanda Purana, Kashi-khanda ch.31 (Manifestation of Bhairava)",
+     "gist": "Brahma's fifth head blazes with pride; Kalabhairava plucks it off with a fingernail",
+     "quote": "",
+     "pinned": true,
+     "url": "https://www.wisdomlib.org/hinduism/book/the-skanda-purana/d/doc423769.html"
+    },
+    {
+     "src": "Linga Purana",
+     "ref": "Linga Purana 1.17",
+     "gist": "Lingodbhava: Brahma's false claim (context only)",
+     "quote": "",
+     "pinned": false,
+     "url": "https://www.wisdomlib.org/hinduism/book/the-linga-purana/d/doc1195230.html"
+    },
+    {
+     "src": "Shiva Purana",
+     "ref": "Shiva Purana, Satarudra-samhita ch.8-9 (Bhairava)",
+     "gist": "Bhairava incarnation / sports (keyword hits only)",
+     "quote": "",
+     "pinned": false,
+     "url": "https://www.wisdomlib.org/hinduism/book/shiva-purana-english/d/doc226405.html"
+    }
+   ],
+   "dp": [
+    {
+     "prabandham": "Tevaram (Sambandar)",
+     "ref": "Tirumurai 2, pathigam 2.19 (திருநெல்லிக்கா), verse 3; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "நலந்தா னவன்நான் முகன்தன்",
+     "gist": "Sambandar at Tirunellikka: the skull-bearer holds Brahma's head.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=2&Song_idField=2019",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram (Sambandar)",
+     "ref": "Tirumurai 3, pathigam 3.89 (திருக்கொச்சைவயம்), verse 5; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "மறைகொளும் திறலினா ராகுதிப்",
+     "gist": "Sambandar at Kochchaivayam: the Lord who cut off Brahma's head.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=3&Song_idField=3089",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram (Appar)",
+     "ref": "Tirumurai 6, pathigam 6.66 (திருநாகேச்சரம்), verse 8; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "எய்தானைப் புரமூன்றும் இமைக்கும்",
+     "gist": "Appar at Tirunageswaram: cut one head of the unrighteous Brahma with a hand.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=6&Song_idField=6066",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram (Appar)",
+     "ref": "Tirumurai 6, pathigam 6.50 (திருவீழிமிழலை), verse 10; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "அறுத்தானை அயன்தலைகள் அஞ்சி",
+     "gist": "Appar at Tiruveezhimizhalai: cut one of Brahma's five heads.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=6&Song_idField=6050",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram (Sundarar)",
+     "ref": "Tirumurai 7, pathigam 7.4 (திருவஞ்சைக்களம்), verse 8; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "வெறுத்தேன்மனை வாழ்க்கையை விட்டொழிந்தேன்",
+     "gist": "Sundarar at Anchaikkalam: crushed Ravana, drank the sea-poison, and cut one of Brahma's five heads.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=7&Song_idField=7004",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram (Appar)",
+     "ref": "Tirumurai 6, pathigam 6.34 (திருவாரூர்), verse 6; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "திறம்பலவும் வழிகாட்டிச் செய்கை",
+     "gist": "Appar at Tiruvarur: begged his food with Brahma's skull in hand.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=6&Song_idField=6034",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram (Appar)",
+     "ref": "Tirumurai 5, pathigam 5.98 (பொது), verse 10; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "வெறுத்தா னைம்புல னும்பிர",
+     "gist": "Appar (general): the one who cut off Brahma's head and pressed down the demon on Kailasa.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=5&Song_idField=5098",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram (Appar)",
+     "ref": "Tirumurai 4, pathigam 4.93 (திருக்கண்டியூர் வீரட்டம்), verse 3; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "பண்டங் கறுத்ததோர் கையுடை",
+     "gist": "Appar at Kandiyur Virattam: the place of the creator's severed head (verse speaks of the head of the creator).",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=4&Song_idField=4093",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tiruvasagam (Manikkavasagar)",
+     "ref": "Tirumurai 8, Tiruvasagam section 14 (திருவுந்தியார்), verse 18; section order as listed on thevaaram.org",
+     "first": "நல்ல மலரின்மேல் நான்முக",
+     "gist": "Tiruvundiyar: Brahma's head, on the lotus, was cut off with the nail.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=8&Song_idField=8114",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tirumandiram (Tirumular)",
+     "ref": "Tirumurai 10, Tirumandiram, இரண்டாம் தந்திரம் - 2. பதிவலியில் வீரட்டம் எட்டு (thevaaram.org id 10202), verse 2 within the section; absolute verse number not checked",
+     "first": "கொலையிற் பிழைத்த பிரசா",
+     "gist": "Tirumandiram (eight Virattam deeds): the head of Brahma (Prajapati) is cut off.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=10&Song_idField=10202",
+     "confirmed": true
+    }
+   ],
+   "songs": {
+    "263": {
+     "conf": "h",
+     "note": "Burned the three cities with his eye; the axe-handed who clipped Brahma's head (அயனை முடித்தலை அரியும் மழுக்கையன்)"
+    },
+    "462": {
+     "conf": "h",
+     "note": "Flayed the elephant; burned the cities and Kama with a laugh; cut Brahma's head; Chidambaram"
+    },
+    "577": {
+     "conf": "m",
+     "note": "Epithet list of Shiva: elephant-slayer, Kama's foe, burner of the three cities, dancer in fire, Lord of Kailasa, Kapali"
+    },
+    "702": {
+     "conf": "h",
+     "note": "Plucked the middle head of the lotus Brahma and begged with it; laughed and burned the cities; Siva with Uma"
+    },
+    "750": {
+     "conf": "h",
+     "note": "Cut Brahma's head, burned the cities (அறுத்தாரயனார் தலையே புரமெரித்தார்)"
+    },
+    "797": {
+     "conf": "h",
+     "note": "Plucked Brahma's head with a nail; smiled and burned the cities"
+    },
+    "444": {
+     "conf": "h",
+     "note": "Dancer with the anklet sound; Brahma's head in his hand; skinned the elephant; Ganga, moon, konrai in the hair; burned Kama with his eye; stain of poison in the throat; gave Ganesha; Devi who tramples Muyalakan"
+    },
+    "649": {
+     "conf": "h",
+     "note": "Cut a head off Brahma in wrath and burned Kama with the fire of his eye; Murugan the Guru of that father (வேதனை அதிர்த்து ஓர்முடி கரத்து... காமனை எரித்த தாதையர்)"
+    },
+    "1160": {
+     "conf": "h",
+     "note": "Kicked Yama with his foot, burned Kama, and wrote on Brahma's head"
+    },
+    "188": {
+     "conf": "m",
+     "note": "Holding trident, deer, axe, drum and the skull of Brahma (வேதன் தலையோடு), Paranar's son"
+    },
+    "823": {
+     "conf": "h",
+     "note": "Murugan addressed as Dakshinamurti unknown to Brahma; skull-bearing Guru"
+    }
+   }
+  },
+  "deeds-bhikshatana": {
+   "id": "deeds-bhikshatana",
+   "domain": "deeds",
+   "eid": "bhikshatana",
+   "title": "Shiva as the wandering beggar",
+   "brief": "Carrying the skull bowl, Shiva wandered naked through the Daruka forest asking for alms, bewitching the sages' wives and breaking the sages' pride in rites. Vishnu appears as Mohini beside him in the story.",
+   "note": "",
+   "refs": [
+    {
+     "src": "Shiva Purana",
+     "ref": "Shiva Purana, Satarudra-samhita ch.31 (Bhikshuvarya)",
+     "gist": "Shiva as mendicant incarnation (a different tale, not the Daruka-forest Bhikshatana)",
+     "quote": "",
+     "pinned": false,
+     "url": "https://www.wisdomlib.org/hinduism/book/shiva-purana-english/d/doc226427.html"
+    },
+    {
+     "src": "Shiva Purana",
+     "ref": "Shiva Purana, Koti-rudra-samhita ch.29 (Darukavana)",
+     "gist": "Darukavana rakshasas and a jyotirlinga: partial link",
+     "quote": "",
+     "pinned": false,
+     "url": "https://www.wisdomlib.org/hinduism/book/shiva-purana-english/d/doc226530.html"
+    },
+    {
+     "src": "Linga Purana",
+     "ref": "Linga Purana 1.29-31, 1.106",
+     "gist": "Bhiksha keyword hits near the Daruka-forest material (not read)",
+     "quote": "",
+     "pinned": false,
+     "url": "https://www.wisdomlib.org/hinduism/book/the-linga-purana/d/doc1195242.html"
+    }
+   ],
+   "dp": [
+    {
+     "prabandham": "Tevaram (Sambandar)",
+     "ref": "Tirumurai 3, pathigam 3.104 (திருப்பரிதிநியமம்), verse 1; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "விண்கொண்ட தூமதி சூடிநீடு",
+     "gist": "Sambandar at Tiruparithiniyamam: a ten-verse refrain of the beggar who goes for alms and steals the beauty of the women's glances.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=3&Song_idField=3104",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram (Sambandar)",
+     "ref": "Tirumurai 3, pathigam 3.104 (திருப்பரிதிநியமம்), verse 7; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "பிறைவளர் செஞ்சடை பின்றயங்கப்",
+     "gist": "Same pathigam: going from house to house for alms, he makes women's bangles slip and steals their beauty.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=3&Song_idField=3104",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram (Sambandar)",
+     "ref": "Tirumurai 1, pathigam 1.1 (திருப்பிரமபுரம்), verse 2; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "முற்றலாமையிள நாகமோடேன முளைக்கொம்பவைபூண்டு",
+     "gist": "Sambandar's first pathigam (Tirupiramapuram): he goes for alms with a skull and the thief steals my heart.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=1&Song_idField=1001",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram (Sambandar)",
+     "ref": "Tirumurai 1, pathigam 1.1 (திருப்பிரமபுரம்), verse 4; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "விண்மகிழ்ந்தமதி லெய்ததுமன்றி விளங்குதலையோட்டில்",
+     "gist": "Same pathigam: eating from a skull in alms rounds, he is the thief of my heart.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=1&Song_idField=1001",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram (Sambandar)",
+     "ref": "Tirumurai 3, pathigam 3.70 (திருமயிலாடுதுறை), verse 5; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "பூவிரி கதுப்பின்மட மங்கையர",
+     "gist": "Sambandar at Mayiladuthurai: walks from house to house for alms among the women.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=3&Song_idField=3070",
+     "confirmed": true
+    }
+   ],
+   "songs": {
+    "702": {
+     "conf": "h",
+     "note": "Plucked the middle head of the lotus Brahma and begged with it; laughed and burned the cities; Siva with Uma"
+    },
+    "1166": {
+     "conf": "h",
+     "note": "With the green Devi; went begging; swallowed the ocean poison; burned the three cities; binds the serpent; Ganga with the moon in the hair"
+    },
+    "509": {
+     "conf": "m",
+     "note": "Brahma's skull-bowl, sacred ash and konrai in the hair"
+    }
+   }
+  },
+  "deeds-annamalai": {
+   "id": "deeds-annamalai",
+   "domain": "deeds",
+   "eid": "annamalai",
+   "title": "The fire pillar (Annamalai)",
+   "brief": "Vishnu and Brahma quarrelled over who was greater. Shiva stood between them as an endless column of fire. Vishnu as a boar dug down and Brahma as a swan flew up; Vishnu confessed he could not reach the foot, Brahma falsely claimed the crown. The fire is worshipped at Arunachala (Tiruvannamalai).",
+   "note": "",
+   "refs": [
+    {
+     "src": "Linga Purana",
+     "ref": "Linga Purana 1.17 (Lingodbhava), 1.18-20",
+     "gist": "Shiva appears as a fiery pillar; Vishnu as boar and Brahma as swan fail to find its ends; Brahma's false claim",
+     "quote": "",
+     "pinned": true,
+     "url": "https://www.wisdomlib.org/hinduism/book/the-linga-purana/d/doc1195230.html"
+    },
+    {
+     "src": "Shiva Purana",
+     "ref": "Shiva Purana, Vidyesvara-samhita ch.5-9 (ch.6 battle, ch.7 column of fire); Rudra-samhita 1 ch.7",
+     "gist": "Brahma and Vishnu quarrel; Shiva as column of fire; they search for his ends",
+     "quote": "",
+     "pinned": true,
+     "url": "https://www.wisdomlib.org/hinduism/book/shiva-purana-english/d/doc225552.html"
+    },
+    {
+     "src": "Skanda Purana",
+     "ref": "Skanda Purana, Maheshvara-khanda, Arunacala-khanda (Uttarardha) ch.10-11",
+     "gist": "Manifestation of the fiery Linga at Arunachala; Vishnu's search of the lower part",
+     "quote": "",
+     "pinned": true,
+     "url": "https://www.wisdomlib.org/hinduism/book/the-skanda-purana/d/doc370663.html"
+    }
+   ],
+   "dp": [
+    {
+     "prabandham": "Tirumandiram (Tirumular)",
+     "ref": "Tirumurai 10, Tirumandiram, இரண்டாம் தந்திரம் - 8. அடிமுடி தேடல் (thevaaram.org id 10208), verse 1 within the section; absolute verse number not checked",
+     "first": "பிரமனும் மாலும் பிரானேநான்",
+     "gist": "Tirumandiram section 'Adimudi thedal': Brahma and Vishnu each claim to be supreme; Shiva stands as a blazing fire and they set out to seek his feet and crown.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=10&Song_idField=10208",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tirumandiram (Tirumular)",
+     "ref": "Tirumurai 10, Tirumandiram, இரண்டாம் தந்திரம் - 8. அடிமுடி தேடல் (thevaaram.org id 10208), verse 2 within the section; absolute verse number not checked",
+     "first": "அடிமுடி காண்பார் அயன்மால்",
+     "gist": "Tirumandiram: Brahma and Vishnu, the two seeking his feet and crown, fail; Achyuta says he has not found the feet.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=10&Song_idField=10208",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram (Sambandar)",
+     "ref": "Tirumurai 2, pathigam 2.25 (திருப்புகலி), verse 9; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "மாலும் நான்முகன் தானும்",
+     "gist": "Sambandar at Pukali: Vishnu and Brahma seek his feet and crown while he stands as a vast flame.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=2&Song_idField=2025",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram (Sambandar)",
+     "ref": "Tirumurai 2, pathigam 2.108 (திருவிற்குடி வீரட்டம்), verse 9; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "செங்கண் மாலொடு நான்முகன்",
+     "gist": "Sambandar at Virkudi Virattam: Vishnu and Brahma sought but could not know his feet; he is fire everywhere.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=2&Song_idField=2108",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram (Sambandar)",
+     "ref": "Tirumurai 3, pathigam 3.15 (திருவெண்காடு), verse 9; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "ஏடவிழ் நறுமலர் அயனு",
+     "gist": "Sambandar at Venkadu: Brahma and Vishnu searched but could not discern him.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=3&Song_idField=3015",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram (Sundarar)",
+     "ref": "Tirumurai 7, pathigam 7.22 (திருப்பழமண்ணிப்படிக்கரை), verse 8; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "திரிவன மும்மதிலும் மெரித்",
+     "gist": "Sundarar at Pazhamannipadikkarai: Brahma and Vishnu could not see his feet or crown.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=7&Song_idField=7022",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram (Appar)",
+     "ref": "Tirumurai 6, pathigam 6.40 (திருமழபாடி), verse 7; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "சுழித்துணையாம் பிறவிவழித் துக்கம்",
+     "gist": "Appar at Mazhapadi: Vishnu and Brahma could not see him.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=6&Song_idField=6040",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram (Appar)",
+     "ref": "Tirumurai 5, pathigam 5.34 (திருநெய்த்தானம்), verse 9; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "மாலொ டும்மறை யோதிய",
+     "gist": "Appar at Neythanam: Vishnu and Brahma could not find his feet or crown.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=5&Song_idField=5034",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram (Appar)",
+     "ref": "Tirumurai 4, pathigam 4.50 (திருக்குறுக்கைவீரட்டம்), verse 1; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "நெடியமால் பிரம னோடு",
+     "gist": "Appar at Kurukkai: Vishnu and Brahma failed to find his feet or crown.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=4&Song_idField=4050",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram (Sambandar)",
+     "ref": "Tirumurai 2, pathigam 2.117 (திருவிரும்பைமாகாளம்), verse 10; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "அரவமார்த்தன் றனலங்கை யேந்தி",
+     "gist": "Sambandar at Irumbai: Brahma and Vishnu did not know his feet or crown.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=2&Song_idField=2117",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram (Sambandar)",
+     "ref": "Tirumurai 1, pathigam 1.77 (திருஅச்சிறுபாக்கம்), verse 9; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "நோற்றலாரேனும் வேட்டலாரேனு நுகர்புகர்சாந்தமொ",
+     "gist": "Sambandar at Achirupakkam: Vishnu and Brahma could not see his feet or crown despite their power.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=1&Song_idField=1077",
+     "confirmed": true
+    }
+   ],
+   "songs": {
+    "205": {
+     "conf": "m",
+     "note": "Nataraja dances; Hari and Brahma did not know his feet; Siva Purari's son"
+    },
+    "1063": {
+     "conf": "m",
+     "note": "The Lord who overthrew Yama; Vishnu could not see him (மறலி சாய்த்தவர் இறை... மால் காணாதே)"
+    },
+    "360": {
+     "conf": "m",
+     "note": "Vishnu who rests on the serpent could not find his feet and crown; the Lord with Ganga in his locks"
+    },
+    "479": {
+     "conf": "m",
+     "note": "Danced so that Vishnu and Brahma did not know his feet, in the hall of Chidambaram"
+    },
+    "733": {
+     "conf": "m",
+     "note": "The Lord whom even Hari could not find the origin of"
+    },
+    "957": {
+     "conf": "m",
+     "note": "Sokkar of Madurai whom neither Vishnu nor Brahma could know, delighting Uma"
+    }
+   }
+  },
+  "deeds-ganga": {
+   "id": "deeds-ganga",
+   "domain": "deeds",
+   "eid": "ganga",
+   "title": "Ganga in the matted hair",
+   "brief": "Bhagiratha prayed for Ganga to come down and free his ancestors. The river's fall would have broken the earth, so Shiva received her in his matted locks and let her flow out gently.",
+   "note": "",
+   "refs": [
+    {
+     "src": "Valmiki Ramayana",
+     "ref": "Ramayana 1.43.1-10",
+     "gist": "Bhagiratha's year of penance; Shiva agrees to bear Ganga; she falls on his head and is held in his matted locks; released at Bindu lake",
+     "quote": "",
+     "pinned": true,
+     "url": "https://www.valmikiramayan.net/utf8/baala/sarga43/balasans43.htm"
+    },
+    {
+     "src": "Bhagavata Purana",
+     "ref": "SB 9.9.8-9",
+     "gist": "Bhagiratha pleases Shiva who agrees to bear Ganga on his head",
+     "quote": "",
+     "pinned": true,
+     "url": "https://vedabase.io/en/library/sb/9/9/"
+    },
+    {
+     "src": "Mahabharata (Critical Edition)",
+     "ref": "MBh 3,108 (3,108.2); 3,107",
+     "gist": "Vana: Bhagiratha story, Shiva agrees to hold the falling Ganga",
+     "quote": "",
+     "pinned": true,
+     "url": "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/2_epic/mbh/mbh_03_u.htm"
+    }
+   ],
+   "dp": [
+    {
+     "prabandham": "Tevaram (Sambandar)",
+     "ref": "Tirumurai 3, pathigam 3.122 (திருஓமாம்புலியூர்), verse 3; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "பாங்குடைத் தவத்துப் பகீரதற்",
+     "gist": "Sambandar at Omampuliyur: he favoured the penance of Bhagiratha, hid the Ganga in his matted hair, and brought it down to earth gently.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=3&Song_idField=3122",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram (Sambandar)",
+     "ref": "Tirumurai 1, pathigam 1.104 (திருப்புகலி), verse 7; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "மங்கையோர் கூறுகந்த மழுவாளன்",
+     "gist": "Sambandar at Pukali: hid the Ganga in his long hair along with the moon.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=1&Song_idField=1104",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram (Sambandar)",
+     "ref": "Tirumurai 1, pathigam 1.39 (திருவேட்களம்), verse 8; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "ஆழ்தருமால்கட னஞ்சினையுண்டார் அமுதமமரர்க்",
+     "gist": "Sambandar at Vetkalam: the falling Ganga hidden in a lock of his matted hair.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=1&Song_idField=1039",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram (Sambandar)",
+     "ref": "Tirumurai 1, pathigam 1.105 (திருவாரூர்), verse 6; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "கங்கையோர் வார்சடைமேற் கரந்தான்",
+     "gist": "Sambandar at Tiruvarur: hid the Ganga in a long lock.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=1&Song_idField=1105",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram (Sambandar)",
+     "ref": "Tirumurai 2, pathigam 2.67 (திருப்பெரும்புலியூர்), verse 1; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "மண்ணுமோர் பாக முடையார்",
+     "gist": "Sambandar at Perumpuliyur: hid the Ganga in his hair.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=2&Song_idField=2067",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram (Sambandar)",
+     "ref": "Tirumurai 1, pathigam 1.118 (திருப்பருப்பதம்), verse 8; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "நினைப்பெனு நெடுங்கிணற்றை நின்றுநின்",
+     "gist": "Sambandar at Paruppatham: hid the surging Ganga in his fragrant matted hair.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=1&Song_idField=1118",
+     "confirmed": true
+    }
+   ],
+   "songs": {
+    "52": {
+     "conf": "h",
+     "note": "Burned the cities; Ganga in the matted hair, konrai, Uma on his left; Murugan the god that Shiva worships (புரமெரிய விண்டிடும்... கங்கை சடிலம்)"
+    },
+    "412": {
+     "conf": "h",
+     "note": "Burned the cities, wears the tiger skin and Ganga with the crescent"
+    },
+    "815": {
+     "conf": "h",
+     "note": "Purari burned the cities with a smile before Meru bent; eyes that burned Kama; Ganga"
+    },
+    "1166": {
+     "conf": "h",
+     "note": "With the green Devi; went begging; swallowed the ocean poison; burned the three cities; binds the serpent; Ganga with the moon in the hair"
+    },
+    "1203": {
+     "conf": "h",
+     "note": "Bull-rider with Ganga in his hair, fire-bodied; laughed and burned the three cities"
+    },
+    "77": {
+     "conf": "h",
+     "note": "Ganga in the matted hair; reduced Kama to ash (பொடிசெய்தருள் மதன்)"
+    },
+    "444": {
+     "conf": "h",
+     "note": "Dancer with the anklet sound; Brahma's head in his hand; skinned the elephant; Ganga, moon, konrai in the hair; burned Kama with his eye; stain of poison in the throat; gave Ganesha; Devi who tramples Muyalakan"
+    },
+    "911": {
+     "conf": "h",
+     "note": "Burned Kama with the fire eye; Ganga in the hair; Appar with the snake-ears Guru (காமனை எரித்த தீநயன நெற்றி... சுவர்க்க நதி வேணி)"
+    },
+    "1177": {
+     "conf": "h",
+     "note": "Sage's son; three-eyed Lord who burned Kama; Ganga and crescent on his hair"
+    },
+    "199": {
+     "conf": "h",
+     "note": "Drank the poison from the ocean; Ganga in his hair, rides the bull (பரவைவரு விடமருந்தும் மிடறுடைய கடவுள் கங்கை படர்சடையர்)"
+    },
+    "389": {
+     "conf": "h",
+     "note": "Ate the poison to free the devas, bull rider; moon and Ganga in the matted hair"
+    },
+    "360": {
+     "conf": "m",
+     "note": "Vishnu who rests on the serpent could not find his feet and crown; the Lord with Ganga in his locks"
+    },
+    "32": {
+     "conf": "m",
+     "note": "Shankara wearing Ganga and konrai in his hair, with Uma"
+    },
+    "307": {
+     "conf": "m",
+     "note": "Son of Pasupati who wears the flowing water on his head"
+    },
+    "380": {
+     "conf": "h",
+     "note": "Taught the Siva with Ganga in his hair as Guru (சிவனை முதல் ஓதுவித்த குருநாதா)"
+    },
+    "422": {
+     "conf": "l",
+     "note": "Shankara of Arunagiri who bows to Murugan; Gauri and Ganga"
+    },
+    "466": {
+     "conf": "m",
+     "note": "The dancer on Kailasa with the river and the crescent in his hair"
+    },
+    "519": {
+     "conf": "m",
+     "note": "A woman in the spread locks and a deer in his hand; dwelling on the white mountain"
+    },
+    "652": {
+     "conf": "m",
+     "note": "The Lord with Ganga in his hair, his Devi Parameswari's son"
+    },
+    "699": {
+     "conf": "l",
+     "note": "Parameswara with moon, serpent and cool river in the matted hair"
+    },
+    "719": {
+     "conf": "h",
+     "note": "Kampar of Kanchi who melted for the mountain's daughter and gave her half; Sadi-tandava dancer; Ganga in the hair"
+    },
+    "856": {
+     "conf": "m",
+     "note": "Chief with Ganga in the matted hair whose worship of Uma pleased him"
+    },
+    "860": {
+     "conf": "m",
+     "note": "Parama with serpents, Ganga, moon, konrai and thumbai in the hair; Shankara worships Murugan"
+    },
+    "922": {
+     "conf": "m",
+     "note": "Serpent, Ganga, moon, kurava, arugu, thumbai, konrai in the hair; Shambhu worships Guru Murugan"
+    },
+    "1051": {
+     "conf": "l",
+     "note": "Ganga and serpent in his hair, Thimilai-natha, Mahadeva"
+    },
+    "1159": {
+     "conf": "m",
+     "note": "Moon on the head with Ganga; serpent-eared, trident-holder with Vishnu"
+    },
+    "1170": {
+     "conf": "m",
+     "note": "Bone garland, Ganga on the head, dance; the Lord's consort; Murugan whispers the secret"
+    },
+    "1239": {
+     "conf": "h",
+     "note": "Gave the mountain's daughter the left, moon and river in the hair, axe and fire in the hand"
+    },
+    "1320": {
+     "conf": "m",
+     "note": "Tiger-skin Parama with Ganga in his hair worships Murugan"
+    }
+   }
+  },
+  "deeds-ravana": {
+   "id": "deeds-ravana",
+   "domain": "deeds",
+   "eid": "ravana",
+   "title": "Ravana lifts Kailasa",
+   "brief": "Ravana tried to lift Mount Kailasa. Shiva pressed it down with his toe and crushed Ravana's arms. After a long cry and hymns Ravana was released; the name Ravana is explained as 'the one who roared'.",
+   "note": "",
+   "refs": [
+    {
+     "src": "Valmiki Ramayana",
+     "ref": "Ramayana 7.16 (Dutt/Shastri numbering, 'Origin of Ravana's name')",
+     "gist": "Ravana on the Pushpaka is stopped by Nandi at Kailasa, scorns him, tries to uproot the mountain; Shiva presses it and he cries out, gaining the name Ravana",
+     "quote": "",
+     "pinned": true,
+     "url": "https://www.wisdomlib.org/hinduism/book/the-ramayana-of-valmiki/d/doc424777.html"
+    }
+   ],
+   "dp": [
+    {
+     "prabandham": "Tevaram (Sambandar)",
+     "ref": "Tirumurai 3, pathigam 3.28 (திருமழபாடி), verse 8; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "கரத்தினால் கயிலையை யெடுத்தகார்",
+     "gist": "Sambandar at Mazhapadi: Ravana lifted Kailasa; Shiva pressed him down; Ravana cried Shiva's feet were his refuge and sang with his veins as strings.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=3&Song_idField=3028",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram (Appar)",
+     "ref": "Tirumurai 4, pathigam 4.49 (திருக்குறுக்கைவீரட்டம்), verse 10; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "எடுத்தன னெழிற் கயிலை",
+     "gist": "Appar at Kurukkai: Ravana lifted bright Kailasa; one finger pressed him, he cried out and sang with a nerve, and was released.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=4&Song_idField=4049",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram (Appar)",
+     "ref": "Tirumurai 6, pathigam 6.20 (திருநள்ளாறு), verse 10; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "இறவாமே வரம்பெற்றே னென்று",
+     "gist": "Appar at Nallaru: Ravana, sure of his boon, was crushed by the toe, then Shiva was moved by his music.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=6&Song_idField=6020",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram (Appar)",
+     "ref": "Tirumurai 4, pathigam 4.1 (திருவதிகை வீரட்டானம்), verse 10; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "போர்த்தாயங்கோ ரானையின் ஈருரிதோல்",
+     "gist": "Appar at Atigai: Ravana was pressed beneath the great mountain, then given grace.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=4&Song_idField=4001",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram (Appar)",
+     "ref": "Tirumurai 5, pathigam 5.72 (திருநீலக்குடி), verse 10; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "தருக்கி வெற்பது தாங்கிய",
+     "gist": "Appar at Nilakkudi: Ravana, proud, lifted the mountain; with one toe Shiva crushed him, then showed mercy.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=5&Song_idField=5072",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram (Sambandar)",
+     "ref": "Tirumurai 2, pathigam 2.20 (திருஅழுந்தூர்), verse 9; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "மணிநீள் முடியான் மலையை",
+     "gist": "Sambandar at Azhundur: Ravana lifted the mountain; Shiva crushed his body with a finger.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=2&Song_idField=2020",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram (Sambandar)",
+     "ref": "Tirumurai 3, pathigam 3.5 (திருப்பூந்தராய்), verse 8; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "போத கத்துரி போர்த்தவன்",
+     "gist": "Sambandar at Poonthurai: with one toe he destroyed Ravana's strength, then gave grace.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=3&Song_idField=3005",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram (Sambandar)",
+     "ref": "Tirumurai 2, pathigam 2.59 (சீகாழி), verse 8; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "அரக்கன் முடிதோள் நெரிய",
+     "gist": "Sambandar at Kali: Ravana's crowns and shoulders were crushed by the Lord, who gives grace to devotees.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=2&Song_idField=2059",
+     "confirmed": true
+    }
+   ],
+   "songs": {
+    "312": {
+     "conf": "h",
+     "note": "Ravana uprooting the Kailasa mountain"
+    },
+    "485": {
+     "conf": "h",
+     "note": "Ravana's mountain-lifting shoulders crushed under the toe; Siva on the bull with his consort; Sambhu's child (வலித்துத் தோள்மலை ராவணன் எடுத்தப்போது உடல் கீழ்விழ)"
+    },
+    "522": {
+     "conf": "h",
+     "note": "Ravana lifted Kailasa"
+    }
+   }
+  },
+  "deeds-sarabha": {
+   "id": "deeds-sarabha",
+   "domain": "deeds",
+   "eid": "sarabha",
+   "title": "Shiva as Sarabha",
+   "brief": "After Narasimha killed Hiranyakashipu his rage did not cool. Shiva took the form of the fierce Sarabha (part lion, part bird) and calmed him. The story is told in later Puranas and Shaiva tradition.",
+   "note": "",
+   "refs": [
+    {
+     "src": "Shiva Purana",
+     "ref": "Shiva Purana, Satarudra-samhita ch.11-12",
+     "gist": "Prologue and the Sharabha incarnation of Shiva",
+     "quote": "",
+     "pinned": true,
+     "url": "https://www.wisdomlib.org/hinduism/book/shiva-purana-english/d/doc226408.html"
+    },
+    {
+     "src": "Linga Purana",
+     "ref": "Linga Purana 1.95-96",
+     "gist": "Nrisimha chapter; Shiva's deeds (Sharabha keyword hits, not read)",
+     "quote": "",
+     "pinned": false,
+     "url": "https://www.wisdomlib.org/hinduism/book/the-linga-purana/d/doc1196075.html"
+    }
+   ],
+   "dp": [],
+   "songs": {
+    "424": {
+     "conf": "m",
+     "note": "Sarabha bird form that subdued the fierce Narasimha (வெஞ்சச் சிம்புட் சொரூபமதானவர் ... நரகேசரி)"
+    },
+    "448": {
+     "conf": "m",
+     "note": "Shankara with Uma on his left; the Sarabha (சிம்புள்) form"
+    }
+   }
+  },
+  "forms-nataraja": {
+   "id": "forms-nataraja",
+   "domain": "forms",
+   "eid": "nataraja",
+   "title": "Shiva the dancer (Nataraja)",
+   "brief": "Shiva dances: the Ananda Tandava in the golden hall at Chidambaram (Thillai), the contest with Kali at Tiruvalangadu, the dance in the burning ground, with his foot on the dwarf Muyalakan. Vishnu, Brahma and the serpent Adisesha watch.",
+   "note": "",
+   "refs": [
+    {
+     "src": "Linga Purana",
+     "ref": "Linga Purana 1.106",
+     "gist": "Tandava dance of Shiva at dusk with ghosts and goblins, to please the Goddess",
+     "quote": "",
+     "pinned": true,
+     "url": "https://www.wisdomlib.org/hinduism/book/the-linga-purana/d/doc1196086.html"
+    },
+    {
+     "src": "Shiva Purana",
+     "ref": "Shiva Purana, Satarudra-samhita ch.34 (Sunartaka Nata)",
+     "gist": "Shiva as a dancing actor",
+     "quote": "",
+     "pinned": true,
+     "url": "https://www.wisdomlib.org/hinduism/book/shiva-purana-english/d/doc226430.html"
+    },
+    {
+     "src": "Mahabharata (Critical Edition)",
+     "ref": "MBh 13,17.49",
+     "gist": "Name list: nrityapriya, nityanarta (fond of dance)",
+     "quote": "",
+     "pinned": false,
+     "url": "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/2_epic/mbh/mbh_13_u.htm"
+    }
+   ],
+   "dp": [
+    {
+     "prabandham": "Tevaram (Appar)",
+     "ref": "Tirumurai 4, pathigam 4.81 (கோயில்), verse 4; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "குனித்த புருவமுங் கொவ்வைச்செவ்",
+     "gist": "Appar's Tillai verse: the curved brow, red lips, gentle smile, matted hair and the raised golden foot: the vision of the dancing Lord.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=4&Song_idField=4081",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram (Appar)",
+     "ref": "Tirumurai 4, pathigam 4.22 (கோயில்), verse 2; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "ஏறனா ரேறு தம்பா",
+     "gist": "Appar at Tillai: the Lord with the Ganga in his hair and the Lady at his side dances in the blazing fire in the Chitrambalam.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=4&Song_idField=4022",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram (Sambandar)",
+     "ref": "Tirumurai 3, pathigam 3.1 (கோயில்), verse 1; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "ஆடி னாய்நறு நெய்யொடு",
+     "gist": "Sambandar at Tillai: praises the Lord bathed in ghee, milk and curd who abides in the Chitrambalam of the Tillai Brahmins.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=3&Song_idField=3001",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tiruvasagam (Manikkavasagar)",
+     "ref": "Tirumurai 8, Tiruvasagam section 12 (திருச்சாழல்), verse 14; section order as listed on thevaaram.org",
+     "first": "தேன்புக்க தண்பணைசூழ் தில்லைச்சிற்",
+     "gist": "Tiruchchazhal: why does the Lord of Tillai's Chitrambalam dance? Because if he did not, the world would be filled with Kali's flesh-eating company.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=8&Song_idField=8112",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram (Appar)",
+     "ref": "Tirumurai 6, pathigam 6.34 (திருவாரூர்), verse 8; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "பாதத்தால் முயலகனைப் பாது",
+     "gist": "Appar at Tiruvarur: he protected Muyalakan with his foot.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=6&Song_idField=6034",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram (Appar)",
+     "ref": "Tirumurai 6, pathigam 6.90 (திருக்கஞ்சனூர்), verse 9; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "நெருப்புருவத் திருமேனி வெண்ணீற்",
+     "gist": "Appar at Kanchanur: he set his foot on Muyalakan.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=6&Song_idField=6090",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram (Appar)",
+     "ref": "Tirumurai 6, pathigam 6.96 (பொது), verse 3; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "முடிகொண்டார் முளையிளவெண் டிங்க",
+     "gist": "Appar (general): with ringing anklets, he keeps the unruly Muyalakan beneath his foot.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=6&Song_idField=6096",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram (Appar)",
+     "ref": "Tirumurai 4, pathigam 4.100 (திருவின்னம்பர்), verse 7; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "போற்றுந் தகையன பொல்லா",
+     "gist": "Appar at Innambar: feet that quell the rage of the vile Muyalakan.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=4&Song_idField=4100",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tirumandiram (Tirumular)",
+     "ref": "Tirumurai 10, Tirumandiram, ஒன்பதாம் தந்திரம் - 15. அற்புதக் கூத்து (thevaaram.org id 10915), verse 13 within the section; absolute verse number not checked",
+     "first": "ஆகாச மாம் உடல்",
+     "gist": "Tirumandiram 'Adbhuta Koothu': Muyalakan appears as the ego (ahankara); the Lord dances in the great hall of space.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=10&Song_idField=10915",
+     "confirmed": true
+    }
+   ],
+   "songs": {
+    "7": {
+     "conf": "m",
+     "note": "Shiva who danced in the hall; Guru who gave grace under the kurundam tree (நடித்த சங்கரர்; திருக்குருந்தடி அருளிய குருநாதர்)"
+    },
+    "23": {
+     "conf": "m",
+     "note": "Matted-hair Shiva dancing the pavuri with Uma on his left"
+    },
+    "71": {
+     "conf": "h",
+     "note": "Laughed and destroyed the cities; danced in the hall holding the axe (புரம் சிரித்துக் கொன்றிடும்... மன்றினிலாடி மழுக்கைக்கொண்ட சங்கரர்)"
+    },
+    "83": {
+     "conf": "h",
+     "note": "Father of Chidambaram's hall; taught him the five letters in his ear (திருச்சிற்றம்பலத்து அத்தன் செவிக்குப் பண்புறச் செப்பும்)"
+    },
+    "205": {
+     "conf": "m",
+     "note": "Nataraja dances; Hari and Brahma did not know his feet; Siva Purari's son"
+    },
+    "207": {
+     "conf": "h",
+     "note": "Saw the cities and Kama's body turned to ash; the young bull-rider Nataraja (திரிபுரமும் மதனுடலும் நீறு கண்டவன்... நடராஜன்)"
+    },
+    "208": {
+     "conf": "m",
+     "note": "Lord who dances ceaselessly with Pidari (Kali); the hunters (கிராதர்) are only a simile"
+    },
+    "251": {
+     "conf": "h",
+     "note": "Danced with ocean-like matted hair, deer and axe in hand, golden anklets ringing (மான்மழுக்கரம் ஆட பொற்கழல் ஓசை பெற நடித்தவர்)"
+    },
+    "292": {
+     "conf": "m",
+     "note": "Burned the cities in a moment (Devi as the Abhirami); the dancing Siva"
+    },
+    "302": {
+     "conf": "l",
+     "note": "Dancer whose forehead eye burned something (நெற்றிவிழி பட்டெரிய நட்டமிடும் உத்தமர்)"
+    },
+    "409": {
+     "conf": "h",
+     "note": "Changed jackals into horses; dances; wears the elephant hide (நரிமிகுக் கிளைகளைப் பரியெனக்... கரியுரித்தணிபவற்கொருசேயே)"
+    },
+    "444": {
+     "conf": "h",
+     "note": "Dancer with the anklet sound; Brahma's head in his hand; skinned the elephant; Ganga, moon, konrai in the hair; burned Kama with his eye; stain of poison in the throat; gave Ganesha; Devi who tramples Muyalakan"
+    },
+    "452": {
+     "conf": "m",
+     "note": "Father who danced on Mount Kailasa and was taught by Murugan"
+    },
+    "458": {
+     "conf": "h",
+     "note": "Destroyed the cities, flayed the elephant, cut off angry Daksha's head, learned the true meaning in his ear from Murugan; Chidambaram"
+    },
+    "460": {
+     "conf": "h",
+     "note": "Dances in the hall of Chidambaram (தித்தியென்று ஒத்தி நின்றாடு சிற்றம்பலவர்)"
+    },
+    "462": {
+     "conf": "h",
+     "note": "Flayed the elephant; burned the cities and Kama with a laugh; cut Brahma's head; Chidambaram"
+    },
+    "466": {
+     "conf": "m",
+     "note": "The dancer on Kailasa with the river and the crescent in his hair"
+    },
+    "472": {
+     "conf": "h",
+     "note": "Father who dances in the golden hall of Chidambaram"
+    },
+    "476": {
+     "conf": "m",
+     "note": "Child born from the eye of the Lord of Thillai"
+    },
+    "479": {
+     "conf": "m",
+     "note": "Danced so that Vishnu and Brahma did not know his feet, in the hall of Chidambaram"
+    },
+    "514": {
+     "conf": "m",
+     "note": "Parameswara of the dancing feet"
+    },
+    "517": {
+     "conf": "h",
+     "note": "Burned the cities with a flame-laugh; danced the holy dance while Adisesha's hood bowed; trident, axe, deer; Uma on his left; Kailasa"
+    },
+    "533": {
+     "conf": "m",
+     "note": "Son of Thillai's Purari"
+    },
+    "535": {
+     "conf": "l",
+     "note": "Thillai's Lord is the father"
+    },
+    "583": {
+     "conf": "l",
+     "note": "Hara who dances in the burning ground along with Brahma and Vishnu"
+    },
+    "673": {
+     "conf": "h",
+     "note": "Danced with Kali at Tiruvalangadu (காளியொடு ஆடிய ஜகதீச நடேசுரர்)"
+    },
+    "674": {
+     "conf": "h",
+     "note": "Danced at Tiruvalangadu (அன்றாலங்காட்டு நின்றாடும் கூத்தன்)"
+    },
+    "682": {
+     "conf": "m",
+     "note": "Lord of the dance in Thillai; Murugan the Guru of Siva (சிவனே சிவ குருநாதா)"
+    },
+    "686": {
+     "conf": "m",
+     "note": "Nataraja praises the Guru-king Murugan"
+    },
+    "719": {
+     "conf": "h",
+     "note": "Kampar of Kanchi who melted for the mountain's daughter and gave her half; Sadi-tandava dancer; Ganga in the hair"
+    },
+    "724": {
+     "conf": "m",
+     "note": "Shankara who dances with Antari (Uma) happy"
+    },
+    "744": {
+     "conf": "h",
+     "note": "The Pavuri dance in the golden hall, anklets sounding"
+    },
+    "806": {
+     "conf": "m",
+     "note": "Siva with Uma on the right, the bull-rider dancing; Purari's Guru"
+    },
+    "833": {
+     "conf": "l",
+     "note": "Son equal to Siva's eyes, who danced in the golden hall"
+    },
+    "888": {
+     "conf": "m",
+     "note": "Grace to the Dancer (Tandavan), Rudra's son"
+    },
+    "902": {
+     "conf": "m",
+     "note": "The Father who dances on the northern mountain is taught the way to liberation (வடகுவடில் நடனமிடும் அப்பர்க்கு முத்திநெறி தப்பற்று உரைக்கவல்ல)"
+    },
+    "1053": {
+     "conf": "m",
+     "note": "Adisesha, Kali, the bull-rider and the ghosts all dance"
+    },
+    "1096": {
+     "conf": "m",
+     "note": "Danced with a foot on the serpent-hooded demon Muyalakan so the heavens shook"
+    },
+    "1108": {
+     "conf": "h",
+     "note": "Drank the poison from the ocean, danced with the ghosts, rode the bull; serpent, crescent, water; his consort"
+    },
+    "1125": {
+     "conf": "h",
+     "note": "Burned the cities with a laugh; the Lord Hara who dances in the common hall"
+    },
+    "1140": {
+     "conf": "h",
+     "note": "Dances on Muyalakan; the Devi on one side"
+    },
+    "1170": {
+     "conf": "m",
+     "note": "Bone garland, Ganga on the head, dance; the Lord's consort; Murugan whispers the secret"
+    },
+    "1176": {
+     "conf": "h",
+     "note": "Kicked Yama and showed death; poison in the throat; burned Kama; danced in the forest"
+    },
+    "1240": {
+     "conf": "m",
+     "note": "Danced the Tandava of wisdom bliss"
+    },
+    "1249": {
+     "conf": "h",
+     "note": "Turned jackals into horses for the Pandya at Madurai; father who dances; Hara's son"
+    }
+   }
+  },
+  "forms-ardhanari": {
+   "id": "forms-ardhanari",
+   "domain": "forms",
+   "eid": "ardhanari",
+   "title": "Ardhanari: half Uma",
+   "brief": "Shiva shares half his body with Parvati (Ardhanarishvara). At Kanchi, Kamakshi's penance wins her the left half of Ekambareshwara; the Thiruppugazh often marks Murugan as son of the Lord with Uma at his left.",
+   "note": "",
+   "refs": [
+    {
+     "src": "Shiva Purana",
+     "ref": "Shiva Purana, Satarudra-samhita ch.3",
+     "gist": "The half-female incarnation of Shiva",
+     "quote": "",
+     "pinned": true,
+     "url": "https://www.wisdomlib.org/hinduism/book/shiva-purana-english/d/doc226399.html"
+    }
+   ],
+   "dp": [
+    {
+     "prabandham": "Tevaram (Appar)",
+     "ref": "Tirumurai 4, pathigam 4.7 (திருக்கச்சியேகம்பம்), verse 9; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "ஆகம்பத் தரவணையா னயனறிதற்",
+     "gist": "Appar at Ekambam: the Lord whose body is half male, half female.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=4&Song_idField=4007",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram (Appar)",
+     "ref": "Tirumurai 4, pathigam 4.36 (திருப்பழனம்), verse 7; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "ஆதித்த னங்கி சோம",
+     "gist": "Appar at Pazhanam: the Lord who took the form of half woman.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=4&Song_idField=4036",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram (Appar)",
+     "ref": "Tirumurai 5, pathigam 5.29 (திருவாவடுதுறை), verse 3; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "பாதிப் பெண்ணொரு பாகத்தன்",
+     "gist": "Appar at Avaduthurai: the Lord with a woman as half; the Light.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=5&Song_idField=5029",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram (Appar)",
+     "ref": "Tirumurai 5, pathigam 5.97 (பொது), verse 3; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "ஆதி யாயவ னாரு",
+     "gist": "Appar (general): half-woman form, the Light within the Light.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=5&Song_idField=5097",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram (Appar)",
+     "ref": "Tirumurai 6, pathigam 6.38 (திருவையாறு), verse 5; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "பெண்ணாண் பிறப்பிலியாய் நின்றாய்",
+     "gist": "Appar at Aiyaru: you are male and female, birthless.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=6&Song_idField=6038",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram (Appar)",
+     "ref": "Tirumurai 6, pathigam 6.18 (திருப்பூவணம்), verse 2; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "ஆணாகிப் பெண்ணாய வடிவு",
+     "gist": "Appar at Tiruppuvanam: appears in a form both male and female.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=6&Song_idField=6018",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram (Appar)",
+     "ref": "Tirumurai 4, pathigam 4.18 (பொது), verse 2; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "இரண்டுகொ லாமிமை யோர்தொழு",
+     "gist": "Appar (general): the two ear-ornaments, one male, one female; the Lord of the dual form.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=4&Song_idField=4018",
+     "confirmed": true
+    }
+   ],
+   "songs": {
+    "444": {
+     "conf": "h",
+     "note": "Dancer with the anklet sound; Brahma's head in his hand; skinned the elephant; Ganga, moon, konrai in the hair; burned Kama with his eye; stain of poison in the throat; gave Ganesha; Devi who tramples Muyalakan"
+    },
+    "517": {
+     "conf": "h",
+     "note": "Burned the cities with a flame-laugh; danced the holy dance while Adisesha's hood bowed; trident, axe, deer; Uma on his left; Kailasa"
+    },
+    "719": {
+     "conf": "h",
+     "note": "Kampar of Kanchi who melted for the mountain's daughter and gave her half; Sadi-tandava dancer; Ganga in the hair"
+    },
+    "724": {
+     "conf": "m",
+     "note": "Shankara who dances with Antari (Uma) happy"
+    },
+    "806": {
+     "conf": "m",
+     "note": "Siva with Uma on the right, the bull-rider dancing; Purari's Guru"
+    },
+    "1108": {
+     "conf": "h",
+     "note": "Drank the poison from the ocean, danced with the ghosts, rode the bull; serpent, crescent, water; his consort"
+    },
+    "1140": {
+     "conf": "h",
+     "note": "Dances on Muyalakan; the Devi on one side"
+    },
+    "13": {
+     "conf": "l",
+     "note": "Son of Shankara and Uma at his side (சங்கரன் பங்கிற் சிவைபாலா)"
+    },
+    "94": {
+     "conf": "m",
+     "note": "Devi who shares the half of the bull-rider and dances as Kali"
+    },
+    "179": {
+     "conf": "m",
+     "note": "Trident-bearing Shankara, Kailasa Lord, Uma on his left"
+    },
+    "226": {
+     "conf": "l",
+     "note": "Shiva's half-bodied Devi (இடபாகம்); Murugan the Devi's son"
+    },
+    "237": {
+     "conf": "m",
+     "note": "Shankara wearing the elephant hide, deer and tiger skin, the moon and Ganga in his hair, Uma at his side, who worships Murugan"
+    },
+    "291": {
+     "conf": "m",
+     "note": "Burned the cities with laughter and fire; his consort the Devi"
+    },
+    "313": {
+     "conf": "l",
+     "note": "Siva with the trident and Devi"
+    },
+    "369": {
+     "conf": "l",
+     "note": "Hymn to the Devi, destroyer of the cities"
+    },
+    "391": {
+     "conf": "h",
+     "note": "Destroyer of the cities who shares the body with Tripurai"
+    },
+    "422": {
+     "conf": "l",
+     "note": "Shankara of Arunagiri who bows to Murugan; Gauri and Ganga"
+    },
+    "448": {
+     "conf": "m",
+     "note": "Shankara with Uma on his left; the Sarabha (சிம்புள்) form"
+    },
+    "463": {
+     "conf": "h",
+     "note": "Burned the cities; Devi Sankari in his half"
+    },
+    "485": {
+     "conf": "h",
+     "note": "Ravana's mountain-lifting shoulders crushed under the toe; Siva on the bull with his consort; Sambhu's child (வலித்துத் தோள்மலை ராவணன் எடுத்தப்போது உடல் கீழ்விழ)"
+    },
+    "507": {
+     "conf": "m",
+     "note": "Uma-bhagar with the trident, fire-coloured Paran"
+    },
+    "550": {
+     "conf": "h",
+     "note": "Eight thousand Jains at Madurai; ash spread; Sambandar sings Siva Siva Mahadeva; Lord with Uma on one half"
+    },
+    "594": {
+     "conf": "m",
+     "note": "The father with the moon in his hair and Uma on his side, who worships his Guru feet"
+    },
+    "652": {
+     "conf": "m",
+     "note": "The Lord with Ganga in his hair, his Devi Parameswari's son"
+    },
+    "691": {
+     "conf": "m",
+     "note": "Child pleasing the Uma-bhagar"
+    },
+    "702": {
+     "conf": "h",
+     "note": "Plucked the middle head of the lotus Brahma and begged with it; laughed and burned the cities; Siva with Uma"
+    },
+    "729": {
+     "conf": "l",
+     "note": "Bull-rider with Uma, worshipped at the feet by Brahma and Vishnu"
+    },
+    "756": {
+     "conf": "h",
+     "note": "Carried the sand of the Vaigai in Madurai with an axe; father burned the cities and rules Siva-loka; Sivakami who raged at Yama"
+    },
+    "780": {
+     "conf": "m",
+     "note": "Nishkala form with half green; trident-bearer"
+    },
+    "852": {
+     "conf": "m",
+     "note": "Tiger-skin elephant-hide Lord who took the devotee into slavery, Uma shares his body"
+    },
+    "856": {
+     "conf": "m",
+     "note": "Chief with Ganga in the matted hair whose worship of Uma pleased him"
+    },
+    "897": {
+     "conf": "m",
+     "note": "Moon on the matted hair, the Lord with the woman at his side"
+    },
+    "912": {
+     "conf": "m",
+     "note": "Nama Sivaya; Lord with the mountain's daughter on his side"
+    },
+    "966": {
+     "conf": "h",
+     "note": "Burner of the cities, the beautiful Sokkan with half Uma; taught the meaning in his ear"
+    },
+    "1004": {
+     "conf": "h",
+     "note": "Taught the silent meaning to Pasupati; Devi of Arunai"
+    },
+    "1046": {
+     "conf": "l",
+     "note": "Devi hymn: she who is half of the Lord of Kailasa"
+    },
+    "1166": {
+     "conf": "h",
+     "note": "With the green Devi; went begging; swallowed the ocean poison; burned the three cities; binds the serpent; Ganga with the moon in the hair"
+    },
+    "1178": {
+     "conf": "m",
+     "note": "Hill-dweller with Uma, takes cremation ash, rides the bull"
+    },
+    "1239": {
+     "conf": "h",
+     "note": "Gave the mountain's daughter the left, moon and river in the hair, axe and fire in the hand"
+    },
+    "957": {
+     "conf": "m",
+     "note": "Sokkar of Madurai whom neither Vishnu nor Brahma could know, delighting Uma"
+    }
+   }
+  },
+  "forms-dakshinamurti": {
+   "id": "forms-dakshinamurti",
+   "domain": "forms",
+   "eid": "dakshinamurti",
+   "title": "Dakshinamurti",
+   "brief": "Shiva sits facing south under a banyan tree and teaches the sages Sanaka and his brothers by silence alone.",
+   "note": "",
+   "refs": [
+    {
+     "src": "Shiva Purana",
+     "ref": "Shiva Purana, Rudra-samhita 1 ch.8",
+     "gist": "Dakshinamurti appears only as a mantra name, no story",
+     "quote": "",
+     "pinned": false,
+     "url": "https://www.wisdomlib.org/hinduism/book/shiva-purana-english/d/doc225976.html"
+    }
+   ],
+   "dp": [
+    {
+     "prabandham": "Tevaram (Appar)",
+     "ref": "Tirumurai 4, pathigam 4.36 (திருப்பழனம்), verse 6; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "ஆலின்கீ ழறங்க ளெல்லா",
+     "gist": "Appar at Pazhanam: under the banyan he taught the dharmas to the four, the subtle meaning of every text.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=4&Song_idField=4036",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram (Appar)",
+     "ref": "Tirumurai 6, pathigam 6.66 (திருநாகேச்சரம்), verse 2; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "உரித்தானை மதவேழந் தன்னை",
+     "gist": "Appar at Tirunageswaram: seated under the banyan he taught the four (dharma, wealth, pleasure, liberation) with the six Angas and the Vedas.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=6&Song_idField=6066",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram (Appar)",
+     "ref": "Tirumurai 6, pathigam 6.74 (திருநாரையூர்), verse 9; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "ஆலாலம் மிடற்றணியா அடக்கி",
+     "gist": "Appar at Naraiyur: under the banyan he taught the four.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=6&Song_idField=6074",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram (Appar)",
+     "ref": "Tirumurai 6, pathigam 6.30 (திருவாரூர்), verse 3; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "நீரேறு சடைமுடியெம் நிமலன்",
+     "gist": "Appar at Tiruvarur: under the stone banyan he taught dharma.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=6&Song_idField=6030",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram (Appar)",
+     "ref": "Tirumurai 6, pathigam 6.22 (திருநாகைக் காரோணம்), verse 9; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "சொல்லார்ந்த சோற்றுத் துறையான்",
+     "gist": "Appar at Nagai-Karonam: taught the Vedas to the four sages under the banyan.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=6&Song_idField=6022",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram (Appar)",
+     "ref": "Tirumurai 6, pathigam 6.23 (திருமறைக்காடு), verse 9; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "மூலநோய் தீர்க்கும் முதல்வன்",
+     "gist": "Appar at Maraikkadu: the teacher of dharma to the four under the banyan.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=6&Song_idField=6023",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram (Sambandar)",
+     "ref": "Tirumurai 2, pathigam 2.24 (திருநாகேச்சரம்), verse 3; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "கல்லால் நிழல்மே யவனே",
+     "gist": "Sambandar at Nageswaram: he who abides in the shade of the stone banyan.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=2&Song_idField=2024",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram (Appar)",
+     "ref": "Tirumurai 5, pathigam 5.8 (திருஅன்னியூர்), verse 8; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "காலை போய்ப்பலி தேர்வர்கண்",
+     "gist": "Appar at Anniyur: seated beneath the banyan teaching dharma.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=5&Song_idField=5008",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram (Sundarar)",
+     "ref": "Tirumurai 7, pathigam 7.99 (திருநாகேச்சரம்), verse 2; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "அருந்தவ மாமுனிவர்க் கரு",
+     "gist": "Sundarar at Tirunageswaram: asks why he sat under the banyan teaching dharma to the great ascetics.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=7&Song_idField=7099",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram (Sambandar)",
+     "ref": "Tirumurai 1, pathigam 1.41 (திருப்பாம்புரம்), verse 7; Tirumurai.pathigam.verse as numbered on thevaaram.org",
+     "first": "மாலினுக்கன்று சக்கரமீந்து மலரவற்கொருமுக",
+     "gist": "Sambandar at Tirupamburam: gave grace to the four under the banyan; also kicked Yama and burned Kama.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=1&Song_idField=1041",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tiruvasagam (Manikkavasagar)",
+     "ref": "Tirumurai 8, Tiruvasagam section 12 (திருச்சாழல்), verse 16; section order as listed on thevaaram.org",
+     "first": "நன்றாக நால்வர்க்கு நான்மறையின்",
+     "gist": "Tiruchchazhal: under the banyan he taught the four the secret of the four Vedas.",
+     "url": "https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=8&Song_idField=8112",
+     "confirmed": true
+    }
+   ],
+   "songs": {
+    "110": {
+     "conf": "m",
+     "note": "Shambhu of the silent teaching, crowned with the moon and arugu grass (மவுனவுபதேச சம்பு)"
+    },
+    "823": {
+     "conf": "h",
+     "note": "Murugan addressed as Dakshinamurti unknown to Brahma; skull-bearing Guru"
+    }
+   }
+  },
+  "saints-sambandar": {
+   "id": "saints-sambandar",
+   "domain": "saints",
+   "eid": "sambandar",
+   "title": "Sambandar and the Jains",
+   "brief": "The child saint Sambandar of Sirkazhi, nursed with Uma's milk, went to Madurai, healed the Pandya's fever with holy ash and defeated the Jains in debate and contests (a fire test, a palm-leaf floating against the Vaigai). Tradition says the Jains were then impaled on the stake; the Thiruppugazh often adds this.",
+   "note": "",
+   "refs": [],
+   "dp": [
+    {
+     "prabandham": "Periya Puranam (Sekkizhar, Tirumurai 12)",
+     "ref": "Sambandar puranam (PP no. 28), verse 2",
+     "first": "சென்னிவளர் மதியணிந்த சிலம்பணிசே வடியார்தம்",
+     "gist": "Kazhumalam, a name of Sirkazhi (Pugali), the Chola-land town where Sambandar is born.",
+     "url": "https://thevaaram.org/thirumurai_1/onepage.php?thiru=12&Song_idField=12280",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periya Puranam (Sekkizhar, Tirumurai 12)",
+     "ref": "Sambandar puranam (PP no. 28), verse 66",
+     "first": "அழுகின்ற பிள்ளையார் தமைநோக்கி அருட்கருணை",
+     "gist": "The Lord on the Tirutoni hill sees the crying child, looks at Uma and bids her feed him milk in a golden bowl.",
+     "url": "https://thevaaram.org/thirumurai_1/onepage.php?thiru=12&Song_idField=12280",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periya Puranam (Sekkizhar, Tirumurai 12)",
+     "ref": "Sambandar puranam (PP no. 28), verse 68",
+     "first": "எண்ணரிய சிவஞானத் தின்னமுதம் குழைத்தருளி",
+     "gist": "Uma feeds the child the milk of Siva-wisdom; the child is thus called the one taken into the Lord's service (Kazhi milk of Uma).",
+     "url": "https://thevaaram.org/thirumurai_1/onepage.php?thiru=12&Song_idField=12280",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periya Puranam (Sekkizhar, Tirumurai 12)",
+     "ref": "Sambandar puranam (PP no. 28), verse 76",
+     "first": "செம்மைபெற எடுத்ததிருத் தோடுடைய செவியன்எனும்",
+     "gist": "The child sings the Todudaiya Seviyan hymn and points out the Lord to his father as the one who did this.",
+     "url": "https://thevaaram.org/thirumurai_1/onepage.php?thiru=12&Song_idField=12280",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periya Puranam (Sekkizhar, Tirumurai 12)",
+     "ref": "Sambandar puranam (PP no. 28), verse 764",
+     "first": "தென்னவன் நோக்கங் கண்டு திருக்கழு",
+     "gist": "At Madurai the king's right-side fever: Sambandar takes holy ash and smears the Pandya, who is cured; the Jains are routed.",
+     "url": "https://thevaaram.org/thirumurai_1/onepage.php?thiru=12&Song_idField=12280",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periya Puranam (Sekkizhar, Tirumurai 12)",
+     "ref": "Sambandar puranam (PP no. 28), verse 765",
+     "first": "திருவளர் நீறு கொண்டு திருக்கையால்",
+     "gist": "Smeared with holy ash by Sambandar's hand, the king's fever leaves and he cools like one bathing in a pond.",
+     "url": "https://thevaaram.org/thirumurai_1/onepage.php?thiru=12&Song_idField=12280",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periya Puranam (Sekkizhar, Tirumurai 12)",
+     "ref": "Sambandar puranam (PP no. 28), verse 779",
+     "first": "அப்ப டிக்கெதிர் அமணரும் அணைந்துறும்",
+     "gist": "The Jains and Sambandar come for the fire test of the palm-leaves; the king orders a fire made.",
+     "url": "https://thevaaram.org/thirumurai_1/onepage.php?thiru=12&Song_idField=12280",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periya Puranam (Sekkizhar, Tirumurai 12)",
+     "ref": "Sambandar puranam (PP no. 28), verse 846",
+     "first": "திருவுடைப் பிள்ளை யார்தந் திருக்கையால்",
+     "gist": "Sambandar's palm-leaf is cast in the Vaigai and goes upstream against the flood; the Jains' leaf is swept away.",
+     "url": "https://thevaaram.org/thirumurai_1/onepage.php?thiru=12&Song_idField=12280",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periya Puranam (Sekkizhar, Tirumurai 12)",
+     "ref": "Sambandar puranam (PP no. 28), verse 847",
+     "first": "எம்பிரான் சிவனே எல்லாப் பொருளும்என்",
+     "gist": "The king's hunch is straightened as the leaf floats upstream.",
+     "url": "https://thevaaram.org/thirumurai_1/onepage.php?thiru=12&Song_idField=12280",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periya Puranam (Sekkizhar, Tirumurai 12)",
+     "ref": "Sambandar puranam (PP no. 28), verse 850",
+     "first": "ஏடகம் பிள்ளை யார்தாம் வன்னிஎன்",
+     "gist": "Sambandar sings the Tiruvedagam verse; the leaf halts at Edagam and Kulachchirai retrieves it.",
+     "url": "https://thevaaram.org/thirumurai_1/onepage.php?thiru=12&Song_idField=12280",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periya Puranam (Sekkizhar, Tirumurai 12)",
+     "ref": "Sambandar puranam (PP no. 28), verse 855",
+     "first": "பண்புடை அமைச்ச னாரும் பாருளோர்",
+     "gist": "The minister has the defeated Jains (eight thousand) mount the row of stakes.",
+     "url": "https://thevaaram.org/thirumurai_1/onepage.php?thiru=12&Song_idField=12280",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periya Puranam (Sekkizhar, Tirumurai 12)",
+     "ref": "Sambandar puranam (PP no. 28), verse 856",
+     "first": "தோற்றவர் கழுவில் ஏறித் தோற்றிடத்",
+     "gist": "The Jains mount the stakes; the Jains' pillar in the river falls with their sunken leaf while the pillar of Sambandar's fame stands.",
+     "url": "https://thevaaram.org/thirumurai_1/onepage.php?thiru=12&Song_idField=12280",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram, Sambandar",
+     "ref": "1.1.1 (Tirupiramapuram / Sirkazhi, first hymn)",
+     "first": "தோடுடைய செவியன்",
+     "gist": "The first Tevaram hymn, sung by the child at Sirkazhi after the milk of wisdom; the site's pathigam note tells the Kazhi milk story.",
+     "url": "https://thevaaram.org/thirumurai_1/songview.php?thiru=1&Song_idField=1001&padhi=001",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram, Sambandar",
+     "ref": "2.66.1 (Tiruvalavai, the Tirunirru pathigam)",
+     "first": "மந்திர மாவது நீறு",
+     "gist": "Sung at Madurai to remove the Pandya's fever with holy ash; the site's history note states this.",
+     "url": "https://thevaaram.org/thirumurai_1/songview.php?thiru=2&Song_idField=2066&padhi=066",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram, Sambandar",
+     "ref": "3.39.1 (Tiruvalavai)",
+     "first": "மானினேர் விழி மாதராய்",
+     "gist": "Sung to the frightened Pandya queen Mangayarkkarasi: do not fear, I am no child to the Jains.",
+     "url": "https://thevaaram.org/thirumurai_1/songview.php?thiru=3&Song_idField=3039&padhi=039",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram, Sambandar",
+     "ref": "3.54.1 (Podu; Vaigai palm-leaf test)",
+     "first": "வாழ்க அந்தணர் வானவ ரானினம்",
+     "gist": "The pathigam's history note: sung on the Vaigai bank when the leaves were set in the river; the Jains' leaf showed only 'natthi'.",
+     "url": "https://thevaaram.org/thirumurai_1/songview.php?thiru=3&Song_idField=3054&padhi=054",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram, Sambandar",
+     "ref": "3.32.1 (Tiruvedagam)",
+     "first": "வன்னியு மத்தமு மதிபொதி சடையினன்",
+     "gist": "The site's history note: his leaf went against the Vaigai current, like a sage's mind against the river of births.",
+     "url": "https://thevaaram.org/thirumurai_1/songview.php?thiru=3&Song_idField=3032&padhi=032",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tiruvilaiyadal Puranam (Paranjothi Munivar; prose retelling by R. Srinivasan on Tamil Wikisource)",
+     "ref": "Padalam 62 (Pandiyan suram theertha padalam)",
+     "first": "",
+     "gist": "Prose retelling: Koon Pandyan, queen Mangayarkkarasi, minister Kulachchirai; Sambandar cures the king's fever with holy ash.",
+     "url": "https://ta.wikisource.org/wiki/%E0%AE%A4%E0%AE%BF%E0%AE%B0%E0%AF%81%E0%AE%B5%E0%AE%BF%E0%AE%B3%E0%AF%88%E0%AE%AF%E0%AE%BE%E0%AE%9F%E0%AE%B1%E0%AF%8D_%E0%AE%AA%E0%AF%81%E0%AE%B0%E0%AE%BE%E0%AE%A3%E0%AE%AE%E0%AF%8D/62",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tiruvilaiyadal Puranam (Paranjothi Munivar; prose retelling by R. Srinivasan on Tamil Wikisource)",
+     "ref": "Padalam 63 (Samanarai kazhuvetriya padalam)",
+     "first": "",
+     "gist": "Prose retelling: the fire and river tests; the Jains lose, leaf goes upstream; the Jains are impaled.",
+     "url": "https://ta.wikisource.org/wiki/%E0%AE%A4%E0%AE%BF%E0%AE%B0%E0%AF%81%E0%AE%B5%E0%AE%BF%E0%AE%B3%E0%AF%88%E0%AE%AF%E0%AE%BE%E0%AE%9F%E0%AE%B1%E0%AF%8D_%E0%AE%AA%E0%AF%81%E0%AE%B0%E0%AE%BE%E0%AE%A3%E0%AE%AE%E0%AF%8D/63",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periya Puranam",
+     "ref": "Ninra Cir Nedumara Nayanar puranam (PP no. 50) and Mangayarkkarasi / Kulachchirai puranams (PP 66, 22)",
+     "first": "",
+     "gist": "Further Pandya-side accounts of the same events; not opened or read in this pass.",
+     "url": "https://thevaaram.org/thirumurai_1/onepage.php?thiru=12&Song_idField=12500",
+     "confirmed": false
+    },
+    {
+     "prabandham": "Tiruvilaiyadal Puranam (Perumparrap Puliyur Nambi)",
+     "ref": "Tiruvalavayudaiyar Tiruvilaiyadal, Sambandar section",
+     "first": "",
+     "gist": "Earlier Sanskrit-derived retelling by Nambi; not found online in this pass.",
+     "url": "",
+     "confirmed": false
+    }
+   ],
+   "songs": {
+    "17": {
+     "conf": "h",
+     "note": "Brahma, Vishnu and Shiva worship; Jains impaled on the stake (வன்சமணரை கழுமிசை)"
+    },
+    "104": {
+     "conf": "h",
+     "note": "Sambandar healed the Pandya's fever with ash; Jains impaled; Nakkeerar helped by Murugan"
+    },
+    "149": {
+     "conf": "h",
+     "note": "Jains impaled on the stake; holy ash spread (திருநீறு பரப்பிய)"
+    },
+    "150": {
+     "conf": "h",
+     "note": "Sambandar's grace; Jains impaled (சம்பந்தம்... சமணர்கள் கழுவினில்)"
+    },
+    "261": {
+     "conf": "h",
+     "note": "Sambandar of Pugali scattered holy ash and defeated the Jains; son of him who burned the cities with his laugh"
+    },
+    "540": {
+     "conf": "h",
+     "note": "White ash spread at Madurai and the Jains routed (அருகர் கணங்கள் பிணங்கிடும்படி மதுரையில் வெண்பொடி பரந்திட)"
+    },
+    "542": {
+     "conf": "h",
+     "note": "The Brahmin boy of Kazhi: palm-leaf against the river, the Jains impaled"
+    },
+    "550": {
+     "conf": "h",
+     "note": "Eight thousand Jains at Madurai; ash spread; Sambandar sings Siva Siva Mahadeva; Lord with Uma on one half"
+    },
+    "617": {
+     "conf": "h",
+     "note": "Bent the Meru and bound the serpent to burn the cities; pushed away Yama; reduced Kama to ash; destroyed Daksha's sacrifice and gave a goat's head; the Jains impaled"
+    },
+    "668": {
+     "conf": "m",
+     "note": "Jains made to fall into the stake in the form of Murugan as Sambandar"
+    },
+    "762": {
+     "conf": "h",
+     "note": "Devi hymn with Sura Sankara Kumara; Jains who do not wear ash are impaled"
+    },
+    "766": {
+     "conf": "h",
+     "note": "At Kuruvai Kudal the Tamil scripture, the Jains on the stake, the ash that cured the Pandya's disease"
+    },
+    "799": {
+     "conf": "m",
+     "note": "The Jains routed"
+    },
+    "913": {
+     "conf": "h",
+     "note": "Buddhists and Jains defeated; the king of the south wore the ash (தெற்கு நரபதி திருநீறிட)"
+    },
+    "920": {
+     "conf": "h",
+     "note": "Stake for the Jains, the Pandya cured of hunch and wearing ash, the Devi of Alavai"
+    },
+    "959": {
+     "conf": "m",
+     "note": "The Jains impaled one against another"
+    },
+    "1209": {
+     "conf": "m",
+     "note": "Jains impaled at Nattakur"
+    },
+    "1282": {
+     "conf": "h",
+     "note": "Came as Sambandan in tamil"
+    },
+    "1287": {
+     "conf": "h",
+     "note": "Uma's milk gave the Tamil child Sambandar; Jains impaled"
+    },
+    "1327": {
+     "conf": "m",
+     "note": "First Guru of Saivism, destroyed the Jains"
+    }
+   }
+  },
+  "saints-tiruvilaiyadal": {
+   "id": "saints-tiruvilaiyadal",
+   "domain": "saints",
+   "eid": "tiruvilaiyadal",
+   "title": "The sacred sports at Madurai",
+   "brief": "Shiva as Sokkanathar and Meenakshi's consort works sixty-four wonders at Madurai, such as turning jackals into horses, carrying earth for the Vaigai bank and being struck by the king's cane, and arbitrating the poet Nakkeerar's dispute.",
+   "note": "",
+   "refs": [],
+   "dp": [
+    {
+     "prabandham": "Tiruvilaiyadal Puranam (Paranjothi Munivar; prose retelling by R. Srinivasan on Tamil Wikisource)",
+     "ref": "Padalam 59 (Nari pariyakkiya padalam)",
+     "first": "",
+     "gist": "Prose retelling: jackals of the forest become horses, ganas become grooms, and the Lord leads them to Madurai.",
+     "url": "https://ta.wikisource.org/wiki/%E0%AE%A4%E0%AE%BF%E0%AE%B0%E0%AF%81%E0%AE%B5%E0%AE%BF%E0%AE%B3%E0%AF%88%E0%AE%AF%E0%AE%BE%E0%AE%9F%E0%AE%B1%E0%AF%8D_%E0%AE%AA%E0%AF%81%E0%AE%B0%E0%AE%BE%E0%AE%A3%E0%AE%AE%E0%AF%8D/59",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tiruvilaiyadal Puranam (Paranjothi Munivar; prose retelling by R. Srinivasan on Tamil Wikisource)",
+     "ref": "Padalam 60 (Pari nariyakiya padalam)",
+     "first": "",
+     "gist": "Prose retelling: the horses turn back to jackals at night and run amok in the stable and town.",
+     "url": "https://ta.wikisource.org/wiki/%E0%AE%A4%E0%AE%BF%E0%AE%B0%E0%AF%81%E0%AE%B5%E0%AE%BF%E0%AE%B3%E0%AF%88%E0%AE%AF%E0%AE%BE%E0%AE%9F%E0%AE%B1%E0%AF%8D_%E0%AE%AA%E0%AF%81%E0%AE%B0%E0%AE%BE%E0%AE%A3%E0%AE%AE%E0%AF%8D/60",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tiruvilaiyadal Puranam (Paranjothi Munivar; prose retelling by R. Srinivasan on Tamil Wikisource)",
+     "ref": "Padalam 61 (Man sumantha padalam)",
+     "first": "",
+     "gist": "Prose retelling: Vandi, the old pittu seller, gets a labourer (the Lord) to carry earth for her share of the Vaigai bank; he is struck with the king's cane.",
+     "url": "https://ta.wikisource.org/wiki/%E0%AE%A4%E0%AE%BF%E0%AE%B0%E0%AF%81%E0%AE%B5%E0%AE%BF%E0%AE%B3%E0%AF%88%E0%AE%AF%E0%AE%BE%E0%AE%9F%E0%AE%B1%E0%AF%8D_%E0%AE%AA%E0%AF%81%E0%AE%B0%E0%AE%BE%E0%AE%A3%E0%AE%AE%E0%AF%8D/61",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tiruvilaiyadal Puranam (Paranjothi Munivar; prose retelling by R. Srinivasan on Tamil Wikisource)",
+     "ref": "Padalam 58 (Tiruvadavurar-ukku upadesitha padalam)",
+     "first": "",
+     "gist": "Prose retelling: Vadavurar sent to Perunthurai to buy horses, spends the money on the temple, taught by the Lord under the kurundam tree.",
+     "url": "https://ta.wikisource.org/wiki/%E0%AE%A4%E0%AE%BF%E0%AE%B0%E0%AF%81%E0%AE%B5%E0%AE%BF%E0%AE%B3%E0%AF%88%E0%AE%AF%E0%AE%BE%E0%AE%9F%E0%AE%B1%E0%AF%8D_%E0%AE%AA%E0%AF%81%E0%AE%B0%E0%AE%BE%E0%AE%A3%E0%AE%AE%E0%AF%8D/58",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tiruvilaiyadal Puranam (Paranjothi Munivar; prose retelling by R. Srinivasan on Tamil Wikisource)",
+     "ref": "Padalam 52 (Tarumikkup porkizhi alittha padalam)",
+     "first": "",
+     "gist": "Prose retelling: the poor Brahmin Dharumi, the verse on a woman's hair fragrance, and the argument with Nakkeerar.",
+     "url": "https://ta.wikisource.org/wiki/%E0%AE%A4%E0%AE%BF%E0%AE%B0%E0%AF%81%E0%AE%B5%E0%AE%BF%E0%AE%B3%E0%AF%88%E0%AE%AF%E0%AE%BE%E0%AE%9F%E0%AE%B1%E0%AF%8D_%E0%AE%AA%E0%AF%81%E0%AE%B0%E0%AE%BE%E0%AE%A3%E0%AE%AE%E0%AF%8D/52",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tiruvilaiyadal Puranam (Paranjothi Munivar; prose retelling by R. Srinivasan on Tamil Wikisource)",
+     "ref": "Padalam 53 (Keeranaik karai erriya padalam)",
+     "first": "",
+     "gist": "Prose retelling: Nakkeerar is burnt for his fearless argument, forgiven and brought back to the Sangam.",
+     "url": "https://ta.wikisource.org/wiki/%E0%AE%A4%E0%AE%BF%E0%AE%B0%E0%AF%81%E0%AE%B5%E0%AE%BF%E0%AE%B3%E0%AF%88%E0%AE%AF%E0%AE%BE%E0%AE%9F%E0%AE%B1%E0%AF%8D_%E0%AE%AA%E0%AF%81%E0%AE%B0%E0%AE%BE%E0%AE%A3%E0%AE%AE%E0%AF%8D/53",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tiruvilaiyadal Puranam (Paranjothi Munivar; prose retelling by R. Srinivasan on Tamil Wikisource)",
+     "ref": "Padalam 54 (Keeranukku upadesitha padalam)",
+     "first": "",
+     "gist": "Prose retelling: the Lord teaches Nakkeerar the grammar of meaning.",
+     "url": "https://ta.wikisource.org/wiki/%E0%AE%A4%E0%AE%BF%E0%AE%B0%E0%AF%81%E0%AE%B5%E0%AE%BF%E0%AE%B3%E0%AF%88%E0%AE%AF%E0%AE%BE%E0%AE%9F%E0%AE%B1%E0%AF%8D_%E0%AE%AA%E0%AF%81%E0%AE%B0%E0%AE%BE%E0%AE%A3%E0%AE%AE%E0%AF%8D/54",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tiruvasagam (Manikkavasagar, Tirumurai 8)",
+     "ref": "Kirththit Tiruvagaval (section 2 of the site), lines about 35-36",
+     "first": "நரியைக் குதிரை யாக்கிய நன்மையும்",
+     "gist": "Lists the Lord's deeds: jackals made into horses and the horses sold to the Pandya.",
+     "url": "https://thevaaram.org/thirumurai_1/onepage.php?thiru=8&Song_idField=8102",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tiruvasagam (Manikkavasagar, Tirumurai 8)",
+     "ref": "Kirththit Tiruvagaval, lines about 46-47",
+     "first": "ஆங்கது தன்னில் அடியவட் காகப் பாங்காய் மண்சுமந் தருளிய",
+     "gist": "He carried earth for the devotee woman's share of the Vaigai bank.",
+     "url": "https://thevaaram.org/thirumurai_1/onepage.php?thiru=8&Song_idField=8102",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tiruvasagam (Manikkavasagar, Tirumurai 8)",
+     "ref": "Ananda Malai (section 50), verse 7",
+     "first": "நரியைக் குதிரைப் பரியாக்கி ஞால",
+     "gist": "Jackals made horses, Madurai made mad with wonder, by the Lord of Perunthurai.",
+     "url": "https://thevaaram.org/thirumurai_1/onepage.php?thiru=8&Song_idField=8150",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tiruvasagam (Manikkavasagar, Tirumurai 8)",
+     "ref": "Tiruvammanai (section 8), verse 8",
+     "first": "பண்சுமந்த பாடற் பரிசு படைத்தருளும்",
+     "gist": "The Lord of Madurai carried earth for wages and was struck by the king's stick.",
+     "url": "https://thevaaram.org/thirumurai_1/onepage.php?thiru=8&Song_idField=8108",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tiruvasagam (Manikkavasagar, Tirumurai 8)",
+     "ref": "Tirukkazhukkunra Pathigam (section 30), verse 2",
+     "first": "பிட்டு நேர்பட மண்சு மந்த",
+     "gist": "The Lord of Perunthurai who carried earth for the pittu.",
+     "url": "https://thevaaram.org/thirumurai_1/onepage.php?thiru=8&Song_idField=8130",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tiruvilaiyadal Puranam (Paranjothi Munivar)",
+     "ref": "Padalam 49-51 (Tiruvalavayana, Sundara perambu eytha, Sangappalagai thanta padalam) and Sokkanathar items",
+     "first": "",
+     "gist": "Likely home of the Sokkar (Sundareswarar of Madurai) stories and Sangam board; chapter titles seen in the index only, text not read.",
+     "url": "https://ta.wikisource.org/wiki/%E0%AE%A4%E0%AE%BF%E0%AE%B0%E0%AF%81%E0%AE%B5%E0%AE%BF%E0%AE%B3%E0%AF%88%E0%AE%AF%E0%AE%BE%E0%AE%9F%E0%AE%B1%E0%AF%8D_%E0%AE%AA%E0%AF%81%E0%AE%B0%E0%AE%BE%E0%AE%A3%E0%AE%AE%E0%AF%8D/49",
+     "confirmed": false
+    },
+    {
+     "prabandham": "Tirumurai 11 (Nakkeerar)",
+     "ref": "Tirumurukarruppadai",
+     "first": "",
+     "gist": "Nakkeerar's Murugan poem, tied by tradition to Murugan helping him; not opened.",
+     "url": "",
+     "confirmed": false
+    }
+   ],
+   "songs": {
+    "409": {
+     "conf": "h",
+     "note": "Changed jackals into horses; dances; wears the elephant hide (நரிமிகுக் கிளைகளைப் பரியெனக்... கரியுரித்தணிபவற்கொருசேயே)"
+    },
+    "756": {
+     "conf": "h",
+     "note": "Carried the sand of the Vaigai in Madurai with an axe; father burned the cities and rules Siva-loka; Sivakami who raged at Yama"
+    },
+    "960": {
+     "conf": "h",
+     "note": "Manikkavasagar of Vadavur and the jackals turned into horses"
+    },
+    "1192": {
+     "conf": "l",
+     "note": "Nakkeerar of Madurai Koodal and his Tamil"
+    },
+    "1249": {
+     "conf": "h",
+     "note": "Turned jackals into horses for the Pandya at Madurai; father who dances; Hara's son"
+    },
+    "1313": {
+     "conf": "h",
+     "note": "Manikkavasagar of Vadavur took the horses to sell"
+    },
+    "957": {
+     "conf": "m",
+     "note": "Sokkar of Madurai whom neither Vishnu nor Brahma could know, delighting Uma"
+    }
+   }
+  },
+  "saints-nayanmar": {
+   "id": "saints-nayanmar",
+   "domain": "saints",
+   "eid": "nayanmar",
+   "title": "Saints of the Tamil Shaiva tradition",
+   "brief": "Songs naming Appar, Sundarar (for whom Shiva went as messenger to his wife Paravai), Manikkavasagar (for whom Shiva turned jackals into horses) or Kachchiyappar.",
+   "note": "",
+   "refs": [],
+   "dp": [
+    {
+     "prabandham": "Periya Puranam (Sekkizhar, Tirumurai 12)",
+     "ref": "Appar puranam (PP no. 21), verse 67",
+     "first": "திருவாளன் திருநீறு திலகவதி யார்அளிப்பப்",
+     "gist": "Sister Tilakavathiyar gives Marul-neekkiyar holy ash for his colic at Tiruvadigai.",
+     "url": "https://thevaaram.org/thirumurai_1/onepage.php?thiru=12&Song_idField=12210",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periya Puranam (Sekkizhar, Tirumurai 12)",
+     "ref": "Appar puranam (PP no. 21), verse 95",
+     "first": "பல்லவனும் அதுகேட்டுப் பாங்கிருந்த பாயுடுக்கை",
+     "gist": "The Jain-hearted Pallava orders Appar thrown into the lime kiln.",
+     "url": "https://thevaaram.org/thirumurai_1/onepage.php?thiru=12&Song_idField=12210",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periya Puranam (Sekkizhar, Tirumurai 12)",
+     "ref": "Appar puranam (PP no. 21), verse 98",
+     "first": "வெய்யநீற் றறையதுதான் வீங்கிளவே னிற்பருவந்",
+     "gist": "In the kiln of lime he feels it as a cool pond (lines of the kiln test).",
+     "url": "https://thevaaram.org/thirumurai_1/onepage.php?thiru=12&Song_idField=12210",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periya Puranam (Sekkizhar, Tirumurai 12)",
+     "ref": "Appar puranam (PP no. 21), verse 119",
+     "first": "ஓடி அருகர்கள் தம்மை உழறி",
+     "gist": "The mad elephant sent against Appar tramples the Jains and throws the city into confusion.",
+     "url": "https://thevaaram.org/thirumurai_1/onepage.php?thiru=12&Song_idField=12210",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periya Puranam (Sekkizhar, Tirumurai 12)",
+     "ref": "Appar puranam (PP no. 21), verse 126",
+     "first": "சொற்றுணை வேதியன் என்னுந் தூமொழி",
+     "gist": "Bound to a stone and cast into the sea, he sings the Sorrunai Vedhiyan hymn naming Namasivaya.",
+     "url": "https://thevaaram.org/thirumurai_1/onepage.php?thiru=12&Song_idField=12210",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periya Puranam (Sekkizhar, Tirumurai 12)",
+     "ref": "Appar puranam (PP no. 21), verse 302",
+     "first": "சிலந்திக் கருளுங் கழல்வணங்கிச் செஞ்சொல்",
+     "gist": "Appar worships at Tiruchirappalli hill (and nearby Erumbiyur, Karkudi).",
+     "url": "https://thevaaram.org/thirumurai_1/onepage.php?thiru=12&Song_idField=12210",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram, Appar",
+     "ref": "4.11.1 (the stone-raft pathigam)",
+     "first": "சொற்றுணை வேதியன் சோதி வானவன்",
+     "gist": "Sung when cast into the sea tied to a stone; the site's history note recounts the stone and the sea.",
+     "url": "https://thevaaram.org/thirumurai_1/songview.php?thiru=4&Song_idField=4011&padhi=011",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram, Appar",
+     "ref": "5.85.1 (Tiruchirappalli)",
+     "first": "மட்டு வார்குழ லாளொடு மால்விடை",
+     "gist": "Pathigam sung at Tiruchirappalli; its history note cites Periya Puranam Appar 302.",
+     "url": "https://thevaaram.org/thirumurai_1/songview.php?thiru=5&Song_idField=5085&padhi=085",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periya Puranam (Sekkizhar, Tirumurai 12)",
+     "ref": "Eyarkon Kalikkama puranam (PP no. 29), verse 329",
+     "first": "அன்பு வேண்டும் தம்பெருமான் அடியார்",
+     "gist": "The Lord agrees to go to Paravai for Sundarar, who is troubled over Sangili.",
+     "url": "https://thevaaram.org/thirumurai_1/onepage.php?thiru=12&Song_idField=12290",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periya Puranam (Sekkizhar, Tirumurai 12)",
+     "ref": "Eyarkon Kalikkama puranam (PP no. 29), verse 337",
+     "first": "ஞாலம் உய்ய எழுந்தருளும் நம்பி",
+     "gist": "The Lord goes as Sundarar's messenger to Paravai's door at night.",
+     "url": "https://thevaaram.org/thirumurai_1/onepage.php?thiru=12&Song_idField=12290",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periya Puranam (Sekkizhar, Tirumurai 12)",
+     "ref": "Eyarkon Kalikkama puranam (PP no. 29), verse 340",
+     "first": "மன்னும் உரிமை வன்தொண்டர் வாயில்",
+     "gist": "The doorkeeper tells the sleeping Paravai that her Lord has come to the door.",
+     "url": "https://thevaaram.org/thirumurai_1/onepage.php?thiru=12&Song_idField=12290",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periya Puranam (Sekkizhar, Tirumurai 12)",
+     "ref": "Eyarkon Kalikkama puranam (PP no. 29), verse 343",
+     "first": "பங்குனித் திருநா ளுக்குப் பண்டுபோல்",
+     "gist": "Paravai, still angry, answers that Sundarar left her and bound himself to Sangili at Tiruvorriyur.",
+     "url": "https://thevaaram.org/thirumurai_1/onepage.php?thiru=12&Song_idField=12290",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periya Puranam (Sekkizhar, Tirumurai 12)",
+     "ref": "Eyarkon Kalikkama puranam (PP no. 29), verse 344",
+     "first": "நாதரும் அதனைக் கேட்டு நங்கைநீ",
+     "gist": "The Lord urges Paravai to forget Sundarar's faults and put aside her anger.",
+     "url": "https://thevaaram.org/thirumurai_1/onepage.php?thiru=12&Song_idField=12290",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periya Puranam (Sekkizhar, Tirumurai 12)",
+     "ref": "Payiram and Tirumalai Charukkam (thevaaram.org id 12000; Sundarar's story), verse 91",
+     "first": "படர்ந்த பேரொளிப் பன்மணி வீதிபார்",
+     "gist": "A mention of the lotus feet that went as messenger for the Lord's devotee, set in the Tiruvarur street.",
+     "url": "https://thevaaram.org/thirumurai_1/onepage.php?thiru=12&Song_idField=12000",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tevaram, Sundarar",
+     "ref": "7.1.1 (Tiruvennainallur)",
+     "first": "பித்தா பிறை சூடீ பெரு மானே",
+     "gist": "Sundarar's first hymn after the Lord stops his wedding and claims him; history note tells the story.",
+     "url": "https://thevaaram.org/thirumurai_1/songview.php?thiru=7&Song_idField=7001&padhi=001",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periya Puranam (Sekkizhar, Tirumurai 12)",
+     "ref": "Kannappar puranam (PP no. 10), verse 173",
+     "first": "இதற்கினி என்கண் அம்பால் இடந்தப்பின்",
+     "gist": "Thinnan decides to offer his own eye to staunch the bleeding of the Lord's eye at Kalahasti.",
+     "url": "https://thevaaram.org/thirumurai_1/onepage.php?thiru=12&Song_idField=12100",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periya Puranam (Sekkizhar, Tirumurai 12)",
+     "ref": "Kannappar puranam (PP no. 10), verse 177",
+     "first": "கண்ணுதல் கண்ணில் தங்கண் இடந்தப்பிற்",
+     "gist": "He presses his foot as marker on the Lord's eye and presses his arrow to his second eye.",
+     "url": "https://thevaaram.org/thirumurai_1/onepage.php?thiru=12&Song_idField=12100",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periya Puranam (Sekkizhar, Tirumurai 12)",
+     "ref": "Kannappar puranam (PP no. 10), verse 178",
+     "first": "செங்கண்வெள் விடையின் பாகர் திண்ணனார்",
+     "gist": "The Lord stays his hand with the word 'Kannappa, stay'.",
+     "url": "https://thevaaram.org/thirumurai_1/onepage.php?thiru=12&Song_idField=12100",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periya Puranam (Sekkizhar, Tirumurai 12)",
+     "ref": "Siruthondar puranam (PP no. 36), verse 54",
+     "first": "வள்ள லாரும் மனையாரை நோக்கி",
+     "gist": "The Lord comes as a devotee asking for a child's flesh; the couple agree.",
+     "url": "https://thevaaram.org/thirumurai_1/onepage.php?thiru=12&Song_idField=12360",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periya Puranam (Sekkizhar, Tirumurai 12)",
+     "ref": "Siruthondar puranam (PP no. 36), verse 62",
+     "first": "ஒன்று மனத்தார் இருவர்களும் உலகர்",
+     "gist": "The parents prepare their own son for the feast.",
+     "url": "https://thevaaram.org/thirumurai_1/onepage.php?thiru=12&Song_idField=12360",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tirukkovaiyar / Tiruvasagam (Manikkavasagar)",
+     "ref": "Tirukkovaiyar",
+     "first": "",
+     "gist": "Manikkavasagar's love poem in Tirumurai 8 (Song_idField 8201 onwards on thevaaram.org); no specific saint episode linked to the songs; not read.",
+     "url": "",
+     "confirmed": false
+    },
+    {
+     "prabandham": "Periya Puranam",
+     "ref": "Kachchiyappar is Kanda Puranam's author, not a Periya Puranam saint",
+     "first": "",
+     "gist": "Song 1114 names Kachchiyappar; his biography is not in Periya Puranam. No source found online in this pass.",
+     "url": "",
+     "confirmed": false
+    }
+   ],
+   "songs": {
+    "960": {
+     "conf": "h",
+     "note": "Manikkavasagar of Vadavur and the jackals turned into horses"
+    },
+    "1313": {
+     "conf": "h",
+     "note": "Manikkavasagar of Vadavur took the horses to sell"
+    },
+    "555": {
+     "conf": "m",
+     "note": "Appar worshipped at Tiruchirapalli's hill (திரிசிராமலை அப்பர் வணங்கிய)"
+    },
+    "862": {
+     "conf": "m",
+     "note": "Murugan accepted the worship of Appar in the form he wished (அப்பர்க் கப்படி யொப்பித் தர்ச்சனை கொண்டநாதா)"
+    },
+    "911": {
+     "conf": "h",
+     "note": "Burned Kama with the fire eye; Ganga in the hair; Appar with the snake-ears Guru (காமனை எரித்த தீநயன நெற்றி... சுவர்க்க நதி வேணி)"
+    },
+    "972": {
+     "conf": "h",
+     "note": "Sundarar's song; the Lord went as messenger (சுந்தரர் பாடல் உகந்து நல் தூது நடந்தவர்)"
+    },
+    "1114": {
+     "conf": "m",
+     "note": "Guru of the long-matted three-eyed Lord and of Kachchiyappar (முக்கணக் கடவுள் கச்சியப்பர்க்கருள்செய் குருநாதா)"
+    }
+   }
+  },
+  "saints-kurundam": {
+   "id": "saints-kurundam",
+   "domain": "saints",
+   "eid": "kurundam",
+   "title": "Manikkavasagar under the kurundam tree",
+   "brief": "The Pandya's minister Manikkavasagar went to buy horses and met Shiva as a guru under the kurundam tree at Tiruperunthurai. He gave the money to the temple and his life to Shiva.",
+   "note": "",
+   "refs": [],
+   "dp": [
+    {
+     "prabandham": "Tiruvilaiyadal Puranam (Paranjothi Munivar; prose retelling by R. Srinivasan on Tamil Wikisource)",
+     "ref": "Padalam 58 (Tiruvadavurar-ukku upadesitha padalam)",
+     "first": "",
+     "gist": "Prose retelling: at Tirupperunthurai the Lord sits as Guru under the kurundam tree; Vadavurar is initiated, then cannot find him again.",
+     "url": "https://ta.wikisource.org/wiki/%E0%AE%A4%E0%AE%BF%E0%AE%B0%E0%AF%81%E0%AE%B5%E0%AE%BF%E0%AE%B3%E0%AF%88%E0%AE%AF%E0%AE%BE%E0%AE%9F%E0%AE%B1%E0%AF%8D_%E0%AE%AA%E0%AF%81%E0%AE%B0%E0%AE%BE%E0%AE%A3%E0%AE%AE%E0%AF%8D/58",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tiruvasagam (Manikkavasagar, Tirumurai 8)",
+     "ref": "Arutpathu (section 29), verse 1",
+     "first": "சோதியே சுடரே சூழொளி விளக்கே",
+     "gist": "Lord of Tiruperunthurai in the kurundam grove who is called by the devotee.",
+     "url": "https://thevaaram.org/thirumurai_1/onepage.php?thiru=8&Song_idField=8129",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tiruvasagam (Manikkavasagar, Tirumurai 8)",
+     "ref": "Kirththit Tiruvagaval (section 2), lines about 59-60",
+     "first": "குருந்தின் கீழன் றிருந்த கொள்கையும்",
+     "gist": "Lord who sat under the kurundam tree is listed among his deeds.",
+     "url": "https://thevaaram.org/thirumurai_1/onepage.php?thiru=8&Song_idField=8102",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periya Puranam",
+     "ref": "Manikkavasagar has no puranam in Periya Puranam",
+     "first": "",
+     "gist": "Not Sekkizhar's subject; Manikkavasagar's story comes from the Tiruvilaiyadal Puranam and Vadavurar Puranam.",
+     "url": "",
+     "confirmed": false
+    }
+   ],
+   "songs": {
+    "7": {
+     "conf": "m",
+     "note": "Shiva who danced in the hall; Guru who gave grace under the kurundam tree (நடித்த சங்கரர்; திருக்குருந்தடி அருளிய குருநாதர்)"
+    },
+    "844": {
+     "conf": "h",
+     "note": "Manikkavasagar under the kurundam tree at Perunthurai with Shankara as Guru"
+    },
+    "1174": {
+     "conf": "l",
+     "note": "Son of Purari; the Guru of the kurundam"
+    }
+   }
+  },
+  "murugan-pranava": {
+   "id": "murugan-pranava",
+   "domain": "murugan",
+   "eid": "pranava",
+   "title": "Murugan teaches Shiva the Pranava",
+   "brief": "Brahma could not explain the meaning of Om, so Murugan imprisoned him. When Shiva asked for the release, Murugan taught him the meaning in his ear at Swamimalai (Swaminatha). The Thiruppugazh repeats this many times.",
+   "note": "",
+   "refs": [
+    {
+     "src": "Skanda Purana",
+     "ref": "Skanda Purana, Kedara-khanda ch.7",
+     "gist": "Only: the six-syllable mantra passed from Skanda to Agastya; not the Pranava teaching to Shiva",
+     "quote": "",
+     "pinned": false,
+     "url": "https://www.wisdomlib.org/hinduism/book/the-skanda-purana/d/doc365954.html"
+    }
+   ],
+   "dp": [
+    {
+     "prabandham": "Kanda Puranam (Kachchiyappa Sivachariyar)",
+     "ref": "Utpatti Kandam, Padalam 16 (Ayanai Siraipuri Padalam, vv 1205-1223), v 1210",
+     "first": "வேறு",
+     "gist": "Murugan, on being slighted by Brahma, questions him about the Vedas and creation.",
+     "url": "https://ta.wikisource.org/wiki/%E0%AE%95%E0%AE%A8%E0%AF%8D%E0%AE%A4_%E0%AE%AA%E0%AF%81%E0%AE%B0%E0%AE%BE%E0%AE%A3%E0%AE%AE%E0%AF%8D",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Kanda Puranam (Kachchiyappa Sivachariyar)",
+     "ref": "Utpatti Kandam, Padalam 16, v 1213",
+     "first": "தாம ரைத்தலை யிருந்தவன் குடிலைமுன்",
+     "gist": "Brahma recites the Vedas' first word and Murugan asks for the meaning of the one syllable Om.",
+     "url": "https://ta.wikisource.org/wiki/%E0%AE%95%E0%AE%A8%E0%AF%8D%E0%AE%A4_%E0%AE%AA%E0%AF%81%E0%AE%B0%E0%AE%BE%E0%AE%A3%E0%AE%AE%E0%AF%8D",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Kanda Puranam (Kachchiyappa Sivachariyar)",
+     "ref": "Utpatti Kandam, Padalam 16, v 1214",
+     "first": "முகத்தி லொன்றதா அவ்வெழுத் துடையதோர்",
+     "gist": "Murugan smiles; Brahma stares, bewildered, unable to give the meaning.",
+     "url": "https://ta.wikisource.org/wiki/%E0%AE%95%E0%AE%A8%E0%AF%8D%E0%AE%A4_%E0%AE%AA%E0%AF%81%E0%AE%B0%E0%AE%BE%E0%AE%A3%E0%AE%AE%E0%AF%8D",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Kanda Puranam (Kachchiyappa Sivachariyar)",
+     "ref": "Utpatti Kandam, Padalam 16, v 1218",
+     "first": "எட்டொ ணாதவக் குடிலையிற் பயன்இனைத்",
+     "gist": "Murugan strikes Brahma on his four heads with his knuckles.",
+     "url": "https://ta.wikisource.org/wiki/%E0%AE%95%E0%AE%A8%E0%AF%8D%E0%AE%A4_%E0%AE%AA%E0%AF%81%E0%AE%B0%E0%AE%BE%E0%AE%A3%E0%AE%AE%E0%AF%8D",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Kanda Puranam (Kachchiyappa Sivachariyar)",
+     "ref": "Utpatti Kandam, Padalam 16, v 1219",
+     "first": "மறைபு ரிந்திடுஞ் சிவனருண் மதலைமா",
+     "gist": "Brahma is shut in prison and Murugan takes over creation.",
+     "url": "https://ta.wikisource.org/wiki/%E0%AE%95%E0%AE%A8%E0%AF%8D%E0%AE%A4_%E0%AE%AA%E0%AF%81%E0%AE%B0%E0%AE%BE%E0%AE%A3%E0%AE%AE%E0%AF%8D",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Kanda Puranam (Kachchiyappa Sivachariyar)",
+     "ref": "Utpatti Kandam, Padalam 17 (Ayanai Sirai Neekku Padalam, vv 1224-1265), v 1246",
+     "first": "மட்டு லாவு மலர்அய னைச்சிறை",
+     "gist": "Shiva comes to Murugan and asks him to release Brahma.",
+     "url": "https://ta.wikisource.org/wiki/%E0%AE%95%E0%AE%A8%E0%AF%8D%E0%AE%A4_%E0%AE%AA%E0%AF%81%E0%AE%B0%E0%AE%BE%E0%AE%A3%E0%AE%AE%E0%AF%8D",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Kanda Puranam (Kachchiyappa Sivachariyar)",
+     "ref": "Utpatti Kandam, Padalam 17, v 1256",
+     "first": "உய்த்தலுங் கமலத் தண்ணல் ஒண்கரம்",
+     "gist": "Murugan frees Brahma and sends him to his father.",
+     "url": "https://ta.wikisource.org/wiki/%E0%AE%95%E0%AE%A8%E0%AF%8D%E0%AE%A4_%E0%AE%AA%E0%AF%81%E0%AE%B0%E0%AE%BE%E0%AE%A3%E0%AE%AE%E0%AF%8D",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Kanda Puranam (Kachchiyappa Sivachariyar)",
+     "ref": "Utpatti Kandam, Padalam 17, v 1259",
+     "first": "அருளுரு வாகும் ஈசன் அயற்கிது",
+     "gist": "Shiva seats the son on his lap and smiles.",
+     "url": "https://ta.wikisource.org/wiki/%E0%AE%95%E0%AE%A8%E0%AF%8D%E0%AE%A4_%E0%AE%AA%E0%AF%81%E0%AE%B0%E0%AE%BE%E0%AE%A3%E0%AE%AE%E0%AF%8D",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Kanda Puranam (Kachchiyappa Sivachariyar)",
+     "ref": "Utpatti Kandam, Padalam 17, v 1262",
+     "first": "என்றலும் நகைத்து மைந்த எமக்கருள்",
+     "gist": "Shiva offers his ear and Murugan whispers the meaning of the one word Kudilai (Om).",
+     "url": "https://ta.wikisource.org/wiki/%E0%AE%95%E0%AE%A8%E0%AF%8D%E0%AE%A4_%E0%AE%AA%E0%AF%81%E0%AE%B0%E0%AE%BE%E0%AE%A3%E0%AE%AE%E0%AF%8D",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Kanda Puranam (Kachchiyappa Sivachariyar)",
+     "ref": "Utpatti Kandam, Padalam 17, v 1265",
+     "first": "ஆங்குறு குமரப் புத்தேள் அருமறைக்",
+     "gist": "At his hill Murugan explains the truth of the one syllable Om to a young sage and also teaches the Lord's scripture (reading uncertain).",
+     "url": "https://ta.wikisource.org/wiki/%E0%AE%95%E0%AE%A8%E0%AF%8D%E0%AE%A4_%E0%AE%AA%E0%AF%81%E0%AE%B0%E0%AE%BE%E0%AE%A3%E0%AE%AE%E0%AF%8D",
+     "confirmed": true
+    },
+    {
+     "prabandham": "kaumaram.com (devotional website, secondary)",
+     "ref": "Kandar Anubhuti 36 article",
+     "first": "",
+     "gist": "Retells Brahma's failure to explain Om, his imprisonment, and Shiva receiving the Upadesa; cites the Tamil Skanda Puranam; does not name Swamimalai.",
+     "url": "https://kaumaram.com/articles/esoteric_anubhuti/esoteric_kandar_anubhuti36.html",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Swamimalai sthala purana",
+     "ref": "Swamimalai as the site where Murugan taught Shiva (as Swaminatha)",
+     "first": "",
+     "gist": "Tradition in temple lore; I did not find a text with verse numbers. Kanda Puranam above does not name Swamimalai.",
+     "url": "",
+     "confirmed": false
+    },
+    {
+     "prabandham": "Skanda Purana (Sankara Samhita, Sanskrit)",
+     "ref": "Chapter for the Brahma imprisonment not found",
+     "first": "",
+     "gist": "A search found only a devotional summary; no chapter number located.",
+     "url": "",
+     "confirmed": false
+    }
+   ],
+   "songs": {
+    "6": {
+     "conf": "h",
+     "note": "Murugan taught the three-eyed Lord the meaning of the Vedas (முக்கட்பரமற்குச் சுருதியின் முற்பட்டது கற்பித்து)"
+    },
+    "12": {
+     "conf": "m",
+     "note": "Murugan tells Shiva (சிவசங்கரன் கொண்டிட மொழிவோனே)"
+    },
+    "33": {
+     "conf": "m",
+     "note": "The matted-hair Lord to whom Murugan taught the scriptures (சடைமுடி இறைவர் தமக்குச் சாத்திர முறையருள்)"
+    },
+    "50": {
+     "conf": "m",
+     "note": "Murugan is the Guru of Shankara (சங்கரன் உகந்த பரிவின் குருவெனும்)"
+    },
+    "70": {
+     "conf": "m",
+     "note": "Kama burned by the gaze; blue-throated Shiva taught by Murugan (காமன் ஐந்து பாணமோடு வேமின் ... காளகண்டரோடு வேதம் மொழிவோனே)"
+    },
+    "72": {
+     "conf": "h",
+     "note": "Showed Hara the highest meaning (அரனார்க்கு அதித பொருள் காட்டு)"
+    },
+    "78": {
+     "conf": "m",
+     "note": "The destroyer of the three cities worships Murugan the Guru (திரிபுர தகனரும் வந்திக்கும் குருநாதா)"
+    },
+    "83": {
+     "conf": "h",
+     "note": "Father of Chidambaram's hall; taught him the five letters in his ear (திருச்சிற்றம்பலத்து அத்தன் செவிக்குப் பண்புறச் செப்பும்)"
+    },
+    "105": {
+     "conf": "l",
+     "note": "Brahma imprisoned for not knowing the Pranava (Murugan lore)"
+    },
+    "109": {
+     "conf": "h",
+     "note": "Taught the Lord who rides the bull, in his ear (எருத்திலேறிய இறையவர் செவிபுக உபதேசம் இசைத்த நாவின)"
+    },
+    "136": {
+     "conf": "h",
+     "note": "Moon on the matted hair; Murugan whispered Pranava in his ear (செவியிற் பிரணவம் ஓதிய தேசிக)"
+    },
+    "155": {
+     "conf": "h",
+     "note": "The Shankara in whose ear Murugan spoke (சங்கரனார் செவிபுக்கப் பண்பருள்)"
+    },
+    "156": {
+     "conf": "h",
+     "note": "The Lord's mind cooled by the secret mantra in both ears (சிவனார் மனங்குளிர உபதேச மந்த்ரம்)"
+    },
+    "160": {
+     "conf": "l",
+     "note": "The Pranava mantra and Vedic wisdom; Guru"
+    },
+    "176": {
+     "conf": "h",
+     "note": "Parasivan hears the Pranava secret in his ear (செவியுட் பிரணவ ரகசியம்)"
+    },
+    "213": {
+     "conf": "m",
+     "note": "Taught his father the crescent-matted Lord as Guru (பிறைச்சடையர் குருவென நலுரை உதவு)"
+    },
+    "214": {
+     "conf": "m",
+     "note": "Feet that took the life of Yama; the Ganga-matted Lord's Guru (நமனை உயிர்கொளும் அழலின் இணைகழல் நதிகொள் சடையினர் குருநாதா)"
+    },
+    "227": {
+     "conf": "h",
+     "note": "Taught Shiva the knowledge reserved for him (சிவனார் தமக்குரிய உபதேச வித்தை)"
+    },
+    "237": {
+     "conf": "m",
+     "note": "Shankara wearing the elephant hide, deer and tiger skin, the moon and Ganga in his hair, Uma at his side, who worships Murugan"
+    },
+    "240": {
+     "conf": "h",
+     "note": "The one word Pranava spoken to Parama's two ears (பரமன் இருசெவி களிகூர உரைசெயும் பிரணவ)"
+    },
+    "262": {
+     "conf": "h",
+     "note": "Parama bowed down and Murugan declared the meaning (பரமன் பணியப் பொருளன்றருளில் பகர்)"
+    },
+    "264": {
+     "conf": "h",
+     "note": "Burned the three cities, wears the axe, tiger and elephant hide, held the poison in the throat for the devas; taught the matted-hair God"
+    },
+    "285": {
+     "conf": "h",
+     "note": "Taught the golden Lord of Kailasa the meaning of the Vedas"
+    },
+    "327": {
+     "conf": "h",
+     "note": "Burned the cities and gave grace to the one he instructed (புரத்தைச் சுட்டெரித்து... கற்பித்தருள்வோனே)"
+    },
+    "347": {
+     "conf": "h",
+     "note": "The three-eyed one who wears Ganga and moon asked the meaning"
+    },
+    "380": {
+     "conf": "h",
+     "note": "Taught the Siva with Ganga in his hair as Guru (சிவனை முதல் ஓதுவித்த குருநாதா)"
+    },
+    "381": {
+     "conf": "h",
+     "note": "Siva could learn the silent Vedas from Murugan the Guru (சிவனார் படிக்க மவுன மறை ஓதுவித்த குருநாதா)"
+    },
+    "452": {
+     "conf": "m",
+     "note": "Father who danced on Mount Kailasa and was taught by Murugan"
+    },
+    "458": {
+     "conf": "h",
+     "note": "Destroyed the cities, flayed the elephant, cut off angry Daksha's head, learned the true meaning in his ear from Murugan; Chidambaram"
+    },
+    "468": {
+     "conf": "m",
+     "note": "The moon-haired Lord worshipped Murugan and learned the law-book (இந்துசடாதரன் வாசவன் தொழுது மனுநூல் விளம்பிய)"
+    },
+    "546": {
+     "conf": "m",
+     "note": "Shambhu worships his feet (மகிழ்சம்பு வேதொழு பாதா)"
+    },
+    "578": {
+     "conf": "m",
+     "note": "Taught the Lord of Kailasa the Upanishad secret (கயிலாசக் கோமாற்குபதேசம்)"
+    },
+    "594": {
+     "conf": "m",
+     "note": "The father with the moon in his hair and Uma on his side, who worships his Guru feet"
+    },
+    "611": {
+     "conf": "h",
+     "note": "Siva heard the Vedic mantra in his ear (சிவனார் திகழ்ந்த காதிலுரை வேத மந்த்ர)"
+    },
+    "682": {
+     "conf": "m",
+     "note": "Lord of the dance in Thillai; Murugan the Guru of Siva (சிவனே சிவ குருநாதா)"
+    },
+    "686": {
+     "conf": "m",
+     "note": "Nataraja praises the Guru-king Murugan"
+    },
+    "701": {
+     "conf": "m",
+     "note": "Shiva told Murugan to say it (கூறென அரனார் முன்)"
+    },
+    "776": {
+     "conf": "h",
+     "note": "Whispered in the ear of the Lord of Kazhi (சிவன்மெச்சக் காதுக் கோதிய)"
+    },
+    "792": {
+     "conf": "h",
+     "note": "Gave a word to the coral-haired Siva (சிவனுக் கொருசொற் பகர்வோனே)"
+    },
+    "806": {
+     "conf": "m",
+     "note": "Siva with Uma on the right, the bull-rider dancing; Purari's Guru"
+    },
+    "836": {
+     "conf": "m",
+     "note": "Gave the order to the Lord of Kailasa"
+    },
+    "846": {
+     "conf": "m",
+     "note": "Burned the cities with the bow; Guru worshipped by Siva"
+    },
+    "853": {
+     "conf": "m",
+     "note": "Lord even of Shankara; circles Kailasa"
+    },
+    "875": {
+     "conf": "h",
+     "note": "Explained the secret Vedas to the three-eyed Lord (முக்கட்பரற்குப் பொருட்சொல் அருமறை உணர்த்தி)"
+    },
+    "884": {
+     "conf": "h",
+     "note": "The Shambhu whose fire-eye burned Kama (Sambarari) is taught by Murugan; கிராதி is Valli"
+    },
+    "888": {
+     "conf": "m",
+     "note": "Grace to the Dancer (Tandavan), Rudra's son"
+    },
+    "902": {
+     "conf": "m",
+     "note": "The Father who dances on the northern mountain is taught the way to liberation (வடகுவடில் நடனமிடும் அப்பர்க்கு முத்திநெறி தப்பற்று உரைக்கவல்ல)"
+    },
+    "917": {
+     "conf": "l",
+     "note": "Pasupati taught as Guru"
+    },
+    "919": {
+     "conf": "h",
+     "note": "Taught true wisdom into the jewelled ear of Siva (சிவனார் திருமணிச்செவிக்குள் மெய்ஞ்ஞானமதோதிய)"
+    },
+    "922": {
+     "conf": "m",
+     "note": "Serpent, Ganga, moon, kurava, arugu, thumbai, konrai in the hair; Shambhu worships Guru Murugan"
+    },
+    "932": {
+     "conf": "h",
+     "note": "Taught Siva as Guru (குருவெனச் சிவனுக்கு அருள் போதா)"
+    },
+    "966": {
+     "conf": "h",
+     "note": "Burner of the cities, the beautiful Sokkan with half Uma; taught the meaning in his ear"
+    },
+    "1004": {
+     "conf": "h",
+     "note": "Taught the silent meaning to Pasupati; Devi of Arunai"
+    },
+    "1074": {
+     "conf": "h",
+     "note": "Bull, elephant-hide, ash, thread, tiger-skin, axe and deer, skull garland: Isan who loved Murugan the Guru"
+    },
+    "1114": {
+     "conf": "m",
+     "note": "Guru of the long-matted three-eyed Lord and of Kachchiyappar (முக்கணக் கடவுள் கச்சியப்பர்க்கருள்செய் குருநாதா)"
+    },
+    "1170": {
+     "conf": "m",
+     "note": "Bone garland, Ganga on the head, dance; the Lord's consort; Murugan whispers the secret"
+    },
+    "1171": {
+     "conf": "h",
+     "note": "Taught the three-eyed red-matted Moon-wearer the supreme secret"
+    },
+    "1175": {
+     "conf": "h",
+     "note": "Instructed Isa and Shambhu in the unspoken word (ஈசர்க்குச் சுவாமியாய் முதல் வாசிப்பித்த தேசிகா)"
+    },
+    "1179": {
+     "conf": "m",
+     "note": "Called Thagappan Swami (teacher of his father)"
+    },
+    "1254": {
+     "conf": "m",
+     "note": "The Shankara in konrai who came to worship Murugan"
+    },
+    "1266": {
+     "conf": "m",
+     "note": "Instructed the three-eyed matted Siddha"
+    },
+    "1274": {
+     "conf": "h",
+     "note": "Told the old Purari the truth of Pati, Pasu and Pasam"
+    },
+    "1277": {
+     "conf": "h",
+     "note": "Became the Guru and spoke in Hara's one ear; Kali burns the cities"
+    },
+    "1320": {
+     "conf": "m",
+     "note": "Tiger-skin Parama with Ganga in his hair worships Murugan"
+    },
+    "1326": {
+     "conf": "h",
+     "note": "Taught the Vedas through the five letters to the three-eyed light"
+    },
+    "139": {
+     "conf": "m",
+     "note": "Wearer of the young moon, thumbai and serpent, to whom Murugan told the sweet meaning (அரவணிபவர்க்கு இசைந்து இனிய பொருளைப் பகர்ந்த குருநாதா)"
+    },
+    "1161": {
+     "conf": "m",
+     "note": "Gave the meaning to Sokkar (சொக்கர்க்கு அர்த்தத்தைச் சுட்டிய)"
+    },
+    "1252": {
+     "conf": "l",
+     "note": "Konrai, thumbai, moon and Ganga for the matted-hair Lord to whom he gave grace"
+    }
+   }
+  },
+  "murugan-skanda-birth": {
+   "id": "murugan-skanda-birth",
+   "domain": "murugan",
+   "eid": "skanda-birth",
+   "title": "Murugan born from Shiva's eye",
+   "brief": "Six sparks from Shiva's forehead eye were carried by Agni and Ganga to the Saravana pool and became six babies, nursed by the six Krittikas. Uma joined them into one six-faced child.",
+   "note": "",
+   "refs": [
+    {
+     "src": "Valmiki Ramayana",
+     "ref": "Ramayana 1.36.5-18; 1.37.1-28",
+     "gist": "Shiva's seed borne by Agni and Ganga; six Krittikas nurse the child; Kumara/Karttikeya",
+     "quote": "",
+     "pinned": true,
+     "url": "https://www.valmikiramayan.net/utf8/baala/sarga36/balasans36.htm"
+    },
+    {
+     "src": "Mahabharata (Critical Edition)",
+     "ref": "MBh 9,43.7-14; 13,84-86",
+     "gist": "Rudra's tejas goes to Agni and Ganga; Krittikas find the child in the reed thicket; named Skanda/Guha",
+     "quote": "",
+     "pinned": true,
+     "url": "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/2_epic/mbh/mbh_09_u.htm"
+    },
+    {
+     "src": "Shiva Purana",
+     "ref": "Shiva Purana, Rudra-samhita 4 (Kumara-khanda) ch.2",
+     "gist": "Birth of Shiva's son: Shiva's seed, Agni, Parvati's curse",
+     "quote": "",
+     "pinned": true,
+     "url": "https://www.wisdomlib.org/hinduism/book/shiva-purana-english/d/doc226122.html"
+    },
+    {
+     "src": "Skanda Purana",
+     "ref": "Skanda Purana, Kedara-khanda ch.27 (Birth of Kumara Karttikeya)",
+     "gist": "Birth of Kumara",
+     "quote": "",
+     "pinned": true,
+     "url": "https://www.wisdomlib.org/hinduism/book/the-skanda-purana/d/doc365974.html"
+    },
+    {
+     "src": "Mahabharata (Critical Edition)",
+     "ref": "MBh 3,213-221",
+     "gist": "Skanda born of Agni and Svaha (variant)",
+     "quote": "",
+     "pinned": false,
+     "url": "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/2_epic/mbh/mbh_03_u.htm"
+    }
+   ],
+   "dp": [
+    {
+     "prabandham": "Kanda Puranam (Kachchiyappa Sivachariyar)",
+     "ref": "Utpatti Kandam, Padalam 11 (Tiruvavatara Padalam, vv 851-977), v 906",
+     "first": "வெந்திற லவுணரை வீட்டு தற்கொரு",
+     "gist": "The devas ask Shiva for a son to destroy the demons.",
+     "url": "https://ta.wikisource.org/wiki/%E0%AE%95%E0%AE%A8%E0%AF%8D%E0%AE%A4_%E0%AE%AA%E0%AF%81%E0%AE%B0%E0%AE%BE%E0%AE%A3%E0%AE%AE%E0%AF%8D",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Kanda Puranam (Kachchiyappa Sivachariyar)",
+     "ref": "Utpatti Kandam, Padalam 11, v 914",
+     "first": "தன்னருள் நிலைமையாற் சண்மு கத்திடை",
+     "gist": "Through the six faces, sparks of fire come from his forehead eyes.",
+     "url": "https://ta.wikisource.org/wiki/%E0%AE%95%E0%AE%A8%E0%AF%8D%E0%AE%A4_%E0%AE%AA%E0%AF%81%E0%AE%B0%E0%AE%BE%E0%AE%A3%E0%AE%AE%E0%AF%8D",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Kanda Puranam (Kachchiyappa Sivachariyar)",
+     "ref": "Utpatti Kandam, Padalam 11, v 915",
+     "first": "அந்தியம் பெருநிறத் தமலன் அவ்வகை",
+     "gist": "Six sparks gather and come before Shiva.",
+     "url": "https://ta.wikisource.org/wiki/%E0%AE%95%E0%AE%A8%E0%AF%8D%E0%AE%A4_%E0%AE%AA%E0%AF%81%E0%AE%B0%E0%AE%BE%E0%AE%A3%E0%AE%AE%E0%AF%8D",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Kanda Puranam (Kachchiyappa Sivachariyar)",
+     "ref": "Utpatti Kandam, Padalam 11, v 917",
+     "first": "நீங்களிச் சுடர்களை நெறியிற் றாங்கியே",
+     "gist": "Shiva tells Vayu and Agni to bear the sparks and leave them in the Ganga.",
+     "url": "https://ta.wikisource.org/wiki/%E0%AE%95%E0%AE%A8%E0%AF%8D%E0%AE%A4_%E0%AE%AA%E0%AF%81%E0%AE%B0%E0%AE%BE%E0%AE%A3%E0%AE%AE%E0%AF%8D",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Kanda Puranam (Kachchiyappa Sivachariyar)",
+     "ref": "Utpatti Kandam, Padalam 11, v 929",
+     "first": "செந்தழல் மேனியன் தீயின் வண்ணமாத்",
+     "gist": "The Lord has given his son through his own eye.",
+     "url": "https://ta.wikisource.org/wiki/%E0%AE%95%E0%AE%A8%E0%AF%8D%E0%AE%A4_%E0%AE%AA%E0%AF%81%E0%AE%B0%E0%AE%BE%E0%AE%A3%E0%AE%AE%E0%AF%8D",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Kanda Puranam (Kachchiyappa Sivachariyar)",
+     "ref": "Utpatti Kandam, Padalam 11, v 937",
+     "first": "அரனருள் முறையினை யறிந்து கங்கைதன்",
+     "gist": "The Ganga places the sparks in the Saravana pond.",
+     "url": "https://ta.wikisource.org/wiki/%E0%AE%95%E0%AE%A8%E0%AF%8D%E0%AE%A4_%E0%AE%AA%E0%AF%81%E0%AE%B0%E0%AE%BE%E0%AE%A3%E0%AE%AE%E0%AF%8D",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Kanda Puranam (Kachchiyappa Sivachariyar)",
+     "ref": "Utpatti Kandam, Padalam 11, v 950",
+     "first": "தரணியின் நடுவண் வைகுஞ் சரவணப்",
+     "gist": "The child sits on a lotus in the Saravana pond.",
+     "url": "https://ta.wikisource.org/wiki/%E0%AE%95%E0%AE%A8%E0%AF%8D%E0%AE%A4_%E0%AE%AA%E0%AF%81%E0%AE%B0%E0%AE%BE%E0%AE%A3%E0%AE%AE%E0%AF%8D",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Kanda Puranam (Kachchiyappa Sivachariyar)",
+     "ref": "Utpatti Kandam, Padalam 11, v 966",
+     "first": "மறுவறும் ஆர லாகும் மாதர்மூ",
+     "gist": "Six women, the Arals (Krittikas), come to the child in the pond.",
+     "url": "https://ta.wikisource.org/wiki/%E0%AE%95%E0%AE%A8%E0%AF%8D%E0%AE%A4_%E0%AE%AA%E0%AF%81%E0%AE%B0%E0%AE%BE%E0%AE%A3%E0%AE%AE%E0%AF%8D",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Kanda Puranam (Kachchiyappa Sivachariyar)",
+     "ref": "Utpatti Kandam, Padalam 11, v 967",
+     "first": "ஆறுரு வாத லோடும் அறுவரும்",
+     "gist": "The child becomes six; each Krittika takes one and feeds him.",
+     "url": "https://ta.wikisource.org/wiki/%E0%AE%95%E0%AE%A8%E0%AF%8D%E0%AE%A4_%E0%AE%AA%E0%AF%81%E0%AE%B0%E0%AE%BE%E0%AE%A3%E0%AE%AE%E0%AF%8D",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Kanda Puranam (Kachchiyappa Sivachariyar)",
+     "ref": "Utpatti Kandam, Padalam 13 (Saravana Padalam, vv 1015-1051), v 1034",
+     "first": "சரவ ணந்தனில் தனதுசேய் ஆறுருத்",
+     "gist": "Uma takes up the six forms with both hands.",
+     "url": "https://ta.wikisource.org/wiki/%E0%AE%95%E0%AE%A8%E0%AF%8D%E0%AE%A4_%E0%AE%AA%E0%AF%81%E0%AE%B0%E0%AE%BE%E0%AE%A3%E0%AE%AE%E0%AF%8D",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Kanda Puranam (Kachchiyappa Sivachariyar)",
+     "ref": "Utpatti Kandam, Padalam 13, v 1035",
+     "first": "எந்தை சத்திகள் உயிரெலாம் ஒடுங்குறு",
+     "gist": "The six forms join into one, Kandan.",
+     "url": "https://ta.wikisource.org/wiki/%E0%AE%95%E0%AE%A8%E0%AF%8D%E0%AE%A4_%E0%AE%AA%E0%AF%81%E0%AE%B0%E0%AE%BE%E0%AE%A3%E0%AE%AE%E0%AF%8D",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Skanda Purana (Maheshvara-khanda, Kedara-khanda), tr. G. V. Tagare",
+     "ref": "Chapter 27 (The Birth of Kumara Karttikeya)",
+     "first": "",
+     "gist": "Sanskrit-derived birth account: Shiva's semen taken by Agni, passed to the Krittikas and Ganga; not the forehead-eye version of the Tamil Kanda Puranam.",
+     "url": "https://www.wisdomlib.org/hinduism/book/the-skanda-purana/d/doc365974.html",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Skanda Purana, tr. G. V. Tagare",
+     "ref": "Appendix 1 (The story of Skanda's birth)",
+     "first": "",
+     "gist": "Compares the Mahabharata Shalya outline with the Skanda Purana's elaborations.",
+     "url": "https://www.wisdomlib.org/hinduism/book/the-skanda-purana/d/doc365976.html",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Mahabharata",
+     "ref": "Shalya Parva 44.6-13",
+     "first": "",
+     "gist": "Outline of the birth stages as cited in Tagare's note; the Mahabharata text itself was not opened.",
+     "url": "",
+     "confirmed": false
+    },
+    {
+     "prabandham": "Shiva Purana",
+     "ref": "Rudra Samhita, Kumara Khanda",
+     "first": "",
+     "gist": "Another birth account; not opened in this pass.",
+     "url": "",
+     "confirmed": false
+    }
+   ],
+   "songs": {
+    "476": {
+     "conf": "m",
+     "note": "Child born from the eye of the Lord of Thillai"
+    },
+    "929": {
+     "conf": "m",
+     "note": "Born from Parameswara (சகலமயம் பரமேச்சுரன்... சரவண சம்பவ)"
+    },
+    "1005": {
+     "conf": "m",
+     "note": "Uma and six maidens call him their child"
+    },
+    "1155": {
+     "conf": "l",
+     "note": "The moon-haired Lord's trouble relieved on Kailasa when Murugan comes"
+    }
+   }
+  }
+ },
+ "songs": {
+  "1": [
+   "deeds-tripura"
+  ],
+  "11": [
+   "deeds-tripura"
+  ],
+  "52": [
+   "deeds-tripura",
+   "deeds-ganga"
+  ],
+  "71": [
+   "deeds-tripura",
+   "forms-nataraja"
+  ],
+  "78": [
+   "deeds-tripura",
+   "murugan-pranava"
+  ],
+  "124": [
+   "deeds-tripura",
+   "deeds-kama"
+  ],
+  "130": [
+   "deeds-tripura",
+   "deeds-kama"
+  ],
+  "131": [
+   "deeds-tripura"
+  ],
+  "205": [
+   "deeds-tripura",
+   "deeds-annamalai",
+   "forms-nataraja"
+  ],
+  "207": [
+   "deeds-tripura",
+   "deeds-kama",
+   "forms-nataraja"
+  ],
+  "261": [
+   "deeds-tripura",
+   "saints-sambandar"
+  ],
+  "263": [
+   "deeds-tripura",
+   "deeds-brahma-head"
+  ],
+  "264": [
+   "deeds-tripura",
+   "deeds-poison",
+   "murugan-pranava"
+  ],
+  "280": [
+   "deeds-tripura"
+  ],
+  "291": [
+   "deeds-tripura",
+   "forms-ardhanari"
+  ],
+  "292": [
+   "deeds-tripura",
+   "forms-nataraja"
+  ],
+  "321": [
+   "deeds-tripura"
+  ],
+  "327": [
+   "deeds-tripura",
+   "murugan-pranava"
+  ],
+  "343": [
+   "deeds-tripura"
+  ],
+  "345": [
+   "deeds-tripura"
+  ],
+  "365": [
+   "deeds-tripura"
+  ],
+  "391": [
+   "deeds-tripura",
+   "forms-ardhanari"
+  ],
+  "401": [
+   "deeds-tripura",
+   "deeds-kama"
+  ],
+  "404": [
+   "deeds-tripura"
+  ],
+  "412": [
+   "deeds-tripura",
+   "deeds-ganga"
+  ],
+  "419": [
+   "deeds-tripura"
+  ],
+  "423": [
+   "deeds-tripura"
+  ],
+  "428": [
+   "deeds-tripura"
+  ],
+  "458": [
+   "deeds-tripura",
+   "deeds-daksha",
+   "forms-nataraja",
+   "murugan-pranava"
+  ],
+  "461": [
+   "deeds-tripura",
+   "deeds-daksha"
+  ],
+  "462": [
+   "deeds-tripura",
+   "deeds-kama",
+   "deeds-brahma-head",
+   "forms-nataraja"
+  ],
+  "463": [
+   "deeds-tripura",
+   "forms-ardhanari"
+  ],
+  "470": [
+   "deeds-tripura"
+  ],
+  "491": [
+   "deeds-tripura",
+   "deeds-kama",
+   "deeds-daksha",
+   "deeds-yama"
+  ],
+  "517": [
+   "deeds-tripura",
+   "forms-nataraja",
+   "forms-ardhanari"
+  ],
+  "525": [
+   "deeds-tripura"
+  ],
+  "533": [
+   "deeds-tripura",
+   "forms-nataraja"
+  ],
+  "541": [
+   "deeds-tripura",
+   "deeds-kama"
+  ],
+  "577": [
+   "deeds-tripura",
+   "deeds-kama",
+   "deeds-brahma-head"
+  ],
+  "617": [
+   "deeds-tripura",
+   "deeds-kama",
+   "deeds-daksha",
+   "deeds-yama",
+   "saints-sambandar"
+  ],
+  "651": [
+   "deeds-tripura"
+  ],
+  "702": [
+   "deeds-tripura",
+   "deeds-brahma-head",
+   "deeds-bhikshatana",
+   "forms-ardhanari"
+  ],
+  "709": [
+   "deeds-tripura"
+  ],
+  "738": [
+   "deeds-tripura"
+  ],
+  "750": [
+   "deeds-tripura",
+   "deeds-brahma-head"
+  ],
+  "756": [
+   "deeds-tripura",
+   "forms-ardhanari",
+   "saints-tiruvilaiyadal"
+  ],
+  "797": [
+   "deeds-tripura",
+   "deeds-brahma-head"
+  ],
+  "815": [
+   "deeds-tripura",
+   "deeds-kama",
+   "deeds-ganga"
+  ],
+  "846": [
+   "deeds-tripura",
+   "murugan-pranava"
+  ],
+  "887": [
+   "deeds-tripura"
+  ],
+  "895": [
+   "deeds-tripura"
+  ],
+  "966": [
+   "deeds-tripura",
+   "forms-ardhanari",
+   "murugan-pranava"
+  ],
+  "1075": [
+   "deeds-tripura"
+  ],
+  "1125": [
+   "deeds-tripura",
+   "forms-nataraja"
+  ],
+  "1135": [
+   "deeds-tripura",
+   "deeds-kama",
+   "deeds-poison",
+   "deeds-yama"
+  ],
+  "1166": [
+   "deeds-tripura",
+   "deeds-poison",
+   "deeds-bhikshatana",
+   "deeds-ganga",
+   "forms-ardhanari"
+  ],
+  "1194": [
+   "deeds-tripura"
+  ],
+  "1195": [
+   "deeds-tripura"
+  ],
+  "1203": [
+   "deeds-tripura",
+   "deeds-ganga"
+  ],
+  "1277": [
+   "deeds-tripura",
+   "murugan-pranava"
+  ],
+  "70": [
+   "deeds-kama",
+   "deeds-poison",
+   "murugan-pranava"
+  ],
+  "77": [
+   "deeds-kama",
+   "deeds-ganga"
+  ],
+  "103": [
+   "deeds-kama"
+  ],
+  "242": [
+   "deeds-kama"
+  ],
+  "302": [
+   "deeds-kama",
+   "forms-nataraja"
+  ],
+  "386": [
+   "deeds-kama"
+  ],
+  "444": [
+   "deeds-kama",
+   "deeds-poison",
+   "deeds-brahma-head",
+   "deeds-ganga",
+   "forms-nataraja",
+   "forms-ardhanari"
+  ],
+  "649": [
+   "deeds-kama",
+   "deeds-brahma-head"
+  ],
+  "884": [
+   "deeds-kama",
+   "murugan-pranava"
+  ],
+  "911": [
+   "deeds-kama",
+   "deeds-ganga",
+   "saints-nayanmar"
+  ],
+  "986": [
+   "deeds-kama"
+  ],
+  "1105": [
+   "deeds-kama"
+  ],
+  "1106": [
+   "deeds-kama",
+   "deeds-yama"
+  ],
+  "1160": [
+   "deeds-kama",
+   "deeds-yama",
+   "deeds-brahma-head"
+  ],
+  "1176": [
+   "deeds-kama",
+   "deeds-poison",
+   "deeds-yama",
+   "forms-nataraja"
+  ],
+  "1177": [
+   "deeds-kama",
+   "deeds-ganga"
+  ],
+  "27": [
+   "deeds-poison"
+  ],
+  "46": [
+   "deeds-poison"
+  ],
+  "99": [
+   "deeds-poison"
+  ],
+  "197": [
+   "deeds-poison"
+  ],
+  "199": [
+   "deeds-poison",
+   "deeds-ganga"
+  ],
+  "389": [
+   "deeds-poison",
+   "deeds-ganga"
+  ],
+  "907": [
+   "deeds-poison"
+  ],
+  "1108": [
+   "deeds-poison",
+   "forms-nataraja",
+   "forms-ardhanari"
+  ],
+  "1330": [
+   "deeds-poison",
+   "deeds-yama"
+  ],
+  "309": [
+   "deeds-daksha"
+  ],
+  "904": [
+   "deeds-daksha"
+  ],
+  "214": [
+   "deeds-yama",
+   "murugan-pranava"
+  ],
+  "1063": [
+   "deeds-yama",
+   "deeds-annamalai"
+  ],
+  "188": [
+   "deeds-brahma-head"
+  ],
+  "823": [
+   "deeds-brahma-head",
+   "forms-dakshinamurti"
+  ],
+  "509": [
+   "deeds-bhikshatana"
+  ],
+  "360": [
+   "deeds-annamalai",
+   "deeds-ganga"
+  ],
+  "479": [
+   "deeds-annamalai",
+   "forms-nataraja"
+  ],
+  "733": [
+   "deeds-annamalai"
+  ],
+  "957": [
+   "deeds-annamalai",
+   "forms-ardhanari",
+   "saints-tiruvilaiyadal"
+  ],
+  "32": [
+   "deeds-ganga"
+  ],
+  "307": [
+   "deeds-ganga"
+  ],
+  "380": [
+   "deeds-ganga",
+   "murugan-pranava"
+  ],
+  "422": [
+   "deeds-ganga",
+   "forms-ardhanari"
+  ],
+  "466": [
+   "deeds-ganga",
+   "forms-nataraja"
+  ],
+  "519": [
+   "deeds-ganga"
+  ],
+  "652": [
+   "deeds-ganga",
+   "forms-ardhanari"
+  ],
+  "699": [
+   "deeds-ganga"
+  ],
+  "719": [
+   "deeds-ganga",
+   "forms-nataraja",
+   "forms-ardhanari"
+  ],
+  "856": [
+   "deeds-ganga",
+   "forms-ardhanari"
+  ],
+  "860": [
+   "deeds-ganga"
+  ],
+  "922": [
+   "deeds-ganga",
+   "murugan-pranava"
+  ],
+  "1051": [
+   "deeds-ganga"
+  ],
+  "1159": [
+   "deeds-ganga"
+  ],
+  "1170": [
+   "deeds-ganga",
+   "forms-nataraja",
+   "murugan-pranava"
+  ],
+  "1239": [
+   "deeds-ganga",
+   "forms-ardhanari"
+  ],
+  "1320": [
+   "deeds-ganga",
+   "murugan-pranava"
+  ],
+  "312": [
+   "deeds-ravana"
+  ],
+  "485": [
+   "deeds-ravana",
+   "forms-ardhanari"
+  ],
+  "522": [
+   "deeds-ravana"
+  ],
+  "424": [
+   "deeds-sarabha"
+  ],
+  "448": [
+   "deeds-sarabha",
+   "forms-ardhanari"
+  ],
+  "7": [
+   "forms-nataraja",
+   "saints-kurundam"
+  ],
+  "23": [
+   "forms-nataraja"
+  ],
+  "83": [
+   "forms-nataraja",
+   "murugan-pranava"
+  ],
+  "208": [
+   "forms-nataraja"
+  ],
+  "251": [
+   "forms-nataraja"
+  ],
+  "409": [
+   "forms-nataraja",
+   "saints-tiruvilaiyadal"
+  ],
+  "452": [
+   "forms-nataraja",
+   "murugan-pranava"
+  ],
+  "460": [
+   "forms-nataraja"
+  ],
+  "472": [
+   "forms-nataraja"
+  ],
+  "476": [
+   "forms-nataraja",
+   "murugan-skanda-birth"
+  ],
+  "514": [
+   "forms-nataraja"
+  ],
+  "535": [
+   "forms-nataraja"
+  ],
+  "583": [
+   "forms-nataraja"
+  ],
+  "673": [
+   "forms-nataraja"
+  ],
+  "674": [
+   "forms-nataraja"
+  ],
+  "682": [
+   "forms-nataraja",
+   "murugan-pranava"
+  ],
+  "686": [
+   "forms-nataraja",
+   "murugan-pranava"
+  ],
+  "724": [
+   "forms-nataraja",
+   "forms-ardhanari"
+  ],
+  "744": [
+   "forms-nataraja"
+  ],
+  "806": [
+   "forms-nataraja",
+   "forms-ardhanari",
+   "murugan-pranava"
+  ],
+  "833": [
+   "forms-nataraja"
+  ],
+  "888": [
+   "forms-nataraja",
+   "murugan-pranava"
+  ],
+  "902": [
+   "forms-nataraja",
+   "murugan-pranava"
+  ],
+  "1053": [
+   "forms-nataraja"
+  ],
+  "1096": [
+   "forms-nataraja"
+  ],
+  "1140": [
+   "forms-nataraja",
+   "forms-ardhanari"
+  ],
+  "1240": [
+   "forms-nataraja"
+  ],
+  "1249": [
+   "forms-nataraja",
+   "saints-tiruvilaiyadal"
+  ],
+  "13": [
+   "forms-ardhanari"
+  ],
+  "94": [
+   "forms-ardhanari"
+  ],
+  "179": [
+   "forms-ardhanari"
+  ],
+  "226": [
+   "forms-ardhanari"
+  ],
+  "237": [
+   "forms-ardhanari",
+   "murugan-pranava"
+  ],
+  "313": [
+   "forms-ardhanari"
+  ],
+  "369": [
+   "forms-ardhanari"
+  ],
+  "507": [
+   "forms-ardhanari"
+  ],
+  "550": [
+   "forms-ardhanari",
+   "saints-sambandar"
+  ],
+  "594": [
+   "forms-ardhanari",
+   "murugan-pranava"
+  ],
+  "691": [
+   "forms-ardhanari"
+  ],
+  "729": [
+   "forms-ardhanari"
+  ],
+  "780": [
+   "forms-ardhanari"
+  ],
+  "852": [
+   "forms-ardhanari"
+  ],
+  "897": [
+   "forms-ardhanari"
+  ],
+  "912": [
+   "forms-ardhanari"
+  ],
+  "1004": [
+   "forms-ardhanari",
+   "murugan-pranava"
+  ],
+  "1046": [
+   "forms-ardhanari"
+  ],
+  "1178": [
+   "forms-ardhanari"
+  ],
+  "110": [
+   "forms-dakshinamurti"
+  ],
+  "17": [
+   "saints-sambandar"
+  ],
+  "104": [
+   "saints-sambandar"
+  ],
+  "149": [
+   "saints-sambandar"
+  ],
+  "150": [
+   "saints-sambandar"
+  ],
+  "540": [
+   "saints-sambandar"
+  ],
+  "542": [
+   "saints-sambandar"
+  ],
+  "668": [
+   "saints-sambandar"
+  ],
+  "762": [
+   "saints-sambandar"
+  ],
+  "766": [
+   "saints-sambandar"
+  ],
+  "799": [
+   "saints-sambandar"
+  ],
+  "913": [
+   "saints-sambandar"
+  ],
+  "920": [
+   "saints-sambandar"
+  ],
+  "959": [
+   "saints-sambandar"
+  ],
+  "1209": [
+   "saints-sambandar"
+  ],
+  "1282": [
+   "saints-sambandar"
+  ],
+  "1287": [
+   "saints-sambandar"
+  ],
+  "1327": [
+   "saints-sambandar"
+  ],
+  "960": [
+   "saints-tiruvilaiyadal",
+   "saints-nayanmar"
+  ],
+  "1192": [
+   "saints-tiruvilaiyadal"
+  ],
+  "1313": [
+   "saints-tiruvilaiyadal",
+   "saints-nayanmar"
+  ],
+  "555": [
+   "saints-nayanmar"
+  ],
+  "862": [
+   "saints-nayanmar"
+  ],
+  "972": [
+   "saints-nayanmar"
+  ],
+  "1114": [
+   "saints-nayanmar",
+   "murugan-pranava"
+  ],
+  "844": [
+   "saints-kurundam"
+  ],
+  "1174": [
+   "saints-kurundam"
+  ],
+  "6": [
+   "murugan-pranava"
+  ],
+  "12": [
+   "murugan-pranava"
+  ],
+  "33": [
+   "murugan-pranava"
+  ],
+  "50": [
+   "murugan-pranava"
+  ],
+  "72": [
+   "murugan-pranava"
+  ],
+  "105": [
+   "murugan-pranava"
+  ],
+  "109": [
+   "murugan-pranava"
+  ],
+  "136": [
+   "murugan-pranava"
+  ],
+  "155": [
+   "murugan-pranava"
+  ],
+  "156": [
+   "murugan-pranava"
+  ],
+  "160": [
+   "murugan-pranava"
+  ],
+  "176": [
+   "murugan-pranava"
+  ],
+  "213": [
+   "murugan-pranava"
+  ],
+  "227": [
+   "murugan-pranava"
+  ],
+  "240": [
+   "murugan-pranava"
+  ],
+  "262": [
+   "murugan-pranava"
+  ],
+  "285": [
+   "murugan-pranava"
+  ],
+  "347": [
+   "murugan-pranava"
+  ],
+  "381": [
+   "murugan-pranava"
+  ],
+  "468": [
+   "murugan-pranava"
+  ],
+  "546": [
+   "murugan-pranava"
+  ],
+  "578": [
+   "murugan-pranava"
+  ],
+  "611": [
+   "murugan-pranava"
+  ],
+  "701": [
+   "murugan-pranava"
+  ],
+  "776": [
+   "murugan-pranava"
+  ],
+  "792": [
+   "murugan-pranava"
+  ],
+  "836": [
+   "murugan-pranava"
+  ],
+  "853": [
+   "murugan-pranava"
+  ],
+  "875": [
+   "murugan-pranava"
+  ],
+  "917": [
+   "murugan-pranava"
+  ],
+  "919": [
+   "murugan-pranava"
+  ],
+  "932": [
+   "murugan-pranava"
+  ],
+  "1074": [
+   "murugan-pranava"
+  ],
+  "1171": [
+   "murugan-pranava"
+  ],
+  "1175": [
+   "murugan-pranava"
+  ],
+  "1179": [
+   "murugan-pranava"
+  ],
+  "1254": [
+   "murugan-pranava"
+  ],
+  "1266": [
+   "murugan-pranava"
+  ],
+  "1274": [
+   "murugan-pranava"
+  ],
+  "1326": [
+   "murugan-pranava"
+  ],
+  "139": [
+   "murugan-pranava"
+  ],
+  "1161": [
+   "murugan-pranava"
+  ],
+  "1252": [
+   "murugan-pranava"
+  ],
+  "929": [
+   "murugan-skanda-birth"
+  ],
+  "1005": [
+   "murugan-skanda-birth"
+  ],
+  "1155": [
+   "murugan-skanda-birth"
+  ]
+ }
+}

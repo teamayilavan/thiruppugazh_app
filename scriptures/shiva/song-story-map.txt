@@ -1,0 +1,395 @@
+# Song -> story map for Shiva (hand-read). One song per line:
+#   song_id | story slugs (comma separated) | what the lines allude to | confidence (high/med/low)
+# Slugs: shiva-tripura, shiva-kama, shiva-poison, shiva-daksha, shiva-yama (Markandeya), shiva-andhaka, shiva-ravana,
+#   shiva-kirata, shiva-bhikshatana, shiva-dakshinamurti, shiva-brahma-head, shiva-annamalai (Lingodbhava), shiva-ganga,
+#   shiva-nataraja (dance), shiva-ardhanari (Uma on his left), shiva-pranava (Murugan teaches Shiva), shiva-skanda-birth,
+#   shiva-sambandar (Jain defeat, fever, ash), shiva-tiruvilaiyadal (Madurai stories), shiva-nayanmar (saints),
+#   shiva-kurundam (Manikkavasagar), shiva-form (attributes only), shiva-son (only Murugan as Shiva's son),
+#   shiva-general (Shiva named, no story), not-shiva (look-alike or a simile).
+# Written by reading the lines around each keyword hit in shiva/shortlist.json.
+1|shiva-tripura|Ganesha shattered the axle of the chariot of Shiva who burned the three cities (முப்புரமெரிசெய்த அச்சிவன் உறை ரதம் அச்சு பொடிசெய்த)|high
+6|shiva-pranava|Murugan taught the three-eyed Lord the meaning of the Vedas (முக்கட்பரமற்குச் சுருதியின் முற்பட்டது கற்பித்து)|high
+7|shiva-nataraja,shiva-kurundam|Shiva who danced in the hall; Guru who gave grace under the kurundam tree (நடித்த சங்கரர்; திருக்குருந்தடி அருளிய குருநாதர்)|med
+11|shiva-tripura|Son of him who burned the three cities (திரிபுரம் வென்றிட அழலும் தகும் திறல் கொண்டவர் புதல்வோனே)|high
+12|shiva-pranava|Murugan tells Shiva (சிவசங்கரன் கொண்டிட மொழிவோனே)|med
+13|shiva-son,shiva-ardhanari|Son of Shankara and Uma at his side (சங்கரன் பங்கிற் சிவைபாலா)|low
+17|shiva-sambandar|Brahma, Vishnu and Shiva worship; Jains impaled on the stake (வன்சமணரை கழுமிசை)|high
+19|not-shiva|Kama's five arrows used by women; not the burning|med
+23|shiva-nataraja|Matted-hair Shiva dancing the pavuri with Uma on his left|med
+27|shiva-poison|Hara Hara Siva Shankara; he who swallowed the poison, Murugan his son (நஞ்சினை உண்டவர் அருள்பாலா)|med
+28|not-shiva|Simile only: like Shiva, Agastya of the Podhigai|high
+31|not-shiva|Simile: Tiruchendur like Mount Kailasa|high
+32|shiva-form,shiva-ganga|Shankara wearing Ganga and konrai in his hair, with Uma|med
+33|shiva-pranava|The matted-hair Lord to whom Murugan taught the scriptures (சடைமுடி இறைவர் தமக்குச் சாத்திர முறையருள்)|med
+46|shiva-poison|Alakalam (poison) swallowed by Shiva so the devas live (ஆலகாலம் பரன்... அமுதீயும்)|high
+49|shiva-form|Golden matted hair, Murugan is his son|low
+50|shiva-pranava|Murugan is the Guru of Shankara (சங்கரன் உகந்த பரிவின் குருவெனும்)|med
+52|shiva-tripura,shiva-ganga|Burned the cities; Ganga in the matted hair, konrai, Uma on his left; Murugan the god that Shiva worships (புரமெரிய விண்டிடும்... கங்கை சடிலம்)|high
+64|shiva-general|Feet unknown to Hari, Brahma and Hara|low
+69|not-shiva|Kalan (Yama) as simile|high
+70|shiva-kama,shiva-poison,shiva-pranava|Kama burned by the gaze; blue-throated Shiva taught by Murugan (காமன் ஐந்து பாணமோடு வேமின் ... காளகண்டரோடு வேதம் மொழிவோனே)|med
+71|shiva-tripura,shiva-nataraja|Laughed and destroyed the cities; danced in the hall holding the axe (புரம் சிரித்துக் கொன்றிடும்... மன்றினிலாடி மழுக்கைக்கொண்ட சங்கரர்)|high
+72|shiva-pranava|Showed Hara the highest meaning (அரனார்க்கு அதித பொருள் காட்டு)|high
+76|shiva-general|Hara Hara Siva Mahadeva chant|low
+77|shiva-kama,shiva-ganga|Ganga in the matted hair; reduced Kama to ash (பொடிசெய்தருள் மதன்)|high
+78|shiva-tripura,shiva-pranava|The destroyer of the three cities worships Murugan the Guru (திரிபுர தகனரும் வந்திக்கும் குருநாதா)|med
+83|shiva-nataraja,shiva-pranava|Father of Chidambaram's hall; taught him the five letters in his ear (திருச்சிற்றம்பலத்து அத்தன் செவிக்குப் பண்புறச் செப்பும்)|high
+85|not-shiva|சம்பு is part of another word|high
+88|shiva-son|Son given by Shankara in kirita crown|low
+94|shiva-ardhanari,shiva-form|Devi who shares the half of the bull-rider and dances as Kali|med
+97|shiva-general|Names of Shambhu and Purandara in the invocation|low
+98|shiva-son|Son of Parameswara, nephew of Hari Kesava|med
+99|shiva-poison,shiva-form|Moon-wearer who swallowed the poison, rides the bull (மதிசூடி... ஆலமுண்டு விடையேறி)|high
+103|shiva-kama|Kama (Sambarari) burnt of old; eyes compared to his arrows|low
+104|shiva-sambandar|Sambandar healed the Pandya's fever with ash; Jains impaled; Nakkeerar helped by Murugan|high
+105|shiva-pranava|Brahma imprisoned for not knowing the Pranava (Murugan lore)|low
+109|shiva-pranava|Taught the Lord who rides the bull, in his ear (எருத்திலேறிய இறையவர் செவிபுக உபதேசம் இசைத்த நாவின)|high
+110|shiva-dakshinamurti,shiva-form|Shambhu of the silent teaching, crowned with the moon and arugu grass (மவுனவுபதேச சம்பு)|med
+113|not-shiva|Poison as simile for the eyes|high
+117|not-shiva|Hymn to the Devi Uma-Madevi|med
+124|shiva-tripura,shiva-kama|Burned the cities with the elephant-bow and Kama with the eye; Guru Murugan (திரிபுரமெரிய வேழசிலை மதனெரிய)|high
+127|shiva-form|Pasupati wearing the moon and konrai|low
+130|shiva-tripura,shiva-kama|Reduced the cities to ash and Kama with the eye, Maheswara's son (திரிபுராதிகள் நீறெழ மதனை விழியால்)|high
+131|shiva-tripura|Burned the three cities with a laugh, Murugan his son (திரிபுரக்கோல வெற்பு அழல்கொளச் சீர்நகை)|high
+132|not-shiva|Venom in the sense of the poison of love|high
+136|shiva-pranava,shiva-form|Moon on the matted hair; Murugan whispered Pranava in his ear (செவியிற் பிரணவம் ஓதிய தேசிக)|high
+149|shiva-sambandar|Jains impaled on the stake; holy ash spread (திருநீறு பரப்பிய)|high
+150|shiva-sambandar|Sambandar's grace; Jains impaled (சம்பந்தம்... சமணர்கள் கழுவினில்)|high
+151|not-shiva|Hit was the word வந்தி; no Shiva story|high
+155|shiva-pranava|The Shankara in whose ear Murugan spoke (சங்கரனார் செவிபுக்கப் பண்பருள்)|high
+156|shiva-pranava|The Lord's mind cooled by the secret mantra in both ears (சிவனார் மனங்குளிர உபதேச மந்த்ரம்)|high
+157|shiva-form|Matted-haired Lord pleased|low
+160|shiva-pranava|The Pranava mantra and Vedic wisdom; Guru|low
+170|shiva-son|Son of Shambhu (சம்புகுமாரா)|med
+171|not-shiva|சம்பு part of another word|med
+176|shiva-pranava|Parasivan hears the Pranava secret in his ear (செவியுட் பிரணவ ரகசியம்)|high
+179|shiva-ardhanari,shiva-form|Trident-bearing Shankara, Kailasa Lord, Uma on his left|med
+184|not-shiva|Tripurai = Devi|high
+187|shiva-son|Son of the three-eyed Siddha|low
+188|shiva-brahma-head,shiva-form|Holding trident, deer, axe, drum and the skull of Brahma (வேதன் தலையோடு), Paranar's son|med
+192|shiva-general|Pasupati's Siva mantra known by Murugan|low
+197|shiva-poison|Swallowed the black poison so the devas might live; Kalakanda Mahadeva's son (கார்விடந்தனை ஊணாக... காளகண்ட மகாதேவனார் தரு முருகோனே)|high
+199|shiva-poison,shiva-ganga|Drank the poison from the ocean; Ganga in his hair, rides the bull (பரவைவரு விடமருந்தும் மிடறுடைய கடவுள் கங்கை படர்சடையர்)|high
+201|shiva-son|Son of Siva (வராசிவ சுதா)|low
+205|shiva-nataraja,shiva-annamalai,shiva-tripura|Nataraja dances; Hari and Brahma did not know his feet; Siva Purari's son|med
+206|shiva-son|Murugan the son of the fire-formed matted-hair Lord and the mountain's daughter|low
+207|shiva-tripura,shiva-kama,shiva-nataraja|Saw the cities and Kama's body turned to ash; the young bull-rider Nataraja (திரிபுரமும் மதனுடலும் நீறு கண்டவன்... நடராஜன்)|high
+208|shiva-nataraja|Lord who dances ceaselessly with Pidari (Kali); the hunters (கிராதர்) are only a simile|med
+213|shiva-pranava|Taught his father the crescent-matted Lord as Guru (பிறைச்சடையர் குருவென நலுரை உதவு)|med
+214|shiva-yama,shiva-pranava|Feet that took the life of Yama; the Ganga-matted Lord's Guru (நமனை உயிர்கொளும் அழலின் இணைகழல் நதிகொள் சடையினர் குருநாதா)|med
+215|not-shiva|Kama only as simile|high
+216|shiva-son|Son of the Lord of Kailasa|med
+224|shiva-general|Kailasa listed among the worlds|low
+226|shiva-ardhanari|Shiva's half-bodied Devi (இடபாகம்); Murugan the Devi's son|low
+227|shiva-pranava|Taught Shiva the knowledge reserved for him (சிவனார் தமக்குரிய உபதேச வித்தை)|high
+228|shiva-son|Son of the Lord with the half-moon and Ganga|low
+237|shiva-form,shiva-ardhanari,shiva-pranava|Shankara wearing the elephant hide, deer and tiger skin, the moon and Ganga in his hair, Uma at his side, who worships Murugan|med
+240|shiva-pranava|The one word Pranava spoken to Parama's two ears (பரமன் இருசெவி களிகூர உரைசெயும் பிரணவ)|high
+242|shiva-kama|Burned Kama with the fire of the forehead eye; Lord of Kailasa with Uma (நெற்றிக் கனற்கண் எரித்தவர் கயிலாயப் பொருப்பினிலிருப்பவர்)|high
+243|not-shiva|முயலகன் here is the epilepsy disease|high
+250|not-shiva|முயலகன் here is the epilepsy disease|high
+251|shiva-nataraja,shiva-form|Danced with ocean-like matted hair, deer and axe in hand, golden anklets ringing (மான்மழுக்கரம் ஆட பொற்கழல் ஓசை பெற நடித்தவர்)|high
+261|shiva-sambandar,shiva-tripura|Sambandar of Pugali scattered holy ash and defeated the Jains; son of him who burned the cities with his laugh|high
+262|shiva-pranava|Parama bowed down and Murugan declared the meaning (பரமன் பணியப் பொருளன்றருளில் பகர்)|high
+263|shiva-tripura,shiva-brahma-head|Burned the three cities with his eye; the axe-handed who clipped Brahma's head (அயனை முடித்தலை அரியும் மழுக்கையன்)|high
+264|shiva-tripura,shiva-poison,shiva-form,shiva-pranava|Burned the three cities, wears the axe, tiger and elephant hide, held the poison in the throat for the devas; taught the matted-hair God|high
+268|shiva-son|Son of the red-matted Lord|low
+280|shiva-tripura|Laughed and burned the cities of the demons (முப்புரத்து அரக்கரைச் சிரித்தெரித்த)|high
+285|shiva-pranava|Taught the golden Lord of Kailasa the meaning of the Vedas|high
+291|shiva-tripura,shiva-ardhanari|Burned the cities with laughter and fire; his consort the Devi|med
+292|shiva-tripura,shiva-nataraja|Burned the cities in a moment (Devi as the Abhirami); the dancing Siva|med
+295|shiva-form|Son of the Lord wearing moon, Ganga, thumbai, konrai|low
+302|shiva-nataraja,shiva-kama|Dancer whose forehead eye burned something (நெற்றிவிழி பட்டெரிய நட்டமிடும் உத்தமர்)|low
+307|shiva-ganga,shiva-son|Son of Pasupati who wears the flowing water on his head|med
+309|shiva-daksha|Daksha ruined and his ear lost in the fire sacrifice; the wrathful Lord who worships Murugan at Kanchi|high
+310|not-shiva|Moon (Sasidhara) in a list of gods|high
+311|shiva-general|Devi with three eyes and the Lord worshipping at Kanchi|low
+312|shiva-ravana|Ravana uprooting the Kailasa mountain|high
+313|shiva-ardhanari|Siva with the trident and Devi|low
+314|not-shiva|Three-eyed Ganesha|med
+315|shiva-form|Moon, Konrai, skull, serpent; Devi Tripurai|low
+321|shiva-tripura|Devi who burns the cities (Kamakshi hymn)|low
+327|shiva-tripura,shiva-pranava|Burned the cities and gave grace to the one he instructed (புரத்தைச் சுட்டெரித்து... கற்பித்தருள்வோனே)|high
+338|not-shiva|கிராதாங்கனை is Valli the hunter's daughter|high
+343|shiva-tripura,shiva-form|Trampled and burned the cities; trident, deer and axe in hand (முப்புரக் காடு நீறெழச் சாடி... சூல மான்மழு)|high
+345|shiva-tripura|Burned the cities with a bow|high
+347|shiva-pranava|The three-eyed one who wears Ganga and moon asked the meaning|high
+353|not-shiva|சம்பு is the Jambu pond of Tiruvanaikka|med
+357|shiva-son|Son of the three-eyed Isan|low
+360|shiva-annamalai,shiva-ganga|Vishnu who rests on the serpent could not find his feet and crown; the Lord with Ganga in his locks|med
+362|shiva-son|Son of Jambunatha of Tiruvanaikka|low
+365|shiva-tripura|Devi taking the bow against the cities (Narayani hymn)|low
+369|shiva-ardhanari|Hymn to the Devi, destroyer of the cities|low
+371|shiva-son|Son of Siva (சிவசுத)|low
+380|shiva-pranava,shiva-ganga|Taught the Siva with Ganga in his hair as Guru (சிவனை முதல் ஓதுவித்த குருநாதா)|high
+381|shiva-pranava|Siva could learn the silent Vedas from Murugan the Guru (சிவனார் படிக்க மவுன மறை ஓதுவித்த குருநாதா)|high
+384|not-shiva|Hymn to the Devi|high
+386|shiva-form,shiva-kama|Elephant hide and serpent on his body, moon and Ganga in the hair, fire, axe and deer; hates Kama; the Kailasa Lord|high
+389|shiva-poison,shiva-ganga|Ate the poison to free the devas, bull rider; moon and Ganga in the matted hair|high
+391|shiva-tripura,shiva-ardhanari|Destroyer of the cities who shares the body with Tripurai|high
+396|shiva-general|Siva and Bhumi/Lakshmi in an epithet list|low
+401|shiva-tripura,shiva-kama|The cities fell and Kama's body was destroyed by his smile; the bull-rider|high
+404|shiva-tripura|Burned the cities with a smile, Murugan his son and Guru|high
+409|shiva-tiruvilaiyadal,shiva-nataraja,shiva-form|Changed jackals into horses; dances; wears the elephant hide (நரிமிகுக் கிளைகளைப் பரியெனக்... கரியுரித்தணிபவற்கொருசேயே)|high
+412|shiva-tripura,shiva-form,shiva-ganga|Burned the cities, wears the tiger skin and Ganga with the crescent|high
+419|shiva-tripura|Burned the cities of the demons with the wrath of his forehead|high
+420|not-shiva|Poison as a simile for the eyes|high
+422|shiva-ardhanari,shiva-ganga|Shankara of Arunagiri who bows to Murugan; Gauri and Ganga|low
+423|shiva-tripura|The Devi power with Siva burned the cities|med
+424|shiva-sarabha|Sarabha bird form that subdued the fierce Narasimha (வெஞ்சச் சிம்புட் சொரூபமதானவர் ... நரகேசரி)|med
+428|shiva-tripura|Smiled and burned the cities; Murugan is Siva's child (மலையை வளைத்து... புரத்தைச் சிவந்து வறிது நகைத்திட்ட சிவனார்தம் மதலை)|high
+431|not-shiva|வீரபத்ர is a name of Murugan here|med
+439|not-shiva|Murugan as the son of Sivakami (Devi) and Valli's lover; no Shiva story|low
+441|not-shiva|Murugan's war with Surapadma; no Shiva story|high
+444|shiva-nataraja,shiva-brahma-head,shiva-kama,shiva-poison,shiva-ganga,shiva-form,shiva-ardhanari|Dancer with the anklet sound; Brahma's head in his hand; skinned the elephant; Ganga, moon, konrai in the hair; burned Kama with his eye; stain of poison in the throat; gave Ganesha; Devi who tramples Muyalakan|high
+448|shiva-ardhanari,shiva-sarabha|Shankara with Uma on his left; the Sarabha (சிம்புள்) form|med
+452|shiva-nataraja,shiva-pranava|Father who danced on Mount Kailasa and was taught by Murugan|med
+458|shiva-tripura,shiva-form,shiva-daksha,shiva-pranava,shiva-nataraja|Destroyed the cities, flayed the elephant, cut off angry Daksha's head, learned the true meaning in his ear from Murugan; Chidambaram|high
+459|shiva-general|Son of Sivakami at Chidambaram; no deed|low
+460|shiva-nataraja|Dances in the hall of Chidambaram (தித்தியென்று ஒத்தி நின்றாடு சிற்றம்பலவர்)|high
+461|shiva-tripura,shiva-form,shiva-daksha|Burned the cities, flayed the elephant, destroyed the enemy Daksha's penance|high
+462|shiva-tripura,shiva-kama,shiva-brahma-head,shiva-form,shiva-nataraja|Flayed the elephant; burned the cities and Kama with a laugh; cut Brahma's head; Chidambaram|high
+463|shiva-tripura,shiva-ardhanari|Burned the cities; Devi Sankari in his half|high
+466|shiva-ganga,shiva-nataraja|The dancer on Kailasa with the river and the crescent in his hair|med
+468|shiva-pranava|The moon-haired Lord worshipped Murugan and learned the law-book (இந்துசடாதரன் வாசவன் தொழுது மனுநூல் விளம்பிய)|med
+470|shiva-tripura|Salutation to the Lord who burned the cities, Hara Hara|med
+472|shiva-nataraja|Father who dances in the golden hall of Chidambaram|high
+476|shiva-nataraja,shiva-skanda-birth|Child born from the eye of the Lord of Thillai|med
+477|not-shiva|Thillai (Chidambaram) as the place only|med
+478|not-shiva|Chidambaram's gopuram only|high
+479|shiva-nataraja,shiva-annamalai|Danced so that Vishnu and Brahma did not know his feet, in the hall of Chidambaram|med
+480|shiva-general|Invocation Sadasiva/Parapara|low
+483|not-shiva|Chidambaram's west gopuram only|high
+485|shiva-ravana,shiva-ardhanari,shiva-son|Ravana's mountain-lifting shoulders crushed under the toe; Siva on the bull with his consort; Sambhu's child (வலித்துத் தோள்மலை ராவணன் எடுத்தப்போது உடல் கீழ்விழ)|high
+487|not-shiva|Disease list only|high
+490|not-shiva|Ravana's ten heads in the Rama story; Sadasiva only as an epithet|low
+491|shiva-yama,shiva-tripura,shiva-kama,shiva-daksha|Yama's life taken; cities burned; Kama's body burned by the eye; Daksha and Surya and the Moon fell|high
+507|shiva-ardhanari,shiva-form|Uma-bhagar with the trident, fire-coloured Paran|med
+509|shiva-bhikshatana,shiva-form|Brahma's skull-bowl, sacred ash and konrai in the hair|med
+514|shiva-nataraja|Parameswara of the dancing feet|med
+517|shiva-tripura,shiva-nataraja,shiva-ardhanari,shiva-form|Burned the cities with a flame-laugh; danced the holy dance while Adisesha's hood bowed; trident, axe, deer; Uma on his left; Kailasa|high
+518|not-shiva|Kailasa-like hill of Murugan's shrine|low
+519|shiva-ganga,shiva-form|A woman in the spread locks and a deer in his hand; dwelling on the white mountain|med
+520|shiva-general|Siva and Ganesha rejoicing at Kailasa|low
+522|shiva-ravana|Ravana lifted Kailasa|high
+525|shiva-tripura|Lord who burned the cities, the father of Murugan|high
+533|shiva-tripura,shiva-nataraja|Son of Thillai's Purari|med
+535|shiva-nataraja|Thillai's Lord is the father|low
+538|shiva-general|Murugan guarding the silver mountain (Kailasa) in the north|low
+540|shiva-sambandar|White ash spread at Madurai and the Jains routed (அருகர் கணங்கள் பிணங்கிடும்படி மதுரையில் வெண்பொடி பரந்திட)|high
+541|shiva-kama,shiva-tripura|Laughed and burned Kama and the cities with the fire from his eye|high
+542|shiva-sambandar|The Brahmin boy of Kazhi: palm-leaf against the river, the Jains impaled|high
+544|not-shiva|வீரபத்ர (Veerabhadra) and Kali in Murugan's army|med
+546|shiva-pranava|Shambhu worships his feet (மகிழ்சம்பு வேதொழு பாதா)|med
+548|shiva-form|Moon, serpent, skull-garland in his hair; Murugan, Sadasiva's child|low
+550|shiva-sambandar,shiva-ardhanari|Eight thousand Jains at Madurai; ash spread; Sambandar sings Siva Siva Mahadeva; Lord with Uma on one half|high
+555|shiva-nayanmar|Appar worshipped at Tiruchirapalli's hill (திரிசிராமலை அப்பர் வணங்கிய)|med
+562|shiva-general|Lakshmishwara, Pasupati, Guru as invocation|low
+570|shiva-general|Epithets Sasidhara, Sadasiva, Mayesvara addressed to Murugan|low
+571|shiva-general|Purari, Achyuta, Brahma in a list; no story|low
+573|shiva-son|Nephew of Mukunda, son of Purari-Siddha|med
+575|shiva-general|Hara Hara Shankara chant|low
+577|shiva-form,shiva-tripura,shiva-kama,shiva-brahma-head|Epithet list of Shiva: elephant-slayer, Kama's foe, burner of the three cities, dancer in fire, Lord of Kailasa, Kapali|med
+578|shiva-pranava|Taught the Lord of Kailasa the Upanishad secret (கயிலாசக் கோமாற்குபதேசம்)|med
+583|shiva-nataraja|Hara who dances in the burning ground along with Brahma and Vishnu|low
+586|shiva-son|Son of Hara and nephew of Mukunda|med
+594|shiva-ardhanari,shiva-pranava|The father with the moon in his hair and Uma on his side, who worships his Guru feet|med
+597|not-shiva|Poison used as a simile for deceitful women|high
+602|not-shiva|Directions (தட்சிண) only|high
+604|not-shiva|Directions only|high
+605|shiva-form,shiva-son|Alliterative epithets: matted hair, poison-holder, serpent, axe, moon, damaru, deer; Siva's son|med
+611|shiva-pranava|Siva heard the Vedic mantra in his ear (சிவனார் திகழ்ந்த காதிலுரை வேத மந்த்ர)|high
+617|shiva-tripura,shiva-yama,shiva-kama,shiva-daksha,shiva-sambandar|Bent the Meru and bound the serpent to burn the cities; pushed away Yama; reduced Kama to ash; destroyed Daksha's sacrifice and gave a goat's head; the Jains impaled|high
+637|not-shiva|Ghost-troop (பூத வேதாளி) around Kali, no Shiva story|med
+648|shiva-form|Serpent, crescent, thumbai, konrai in his matted hair; his son|low
+649|shiva-brahma-head,shiva-kama|Cut a head off Brahma in wrath and burned Kama with the fire of his eye; Murugan the Guru of that father (வேதனை அதிர்த்து ஓர்முடி கரத்து... காமனை எரித்த தாதையர்)|high
+651|shiva-tripura|Reduced the mighty three cities to ash and smoke|high
+652|shiva-ganga,shiva-ardhanari|The Lord with Ganga in his hair, his Devi Parameswari's son|med
+656|shiva-form|Poison-holder, moon-wearer, spotless Lord of the silver mountain, Murugan his Guru|low
+657|shiva-son|Son of Siva (சிவசுத)|low
+665|not-shiva|Siva's old town as a place name|med
+668|shiva-sambandar|Jains made to fall into the stake in the form of Murugan as Sambandar|med
+673|shiva-nataraja|Danced with Kali at Tiruvalangadu (காளியொடு ஆடிய ஜகதீச நடேசுரர்)|high
+674|shiva-nataraja|Danced at Tiruvalangadu (அன்றாலங்காட்டு நின்றாடும் கூத்தன்)|high
+675|not-shiva|பசுபதி பாசம் is the doctrine of soul, pasu and pasam|med
+682|shiva-nataraja,shiva-pranava|Lord of the dance in Thillai; Murugan the Guru of Siva (சிவனே சிவ குருநாதா)|med
+686|shiva-nataraja,shiva-pranava|Nataraja praises the Guru-king Murugan|med
+688|shiva-son|Son of Siva|low
+689|shiva-son|Son of the Lord of Kailasa, Hara|med
+691|shiva-ardhanari,shiva-son|Child pleasing the Uma-bhagar|med
+695|shiva-son|Son of Siva|low
+696|not-shiva|Devi hymn|high
+699|shiva-form,shiva-ganga|Parameswara with moon, serpent and cool river in the matted hair|low
+701|shiva-pranava|Shiva told Murugan to say it (கூறென அரனார் முன்)|med
+702|shiva-brahma-head,shiva-bhikshatana,shiva-tripura,shiva-ardhanari|Plucked the middle head of the lotus Brahma and begged with it; laughed and burned the cities; Siva with Uma|high
+709|shiva-tripura|Son of Purari who burned the cities|low
+713|shiva-son|Son of Siva, nephew of Narayana; the serpent-adorned|low
+719|shiva-ardhanari,shiva-nataraja,shiva-ganga|Kampar of Kanchi who melted for the mountain's daughter and gave her half; Sadi-tandava dancer; Ganga in the hair|high
+724|shiva-nataraja,shiva-ardhanari|Shankara who dances with Antari (Uma) happy|med
+725|shiva-son|Son of the ash-smeared matted-hair Lord|low
+729|shiva-ardhanari,shiva-form|Bull-rider with Uma, worshipped at the feet by Brahma and Vishnu|low
+733|shiva-annamalai|The Lord whom even Hari could not find the origin of|med
+737|shiva-son|Son of the Lord of Kailasa and Uma|low
+738|shiva-tripura|Burned the cities of the cruel demons|high
+742|shiva-general|Maheswara among the gods who worship|low
+744|shiva-nataraja|The Pavuri dance in the golden hall, anklets sounding|high
+745|not-shiva|Kailasa shakes from Murugan's spear in the war|med
+750|shiva-brahma-head,shiva-tripura|Cut Brahma's head, burned the cities (அறுத்தாரயனார் தலையே புரமெரித்தார்)|high
+753|not-shiva|The body as a hut in which the soul dances|high
+756|shiva-tiruvilaiyadal,shiva-tripura,shiva-ardhanari|Carried the sand of the Vaigai in Madurai with an axe; father burned the cities and rules Siva-loka; Sivakami who raged at Yama|high
+759|not-shiva|Devi hymn|high
+762|shiva-sambandar|Devi hymn with Sura Sankara Kumara; Jains who do not wear ash are impaled|high
+763|shiva-form|Serpent, river, moon, bones and ash on the red-body Lord, his son|med
+764|not-shiva|Devi hymn|high
+766|shiva-sambandar|At Kuruvai Kudal the Tamil scripture, the Jains on the stake, the ash that cured the Pandya's disease|high
+776|shiva-pranava|Whispered in the ear of the Lord of Kazhi (சிவன்மெச்சக் காதுக் கோதிய)|high
+780|shiva-ardhanari,shiva-form|Nishkala form with half green; trident-bearer|med
+783|shiva-general|Shankara of Vaidyanatha who cured diseases at Velur|med
+792|shiva-pranava|Gave a word to the coral-haired Siva (சிவனுக் கொருசொற் பகர்வோனே)|high
+797|shiva-brahma-head,shiva-tripura|Plucked Brahma's head with a nail; smiled and burned the cities|high
+799|shiva-sambandar|The Jains routed|med
+801|shiva-general|Shiva Amban worships Skanda in Kandankudi|low
+806|shiva-ardhanari,shiva-nataraja,shiva-pranava|Siva with Uma on the right, the bull-rider dancing; Purari's Guru|med
+809|shiva-son|Son of Mahadeva and Sadasiva|low
+813|not-shiva|Devotee asks Murugan to whisper in his ear|med
+815|shiva-tripura,shiva-kama,shiva-ganga|Purari burned the cities with a smile before Meru bent; eyes that burned Kama; Ganga|high
+821|shiva-son|Siva's son (சிவசுத)|low
+823|shiva-dakshinamurti,shiva-brahma-head|Murugan addressed as Dakshinamurti unknown to Brahma; skull-bearing Guru|high
+824|shiva-general|Parama Siva yoga epithet|low
+826|not-shiva|Women's braided hair|high
+832|not-shiva|Devotee asks for the Pranava|med
+833|shiva-nataraja,shiva-son|Son equal to Siva's eyes, who danced in the golden hall|low
+836|shiva-pranava|Gave the order to the Lord of Kailasa|med
+844|shiva-kurundam|Manikkavasagar under the kurundam tree at Perunthurai with Shankara as Guru|high
+846|shiva-tripura,shiva-pranava|Burned the cities with the bow; Guru worshipped by Siva|med
+851|shiva-son|Son of Siva|low
+852|shiva-form,shiva-ardhanari|Tiger-skin elephant-hide Lord who took the devotee into slavery, Uma shares his body|med
+853|shiva-pranava|Lord even of Shankara; circles Kailasa|med
+856|shiva-ganga,shiva-ardhanari|Chief with Ganga in the matted hair whose worship of Uma pleased him|med
+860|shiva-form,shiva-ganga|Parama with serpents, Ganga, moon, konrai and thumbai in the hair; Shankara worships Murugan|med
+862|shiva-nayanmar|Murugan accepted the worship of Appar in the form he wished (அப்பர்க் கப்படி யொப்பித் தர்ச்சனை கொண்டநாதா)|med
+875|shiva-pranava|Explained the secret Vedas to the three-eyed Lord (முக்கட்பரற்குப் பொருட்சொல் அருமறை உணர்த்தி)|high
+876|not-shiva|Hit on a word of Indra's wife; no Shiva story|high
+878|not-shiva|தட்சண (skilful), no Shiva story|high
+879|not-shiva|Murugan's spear touches Kailasa in the war|med
+884|shiva-kama,shiva-pranava|The Shambhu whose fire-eye burned Kama (Sambarari) is taught by Murugan; கிராதி is Valli|high
+887|shiva-tripura|Reduced the three cities to dust to the delight of the devas|high
+888|shiva-pranava,shiva-nataraja|Grace to the Dancer (Tandavan), Rudra's son|med
+895|shiva-tripura|Devi on the peacock; the cities burned|low
+897|shiva-form,shiva-ardhanari|Moon on the matted hair, the Lord with the woman at his side|med
+902|shiva-nataraja,shiva-pranava|The Father who dances on the northern mountain is taught the way to liberation (வடகுவடில் நடனமிடும் அப்பர்க்கு முத்திநெறி தப்பற்று உரைக்கவல்ல)|med
+904|shiva-daksha|Golden-form Lord who shot Daksha's head with a mighty arrow (மன்னான தக்கனை முன்னாள் முடித்தலை வன்வாளியிற் கொளும் தங்கரூபன்)|high
+907|shiva-form,shiva-poison|Lord of Tiruvottiyur, blue-throated Mahadeva|low
+911|shiva-kama,shiva-ganga,shiva-nayanmar|Burned Kama with the fire eye; Ganga in the hair; Appar with the snake-ears Guru (காமனை எரித்த தீநயன நெற்றி... சுவர்க்க நதி வேணி)|high
+912|shiva-ardhanari,shiva-son|Nama Sivaya; Lord with the mountain's daughter on his side|med
+913|shiva-sambandar|Buddhists and Jains defeated; the king of the south wore the ash (தெற்கு நரபதி திருநீறிட)|high
+916|not-shiva|Devi hymn|high
+917|shiva-pranava|Pasupati taught as Guru|low
+919|shiva-pranava|Taught true wisdom into the jewelled ear of Siva (சிவனார் திருமணிச்செவிக்குள் மெய்ஞ்ஞானமதோதிய)|high
+920|shiva-sambandar|Stake for the Jains, the Pandya cured of hunch and wearing ash, the Devi of Alavai|high
+922|shiva-form,shiva-ganga,shiva-pranava|Serpent, Ganga, moon, kurava, arugu, thumbai, konrai in the hair; Shambhu worships Guru Murugan|med
+927|not-shiva|Pasupati as Murugan's title; temple at Karuvur|med
+928|not-shiva|Disease or time-span, no Shiva story|med
+929|shiva-skanda-birth|Born from Parameswara (சகலமயம் பரமேச்சுரன்... சரவண சம்பவ)|med
+932|shiva-pranava|Taught Siva as Guru (குருவெனச் சிவனுக்கு அருள் போதா)|high
+933|shiva-form|The Lord of Kodumudi with serpent in the matted hair|low
+938|shiva-son|Son of Kambar (Ekambaranatha) the Lord of Kailasa|low
+959|shiva-sambandar|The Jains impaled one against another|med
+960|shiva-nayanmar,shiva-tiruvilaiyadal|Manikkavasagar of Vadavur and the jackals turned into horses|high
+961|shiva-son|Son of Uma, the Devi dear to Siva|low
+966|shiva-tripura,shiva-ardhanari,shiva-pranava|Burner of the cities, the beautiful Sokkan with half Uma; taught the meaning in his ear|high
+972|shiva-nayanmar|Sundarar's song; the Lord went as messenger (சுந்தரர் பாடல் உகந்து நல் தூது நடந்தவர்)|high
+986|shiva-kama|Fought Sambarari (Kama) with the eye; Pasupati praised him|med
+992|not-shiva|கிராத = Valli the huntress|high
+994|not-shiva|Hymn to the Devi|med
+1004|shiva-pranava,shiva-ardhanari|Taught the silent meaning to Pasupati; Devi of Arunai|high
+1005|shiva-skanda-birth|Uma and six maidens call him their child|med
+1008|not-shiva|Paraman here is Vishnu on the serpent|high
+1010|not-shiva|Sages dressed in skin as a simile only|high
+1011|shiva-son|Son of Siva (அரகர சிவசுத)|low
+1013|shiva-son|Murugan before the three-eyed Svayambhu|low
+1016|not-shiva|Gods at Purari's pillar, no story|med
+1023|not-shiva|Eyes called Yama; no Shiva story|high
+1028|not-shiva|Deva Deva title for Murugan|high
+1029|not-shiva|Deva Deva title for Murugan|high
+1030|not-shiva|Kirata flag title for Murugan|high
+1045|not-shiva|Yoga language (Yama as death)|high
+1046|shiva-ardhanari|Devi hymn: she who is half of the Lord of Kailasa|low
+1049|shiva-general|Kailasa dance epithet in a list|low
+1051|shiva-ganga,shiva-form|Ganga and serpent in his hair, Thimilai-natha, Mahadeva|low
+1053|shiva-nataraja|Adisesha, Kali, the bull-rider and the ghosts all dance|med
+1068|not-shiva|Rebirth passage; no Shiva story|high
+1074|shiva-form,shiva-pranava|Bull, elephant-hide, ash, thread, tiger-skin, axe and deer, skull garland: Isan who loved Murugan the Guru|high
+1075|shiva-tripura|Burned the three cities in a moment, Siva's son|high
+1077|not-shiva|மதி = wisdom|high
+1083|shiva-son|Child of the matted-hair Lord|low
+1086|shiva-general|Hara's consort dances|low
+1087|not-shiva|No Shiva story|high
+1096|shiva-nataraja|Danced with a foot on the serpent-hooded demon Muyalakan so the heavens shook|med
+1103|not-shiva|No Shiva story|high
+1105|shiva-kama|Kama shot Kalakala-prabhu (Siva) for Uma's sake; Kama's brother-in-law is Vishnu|high
+1106|shiva-yama,shiva-kama|The Lord kicked Yama in the chest; Kama's brother-in-law|high
+1108|shiva-poison,shiva-nataraja,shiva-form,shiva-ardhanari|Drank the poison from the ocean, danced with the ghosts, rode the bull; serpent, crescent, water; his consort|high
+1110|shiva-son|Murugan the son of the three-eyed Mahadeva|low
+1113|shiva-son|Good son of the bull-rider|low
+1114|shiva-pranava,shiva-nayanmar|Guru of the long-matted three-eyed Lord and of Kachchiyappar (முக்கணக் கடவுள் கச்சியப்பர்க்கருள்செய் குருநாதா)|med
+1115|shiva-form|Red matted hair with the egret feather and moon|low
+1125|shiva-tripura,shiva-nataraja|Burned the cities with a laugh; the Lord Hara who dances in the common hall|high
+1126|not-shiva|Devi hymn|high
+1133|not-shiva|Devi (Kali) hymn|high
+1135|shiva-tripura,shiva-yama,shiva-kama,shiva-poison|Laughed and burned the cities, kicked Yama, destroyed Kama, held the ocean's poison in his throat; Siva's grace to Murugan|high
+1138|shiva-form|Crescent-wearing Lord, Murugan in battle|low
+1139|shiva-form|Bull-rider, deer and axe in hands, crescent in the hair|med
+1140|shiva-nataraja,shiva-ardhanari|Dances on Muyalakan; the Devi on one side|high
+1146|not-shiva|Isar and Vishnu named only as persons not to be mocked|high
+1155|shiva-skanda-birth|The moon-haired Lord's trouble relieved on Kailasa when Murugan comes|low
+1157|not-shiva|அங்கிராத is not Kirata|high
+1159|shiva-form,shiva-ganga|Moon on the head with Ganga; serpent-eared, trident-holder with Vishnu|med
+1160|shiva-yama,shiva-kama,shiva-brahma-head|Kicked Yama with his foot, burned Kama, and wrote on Brahma's head|high
+1162|shiva-son|Devi's son, Parameswara's|low
+1163|shiva-form|Serpents, moon, Ganga, konrai in the hair; Shankara's son|med
+1166|shiva-ardhanari,shiva-bhikshatana,shiva-poison,shiva-tripura,shiva-ganga,shiva-form|With the green Devi; went begging; swallowed the ocean poison; burned the three cities; binds the serpent; Ganga with the moon in the hair|high
+1170|shiva-ganga,shiva-nataraja,shiva-pranava|Bone garland, Ganga on the head, dance; the Lord's consort; Murugan whispers the secret|med
+1171|shiva-pranava|Taught the three-eyed red-matted Moon-wearer the supreme secret|high
+1174|shiva-son,shiva-kurundam|Son of Purari; the Guru of the kurundam|low
+1175|shiva-pranava|Instructed Isa and Shambhu in the unspoken word (ஈசர்க்குச் சுவாமியாய் முதல் வாசிப்பித்த தேசிகா)|high
+1176|shiva-yama,shiva-poison,shiva-kama,shiva-nataraja|Kicked Yama and showed death; poison in the throat; burned Kama; danced in the forest|high
+1178|shiva-form,shiva-ardhanari|Hill-dweller with Uma, takes cremation ash, rides the bull|med
+1179|shiva-pranava|Called Thagappan Swami (teacher of his father)|med
+1182|not-shiva|Simile for women's eyes|high
+1192|shiva-tiruvilaiyadal|Nakkeerar of Madurai Koodal and his Tamil|low
+1194|shiva-tripura|Shankara who reduced the cities to ash|high
+1195|shiva-tripura|The cities of the demons burned|med
+1203|shiva-ganga,shiva-tripura|Bull-rider with Ganga in his hair, fire-bodied; laughed and burned the three cities|high
+1206|shiva-general|Lord of Kailasa in a list with Indra, Brahma and Vishnu|low
+1209|shiva-sambandar|Jains impaled at Nattakur|med
+1214|not-shiva|Poison-eyed women as a simile|high
+1219|shiva-son|Younger son of the Lord of Kailasa|low
+1239|shiva-ardhanari,shiva-ganga,shiva-form|Gave the mountain's daughter the left, moon and river in the hair, axe and fire in the hand|high
+1240|shiva-nataraja|Danced the Tandava of wisdom bliss|med
+1244|not-shiva|Ghost-like sinner description|high
+1246|not-shiva|Kirata chief is Valli's family|high
+1247|not-shiva|Heretics criticised|high
+1249|shiva-tiruvilaiyadal,shiva-nataraja,shiva-son|Turned jackals into horses for the Pandya at Madurai; father who dances; Hara's son|high
+1254|shiva-pranava|The Shankara in konrai who came to worship Murugan|med
+1264|not-shiva|Devi hymn|high
+1266|shiva-pranava|Instructed the three-eyed matted Siddha|med
+1274|shiva-pranava|Told the old Purari the truth of Pati, Pasu and Pasam|high
+1277|shiva-pranava,shiva-tripura|Became the Guru and spoke in Hara's one ear; Kali burns the cities|high
+1278|shiva-son|Great good son of the three-eyed Siva|low
+1280|not-shiva|Poison as a simile|high
+1282|shiva-sambandar|Came as Sambandan in tamil|high
+1287|shiva-sambandar|Uma's milk gave the Tamil child Sambandar; Jains impaled|high
+1308|not-shiva|Devi hymn|high
+1313|shiva-nayanmar,shiva-tiruvilaiyadal|Manikkavasagar of Vadavur took the horses to sell|high
+1320|shiva-form,shiva-ganga,shiva-pranava|Tiger-skin Parama with Ganga in his hair worships Murugan|med
+1326|shiva-pranava|Taught the Vedas through the five letters to the three-eyed light|high
+1327|shiva-sambandar|First Guru of Saivism, destroyed the Jains|med
+1330|shiva-yama,shiva-poison|Son of the dark-throated skull-bearing Lord who beat Yama|high
+# ---- second pass (songs the shortlist rule did not catch: found by searching Yama, Andhaka, Markandeya, Gajasamhara, Bhairava, Sokkar, Ganga-descent words)
+139|shiva-form,shiva-pranava|Wearer of the young moon, thumbai and serpent, to whom Murugan told the sweet meaning (அரவணிபவர்க்கு இசைந்து இனிய பொருளைப் பகர்ந்த குருநாதா)|med
+957|shiva-tiruvilaiyadal,shiva-annamalai,shiva-ardhanari|Sokkar of Madurai whom neither Vishnu nor Brahma could know, delighting Uma|med
+1063|shiva-yama,shiva-annamalai|The Lord who overthrew Yama; Vishnu could not see him (மறலி சாய்த்தவர் இறை... மால் காணாதே)|med
+1161|shiva-pranava|Gave the meaning to Sokkar (சொக்கர்க்கு அர்த்தத்தைச் சுட்டிய)|med
+1177|shiva-kama,shiva-ganga,shiva-form|Sage's son; three-eyed Lord who burned Kama; Ganga and crescent on his hair|high
+1252|shiva-form,shiva-pranava|Konrai, thumbai, moon and Ganga for the matted-hair Lord to whom he gave grace|low

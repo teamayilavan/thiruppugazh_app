@@ -1,6 +1,6 @@
 # Status
 
-**Next session: Lord Shiva.** Follow `WORKFLOW.md`; start by agreeing the shortlist rule with the owner and refactoring `build_master.py` to be deity-agnostic.
+**Shiva: first full pass done (2026-10-26).** 379 shortlisted songs hand-read, plus 6 from a second pass; 309 have a Shiva reading, 238 with a story in 20 stories, 71 without; 76 shortlisted songs were not about Shiva. Verse references from three research passes (Sanskrit, Tamil deeds, saints/Murugan); master build and reading PDF (`thiruppugazh-shiva-stories.pdf`, 572 pages). 12 stories have a Sanskrit reference, 19 a confirmed Tamil Shaiva verse, 11 both, none has neither. Open: gaps listed in `shiva/SOURCES.md` (Yama, Dakshinamurti, Bhikshatana, Pranava-at-Swamimalai, Sarabha), owner review of the PDF and of the 89 low-confidence songs, Tirumurai 9/11/12 and Tirukkovaiyar not searched. Nothing is committed.
 
 Last updated: 2026-10-26 (session 1, second part)
 
