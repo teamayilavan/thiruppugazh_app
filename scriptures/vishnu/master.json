@@ -1,0 +1,5978 @@
+{
+ "stats": {
+  "episodes_defined": 76,
+  "stories_with_songs": 68,
+  "with_primary_text": 64,
+  "with_confirmed_dp": 51,
+  "with_both": 50,
+  "only_primary": 14,
+  "only_dp": 1,
+  "neither": 3,
+  "songs_total": 272,
+  "songs_with_story": 228,
+  "songs_without_story": 44
+ },
+ "stories": {
+  "ramayana-birth": {
+   "id": "ramayana-birth",
+   "domain": "ramayana",
+   "eid": "birth",
+   "title": "Rama's birth and childhood",
+   "brief": "Kausalya calls the infant Rama to her ('come here, king'). The Thiruppugazh image is of the child Vishnu as a mother's baby.",
+   "note": "Song 68 (Kausalya calling the child) has no exact verse; the allusion is general.",
+   "refs": [
+    {
+     "src": "Valmiki Ramayana",
+     "ref": "Bala 18.7–14",
+     "gist": "Births of Rama and his brothers; Rama as Vishnu's portion",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "திரு அவதாரப் படலம் (verse not pinned)",
+     "pinned": false
+    }
+   ],
+   "dp": [
+    {
+     "prabandham": "Perumal Thirumozhi",
+     "ref": "8.1",
+     "first": "mannu pugazhk kausalai",
+     "gist": "Kulasekhara sings as Kausalya at Thirukkannapuram; Rama as her son who scattered Ravana's ten heads.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2023/08/perumal-thirumozhi-8-1/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Perumal Thirumozhi",
+     "ref": "10.1",
+     "first": "angaNedu madhiL pudai sUzh",
+     "gist": "Rama born in Ayodhya in the solar line to relieve the gods' sorrow; no single deed narrated.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2023/09/perumal-thirumozhi-10-1/",
+     "confirmed": true
+    }
+   ],
+   "songs": {
+    "68": {
+     "conf": "l",
+     "note": "Kausalya's call to the child; no exact verse"
+    }
+   }
+  },
+  "ramayana-tataka": {
+   "id": "ramayana-tataka",
+   "domain": "ramayana",
+   "eid": "tataka",
+   "title": "Tataka killed",
+   "brief": "Vishwamitra takes the boy Rama and Lakshmana to guard his yajna. On the way Rama kills the demoness Tataka, receives divine missiles, then protects the sacrifice at Siddhashrama from Maricha and Subahu.",
+   "note": "",
+   "refs": [
+    {
+     "src": "Valmiki Ramayana",
+     "ref": "Bala 26.25",
+     "gist": "Tataka is felled by Rama's arrow",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "தாடகை வதைப் படலம் 45",
+     "quote": "கங்கைத் தீம் புனல் நாடன் கருத்தை, அம் / மங்கைத் தீ அனையாளும் மனக்கொளா, / செங் கைச் சூல வெந் தீயினை, தீய தன் / வெங் கண் தீயொடு மேற்செல வீசினாள்.",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "தாடகை வதைப் படலம் 49",
+     "quote": "சொல் ஒக்கும் கடிய வேகச் சுடு சரம், கரிய செம்மல், / அல் ஒக்கும் நிறத்தினாள் மேல் விடுதலும், வயிரக் குன்றக் / கல் ஒக்கும் நெஞ்சில் தங்காது, அப்புறம் கழன்று, கல்லாப் / புல்ல",
+     "pinned": true
+    }
+   ],
+   "dp": [
+    {
+     "prabandham": "Perumal Thirumozhi",
+     "ref": "10.2",
+     "first": "vandhedhirndha thAdagai than",
+     "gist": "One arrow kills Tataka as she attacks Vishwamitra's sacrifice.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2023/09/perumal-thirumozhi-10-2/",
+     "confirmed": true
+    }
+   ],
+   "songs": {
+    "366": {
+     "conf": "h",
+     "note": ""
+    },
+    "649": {
+     "conf": "h",
+     "note": ""
+    }
+   }
+  },
+  "ramayana-yajna": {
+   "id": "ramayana-yajna",
+   "domain": "ramayana",
+   "eid": "yajna",
+   "title": "Vishwamitra's sacrifice protected",
+   "brief": "Vishwamitra takes the boy Rama and Lakshmana to guard his yajna. On the way Rama kills the demoness Tataka, receives divine missiles, then protects the sacrifice at Siddhashrama from Maricha and Subahu.",
+   "note": "",
+   "refs": [
+    {
+     "src": "Valmiki Ramayana",
+     "ref": "Bala 31 (whole sarga)",
+     "gist": "Rama guards the sacrifice; Subahu killed, Maricha flung away",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "வேள்விப் படலம் 39",
+     "quote": "நஞ்சு அட எழுதலும் நடுங்கி, நாள்மதிச் / செஞ் சடைக் கடவுளை அடையும் தேவர்போல், / வஞ்சனை அரக்கரை வெருவி, மா தவர், / 'அஞ்சனவண்ண! நின் அபயம் யாம்' என்றார்.",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "வேள்விப் படலம் 41",
+     "quote": "திருமகள் நாயகன் தெய்வ வாளிதான், / வெருவரு தாடகை பயந்த வீரர்கள் / இருவரில் ஒருவனைக் கடலில் இட்டது; அங்கு / ஒருவனை அந்தகபுரத்தின் உய்த்ததே.",
+     "pinned": true
+    }
+   ],
+   "dp": [
+    {
+     "prabandham": "Perumal Thirumozhi",
+     "ref": "10.2",
+     "first": "vandhedhirndha thAdagai than",
+     "gist": "Same verse recalls Subahu killed and Maricha fleeing when the sacrifice was protected.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2023/09/perumal-thirumozhi-10-2/",
+     "confirmed": true
+    }
+   ],
+   "songs": {
+    "366": {
+     "conf": "h",
+     "note": ""
+    }
+   }
+  },
+  "ramayana-ahalya": {
+   "id": "ramayana-ahalya",
+   "domain": "ramayana",
+   "eid": "ahalya",
+   "title": "Ahalya freed",
+   "brief": "On the way to Mithila the dust of Rama's feet frees Ahalya, Gautama's wife, who had stood as stone/unseen for years after Indra's deceit. Murugan's hymn picks 'the foot that touched the stone'.",
+   "note": "In Valmiki Rama does not touch the stone with his foot; the 'dust of his feet frees her' image is Kamba (Ahalya padalam 14).",
+   "refs": [
+    {
+     "src": "Valmiki Ramayana",
+     "ref": "Bala 49.16–17",
+     "gist": "Rama and Lakshmana touch Ahalya's feet after the curse ends",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "அகலிகைப் படலம் 14",
+     "quote": "கண்ட கல்மிசைக் காகுத்தன் கழல்-துகள் கதுவ,- / உண்ட பேதைமை மயக்கு அற வேறுபட்டு, உருவம் / கொண்டு, மெய் உணர்பவன் கழல் கூடியது ஒப்ப,- / பண்டை வண்ணமாய் நின்றனள்; மா முனி பணிப்ப",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "அகலிகைப் படலம் 15",
+     "quote": "'மா இரு விசும்பின் கங்கை மண் மிசைக் கொணர்ந்தோன் மைந்த! / மேயின உவகையோடு மின் என ஒதுங்கி நின்றாள், / தீவினை நயந்து செய்த தேவர்கோன் தனக்குச் செங் கண் / ஆயிரம் அளித்தோன் பன்",
+     "pinned": true
+    }
+   ],
+   "dp": [
+    {
+     "prabandham": "Periyazhwar Thirumozhi",
+     "ref": "4.1.3",
+     "first": "kolai yAnai",
+     "gist": "Commentary only: Rama stays on the shore because stones might free cursed women as Ahalya was freed.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2026/07/periyazhwar-thirumozhi-4-1-3/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periyazhwar Thirumozhi",
+     "ref": "4.4.6",
+     "first": "bUdham aindhodu",
+     "gist": "Search snippet says the commentary mentions Ahalya's release by Rama's feet; page not opened.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2026/08/periyazhwar-thirumozhi-4-4-6/",
+     "confirmed": false
+    }
+   ],
+   "songs": {
+    "483": {
+     "conf": "h",
+     "note": ""
+    },
+    "669": {
+     "conf": "h",
+     "note": ""
+    }
+   }
+  },
+  "ramayana-bow": {
+   "id": "ramayana-bow",
+   "domain": "ramayana",
+   "eid": "bow",
+   "title": "Shiva's bow broken",
+   "brief": "At Mithila King Janaka offers Sita to whoever strings Shiva's bow. Rama lifts and breaks it; the weddings follow. Parashurama then challenges Rama and is humbled.",
+   "note": "",
+   "refs": [
+    {
+     "src": "Valmiki Ramayana",
+     "ref": "Bala 67.17",
+     "gist": "The bow is broken at the handgrip; the break described to Janaka",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "கார்முகப் படலம் 33",
+     "quote": "ஆடக மால் வரை அன்னது தன்னை, / 'தேட அரு மா மணி, சீதை எனும் பொன் / சூடக வால் வளை, சூட்டிட நீட்டும் / ஏடு அவிழ் மாலை இது' என்ன, எடுத்தான்.",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "கார்முகப் படலம் 35",
+     "quote": "'ஆரிடைப் புகுதும் நாம்?' என்று, அமரர்கள், கமலத்தோன் தன் / பேருடை அண்ட கோளம் பிளந்தது' என்று ஏங்கி, நைந்தார்; / பாரிடை உற்ற தன்மை பகர்வது என்? பாரைத் தாங்கி, / வேரெனக் கிட",
+     "pinned": true
+    }
+   ],
+   "dp": [
+    {
+     "prabandham": "Perumal Thirumozhi",
+     "ref": "10.3",
+     "first": "sevvari naRkaru nedungaN",
+     "gist": "Rama breaks Shiva's bow to win Sita and humbles Parashurama on the way back.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2023/09/perumal-thirumozhi-10-3/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periyazhwar Thirumozhi",
+     "ref": "3.10.1",
+     "first": "neRindha karum kuzhal madavAy",
+     "gist": "Commentary lists the bow-breaking and Parashurama among the episodes recalled.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2026/06/periyazhwar-thirumozhi-3-10-1/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periyazhwar Thirumozhi",
+     "ref": "3.10.9",
+     "first": "dhikku niRai",
+     "gist": "Rama goes with Vishwamitra to Janaka's sacrifice and breaks the bow.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2026/06/periyazhwar-thirumozhi-3-10-9/",
+     "confirmed": true
+    }
+   ],
+   "songs": {
+    "649": {
+     "conf": "h",
+     "note": ""
+    },
+    "799": {
+     "conf": "h",
+     "note": ""
+    },
+    "968": {
+     "conf": "h",
+     "note": ""
+    }
+   }
+  },
+  "ramayana-exile": {
+   "id": "ramayana-exile",
+   "domain": "ramayana",
+   "eid": "exile",
+   "title": "Exile at the mother's word",
+   "brief": "On the eve of his coronation Kaikeyi claims her two boons and Rama goes to the forest at his father's word with Sita and Lakshmana. Several verses name this as the Lord 'going to the forest at his mother's word'.",
+   "note": "",
+   "refs": [
+    {
+     "src": "Valmiki Ramayana",
+     "ref": "Ayodhya 11 (whole sarga)",
+     "gist": "Kaikeyi's boons",
+     "pinned": true
+    },
+    {
+     "src": "Valmiki Ramayana",
+     "ref": "Ayodhya 40 (whole sarga)",
+     "gist": "Rama leaves Ayodhya",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "கைகேயி சூழ்ச்சிப் படலம் 14",
+     "quote": "தீயவை யாவையினும் சிறந்த தீயாள்.",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "கைகேயி சூழ்ச்சிப் படலம் 111",
+     "quote": "ஏழ்-இரண்டு ஆண்டின் வா\" என்று, இயம்பினன் அரசன்' என்றாள்.",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "கைகேயி சூழ்ச்சிப் படலம் 113",
+     "quote": "அருளுடை ஒருவன் நீக்க, அப்பிணி அவிழ்ந்தது ஒத்தான்.",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "கைகேயி சூழ்ச்சிப் படலம் 114",
+     "quote": "மின்னொளிர் கானம் இன்றே போகின்றேன்; விடையும் கொண்டேன்.'",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "நகர் நீங்கு படலம் 8",
+     "quote": "வீங்கினாள்; விம்மினாள்; விழுந்தாள் அரோ.",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "நகர் நீங்கு படலம் 14",
+     "quote": "மெய்த்திறத்து நம் வேந்தனை, நீ\" என்றான்.",
+     "pinned": true
+    }
+   ],
+   "dp": [
+    {
+     "prabandham": "Perumal Thirumozhi",
+     "ref": "10.4",
+     "first": "thoththalar pUnjuri kuzhal kaikEsi",
+     "gist": "Kaikeyi's demand, crossing the Ganga with Guha, giving the sandals to Bharata at Chitrakuta.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2023/09/perumal-thirumozhi-10-4/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periyazhwar Thirumozhi",
+     "ref": "3.10.3",
+     "first": "kalakkiya mAmanaththanaLAyk kaikEsi varam vENda",
+     "gist": "Kaikeyi's boons, Dasaratha granting them, Rama's forest exile with Lakshmana.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2026/06/periyazhwar-thirumozhi-3-10-3/",
+     "confirmed": true
+    }
+   ],
+   "songs": {
+    "597": {
+     "conf": "m",
+     "note": ""
+    },
+    "968": {
+     "conf": "h",
+     "note": ""
+    },
+    "1265": {
+     "conf": "h",
+     "note": ""
+    }
+   }
+  },
+  "ramayana-kaka": {
+   "id": "ramayana-kaka",
+   "domain": "ramayana",
+   "eid": "kaka",
+   "title": "The crow loses an eye",
+   "brief": "A crow (Indra's son) pecks at Sita; Rama takes a blade of grass, empowers it as a missile and blinds the crow's eye, sparing its life. Sita later tells it to Hanuman as a token of Rama's compassion.",
+   "note": "Kamba does not tell the crow episode in the Chitrakuta padalam (no 'காக' there); it is recalled in Sundara Kandam.",
+   "refs": [
+    {
+     "src": "Valmiki Ramayana",
+     "ref": "Sundara 38.15–36",
+     "gist": "Sita tells Hanuman how a crow clawed her; Rama's grass blade as Brahma weapon; the crow loses its right eye",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "காட்சிப் படலம் 28",
+     "quote": "ஏக வாளி அவ் இந்திரன் காதல் மேல் / போக ஏவி, அது கண் பொடித்த நாள், / காகம் முற்றும் ஓர் கண் இல ஆகிய / வேக வென்றியைத் தன் தலைமேல் கொள்வாள்.",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "சூடாமணிப் படலம் 77",
+     "quote": "'நாகம் ஒன்றிய நல் வரையின்தலை, மேல்நாள், / ஆகம் வந்து, எனை, அள் உகிர் வாளின் அளைந்த / காகம் ஒன்றை முனிந்து, அயல் கல் எழு புல்லால், / வேக வெம் படை விட்டது, மெல்ல விரிப்பாய்",
+     "pinned": true
+    }
+   ],
+   "dp": [
+    {
+     "prabandham": "Periyazhwar Thirumozhi",
+     "ref": "3.10.6",
+     "first": "chiththira kUdaththu iruppa",
+     "gist": "At Chitrakuta the crow Jayanta pecks Sita; Rama's grass blade as Brahma weapon takes one of its eyes (commentary cites Sundara 38).",
+     "url": "https://divyaprabandham.koyil.org/index.php/2026/06/periyazhwar-thirumozhi-3-10-6/",
+     "confirmed": true
+    }
+   ],
+   "songs": {
+    "228": {
+     "conf": "h",
+     "note": ""
+    }
+   }
+  },
+  "ramayana-khara": {
+   "id": "ramayana-khara",
+   "domain": "ramayana",
+   "eid": "khara",
+   "title": "Khara, Dushana and Trishira killed",
+   "brief": "After Surpanakha is mutilated, her brother Khara marches with fourteen thousand rakshasas. Rama alone destroys them and their generals Dushana and Trishira.",
+   "note": "Kamba order: Trishira loses two heads (127), fights on (131), falls (136); Dushana loses his head (161); Khara's right arm (182) and head (185).",
+   "refs": [
+    {
+     "src": "Valmiki Ramayana",
+     "ref": "Aranya 30.26–31",
+     "gist": "Rama's arrow lands in Khara's chest; fourteen thousand rakshasas destroyed",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "கரன் வதைப் படலம் 127",
+     "quote": "ஆழ்ந்த தேர், அம்பரத்து ஓட்டி ஆர்க்கின்றான்.",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "கரன் வதைப் படலம் 131",
+     "quote": "கார் இழிந்தாலென, கணை வழங்கினான்.",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "கரன் வதைப் படலம் 136",
+     "quote": "குருதி நீரிடை, வார் கழல் கொழுங் குடர் தொடக்க.",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "கரன் வதைப் படலம் 158",
+     "quote": "என்ற காலத்து, அவ் வெய்யவன் பகழி மூன்று எய்தான்.",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "கரன் வதைப் படலம் 161",
+     "quote": "ஏவினான்; அவன் எயிறுடை நெடுந் தலை இழந்தான்.",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "கரன் வதைப் படலம் 182",
+     "quote": "வீங்கு தோளோடு பாரிடை வீழ்த்தினான்.",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "கரன் வதைப் படலம் 185",
+     "quote": "கரம் என, கரன் கண்டம் உற்றான் அரோ.",
+     "pinned": true
+    }
+   ],
+   "dp": [
+    {
+     "prabandham": "Perumal Thirumozhi",
+     "ref": "10.5",
+     "first": "vali vaNakku varai nedundhOL",
+     "gist": "Viradha killed, Agastya's bow received, Surpanakha's nose cut, Khara and Dushana destroyed, Maricha shot.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2023/09/perumal-thirumozhi-10-5/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periyazhwar Thirumozhi",
+     "ref": "4.1.3",
+     "first": "kolai yAnai",
+     "gist": "Commentary: Rama destroys the demon army at Janasthana.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2026/07/periyazhwar-thirumozhi-4-1-3/",
+     "confirmed": true
+    }
+   ],
+   "songs": {
+    "961": {
+     "conf": "l",
+     "note": "Khara, Trisira, Kumbhakarna listed together"
+    },
+    "1295": {
+     "conf": "m",
+     "note": ""
+    }
+   }
+  },
+  "ramayana-sita-abduction": {
+   "id": "ramayana-sita-abduction",
+   "domain": "ramayana",
+   "eid": "sita-abduction",
+   "title": "Surpanakha mutilated; Ravana carries Sita off",
+   "brief": "After Lakshmana cuts off Surpanakha's nose and ears, Ravana lures Rama away with the golden deer and carries Sita through the sky.",
+   "note": "Kamba verses not pinned yet.",
+   "refs": [
+    {
+     "src": "Valmiki Ramayana",
+     "ref": "Aranya 18.21",
+     "gist": "Lakshmana cuts off Surpanakha's ears and nose",
+     "pinned": true
+    },
+    {
+     "src": "Valmiki Ramayana",
+     "ref": "Aranya 49.23",
+     "gist": "Ravana carries Sita off through the sky",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "சூர்ப்பணகைப் படலம் (verse not pinned)",
+     "pinned": false
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "இராவணன் சூழ்ச்சிப் படலம் (verse not pinned)",
+     "pinned": false
+    }
+   ],
+   "dp": [],
+   "songs": {
+    "272": {
+     "conf": "m",
+     "note": "Per general-songs-review: Surpanakha, Sita carried off, Ravana's clan uprooted"
+    }
+   }
+  },
+  "ramayana-sita-jewels": {
+   "id": "ramayana-sita-jewels",
+   "domain": "ramayana",
+   "eid": "sita-jewels",
+   "title": "Sita's dropped jewels",
+   "brief": "As Ravana carries her off Sita drops her ornaments and upper cloth among the monkeys; Sugriva later shows them to Rama.",
+   "note": "Kamba not located.",
+   "refs": [
+    {
+     "src": "Valmiki Ramayana",
+     "ref": "Kishkindha 6.11–20",
+     "gist": "Sugriva shows Rama the ornaments and cloth Sita dropped",
+     "pinned": true
+    }
+   ],
+   "dp": [],
+   "songs": {
+    "1325": {
+     "conf": "l",
+     "note": "Per general-songs-review; also Trivikrama"
+    }
+   }
+  },
+  "ramayana-maricha": {
+   "id": "ramayana-maricha",
+   "domain": "ramayana",
+   "eid": "maricha",
+   "title": "Maricha as the golden deer",
+   "brief": "Ravana asks Maricha to lure Rama away; Maricha becomes a golden deer, Sita asks for it, and Rama follows and kills it. Maricha's cry draws Lakshmana off, and Ravana carries Sita away.",
+   "note": "43: Maricha becomes the golden deer; 47: Sita does not see the trick; 77: he falls crying out; 80: Rama realises the cry was Maricha's imitation.",
+   "refs": [
+    {
+     "src": "Valmiki Ramayana",
+     "ref": "Aranya 44.16–23",
+     "gist": "Maricha struck by Rama's arrow, cries in Rama's voice, dies",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "மாரீசன் வதைப் படலம் 43",
+     "quote": "நன் மான் அனையாள்தனை நாடுறுவான்.",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "மாரீசன் வதைப் படலம் 47",
+     "quote": "வீழ் நாள் இல் அறம் புவி மேவுதலால்.",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "மாரீசன் வதைப் படலம் 75",
+     "quote": "உற்ற வேதத்தின் உம்பரின் ஓங்கினான்.",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "மாரீசன் வதைப் படலம் 77",
+     "quote": "விட்டு அழைத்து, ஒரு குன்று என வீழ்ந்தனன்.",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "மாரீசன் வதைப் படலம் 80",
+     "quote": "மழைக் கண் ஏழை' என்று, உள்ளம் வருந்தினான்.",
+     "pinned": true
+    }
+   ],
+   "dp": [
+    {
+     "prabandham": "Perumal Thirumozhi",
+     "ref": "10.5",
+     "first": "vali vaNakku varai nedundhOL",
+     "gist": "Includes the shooting of Maricha in deer form.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2023/09/perumal-thirumozhi-10-5/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periyazhwar Thirumozhi",
+     "ref": "3.10.7",
+     "first": "min oththa",
+     "gist": "Golden deer enters the hermitage, Rama pursues and shoots it, its false cry draws Lakshmana away.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2026/06/periyazhwar-thirumozhi-3-10-7/",
+     "confirmed": true
+    }
+   ],
+   "songs": {
+    "113": {
+     "conf": "h",
+     "note": ""
+    }
+   }
+  },
+  "ramayana-seven-trees": {
+   "id": "ramayana-seven-trees",
+   "domain": "ramayana",
+   "eid": "seven-trees",
+   "title": "Seven sala trees pierced",
+   "brief": "To prove his strength to Sugriva, Rama's single arrow pierces seven sala trees and returns to his quiver.",
+   "note": "",
+   "refs": [
+    {
+     "src": "Valmiki Ramayana",
+     "ref": "Kishkindha 12.3–5",
+     "gist": "One arrow pierces seven sala trees and the earth below",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "மராமரப் படலம் 12",
+     "quote": "ஏய்வு இலாதது ஓர் பயம் வர, சிலையின் நாண் எறிந்தான்.",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "மராமரப் படலம் 15",
+     "quote": "வெய்ய வாளியை, ஆளுடை வில்லியும், விட்டான்.",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "மராமரப் படலம் 16",
+     "quote": "ஏழு கண்டபின், உருவுமால்; ஒழிவது அன்று, இன்னும்.",
+     "pinned": true
+    }
+   ],
+   "dp": [
+    {
+     "prabandham": "Perumal Thirumozhi",
+     "ref": "2.2",
+     "first": "thOdulA malarmangai",
+     "gist": "Commentary: one arrow through seven huge trees to give Sugriva confidence against Vali.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2023/06/perumal-thirumozhi-2-2/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periyazhwar Thirumozhi",
+     "ref": "4.1.3",
+     "first": "kolai yAnai",
+     "gist": "Commentary: arrow through seven ebony trees to remove Sugriva's doubt.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2026/07/periyazhwar-thirumozhi-4-1-3/",
+     "confirmed": true
+    }
+   ],
+   "songs": {
+    "731": {
+     "conf": "m",
+     "note": ""
+    }
+   }
+  },
+  "ramayana-garland": {
+   "id": "ramayana-garland",
+   "domain": "ramayana",
+   "eid": "garland",
+   "title": "Garland to mark Sugriva",
+   "brief": "Sugriva fights his brother Vali, who has driven him out; Rama, hidden by a tree, shoots Vali. Tara, Vali's wife, laments; Sugriva is crowned. The 'garland to mark Sugriva' is the identification used in the second fight.",
+   "note": "Kamba verse 61: Rama tells Sugriva to go wearing a flowering creeper (கொடிப் பூ).",
+   "refs": [
+    {
+     "src": "Valmiki Ramayana",
+     "ref": "Kishkindha 12.39–41",
+     "gist": "Rama has a gaja creeper hung round Sugriva's neck so he can be recognised in the fight",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "வாலி வதைப் படலம் 61",
+     "quote": "மிலைந்து செல்க' என விடுத்தனன்; எதிர்த்தனன் மீட்டும்.",
+     "pinned": true
+    }
+   ],
+   "dp": [],
+   "songs": {
+    "266": {
+     "conf": "m",
+     "note": ""
+    }
+   }
+  },
+  "ramayana-vali": {
+   "id": "ramayana-vali",
+   "domain": "ramayana",
+   "eid": "vali",
+   "title": "Vali killed",
+   "brief": "Sugriva fights his brother Vali, who has driven him out; Rama, hidden by a tree, shoots Vali. Tara, Vali's wife, laments; Sugriva is crowned. The 'garland to mark Sugriva' is the identification used in the second fight.",
+   "note": "",
+   "refs": [
+    {
+     "src": "Valmiki Ramayana",
+     "ref": "Kishkindha 16.32–36",
+     "gist": "Rama draws and releases the arrow; it lands in Vali's chest",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "வாலி வதைப் படலம் 65",
+     "quote": "தொடுத்து, நாணொடு தோள் உறுத்து, இராகவன் துரந்தான்.",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "வாலி வதைப் படலம் 66",
+     "quote": "பாரும், சார் வலி படைத்தவன் உரத்தை அப் பகழி.",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "வாலி வதைப் படலம் 67",
+     "quote": "விலங்கல் மேருவும் வேர் பறிந்தாலென, வீழ்ந்தான்.",
+     "pinned": true
+    }
+   ],
+   "dp": [
+    {
+     "prabandham": "Perumal Thirumozhi",
+     "ref": "10.6",
+     "first": "dhanamaruvu vaidhEhi",
+     "gist": "Rama's grief for Sita, Jatayu, alliance with Sugriva, Vali killed, Hanuman burns Lanka.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2023/09/perumal-thirumozhi-10-6/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periyazhwar Thirumozhi",
+     "ref": "4.9.1",
+     "first": "maravadiyaith thambikku",
+     "gist": "Srirangam decad that retells the story: sandals to Bharata, Dandaka, Sugriva and Vali, bridge, Ravana, Vibhishana, return.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2026/10/periyazhwar-thirumozhi-4-9-1/",
+     "confirmed": true
+    }
+   ],
+   "songs": {
+    "597": {
+     "conf": "m",
+     "note": ""
+    },
+    "731": {
+     "conf": "m",
+     "note": ""
+    },
+    "882": {
+     "conf": "m",
+     "note": ""
+    },
+    "113": {
+     "conf": "h",
+     "note": ""
+    },
+    "266": {
+     "conf": "m",
+     "note": ""
+    },
+    "437": {
+     "conf": "h",
+     "note": ""
+    },
+    "840": {
+     "conf": "h",
+     "note": ""
+    }
+   }
+  },
+  "ramayana-sugriva-crown": {
+   "id": "ramayana-sugriva-crown",
+   "domain": "ramayana",
+   "eid": "sugriva-crown",
+   "title": "Sugriva crowned",
+   "brief": "Hanuman brings Rama and Sugriva together; they swear friendship before fire. Sugriva's armies are gathered and sent to find Sita and then march to Lanka.",
+   "note": "In Kamba Lakshmana places the crown on Sugriva at Rama's order (verse 5).",
+   "refs": [
+    {
+     "src": "Valmiki Ramayana",
+     "ref": "Kishkindha 26 (whole sarga)",
+     "gist": "Sugriva's coronation",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "அரசியற் படலம் 5",
+     "quote": "துறையோர் நூல் முறை மௌலி சூட்டினான்.",
+     "pinned": true
+    }
+   ],
+   "dp": [
+    {
+     "prabandham": "Periyazhwar Thirumozhi",
+     "ref": "4.9.1",
+     "first": "maravadiyaith thambikku",
+     "gist": "Rama befriends Sugriva, kills Vali and restores Sugriva's wife and kingdom.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2026/10/periyazhwar-thirumozhi-4-9-1/",
+     "confirmed": true
+    }
+   ],
+   "songs": {
+    "128": {
+     "conf": "l",
+     "note": "'Younger brother' could be either"
+    }
+   }
+  },
+  "ramayana-army-march": {
+   "id": "ramayana-army-march",
+   "domain": "ramayana",
+   "eid": "army-march",
+   "title": "The vanara army marches to Lanka",
+   "brief": "Hanuman brings Rama and Sugriva together; they swear friendship before fire. Sugriva's armies are gathered and sent to find Sita and then march to Lanka.",
+   "note": "",
+   "refs": [
+    {
+     "src": "Valmiki Ramayana",
+     "ref": "Yuddha 4.62–70",
+     "gist": "The army marches south, eager for Sita's release",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "தானை காண் படலம் (verse not pinned)",
+     "pinned": false
+    }
+   ],
+   "dp": [],
+   "songs": {
+    "1231": {
+     "conf": "m",
+     "note": ""
+    },
+    "941": {
+     "conf": "m",
+     "note": ""
+    }
+   }
+  },
+  "ramayana-lanka-burnt": {
+   "id": "ramayana-lanka-burnt",
+   "domain": "ramayana",
+   "eid": "lanka-burnt",
+   "title": "Hanuman burns Lanka",
+   "brief": "Hanuman leaps the sea, finds Sita, gives her Rama's ring and takes her jewel back. Captured by Indrajit, his tail is set alight and he burns Lanka.",
+   "note": "",
+   "refs": [
+    {
+     "src": "Valmiki Ramayana",
+     "ref": "Sundara 53.3–5",
+     "gist": "Ravana orders the monkey's tail burnt",
+     "pinned": true
+    },
+    {
+     "src": "Valmiki Ramayana",
+     "ref": "Sundara 54.6–47",
+     "gist": "Hanuman leaps from roof to roof and burns the city",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "இலங்கை எரியூட்டு படலம் 1",
+     "quote": "கொடியைப் பற்றி, விதானம் கொளுத்தியே, / நெடிய தூணைத் தழுவி, நெடுஞ் சுவர் / முடியச் சுற்றி, முழுதும் முருக்கிற்றால்- / கடிய மா மனைதோறும் கடுங் கனல்.",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "இலங்கை எரியூட்டு படலம் 6",
+     "quote": "இல்லில் தங்கு வயங்கு எரி யாவையும், / சொல்லின் தீர்ந்தன போல்வன, தொல் உருப் / புல்லிக் கொண்டன-மாயைப் புணர்ப்பு அறக் / கல்லி, தம் இயல்பு எய்தும் கருத்தர்போல்.",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "இலங்கை எரியூட்டு படலம் 32",
+     "quote": "நீரை வற்றிடப் பருகி, மா நெடு நிலம் தடவி, / தாருவைச் சுட்டு, மலைகளைத் தழல்செய்து, தனி மா / மேருவைப் பற்றி எரிகின்ற கால வெங் கனல்போல், / ஊரை முற்றுவித்து, இராவணன் மனை புக்க",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "இலங்கை எரியூட்டு படலம் 37",
+     "quote": "அனைய காலையில் அரக்கனும், அரிவையர் குழுவும், / புனை மணிப் பொலி புட்பக விமானத்துப் போனார்; / நினையும் மாத்திரை யாவரும் நீங்கினர்; நினையும் / வினை இலாமையின், வெந்தது, அவ் வி",
+     "pinned": true
+    }
+   ],
+   "dp": [
+    {
+     "prabandham": "Perumal Thirumozhi",
+     "ref": "10.6",
+     "first": "dhanamaruvu vaidhEhi",
+     "gist": "Hanuman burns Lanka (within the Jatayu, Sugriva, Vali sequence).",
+     "url": "https://divyaprabandham.koyil.org/index.php/2023/09/perumal-thirumozhi-10-6/",
+     "confirmed": true
+    }
+   ],
+   "songs": {
+    "200": {
+     "conf": "l",
+     "note": "Fire in Lanka, then the heads and army"
+    },
+    "373": {
+     "conf": "m",
+     "note": ""
+    },
+    "700": {
+     "conf": "m",
+     "note": ""
+    },
+    "835": {
+     "conf": "m",
+     "note": "Lanka burns; Kumbha killed"
+    },
+    "1231": {
+     "conf": "m",
+     "note": ""
+    },
+    "941": {
+     "conf": "m",
+     "note": ""
+    },
+    "1265": {
+     "conf": "h",
+     "note": ""
+    }
+   }
+  },
+  "ramayana-ocean-arrow": {
+   "id": "ramayana-ocean-arrow",
+   "domain": "ramayana",
+   "eid": "ocean-arrow",
+   "title": "Rama's anger at the ocean",
+   "brief": "When the sea-god does not appear Rama takes his bow against the ocean; frightened, the sea-god advises him how to build the bridge.",
+   "note": "",
+   "refs": [
+    {
+     "src": "Valmiki Ramayana",
+     "ref": "Yuddha 21.17–26",
+     "gist": "Rama threatens to dry the ocean, takes the bow and looses the arrow",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "கடல் சீறிய படலம் 4",
+     "quote": "'ஊற்றம் மீக் கொண்ட வேலையான், \"உண்டு\", \"இலை\", என்னும் / மாற்றம் ஈக்கவும் பெற்றிலம், யாம்' எனும் மனத்தால், / ஏற்றம் மீக்கொண்ட புனலிடை எரி முளைத்தென்னச் / சீற்றம் மீக்கொண்ட ",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "கடல் சீறிய படலம் 12",
+     "quote": "திருதி என்பது ஒன்று அழிதர, ஊழியில் சினவும் / பருதி மண்டிலம் எனப் பொலி முகத்தினன், பல் கால், / 'தருதி, வில்' எனும் அளவையில், தம்பியும் வெம்பிக் / குருதி வெங் கனல் உமிழ்கின",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "கடல் சீறிய படலம் 13",
+     "quote": "வாங்கி வெஞ் சிலை, வாளி பெய் புட்டிலும் மலைபோல் / வீங்கு, தோள்வலம் வீக்கினன்; கோதையை விரலால் / தாங்கி, நாணினைத் தாக்கினன்; தாக்கிய தமரம், / ஓங்கு முக்கணான் தேவியைத் தீர்த்",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "கடல் சீறிய படலம் 16",
+     "quote": "மீனும் நாகமும் விண் தொடும் மலைகளும் விறகா / ஏனை நிற்பன யாவையும் மேல் எரி எய்த, / பேன நீர் நெடு நெய் என, பெய் கணை நெருப்பால் / கூனை அங்கியின் குண்டம் ஒத்தது, கடற் குட்டம்.",
+     "pinned": true
+    }
+   ],
+   "dp": [
+    {
+     "prabandham": "Perumal Thirumozhi",
+     "ref": "10.7",
+     "first": "kurai kadalai adalambAl",
+     "gist": "Rama's arrow stirs the ocean, which then asks that a bridge be built.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2023/09/perumal-thirumozhi-10-7/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periyazhwar Thirumozhi",
+     "ref": "2.6.8",
+     "first": "minnidaich chIdhai",
+     "gist": "Commentary on Rama's bow and arrow, the dam across the ocean, citing Yuddha 21-22.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2026/01/periyazhwar-thirumozhi-2-6-8/",
+     "confirmed": true
+    }
+   ],
+   "songs": {
+    "738": {
+     "conf": "m",
+     "note": ""
+    },
+    "771": {
+     "conf": "m",
+     "note": ""
+    },
+    "820": {
+     "conf": "h",
+     "note": ""
+    },
+    "1091": {
+     "conf": "m",
+     "note": ""
+    },
+    "1125": {
+     "conf": "m",
+     "note": ""
+    },
+    "237": {
+     "conf": "l",
+     "note": "Per general-songs-review"
+    }
+   }
+  },
+  "ramayana-setu": {
+   "id": "ramayana-setu",
+   "domain": "ramayana",
+   "eid": "setu",
+   "title": "The bridge built",
+   "brief": "The monkeys build a causeway across the sea with Nala as architect; the whole army crosses to Lanka.",
+   "note": "",
+   "refs": [
+    {
+     "src": "Valmiki Ramayana",
+     "ref": "Yuddha 22.50–78",
+     "gist": "Nala builds the bridge; five days' progress at 22.66–70; description at 22.72–78",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "சேது பந்தனப் படலம் 8",
+     "quote": "முடுக்கினன், 'தருக' என, மூன்று கோடியர் / எடுக்கினும், அம் மலை ஒரு கை ஏந்தியிட்டு, / அடுக்கினன்; தன் வலி காட்டி, ஆழியை / நடுக்கினன் - நளன் எனும் நவையின் நீங்கினான்.",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "சேது பந்தனப் படலம் 10",
+     "quote": "சயக் கவிப் பெரும் படைத் தலைவர் தாள்களால், / முயல் கறை மதி தவழ் முன்றில் குன்றுகள் / அயக்கலின், முகில் குலம் அலறி ஓடின; / இயக்கரும் மகளிரும் இரியல் போயினார்.",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "சேது பந்தனப் படலம் 46",
+     "quote": "குலை கொளக் குறி நோக்கிய கொள்கையான், / சிலைகள் ஒக்க முறித்துச் செறித்து, நேர் / மலைகள் ஒக்க அடுக்கி, மணற் படத் / தலைகள் ஒக்கத் தடவும், தடக் கையால்.",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "சேது பந்தனப் படலம் 65",
+     "quote": "உற்றதால் அணை ஓங்கல் இலங்கையை, / முற்ற மூன்று பகலிடை; முற்றவும், / பெற்ற ஆர்ப்பு விசும்பு பிளந்ததால்; / மற்று இ(வ்) வானம் பிறிது ஒரு வான் கொலோ?",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "சேது பந்தனப் படலம் 66",
+     "quote": "நாடுகின்றது என், வேறு ஒன்று? - நாயகன் / தோடு சேர் குழலாள் துயர் நீக்குவான், / 'ஓடும், என் முதுகிட்டு' என, ஓங்கிய / சேடன் என்னப் பொலிந்தது, சேதுவே!",
+     "pinned": true
+    }
+   ],
+   "dp": [
+    {
+     "prabandham": "Perumal Thirumozhi",
+     "ref": "10.7",
+     "first": "kurai kadalai adalambAl",
+     "gist": "Rama crosses to Lanka on the bridge, kills Ravana and his army, crowns Vibhishana, returns with Sita.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2023/09/perumal-thirumozhi-10-7/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periyazhwar Thirumozhi",
+     "ref": "3.9.10",
+     "first": "kArAr kadalai",
+     "gist": "Monkeys drop mountains in the dark sea to make the causeway; Rama enters Lanka.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2026/06/periyazhwar-thirumozhi-3-9-10/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periyazhwar Thirumozhi",
+     "ref": "4.1.3",
+     "first": "kolai yAnai",
+     "gist": "Monkeys carry mountains to build the bridge while Rama sits on the shore.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2026/07/periyazhwar-thirumozhi-4-1-3/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periyazhwar Thirumozhi",
+     "ref": "2.6.8",
+     "first": "minnidaich chIdhai",
+     "gist": "The dam across the ocean built of mountains.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2026/01/periyazhwar-thirumozhi-2-6-8/",
+     "confirmed": true
+    }
+   ],
+   "songs": {
+    "19": {
+     "conf": "m",
+     "note": "Bridge, then Lanka's king and clan fall to one arrow"
+    },
+    "29": {
+     "conf": "m",
+     "note": "Bridge; Ravana's many crowns cut by Raghava's arrow"
+    },
+    "166": {
+     "conf": "m",
+     "note": ""
+    },
+    "203": {
+     "conf": "m",
+     "note": ""
+    },
+    "373": {
+     "conf": "m",
+     "note": ""
+    },
+    "700": {
+     "conf": "m",
+     "note": ""
+    },
+    "750": {
+     "conf": "m",
+     "note": ""
+    },
+    "807": {
+     "conf": "m",
+     "note": ""
+    },
+    "839": {
+     "conf": "m",
+     "note": ""
+    },
+    "1218": {
+     "conf": "m",
+     "note": ""
+    },
+    "1316": {
+     "conf": "m",
+     "note": ""
+    },
+    "840": {
+     "conf": "h",
+     "note": ""
+    },
+    "1125": {
+     "conf": "m",
+     "note": ""
+    },
+    "655": {
+     "conf": "h",
+     "note": ""
+    }
+   }
+  },
+  "ramayana-vibhishana-refuge": {
+   "id": "ramayana-vibhishana-refuge",
+   "domain": "ramayana",
+   "eid": "vibhishana-refuge",
+   "title": "Vibhishana takes refuge",
+   "brief": "Ravana's brother Vibhishana, rejected for urging the return of Sita, joins Rama and is given refuge. After Ravana's death Rama installs him king of Lanka.",
+   "note": "In Kamba Rama grants refuge through Sugriva (121) and makes Vibhishana the seventh brother (143); in Valmiki the debate with Sugriva comes first.",
+   "refs": [
+    {
+     "src": "Valmiki Ramayana",
+     "ref": "Yuddha 17.17–26",
+     "gist": "Vibhishana comes to Rama for refuge",
+     "pinned": true
+    },
+    {
+     "src": "Valmiki Ramayana",
+     "ref": "Yuddha 19.4",
+     "gist": "He asks for refuge as Ravana's brother",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "வீடணன் அடைக்கலப் படலம் 12",
+     "quote": "'எத்துணை வகையினும் உறுதி எய்தின, / ஒத்தன, உணர்த்தினேன்; உணரகிற்றிலை; / அத்த! என் பிழை பொறுத்தருள்வாய்' என, / உத்தமன் அந் நகர் ஒழியப் போயினான்.",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "வீடணன் அடைக்கலப் படலம் 13",
+     "quote": "அனலனும், அனிலனும், அரன், சம்பாதியும், / வினையவர் நால்வரும், விரைவின் வந்தனர், - / கனை கழல் காலினர், கருமச் சூழ்ச்சியர், - / இனைவரும் வீடணனோடும் ஏயினார்.",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "வீடணன் அடைக்கலப் படலம் 121",
+     "quote": "தழுவினர் நின்ற காலை, 'தாமரைக்கண்ணன் தங்கள் / முழு முதல் குலத்திற்கு ஏற்ற முறைமையால் உவகை மூள, / வழுவல் இல் அபயம் நின்பால் வழங்கினன்; அவன் பொற் பாதம் / தொழுதியால், விரைவின",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "வீடணன் அடைக்கலப் படலம் 129",
+     "quote": "மார்க்கடம் சூழ்ந்த வைப்பின் இளையவன் மருங்கு காப்ப, / நாற் கடல் உடுத்த பாரின் நாயகன் புதல்வன், நாமப் / பாற் கடல் சுற்ற, விற் கை வட வரை பாங்கு நிற்ப, / கார்க் கடல் கமலம் பூ",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "வீடணன் அடைக்கலப் படலம் 143",
+     "quote": "'குகனொடும் ஐவர் ஆனேம் முன்பு; பின், குன்று சூழ்வான் / மகனொடும், அறுவர் ஆனேம்; எம்முழை அன்பின் வந்த / அகன் அமர் காதல் ஐய! நின்னொடும் எழுவர் ஆனேம்; / புகல் அருங் கானம் தந்த",
+     "pinned": true
+    }
+   ],
+   "dp": [
+    {
+     "prabandham": "Periyazhwar Thirumozhi",
+     "ref": "3.9.10",
+     "first": "kArAr kadalai",
+     "gist": "Vibhishana surrenders and is given Lanka (commentary cites Yuddha 19.42, 19.7, 112.26).",
+     "url": "https://divyaprabandham.koyil.org/index.php/2026/06/periyazhwar-thirumozhi-3-9-10/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periya Thirumozhi",
+     "ref": "7.1.5",
+     "first": "villEr nudhal",
+     "gist": "Commentary cites Yuddha 18.33 (the vow to protect those who surrender) but narrates no episode.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2025/09/periya-thirumozhi-7-1-5/",
+     "confirmed": false
+    }
+   ],
+   "songs": {
+    "623": {
+     "conf": "m",
+     "note": "Kumbhakarna's younger brother (Vibhishana) surrenders"
+    }
+   }
+  },
+  "ramayana-crown-sugriva": {
+   "id": "ramayana-crown-sugriva",
+   "domain": "ramayana",
+   "eid": "crown-sugriva",
+   "title": "Sugriva snatches Ravana's crown",
+   "brief": "",
+   "note": "",
+   "refs": [
+    {
+     "src": "Valmiki Ramayana",
+     "ref": "Yuddha 40.11",
+     "gist": "Sugriva pulls Ravana's crown off and throws it down",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "மகுட பங்கப் படலம் 32",
+     "quote": "என்று அவன் இரங்கும் காலத்து, இருவரும் ஒருவர்தம்மின் / வென்றிலர் தோற்றிலாராய், வெஞ் சமம் விளைக்கும் வேலை, / வன் திறல் அரக்கன் மௌலி மணிகளை வலியால் வாங்கி, / \"பொன்றினென் ஆகி",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "மகுட பங்கப் படலம் 45",
+     "quote": "'பாரகம் சுமந்த பாம்பின் பணாமணி பறிக்க வேண்டின், / வார் கழல் காலினாலே கல்ல வல்லவனை முன்னா, / தார் கெழு மௌலி பத்தின் தனி மணி வலிதின் தந்த / வீரதை விடைவலோற்கும் முடியுமோ? வெ",
+     "pinned": true
+    }
+   ],
+   "dp": [
+    {
+     "prabandham": "Periyazhwar Thirumozhi",
+     "ref": "3.10.7",
+     "first": "min oththa",
+     "gist": "Commentary only cites Sugriva wrestling Ravana and recovering his ten crowns.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2026/06/periyazhwar-thirumozhi-3-10-7/",
+     "confirmed": true
+    }
+   ],
+   "songs": {}
+  },
+  "ramayana-crown-rama": {
+   "id": "ramayana-crown-rama",
+   "domain": "ramayana",
+   "eid": "crown-rama",
+   "title": "Rama shatters Ravana's crown",
+   "brief": "",
+   "note": "Kamba 244-245: Rama's arrow drops Ravana's crown into the sea; 250: Rama tells him 'go today, come tomorrow' (Valmiki 59.141 ff.).",
+   "refs": [
+    {
+     "src": "Valmiki Ramayana",
+     "ref": "Yuddha 59.140–144",
+     "gist": "Rama's crescent arrow shatters Ravana's diadem; Ravana flees to Lanka",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "முதற் போர் புரி படலம் 244",
+     "quote": "மின்னிம் பல் மணி மவுலிமேல் ஒரு கணை விட்டான்; / அன்ன காய் கதிர் இரவிமேல் பாய்ந்த போர் அனுமன் / என்னல் ஆயது ஓர் விசையினின் சென்று, அவன் தலையில் / பொன்னின் மா மணி மகுடத்தைப்",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "முதற் போர் புரி படலம் 245",
+     "quote": "செறிந்த பல் மணிப் பெருவனம் திசை பரந்து எரிய, / பொறிந்தவாய், வயக் கடுஞ் சுடர்க் கணை படும் பொழுதின், / எறிந்த கால் பொர, மேருவின் கொடு முடி இடிந்து, / மறிந்து வீழ்ந்ததும் ஒத",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "முதற் போர் புரி படலம் 247",
+     "quote": "சொல்லும் அத்தனை அளவையில் மணி முடி துறந்தான்; / எல் இமைத்து எழு மதியமும் ஞாயிறும் இழந்த / அல்லும் ஒத்தனன்; பகலும் ஒத்தனன்; அமர் பொருமேல், / வெல்லும் அத்தனை அல்லது, தோற்றில",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "முதற் போர் புரி படலம் 250",
+     "quote": "நின்றவன் நிலை நோக்கிய நெடுந்தகை, இவனைக் / கொன்றல் உன்னிலன், 'வெறுங் கை நின்றான்' எனக் கொள்ளா; / 'இன்று அவிந்தது போலும், உன் தீமை' என்று, இசையோடு / ஒன்ற வந்தன வாசகம் இனையன",
+     "pinned": true
+    }
+   ],
+   "dp": [],
+   "songs": {}
+  },
+  "ramayana-kumbhakarna": {
+   "id": "ramayana-kumbhakarna",
+   "domain": "ramayana",
+   "eid": "kumbhakarna",
+   "title": "Kumbhakarna killed",
+   "brief": "",
+   "note": "",
+   "refs": [
+    {
+     "src": "Valmiki Ramayana",
+     "ref": "Yuddha 67.165–172",
+     "gist": "Rama cuts off his head; the body falls on Lanka's wall",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "கும்பகருணன் வதைப் படலம் 337",
+     "quote": "அலக்கணுற்றது தீ வினை; நல்வினை ஆர்த்து எழுந்தது; வேர்த்துக் / கலக்கமுற்றனர், இராக்கதர்-'கால வெங் கருங் கடல் திரை போலும் / வலக் கை அற்றது, வாளொடும்; கோளுடை வான மா மதி போலும",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "கும்பகருணன் வதைப் படலம் 344",
+     "quote": "பழக்க நாள் வரும் மேருவை உள்ளுறத் தொளைத்து, ஒரு பணை ஆக்கி, / வழக்கினால் உலகு அளந்தவன் அமைத்தது ஓர் வான் குணில் வலத்து ஏந்தி, / முழக்கினாலென, முழங்கு பேர் ஆர்ப்பினான், வானர",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "கும்பகருணன் வதைப் படலம் 357",
+     "quote": "'\"மூக்கு இலா முகம்\" என்று முனிவர்களும் அமரர்களும் / நோக்குவார் நோக்காமை, நுன் கணையால் என் கழுத்தை / நீக்குவாய்; நீக்கியபின், நெடுந் தலையைக் கருங் கடலுள் / போக்குவாய்; இது",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "கும்பகருணன் வதைப் படலம் 359",
+     "quote": "மாக் கூடு படர் வேலை மறி மகரத் திரை வாங்கி, / மேக்கூடு, கிழக்கூடு, மிக்கு இரண்டு திக்கூடு, / போக்கூடு கவித்து, இரு கண் செவியூடும் புகை உயிர்க்கும் / மூக்கூடும் புகப் புக்க",
+     "pinned": true
+    }
+   ],
+   "dp": [
+    {
+     "prabandham": "Thirumalai",
+     "ref": "6",
+     "first": "",
+     "gist": "Search result says Kumbhakarna appears in passing as an adviser to Ravana; no killing described; page not opened.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2016/08/thirumalai-6/",
+     "confirmed": false
+    }
+   ],
+   "songs": {
+    "961": {
+     "conf": "l",
+     "note": "Khara, Trisira, Kumbhakarna listed together"
+    }
+   }
+  },
+  "ramayana-kumbha": {
+   "id": "ramayana-kumbha",
+   "domain": "ramayana",
+   "eid": "kumbha",
+   "title": "Kumbha killed by Sugriva",
+   "brief": "",
+   "note": "Kamba tells Kumbha's death inside the Atikayan padalam.",
+   "refs": [
+    {
+     "src": "Valmiki Ramayana",
+     "ref": "Yuddha 76.92–93",
+     "gist": "Sugriva's blow fells Kumbha",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "அதிகாயன் வதைப் படலம் 236",
+     "quote": "குரங்கினுக்கு அரசும், வென்றிக் கும்பனும், குறித்த வெம் போர் / அரங்கினுக்கு அழகு செய்ய, ஆயிரம் சாரி போந்தார், / மரம் கொடும், தண்டு கொண்டும், மலை என மலையாநின்றார்; / சிரங்க",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "அதிகாயன் வதைப் படலம் 245",
+     "quote": "நிலையில் சுடரோன் மகன் வன் கை நெருங்க, / கலையில் படு கம்மியர் கூடம் அலைப்ப / உலையில் படு இரும்பு என வன்மை ஒடுங்க, / மலையின் பிளவுற்றது, தீயவன் மார்பம்.",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "அதிகாயன் வதைப் படலம் 246",
+     "quote": "'செய்வாய் இகல்?' என்று அவன் நின்று சிரித்தான்; / ஐ வாய் அரவம் முழை புக்கென, ஐயன் / கை வாய் வழி சென்று, அவன் ஆர் உயிர் கக்க, / பை வாய் நெடு நாவை முனிந்து பறித்தான்.",
+     "pinned": true
+    }
+   ],
+   "dp": [],
+   "songs": {
+    "835": {
+     "conf": "m",
+     "note": "Lanka burns; Kumbha killed"
+    }
+   }
+  },
+  "ramayana-atikaya": {
+   "id": "ramayana-atikaya",
+   "domain": "ramayana",
+   "eid": "atikaya",
+   "title": "Atikaya killed",
+   "brief": "",
+   "note": "Kamba: Lakshmana uses the Brahma weapon on Atikaya (204-205), as Vayu advises; in Valmiki also the Brahma missile.",
+   "refs": [
+    {
+     "src": "Valmiki Ramayana",
+     "ref": "Yuddha 71.111",
+     "gist": "Lakshmana cuts off his head",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "அதிகாயன் வதைப் படலம் 190",
+     "quote": "அன்னது கேட்ட மைந்தன், அரும்பு இயல் முறுவல் தோன்ற, / 'சொன்னவர் வாரார்; யானே தோற்கினும், தோற்கத் தக்கேன்; / என்னை நீ பொருது வெல்லின், அவரையும் வென்றி' என்னா, / மின்னினும் ம",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "அதிகாயன் வதைப் படலம் 204",
+     "quote": "கோல் முகந்து, அள்ளி அள்ளி, கொடுஞ் சிலை நாணில் கோத்து, / கால்முகம் குழைய வாங்கி, சொரிகின்ற காளை வீரன்- / பால் முகம் தோன்ற நின்று, காற்றினுக்கு அரசன், 'பண்டை / நான்முகன் பட",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "அதிகாயன் வதைப் படலம் 205",
+     "quote": "'நன்று' என உவந்த, வீரன், நான்முகன் படையை வாங்கி / மின் தனி திரண்டது என்னச் சரத்தொடும் கூட்டி விட்டான் / குன்றினும் உயர்ந்த தோளான் தலையினைக் கொண்டு, அவ் வாளி / சென்றது, வி",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "அதிகாயன் வதைப் படலம் 206",
+     "quote": "பூ மழை பொழிந்து, வானோர், 'போயது, எம் பொருமல்' என்றார்; / தாம் அழைத்து அலறி, எங்கும் இரிந்தனர், அரக்கர் தள்ளி; / தீமையும் தகைப்பும் நீங்கித் தெளிந்தது, குரக்குச் சேனை; / க",
+     "pinned": true
+    }
+   ],
+   "dp": [],
+   "songs": {}
+  },
+  "ramayana-indrajit": {
+   "id": "ramayana-indrajit",
+   "domain": "ramayana",
+   "eid": "indrajit",
+   "title": "Indrajit killed",
+   "brief": "",
+   "note": "",
+   "refs": [
+    {
+     "src": "Valmiki Ramayana",
+     "ref": "Yuddha 90 (whole sarga)",
+     "gist": "Lakshmana kills Indrajit",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "இந்திரசித்து வதைப் படலம் 51",
+     "quote": "'மறைகளே தேறத் தக்க, வேதியர் வணங்கற்பால, / இறையவன் இராமன் என்னும் நல் அற மூர்த்திஎன்னின், / பிறை எயிற்று இவனைக் கோறி' என்று, ஒரு பிறை வாய் வாளி / நிறை உற வாங்கி விட்டான் -",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "இந்திரசித்து வதைப் படலம் 53",
+     "quote": "அற்றவன் தலைமீது ஓங்கி, அண்டம் உற்று அணுகாமுன்னம், / பற்றிய குலத்தோடும், உடல் நிறை பகழியோடும், / எற்றிய காலக் காற்றால், மின்னொடும் இடியினோடும் / சுற்றிய புயல் வீழ்ந்தென்ன,",
+     "pinned": true
+    }
+   ],
+   "dp": [],
+   "songs": {}
+  },
+  "ramayana-army-destroyed": {
+   "id": "ramayana-army-destroyed",
+   "domain": "ramayana",
+   "eid": "army-destroyed",
+   "title": "Ravana's army destroyed",
+   "brief": "",
+   "note": "General battle; no single verse.",
+   "refs": [
+    {
+     "src": "Valmiki Ramayana",
+     "ref": "Yuddha 93.7–34",
+     "gist": "Rama destroys the rakshasa troops",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "படைத் தலைவர் வதைப் படலம் (verse not pinned)",
+     "pinned": false
+    }
+   ],
+   "dp": [
+    {
+     "prabandham": "Perumal Thirumozhi",
+     "ref": "10.7",
+     "first": "kurai kadalai adalambAl",
+     "gist": "Rama kills Ravana and his demon army.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2023/09/perumal-thirumozhi-10-7/",
+     "confirmed": true
+    }
+   ],
+   "songs": {
+    "27": {
+     "conf": "l",
+     "note": "Night-roamers' heads shattered; no single scene"
+    },
+    "66": {
+     "conf": "l",
+     "note": ""
+    },
+    "200": {
+     "conf": "l",
+     "note": "Fire in Lanka, then the heads and army"
+    },
+    "230": {
+     "conf": "l",
+     "note": ""
+    },
+    "373": {
+     "conf": "m",
+     "note": ""
+    },
+    "524": {
+     "conf": "m",
+     "note": "Hanuman's army besieges Lanka's wall; ten crowns fall"
+    },
+    "623": {
+     "conf": "m",
+     "note": "Kumbhakarna's younger brother (Vibhishana) surrenders"
+    },
+    "707": {
+     "conf": "l",
+     "note": ""
+    },
+    "750": {
+     "conf": "m",
+     "note": ""
+    },
+    "788": {
+     "conf": "m",
+     "note": ""
+    },
+    "806": {
+     "conf": "l",
+     "note": ""
+    },
+    "807": {
+     "conf": "m",
+     "note": ""
+    },
+    "839": {
+     "conf": "m",
+     "note": ""
+    },
+    "845": {
+     "conf": "m",
+     "note": ""
+    },
+    "876": {
+     "conf": "l",
+     "note": ""
+    },
+    "882": {
+     "conf": "m",
+     "note": ""
+    },
+    "893": {
+     "conf": "l",
+     "note": ""
+    },
+    "9": {
+     "conf": "l",
+     "note": "Per general-songs-review"
+    },
+    "95": {
+     "conf": "l",
+     "note": "Per general-songs-review"
+    }
+   }
+  },
+  "ramayana-heads-cut": {
+   "id": "ramayana-heads-cut",
+   "domain": "ramayana",
+   "eid": "heads-cut",
+   "title": "Ravana's heads cut off and regrow",
+   "brief": "",
+   "note": "",
+   "refs": [
+    {
+     "src": "Valmiki Ramayana",
+     "ref": "Yuddha 107.54–58",
+     "gist": "Rama cuts Ravana's head; it regrows; a hundred are cut",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "இராவணன் வதைப் படலம் 148",
+     "quote": "வேதியர் வேதத்து மெய்யன, வெய்யவற்கு / ஆதியன் அணுகிய அற்றம் நோக்கினான், / சாதியின் நிமிர்ந்தது ஓர் தலையைத் தள்ளினான், / பாதியின் மதி முகப் பகழி ஒன்றினால்.",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "இராவணன் வதைப் படலம் 149",
+     "quote": "மேருவின் கொடுமுடி, வீசு கால் எறி / போரிடை, ஒடிந்து போய், புணரி புக்கென / ஆரியன் சரம் பட அரக்கன் வன் தலை / நீரிடை விழுந்தது, நெருப்பொடு அன்று போய்.",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "இராவணன் வதைப் படலம் 151",
+     "quote": "இறந்தது ஓர் உயிருடன் தருமத்து ஈட்டினால் / பிறந்துளதாம் எனப் பெயர்த்தும், அத் தலை / மறந்திலது எழுந்தது, மடித்த வாயது;- / சிறந்தது தவம் அலால், செயல் உண்டாகுமோ!",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "இராவணன் வதைப் படலம் 154",
+     "quote": "'விழுத்தினன் சிரம்' எனும் வெகுளி மீக்கொள, / வழுத்தின, உயிர்களின் முதலின் வைத்த ஓர் / எழுத்தினன், தோள்களின் ஏழொடு ஏழு கோல் / அழுத்தினன்-அசனி ஏறு அயிர்க்கும் ஆர்ப்பினான்.",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "இராவணன் வதைப் படலம் 161",
+     "quote": "ஓய்வு அகன்றது, ஒரு தலை நூறு உற, / போய் அகன்று புரள, பொரு கணை / ஆயிரம் தொடுத்தான்-அறிவின் தனி / நாயகன் கைக் கடுமை நடத்தியே.",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "இராவணன் வதைப் படலம் 162",
+     "quote": "நீர்த் தரங்கங்கள்தோறும், நிலம்தொறும், / சீர்த்த மால் வரைதோறும், திசைதொறும், / பார்த்த பார்த்த இடம்தொறும், பல் தலை / ஆர்த்து வீழ்ந்த-அசனிகள் வீழ்ந்தென.",
+     "pinned": true
+    }
+   ],
+   "dp": [
+    {
+     "prabandham": "Periyazhwar Thirumozhi",
+     "ref": "2.6.8",
+     "first": "minnidaich chIdhai",
+     "gist": "Ravana's ten heads, which regrow by his boon, are cut together.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2026/01/periyazhwar-thirumozhi-2-6-8/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periyazhwar Thirumozhi",
+     "ref": "3.9.10",
+     "first": "kArAr kadalai",
+     "gist": "Ravana's ten heads, regrowing, severed with the Brahma weapon.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2026/06/periyazhwar-thirumozhi-3-9-10/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Perumal Thirumozhi",
+     "ref": "8.1",
+     "first": "mannu pugazhk kausalai",
+     "gist": "Rama scattered the ten heads of the lord of Lanka with arrows.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2023/08/perumal-thirumozhi-8-1/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periya Thirumozhi",
+     "ref": "5.1.4",
+     "first": "veRpAl mAri",
+     "gist": "Rama severs Ravana's twenty strong shoulders with his bow (Pullambuthangudi decad).",
+     "url": "https://divyaprabandham.koyil.org/index.php/2023/07/periya-thirumozhi-5-1-4/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tiruppavai",
+     "ref": "12",
+     "first": "kanaiththiLam kaRRerumai",
+     "gist": "Gopis call Rama who killed Ravana, lord of southern Lanka, in anger at the harm to Hanuman.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2014/12/thiruppavai-12-kanaiththilam-karrerumai/",
+     "confirmed": true
+    }
+   ],
+   "songs": {
+    "29": {
+     "conf": "m",
+     "note": "Bridge; Ravana's many crowns cut by Raghava's arrow"
+    },
+    "44": {
+     "conf": "m",
+     "note": ""
+    },
+    "66": {
+     "conf": "l",
+     "note": ""
+    },
+    "89": {
+     "conf": "l",
+     "note": "Heads fall like balls"
+    },
+    "115": {
+     "conf": "l",
+     "note": ""
+    },
+    "166": {
+     "conf": "m",
+     "note": ""
+    },
+    "200": {
+     "conf": "l",
+     "note": "Fire in Lanka, then the heads and army"
+    },
+    "203": {
+     "conf": "m",
+     "note": ""
+    },
+    "230": {
+     "conf": "l",
+     "note": ""
+    },
+    "236": {
+     "conf": "m",
+     "note": "Ten heads and twenty arms felled by one arrow"
+    },
+    "248": {
+     "conf": "m",
+     "note": ""
+    },
+    "252": {
+     "conf": "m",
+     "note": ""
+    },
+    "293": {
+     "conf": "m",
+     "note": ""
+    },
+    "365": {
+     "conf": "m",
+     "note": ""
+    },
+    "381": {
+     "conf": "m",
+     "note": "Ten crowns shot off"
+    },
+    "435": {
+     "conf": "m",
+     "note": ""
+    },
+    "466": {
+     "conf": "m",
+     "note": ""
+    },
+    "481": {
+     "conf": "m",
+     "note": ""
+    },
+    "489": {
+     "conf": "m",
+     "note": ""
+    },
+    "512": {
+     "conf": "m",
+     "note": ""
+    },
+    "524": {
+     "conf": "m",
+     "note": "Hanuman's army besieges Lanka's wall; ten crowns fall"
+    },
+    "540": {
+     "conf": "m",
+     "note": ""
+    },
+    "633": {
+     "conf": "m",
+     "note": ""
+    },
+    "644": {
+     "conf": "l",
+     "note": ""
+    },
+    "684": {
+     "conf": "m",
+     "note": ""
+    },
+    "731": {
+     "conf": "m",
+     "note": ""
+    },
+    "737": {
+     "conf": "m",
+     "note": ""
+    },
+    "745": {
+     "conf": "m",
+     "note": ""
+    },
+    "826": {
+     "conf": "m",
+     "note": ""
+    },
+    "833": {
+     "conf": "m",
+     "note": ""
+    },
+    "838": {
+     "conf": "m",
+     "note": ""
+    },
+    "841": {
+     "conf": "m",
+     "note": ""
+    },
+    "845": {
+     "conf": "m",
+     "note": ""
+    },
+    "874": {
+     "conf": "m",
+     "note": ""
+    },
+    "887": {
+     "conf": "m",
+     "note": ""
+    },
+    "895": {
+     "conf": "m",
+     "note": ""
+    },
+    "977": {
+     "conf": "m",
+     "note": ""
+    },
+    "1007": {
+     "conf": "m",
+     "note": ""
+    },
+    "1008": {
+     "conf": "m",
+     "note": ""
+    },
+    "1012": {
+     "conf": "m",
+     "note": ""
+    },
+    "1132": {
+     "conf": "m",
+     "note": ""
+    },
+    "1144": {
+     "conf": "m",
+     "note": ""
+    },
+    "1153": {
+     "conf": "m",
+     "note": ""
+    },
+    "1162": {
+     "conf": "l",
+     "note": "Ravana split in two by an arrow"
+    },
+    "1197": {
+     "conf": "m",
+     "note": ""
+    },
+    "1218": {
+     "conf": "m",
+     "note": ""
+    },
+    "1231": {
+     "conf": "m",
+     "note": ""
+    },
+    "1245": {
+     "conf": "m",
+     "note": ""
+    },
+    "1316": {
+     "conf": "m",
+     "note": ""
+    },
+    "272": {
+     "conf": "m",
+     "note": "Per general-songs-review: Surpanakha, Sita carried off, Ravana's clan uprooted"
+    }
+   }
+  },
+  "ramayana-ravana-death": {
+   "id": "ramayana-ravana-death",
+   "domain": "ramayana",
+   "eid": "ravana-death",
+   "title": "Ravana killed by the Brahma weapon",
+   "brief": "",
+   "note": "",
+   "refs": [
+    {
+     "src": "Valmiki Ramayana",
+     "ref": "Yuddha 108.15–22",
+     "gist": "Rama looses the Brahma weapon; it tears Ravana's heart; he falls from his chariot",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "இராவணன் வதைப் படலம் 194",
+     "quote": "காலும் வெங் கனலும் கடை காண்கிலா, / மாலும் கொண்ட வடிக் கணை, மா முகம் / நாலும் கொண்டு நடந்தது, நான்முகன் / மூல மந்திரம் தன்னொடு மூட்டலால்.",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "இராவணன் வதைப் படலம் 195",
+     "quote": "ஆழி மால் வரைக்கு அப்புறத்து அப்புறம், / பாழி மாக் கடலும் வெளிப் பாய்ந்ததால்- / ஊழி ஞாயிறு மின்மினி ஒப்புற, / வாழி வெஞ் சுடர் பேர் இருள் வாரவே.",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "இராவணன் வதைப் படலம் 196",
+     "quote": "அக் கணத்தின் அயன் படை ஆண்தகை / சக்கரப் படையோடும் தழீஇச் சென்று, / புக்கது, அக் கொடியோன் உரம்; பூமியும், / திக்கு அனைத்தும், விசும்பும்; திரிந்தவே.",
+     "pinned": true
+    }
+   ],
+   "dp": [
+    {
+     "prabandham": "Periyazhwar Thirumozhi",
+     "ref": "4.8.5",
+     "first": "peruvarangaL avai paRRip pizhakkudaiya irAvaNanai",
+     "gist": "Srirangam verse: Rama disarms Ravana, sends him back, then destroys him with the Brahma weapon.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2026/09/periyazhwar-thirumozhi-4-8-5/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Perumal Thirumozhi",
+     "ref": "10.7",
+     "first": "kurai kadalai adalambAl",
+     "gist": "Rama annihilates Ravana after the bridge.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2023/09/perumal-thirumozhi-10-7/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tiruppavai",
+     "ref": "24",
+     "first": "anRu ivvulagam aLandhAi",
+     "gist": "Praise of the one who went to southern Lanka and destroyed it; commentary adds Ravana disarmed and killed.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2015/01/thiruppavai-24-anru-ivvulagam/",
+     "confirmed": true
+    }
+   ],
+   "songs": {
+    "19": {
+     "conf": "m",
+     "note": "Bridge, then Lanka's king and clan fall to one arrow"
+    },
+    "73": {
+     "conf": "l",
+     "note": ""
+    },
+    "227": {
+     "conf": "m",
+     "note": "The Ravana who lifted the mountain falls to one arrow"
+    },
+    "236": {
+     "conf": "m",
+     "note": "Ten heads and twenty arms felled by one arrow"
+    },
+    "597": {
+     "conf": "m",
+     "note": ""
+    },
+    "703": {
+     "conf": "m",
+     "note": ""
+    },
+    "707": {
+     "conf": "l",
+     "note": ""
+    },
+    "959": {
+     "conf": "m",
+     "note": ""
+    },
+    "1162": {
+     "conf": "l",
+     "note": "Ravana split in two by an arrow"
+    }
+   }
+  },
+  "ramayana-sita-freed": {
+   "id": "ramayana-sita-freed",
+   "domain": "ramayana",
+   "eid": "sita-freed",
+   "title": "Sita brought to Rama",
+   "brief": "After the victory Hanuman tells Sita and Vibhishana brings her to Rama. The Thiruppugazh lines treat the war as freeing Sita from prison.",
+   "note": "",
+   "refs": [
+    {
+     "src": "Valmiki Ramayana",
+     "ref": "Yuddha 113",
+     "gist": "Hanuman tells Sita of the victory",
+     "pinned": true
+    },
+    {
+     "src": "Valmiki Ramayana",
+     "ref": "Yuddha 114",
+     "gist": "Vibhishana brings Sita",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "பிராட்டி திருவடி தொழுத படலம் 25",
+     "quote": "என்னும் காலை, இருளும் வெயிலும் கால் / மின்னும் மோலி இயற்கைய வீடணன், / 'உன்னும் காலைக் கொணர்வென்' என்று ஓத, அப் / பொன்னின் கால் தளிர் சூடினன், போந்துளான்.",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "பிராட்டி திருவடி தொழுத படலம் 34",
+     "quote": "மண்டல மதியின் நாப்பண் மான் இருந்தென்ன, மானம் / கொண்டனர் ஏற்றி, வான மடந்தையர் தொடர்ந்து கூட, / உண்டை வானரரும் ஒள் வாள் அரக்கரும் புறம் சூழ்ந்து ஓட, / அண்டர் நாயகன்பால், அண",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "பிராட்டி திருவடி தொழுத படலம் 44",
+     "quote": "'எச்சில், என் உடல்; உயிர் ஏகிற்றே; இனி / நச்சு இலை' என்பது ஓர் நவை இலாள் எதிர், / பச்சிலை வண்ணமும் பவள வாயும் ஆய்க் / கைச் சிலை ஏந்தி நின்றானைக் கண்ணுற்றாள்.",
+     "pinned": true
+    }
+   ],
+   "dp": [
+    {
+     "prabandham": "Perumal Thirumozhi",
+     "ref": "10.7",
+     "first": "kurai kadalai adalambAl",
+     "gist": "Rama returns with Sita after the bridge, Ravana and the coronation of Vibhishana.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2023/09/perumal-thirumozhi-10-7/",
+     "confirmed": true
+    }
+   ],
+   "songs": {
+    "166": {
+     "conf": "m",
+     "note": ""
+    },
+    "252": {
+     "conf": "m",
+     "note": ""
+    },
+    "435": {
+     "conf": "m",
+     "note": ""
+    },
+    "703": {
+     "conf": "m",
+     "note": ""
+    },
+    "788": {
+     "conf": "m",
+     "note": ""
+    },
+    "833": {
+     "conf": "m",
+     "note": ""
+    }
+   }
+  },
+  "ramayana-sita-agni": {
+   "id": "ramayana-sita-agni",
+   "domain": "ramayana",
+   "eid": "sita-agni",
+   "title": "Sita's fire ordeal",
+   "brief": "Rama asks Sita to prove her purity; she enters the fire, and Agni returns her unharmed.",
+   "note": "",
+   "refs": [
+    {
+     "src": "Valmiki Ramayana",
+     "ref": "Yuddha 118.5",
+     "gist": "Agni returns Sita unharmed",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "பிராட்டி திருவடி தொழுத படலம் 66",
+     "quote": "ஏங்கிய பொருமலின் இழி கண்ணீரினன், / வாங்கிய உயிரினன் அனைய மைந்தனும், / ஆங்கு எரி விதி முறை அமைவித்தான்; அதன் / பாங்குற நடந்தனள், பதுமப் போதினாள்.",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "பிராட்டி திருவடி தொழுத படலம் 71",
+     "quote": "கனத்தினால் கடந்த பூண் முலைய கைவளை, / 'மனத்தினால், வாக்கினால், மறு உற்றேன் எனின், / சினத்தினால் சுடுதியால், தீச் செல்வா!' என்றாள்; / புனத் துழாய்க் கணவற்கும் வணக்கம் போக்க",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "பிராட்டி திருவடி தொழுத படலம் 73",
+     "quote": "அழுந்தின நங்கையை அங்கையால் சுமந்து / எழுந்தனன்-அங்கி, வெந்து எரியும் மேனியான், / தொழும் கரத் துணையினன், சுருதி ஞானத்தின் / கொழுந்தினைப் பூசலிட்டு அரற்றும் கொள்கையான்.",
+     "pinned": true
+    }
+   ],
+   "dp": [],
+   "songs": {
+    "161": {
+     "conf": "h",
+     "note": ""
+    }
+   }
+  },
+  "ramayana-vibhishana-crown": {
+   "id": "ramayana-vibhishana-crown",
+   "domain": "ramayana",
+   "eid": "vibhishana-crown",
+   "title": "Vibhishana crowned",
+   "brief": "Ravana's brother Vibhishana, rejected for urging the return of Sita, joins Rama and is given refuge. After Ravana's death Rama installs him king of Lanka.",
+   "note": "Kamba has two scenes: Rama orders the crown at the refuge scene (141-142) and Lakshmana crowns him after Ravana's death (Mudi suttu 6).",
+   "refs": [
+    {
+     "src": "Valmiki Ramayana",
+     "ref": "Yuddha 112.16",
+     "gist": "Vibhishana is consecrated king of Lanka",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "வீடணன் அடைக்கலப் படலம் 141",
+     "quote": "'உய்ஞ்சனென் அடியனேன்' என்று ஊழ்முறை வணங்கி நின்ற / அஞ்சன மேனியானை அழகனும் அருளின் நோக்கி, / 'தஞ்ச நல் துணைவன் ஆன தவறு இலாப் புகழான் தன்னை, / துஞ்சல் இல் நயனத்து ஐய! சூட்ட",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "வீடணன் அடைக்கலப் படலம் 142",
+     "quote": "விளைவினை அறியும் மேன்மை வீடணன், 'என்றும் வீயா / அளவு அறு பெருமைச் செல்வம் அளித்தனை ஆயின், ஐய! / களவு இயல் அரக்கன் பின்னே தோன்றிய கடமை தீர, / இளையவற் கவித்த மோலி என்னையும்",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "வீடணன் முடி சூட்டு படலம் 6",
+     "quote": "மெய் கொள் வேத விதி முறை விண்ணுளோர் / தெய்வ நீள் புனல் ஆடல் திருத்திட, / ஐயன் ஆணையினால், இளங் கோளரி / கையினால் மகுடம் கவித்தான் அரோ.",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "வீடணன் முடி சூட்டு படலம் 7",
+     "quote": "கரிய குன்று கதிரினைச் சூடி ஓர் / எரி மணித் தவிசில் பொலிந்தென்னவே, / விரியும் வெற்றி இலங்கையர் வேந்தன் நீடு / அரியணைப் பொலிந்தான், தமர் ஆர்த்து எழ.",
+     "pinned": true
+    }
+   ],
+   "dp": [
+    {
+     "prabandham": "Periyazhwar Thirumozhi",
+     "ref": "4.1.1",
+     "first": "kadhir Ayiram",
+     "gist": "Commentary: after killing Ravana Rama crowned Vibhishana, then returned to Ayodhya with Sita and was crowned.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2026/07/periyazhwar-thirumozhi-4-1-1/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periyazhwar Thirumozhi",
+     "ref": "4.9.1",
+     "first": "maravadiyaith thambikku",
+     "gist": "Rama crowns Vibhishana king of Lanka (within the full retelling).",
+     "url": "https://divyaprabandham.koyil.org/index.php/2026/10/periyazhwar-thirumozhi-4-9-1/",
+     "confirmed": true
+    }
+   ],
+   "songs": {
+    "841": {
+     "conf": "m",
+     "note": ""
+    },
+    "840": {
+     "conf": "h",
+     "note": ""
+    },
+    "423": {
+     "conf": "m",
+     "note": ""
+    },
+    "128": {
+     "conf": "l",
+     "note": "'Younger brother' could be either"
+    },
+    "161": {
+     "conf": "h",
+     "note": ""
+    }
+   }
+  },
+  "ramayana-return": {
+   "id": "ramayana-return",
+   "domain": "ramayana",
+   "eid": "return",
+   "title": "Return to Ayodhya and coronation",
+   "brief": "Rama, Sita and Lakshmana return by the Pushpaka chariot; Rama is crowned king.",
+   "note": "",
+   "refs": [
+    {
+     "src": "Valmiki Ramayana",
+     "ref": "Yuddha 128",
+     "gist": "Rama's coronation",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "மீட்சிப் படலம் 4",
+     "quote": "'அனைய புட்பக விமானம் வந்து அவனியை அணுக, / இனிய சிந்தனை இராகவன் உவகையோடு, 'இனி நம் / வினையம் முற்றியது' என்று கொண்டு ஏறினன்; விண்ணோர் / புனை மலர் சொரிந்து ஆர்த்தனர், ஆசிகள",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "திருமுடி சூட்டு படலம் 11",
+     "quote": "இந்திர குருவும் அன்னார் எனையவர் என்ன நின்ற / மந்திர விதியினாரும், வசிட்டனும், வரைந்து விட்டார்- / சந்திர கவிகை ஓங்கும் தயரத ராமன் தாமச் / சுந்தர மவுலி சூடும் ஓரையும் நாளு",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "திருமுடி சூட்டு படலம் 12",
+     "quote": "அடுக்கிய உலகம் மூன்றும், ஆதரத் தூதர் கூற, / இடுக்கு ஒரு பேரும் இன்றி, அயோத்தி வந்து இறுத்தார் என்றால், / தொடுக்குறு கவியால் மற்றைத் துழனியை இறுதி தோன்ற / ஒடுக்குறுத்து உர",
+     "pinned": true
+    }
+   ],
+   "dp": [
+    {
+     "prabandham": "Perumal Thirumozhi",
+     "ref": "10.8",
+     "first": "ambon nedu maNi mAda",
+     "gist": "Rama's return and coronation at Ayodhya, hearing Ravana's clan history from Agastya and the Ramayana from Kusha and Lava.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2023/09/perumal-thirumozhi-10-8/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periyazhwar Thirumozhi",
+     "ref": "4.9.1",
+     "first": "maravadiyaith thambikku",
+     "gist": "Return by the Pushpaka chariot with Sita; the coronation and an eleven-thousand-year reign.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2026/10/periyazhwar-thirumozhi-4-9-1/",
+     "confirmed": true
+    }
+   ],
+   "songs": {
+    "959": {
+     "conf": "m",
+     "note": ""
+    }
+   }
+  },
+  "krishna-putana": {
+   "id": "krishna-putana",
+   "domain": "krishna",
+   "eid": "putana",
+   "title": "Putana killed",
+   "brief": "The ogress Putana, sent by Kamsa, tries to nurse the infant Krishna with poisoned milk; he drinks her life out.",
+   "note": "",
+   "refs": [
+    {
+     "src": "Bhagavata Purana",
+     "ref": "SB 10.6.10-13",
+     "gist": "Putana puts her poisoned breast in his mouth; he drinks her life out; she falls",
+     "pinned": true
+    }
+   ],
+   "dp": [
+    {
+     "prabandham": "Periyazhwar Thirumozhi",
+     "ref": "2.10.6",
+     "first": "தள்ளித் தளர்",
+     "gist": "Toddler Krishna looks steadily at Putana, knowing she has come to harm him.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2026/03/periyazhwar-thirumozhi-2-10-6/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periyazhwar Thirumozhi",
+     "ref": "3.5.9",
+     "first": "வன்பேய் முலை",
+     "gist": "He drank the milk of the cruel ogress's poisoned breast, yet obeys his herd-woman mother.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2026/04/periyazhwar-thirumozhi-3-5-9/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periyazhwar Thirumozhi",
+     "ref": "4.1.6",
+     "first": "பொல்லா வடிவு",
+     "gist": "Krishna set his mouth on the breast of the cruel-formed Putana and killed her.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2026/07/periyazhwar-thirumozhi-4-1-6/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tiruppavai",
+     "ref": "6",
+     "first": "புள்ளும் சிலம்பின காண்",
+     "gist": "Andal's wake-up verse: the one who drank the demoness's poisoned milk, kicked the false cart and lies on the serpent.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2014/12/thiruppavai-06-pullum-silambina-kan/",
+     "confirmed": true
+    }
+   ],
+   "songs": {
+    "626": {
+     "conf": "m",
+     "note": "Kamsa's messengers: the ogress and the wide-mouthed crane"
+    },
+    "1001": {
+     "conf": "h",
+     "note": ""
+    }
+   }
+  },
+  "krishna-sakata": {
+   "id": "krishna-sakata",
+   "domain": "krishna",
+   "eid": "sakata",
+   "title": "The cart kicked over",
+   "brief": "Baby Krishna kicks a heavy cart haunted by a demon, and it shatters.",
+   "note": "",
+   "refs": [
+    {
+     "src": "Bhagavata Purana",
+     "ref": "SB 10.7.7-7",
+     "gist": "Baby Krishna kicks the handcart and it collapses",
+     "pinned": true
+    }
+   ],
+   "dp": [
+    {
+     "prabandham": "Periyazhwar Thirumozhi",
+     "ref": "3.9.9",
+     "first": "மாயச் சகடம்",
+     "gist": "He kicked the cart-demon to pieces, snapped the twin trees, grazed the herds and played the flute.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2026/06/periyazhwar-thirumozhi-3-9-9/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periyazhwar Thirumozhi",
+     "ref": "3.1.2",
+     "first": "பொன் போல் மஞ்சனம்",
+     "gist": "Yashoda bathes and feeds him; the verse recalls the heavy cart he broke.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2026/03/periyazhwar-thirumozhi-3-1-2/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periya Thirumozhi",
+     "ref": "8.6.8",
+     "first": "மாலாய் மனமே",
+     "gist": "The Lord who destroyed Sakata with his feet, the trees and Putana is at this shrine (Kannapuram).",
+     "url": "https://divyaprabandham.koyil.org/index.php/2026/06/periya-thirumozhi-8-6-8/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periya Thirumozhi",
+     "ref": "8.6.9",
+     "first": "குன்றால் மாரி",
+     "gist": "Went as the Pandavas' messenger, destroyed the cart demon and sheltered cattle with the hill.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2026/06/periya-thirumozhi-8-6-9/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tiruppavai",
+     "ref": "24",
+     "first": "அன்று இவ்வுலகம் அளந்தாய்",
+     "gist": "A litany: measuring the worlds, destroying southern Lanka, kicking the cart, flinging the calf-demon, lifting the hill.",
+     "url": "https://www.ibiblio.org/sripedia/ebooks/tpv/vstp24.html",
+     "confirmed": true
+    }
+   ],
+   "songs": {
+    "116": {
+     "conf": "h",
+     "note": ""
+    },
+    "186": {
+     "conf": "m",
+     "note": ""
+    },
+    "1157": {
+     "conf": "m",
+     "note": ""
+    },
+    "193": {
+     "conf": "l",
+     "note": "Per general-songs-review"
+    }
+   }
+  },
+  "krishna-butter-pot": {
+   "id": "krishna-butter-pot",
+   "domain": "krishna",
+   "eid": "butter-pot",
+   "title": "Butter and curd stolen from the hanging pots",
+   "brief": "Krishna steals butter and curds from the hanging pots (uri) in gopi houses. Yashoda ties him to a wooden mortar with a rope, giving him the name Damodara.",
+   "note": "",
+   "refs": [
+    {
+     "src": "Bhagavata Purana",
+     "ref": "SB 10.8.29-31",
+     "gist": "Gopis complain: he steals curd from the swinging pot, piling planks to reach it",
+     "pinned": true
+    }
+   ],
+   "dp": [
+    {
+     "prabandham": "Periyazhwar Thirumozhi",
+     "ref": "3.1.3",
+     "first": "கும்மாயத்தொடு வெண்ணெய்",
+     "gist": "Swallowed butter, drank curd from the pot, and killed the trick-demons (twin trees) as a child.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2026/03/periyazhwar-thirumozhi-3-1-3/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periyazhwar Thirumozhi",
+     "ref": "3.1.5",
+     "first": "முப்போதும் கடைந்து",
+     "gist": "Butter and curd churned three times a day, gulped; he drank from the herd-folk's pots.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2026/03/periyazhwar-thirumozhi-3-1-5/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periyazhwar Thirumozhi",
+     "ref": "3.2.6",
+     "first": "மிடறு மெழுமெழுத்து",
+     "gist": "He swallows butter until his throat is slick; a mother's complaint to the child.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2026/03/periyazhwar-thirumozhi-3-2-6/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periyazhwar Thirumozhi",
+     "ref": "2.10.5",
+     "first": "ஆய்ச்சியர் சேரி",
+     "gist": "Caught red-handed stealing butter in the cowherd women's street; tied and beaten.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2026/03/periyazhwar-thirumozhi-2-10-5/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periya Thirumozhi",
+     "ref": "8.2.5",
+     "first": "கண்ணனூர்",
+     "gist": "A girl's mother speaks of Krishna, who was caught and tied after stealing butter.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2026/04/periya-thirumozhi-8-2-5/",
+     "confirmed": true
+    }
+   ],
+   "songs": {
+    "121": {
+     "conf": "h",
+     "note": "Gopis scold him as a curd-thief"
+    },
+    "156": {
+     "conf": "m",
+     "note": ""
+    },
+    "178": {
+     "conf": "h",
+     "note": ""
+    },
+    "289": {
+     "conf": "m",
+     "note": "Envoy to the Kuru king; butter; the dwarf is a separate story"
+    },
+    "683": {
+     "conf": "h",
+     "note": ""
+    },
+    "970": {
+     "conf": "m",
+     "note": ""
+    },
+    "987": {
+     "conf": "h",
+     "note": ""
+    },
+    "1019": {
+     "conf": "m",
+     "note": ""
+    },
+    "1098": {
+     "conf": "h",
+     "note": ""
+    },
+    "14": {
+     "conf": "l",
+     "note": "Per general-songs-review"
+    }
+   }
+  },
+  "krishna-mud-mouth": {
+   "id": "krishna-mud-mouth",
+   "domain": "krishna",
+   "eid": "mud-mouth",
+   "title": "Eating earth; the universe in his mouth",
+   "brief": "Accused of eating mud, Krishna opens his mouth and Yashoda sees the whole universe inside.",
+   "note": "",
+   "refs": [
+    {
+     "src": "Bhagavata Purana",
+     "ref": "SB 10.8.32-40",
+     "gist": "Playmates say he ate mud; he opens his mouth and Yashoda sees the universe",
+     "pinned": true
+    }
+   ],
+   "dp": [
+    {
+     "prabandham": "",
+     "ref": "",
+     "first": "",
+     "gist": "No pasuram confirmed in this pass. Search of the commentaries for mud-eating and the universe in the mouth found nothing usable.",
+     "url": "",
+     "confirmed": false
+    }
+   ],
+   "songs": {
+    "674": {
+     "conf": "m",
+     "note": ""
+    },
+    "1170": {
+     "conf": "m",
+     "note": ""
+    }
+   }
+  },
+  "krishna-mortar-bound": {
+   "id": "krishna-mortar-bound",
+   "domain": "krishna",
+   "eid": "mortar-bound",
+   "title": "Tied to the mortar (Damodara)",
+   "brief": "Krishna steals butter and curds from the hanging pots (uri) in gopi houses. Yashoda ties him to a wooden mortar with a rope, giving him the name Damodara.",
+   "note": "",
+   "refs": [
+    {
+     "src": "Bhagavata Purana",
+     "ref": "SB 10.9.8-9",
+     "gist": "He sits on an upturned mortar giving butter to monkeys, runs when she comes with a stick",
+     "pinned": true
+    },
+    {
+     "src": "Bhagavata Purana",
+     "ref": "SB 10.9.15-18",
+     "gist": "Every rope is two fingers short; at last he lets her bind him",
+     "pinned": true
+    }
+   ],
+   "dp": [
+    {
+     "prabandham": "Periyazhwar Thirumozhi",
+     "ref": "3.9.9",
+     "first": "மாயச் சகடம்",
+     "gist": "Tied to the mortar by Yashoda, he crawled with it and snapped the twin trees.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2026/06/periyazhwar-thirumozhi-3-9-9/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periya Thirumadal",
+     "ref": "95",
+     "first": "பின்னும் உரலோடு",
+     "gist": "Mentions his greatness in being bound with the mortar.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2019/11/periya-thirumadal-95/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periya Thirumozhi",
+     "ref": "11.5.5",
+     "first": "கண்ணிக் குறுங்கயிற்றால் கட்டுண்டான்",
+     "gist": "He was bound with a short, many-knotted rope.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2026/04/periya-thirumozhi-8-2-5/",
+     "confirmed": true
+    }
+   ],
+   "songs": {
+    "156": {
+     "conf": "m",
+     "note": ""
+    },
+    "178": {
+     "conf": "h",
+     "note": ""
+    },
+    "629": {
+     "conf": "h",
+     "note": ""
+    },
+    "908": {
+     "conf": "h",
+     "note": ""
+    },
+    "1098": {
+     "conf": "h",
+     "note": ""
+    },
+    "1183": {
+     "conf": "m",
+     "note": ""
+    }
+   }
+  },
+  "krishna-yamalarjuna": {
+   "id": "krishna-yamalarjuna",
+   "domain": "krishna",
+   "eid": "yamalarjuna",
+   "title": "The twin arjuna trees",
+   "brief": "Dragging the mortar, Krishna passes between two arjuna (maruda) trees; they break and release Kubera's sons Nalakuvara and Manigriva from Narada's curse.",
+   "note": "",
+   "refs": [
+    {
+     "src": "Bhagavata Purana",
+     "ref": "SB 10.10.22-23",
+     "gist": "Between the two trees, once Kubera's sons cursed by Narada",
+     "pinned": true
+    },
+    {
+     "src": "Bhagavata Purana",
+     "ref": "SB 10.10.26-27",
+     "gist": "Dragging the mortar he uproots both trees",
+     "pinned": true
+    }
+   ],
+   "dp": [
+    {
+     "prabandham": "Periyazhwar Thirumozhi",
+     "ref": "3.9.9",
+     "first": "மாயச் சகடம்",
+     "gist": "Snapped the twin marudha trees.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2026/06/periyazhwar-thirumozhi-3-9-9/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periyazhwar Thirumozhi",
+     "ref": "3.1.3",
+     "first": "கும்மாயத்தொடு வெண்ணெய்",
+     "gist": "Killed the deceiving demons who stood as twin trees.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2026/03/periyazhwar-thirumozhi-3-1-3/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periyazhwar Thirumozhi",
+     "ref": "4.3.2",
+     "first": "கஞ்சனும் காளியனும்",
+     "gist": "Kamsa, Kaliya, the elephant, the twin trees and the demons all fell where he grew up; Tirumalirumsolai is his mountain.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2026/07/periyazhwar-thirumozhi-4-3-2/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periya Thirumozhi",
+     "ref": "8.6.8",
+     "first": "மாலாய் மனமே",
+     "gist": "Uprooted the marudha trees and killed Putana and Sakata.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2026/06/periya-thirumozhi-8-6-8/",
+     "confirmed": true
+    }
+   ],
+   "songs": {
+    "116": {
+     "conf": "h",
+     "note": ""
+    },
+    "181": {
+     "conf": "m",
+     "note": ""
+    },
+    "186": {
+     "conf": "m",
+     "note": ""
+    },
+    "576": {
+     "conf": "h",
+     "note": ""
+    },
+    "771": {
+     "conf": "m",
+     "note": ""
+    },
+    "908": {
+     "conf": "h",
+     "note": ""
+    },
+    "1048": {
+     "conf": "m",
+     "note": ""
+    },
+    "1091": {
+     "conf": "l",
+     "note": ""
+    },
+    "851": {
+     "conf": "h",
+     "note": ""
+    }
+   }
+  },
+  "krishna-vatsasura": {
+   "id": "krishna-vatsasura",
+   "domain": "krishna",
+   "eid": "vatsasura",
+   "title": "Vatsasura (calf demon)",
+   "brief": "A demon comes as a calf among the herd; Krishna swings it against a vilva/wood-apple tree.",
+   "note": "",
+   "refs": [
+    {
+     "src": "Bhagavata Purana",
+     "ref": "SB 10.11.42-43",
+     "gist": "A demon among the calves is caught by the hind legs, whirled and thrown on a tree",
+     "pinned": true
+    }
+   ],
+   "dp": [
+    {
+     "prabandham": "Periyazhwar Thirumozhi",
+     "ref": "3.1.6",
+     "first": "கரும்பார் நீள்வயல்",
+     "gist": "He took a calf (the demon) and hurled it so that the wood-apple fruit fell.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2026/03/periyazhwar-thirumozhi-3-1-6/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periyazhwar Thirumozhi",
+     "ref": "2.5.5",
+     "first": "கற்றினம் மேய்த்து",
+     "gist": "Grazing the calves, he seized the one calf in which a monster had entered.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2025/11/periyazhwar-thirumozhi-2-5-5/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periya Thirumozhi",
+     "ref": "7.10.8",
+     "first": "வெஞ்சினக் களிற்றை",
+     "gist": "He who flung the calf at the fruit-tree and killed the elephant.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2026/02/periya-thirumozhi-7-10-8/",
+     "confirmed": true
+    }
+   ],
+   "songs": {}
+  },
+  "krishna-bakasura": {
+   "id": "krishna-bakasura",
+   "domain": "krishna",
+   "eid": "bakasura",
+   "title": "Bakasura (crane demon)",
+   "brief": "",
+   "note": "",
+   "refs": [
+    {
+     "src": "Bhagavata Purana",
+     "ref": "SB 10.11.48-51",
+     "gist": "The crane swallows Krishna, burns in his throat; Krishna splits its beak",
+     "pinned": true
+    }
+   ],
+   "dp": [
+    {
+     "prabandham": "Tiruppavai",
+     "ref": "13",
+     "first": "புள்ளின் வாய் கீண்டானை",
+     "gist": "The one who split the bird demon's beak and plucked off the wicked Ravana.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2014/12/thiruppavai-13-pullin-vai-kindanai/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periya Thiruvandhadhi",
+     "ref": "64",
+     "first": "பரனாம் அவன்",
+     "gist": "Among his amazing acts: tearing the mouth of the crane demon Bakasura.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2019/01/periya-thiruvandhadhi-64/",
+     "confirmed": true
+    }
+   ],
+   "songs": {
+    "626": {
+     "conf": "m",
+     "note": "Kamsa's messengers: the ogress and the wide-mouthed crane"
+    }
+   }
+  },
+  "krishna-kaliya": {
+   "id": "krishna-kaliya",
+   "domain": "krishna",
+   "eid": "kaliya",
+   "title": "Dancing on the serpent Kaliya",
+   "brief": "Krishna jumps into the Yamuna, dances on the hoods of the five-headed serpent Kaliya and sends him away.",
+   "note": "",
+   "refs": [
+    {
+     "src": "Bhagavata Purana",
+     "ref": "SB 10.16.26-30",
+     "gist": "He mounts Kaliya's hoods and dances until the serpent is broken",
+     "pinned": true
+    },
+    {
+     "src": "Bhagavata Purana",
+     "ref": "SB 10.16.63-67",
+     "gist": "Kaliya worships him and leaves",
+     "pinned": true
+    }
+   ],
+   "dp": [
+    {
+     "prabandham": "Periyazhwar Thirumozhi",
+     "ref": "2.10.3",
+     "first": "தடம்படு தாமரை",
+     "gist": "He stirred the pond; Kaliya rose spitting poison and Krishna pulled him.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2026/02/periyazhwar-thirumozhi-2-10-3/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periyazhwar Thirumozhi",
+     "ref": "1.8.3",
+     "first": "பஞ்சவர் தூதனாய்",
+     "gist": "Pandavas' messenger in the war; also leapt on the spread hoods of Kaliya in the poisoned river.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2025/09/periyazhwar-thirumozhi-1-8-3/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periyazhwar Thirumozhi",
+     "ref": "4.4.4",
+     "first": "உரகம் மேல்",
+     "gist": "Refers to the tree he climbed before jumping on Kaliya's heads in the Yamuna.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2026/08/periyazhwar-thirumozhi-4-4-4/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periya Thirumozhi",
+     "ref": "5.1.10",
+     "first": "கற்றா மறித்து",
+     "gist": "He danced on Kaliya's head, making it tremble.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2023/07/periya-thirumozhi-5-1-10/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Nachiyar Thirumozhi",
+     "ref": "4.4",
+     "first": "ஆய்ச்சிமார்களும்",
+     "gist": "Krishna on the blossoming tree jumped onto Kaliya's head, both feet and the head sinking in the water.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2024/07/nachchiyar-thirumozhi-4-4/",
+     "confirmed": true
+    }
+   ],
+   "songs": {
+    "163": {
+     "conf": "h",
+     "note": ""
+    },
+    "620": {
+     "conf": "m",
+     "note": "Dance on the serpent; friend of the Pandavas"
+    },
+    "881": {
+     "conf": "h",
+     "note": ""
+    },
+    "1006": {
+     "conf": "m",
+     "note": ""
+    },
+    "1099": {
+     "conf": "h",
+     "note": ""
+    }
+   }
+  },
+  "krishna-flute": {
+   "id": "krishna-flute",
+   "domain": "krishna",
+   "eid": "flute",
+   "title": "Krishna's flute",
+   "brief": "Krishna plays the flute in Vrindavan, drawing cows, animals and gopis.",
+   "note": "",
+   "refs": [
+    {
+     "src": "Bhagavata Purana",
+     "ref": "SB 10.21.2-5",
+     "gist": "In the forest he plays the flute; the cowherd girls describe him",
+     "pinned": true
+    }
+   ],
+   "dp": [
+    {
+     "prabandham": "Periyazhwar Thirumozhi",
+     "ref": "3.4.9",
+     "first": "வலங்காதின் மேல்",
+     "gist": "He wears his locks down his back and plays his sweet flute.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2026/04/periyazhwar-thirumozhi-3-4-9/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periyazhwar Thirumozhi",
+     "ref": "3.6.8",
+     "first": "சிறு விரல்கள்",
+     "gist": "He plays the flute with his little fingers stroking the holes.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2026/05/periyazhwar-thirumozhi-3-6-8/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periyazhwar Thirumozhi",
+     "ref": "3.6.10",
+     "first": "கருங்கண் தோகை",
+     "gist": "When he plays, trees spray honey and flowers drip.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2026/05/periyazhwar-thirumozhi-3-6-10/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periyazhwar Thirumozhi",
+     "ref": "3.9.9",
+     "first": "மாயச் சகடம்",
+     "gist": "He gathers the cows by blowing his bamboo flute.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2026/06/periyazhwar-thirumozhi-3-9-9/",
+     "confirmed": true
+    }
+   ],
+   "songs": {
+    "43": {
+     "conf": "m",
+     "note": "Fingering the flute's holes (the seven holes)"
+    },
+    "158": {
+     "conf": "h",
+     "note": ""
+    },
+    "355": {
+     "conf": "m",
+     "note": ""
+    },
+    "614": {
+     "conf": "h",
+     "note": ""
+    },
+    "989": {
+     "conf": "m",
+     "note": ""
+    },
+    "1009": {
+     "conf": "h",
+     "note": ""
+    },
+    "1048": {
+     "conf": "m",
+     "note": ""
+    },
+    "1170": {
+     "conf": "m",
+     "note": ""
+    }
+   }
+  },
+  "krishna-clothes": {
+   "id": "krishna-clothes",
+   "domain": "krishna",
+   "eid": "clothes",
+   "title": "The gopis' clothes on the kadamba tree",
+   "brief": "Gopis bathing in the Yamuna to win Krishna as husband find their clothes taken to the kurunda (kadamba) tree.",
+   "note": "",
+   "refs": [
+    {
+     "src": "Bhagavata Purana",
+     "ref": "SB 10.22.9-15",
+     "gist": "He takes the girls' garments up a kadamba tree; they plead",
+     "pinned": true
+    }
+   ],
+   "dp": [
+    {
+     "prabandham": "Nachiyar Thirumozhi",
+     "ref": "3.2",
+     "first": "இதுவென் புகுந்தது",
+     "gist": "The girls beg Krishna, who danced on Kaliya, to return the clothes kept on the kurundham tree.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2024/07/nachchiyar-thirumozhi-3-2/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Nachiyar Thirumozhi",
+     "ref": "3.3",
+     "first": "எல்லே இதென்ன இளமை",
+     "gist": "They complain that making them stand in water unclothed while he climbs the kurundham tree is mischief.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2024/07/nachchiyar-thirumozhi-3-3/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Nachiyar Thirumozhi",
+     "ref": "3.4",
+     "first": "பரக்க விழித்தெங்கும்",
+     "gist": "Even if you will not return the clothes, stop pretending not to know our suffering.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2024/07/nachchiyar-thirumozhi-3-4/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periyazhwar Thirumozhi",
+     "ref": "4.4.7",
+     "first": "குருந்தம் ஒன்று",
+     "gist": "Mentions a distinctive kurundham tree at Thirukkottiyur; not clearly the clothes episode.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2026/08/periyazhwar-thirumozhi-4-4-7/",
+     "confirmed": false
+    }
+   ],
+   "songs": {
+    "614": {
+     "conf": "h",
+     "note": ""
+    },
+    "1072": {
+     "conf": "m",
+     "note": ""
+    },
+    "1244": {
+     "conf": "m",
+     "note": ""
+    },
+    "193": {
+     "conf": "l",
+     "note": "Per general-songs-review"
+    }
+   }
+  },
+  "krishna-govardhana": {
+   "id": "krishna-govardhana",
+   "domain": "krishna",
+   "eid": "govardhana",
+   "title": "Lifting Govardhana",
+   "brief": "When Indra's rain threatens Vrindavan, Krishna lifts Govardhana hill on one hand as an umbrella for seven days.",
+   "note": "",
+   "refs": [
+    {
+     "src": "Bhagavata Purana",
+     "ref": "SB 10.25.19-23",
+     "gist": "He lifts the hill with one hand like a child holding a mushroom and holds it seven days",
+     "pinned": true
+    }
+   ],
+   "dp": [
+    {
+     "prabandham": "Periyazhwar Thirumozhi",
+     "ref": "4.10.9",
+     "first": "குன்றெடுத்து",
+     "gist": "He lifted Govardhana to protect the cows and grazed the herds.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2026/10/periyazhwar-thirumozhi-4-10-9/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periyazhwar Thirumozhi",
+     "ref": "4.7.6",
+     "first": "தலைப்பெய்து குமுறி",
+     "gist": "Indra's thunderous rain at Tiruvayppadi; Krishna holds up Govardhana as an umbrella.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2026/09/periyazhwar-thirumozhi-4-7-6/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periyazhwar Thirumozhi",
+     "ref": "4.6.5",
+     "first": "மலம் உடை",
+     "gist": "Calls the child by the name of the one who lifted the hill and quelled Indra's anger.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2026/09/periyazhwar-thirumozhi-4-6-5/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periya Thirumozhi",
+     "ref": "8.6.9",
+     "first": "குன்றால் மாரி",
+     "gist": "With the hill he made the hailstorm useless; also the Pandavas' messenger and the cart-breaker.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2026/06/periya-thirumozhi-8-6-9/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periya Thirumozhi",
+     "ref": "8.7.3",
+     "first": "புயலுறு",
+     "gist": "The Lord who lifted the Govardhana mountain.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2026/06/periya-thirumozhi-8-7-3/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tiruppavai",
+     "ref": "24",
+     "first": "அன்று இவ்வுலகம் அளந்தாய்",
+     "gist": "Lifting the hill as an umbrella is one of the deeds praised.",
+     "url": "https://www.ibiblio.org/sripedia/ebooks/tpv/vstp24.html",
+     "confirmed": true
+    }
+   ],
+   "songs": {
+    "116": {
+     "conf": "h",
+     "note": ""
+    },
+    "186": {
+     "conf": "m",
+     "note": ""
+    },
+    "674": {
+     "conf": "m",
+     "note": ""
+    },
+    "770": {
+     "conf": "h",
+     "note": ""
+    },
+    "1183": {
+     "conf": "m",
+     "note": ""
+    }
+   }
+  },
+  "krishna-kuvalayapida": {
+   "id": "krishna-kuvalayapida",
+   "domain": "krishna",
+   "eid": "kuvalayapida",
+   "title": "Kuvalayapida elephant killed",
+   "brief": "At Mathura's gate Krishna meets Kamsa's elephant Kuvalayapida, breaks its tusks and kills it.",
+   "note": "",
+   "refs": [
+    {
+     "src": "Bhagavata Purana",
+     "ref": "SB 10.43.2-15",
+     "gist": "At the arena gate he fights the elephant, pulls out a tusk and kills it and its keepers",
+     "pinned": true
+    }
+   ],
+   "dp": [
+    {
+     "prabandham": "Periyazhwar Thirumozhi",
+     "ref": "4.7.7",
+     "first": "வில்பிடித்து இறுத்து",
+     "gist": "He broke the bow at Kamsa's festival, snapped the elephant's tusks and killed its keeper.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2026/09/periyazhwar-thirumozhi-4-7-7/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periyazhwar Thirumozhi",
+     "ref": "4.9.3",
+     "first": "கருளுடைய பொழில்",
+     "gist": "Lists the angry elephant Kuvalayapida, the twin trees and others he destroyed.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2026/10/periyazhwar-thirumozhi-4-9-3/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periyazhwar Thirumozhi",
+     "ref": "4.8.10",
+     "first": "பருவரங்கள் அவை",
+     "gist": "Kamsa's men burned in fear when they saw Krishna after he killed the elephant.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2026/10/periyazhwar-thirumozhi-4-8-10/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periya Thirumozhi",
+     "ref": "9.2.6",
+     "first": "வெஞ்சின வேழம்",
+     "gist": "He broke the white tusk of the angry elephant.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2026/08/periya-thirumozhi-9-2-6/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periya Thirumozhi",
+     "ref": "9.4.8",
+     "first": "தூம்புடைக்கை",
+     "gist": "The elephant with the hollow trunk feared; he broke its tusks.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2026/10/periya-thirumozhi-9-4-8/",
+     "confirmed": true
+    }
+   ],
+   "songs": {
+    "158": {
+     "conf": "h",
+     "note": ""
+    },
+    "1157": {
+     "conf": "m",
+     "note": ""
+    }
+   }
+  },
+  "krishna-kamsa": {
+   "id": "krishna-kamsa",
+   "domain": "krishna",
+   "eid": "kamsa",
+   "title": "Kamsa killed",
+   "brief": "Krishna and Balarama go to Mathura, defeat the wrestlers and kill their maternal uncle Kamsa.",
+   "note": "",
+   "refs": [
+    {
+     "src": "Bhagavata Purana",
+     "ref": "SB 10.44.34-37",
+     "gist": "He leaps to the dais, seizes Kamsa by the hair, throws him down",
+     "pinned": true
+    }
+   ],
+   "dp": [
+    {
+     "prabandham": "Periyazhwar Thirumozhi",
+     "ref": "4.5.8",
+     "first": "கூடிக் கூடி",
+     "gist": "After Krishna killed Kamsa, Kamsa's wives wailed.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2026/08/periyazhwar-thirumozhi-4-5-8/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Tiruppavai",
+     "ref": "25",
+     "first": "ஒருத்தி மகனாய்",
+     "gist": "Kamsa's plan against the child turned back on him and he was killed; the dangers of Putana and the bow festival.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2015/01/thiruppavai-25-oruththi-maganai/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Nachiyar Thirumozhi",
+     "ref": "3.9",
+     "first": "கஞ்சன் வலைவைத்த",
+     "gist": "Decad's final verse addresses the one who drank Putana's milk and ended Kamsa's plots (girls' plea for the clothes).",
+     "url": "https://divyaprabandham.koyil.org/index.php/2024/07/nachchiyar-thirumozhi-3-9/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periya Thirumozhi",
+     "ref": "7.8.9",
+     "first": "ஊடேறு கஞ்சனொடு",
+     "gist": "Kamsa, Kuvalayapida and Sakata are named among those he destroyed.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2025/12/periya-thirumozhi-7-8-9/",
+     "confirmed": true
+    }
+   ],
+   "songs": {
+    "615": {
+     "conf": "h",
+     "note": ""
+    },
+    "936": {
+     "conf": "m",
+     "note": ""
+    },
+    "1274": {
+     "conf": "m",
+     "note": "Kamsa did not treat his nephew as a nephew; 'மருகன்' here is Krishna"
+    },
+    "851": {
+     "conf": "h",
+     "note": ""
+    }
+   }
+  },
+  "krishna-kamsa-malice": {
+   "id": "krishna-kamsa-malice",
+   "domain": "krishna",
+   "eid": "kamsa-malice",
+   "title": "Kamsa's cruelty to his sister's child",
+   "brief": "Krishna and Balarama go to Mathura, defeat the wrestlers and kill their maternal uncle Kamsa.",
+   "note": "",
+   "refs": [
+    {
+     "src": "Bhagavata Purana",
+     "ref": "SB 10.4.1-5",
+     "gist": "Kamsa persecutes the newborn; he is Krishna's maternal uncle",
+     "pinned": true
+    }
+   ],
+   "dp": [],
+   "songs": {
+    "181": {
+     "conf": "m",
+     "note": ""
+    },
+    "1274": {
+     "conf": "m",
+     "note": "Kamsa did not treat his nephew as a nephew; 'மருகன்' here is Krishna"
+    }
+   }
+  },
+  "krishna-naraka-wives": {
+   "id": "krishna-naraka-wives",
+   "domain": "krishna",
+   "eid": "naraka-wives",
+   "title": "Naraka killed; the sixteen thousand princesses",
+   "brief": "Krishna kills Narakasura and marries the princesses he had imprisoned.",
+   "note": "",
+   "refs": [
+    {
+     "src": "Bhagavata Purana",
+     "ref": "SB 10.59.33-42",
+     "gist": "He frees 16,000 princesses and marries them all in separate palaces",
+     "pinned": true
+    }
+   ],
+   "dp": [
+    {
+     "prabandham": "Periyazhwar Thirumozhi",
+     "ref": "4.3.3",
+     "first": "மன்னு நரகன்",
+     "gist": "Narakasura, sure none could kill him, held 16,100 celestial girls; Krishna killed him.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2026/07/periyazhwar-thirumozhi-4-3-3/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periyazhwar Thirumozhi",
+     "ref": "4.3.6",
+     "first": "பாண்டவர் தம்",
+     "gist": "Asks if this is how he protected the sixteen thousand women left without refuge.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2026/08/periyazhwar-thirumozhi-4-3-6/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periyazhwar Thirumozhi",
+     "ref": "4.9.4",
+     "first": "பதினாறாம் ஆயிரவர்",
+     "gist": "In Dwaraka sixteen thousand consorts serve him.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2026/10/periyazhwar-thirumozhi-4-9-4/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periya Thirumozhi",
+     "ref": "3.10.2",
+     "first": "வென்றி மிகு",
+     "gist": "He destroyed the victorious Naraka with his discus.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2022/11/periya-thirumozhi-3-10-2/",
+     "confirmed": true
+    }
+   ],
+   "songs": {
+    "442": {
+     "conf": "h",
+     "note": ""
+    }
+   }
+  },
+  "krishna-parijata": {
+   "id": "krishna-parijata",
+   "domain": "krishna",
+   "eid": "parijata",
+   "title": "The parijata tree brought for Satyabhama",
+   "brief": "Krishna brings the heavenly parijata tree from Indra's garden for Satyabhama.",
+   "note": "",
+   "refs": [
+    {
+     "src": "Bhagavata Purana",
+     "ref": "SB 10.59.38-40",
+     "gist": "He takes Aditi's earrings to Indra's abode and brings the parijata to Satyabhama's garden",
+     "pinned": true
+    }
+   ],
+   "dp": [
+    {
+     "prabandham": "Nachiyar Thirumozhi",
+     "ref": "4.8",
+     "first": "ஆவல் அன்புடையார்",
+     "gist": "Did Kannan not bring the fragrant parijata tree from heaven (for his beloved)?",
+     "url": "https://divyaprabandham.koyil.org/index.php/2024/07/nachchiyar-thirumozhi-4-8/",
+     "confirmed": true
+    }
+   ],
+   "songs": {
+    "885": {
+     "conf": "m",
+     "note": ""
+    }
+   }
+  },
+  "krishna-banasura": {
+   "id": "krishna-banasura",
+   "domain": "krishna",
+   "eid": "banasura",
+   "title": "Banasura",
+   "brief": "Krishna fights Banasura (and Shiva) at Shonitapura to free his grandson Aniruddha.",
+   "note": "Song 272 is a low-confidence match.",
+   "refs": [
+    {
+     "src": "Bhagavata Purana",
+     "ref": "SB 10.63.3-8",
+     "gist": "Krishna and Balarama fight Bana's army, with Shiva on Bana's side",
+     "pinned": true
+    }
+   ],
+   "dp": [
+    {
+     "prabandham": "Periya Thirumozhi",
+     "ref": "8.6.6",
+     "first": "வருந்தாதிரு",
+     "gist": "Mentions his mercy on Banasura (his thousand shoulders spared).",
+     "url": "https://divyaprabandham.koyil.org/index.php/2026/06/periya-thirumozhi-8-6-6/",
+     "confirmed": true
+    }
+   ],
+   "songs": {}
+  },
+  "krishna-sudama": {
+   "id": "krishna-sudama",
+   "domain": "krishna",
+   "eid": "sudama",
+   "title": "Sudama's visit",
+   "brief": "The poor Brahmin friend Sudama (Kuchela) visits Krishna at Dwaraka.",
+   "note": "",
+   "refs": [
+    {
+     "src": "Bhagavata Purana",
+     "ref": "SB 10.80.6-14",
+     "gist": "The poor brahmin friend takes flat rice to Dwaraka",
+     "pinned": true
+    }
+   ],
+   "dp": [
+    {
+     "prabandham": "",
+     "ref": "",
+     "first": "",
+     "gist": "No Divya Prabandham verse on Kuchela/Sudama found by searches of the commentary site (kuchElan, kuchela, sudhAmA, avil).",
+     "url": "",
+     "confirmed": false
+    }
+   ],
+   "songs": {
+    "355": {
+     "conf": "m",
+     "note": ""
+    }
+   }
+  },
+  "krishna-mausala": {
+   "id": "krishna-mausala",
+   "domain": "krishna",
+   "eid": "mausala",
+   "title": "The iron pestle thrown into the sea",
+   "brief": "A curse leads to an iron pestle; its powder grows into reeds with which the Yadavas destroy each other; the pestle's last piece is thrown into the sea.",
+   "note": "Mahabharata Mausala parva ch.2-4 (CE 16,2-4).",
+   "refs": [
+    {
+     "src": "Bhagavata Purana",
+     "ref": "SB 11.1.20-21",
+     "gist": "The pestle is ground down and its pieces thrown into the sea",
+     "pinned": true
+    },
+    {
+     "src": "Mahabharata (Critical Edition)",
+     "ref": "16,004.035a … 16,004.036c",
+     "gist": "The Mausala parva: the iron pestle and the Yadavas' mutual slaughter",
+     "quote": "tad abhūn musalaṃ ghoraṃ vajrakalpam ayomayam / jaghnur anyonyam ākrande musalaiḥ kālacoditāḥ",
+     "pinned": true
+    }
+   ],
+   "dp": [
+    {
+     "prabandham": "",
+     "ref": "",
+     "first": "",
+     "gist": "Nothing found. Periyazhwar 4.7.5 only lists the pestle among Balarama's weapons (not the Yadava story).",
+     "url": "",
+     "confirmed": false
+    }
+   ],
+   "songs": {
+    "248": {
+     "conf": "m",
+     "note": "Pestle thrown into the sea"
+    }
+   }
+  },
+  "krishna-embassy": {
+   "id": "krishna-embassy",
+   "domain": "krishna",
+   "eid": "embassy",
+   "title": "Krishna's peace embassy to the Kuru court",
+   "brief": "Before the war Krishna goes to the Kuru court as envoy, stays with Vidura, asks for five villages, and when Duryodhana tries to seize him shows his divine form.",
+   "note": "Vulgate/Ganguli: Bhagavat-yana parva ch.74-150 (Wikipedia numbering) = CE Udyoga adhyayas about 5,70-137.",
+   "refs": [
+    {
+     "src": "Mahabharata (Critical Edition)",
+     "ref": "5,089.034c … 5,089.035c",
+     "gist": "Krishna goes to Vidura's house and stays there",
+     "quote": "niveśāya yayau veśma vidurasya mahātmanaḥ / kuravaś ca mahābāhuṃ vidurasya gṛhe sthitam",
+     "pinned": true
+    },
+    {
+     "src": "Mahabharata (Critical Edition)",
+     "ref": "5,129.002a … 5,129.012a",
+     "gist": "Duryodhana tries to seize him; Krishna laughs and shows a blazing form with the gods in it; the kings shut their eyes",
+     "quote": "eko 'ham iti yan mohān manyase māṃ suyodhana / evam uktvā jahāsoccaiḥ keśavaḥ paravīrahā",
+     "pinned": true
+    }
+   ],
+   "dp": [
+    {
+     "prabandham": "Periyazhwar Thirumozhi",
+     "ref": "1.8.3",
+     "first": "பஞ்சவர் தூதனாய்",
+     "gist": "Krishna as the Pandavas' messenger who helped them in the Bharata battle.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2025/09/periyazhwar-thirumozhi-1-8-3/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periyazhwar Thirumozhi",
+     "ref": "3.9.5",
+     "first": "பஞ்சவர் தூதனாய்",
+     "gist": "Krishna took the role of messenger for the five Pandavas and helped them in the war.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2026/06/periyazhwar-thirumozhi-3-9-5/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periya Thirumozhi",
+     "ref": "5.5.6",
+     "first": "தாதாடு வனமாலை",
+     "gist": "He who went as messenger for the five Pandavas.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2023/11/periya-thirumozhi-5-5-6/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periya Thirumozhi",
+     "ref": "2.3.5",
+     "first": "இந்துணைப் பதுமத்து",
+     "gist": "At Thiruvallikkeni: went as divine messenger to Duryodhana for the Pandavas.",
+     "url": "https://divyaprabandham.koyil.org/?p=44426",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periya Thirumozhi",
+     "ref": "8.6.9",
+     "first": "குன்றால் மாரி",
+     "gist": "'senRAn thUdhu panjavarkkAy': went as envoy for the five.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2026/06/periya-thirumozhi-8-6-9/",
+     "confirmed": true
+    }
+   ],
+   "songs": {
+    "289": {
+     "conf": "m",
+     "note": "Envoy to the Kuru king; butter; the dwarf is a separate story"
+    },
+    "541": {
+     "conf": "m",
+     "note": "The discus-bearer who sowed enmity before the war"
+    },
+    "574": {
+     "conf": "h",
+     "note": "Vidura, Drona, the hundred sons, Jayadratha, Dharma's envoy, Vijaya's charioteer"
+    },
+    "620": {
+     "conf": "m",
+     "note": "Dance on the serpent; friend of the Pandavas"
+    },
+    "747": {
+     "conf": "h",
+     "note": ""
+    },
+    "752": {
+     "conf": "l",
+     "note": "Per general-songs-review"
+    },
+    "806": {
+     "conf": "l",
+     "note": "Friend of the five Pandavas"
+    },
+    "1055": {
+     "conf": "m",
+     "note": ""
+    }
+   }
+  },
+  "krishna-gita-chariot": {
+   "id": "krishna-gita-chariot",
+   "domain": "krishna",
+   "eid": "gita-chariot",
+   "title": "Krishna drives Arjuna's chariot; the Gita opens",
+   "brief": "Krishna drives Arjuna's chariot through the Kurukshetra war and speaks the Gita at its start.",
+   "note": "Gita 1.1 = CE 6,23.1.",
+   "refs": [
+    {
+     "src": "Mahabharata (Critical Edition)",
+     "ref": "6,023.001a … 6,023.024c",
+     "gist": "Opening of the Bhagavad Gita: conches, Arjuna asks Krishna to halt the chariot between the armies, Krishna does",
+     "quote": "dharmakṣetre kurukṣetre samavetā yuyutsavaḥ / pāñcajanyaṃ hṛṣīkeśo devadattaṃ dhanaṃjayaḥ",
+     "pinned": true
+    }
+   ],
+   "dp": [
+    {
+     "prabandham": "Periya Thirumozhi",
+     "ref": "2.3.1",
+     "first": "வில்பெரு விழவும்",
+     "gist": "At Thiruvallikkeni: stood in front of Arjuna's chariot with a stick in hand as its charioteer.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2021/08/periya-thirumozhi-2-3-1/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periya Thirumozhi",
+     "ref": "7.5.2",
+     "first": "பாரித்தெழுந்த",
+     "gist": "In the Bharata battle he remained the charioteer on Arjuna's chariot while great warriors despaired.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2025/10/periya-thirumozhi-7-5-2/",
+     "confirmed": true
+    }
+   ],
+   "songs": {
+    "155": {
+     "conf": "l",
+     "note": "Chariot-driving, the 'eunuch' (Shikhandi) and the Kuru kingdom given to the Pandavas; reading uncertain"
+    },
+    "339": {
+     "conf": "h",
+     "note": ""
+    },
+    "527": {
+     "conf": "h",
+     "note": ""
+    },
+    "574": {
+     "conf": "h",
+     "note": "Vidura, Drona, the hundred sons, Jayadratha, Dharma's envoy, Vijaya's charioteer"
+    },
+    "747": {
+     "conf": "h",
+     "note": ""
+    },
+    "924": {
+     "conf": "h",
+     "note": ""
+    },
+    "928": {
+     "conf": "h",
+     "note": ""
+    },
+    "930": {
+     "conf": "m",
+     "note": ""
+    },
+    "1053": {
+     "conf": "m",
+     "note": "Arjuna's chariot and conch; cattle returning"
+    },
+    "1060": {
+     "conf": "m",
+     "note": ""
+    },
+    "1196": {
+     "conf": "m",
+     "note": ""
+    }
+   }
+  },
+  "krishna-bhishma-shikhandi": {
+   "id": "krishna-bhishma-shikhandi",
+   "domain": "krishna",
+   "eid": "bhishma-shikhandi",
+   "title": "Bhishma falls to Arjuna behind Shikhandi",
+   "brief": "General references to the Bharata war, the Kauravas' fall and its aftermath.",
+   "note": "",
+   "refs": [
+    {
+     "src": "Mahabharata (Critical Edition)",
+     "ref": "6,114.053c",
+     "gist": "Arjuna shoots Bhishma with Shikhandi in front",
+     "quote": "śikhaṇḍinaṃ puraskṛtya bhīṣmaṃ vivyādha saṃyuge",
+     "pinned": true
+    }
+   ],
+   "dp": [],
+   "songs": {
+    "155": {
+     "conf": "l",
+     "note": "Chariot-driving, the 'eunuch' (Shikhandi) and the Kuru kingdom given to the Pandavas; reading uncertain"
+    }
+   }
+  },
+  "krishna-bhishma-wheel": {
+   "id": "krishna-bhishma-wheel",
+   "domain": "krishna",
+   "eid": "bhishma-wheel",
+   "title": "Krishna takes the wheel against Bhishma",
+   "brief": "General references to the Bharata war, the Kauravas' fall and its aftermath.",
+   "note": "",
+   "refs": [
+    {
+     "src": "Mahabharata (Critical Edition)",
+     "ref": "6,055.086c … 6,055.093a",
+     "gist": "Krishna leaps from the chariot, takes up a wheel and rushes at Bhishma",
+     "quote": "kṣurāntam udyamya bhujena cakraṃ; rathād avaplutya visṛjya vāhān / tam āttacakraṃ praṇadantam uccaiḥ; kruddhaṃ mahendrāvarajaṃ samīkṣya",
+     "pinned": true
+    }
+   ],
+   "dp": [
+    {
+     "prabandham": "Periya Thirumozhi",
+     "ref": "8.1.2",
+     "first": "செருவரை",
+     "gist": "Commentary cites Mahabharata Bhishma parva where the discus climbs into Krishna's hand; link to the verse not confirmed.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2026/02/periya-thirumozhi-8-1-2/",
+     "confirmed": false
+    }
+   ],
+   "songs": {}
+  },
+  "krishna-jayadratha": {
+   "id": "krishna-jayadratha",
+   "domain": "krishna",
+   "eid": "jayadratha",
+   "title": "Jayadratha killed; the sun hidden",
+   "brief": "On the fourteenth day Krishna hides the sun (tradition: with the Sudarshana discus), Jayadratha steps out thinking the day is done, and Arjuna kills him.",
+   "note": "The Sudarshana/darkness version is in a star passage of the Critical Edition (Vulgate Drona 146, Ganguli section CXLVI).",
+   "refs": [
+    {
+     "src": "Mahabharata (Critical Edition)",
+     "ref": "7,121.015c … 7,121.032c",
+     "gist": "Krishna urges Arjuna to cut Jayadratha's head before sunset; Arjuna beheads him (constituted text, no sun-hiding)",
+     "quote": "abravīt pāṇḍavaṃ tatra tvaramāṇo janārdanaḥ / dhanaṃjaya śiraś chindhi saindhavasya durātmanaḥ",
+     "pinned": true
+    },
+    {
+     "src": "Mahabharata (Critical Edition)",
+     "ref": "7,121.014d*1010_03 … 7,121.041b*1025_01",
+     "gist": "Star passage (interpolation): Krishna remembers the Sudarshana discus and has darkness cover the sun; later he withdraws it",
+     "quote": "sasmāra cakraṃ daityārir hariś cakraṃ sudarśanam / astaṃ gatam ivādityaṃ tamasā chādayeti vai",
+     "pinned": true
+    }
+   ],
+   "dp": [
+    {
+     "prabandham": "Periyazhwar Thirumozhi",
+     "ref": "4.1.8",
+     "first": "நாழிகை கூறிட்டுக் காத்து நின்ற",
+     "gist": "Kings guard Jayadratha counting the hours; Krishna hides the sun with the divine discus; Arjuna's arrow rolls Jayadratha's head away.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2026/07/periyazhwar-thirumozhi-4-1-8/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Mudhal Thiruvandhadhi / Nanmugan Thiruvandhadhi / Periya Thirumozhi",
+     "ref": "not located",
+     "first": "",
+     "gist": "A search result says these also refer to the discus covering the sun; verse numbers not found.",
+     "url": "https://granthams.koyil.org/?p=7977",
+     "confirmed": false
+    }
+   ],
+   "songs": {
+    "568": {
+     "conf": "h",
+     "note": "Hid the sun: only in the interpolated CE passage"
+    },
+    "574": {
+     "conf": "h",
+     "note": "Vidura, Drona, the hundred sons, Jayadratha, Dharma's envoy, Vijaya's charioteer"
+    },
+    "902": {
+     "conf": "m",
+     "note": "Per general-songs-review: discus makes the sun set at midday"
+    }
+   }
+  },
+  "krishna-duryodhana-fall": {
+   "id": "krishna-duryodhana-fall",
+   "domain": "krishna",
+   "eid": "duryodhana-fall",
+   "title": "Duryodhana's thighs broken",
+   "brief": "General references to the Bharata war, the Kauravas' fall and its aftermath.",
+   "note": "",
+   "refs": [
+    {
+     "src": "Mahabharata (Critical Edition)",
+     "ref": "9,057.006c … 9,057.044c",
+     "gist": "Bhima smashes Duryodhana's thighs with the mace",
+     "quote": "ūrū bhetsyāmi te saṃkhye gadayeti suyodhanam / ūrū duryodhanasyātha babhañja priyadarśanau",
+     "pinned": true
+    }
+   ],
+   "dp": [],
+   "songs": {
+    "1135": {
+     "conf": "m",
+     "note": ""
+    }
+   }
+  },
+  "krishna-kirata": {
+   "id": "krishna-kirata",
+   "domain": "krishna",
+   "eid": "kirata",
+   "title": "Arjuna and Shiva as the hunter",
+   "brief": "Arjuna's austerity; Shiva appears as a Kirata and they fight over a boar; Shiva then grants the Pashupata weapon.",
+   "note": "Vulgate: Kairata parva ch.38-41.",
+   "refs": [
+    {
+     "src": "Mahabharata (Critical Edition)",
+     "ref": "3,040.005a … 3,040.043a",
+     "gist": "Shiva as a Kirata hunter fights Arjuna",
+     "quote": "kirātaveṣapracchannaḥ strībhiś cānu sahasraśaḥ / kirātarūpī sahasā vārayām āsa śaṃkaraḥ",
+     "pinned": true
+    },
+    {
+     "src": "Mahabharata (Critical Edition)",
+     "ref": "3,041.013a",
+     "gist": "Shiva gives the Pashupata weapon",
+     "quote": "dadāni te 'straṃ dayitam ahaṃ pāśupataṃ mahat",
+     "pinned": true
+    }
+   ],
+   "dp": [
+    {
+     "prabandham": "",
+     "ref": "",
+     "first": "",
+     "gist": "No Divya Prabandham verse on Arjuna and the hunter found; Tiruvaimozhi 3.5.3 commentary only quotes the Kirata-arjuniya poem for a different point.",
+     "url": "",
+     "confirmed": false
+    }
+   ],
+   "songs": {}
+  },
+  "krishna-pandava-coronation": {
+   "id": "krishna-pandava-coronation",
+   "domain": "krishna",
+   "eid": "pandava-coronation",
+   "title": "Yudhishthira crowned king",
+   "brief": "Krishna as the Pandavas' ally and friend, steering the Kurukshetra war.",
+   "note": "",
+   "refs": [
+    {
+     "src": "Mahabharata (Critical Edition)",
+     "ref": "12,040.015a",
+     "gist": "Yudhishthira is anointed king of the earth",
+     "quote": "abhyaṣiñcat patiṃ pṛthvyāḥ kuntīputraṃ yudhiṣṭhiram",
+     "pinned": true
+    }
+   ],
+   "dp": [],
+   "songs": {
+    "155": {
+     "conf": "l",
+     "note": "Chariot-driving, the 'eunuch' (Shikhandi) and the Kuru kingdom given to the Pandavas; reading uncertain"
+    },
+    "573": {
+     "conf": "m",
+     "note": ""
+    }
+   }
+  },
+  "krishna-war-general": {
+   "id": "krishna-war-general",
+   "domain": "krishna",
+   "eid": "war-general",
+   "title": "The Bharata war (general)",
+   "brief": "General references to the Bharata war, the Kauravas' fall and its aftermath.",
+   "note": "No single verse: the whole war; see the parvas 6-10.",
+   "refs": [],
+   "dp": [],
+   "songs": {
+    "339": {
+     "conf": "h",
+     "note": ""
+    },
+    "541": {
+     "conf": "m",
+     "note": "The discus-bearer who sowed enmity before the war"
+    },
+    "573": {
+     "conf": "m",
+     "note": ""
+    },
+    "785": {
+     "conf": "m",
+     "note": ""
+    },
+    "890": {
+     "conf": "m",
+     "note": ""
+    },
+    "930": {
+     "conf": "m",
+     "note": ""
+    },
+    "1055": {
+     "conf": "m",
+     "note": ""
+    },
+    "1056": {
+     "conf": "m",
+     "note": ""
+    },
+    "1060": {
+     "conf": "m",
+     "note": ""
+    },
+    "1135": {
+     "conf": "m",
+     "note": ""
+    },
+    "1196": {
+     "conf": "m",
+     "note": ""
+    }
+   }
+  },
+  "krishna-exile-general": {
+   "id": "krishna-exile-general",
+   "domain": "krishna",
+   "eid": "exile-general",
+   "title": "Pandavas' exile in the forest",
+   "brief": "General references to the Bharata war, the Kauravas' fall and its aftermath.",
+   "note": "Vana parva (3); general reference, no single verse.",
+   "refs": [],
+   "dp": [],
+   "songs": {
+    "785": {
+     "conf": "m",
+     "note": ""
+    }
+   }
+  },
+  "krishna-krishna-general": {
+   "id": "krishna-krishna-general",
+   "domain": "krishna",
+   "eid": "krishna-general",
+   "title": "Krishna (no specific episode)",
+   "brief": "Names Krishna without an episode.",
+   "note": "Names Krishna or a cowherd image only.",
+   "refs": [],
+   "dp": [],
+   "songs": {
+    "586": {
+     "conf": "l",
+     "note": "Per general-songs-review: friend of the cows, not the calf demon"
+    }
+   }
+  },
+  "avatar-gajendra": {
+   "id": "avatar-gajendra",
+   "domain": "avatar",
+   "eid": "gajendra",
+   "title": "Gajendra and the crocodile",
+   "brief": "The elephant king Gajendra is seized by a crocodile in a pond; after long struggle he calls out and Vishnu rides Garuda to kill the crocodile with his discus. One of the most common images (about 20 songs).",
+   "note": "The Thiruppugazh 'Mulame!' cry is the Tamil devotional form of the elephant's call; the Sanskrit prayer is addressed to Vasudeva/Narayana. The discus killing the crocodile is a Tamil/Alvar detail more explicit than in the Bhagavata passage cited.",
+   "refs": [
+    {
+     "src": "Bhagavata Purana",
+     "ref": "SB 8.2.27-28",
+     "gist": "A crocodile seizes the elephant king's leg in the lake; the herd cannot help",
+     "pinned": true
+    },
+    {
+     "src": "Bhagavata Purana",
+     "ref": "SB 8.3.2-2",
+     "gist": "Gajendra's prayer begins by bowing to Vasudeva",
+     "pinned": true
+    },
+    {
+     "src": "Bhagavata Purana",
+     "ref": "SB 8.3.30-33",
+     "gist": "Hari comes on Garuda with the discus; Gajendra offers a lotus; the Lord pulls elephant and crocodile out",
+     "pinned": true
+    },
+    {
+     "src": "Bhagavata Purana",
+     "ref": "SB 8.4.3-4",
+     "gist": "The crocodile was the gandharva Huhu, freed from a curse",
+     "pinned": true
+    },
+    {
+     "src": "Bhagavata Purana",
+     "ref": "SB 8.4.13-13",
+     "gist": "Gajendra is given liberation",
+     "pinned": true
+    }
+   ],
+   "dp": [
+    {
+     "prabandham": "Periyazhwar Thirumozhi",
+     "ref": "2.1.9",
+     "first": "padhaga mudhalai vAyppatta kaLiRu",
+     "gist": "The elephant seized by the crocodile cries out and the Lord rushes to him on Garuda.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2025/10/periyazhwar-thirumozhi-2-1-9/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periyazhwar Thirumozhi",
+     "ref": "2.10.8",
+     "first": "thAzhai thaNNAmbal",
+     "gist": "Names Gajendra rescued on Garuda, the crocodile cut by the discus, as proof of the Lord's mercy.",
+     "url": "https://divyaprabandham.koyil.org/?p=59455",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Thiruvaimozhi (Nammazhwar)",
+     "ref": "3.5.1",
+     "first": "moymmAm pUmpozhil",
+     "gist": "Asks what use are those who stay unmoved after hearing how the Lord saved the elephant. NOTE: earlier project notes called this Periya Thirumozhi 3.5.1; the page is Thiruvaimozhi 3.5.1.",
+     "url": "https://divyaprabandham.koyil.org/?p=10681",
+     "confirmed": true
+    }
+   ],
+   "songs": {
+    "25": {
+     "conf": "h",
+     "note": ""
+    },
+    "82": {
+     "conf": "h",
+     "note": ""
+    },
+    "173": {
+     "conf": "h",
+     "note": ""
+    },
+    "484": {
+     "conf": "h",
+     "note": ""
+    },
+    "651": {
+     "conf": "h",
+     "note": ""
+    },
+    "704": {
+     "conf": "h",
+     "note": ""
+    },
+    "710": {
+     "conf": "h",
+     "note": ""
+    },
+    "935": {
+     "conf": "h",
+     "note": ""
+    },
+    "1059": {
+     "conf": "h",
+     "note": ""
+    },
+    "1084": {
+     "conf": "h",
+     "note": ""
+    },
+    "1188": {
+     "conf": "h",
+     "note": ""
+    },
+    "1204": {
+     "conf": "h",
+     "note": ""
+    },
+    "1336": {
+     "conf": "h",
+     "note": ""
+    },
+    "70": {
+     "conf": "m",
+     "note": "Poison from the sea, then the elephant"
+    },
+    "175": {
+     "conf": "m",
+     "note": ""
+    },
+    "403": {
+     "conf": "h",
+     "note": ""
+    },
+    "963": {
+     "conf": "m",
+     "note": ""
+    },
+    "1001": {
+     "conf": "h",
+     "note": "Elephant and the world-measuring; the ogress is in the Krishna file"
+    },
+    "1048": {
+     "conf": "m",
+     "note": "Elephant 'Mulame'; trees and flute in the Krishna file"
+    },
+    "1272": {
+     "conf": "m",
+     "note": "Crocodile, tortoise, dwarf, serpent bed"
+    },
+    "875": {
+     "conf": "l",
+     "note": "Per general-songs-review"
+    }
+   }
+  },
+  "avatar-samudra-manthana": {
+   "id": "avatar-samudra-manthana",
+   "domain": "avatar",
+   "eid": "samudra-manthana",
+   "title": "Churning the milk ocean",
+   "brief": "Gods and demons churn the milk ocean with Mount Mandara and the serpent Vasuki; poison is drunk by Shiva, nectar emerges, Vishnu as Mohini keeps it from the demons.",
+   "note": "",
+   "refs": [
+    {
+     "src": "Bhagavata Purana",
+     "ref": "SB 8.6.22-23",
+     "gist": "Vishnu tells the gods to use Mandara as the rod and Vasuki as the rope",
+     "pinned": true
+    },
+    {
+     "src": "Bhagavata Purana",
+     "ref": "SB 8.7.1-4",
+     "gist": "Vasuki summoned; the gods take the tail and the demons the head",
+     "pinned": true
+    },
+    {
+     "src": "Bhagavata Purana",
+     "ref": "SB 8.8.3-6",
+     "gist": "Uccaihshravas, Airavata, Kaustubha emerge",
+     "pinned": true
+    },
+    {
+     "src": "Bhagavata Purana",
+     "ref": "SB 8.8.17-17",
+     "gist": "Lakshmi takes her garland to Vishnu",
+     "pinned": true
+    },
+    {
+     "src": "Bhagavata Purana",
+     "ref": "SB 8.8.34-36",
+     "gist": "Dhanvantari appears with the jug of nectar; the demons snatch it",
+     "pinned": true
+    },
+    {
+     "src": "Valmiki Ramayana",
+     "ref": "Bala 45.17,18",
+     "gist": "The gods and demons decide to churn the Milky Ocean with Mandara and Vasuki",
+     "pinned": true
+    },
+    {
+     "src": "Vishnu Purana (Wilson)",
+     "ref": "VP 1.9",
+     "gist": "Wilson book I chapter IX (Legend of Lakshmi) contains the churning",
+     "pinned": true
+    }
+   ],
+   "dp": [
+    {
+     "prabandham": "Periya Thirumozhi",
+     "ref": "3.10.2",
+     "first": "venRi migu naragan",
+     "gist": "Names the churning of the ocean with the Mandara mountain for the devas; Mohini not mentioned; Arimeya Vinnagaram.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2022/11/periya-thirumozhi-3-10-2/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Thiruchchandha Viruththam (Thirumazhisai Alvar)",
+     "ref": "81",
+     "first": "kadaindha pARkadal",
+     "gist": "After Durvasa's curse the gods' wealth went into the milk ocean; the Lord churned it, then reclined there; the Lord stands at Thiruvengadam.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2024/01/thiruchchandha-viruththam-81/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Irandam Thiruvandhadhi (Bhutattalvar)",
+     "ref": "30",
+     "first": "nIyanRu ulagaLandhAy",
+     "gist": "Also names the churning of the dark ocean for Lakshmi and the nectar.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2017/10/irandam-thiruvandhadhi-30/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Thiruppavai",
+     "ref": "30",
+     "first": "vangak kadal kadaindha",
+     "gist": "Opens with 'the Madhava who churned the ocean'; only the title and a search snippet seen.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2015/01/thiruppavai-30-vangak-kadal-kadaindha-and-vazhi-thirunamam-etc/",
+     "confirmed": false
+    }
+   ],
+   "songs": {
+    "403": {
+     "conf": "h",
+     "note": ""
+    },
+    "11": {
+     "conf": "h",
+     "note": ""
+    },
+    "27": {
+     "conf": "l",
+     "note": "Sea churned; the poison-drinker is Shiva (Murugan's father)"
+    },
+    "169": {
+     "conf": "h",
+     "note": ""
+    },
+    "367": {
+     "conf": "h",
+     "note": ""
+    },
+    "723": {
+     "conf": "h",
+     "note": "Mountain planted, serpent wound round, nectar"
+    },
+    "952": {
+     "conf": "h",
+     "note": ""
+    },
+    "1044": {
+     "conf": "h",
+     "note": "Sea churned, Lakshmi won"
+    },
+    "1076": {
+     "conf": "h",
+     "note": "Mountain and moon whirled"
+    }
+   }
+  },
+  "avatar-halahala": {
+   "id": "avatar-halahala",
+   "domain": "avatar",
+   "eid": "halahala",
+   "title": "The poison drunk by Shiva",
+   "brief": "Gods and demons churn the milk ocean with Mount Mandara and the serpent Vasuki; poison is drunk by Shiva, nectar emerges, Vishnu as Mohini keeps it from the demons.",
+   "note": "",
+   "refs": [
+    {
+     "src": "Bhagavata Purana",
+     "ref": "SB 8.7.18-19",
+     "gist": "The kalakuta poison spreads; all go to Shiva",
+     "pinned": true
+    },
+    {
+     "src": "Bhagavata Purana",
+     "ref": "SB 8.7.42-42",
+     "gist": "Shiva drinks the poison from his palm",
+     "pinned": true
+    },
+    {
+     "src": "Valmiki Ramayana",
+     "ref": "Bala 45.19,20,25",
+     "gist": "Halahala rises from Vasuki and from the rocks; Shiva drinks it at Vishnu's word",
+     "pinned": true
+    }
+   ],
+   "dp": [
+    {
+     "prabandham": "Periya Thirumozhi",
+     "ref": "3.10.2",
+     "first": "venRi migu naragan",
+     "gist": "Names the churning of the ocean with the Mandara mountain for the devas; Mohini not mentioned; Arimeya Vinnagaram.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2022/11/periya-thirumozhi-3-10-2/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Thiruchchandha Viruththam (Thirumazhisai Alvar)",
+     "ref": "81",
+     "first": "kadaindha pARkadal",
+     "gist": "After Durvasa's curse the gods' wealth went into the milk ocean; the Lord churned it, then reclined there; the Lord stands at Thiruvengadam.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2024/01/thiruchchandha-viruththam-81/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Irandam Thiruvandhadhi (Bhutattalvar)",
+     "ref": "30",
+     "first": "nIyanRu ulagaLandhAy",
+     "gist": "Also names the churning of the dark ocean for Lakshmi and the nectar.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2017/10/irandam-thiruvandhadhi-30/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Thiruppavai",
+     "ref": "30",
+     "first": "vangak kadal kadaindha",
+     "gist": "Opens with 'the Madhava who churned the ocean'; only the title and a search snippet seen.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2015/01/thiruppavai-30-vangak-kadal-kadaindha-and-vazhi-thirunamam-etc/",
+     "confirmed": false
+    }
+   ],
+   "songs": {
+    "70": {
+     "conf": "m",
+     "note": "Poison from the sea, then the elephant"
+    },
+    "27": {
+     "conf": "l",
+     "note": "Sea churned; the poison-drinker is Shiva (Murugan's father)"
+    },
+    "46": {
+     "conf": "m",
+     "note": "Poison, then the nectar given to the gods"
+    },
+    "169": {
+     "conf": "h",
+     "note": ""
+    }
+   }
+  },
+  "avatar-mohini": {
+   "id": "avatar-mohini",
+   "domain": "avatar",
+   "eid": "mohini",
+   "title": "Mohini and the nectar",
+   "brief": "Gods and demons churn the milk ocean with Mount Mandara and the serpent Vasuki; poison is drunk by Shiva, nectar emerges, Vishnu as Mohini keeps it from the demons.",
+   "note": "Nectar given to the gods by Vishnu as Mohini.",
+   "refs": [
+    {
+     "src": "Bhagavata Purana",
+     "ref": "SB 8.9.2-2",
+     "gist": "The demons are charmed by the woman",
+     "pinned": true
+    },
+    {
+     "src": "Bhagavata Purana",
+     "ref": "SB 8.9.8-9",
+     "gist": "Mohini smiles and speaks to the demons",
+     "pinned": true
+    }
+   ],
+   "dp": [
+    {
+     "prabandham": "Periya Thirumozhi",
+     "ref": "3.10.2",
+     "first": "venRi migu naragan",
+     "gist": "Names the churning of the ocean with the Mandara mountain for the devas; Mohini not mentioned; Arimeya Vinnagaram.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2022/11/periya-thirumozhi-3-10-2/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Thiruchchandha Viruththam (Thirumazhisai Alvar)",
+     "ref": "81",
+     "first": "kadaindha pARkadal",
+     "gist": "After Durvasa's curse the gods' wealth went into the milk ocean; the Lord churned it, then reclined there; the Lord stands at Thiruvengadam.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2024/01/thiruchchandha-viruththam-81/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Irandam Thiruvandhadhi (Bhutattalvar)",
+     "ref": "30",
+     "first": "nIyanRu ulagaLandhAy",
+     "gist": "Also names the churning of the dark ocean for Lakshmi and the nectar.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2017/10/irandam-thiruvandhadhi-30/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Thiruppavai",
+     "ref": "30",
+     "first": "vangak kadal kadaindha",
+     "gist": "Opens with 'the Madhava who churned the ocean'; only the title and a search snippet seen.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2015/01/thiruppavai-30-vangak-kadal-kadaindha-and-vazhi-thirunamam-etc/",
+     "confirmed": false
+    }
+   ],
+   "songs": {
+    "46": {
+     "conf": "m",
+     "note": "Poison, then the nectar given to the gods"
+    },
+    "169": {
+     "conf": "h",
+     "note": ""
+    },
+    "367": {
+     "conf": "h",
+     "note": ""
+    },
+    "952": {
+     "conf": "h",
+     "note": ""
+    }
+   }
+  },
+  "avatar-kurma": {
+   "id": "avatar-kurma",
+   "domain": "avatar",
+   "eid": "kurma",
+   "title": "The tortoise avatar",
+   "brief": "Vishnu as a tortoise holds Mount Mandara on his back during the churning.",
+   "note": "",
+   "refs": [
+    {
+     "src": "Bhagavata Purana",
+     "ref": "SB 8.5.10-10",
+     "gist": "Ajita churns the ocean and bears Mandara as a tortoise",
+     "pinned": true
+    },
+    {
+     "src": "Bhagavata Purana",
+     "ref": "SB 8.7.6-8",
+     "gist": "Mandara sinks; the Lord takes a tortoise form and holds it",
+     "pinned": true
+    },
+    {
+     "src": "Valmiki Ramayana",
+     "ref": "Bala 45.29",
+     "gist": "Vishnu as a tortoise holds Mandara at the bottom",
+     "pinned": true
+    },
+    {
+     "src": "Vishnu Purana (Wilson)",
+     "ref": "VP 1.9",
+     "gist": "Same chapter mentions the tortoise",
+     "pinned": true
+    }
+   ],
+   "dp": [
+    {
+     "prabandham": "Periyazhwar Thirumozhi",
+     "ref": "3.3.7",
+     "first": "panRiyum Amaiyum mInamum Agiya pARkadal vaNNA",
+     "gist": "Yashoda addresses Krishna as the Lord who took boar, tortoise and fish forms.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2026/04/periyazhwar-thirumozhi-3-3-7/",
+     "confirmed": true
+    }
+   ],
+   "songs": {
+    "1272": {
+     "conf": "m",
+     "note": "Crocodile, tortoise, dwarf, serpent bed"
+    },
+    "723": {
+     "conf": "h",
+     "note": "Mountain planted, serpent wound round, nectar"
+    }
+   }
+  },
+  "avatar-vamana": {
+   "id": "avatar-vamana",
+   "domain": "avatar",
+   "eid": "vamana",
+   "title": "Vamana and Mahabali; Trivikrama",
+   "brief": "The dwarf Vamana asks King Bali for three paces of land, then grows to measure the worlds with two steps and sends Bali to Sutala with the third.",
+   "note": "Bhagavata's third step is placed on Bali's head at 8.22; the Thiruppugazh lines mostly say 'measured the worlds'.",
+   "refs": [
+    {
+     "src": "Bhagavata Purana",
+     "ref": "SB 8.18.12-13",
+     "gist": "The dwarf brahmachari appears before the sages",
+     "pinned": true
+    },
+    {
+     "src": "Bhagavata Purana",
+     "ref": "SB 8.19.16-16",
+     "gist": "He asks Bali for three paces of land",
+     "pinned": true
+    },
+    {
+     "src": "Bhagavata Purana",
+     "ref": "SB 8.20.23-23",
+     "gist": "Bali sees the worlds on the soles of the Lord's cosmic form",
+     "pinned": true
+    },
+    {
+     "src": "Bhagavata Purana",
+     "ref": "SB 8.20.34-34",
+     "gist": "The second step covers the heavens; no space for a third",
+     "pinned": true
+    },
+    {
+     "src": "Bhagavata Purana",
+     "ref": "SB 8.21.26-27",
+     "gist": "Garuda binds Bali with Varuna's ropes",
+     "pinned": true
+    },
+    {
+     "src": "Bhagavata Purana",
+     "ref": "SB 8.22.32-33",
+     "gist": "Bali is sent to Sutala",
+     "pinned": true
+    },
+    {
+     "src": "Valmiki Ramayana",
+     "ref": "Bala 29.9,19,20",
+     "gist": "Gods ask Vishnu to take the dwarf form for Bali; the dwarf is born of Aditi; he is Trivikrama",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "வேள்விப் படலம் 8, 10, 11, 12, 15, 23, 24, 25, 26, 27",
+     "gist": "Viswamitra's account: Mavali, the dwarf, three paces, growth, return to the milk-ocean bed",
+     "quote": "'ஆனவன் இங்கு உறைகின்ற அந் நாள்வாய் / ஊனம் இல் ஞாலம் ஒடுங்கும் எயிற்று ஆண் / ஏனம் எனும் திறல் மாவலி என்பான், / வானமும் வையமும் வவ்வுதல் செய்தான்;",
+     "pinned": true
+    }
+   ],
+   "dp": [
+    {
+     "prabandham": "Thiruppavai",
+     "ref": "3",
+     "first": "Ongi ulagaLandha",
+     "gist": "Singing the name of the Lord who grew tall and measured the worlds brings rain and plenty.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2014/12/thiruppavai-03-ongi-ulagalandha/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Thiruppavai",
+     "ref": "24",
+     "first": "anRu ivvulagam aLandhAi",
+     "gist": "A litany of deeds: measuring the worlds, destroying Lanka, kicking the cart demon, the calf and wood-apple demons, lifting Govardhana.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2015/01/thiruppavai-24-anru-ivvulagam/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Mudhal Thiruvandhadhi (Poigai Alvar)",
+     "ref": "20",
+     "first": "peRRAr thaLai kazhalap pErndhu",
+     "gist": "Envies those who saw the Lord's births, including Krishna's birth and the dwarf who measured Mahabali's worlds.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2017/06/mudhal-thiruvandhadhi-20/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Irandam Thiruvandhadhi (Bhutattalvar)",
+     "ref": "30",
+     "first": "nIyanRu ulagaLandhAy",
+     "gist": "Recalls Trivikrama's measuring after taking the worlds as alms from Mahabali, with Varaha, the churning and the bridge.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2017/10/irandam-thiruvandhadhi-30/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Nanmugan Thiruvandhadhi (Thirumazhisai Alvar)",
+     "ref": "9",
+     "first": "kuRai koNdu nAnmugan kuNdigai nIr peydhu",
+     "gist": "Brahma washes the Lord's measuring foot with kamandalu water, which falls on Shiva's head; Mahabali and Trivikrama.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2018/06/nanmugan-thiruvandhadhi-9/",
+     "confirmed": true
+    }
+   ],
+   "songs": {
+    "963": {
+     "conf": "m",
+     "note": ""
+    },
+    "1001": {
+     "conf": "h",
+     "note": "Elephant and the world-measuring; the ogress is in the Krishna file"
+    },
+    "1272": {
+     "conf": "m",
+     "note": "Crocodile, tortoise, dwarf, serpent bed"
+    },
+    "367": {
+     "conf": "h",
+     "note": ""
+    },
+    "134": {
+     "conf": "h",
+     "note": "Srirangam lord on the serpent; measured the world"
+    },
+    "248": {
+     "conf": "h",
+     "note": "Mahabali imprisoned"
+    },
+    "289": {
+     "conf": "m",
+     "note": "The dwarf; envoy and butter are in the Krishna file"
+    },
+    "293": {
+     "conf": "h",
+     "note": ""
+    },
+    "573": {
+     "conf": "m",
+     "note": "The dwarf who 'measured'; the war is in the Krishna file"
+    },
+    "771": {
+     "conf": "m",
+     "note": ""
+    },
+    "841": {
+     "conf": "h",
+     "note": "Mahabali sent down with a step"
+    },
+    "912": {
+     "conf": "m",
+     "note": "Foot measuring the fourteen worlds"
+    },
+    "970": {
+     "conf": "h",
+     "note": "Measured the earth; on the banyan leaf; butter is in the Krishna file"
+    },
+    "1008": {
+     "conf": "m",
+     "note": ""
+    },
+    "1103": {
+     "conf": "m",
+     "note": "Measured and swallowed the earth"
+    },
+    "1256": {
+     "conf": "m",
+     "note": "Asks the king for a gift"
+    },
+    "1311": {
+     "conf": "h",
+     "note": ""
+    },
+    "1325": {
+     "conf": "l",
+     "note": "Per general-songs-review: Trivikrama; the rest of the song is about the jewels"
+    }
+   }
+  },
+  "avatar-narasimha": {
+   "id": "avatar-narasimha",
+   "domain": "avatar",
+   "eid": "narasimha",
+   "title": "Narasimha and Hiranyakashipu",
+   "brief": "Vishnu appears from a pillar as man-lion at dusk and tears open the demon Hiranyakashipu to save his son Prahlada.",
+   "note": "Kamba places the Narasimha story inside the Yuddha Kandam as Vibhishana's warning to Ravana.",
+   "refs": [
+    {
+     "src": "Bhagavata Purana",
+     "ref": "SB 7.8.15-18",
+     "gist": "A sound from the pillar; the man-lion form emerges",
+     "pinned": true
+    },
+    {
+     "src": "Bhagavata Purana",
+     "ref": "SB 7.8.29-31",
+     "gist": "He seizes Hiranyakashipu and tears him open",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "இரணியன் வதைப் படலம் 123, 127, 130, 147, 153",
+     "gist": "Kamba's Narasimha story (told by Vibhishana to Ravana): the pillar, the lion's birth, the fight, the chest torn at dusk at the palace door",
+     "quote": "'என்றலும், அவுணர் வேந்தன் எயிற்று அரும்பு இலங்க நக்கான், / \"ஒன்றல் இல் பொருள்கள் எல்லாம் ஒருவன் புக்கு உறைவன் - என்றாய்; / நன்று அது கண்டு, பின்னர் நல்லவா புரிதும்; தூணில",
+     "pinned": true
+    },
+    {
+     "src": "Vishnu Purana (Wilson)",
+     "ref": "VP 1.20",
+     "gist": "Wilson book I chapter XX: Vishnu appears to Prahlada",
+     "pinned": true
+    }
+   ],
+   "dp": [
+    {
+     "prabandham": "Periya Thirumozhi",
+     "ref": "1.10.5",
+     "first": "thUNAy adhanUdu",
+     "gist": "The Lord came out of the pillar and tore Hiranya's chest; the decad is at Thiruvenkatam (Thirumala).",
+     "url": "https://divyaprabandham.koyil.org/index.php/2021/07/periya-thirumozhi-1-10-5/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periya Thirumozhi",
+     "ref": "3.10.4",
+     "first": "OdAdha vAL ariyin",
+     "gist": "Narasimha opens Hiranya's chest with his nails and shows Prahlada mercy; at Arimeya Vinnagaram, Thirunangur.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2022/11/periya-thirumozhi-3-10-4/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periya Thirumozhi",
+     "ref": "3.3.8",
+     "first": "pongi amaril",
+     "gist": "When Hiranya attacked Prahlada the Lord appeared as Narasimha and tore him; at Thillai Chitrakoodam.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2022/07/periya-thirumozhi-3-3-8/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periya Thirumozhi",
+     "ref": "7.7.5",
+     "first": "viNdAn viN puga",
+     "gist": "Search snippet only: Narasimha holds and tears Hiranya's chest.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2025/11/periya-thirumozhi-7-7-5/",
+     "confirmed": false
+    },
+    {
+     "prabandham": "Nanmugan Thiruvandhadhi",
+     "ref": "18",
+     "first": "(not seen)",
+     "gist": "Cited by a commentary as describing Narasimha splitting Hiranya's chest; page not opened.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2021/10/periya-thirumozhi-2-6/",
+     "confirmed": false
+    }
+   ],
+   "songs": {
+    "88": {
+     "conf": "h",
+     "note": ""
+    },
+    "526": {
+     "conf": "h",
+     "note": ""
+    },
+    "872": {
+     "conf": "h",
+     "note": ""
+    },
+    "887": {
+     "conf": "h",
+     "note": ""
+    },
+    "1174": {
+     "conf": "h",
+     "note": ""
+    },
+    "150": {
+     "conf": "h",
+     "note": ""
+    },
+    "545": {
+     "conf": "h",
+     "note": ""
+    },
+    "652": {
+     "conf": "h",
+     "note": "Hiranya torn; sleeps at Srirangam"
+    },
+    "1006": {
+     "conf": "h",
+     "note": "Prahlada and the lion; the Kaliya dance is in the Krishna file"
+    },
+    "1183": {
+     "conf": "m",
+     "note": "Hiranya's chest; the rope-binding and hill are in the Krishna file"
+    }
+   }
+  },
+  "avatar-varaha": {
+   "id": "avatar-varaha",
+   "domain": "avatar",
+   "eid": "varaha",
+   "title": "Varaha lifts the earth",
+   "brief": "Vishnu lifts the earth from the cosmic ocean on his tusks and kills the demon Hiranyaksha.",
+   "note": "",
+   "refs": [
+    {
+     "src": "Bhagavata Purana",
+     "ref": "SB 3.13.18-18",
+     "gist": "A tiny boar comes from Brahma's nostril",
+     "pinned": true
+    },
+    {
+     "src": "Bhagavata Purana",
+     "ref": "SB 3.13.28-31",
+     "gist": "The boar searches, dives and lifts the earth on his tusks",
+     "pinned": true
+    },
+    {
+     "src": "Vishnu Purana (Wilson)",
+     "ref": "VP 1.4",
+     "gist": "Wilson book I chapter IV: Narayana as Varaha",
+     "pinned": true
+    }
+   ],
+   "dp": [
+    {
+     "prabandham": "Periya Thirumozhi",
+     "ref": "8.8.3",
+     "first": "pArAr aLavum",
+     "gist": "The Lord who as Varaha lifted the earth from the flood; at Thirukkannapuram.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2026/07/periya-thirumozhi-8-8-3/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periyazhwar Thirumozhi",
+     "ref": "3.3.7",
+     "first": "panRiyum Amaiyum mInamum Agiya pARkadal vaNNA",
+     "gist": "Names the boar form first among three.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2026/04/periyazhwar-thirumozhi-3-3-7/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Irandam Thiruvandhadhi (Bhutattalvar)",
+     "ref": "30",
+     "first": "nIyanRu ulagaLandhAy",
+     "gist": "Names the boar lifting the earth drowned in the deluge.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2017/10/irandam-thiruvandhadhi-30/",
+     "confirmed": true
+    }
+   ],
+   "songs": {
+    "545": {
+     "conf": "h",
+     "note": ""
+    },
+    "233": {
+     "conf": "m",
+     "note": "Per general-songs-review: boar lifting the earth"
+    }
+   }
+  },
+  "avatar-brahma-origin": {
+   "id": "avatar-brahma-origin",
+   "domain": "avatar",
+   "eid": "brahma-origin",
+   "title": "Brahma born from Vishnu's navel lotus",
+   "brief": "Brahma sits on the lotus that grows from Vishnu's navel; Murugan is Vishnu's nephew and Brahma's rival.",
+   "note": "",
+   "refs": [
+    {
+     "src": "Bhagavata Purana",
+     "ref": "SB 3.8.14-16",
+     "gist": "A lotus grows from Vishnu; Brahma is born in it",
+     "pinned": true
+    }
+   ],
+   "dp": [
+    {
+     "prabandham": "Nanmugan Thiruvandhadhi (Thirumazhisai Alvar)",
+     "ref": "1",
+     "first": "nAnmuganai nArAyaNan padaiththAn",
+     "gist": "Narayana created four-faced Brahma, who created Shiva; Brahma is born from Narayana.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2018/06/nanmugan-thiruvandhadhi-1/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periya Thirumozhi",
+     "ref": "5.4.1",
+     "first": "(not seen)",
+     "gist": "Search snippet: the Lord made four-headed Brahma on the lotus of his navel; page not opened.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2023/08/periya-thirumozhi-5-4-1/",
+     "confirmed": false
+    }
+   ],
+   "songs": {
+    "175": {
+     "conf": "m",
+     "note": ""
+    },
+    "150": {
+     "conf": "h",
+     "note": ""
+    },
+    "612": {
+     "conf": "m",
+     "note": "Narayana as father of the four-faced"
+    },
+    "743": {
+     "conf": "m",
+     "note": ""
+    }
+   }
+  },
+  "avatar-adisesha": {
+   "id": "avatar-adisesha",
+   "domain": "avatar",
+   "eid": "adisesha",
+   "title": "Vishnu lying on Adisesha in the milk ocean",
+   "brief": "A repeating image rather than a story: Vishnu asleep on the serpent bed (Ananta/Adisesha) in the milk ocean.",
+   "note": "A repeating image rather than one story; the temple songs (Srirangam, Kanchi, Tirupati) use the same image.",
+   "refs": [
+    {
+     "src": "Bhagavata Purana",
+     "ref": "SB 3.8.10-10",
+     "gist": "Vishnu alone on the serpent Ananta over the waters",
+     "pinned": true
+    },
+    {
+     "src": "Bhagavata Purana",
+     "ref": "SB 3.8.23-23",
+     "gist": "Brahma sees the serpent-bed on the water",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "வேள்விப் படலம் 27",
+     "gist": "After the Vamana story Vishnu returns to his bed on the milk ocean",
+     "quote": "'\"உரியது இந்திரற்கு இது\" என்று, உலகம் ஈந்து போய், / விரி திரைப் பாற்றுடல் பள்ளி மேவினான்; / கரியவன், உலகு எலாம் கடந்த தாள் இணை / திருமகள் கரம் செக்கச் சிவந்து காட்டிற்றே!",
+     "pinned": true
+    }
+   ],
+   "dp": [
+    {
+     "prabandham": "Thiruppavai",
+     "ref": "6",
+     "first": "puLLum silambina kAN (புள்ளும் சிலம்பினகாண்)",
+     "gist": "Recalls the Lord's childhood victories over Putana and the cart, and his rest on Adisesha.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2014/12/thiruppavai-06-pullum-silambina-kan/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periya Thirumozhi",
+     "ref": "8.9.2",
+     "first": "tharumAna mazhai mugilai",
+     "gist": "The Lord reclining in the milk ocean, wish-fulfilling and generous; the poet surrenders.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2026/07/periya-thirumozhi-8-9-2/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Mudhal Thiruvandhadhi (Poigai Alvar)",
+     "ref": "19",
+     "first": "mAlum karum kadalE",
+     "gist": "Envies the ocean on which the Lord reclines.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2017/06/mudhal-thiruvandhadhi-19/",
+     "confirmed": true
+    }
+   ],
+   "songs": {
+    "1272": {
+     "conf": "m",
+     "note": "Crocodile, tortoise, dwarf, serpent bed"
+    },
+    "11": {
+     "conf": "h",
+     "note": ""
+    },
+    "46": {
+     "conf": "m",
+     "note": "Poison, then the nectar given to the gods"
+    },
+    "134": {
+     "conf": "h",
+     "note": "Srirangam lord on the serpent; measured the world"
+    },
+    "1008": {
+     "conf": "m",
+     "note": ""
+    },
+    "150": {
+     "conf": "h",
+     "note": ""
+    },
+    "168": {
+     "conf": "m",
+     "note": ""
+    },
+    "199": {
+     "conf": "m",
+     "note": ""
+    },
+    "253": {
+     "conf": "m",
+     "note": ""
+    },
+    "525": {
+     "conf": "m",
+     "note": ""
+    },
+    "679": {
+     "conf": "l",
+     "note": "Milk-sea sleep"
+    },
+    "693": {
+     "conf": "m",
+     "note": ""
+    },
+    "738": {
+     "conf": "m",
+     "note": ""
+    },
+    "806": {
+     "conf": "m",
+     "note": ""
+    },
+    "828": {
+     "conf": "m",
+     "note": ""
+    },
+    "881": {
+     "conf": "m",
+     "note": ""
+    },
+    "987": {
+     "conf": "m",
+     "note": ""
+    },
+    "1075": {
+     "conf": "m",
+     "note": ""
+    },
+    "1081": {
+     "conf": "m",
+     "note": ""
+    },
+    "1091": {
+     "conf": "m",
+     "note": ""
+    },
+    "1237": {
+     "conf": "m",
+     "note": ""
+    },
+    "1253": {
+     "conf": "m",
+     "note": ""
+    },
+    "895": {
+     "conf": "m",
+     "note": "Serpent bed at Kanchi"
+    },
+    "534": {
+     "conf": "l",
+     "note": "Per general-songs-review"
+    },
+    "587": {
+     "conf": "l",
+     "note": "Per general-songs-review"
+    },
+    "808": {
+     "conf": "l",
+     "note": "Per general-songs-review"
+    }
+   }
+  },
+  "avatar-pralaya": {
+   "id": "avatar-pralaya",
+   "domain": "avatar",
+   "eid": "pralaya",
+   "title": "The banyan-leaf child; worlds swallowed",
+   "brief": "At the end of a cycle the world is held in Vishnu's belly; he lies as a child on a banyan leaf.",
+   "note": "",
+   "refs": [
+    {
+     "src": "Bhagavata Purana",
+     "ref": "SB 12.9.20-21",
+     "gist": "Markandeya sees an infant on a banyan leaf in the flood",
+     "pinned": true
+    },
+    {
+     "src": "Bhagavata Purana",
+     "ref": "SB 12.9.27-27",
+     "gist": "The child inhales and draws the sage inside, where the universe lies as before",
+     "pinned": true
+    }
+   ],
+   "dp": [
+    {
+     "prabandham": "Mudhal Thiruvandhadhi (Poigai Alvar)",
+     "ref": "19",
+     "first": "mAlum karum kadalE",
+     "gist": "Envies the ocean touched by the Lord's form; names Trivikrama, the deluge when he swallowed the worlds and lay on a banyan leaf, and Rama.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2017/06/mudhal-thiruvandhadhi-19/",
+     "confirmed": true
+    }
+   ],
+   "songs": {
+    "970": {
+     "conf": "h",
+     "note": "Measured the earth; on the banyan leaf; butter is in the Krishna file"
+    },
+    "1103": {
+     "conf": "m",
+     "note": "Measured and swallowed the earth"
+    },
+    "276": {
+     "conf": "m",
+     "note": "He who swallowed the world"
+    },
+    "402": {
+     "conf": "m",
+     "note": "He who swallowed the worlds"
+    },
+    "727": {
+     "conf": "m",
+     "note": "Banyan leaf; Ooragam (Kanchi)"
+    }
+   }
+  },
+  "avatar-temple": {
+   "id": "avatar-temple",
+   "domain": "avatar",
+   "eid": "temple",
+   "title": "Temple Vishnu (Srirangam, Kanchi, Tirupati)",
+   "brief": "Ranganatha reclining on Adisesha at Srirangam.",
+   "note": "No Bhagavata or Mahabharata reference. These lines praise a divya desam image; use the Divya Prabandham pass.",
+   "refs": [],
+   "dp": [
+    {
+     "prabandham": "Perumal Thirumozhi (Kulasekhara)",
+     "ref": "1.1",
+     "first": "iruLiriyach chudarmaNigaL",
+     "gist": "Longing to behold Periya Perumal reclining on Adisesha at Srirangam.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2023/05/perumal-thirumozhi-1-1/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Thiruppalliyezhuchchi (Thondaradippodi)",
+     "ref": "10",
+     "first": "kadimalark kamalangal",
+     "gist": "Wakes Ranganatha at dawn and asks to be accepted as a servant of his devotees.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2015/01/thiruppalliyezhuchchi-10-kadimalar/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periyazhwar Thirumozhi",
+     "ref": "4.10.2",
+     "first": "sAmidaththu ennai",
+     "gist": "Asks the Lord at Srirangam, who bears conch and discus, to keep him in mind at death.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2026/10/periyazhwar-thirumozhi-4-10-2/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periya Thirumozhi",
+     "ref": "1.10.5",
+     "first": "thUNAy adhanUdu",
+     "gist": "Narasimha at thiruvEngada mAmalai (Thirumala).",
+     "url": "https://divyaprabandham.koyil.org/index.php/2021/07/periya-thirumozhi-1-10-5/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Thiruvaimozhi (Nammazhwar)",
+     "ref": "6.10.10",
+     "first": "agalagillEn iRaiyum",
+     "gist": "Surrender at the feet of thiruvEngadaththAn; Lakshmi's words 'I will not leave you even a moment'.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2018/06/thiruvaimozhi-6-10-10-agalagillen-part-1/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Perumal Thirumozhi (Kulasekhara)",
+     "ref": "4.2",
+     "first": "AnAdha selvaththu",
+     "gist": "Would rather be born a fish in the pool at thiruvEngadam than rule heaven or earth.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2023/07/perumal-thirumozhi-4-2/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periyazhwar Thirumozhi",
+     "ref": "3.3.4",
+     "first": "kadiyAr pozhil",
+     "gist": "Yashoda calls Krishna 'vEngadavA' as he grazes calves without sandals or umbrella.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2026/04/periyazhwar-thirumozhi-3-3-4/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Thiruchchandha Viruththam",
+     "ref": "81",
+     "first": "kadaindha pARkadal",
+     "gist": "The Lord stands at thiruvEngadam so all can take refuge at his feet.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2024/01/thiruchchandha-viruththam-81/",
+     "confirmed": true
+    },
+    {
+     "prabandham": "Periya Thirumozhi",
+     "ref": "1.5.4",
+     "first": "UrAn kudandhai",
+     "gist": "Names thiruvUragam (Kanchi) among the Lord's abodes, with Kudandhai, Thiruppernagar and Salagramam; also Rama's victories.",
+     "url": "https://divyaprabandham.koyil.org/index.php/2021/04/periya-thirumozhi-1-5-4/",
+     "confirmed": true
+    }
+   ],
+   "songs": {
+    "134": {
+     "conf": "h",
+     "note": "Srirangam lord on the serpent; measured the world"
+    },
+    "652": {
+     "conf": "h",
+     "note": "Hiranya torn; sleeps at Srirangam"
+    },
+    "727": {
+     "conf": "m",
+     "note": "Banyan leaf; Ooragam (Kanchi)"
+    },
+    "895": {
+     "conf": "m",
+     "note": "Serpent bed at Kanchi"
+    },
+    "362": {
+     "conf": "m",
+     "note": ""
+    },
+    "549": {
+     "conf": "m",
+     "note": ""
+    },
+    "812": {
+     "conf": "h",
+     "note": "Vengadam (Tirupati)"
+    },
+    "971": {
+     "conf": "m",
+     "note": ""
+    }
+   }
+  }
+ },
+ "songs": {
+  "68": [
+   "ramayana-birth"
+  ],
+  "366": [
+   "ramayana-tataka",
+   "ramayana-yajna"
+  ],
+  "649": [
+   "ramayana-tataka",
+   "ramayana-bow"
+  ],
+  "483": [
+   "ramayana-ahalya"
+  ],
+  "669": [
+   "ramayana-ahalya"
+  ],
+  "799": [
+   "ramayana-bow"
+  ],
+  "968": [
+   "ramayana-bow",
+   "ramayana-exile"
+  ],
+  "597": [
+   "ramayana-exile",
+   "ramayana-vali",
+   "ramayana-ravana-death"
+  ],
+  "1265": [
+   "ramayana-exile",
+   "ramayana-lanka-burnt"
+  ],
+  "228": [
+   "ramayana-kaka"
+  ],
+  "961": [
+   "ramayana-khara",
+   "ramayana-kumbhakarna"
+  ],
+  "1295": [
+   "ramayana-khara"
+  ],
+  "272": [
+   "ramayana-sita-abduction",
+   "ramayana-heads-cut"
+  ],
+  "1325": [
+   "ramayana-sita-jewels",
+   "avatar-vamana"
+  ],
+  "113": [
+   "ramayana-maricha",
+   "ramayana-vali"
+  ],
+  "731": [
+   "ramayana-seven-trees",
+   "ramayana-vali",
+   "ramayana-heads-cut"
+  ],
+  "266": [
+   "ramayana-garland",
+   "ramayana-vali"
+  ],
+  "882": [
+   "ramayana-vali",
+   "ramayana-army-destroyed"
+  ],
+  "437": [
+   "ramayana-vali"
+  ],
+  "840": [
+   "ramayana-vali",
+   "ramayana-setu",
+   "ramayana-vibhishana-crown"
+  ],
+  "128": [
+   "ramayana-sugriva-crown",
+   "ramayana-vibhishana-crown"
+  ],
+  "1231": [
+   "ramayana-army-march",
+   "ramayana-lanka-burnt",
+   "ramayana-heads-cut"
+  ],
+  "941": [
+   "ramayana-army-march",
+   "ramayana-lanka-burnt"
+  ],
+  "200": [
+   "ramayana-lanka-burnt",
+   "ramayana-army-destroyed",
+   "ramayana-heads-cut"
+  ],
+  "373": [
+   "ramayana-lanka-burnt",
+   "ramayana-setu",
+   "ramayana-army-destroyed"
+  ],
+  "700": [
+   "ramayana-lanka-burnt",
+   "ramayana-setu"
+  ],
+  "835": [
+   "ramayana-lanka-burnt",
+   "ramayana-kumbha"
+  ],
+  "738": [
+   "ramayana-ocean-arrow",
+   "avatar-adisesha"
+  ],
+  "771": [
+   "ramayana-ocean-arrow",
+   "krishna-yamalarjuna",
+   "avatar-vamana"
+  ],
+  "820": [
+   "ramayana-ocean-arrow"
+  ],
+  "1091": [
+   "ramayana-ocean-arrow",
+   "krishna-yamalarjuna",
+   "avatar-adisesha"
+  ],
+  "1125": [
+   "ramayana-ocean-arrow",
+   "ramayana-setu"
+  ],
+  "237": [
+   "ramayana-ocean-arrow"
+  ],
+  "19": [
+   "ramayana-setu",
+   "ramayana-ravana-death"
+  ],
+  "29": [
+   "ramayana-setu",
+   "ramayana-heads-cut"
+  ],
+  "166": [
+   "ramayana-setu",
+   "ramayana-heads-cut",
+   "ramayana-sita-freed"
+  ],
+  "203": [
+   "ramayana-setu",
+   "ramayana-heads-cut"
+  ],
+  "750": [
+   "ramayana-setu",
+   "ramayana-army-destroyed"
+  ],
+  "807": [
+   "ramayana-setu",
+   "ramayana-army-destroyed"
+  ],
+  "839": [
+   "ramayana-setu",
+   "ramayana-army-destroyed"
+  ],
+  "1218": [
+   "ramayana-setu",
+   "ramayana-heads-cut"
+  ],
+  "1316": [
+   "ramayana-setu",
+   "ramayana-heads-cut"
+  ],
+  "655": [
+   "ramayana-setu"
+  ],
+  "623": [
+   "ramayana-vibhishana-refuge",
+   "ramayana-army-destroyed"
+  ],
+  "27": [
+   "ramayana-army-destroyed",
+   "avatar-samudra-manthana",
+   "avatar-halahala"
+  ],
+  "66": [
+   "ramayana-army-destroyed",
+   "ramayana-heads-cut"
+  ],
+  "230": [
+   "ramayana-army-destroyed",
+   "ramayana-heads-cut"
+  ],
+  "524": [
+   "ramayana-army-destroyed",
+   "ramayana-heads-cut"
+  ],
+  "707": [
+   "ramayana-army-destroyed",
+   "ramayana-ravana-death"
+  ],
+  "788": [
+   "ramayana-army-destroyed",
+   "ramayana-sita-freed"
+  ],
+  "806": [
+   "ramayana-army-destroyed",
+   "krishna-embassy",
+   "avatar-adisesha"
+  ],
+  "845": [
+   "ramayana-army-destroyed",
+   "ramayana-heads-cut"
+  ],
+  "876": [
+   "ramayana-army-destroyed"
+  ],
+  "893": [
+   "ramayana-army-destroyed"
+  ],
+  "9": [
+   "ramayana-army-destroyed"
+  ],
+  "95": [
+   "ramayana-army-destroyed"
+  ],
+  "44": [
+   "ramayana-heads-cut"
+  ],
+  "89": [
+   "ramayana-heads-cut"
+  ],
+  "115": [
+   "ramayana-heads-cut"
+  ],
+  "236": [
+   "ramayana-heads-cut",
+   "ramayana-ravana-death"
+  ],
+  "248": [
+   "ramayana-heads-cut",
+   "krishna-mausala",
+   "avatar-vamana"
+  ],
+  "252": [
+   "ramayana-heads-cut",
+   "ramayana-sita-freed"
+  ],
+  "293": [
+   "ramayana-heads-cut",
+   "avatar-vamana"
+  ],
+  "365": [
+   "ramayana-heads-cut"
+  ],
+  "381": [
+   "ramayana-heads-cut"
+  ],
+  "435": [
+   "ramayana-heads-cut",
+   "ramayana-sita-freed"
+  ],
+  "466": [
+   "ramayana-heads-cut"
+  ],
+  "481": [
+   "ramayana-heads-cut"
+  ],
+  "489": [
+   "ramayana-heads-cut"
+  ],
+  "512": [
+   "ramayana-heads-cut"
+  ],
+  "540": [
+   "ramayana-heads-cut"
+  ],
+  "633": [
+   "ramayana-heads-cut"
+  ],
+  "644": [
+   "ramayana-heads-cut"
+  ],
+  "684": [
+   "ramayana-heads-cut"
+  ],
+  "737": [
+   "ramayana-heads-cut"
+  ],
+  "745": [
+   "ramayana-heads-cut"
+  ],
+  "826": [
+   "ramayana-heads-cut"
+  ],
+  "833": [
+   "ramayana-heads-cut",
+   "ramayana-sita-freed"
+  ],
+  "838": [
+   "ramayana-heads-cut"
+  ],
+  "841": [
+   "ramayana-heads-cut",
+   "ramayana-vibhishana-crown",
+   "avatar-vamana"
+  ],
+  "874": [
+   "ramayana-heads-cut"
+  ],
+  "887": [
+   "ramayana-heads-cut",
+   "avatar-narasimha"
+  ],
+  "895": [
+   "ramayana-heads-cut",
+   "avatar-adisesha",
+   "avatar-temple"
+  ],
+  "977": [
+   "ramayana-heads-cut"
+  ],
+  "1007": [
+   "ramayana-heads-cut"
+  ],
+  "1008": [
+   "ramayana-heads-cut",
+   "avatar-vamana",
+   "avatar-adisesha"
+  ],
+  "1012": [
+   "ramayana-heads-cut"
+  ],
+  "1132": [
+   "ramayana-heads-cut"
+  ],
+  "1144": [
+   "ramayana-heads-cut"
+  ],
+  "1153": [
+   "ramayana-heads-cut"
+  ],
+  "1162": [
+   "ramayana-heads-cut",
+   "ramayana-ravana-death"
+  ],
+  "1197": [
+   "ramayana-heads-cut"
+  ],
+  "1245": [
+   "ramayana-heads-cut"
+  ],
+  "73": [
+   "ramayana-ravana-death"
+  ],
+  "227": [
+   "ramayana-ravana-death"
+  ],
+  "703": [
+   "ramayana-ravana-death",
+   "ramayana-sita-freed"
+  ],
+  "959": [
+   "ramayana-ravana-death",
+   "ramayana-return"
+  ],
+  "161": [
+   "ramayana-sita-agni",
+   "ramayana-vibhishana-crown"
+  ],
+  "423": [
+   "ramayana-vibhishana-crown"
+  ],
+  "626": [
+   "krishna-putana",
+   "krishna-bakasura"
+  ],
+  "1001": [
+   "krishna-putana",
+   "avatar-gajendra",
+   "avatar-vamana"
+  ],
+  "116": [
+   "krishna-sakata",
+   "krishna-yamalarjuna",
+   "krishna-govardhana"
+  ],
+  "186": [
+   "krishna-sakata",
+   "krishna-yamalarjuna",
+   "krishna-govardhana"
+  ],
+  "1157": [
+   "krishna-sakata",
+   "krishna-kuvalayapida"
+  ],
+  "193": [
+   "krishna-sakata",
+   "krishna-clothes"
+  ],
+  "121": [
+   "krishna-butter-pot"
+  ],
+  "156": [
+   "krishna-butter-pot",
+   "krishna-mortar-bound"
+  ],
+  "178": [
+   "krishna-butter-pot",
+   "krishna-mortar-bound"
+  ],
+  "289": [
+   "krishna-butter-pot",
+   "krishna-embassy",
+   "avatar-vamana"
+  ],
+  "683": [
+   "krishna-butter-pot"
+  ],
+  "970": [
+   "krishna-butter-pot",
+   "avatar-vamana",
+   "avatar-pralaya"
+  ],
+  "987": [
+   "krishna-butter-pot",
+   "avatar-adisesha"
+  ],
+  "1019": [
+   "krishna-butter-pot"
+  ],
+  "1098": [
+   "krishna-butter-pot",
+   "krishna-mortar-bound"
+  ],
+  "14": [
+   "krishna-butter-pot"
+  ],
+  "674": [
+   "krishna-mud-mouth",
+   "krishna-govardhana"
+  ],
+  "1170": [
+   "krishna-mud-mouth",
+   "krishna-flute"
+  ],
+  "629": [
+   "krishna-mortar-bound"
+  ],
+  "908": [
+   "krishna-mortar-bound",
+   "krishna-yamalarjuna"
+  ],
+  "1183": [
+   "krishna-mortar-bound",
+   "krishna-govardhana",
+   "avatar-narasimha"
+  ],
+  "181": [
+   "krishna-yamalarjuna",
+   "krishna-kamsa-malice"
+  ],
+  "576": [
+   "krishna-yamalarjuna"
+  ],
+  "1048": [
+   "krishna-yamalarjuna",
+   "krishna-flute",
+   "avatar-gajendra"
+  ],
+  "851": [
+   "krishna-yamalarjuna",
+   "krishna-kamsa"
+  ],
+  "163": [
+   "krishna-kaliya"
+  ],
+  "620": [
+   "krishna-kaliya",
+   "krishna-embassy"
+  ],
+  "881": [
+   "krishna-kaliya",
+   "avatar-adisesha"
+  ],
+  "1006": [
+   "krishna-kaliya",
+   "avatar-narasimha"
+  ],
+  "1099": [
+   "krishna-kaliya"
+  ],
+  "43": [
+   "krishna-flute"
+  ],
+  "158": [
+   "krishna-flute",
+   "krishna-kuvalayapida"
+  ],
+  "355": [
+   "krishna-flute",
+   "krishna-sudama"
+  ],
+  "614": [
+   "krishna-flute",
+   "krishna-clothes"
+  ],
+  "989": [
+   "krishna-flute"
+  ],
+  "1009": [
+   "krishna-flute"
+  ],
+  "1072": [
+   "krishna-clothes"
+  ],
+  "1244": [
+   "krishna-clothes"
+  ],
+  "770": [
+   "krishna-govardhana"
+  ],
+  "615": [
+   "krishna-kamsa"
+  ],
+  "936": [
+   "krishna-kamsa"
+  ],
+  "1274": [
+   "krishna-kamsa",
+   "krishna-kamsa-malice"
+  ],
+  "442": [
+   "krishna-naraka-wives"
+  ],
+  "885": [
+   "krishna-parijata"
+  ],
+  "541": [
+   "krishna-embassy",
+   "krishna-war-general"
+  ],
+  "574": [
+   "krishna-embassy",
+   "krishna-gita-chariot",
+   "krishna-jayadratha"
+  ],
+  "747": [
+   "krishna-embassy",
+   "krishna-gita-chariot"
+  ],
+  "752": [
+   "krishna-embassy"
+  ],
+  "1055": [
+   "krishna-embassy",
+   "krishna-war-general"
+  ],
+  "155": [
+   "krishna-gita-chariot",
+   "krishna-bhishma-shikhandi",
+   "krishna-pandava-coronation"
+  ],
+  "339": [
+   "krishna-gita-chariot",
+   "krishna-war-general"
+  ],
+  "527": [
+   "krishna-gita-chariot"
+  ],
+  "924": [
+   "krishna-gita-chariot"
+  ],
+  "928": [
+   "krishna-gita-chariot"
+  ],
+  "930": [
+   "krishna-gita-chariot",
+   "krishna-war-general"
+  ],
+  "1053": [
+   "krishna-gita-chariot"
+  ],
+  "1060": [
+   "krishna-gita-chariot",
+   "krishna-war-general"
+  ],
+  "1196": [
+   "krishna-gita-chariot",
+   "krishna-war-general"
+  ],
+  "568": [
+   "krishna-jayadratha"
+  ],
+  "902": [
+   "krishna-jayadratha"
+  ],
+  "1135": [
+   "krishna-duryodhana-fall",
+   "krishna-war-general"
+  ],
+  "573": [
+   "krishna-pandava-coronation",
+   "krishna-war-general",
+   "avatar-vamana"
+  ],
+  "785": [
+   "krishna-war-general",
+   "krishna-exile-general"
+  ],
+  "890": [
+   "krishna-war-general"
+  ],
+  "1056": [
+   "krishna-war-general"
+  ],
+  "586": [
+   "krishna-krishna-general"
+  ],
+  "25": [
+   "avatar-gajendra"
+  ],
+  "82": [
+   "avatar-gajendra"
+  ],
+  "173": [
+   "avatar-gajendra"
+  ],
+  "484": [
+   "avatar-gajendra"
+  ],
+  "651": [
+   "avatar-gajendra"
+  ],
+  "704": [
+   "avatar-gajendra"
+  ],
+  "710": [
+   "avatar-gajendra"
+  ],
+  "935": [
+   "avatar-gajendra"
+  ],
+  "1059": [
+   "avatar-gajendra"
+  ],
+  "1084": [
+   "avatar-gajendra"
+  ],
+  "1188": [
+   "avatar-gajendra"
+  ],
+  "1204": [
+   "avatar-gajendra"
+  ],
+  "1336": [
+   "avatar-gajendra"
+  ],
+  "70": [
+   "avatar-gajendra",
+   "avatar-halahala"
+  ],
+  "175": [
+   "avatar-gajendra",
+   "avatar-brahma-origin"
+  ],
+  "403": [
+   "avatar-gajendra",
+   "avatar-samudra-manthana"
+  ],
+  "963": [
+   "avatar-gajendra",
+   "avatar-vamana"
+  ],
+  "1272": [
+   "avatar-gajendra",
+   "avatar-kurma",
+   "avatar-vamana",
+   "avatar-adisesha"
+  ],
+  "875": [
+   "avatar-gajendra"
+  ],
+  "11": [
+   "avatar-samudra-manthana",
+   "avatar-adisesha"
+  ],
+  "169": [
+   "avatar-samudra-manthana",
+   "avatar-halahala",
+   "avatar-mohini"
+  ],
+  "367": [
+   "avatar-samudra-manthana",
+   "avatar-mohini",
+   "avatar-vamana"
+  ],
+  "723": [
+   "avatar-samudra-manthana",
+   "avatar-kurma"
+  ],
+  "952": [
+   "avatar-samudra-manthana",
+   "avatar-mohini"
+  ],
+  "1044": [
+   "avatar-samudra-manthana"
+  ],
+  "1076": [
+   "avatar-samudra-manthana"
+  ],
+  "46": [
+   "avatar-halahala",
+   "avatar-mohini",
+   "avatar-adisesha"
+  ],
+  "134": [
+   "avatar-vamana",
+   "avatar-adisesha",
+   "avatar-temple"
+  ],
+  "912": [
+   "avatar-vamana"
+  ],
+  "1103": [
+   "avatar-vamana",
+   "avatar-pralaya"
+  ],
+  "1256": [
+   "avatar-vamana"
+  ],
+  "1311": [
+   "avatar-vamana"
+  ],
+  "88": [
+   "avatar-narasimha"
+  ],
+  "526": [
+   "avatar-narasimha"
+  ],
+  "872": [
+   "avatar-narasimha"
+  ],
+  "1174": [
+   "avatar-narasimha"
+  ],
+  "150": [
+   "avatar-narasimha",
+   "avatar-brahma-origin",
+   "avatar-adisesha"
+  ],
+  "545": [
+   "avatar-narasimha",
+   "avatar-varaha"
+  ],
+  "652": [
+   "avatar-narasimha",
+   "avatar-temple"
+  ],
+  "233": [
+   "avatar-varaha"
+  ],
+  "612": [
+   "avatar-brahma-origin"
+  ],
+  "743": [
+   "avatar-brahma-origin"
+  ],
+  "168": [
+   "avatar-adisesha"
+  ],
+  "199": [
+   "avatar-adisesha"
+  ],
+  "253": [
+   "avatar-adisesha"
+  ],
+  "525": [
+   "avatar-adisesha"
+  ],
+  "679": [
+   "avatar-adisesha"
+  ],
+  "693": [
+   "avatar-adisesha"
+  ],
+  "828": [
+   "avatar-adisesha"
+  ],
+  "1075": [
+   "avatar-adisesha"
+  ],
+  "1081": [
+   "avatar-adisesha"
+  ],
+  "1237": [
+   "avatar-adisesha"
+  ],
+  "1253": [
+   "avatar-adisesha"
+  ],
+  "534": [
+   "avatar-adisesha"
+  ],
+  "587": [
+   "avatar-adisesha"
+  ],
+  "808": [
+   "avatar-adisesha"
+  ],
+  "276": [
+   "avatar-pralaya"
+  ],
+  "402": [
+   "avatar-pralaya"
+  ],
+  "727": [
+   "avatar-pralaya",
+   "avatar-temple"
+  ],
+  "362": [
+   "avatar-temple"
+  ],
+  "549": [
+   "avatar-temple"
+  ],
+  "812": [
+   "avatar-temple"
+  ],
+  "971": [
+   "avatar-temple"
+  ]
+ }
+}

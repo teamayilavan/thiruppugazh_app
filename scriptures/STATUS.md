@@ -1,0 +1,83 @@
+# Status
+
+**Next session: Lord Shiva.** Follow `WORKFLOW.md`; start by agreeing the shortlist rule with the owner and refactoring `build_master.py` to be deity-agnostic.
+
+Last updated: 2026-10-26 (session 1, second part)
+
+## Done
+
+- Created `scriptures/` with README, this file, the shortlist script and generated output.
+- Shortlist of 272 songs that call Murugan a nephew (மருகோனே, மருகா, மருக, மருகன், மருமகன்).
+  See `vishnu/shortlist.md`.
+- First-pass keyword tags: Vishnu name seen (146 songs) and story hints (114 songs have at
+  least one). These are guesses.
+
+- Read all 272 songs' lines and mapped each to one or more stories (`vishnu/song-story-map.txt`), 68 story slugs.
+- Wrote a brief and source pointers per story (`scripts/story_data.py`) and generated `stories/`, `STORIES.md`, `by-song.md`.
+- Source pointers are **story-level** (sarga / padalam / chapter / pasuram), not verse-level. Marks: ✔ checked online
+  this session, ? from memory. See `vishnu/SOURCES.md`.
+
+- Verse-level pass for the Ramayana: 94 songs assigned to 31 episodes with Valmiki sarga.shloka and Kamba
+  padalam+verse (`vishnu/ramayana-verses.md`, `vishnu/ramayana-episodes.md`). Kamba numbers are per padalam
+  (Tamil Wikisource). Three Rama songs (156, 237, 449) have no specific episode.
+
+- Verse-level pass for Krishna and the Mahabharata: 69 songs, 31 episodes, Bhagavata verse ranges and Critical
+  Edition Mahabharata lines (`vishnu/krishna-verses.md`, `vishnu/krishna-episodes.md`). Every cited number is checked by
+  the build script.
+
+- Parallel pass (6 agents): avatars verse-level (78 songs, 12 episodes), Divya Prabandham for Ramayana, Krishna and
+  avatars (`dp-*.md`, `dp/*.json`), remaining Kamba verses pinned, and a re-read of the vague songs (corrections applied to
+  `song-story-map.txt`, two new stories `ram-sita-abduction` and `ram-sita-jewels`).
+
+- Master build (`scripts/build_master.py`): all sources joined per story; reading PDF written to
+  `scriptures/thiruppugazh-vishnu-stories.pdf` (188 pages). Map corrections from the general-songs review are applied.
+  Final counts: 68 stories with songs (65 real + 3 placeholders), 228 songs with a story, 44 without.
+
+## Next (in order, replaces the earlier list)
+
+00000. Read the PDF and mark corrections; then re-run `build_master.py`. Remaining open items are listed below.
+
+0000. Spot-check the Divya Prabandham Tamil first-words and a sample of verse numbers against a printed edition;
+      merge the `dp/*.json` into per-story files; write the Harivamsa/Narakasura pass; pin the last Kamba scenes;
+      read the remaining 34 songs that stay `vishnu-general`; decide whether to add running Kamban Kazhagam numbers.
+
+000. Verse-level pass for the avatar songs (Gajendra, Vamana, Narasimha, churning, Varaha, Matsya, Kurma) with
+     Bhagavata verses; then the Divya Prabandham for every story. The 38 `vishnu-general` songs still need a reading.
+
+00. Pin the remaining Kamba verses listed in SOURCES.md; decide whether to add Kamban Kazhagam running numbers.
+    Then repeat the verse-level pass for Krishna songs (Bhagavata verses), avatars, Mahabharata, and the
+    Divya Prabandham.
+
+0. **Verse level.** For each song, narrow the story-level pointer to the specific sarga/verses the line alludes to
+   (start with Ramayana, 71 songs on the Ravana war), choose a Kamba edition and add verse numbers, check every `?`,
+   and find Divya Prabandham verses (only Gajendra and four Tiruppavai verses are confirmed).
+   Also re-read the ~38 `vishnu-general` songs and the `low` confidence rows in the map.
+
+## Earlier list (still valid for the shortlist review)
+
+1. **Owner review of the shortlist.** Skim `vishnu/shortlist.md`, especially the 126 songs
+   under "No Vishnu name found". Note any that are not about Vishnu.
+2. **Settle the story list.** Likely candidates from the hints: Ramayana (35 songs),
+   Krishna / Bhagavatam (17), temple Vishnu such as Srirangam / Tirupati (16), Gajendra moksha
+   (14), Adi Sesha / reclining (10), Mahabharata (10), Samudra manthana (6), Narasimha (4),
+   Vamana-Bali (2), Matsya (3), Varaha (1). Decide the order to write them.
+3. **Improve the tagging** before writing stories: add epithets from songs read so far to
+   `VISHNU_NAMES` / `STORIES` in `scripts/shortlist_maruga.py`, rerun, and shrink the
+   158 untagged songs.
+4. **Write the first story file** in `vishnu/stories/` (suggest starting with the Ramayana
+   songs, the largest group), then agree the template with the owner before doing the rest.
+
+## Later / ideas (not started)
+
+- Widen the net beyond the nephew word: songs naming Vishnu or his avatars without
+  மருகன் (search for `மால்`, `அரி`, `ராமன்`, `கண்ணன்`, `நாரணன்`, ...).
+- Other deities and themes in their own folders (Shiva, Brahma, Devi, Skanda Purana lore).
+- Whether any of this ever goes into the app is undecided; the app is offline and the
+  product principles in CLAUDE.md apply. No app change is planned.
+
+## Notes
+
+- Nothing under `scriptures/` has been committed. Commit only when the owner asks.
+- Data source: `assets/thiruppugazh.db`, column `songs.lyrics_list` (1340 songs).
+- The Tamil lyrics are in sandhi form; the `mayuragiri_lyrics_separated` column has
+  word-separated Tamil for many songs and could help later reading (it covers about 1300 of the 1340 songs).

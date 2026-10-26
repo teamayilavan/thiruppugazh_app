@@ -1,0 +1,276 @@
+# Song -> story map (hand-read, first pass). One song per line:
+#   song_id | story slugs (comma separated) | what the lines allude to | confidence (high/med/low)
+# Slugs are defined in STORIES.md. Written by reading the lines before each nephew word.
+# 'not-vishnu' means the nephew word is not about Vishnu.
+9|ram-ravana-war|Per review|low
+11|samudra-manthana,vishnu-sleeping|Reclines on the serpent; churned the sea (பனகந்துயில், கடல் கடைந்த)|high
+14|krishna-butter|Per review|low
+19|ram-setu,ram-ravana-war|Bridge over the sea; one arrow ends Lanka's king and clan|high
+20|vishnu-panchajanya|Conch-bearer whose conch roars over the gods' army (சங்க பாணி)|med
+21|vishnu-supreme|Mayon who is untouched by anything; Brahma/Shiva as his forms|med
+25|gajendra|Elephant calls 'Mulame'; Mayan comes to save it|high
+27|ram-ravana-war,samudra-manthana|Night-roamers' heads shattered; sea churned (மகர வாரி கடைந்த)|med
+29|ram-setu,ram-ravana-war|Sea bridged, Ravana's ten heads cut by Raghava's arrow|high
+35|vishnu-general|Madhava, sages worship him|low
+43|krishna-flute|Plays the flute, seven holes, many notes (விடுகழை விரல்முறை தடவிய)|high
+44|ram-ravana-war|Ravana's heads felled by arrows|high
+46|vishnu-sleeping,samudra-manthana|Sleeps on the ocean; the poison, nectar given to the gods|high
+63|not-vishnu|List of kin (mother, brother, sister, nephews) - plural மருகர், worldly relations|high
+66|ram-ravana-war|Ten-headed Ravana's rakshasas slaughtered in battle|high
+68|ram-childhood|Kausalya calls the child 'come here, king' (கோசலை புகல வருமாயன்)|high
+70|gajendra|Elephant relieved of fear, Adimulam with discus|high
+73|ram-ravana-war|Killer of the demon (Ravana), mighty-shouldered|med
+78|vishnu-lakshmi|Hari and Sri (அரிதிரு) - no deed|low
+82|gajendra|Mulam called, discus kills the crocodile in the pond|high
+88|narasimha|Man-lion tears open Hiranya's chest, wears his intestines|high
+89|ram-ravana-war|Arrows fired from chariot; 'asuresan' head tossed like a ball (Ravana?) Achyuta|low
+95|ram-ravana-war|Per review|low
+98|vishnu-general|Harikesava, no deed|low
+113|ram-maricha,ram-vali|Magic deer-demon defeated; arrow through Vali's chest|high
+115|ram-ravana-war,ram-sita|Raghurama, Lakshmi on the lotus (Sita), rakshasa heads|high
+116|krishna-yamalarjuna,krishna-sakata,krishna-govardhana|Twin trees, the cart kicked, the mountain lifted as umbrella|high
+121|krishna-butter|Called 'curd thief', gopis scold him and he dances|high
+122|vishnu-general|Mukunda, no deed|low
+128|ram-vibhishana-sugriva|Raghava gave the crown to the younger brother (Vibhishana or Sugriva)|med
+130|vishnu-general|Narayana of the lotus-born Brahma, Mayava, Madhava|low
+134|vishnu-sleeping,vamana|Srirangam Lord on the serpent; the Lord who measured the world|high
+150|narasimha,vishnu-brahma-origin,vishnu-sleeping|Lion kills Hiranya; sleeps on ocean; fathered the swan-rider Brahma|high
+151|vishnu-general|Dark-cloud Vishnu, no deed|low
+155|krishna-partha-sarathi,mbh-war|Drives the chariot, Pandavas' friend, Kuru kingdom, Shikhandi|high
+156|krishna-butter,ram-general|Stole butter, tied to the mortar; Ragurama's joy|high
+158|krishna-kuvalayapida,krishna-flute|Elephant's tusks broken; flute and herding cows|high
+161|ram-vibhishana,ram-sita-agni,ram-ravana-war|Vibhishana crowned, Ravana's army, fire ordeal|high
+163|krishna-kaliya,vishnu-sudarshana|Dances on the serpent's hood; Madhusudana with discus, mace, bow|high
+166|ram-setu,ram-ravana-war,ram-sita-recovery|Sea bridged, Ravana's crown cut, Janaki brought back|high
+168|vishnu-sleeping|Sleeps on the serpent bed, lotus eyes|med
+169|samudra-manthana|Sea churned for nectar, Vasuki's tail, poison given to Shiva|high
+172|vishnu-general|Red-hued Vishnu, no deed|low
+173|gajendra|Rescues the elephant in an instant|high
+175|gajendra,vishnu-brahma-origin|Elephant in rut cries out; Narayana father of Brahma; conch|high
+178|krishna-butter|Rope-bound, curd from the hanging pot, hunger cured|high
+181|krishna-kamsa,krishna-yamalarjuna|Kamsa's tricks defeated; crawled between the arjuna trees|high
+186|krishna-sakata,krishna-yamalarjuna,krishna-govardhana|Cart kicked, trees broken, mountain lifted|med
+193|krishna-sakata,krishna-vastra-harana|Per review commentary|low
+199|vishnu-sleeping,vishnu-lakshmi|Sleeps on the serpent; Lakshmi on the lotus|high
+200|ram-ravana-war|Fire to Lanka, Ravana's heads cut, army destroyed|high
+203|ram-setu,ram-ravana-war|Ships/bridge across sea, Lanka falls, twenty-armed one slain|high
+206|vishnu-lakshmi|Hari who embraces Lakshmi|low
+225|vishnu-general|Hari and Sri, no deed|low
+227|ram-ravana-war|Ravana who lifted the mountain brought down with one arrow|high
+228|ram-kakasura|Crow loses an eye (காக முறஅருள்)|high
+230|ram-ravana-war|Rakshasas' heads cut|high
+233|varaha|Boar lifting the earth (review: commentary)|med
+236|ram-ravana-war|Dasaratha's son, ten heads and twenty arms felled|high
+237|ram-samudra-arrow|Per review|low
+246|vishnu-general|Unclear (கையமால்) - needs reading|low
+248|ram-ravana-war,vamana,krishna-mausala|Ravana killed; Mahabali imprisoned; pestle thrown into the sea|high
+252|ram-ravana-war,ram-sita-recovery|Ten heads cut; Sita freed from prison|high
+253|vishnu-sleeping|Achyuta sleeps on the serpent in the milk sea|high
+266|ram-vali|Garland to mark Sugriva, monkey army|med
+272|ram-ravana-war,ram-sita-abduction|Surpanakha, Ravana carries Sita off, clan uprooted (review)|med
+276|vishnu-pralaya,vishnu-sudarshana|Discus-bearer who killed demons, swallowed the world|med
+289|krishna-envoy,vamana,krishna-butter|Envoy to the Kuru king; dwarf; butter|high
+293|ram-ravana-war,vamana|Ten heads cut; measured the world with one foot|high
+339|krishna-partha-sarathi,mbh-war|Drives the chariot, kshatriyas destroyed|high
+355|krishna-flute,krishna-sudama|Plays the flute, Gopala; friend of Sudama (low)|med
+362|vishnu-temple-srirangam|Rangaraja of Srirangam, devotees chant Hari Govinda Kesava|med
+365|ram-ravana-war|Ravana roars like thunder and moans as his crowns are twisted off|high
+366|ram-tataka-yajna|Protects Viswamitra's sacrifice, kills Tataka|high
+367|samudra-manthana,vamana|Gave nectar to hungry gods; measured the worlds as a dwarf|high
+373|ram-hanuman-lanka,ram-setu,ram-ravana-war|Lanka burned by Hanuman, monkeys fall, bridge, arrow at Ravana|high
+381|ram-ravana-war|Hari-Rama shot ten crowns off Ravana|high
+385|vishnu-general|Wears tulasi, Keshava, weapon-bearer|low
+391|vishnu-general|Dark Tirumal; Murugan imprisoned Brahma in the same breath|low
+402|vishnu-pralaya|Sarnga bow bearer; swallowed the worlds|med
+403|samudra-manthana,gajendra|Sea churned for nectar; the elephant saved|high
+417|vishnu-general|Blue-coloured Mal, Murugan kills Taraka/Daruka|low
+423|ram-vibhishana|Southern rakshasa king (Vibhishana) given the kingdom, discus-bearer|med
+435|ram-ravana-war,ram-sita-recovery|Arrow cuts Ravana's shoulders; Sita freed from prison|high
+437|ram-vali|Hid behind the sala tree, arrow into Vali's chest; Tara; Sugriva|high
+442|krishna-16000-wives|Lord of sixteen thousand gopis/wives|high
+449|ram-general|Husband of Janaki; Murugan as his nephew|med
+466|ram-ravana-war|Arrow shattered a demon's head and shoulders (Ravana)|med
+467|vishnu-general|Reading uncertain (மருகென்று); Manmatha's father = Vishnu|low
+481|ram-ravana-war|One arrow at Ravana's ten crowns, cloud-hued|high
+483|ram-ahalya|Foot touches the stone, a lovely form appears in the forest|high
+484|gajendra|'Mulame!' - elephant cries and Narayana arrives|high
+489|ram-ravana-war|Ten heads fall to Madhava's arrows|high
+494|vishnu-lakshmi|Hari and the lotus Lakshmi|low
+512|ram-ravana-war|Ten heads fall, green-gold cloud hue|med
+524|ram-hanuman-lanka,ram-ravana-war|Hanuman's army, Lanka's wall, ten crowns fall|high
+525|vishnu-sleeping|Sleeps on the serpent; Narahari|med
+526|narasimha|Demons' entrails torn, Narahari|high
+527|krishna-partha-sarathi|Drove the Pandavas' chariot|high
+534|vishnu-sleeping|Per review|low
+540|ram-ravana-war|Arrow into Lanka, rakshasa's head scattered|high
+541|mbh-war|Set the cousins at war, discus-bearer|med
+545|narasimha,varaha|Lion from the pillar; lifted the earth|high
+549|vishnu-temple-srirangam|Lord of Rangapura, grants paramapada|med
+568|mbh-jayadratha|Hid the sun with the discus (Gopalaraya)|high
+573|mbh-war,vamana|Kunti's sons, justice; the dwarf|med
+574|mbh-war,krishna-envoy,krishna-partha-sarathi|Vidura, Drona, hundred Kauravas, envoy of Dharma, Vijaya's charioteer|high
+576|krishna-yamalarjuna|Broke the twin maruda trees|high
+586|krishna-cowherd|Friend of the calves/cows, not the calf demon (review)|low
+587|vishnu-sleeping|Per review|low
+597|ram-exile,ram-vali,ram-ravana-war|Sent to the forest with Sita, Vali killed, Ravana killed|high
+603|vishnu-general|Chakra, mace in hand|low
+612|vishnu-brahma-origin|Narayana, father of four-faced Brahma|med
+614|krishna-vastra-harana,krishna-flute|Plays flute, takes gopis' clothes up the tree|high
+615|krishna-kamsa|Kicked and killed Kamsa|high
+620|krishna-kaliya,krishna-pandava-friend|Dances on a serpent's hood; friend of the Pandavas|med
+623|ram-vibhishana,ram-ravana-war|Younger brother of Kumbhakarna worships; Lanka's asuras destroyed|high
+626|krishna-putana,krishna-kamsa|Kamsa's messengers, ogress Putana|high
+629|krishna-butter|Climbs the mortar for milk, Yasoda's search, Damodara|high
+632|vishnu-general|Cloud-coloured Mal, no deed|low
+633|ram-ravana-war|Ten heads cut, body pierced|high
+636|vishnu-lakshmi|Murari with Lakshmi on his chest|low
+644|ram-ravana-war|Ravana trampled|med
+649|ram-tataka-yajna,ram-sita-swayamvara|Tataka killed, sacrifice completed, bow broken|high
+651|gajendra|The elephant's crocodile ordeal|high
+652|narasimha,vishnu-temple-srirangam|Hiranya torn open; sleeps at Srirangam|high
+655|ram-setu|Bridged the sea|high
+669|ram-ahalya|Stone turned to Ahalya|high
+674|krishna-govardhana|Mountain as umbrella for cows|high
+679|vishnu-sleeping|Sleeps on the milk sea|low
+680|vishnu-general|Tirumal, no deed|low
+683|krishna-butter|Climbs on the mortar for the pot (உறி)|high
+684|ram-ravana-war|Ten heads shot off with a bow|med
+685|vishnu-general|Dark Hari, no deed|low
+687|vishnu-general|Garuda-bannered Hari|low
+693|vishnu-sleeping|Tulasi garland, serpent bed|med
+698|vishnu-general|Narayana|low
+700|ram-hanuman-lanka,ram-setu,ram-ravana-war|Lanka set afire, the sea shakes, Mukunda|high
+703|ram-ravana-war,ram-sita-recovery|Took Sita, Ravana killed|high
+704|gajendra|Elephant calls 'Mulame'|high
+707|ram-ravana-war|Ravana and Lanka's army destroyed with arrows|high
+710|gajendra|Elephant seized by the crocodile, discus sent|high
+713|vishnu-general|Hari Narayana|low
+718|vishnu-general|Mace, Sarnga, sword, discus|low
+723|samudra-manthana|Mountain churned with the serpent, nectar given|high
+727|vishnu-pralaya,vishnu-temple-kanchi|On the banyan leaf; Ooragam (Kanchi)|med
+731|ram-vali,ram-seven-trees,ram-ravana-war|Vali, seven trees, ten heads|high
+737|ram-ravana-war|Ten heads cut by arrows|high
+738|ram-samudra-arrow,vishnu-sleeping|Fire-arrow into the sea; sleeps on the milk sea|med
+743|vishnu-brahma-origin|Narayana, father of four-faced Brahma|med
+745|ram-ravana-war|Ten crowned heads roll|high
+747|mbh-war,krishna-envoy,krishna-partha-sarathi|Vidura, Duryodhana, Arjuna's chariot|high
+750|ram-setu,ram-ravana-war|Sea dammed, Ravana's clan destroyed|high
+751|vishnu-lakshmi|Hari and Sri|low
+752|krishna-envoy|Per review|low
+757|vishnu-general|Narayana, Rama, Keshava, discus|low
+770|krishna-govardhana|Mountain as umbrella, rain|high
+771|krishna-yamalarjuna,vamana,ram-samudra-arrow|Trees fell, dwarf, arrow at the sea|med
+777|vishnu-general|Lotus-eyed Hari|low
+785|mbh-war|Exile in the forest, the Bharata war|high
+788|ram-ravana-war,ram-sita-recovery|Chaste Sita in sorrow; Ravana's clan ended by monkeys|high
+799|ram-sita-swayamvara|Bow broken at Mithila, Janaka's daughter won|high
+806|vishnu-sleeping,ram-ravana-war,krishna-pandava-friend|Milk sea; Ravana's clan; friend of the five|high
+807|ram-setu,ram-ravana-war,ram-sugriva|Sugriva's monkeys cross the sea, Lanka's rakshasas|high
+808|vishnu-sleeping|Per review|low
+812|vishnu-temple-tirupati|Lives at Vengadam, Hrishikesa, Sarnga|high
+820|ram-samudra-arrow|Ocean's lord cries as one arrow flies|high
+826|ram-ravana-war|Rakshasa crowns fall|high
+827|vishnu-general|Unclear|low
+828|vishnu-sleeping|Narayana on the serpent bed|med
+833|ram-ravana-war,ram-sita-recovery|Ten-headed rascal killed; peacock/Sita freed from prison|med
+834|vishnu-general|Tulasi-garlanded Mayon, no deed|low
+835|ram-hanuman-lanka,ram-ravana-war|Lanka burned by a monkey; Kumbhakarna and Kumbha fall|high
+838|ram-ravana-war|Ravana's crown cut by one arrow|high
+839|ram-setu,ram-ravana-war|Sea dammed, Lanka taken in seven days|high
+840|ram-vali,ram-setu,ram-vibhishana|Vali's chest torn; sea dammed; Vibhishana given grace|high
+841|vamana,ram-ravana-war,ram-vibhishana|Mahabali sent down with a step; ten crowns and twenty arms cut; Vibhishana as king|high
+845|ram-ravana-war|Twenty-armed Ravana's ten crowns, Lanka's wall broken|high
+847|vishnu-general|Tirumal and Brahma could not know Shiva; no Vishnu deed|low
+851|krishna-yamalarjuna,krishna-kamsa|Twin trees, Kamsa's life taken|high
+852|vishnu-lakshmi|Tall cloud-bodied Hari, Lakshmi on his chest|low
+872|narasimha|Nails tear Hiranya, blood drunk; lotus-navel Mal|high
+874|ram-ravana-war|One arrow cuts ten heads and twenty arms|high
+875|gajendra|Per review|low
+876|ram-hanuman-lanka,ram-ravana-war|Monkey army, 70 vellam, Raghava, rakshasas killed|high
+881|krishna-kaliya,vishnu-sleeping|Serpent's hoods trampled; sleeps on the serpent|high
+882|ram-vali,ram-ravana-war|Tara's husband Vali killed, Lanka destroyed|high
+885|krishna-parijata|Brought Indra's tree to earth; conch-bearer|med
+887|narasimha,ram-ravana-war|Hiranya's chest torn; ten and six heads of the deceitful king cut|high
+890|mbh-war|Bharata war ended, Madhava|med
+893|ram-ravana-war|Ravana's great army ground to powder|high
+895|ram-ravana-war,vishnu-sleeping,vishnu-temple-kanchi|Twenty arms, ten heads; sleeps on the serpent at Kanchi|high
+902|mbh-jayadratha|Discus makes the sun set at midday (review): same image as song 568|med
+908|krishna-yamalarjuna,krishna-butter|Trees broken, dragging the mortar|high
+912|vamana|Foot measures the fourteen worlds|med
+913|vishnu-general|Discus-bearer Hari|low
+924|krishna-partha-sarathi|Flag on Arjuna's chariot; tulasi|high
+928|krishna-partha-sarathi|Drove Arjuna's horses|high
+930|krishna-partha-sarathi,mbh-war|Arjuna's chariot, hundred kings|high
+935|gajendra|Elephant trapped by crocodile calls Mulame, Garuda|high
+936|krishna-kamsa|Uncle (Kamsa) destroyed, cowherd street|med
+941|ram-sugriva,ram-hanuman-lanka|Sugriva's army sent to Lanka|high
+952|samudra-manthana|Milk sea churned, nectar given|high
+959|ram-ravana-war,ram-sita-recovery,ram-pattabhishekam|Stolen Sita, Ravana, returns to Ayodhya|high
+961|ram-khara-dushana,ram-ravana-war|Khara, Trisira, Kumbhakarna, Ravana|high
+963|gajendra,vamana|Helped the elephant; dwarf; discus|med
+968|ram-sita-swayamvara,ram-exile|Bow broken, Janaki married; leaves city at mother's word|high
+970|vamana,vishnu-pralaya,krishna-butter|Measured the earth; on the banyan leaf; curd in the cowherds' houses|high
+971|vishnu-temple-srirangam|Lord of Srirangam|med
+977|ram-ravana-war|Ten crowns and rakshasa king killed|high
+987|vishnu-sleeping,krishna-butter|Sleeps on the sea; reaches the hanging pot|high
+989|krishna-flute|Plays music on the flute|med
+1001|gajendra,krishna-putana,vamana|Rescues elephant; ogress's milk drunk; measures the worlds|high
+1006|narasimha,krishna-kaliya|Prahlada's child words, Hiranya torn; dances on the serpent|high
+1007|ram-ravana-war|Ten crowns and twenty arms cut|high
+1008|ram-ravana-war,vishnu-sleeping,vamana|Ten heads; on the serpent; measured the world|high
+1009|krishna-flute|Flute draws the cows, Abhirama|high
+1012|ram-ravana-war|Twenty arms, ten (nine) heads cut|high
+1019|krishna-butter|Drinks curd, ghee, milk|high
+1044|samudra-manthana|Sea churned, Lakshmi won|high
+1048|krishna-yamalarjuna,krishna-flute,gajendra|Twin trees, flute, elephant 'Mulame'|high
+1053|krishna-partha-sarathi,krishna-cowherd|Arjuna's chariot; cattle; conch|med
+1055|mbh-war,krishna-envoy|Envoy to Kauravas; Vijaya's war|high
+1056|mbh-war|Kauravas' armies and Dhritarashtra's sons destroyed|high
+1059|gajendra|Elephant raises its trunk, Garuda arrives|high
+1060|mbh-war,krishna-partha-sarathi|Hundred sons of Dhritarashtra; Arjuna; chariot|high
+1072|krishna-vastra-harana|On the kurunda tree|med
+1073|vishnu-lakshmi|He who embraces the lotus lady|low
+1075|vishnu-sleeping|Sleeps on the serpent|med
+1076|samudra-manthana|Sea churned, moon whirled, mountain|high
+1081|vishnu-sleeping|Sleeps on the hooded serpent|med
+1084|gajendra|Elephant calls from the pond, discus thrown|high
+1085|vishnu-general|Names Vishnu directly|low
+1091|ram-samudra-arrow,krishna-yamalarjuna,vishnu-sleeping|Sea dried by arrow, twin trees, serpent bed|high
+1098|krishna-butter|Steals from cowherds' homes, tied to the mortar|high
+1099|krishna-kaliya|Lotus feet dance on the serpent's hoods|high
+1103|vamana|Measured and swallowed the earth|high
+1125|ram-samudra-arrow,ram-setu|Arrow into the sea|med
+1132|ram-ravana-war|Ten crowns and twenty arms cut|high
+1135|mbh-war|Duryodhana destroyed in the Bharata war|high
+1143|not-vishnu|மருமகன் of Indra (son-in-law), not Vishnu|high
+1144|ram-ravana-war|Ten crowns fall to one arrow|high
+1153|ram-ravana-war|Ten crowns with one arrow|high
+1157|krishna-sakata,krishna-kuvalayapida|Cart kicked, elephant, Gokulam|high
+1162|ram-ravana-war|Ravana split in two by Raghava's arrow|high
+1170|krishna-mannunda,krishna-flute|Swallowed the earth, plays the flute; Mal goes to hear the poets|med
+1174|narasimha|Born from the pillar, Hiranya's chest torn|high
+1183|krishna-butter,narasimha,krishna-govardhana|Tied with a rope; Hiranya's chest; mountain for cows|high
+1186|vishnu-general|Unclear (பூவணர் மருகா)|low
+1188|gajendra|Elephant calls, discus and conch|high
+1191|vishnu-lakshmi|Lakshmi's brother-in-law relation|low
+1196|krishna-partha-sarathi,mbh-war|Arjuna's horses, chariot, war|high
+1197|ram-ravana-war|Ravana's crown shattered|high
+1204|gajendra|Elephant in the pond calls out, conch blown|high
+1213|vishnu-general|Hari, no deed|low
+1218|ram-setu,ram-ravana-war|Ten heads, twenty arms fall into the sea; monkeys; arrow|high
+1231|ram-sugriva,ram-hanuman-lanka,ram-ravana-war|Sugriva's army, Lanka burned, Ravana killed|high
+1237|vishnu-sleeping|On the naga couch|med
+1244|krishna-vastra-harana|On the kurunda tree|med
+1245|ram-ravana-war|Ten heads rolled by arrows|high
+1253|vishnu-sleeping|On the serpent in the sea|med
+1256|vamana|Asks for a gift from the king (Bali)|med
+1265|ram-hanuman-lanka,ram-exile|Forest; Lanka burned by a monkey|high
+1272|gajendra,kurma,vamana|Crocodile in the pit; tortoise; dwarf; serpent bed|high
+1274|krishna-kamsa|Kamsa did not treat his nephew as a nephew|med
+1275|vishnu-general|Narayana; 'நாலாயது' may point to the Nalayira prabandham|low
+1295|ram-khara-dushana|Rakshasas and Kharan killed|med
+1311|vamana|Measured the earth in one step|high
+1316|ram-setu,ram-ravana-war|Sea bridged, Ravana killed by arrow|high
+1325|ram-sita-jewels,vamana|Sita drops her jewels from the Pushpaka car; Trivikrama (review)|low
+1332|vishnu-general|Hari, Munaippadi|low
+1336|gajendra|The elephant's cry, one call saved|high
