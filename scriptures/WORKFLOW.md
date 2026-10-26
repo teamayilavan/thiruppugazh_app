@@ -1,7 +1,7 @@
 # Workflow: building a story repository for a deity or theme
 
-This is the exact process used for **Lord Vishnu** (songs that call Murugan the nephew of Vishnu), written so a new
-session can repeat it for **Lord Shiva** or any other theme. Read `README.md` (layout) and `STATUS.md` (where we are) first.
+This is the exact process used for **Lord Vishnu** (songs that call Murugan the nephew of Vishnu) and repeated for **Lord Shiva**
+(see section 6 for what changed), written so a new session can repeat it for any other deity or theme. Read `README.md` (layout) and `STATUS.md` (where we are) first.
 
 ## 0. Ground rules
 
@@ -131,3 +131,24 @@ Paste this to start:
 See `STATUS.md`: spot-check the Divya Prabandham first-words and verse numbers against a printed edition; pin the
 remaining Kamba scenes (Rama's birth, the army's march, general battle); Harivamsa for Narakasura/Parijata/Banasura;
 the 34 songs that stay general; whether to add running Kamban Kazhagam verse numbers.
+
+## 6. What the Shiva run changed (2026-10-26)
+
+- **Tooling is deity-agnostic.** `scripts/build_master.py --deity <name>` loads `scripts/deity_<name>.py` (required names are listed in
+  `deity_vishnu.py`). A deity module may define `load_hits()` when its shortlist is not one hit per song (Shiva's is). Vishnu output is
+  unchanged by the refactor (markdown and JSON identical; only the PDF timestamp differs).
+- **Shortlist.** Shiva has no single keyword, so `scripts/shortlist.py --deity shiva` uses epithet and deed patterns
+  (rule in `shiva/README.md`). 379 songs matched; reading them showed 75 were look-alikes. A second pass searching for stories the
+  rule missed (Yama, Andhaka, Markandeya, Gajasamhara, Bhairava, Sokkar, Ganga-descent words) found 6 more. Do the second pass every time.
+- **Map and catalogue.** `shiva/song-story-map.txt` (hand-read in chunks of 65 with 3 lines of context, unclear songs re-read in full) feeds
+  `scripts/shiva_episodes.py`; domains group the stories. Songs that only name Shiva, describe his form or call Murugan his son have no
+  story and go to Part C of the PDF.
+- **References.** Three parallel agents, each writing only its own files: Sanskrit/Puranic (`refs-sanskrit.json`), Tamil Shaiva deed verses
+  (`tirumurai-deeds.json`) and saints/Murugan stories (`refs-saints.json`). Their notes files list what was unreachable. Pages are
+  confirmed only when opened; I spot-checked 4 entries. The Sanskrit/Tamil split means "primary text" counts Sanskrit only; the Tamil
+  Shaiva texts are the counterpart of the Divya Prabandham.
+- **Sources that worked:** thevaaram.org (Tirumurai 1-8, 10, Periya Puranam, whole pathigams), Tamil Wikisource raw wikitext (Kanda Puranam),
+  wisdomlib (Linga, Shiva and Skanda Puranas by chapter, Valmiki Uttara). **Blocked or missing:** shaivam.org (403), sacred-texts.com,
+  valmikiramayan.net has no Uttara kanda, no online Tiruvilaiyadal Puranam verses.
+- **Kickoff for the next deity:** "Read scriptures/README.md, STATUS.md and WORKFLOW.md (section 6). We are starting <deity>. Propose the
+  shortlist rule, run it, show the count and a sample, then follow the workflow. Do not commit until I ask."

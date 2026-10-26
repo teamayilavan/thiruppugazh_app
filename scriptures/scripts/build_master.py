@@ -4,13 +4,15 @@ vishnu/master.json, vishnu/STORIES.md, vishnu/by-song.md, vishnu/stories/<domain
 Inputs (all generated or hand-written elsewhere in scriptures/):
   ramayana_episodes.py, krishna_episodes.py, avatar_episodes.py   episode catalogues + song assignments
   story_data.py                                                   story briefs
-  vishnu/dp/*.json                                                Divya Prabandham verses (research passes)
-  vishnu/shortlist.json, assets/thiruppugazh.db                   the songs and their lines
-  vishnu/song-story-map.txt                                       first-pass map (for songs with no episode)
-Run:  python -I scriptures/scripts/build_master.py [--no-pdf]
+  <deity>/dp/*.json                                               Tamil devotional verses (research passes)
+  <deity>/shortlist.json, assets/thiruppugazh.db                  the songs and their lines
+  <deity>/song-story-map.txt                                      first-pass map (for songs with no episode)
+  deity_<name>.py                                                 per-deity configuration (see deity_vishnu.py)
+Run:  python -I scriptures/scripts/build_master.py [--deity vishnu] [--no-pdf]
 The PDF needs Microsoft Edge (headless print) and the Nirmala UI font for Tamil.
 """
 import html
+import importlib
 import json
 import os
 import sqlite3
@@ -23,124 +25,31 @@ HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 sys.stdout.reconfigure(encoding="utf-8")
 
-import avatar_episodes as AE  # noqa: E402
-import krishna_episodes as KE  # noqa: E402
-import ramayana_episodes as RE  # noqa: E402
-from find_kamba import verses as kamba_verses  # noqa: E402
-from fetch_krishna import mbh_lines  # noqa: E402
-from story_data import S as STORY  # noqa: E402
+DEITY = sys.argv[sys.argv.index("--deity") + 1] if "--deity" in sys.argv else "vishnu"
+D = importlib.import_module(f"deity_{DEITY}")  # scripts/deity_<name>.py: see deity_vishnu.py for the required names
 
 ROOT = HERE.parent.parent
-V = ROOT / "scriptures" / "vishnu"
+V = ROOT / "scriptures" / D.FOLDER
 DB = ROOT / "assets" / "thiruppugazh.db"
-
-# episode -> story_data slug (for the brief)
-SLUG = {
-    "ramayana": {"birth": "ram-childhood", "tataka": "ram-tataka-yajna", "yajna": "ram-tataka-yajna", "ahalya": "ram-ahalya",
-                 "bow": "ram-sita-swayamvara", "exile": "ram-exile", "kaka": "ram-kakasura", "khara": "ram-khara-dushana",
-                 "sita-abduction": "ram-sita-abduction", "sita-jewels": "ram-sita-jewels", "maricha": "ram-maricha",
-                 "seven-trees": "ram-seven-trees", "garland": "ram-vali", "vali": "ram-vali", "sugriva-crown": "ram-sugriva",
-                 "army-march": "ram-sugriva", "lanka-burnt": "ram-hanuman-lanka", "ocean-arrow": "ram-samudra-arrow",
-                 "setu": "ram-setu", "vibhishana-refuge": "ram-vibhishana", "vibhishana-crown": "ram-vibhishana",
-                 "sita-freed": "ram-sita-recovery", "sita-agni": "ram-sita-agni", "return": "ram-pattabhishekam"},
-    "krishna": {"butter-pot": "krishna-butter", "mortar-bound": "krishna-butter", "mud-mouth": "krishna-mannunda",
-                "clothes": "krishna-vastra-harana", "naraka-wives": "krishna-16000-wives", "embassy": "krishna-envoy",
-                "gita-chariot": "krishna-partha-sarathi", "war-general": "mbh-war", "exile-general": "mbh-war",
-                "duryodhana-fall": "mbh-war", "bhishma-shikhandi": "mbh-war", "bhishma-wheel": "mbh-war",
-                "jayadratha": "mbh-jayadratha", "kirata": "mbh-kirata", "pandava-coronation": "krishna-pandava-friend",
-                "kamsa-malice": "krishna-kamsa", "mausala": "krishna-mausala"},
-    "avatar": {"halahala": "samudra-manthana", "mohini": "samudra-manthana", "brahma-origin": "vishnu-brahma-origin",
-               "adisesha": "vishnu-sleeping", "pralaya": "vishnu-pralaya", "temple": "vishnu-temple-srirangam"},
-}
-# episode -> dp slugs/episodes in the dp json files
-DP_AV = {"gajendra": ["gajendra"], "samudra-manthana": ["samudra-manthana"], "halahala": ["samudra-manthana"],
-         "mohini": ["samudra-manthana"], "kurma": ["kurma"], "vamana": ["vamana"], "narasimha": ["narasimha"],
-         "varaha": ["varaha"], "brahma-origin": ["vishnu-brahma-origin"], "adisesha": ["vishnu-sleeping"],
-         "pralaya": ["vishnu-pralaya"], "temple": ["vishnu-temple-srirangam", "vishnu-temple-tirupati", "vishnu-temple-kanchi"]}
-DOMAIN_NAME = {"ramayana": "Ramayana", "krishna": "Krishna / Mahabharata", "avatar": "Avatars and Vishnu images"}
-
-_kv, _mb = {}, {}
-
-
-def pname(p):
-    return p.replace("_", " ")
-
-
-def quote_kamba(kandam, pad, n):
-    key = (kandam, pad)
-    if key not in _kv:
-        _kv[key] = {num: t for num, _, t in kamba_verses(kandam, pad)}
-    return _kv[key].get(str(n), "")
-
-
-def quote_mbh(parva, ref):
-    if parva not in _mb:
-        _mb[parva] = {r: t for _, r, t in mbh_lines(parva)}
-    return _mb[parva].get(ref, "")
-
-
-def build_refs(domain, e):
-    refs = []
-    if domain == "ramayana":
-        for k, s, r, g in e["valmiki"]:
-            refs.append(dict(src="Valmiki Ramayana", ref=f"{k} {r}", gist=g, pinned=True))
-        for kandam, pad, nums in e["kamba"]:
-            if nums:
-                for n in nums:
-                    refs.append(dict(src="Kamba Ramayanam", ref=f"{pname(pad)} {n}", quote=quote_kamba(kandam, pad, n)[:170], pinned=True))
-            else:
-                refs.append(dict(src="Kamba Ramayanam", ref=f"{pname(pad)} (verse not pinned)", pinned=False))
-    elif domain == "krishna":
-        for c, ch, v, g in e["sb"]:
-            refs.append(dict(src="Bhagavata Purana", ref=f"SB {c}.{ch}.{v}", gist=g, pinned=True))
-        for p, adh, rr, g in e["mbh"]:
-            ref = rr[0] if len(rr) == 1 else f"{rr[0]} … {rr[-1]}"
-            q = " / ".join(quote_mbh(p, x) for x in rr[:2])
-            refs.append(dict(src="Mahabharata (Critical Edition)", ref=ref, gist=g, quote=q, pinned=True))
-    else:
-        for c, ch, v, g in e["sb"]:
-            refs.append(dict(src="Bhagavata Purana", ref=f"SB {c}.{ch}.{v}", gist=g, pinned=True))
-        for kanda, sarga, shl, g in e["valmiki"]:
-            refs.append(dict(src="Valmiki Ramayana", ref=f"{kanda.title()} {sarga}.{','.join(map(str, shl))}", gist=g, pinned=True))
-        for kandam, pad, nums, g in e["kamba"]:
-            refs.append(dict(src="Kamba Ramayanam", ref=f"{pname(pad)} {', '.join(map(str, nums))}", gist=g,
-                             quote=quote_kamba(kandam, pad, nums[0])[:170] if nums else "", pinned=bool(nums)))
-        for book, ch, _doc, _kw, g in e["vp"]:
-            refs.append(dict(src="Vishnu Purana (Wilson)", ref=f"VP {book}.{ch}", gist=g, pinned=True))
-    return refs
-
-
-dp_files = {n: json.loads((V / "dp" / f"{n}.json").read_text(encoding="utf-8")) for n in ("ramayana", "krishna", "avatars")}
-
-
-def dp_for(domain, eid):
-    out = []
-    if domain == "ramayana":
-        out = [x for x in dp_files["ramayana"] if x["episode"] == eid]
-    elif domain == "krishna":
-        out = [x for x in dp_files["krishna"] if x["episode"] == eid]
-    else:
-        slugs = DP_AV.get(eid, [])
-        out = [x for x in dp_files["avatars"] if x["story"] in slugs]
-    return [dict(prabandham=x["prabandham"], ref=x["ref"], first=x.get("first_words_ta") or x.get("first_words", ""),
-                 gist=x.get("gist", ""), url=x.get("url", ""), confirmed=bool(x.get("confirmed"))) for x in out]
+DOMAIN_NAME = D.DOMAIN_NAME
+DOMAIN_ORDER = [d for d, _ in D.DOMAINS]
+STORY = D.STORY
 
 
 # ---- unified episodes
 U = {}
-for domain, M in (("ramayana", RE), ("krishna", KE), ("avatar", AE)):
+for domain, M in D.DOMAINS:
     for eid, e in M.E.items():
         uid = f"{domain}-{eid}"
-        slug = SLUG[domain].get(eid, eid if domain != "ramayana" else f"ram-{eid}")
-        sd = STORY.get(slug) or STORY.get(f"krishna-{eid}") or STORY.get(f"mbh-{eid}")
+        sd = STORY.get(D.slug_for(domain, eid))
         U[uid] = dict(id=uid, domain=domain, eid=eid, title=e["title"], brief=(sd or {}).get("brief", ""),
-                      note=e.get("note", ""), refs=build_refs(domain, e), dp=dp_for(domain, eid), songs={})
+                      note=e.get("note", ""), refs=D.build_refs(domain, e), dp=D.dp_for(domain, eid), songs={})
     for sid, v in M.A_.items():
         for eid in v["eps"]:
             U[f"{domain}-{eid}"]["songs"][sid] = dict(conf=v["conf"], note=v["note"])
 
 # ---- songs
-hits = {str(h["song"]): h for h in json.loads((V / "shortlist.json").read_text(encoding="utf-8"))}
+hits = D.load_hits() if hasattr(D, "load_hits") else {str(h["song"]): h for h in json.loads((V / "shortlist.json").read_text(encoding="utf-8"))}
 con = sqlite3.connect(f"file:{DB.as_posix()}?mode=ro", uri=True)
 
 
@@ -164,7 +73,7 @@ no_story = sorted((s for s in hits if s not in song_eps), key=int)
 
 
 def has_primary(u):
-    return any(r["src"] != "Divya Prabandham" and r.get("pinned") for r in u["refs"])
+    return any(r["src"] != D.TAMIL_SOURCE and r.get("pinned") for r in u["refs"])
 
 
 def has_dp(u):
@@ -191,7 +100,7 @@ for f in OLD.glob("*.md"):
 
 
 def status(u):
-    return ("primary text" if has_primary(u) else "no primary text") + " + " + ("Divya Prabandham" if has_dp(u) else "no confirmed DP")
+    return ("primary text" if has_primary(u) else "no primary text") + " + " + (D.TAMIL_SOURCE if has_dp(u) else "no confirmed DP")
 
 
 for uid, u in U.items():
@@ -207,7 +116,7 @@ for uid, u in U.items():
             txt = (txt + " — " if txt else "") + "“" + r["quote"].replace("|", "/") + "”"
         o.append(f"| {r['src']} | {r['ref']} | {txt} |")
     for d in u["dp"]:
-        o.append(f"| Divya Prabandham{'' if d['confirmed'] else ' (candidate)'} | {d['prabandham']} {d['ref']} | {d['first']} — {d['gist']} [{d['url']}] |")
+        o.append(f"| {D.TAMIL_SOURCE}{'' if d['confirmed'] else ' (candidate)'} | {d['prabandham']} {d['ref']} | {d['first']} — {d['gist']} [{d['url']}] |")
     if u["note"]:
         o += ["", f"Note: {u['note']}"]
     o += ["", "## Songs", ""]
@@ -222,10 +131,10 @@ for uid, u in U.items():
 idx = ["# Stories index", "", "Generated by `scripts/build_master.py`. Source of truth: the episode catalogues, `story_data.py`, `song-story-map.txt` and `dp/*.json`.", "",
        f"- Stories (episodes) with at least one song: **{stats['stories_with_songs']}**",
        f"- With a pinned reference in a primary text (Valmiki, Kamba, Mahabharata, Bhagavata, Vishnu Purana): **{n_prim}**",
-       f"- With at least one confirmed Divya Prabandham verse: **{n_dp}**",
-       f"- With both: **{n_both}**; primary only: {stats['only_primary']}; Divya Prabandham only: {stats['only_dp']}; neither: {stats['neither']}",
+       f"- With at least one confirmed {D.TAMIL_SOURCE} verse: **{n_dp}**",
+       f"- With both: **{n_both}**; primary only: {stats['only_primary']}; {D.TAMIL_SOURCE} only: {stats['only_dp']}; neither: {stats['neither']}",
        f"- Songs: {stats['songs_total']} total, {stats['songs_with_story']} assigned to a story, {stats['songs_without_story']} with no identified story", ""]
-for dom in ("ramayana", "krishna", "avatar"):
+for dom in DOMAIN_ORDER:
     idx += [f"## {DOMAIN_NAME[dom]}", "", "| Story | Songs | Primary refs | DP | File |", "|---|---|---|---|---|"]
     for uid, u in sorted(live.items(), key=lambda kv: -len(kv[1]["songs"])):
         if u["domain"] != dom:
@@ -260,7 +169,7 @@ def ref_rows(u, with_quote, links=True):
     for d in u["dp"]:
         tag = "" if d["confirmed"] else " (candidate)"
         url = f" <a href='{esc(d['url'])}'>link</a>" if d["url"] and links else ""
-        rows.append(f"<tr><td class=s>Divya Prabandham{tag}</td><td class=r>{esc(d['prabandham'])} {esc(d['ref'])}</td>"
+        rows.append(f"<tr><td class=s>{esc(D.TAMIL_SOURCE)}{tag}</td><td class=r>{esc(d['prabandham'])} {esc(d['ref'])}</td>"
                     f"<td><span class=ta>{esc(d['first'])}</span> {esc(d['gist'])}{url}</td></tr>")
     return "".join(rows)
 
@@ -281,12 +190,10 @@ td.s { width:19%; color:#445 } td.r { width:23%; font-family:Consolas,monospace;
 .meta { color:#555; font-size:8pt } .toc a { color:#1a3d7c; text-decoration:none } .toc li { margin:1pt 0 }
 .pb { break-before:page } .low { color:#a33 }
 """
-parts = [f"<!doctype html><html><head><meta charset=utf-8><title>Thiruppugazh: stories of Vishnu</title><style>{css}</style></head><body>"]
-parts.append("<h1>Thiruppugazh songs that call Murugan the nephew of Vishnu: stories and sources</h1>")
+parts = [f"<!doctype html><html><head><meta charset=utf-8><title>{esc(D.TITLE)}</title><style>{css}</style></head><body>"]
+parts.append(f"<h1>{esc(D.HEADING)}</h1>")
 parts.append(f"<p class=meta>{stats['songs_total']} songs, {stats['songs_with_story']} with an identified story, {stats['stories_with_songs']} stories. "
-             "Part A is by song number: the verse, then the story, then every reference. Part B is by story, with the quoted verses and Divya Prabandham links. "
-             "Reference marks: Kamba verse numbers are per padalam (Tamil Wikisource); Mahabharata numbers are Critical Edition lines; "
-             "Valmiki numbers follow valmikiramayan.net; Bhagavata numbers follow vedabase.io. 'verse not pinned' = padalam known, verse not yet found.</p>")
+             + esc(D.INTRO) + "</p>")
 parts.append("<h2>Contents</h2><ul class=toc>"
              f"<li><a href='#A'>Part A: songs by number</a> ({stats['songs_with_story']} songs)</li>"
              "<li><a href='#B'>Part B: stories</a></li><li><a href='#C'>Part C: songs with no identified story</a></li></ul>")
@@ -307,7 +214,7 @@ for sid in sorted(song_eps, key=int):
         parts.append(f"<table>{ref_rows(u, True, False)}</table>")
     parts.append("</div>")
 parts.append("<h2 id=B class=pb>Part B: stories, with quoted verses</h2>")
-for dom in ("ramayana", "krishna", "avatar"):
+for dom in DOMAIN_ORDER:
     parts.append(f"<h2>{DOMAIN_NAME[dom]}</h2>")
     for uid, u in sorted(live.items(), key=lambda kv: -len(kv[1]["songs"])):
         if u["domain"] != dom:
@@ -318,7 +225,7 @@ for dom in ("ramayana", "krishna", "avatar"):
         if u["note"]:
             parts.append(f"<div class=meta>Note: {esc(u['note'])}</div>")
         parts.append(f"<table>{ref_rows(u, True)}</table></div>")
-parts.append("<h2 id=C class=pb>Part C: songs with no identified story</h2><p class=meta>The nephew word names Vishnu only by an epithet, or the reading is unclear.</p>")
+parts.append("<h2 id=C class=pb>Part C: songs with no identified story</h2><p class=meta>" + esc(D.PART_C_NOTE) + "</p>")
 for sid in no_story:
     h = hits[sid]
     pre, line = song_lines(sid)
@@ -328,9 +235,9 @@ for sid in no_story:
 parts.append("</body></html>")
 pdfdir = ROOT / "scriptures" / "pdf"
 pdfdir.mkdir(exist_ok=True)
-htmlf = pdfdir / "thiruppugazh-vishnu-stories.html"
+htmlf = pdfdir / D.HTML_NAME
 htmlf.write_text("\n".join(parts), encoding="utf-8")
-pdff = ROOT / "scriptures" / "thiruppugazh-vishnu-stories.pdf"
+pdff = ROOT / "scriptures" / D.PDF_NAME
 edge = next((p for p in (r"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe", r"C:\Program Files\Microsoft\Edge\Application\msedge.exe") if os.path.exists(p)), None)
 if not edge:
     sys.exit("Edge not found; open the HTML in a browser and print to PDF")

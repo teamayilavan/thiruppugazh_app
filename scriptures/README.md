@@ -45,8 +45,12 @@ scriptures/
   thiruppugazh-vishnu-stories.pdf   the reading/verification PDF (Part A by song number, Part B by story, Part C songs with no story)
 ```
 
-New deity or theme folders (e.g. `shiva/`, `murugan-lore/`) sit beside `vishnu/` and follow
-the same shape.
+`shiva/` follows the same shape (see `shiva/README.md` for the shortlist rule, `shiva/SOURCES.md` for what was checked):
+`song-story-map.txt` (hand-read), `refs-sanskrit.json`, `tirumurai-deeds.json`, `refs-saints.json`, and the generated `STORIES.md`,
+`by-song.md`, `master.json`, `stories/`, plus `thiruppugazh-shiva-stories.pdf`. Per-deity code: `scripts/deity_<name>.py`,
+`scripts/shiva_episodes.py`, `scripts/shiva_story_data.py`, `scripts/shortlist.py --deity shiva`.
+Build: `python -I scriptures/scripts/build_master.py --deity shiva` (default is vishnu).
+New deity or theme folders (e.g. `murugan-lore/`) follow the same shape.
 
 ## Stage 1: shortlist (done, first pass)
 
