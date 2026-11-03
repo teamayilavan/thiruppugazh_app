@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../widgets/adaptive_layout.dart';
 import 'package:provider/provider.dart';
 import '../../data/repositories/song_repository.dart';
 import 'song_detail_screen.dart';
@@ -32,8 +33,10 @@ class HighlightsNotesScreen extends StatelessWidget {
             ],
           ),
         ),
-        body: const TabBarView(
-          children: [HighlightsList(), NotesList(), LinksList()],
+        body: const ContentWidth(
+          child: TabBarView(
+            children: [HighlightsList(), NotesList(), LinksList()],
+          ),
         ),
       ),
     );
@@ -363,7 +366,11 @@ class _LinksListState extends State<LinksList> {
               ),
               subtitle: Padding(
                 padding: const EdgeInsets.only(top: 4.0),
-                child: Text(shown, maxLines: 2, overflow: TextOverflow.ellipsis),
+                child: Text(
+                  shown,
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
+                ),
               ),
               onTap: () async {
                 final repo = Provider.of<SongRepository>(

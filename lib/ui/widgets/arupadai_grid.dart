@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../../constants/arupadai_veedu.dart';
+import 'adaptive_layout.dart';
 import '../../l10n/app_localizations.dart';
 import '../../providers/lyrics_language_provider.dart';
 import '../../theme/app_theme.dart';
@@ -20,6 +21,7 @@ class ArupadaiGrid extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final wide = MediaQuery.sizeOf(context).width >= Breakpoints.medium;
     final l10n = AppLocalizations.of(context)!;
     final templesByName = {
       for (final temple in temples) temple['name'] as String: temple,
@@ -44,11 +46,13 @@ class ArupadaiGrid extends StatelessWidget {
           GridView.builder(
             shrinkWrap: true,
             physics: const NeverScrollableScrollPhysics(),
-            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 2,
+            // Three across once there is room, so the tiles don't balloon on
+            // tablets.
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: wide ? 3 : 2,
               mainAxisSpacing: 12,
               crossAxisSpacing: 12,
-              childAspectRatio: 1.35,
+              childAspectRatio: wide ? 1.5 : 1.35,
             ),
             itemCount: ArupadaiVeedu.abodes.length,
             itemBuilder: (context, index) {

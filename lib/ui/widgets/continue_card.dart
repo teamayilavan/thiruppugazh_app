@@ -9,7 +9,7 @@ import '../../providers/reading_state_provider.dart';
 import '../../theme/app_theme.dart';
 import '../../utils/verses.dart';
 import '../screens/chanting_screen.dart';
-import '../screens/song_detail_screen.dart';
+import 'adaptive_layout.dart';
 
 /// "Continue where you left off": the song the user opened last, and -- if
 /// they were chanting it -- the verse they were on. Hidden until they have
@@ -73,9 +73,7 @@ class _ContinueCardState extends State<ContinueCard> {
         state.lastMode == ResumeMode.chant &&
         savedIndex != null &&
         verseCount > 0;
-    final index = resumeChanting
-        ? savedIndex.clamp(0, verseCount - 1)
-        : 0;
+    final index = resumeChanting ? savedIndex.clamp(0, verseCount - 1) : 0;
 
     final subtitle = resumeChanting
         ? l10n.continueChantingAt(index + 1, verseCount)
@@ -90,11 +88,14 @@ class _ContinueCardState extends State<ContinueCard> {
           color: colors.card,
           child: InkWell(
             onTap: () {
+              if (!resumeChanting) {
+                openSong(context, song);
+                return;
+              }
               Navigator.of(context).push(
                 MaterialPageRoute(
-                  builder: (_) => resumeChanting
-                      ? ChantingScreen(song: song, initialIndex: index)
-                      : SongDetailScreen(song: song),
+                  builder: (_) =>
+                      ChantingScreen(song: song, initialIndex: index),
                 ),
               );
             },

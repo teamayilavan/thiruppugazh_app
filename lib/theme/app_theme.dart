@@ -120,6 +120,23 @@ final lightTheme = ThemeData(
       const TextStyle(fontSize: 12, fontWeight: FontWeight.w500),
     ),
   ),
+  // Side rail used instead of the bottom bar on tablets; same look.
+  navigationRailTheme: const NavigationRailThemeData(
+    backgroundColor: AppColors.container,
+    indicatorColor: AppColors.accent,
+    selectedIconTheme: IconThemeData(color: AppColors.dbackground),
+    unselectedIconTheme: IconThemeData(color: AppColors.dtextMuted),
+    selectedLabelTextStyle: TextStyle(
+      fontSize: 12,
+      fontWeight: FontWeight.w600,
+      color: AppColors.text,
+    ),
+    unselectedLabelTextStyle: TextStyle(
+      fontSize: 12,
+      fontWeight: FontWeight.w500,
+      color: AppColors.textMuted,
+    ),
+  ),
 );
 
 final darkTheme = ThemeData(
@@ -170,6 +187,22 @@ final darkTheme = ThemeData(
     }),
     labelTextStyle: WidgetStateProperty.all(
       const TextStyle(fontSize: 12, fontWeight: FontWeight.w500),
+    ),
+  ),
+  navigationRailTheme: const NavigationRailThemeData(
+    backgroundColor: AppColors.dcontainer,
+    indicatorColor: AppColors.daccent,
+    selectedIconTheme: IconThemeData(color: AppColors.background),
+    unselectedIconTheme: IconThemeData(color: AppColors.textMuted),
+    selectedLabelTextStyle: TextStyle(
+      fontSize: 12,
+      fontWeight: FontWeight.w600,
+      color: AppColors.dtext,
+    ),
+    unselectedLabelTextStyle: TextStyle(
+      fontSize: 12,
+      fontWeight: FontWeight.w500,
+      color: AppColors.dtextMuted,
     ),
   ),
 );

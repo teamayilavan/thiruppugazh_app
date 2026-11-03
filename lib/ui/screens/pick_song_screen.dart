@@ -1,4 +1,5 @@
 import 'dart:async';
+import '../widgets/adaptive_layout.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -101,85 +102,87 @@ class _PickSongScreenState extends State<PickSongScreen> {
 
     return Scaffold(
       appBar: AppBar(title: Text(l10n.pickSongForLink)),
-      body: Column(
-        children: [
-          Card(
-            margin: const EdgeInsets.fromLTRB(12, 12, 12, 0),
-            child: ListTile(
-              leading: const Icon(Icons.link),
-              title: Text(
-                widget.title ?? Uri.tryParse(widget.url)?.host ?? widget.url,
-                maxLines: 2,
-                overflow: TextOverflow.ellipsis,
-              ),
-              subtitle: Text(
-                widget.url,
-                maxLines: 1,
-                overflow: TextOverflow.ellipsis,
-              ),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(12.0),
-            child: TextField(
-              controller: _controller,
-              onChanged: _onChanged,
-              autofocus: true,
-              decoration: InputDecoration(
-                hintText: l10n.searchSongsHint,
-                prefixIcon: const Icon(Icons.search),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(12.0),
+      body: ContentWidth(
+        child: Column(
+          children: [
+            Card(
+              margin: const EdgeInsets.fromLTRB(12, 12, 12, 0),
+              child: ListTile(
+                leading: const Icon(Icons.link),
+                title: Text(
+                  widget.title ?? Uri.tryParse(widget.url)?.host ?? widget.url,
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
                 ),
-                suffixIcon: _controller.text.isNotEmpty
-                    ? IconButton(
-                        icon: const Icon(Icons.clear),
-                        onPressed: () {
-                          _controller.clear();
-                          _onChanged('');
-                        },
-                      )
-                    : null,
+                subtitle: Text(
+                  widget.url,
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                ),
               ),
             ),
-          ),
-          Expanded(
-            child: _isLoading
-                ? const Center(child: CircularProgressIndicator())
-                : _results.isEmpty
-                ? Center(
-                    child: Text(
-                      _controller.text.trim().isEmpty
-                          ? l10n.startTypingToSearch
-                          : l10n.noResultsFound,
-                      style: theme.textTheme.bodyLarge,
-                    ),
-                  )
-                : ListView.builder(
-                    itemCount: _results.length,
-                    itemBuilder: (context, index) {
-                      final song = _results[index];
-                      final useEnglish =
-                          lyricsLang == LyricsLanguage.english &&
-                          song.hasEnglishContent;
-                      final title = useEnglish
-                          ? (song.englishTitle ?? song.title)
-                          : song.title;
-                      final place = useEnglish
-                          ? (song.englishVenue ?? song.place)
-                          : song.place;
-                      return ListTile(
-                        title: Text(title),
-                        subtitle: Text(
-                          place,
-                          style: theme.textTheme.bodySmall,
-                        ),
-                        onTap: _saving ? null : () => _choose(song),
-                      );
-                    },
+            Padding(
+              padding: const EdgeInsets.all(12.0),
+              child: TextField(
+                controller: _controller,
+                onChanged: _onChanged,
+                autofocus: true,
+                decoration: InputDecoration(
+                  hintText: l10n.searchSongsHint,
+                  prefixIcon: const Icon(Icons.search),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(12.0),
                   ),
-          ),
-        ],
+                  suffixIcon: _controller.text.isNotEmpty
+                      ? IconButton(
+                          icon: const Icon(Icons.clear),
+                          onPressed: () {
+                            _controller.clear();
+                            _onChanged('');
+                          },
+                        )
+                      : null,
+                ),
+              ),
+            ),
+            Expanded(
+              child: _isLoading
+                  ? const Center(child: CircularProgressIndicator())
+                  : _results.isEmpty
+                  ? Center(
+                      child: Text(
+                        _controller.text.trim().isEmpty
+                            ? l10n.startTypingToSearch
+                            : l10n.noResultsFound,
+                        style: theme.textTheme.bodyLarge,
+                      ),
+                    )
+                  : ListView.builder(
+                      itemCount: _results.length,
+                      itemBuilder: (context, index) {
+                        final song = _results[index];
+                        final useEnglish =
+                            lyricsLang == LyricsLanguage.english &&
+                            song.hasEnglishContent;
+                        final title = useEnglish
+                            ? (song.englishTitle ?? song.title)
+                            : song.title;
+                        final place = useEnglish
+                            ? (song.englishVenue ?? song.place)
+                            : song.place;
+                        return ListTile(
+                          title: Text(title),
+                          subtitle: Text(
+                            place,
+                            style: theme.textTheme.bodySmall,
+                          ),
+                          onTap: _saving ? null : () => _choose(song),
+                        );
+                      },
+                    ),
+            ),
+          ],
+        ),
       ),
     );
   }

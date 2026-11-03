@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../widgets/adaptive_layout.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -29,187 +30,189 @@ class SettingsScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(title: Text(l10n.settings)),
-      body: ListView(
-        children: [
-          ListTile(
-            leading: const Icon(Icons.translate_outlined),
-            title: Text(l10n.appLanguage),
-            subtitle: Text(
-              _getLanguageDisplayName(
-                context,
-                languageProvider.currentLanguage,
-              ),
-            ),
-            onTap: () => _showLanguageDialog(context, languageProvider),
-          ),
-          ListTile(
-            leading: const Icon(Icons.menu_book_outlined),
-            title: Text(l10n.lyricsLanguage),
-            subtitle: Text(
-              _getLyricsLanguageDisplayName(
-                lyricsLanguageProvider.lyricsLanguage,
-              ),
-            ),
-            onTap: () =>
-                _showLyricsLanguageDialog(context, lyricsLanguageProvider),
-          ),
-          const Divider(),
-          ListTile(
-            leading: const Icon(Icons.brightness_6_outlined),
-            title: Text(l10n.theme),
-            subtitle: Text(
-              '${l10n.current}: ${_getThemeDisplayName(context, themeProvider.themeMode)}',
-            ),
-            onTap: () {
-              _showThemeDialog(context, themeProvider);
-            },
-          ),
-          const Divider(),
-          SwitchListTile(
-            secondary: const Icon(Icons.notifications_outlined),
-            title: Text(l10n.dailyReminder),
-            value: reminderProvider.enabled,
-            onChanged: (value) =>
-                _handleReminderToggle(context, reminderProvider, value),
-          ),
-          if (reminderProvider.enabled)
+      body: ContentWidth(
+        child: ListView(
+          children: [
             ListTile(
-              // An invisible leading icon the same size as the toggle's
-              // bell icon above, so this row's title lines up with it
-              // exactly -- more reliable than guessing a fixed indent.
-              leading: const Opacity(
-                opacity: 0,
-                child: Icon(Icons.notifications_outlined),
+              leading: const Icon(Icons.translate_outlined),
+              title: Text(l10n.appLanguage),
+              subtitle: Text(
+                _getLanguageDisplayName(
+                  context,
+                  languageProvider.currentLanguage,
+                ),
               ),
-              title: Text(l10n.reminderTimeLabel),
-              subtitle: Text(reminderProvider.reminderTime.format(context)),
-              onTap: () => _pickReminderTime(context, reminderProvider),
+              onTap: () => _showLanguageDialog(context, languageProvider),
             ),
-          const Divider(),
-          _buildDataManagementSection(context, l10n),
-          const Divider(),
-          Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  l10n.creditsTitle,
-                  style: Theme.of(context).textTheme.titleMedium,
+            ListTile(
+              leading: const Icon(Icons.menu_book_outlined),
+              title: Text(l10n.lyricsLanguage),
+              subtitle: Text(
+                _getLyricsLanguageDisplayName(
+                  lyricsLanguageProvider.lyricsLanguage,
                 ),
-                const SizedBox(height: 24.0),
-                Text(
-                  l10n.sriGopalaSundaram,
-                  style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                const SizedBox(height: 12.0),
-                Text(
-                  l10n.thiruppugazhExplanatoryText,
-                  style: Theme.of(context).textTheme.bodyLarge,
-                ),
-                const SizedBox(height: 24.0),
-                Text(
-                  l10n.thiruSendhan,
-                  style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                const SizedBox(height: 12.0),
-                Text(
-                  l10n.kaumaramFounder,
-                  style: Theme.of(context).textTheme.bodyLarge,
-                ),
-                const SizedBox(height: 24.0),
-                Text(
-                  l10n.kaumaramTeam,
-                  style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                const SizedBox(height: 12.0),
-                Text(
-                  l10n.kaumaramCoFounders,
-                  style: Theme.of(context).textTheme.bodyLarge,
-                ),
-
-                const SizedBox(height: 24.0),
-                Text(
-                  l10n.mayuragiriTeam,
-                  style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                const SizedBox(height: 12.0),
-                Text(
-                  l10n.mayuragiriCredit,
-                  style: Theme.of(context).textTheme.bodyLarge,
-                ),
-
-                const SizedBox(height: 24.0),
-                Text(
-                  l10n.appDevelopment,
-                  style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                const SizedBox(height: 12.0),
-                Text(
-                  l10n.ayilavanAni,
-                  style: Theme.of(context).textTheme.bodyLarge,
-                ),
-                const SizedBox(height: 24.0),
-                Text(
-                  l10n.contact,
-                  style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                const SizedBox(height: 12.0),
-                Text(
-                  l10n.contactEmail,
-                  style: Theme.of(context).textTheme.bodyLarge,
-                ),
-              ],
+              ),
+              onTap: () =>
+                  _showLyricsLanguageDialog(context, lyricsLanguageProvider),
             ),
-          ),
-          const Divider(),
-          Padding(
-            padding: const EdgeInsets.symmetric(
-              horizontal: 16.0,
-              vertical: 16.0,
+            const Divider(),
+            ListTile(
+              leading: const Icon(Icons.brightness_6_outlined),
+              title: Text(l10n.theme),
+              subtitle: Text(
+                '${l10n.current}: ${_getThemeDisplayName(context, themeProvider.themeMode)}',
+              ),
+              onTap: () {
+                _showThemeDialog(context, themeProvider);
+              },
             ),
-            child: SizedBox(
-              width: double.infinity,
-              child: FilledButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const PrivacyPolicyScreen(),
+            const Divider(),
+            SwitchListTile(
+              secondary: const Icon(Icons.notifications_outlined),
+              title: Text(l10n.dailyReminder),
+              value: reminderProvider.enabled,
+              onChanged: (value) =>
+                  _handleReminderToggle(context, reminderProvider, value),
+            ),
+            if (reminderProvider.enabled)
+              ListTile(
+                // An invisible leading icon the same size as the toggle's
+                // bell icon above, so this row's title lines up with it
+                // exactly -- more reliable than guessing a fixed indent.
+                leading: const Opacity(
+                  opacity: 0,
+                  child: Icon(Icons.notifications_outlined),
+                ),
+                title: Text(l10n.reminderTimeLabel),
+                subtitle: Text(reminderProvider.reminderTime.format(context)),
+                onTap: () => _pickReminderTime(context, reminderProvider),
+              ),
+            const Divider(),
+            _buildDataManagementSection(context, l10n),
+            const Divider(),
+            Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    l10n.creditsTitle,
+                    style: Theme.of(context).textTheme.titleMedium,
+                  ),
+                  const SizedBox(height: 24.0),
+                  Text(
+                    l10n.sriGopalaSundaram,
+                    style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                      fontWeight: FontWeight.bold,
                     ),
-                  );
-                },
-                child: Text(l10n.privacyPolicy),
+                  ),
+                  const SizedBox(height: 12.0),
+                  Text(
+                    l10n.thiruppugazhExplanatoryText,
+                    style: Theme.of(context).textTheme.bodyLarge,
+                  ),
+                  const SizedBox(height: 24.0),
+                  Text(
+                    l10n.thiruSendhan,
+                    style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  const SizedBox(height: 12.0),
+                  Text(
+                    l10n.kaumaramFounder,
+                    style: Theme.of(context).textTheme.bodyLarge,
+                  ),
+                  const SizedBox(height: 24.0),
+                  Text(
+                    l10n.kaumaramTeam,
+                    style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  const SizedBox(height: 12.0),
+                  Text(
+                    l10n.kaumaramCoFounders,
+                    style: Theme.of(context).textTheme.bodyLarge,
+                  ),
+
+                  const SizedBox(height: 24.0),
+                  Text(
+                    l10n.mayuragiriTeam,
+                    style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  const SizedBox(height: 12.0),
+                  Text(
+                    l10n.mayuragiriCredit,
+                    style: Theme.of(context).textTheme.bodyLarge,
+                  ),
+
+                  const SizedBox(height: 24.0),
+                  Text(
+                    l10n.appDevelopment,
+                    style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  const SizedBox(height: 12.0),
+                  Text(
+                    l10n.ayilavanAni,
+                    style: Theme.of(context).textTheme.bodyLarge,
+                  ),
+                  const SizedBox(height: 24.0),
+                  Text(
+                    l10n.contact,
+                    style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  const SizedBox(height: 12.0),
+                  Text(
+                    l10n.contactEmail,
+                    style: Theme.of(context).textTheme.bodyLarge,
+                  ),
+                ],
               ),
             ),
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(
-              horizontal: 16.0,
-              vertical: 0.0,
-            ),
-            child: SizedBox(
-              width: double.infinity,
-              child: OutlinedButton.icon(
-                onPressed: () => _launchGitHubRepo(context),
-                icon: const Icon(Icons.code),
-                label: Text(l10n.viewSourceCode),
+            const Divider(),
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                horizontal: 16.0,
+                vertical: 16.0,
+              ),
+              child: SizedBox(
+                width: double.infinity,
+                child: FilledButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const PrivacyPolicyScreen(),
+                      ),
+                    );
+                  },
+                  child: Text(l10n.privacyPolicy),
+                ),
               ),
             ),
-          ),
-        ],
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                horizontal: 16.0,
+                vertical: 0.0,
+              ),
+              child: SizedBox(
+                width: double.infinity,
+                child: OutlinedButton.icon(
+                  onPressed: () => _launchGitHubRepo(context),
+                  icon: const Icon(Icons.code),
+                  label: Text(l10n.viewSourceCode),
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

@@ -3,7 +3,8 @@ import 'package:flutter/services.dart';
 import 'dart:async';
 
 import 'categories_screen.dart';
-import 'home_screen.dart';
+import 'songs_tab.dart';
+import '../widgets/adaptive_layout.dart';
 import 'temples_screen.dart';
 import 'settings_screen.dart';
 import 'highlights_notes_screen.dart';
@@ -29,7 +30,7 @@ class _MainWrapperState extends State<MainWrapper> {
   int _selectedIndex = 0;
 
   static const List<Widget> _widgetOptions = <Widget>[
-    HomeScreen(),
+    SongsTab(),
     TemplesScreen(),
     CategoriesScreen(),
     HighlightsNotesScreen(),
@@ -77,10 +78,8 @@ class _MainWrapperState extends State<MainWrapper> {
     }
     final result = await Navigator.of(context).push<PickSongResult>(
       MaterialPageRoute(
-        builder: (context) => PickSongScreen(
-          url: url,
-          title: LinkUtils.suggestTitle(text, url),
-        ),
+        builder: (context) =>
+            PickSongScreen(url: url, title: LinkUtils.suggestTitle(text, url)),
       ),
     );
     if (result == null || !mounted) return;
@@ -93,15 +92,17 @@ class _MainWrapperState extends State<MainWrapper> {
         context.read<LyricsLanguageProvider>().lyricsLanguage ==
             LyricsLanguage.english &&
         song.hasEnglishContent;
-    final songTitle = useEnglish ? (song.englishTitle ?? song.title) : song.title;
+    final songTitle = useEnglish
+        ? (song.englishTitle ?? song.title)
+        : song.title;
     final message = result.added
         ? l10n.linkAddedToSong(songTitle)
         : l10n.linkAlreadyAdded;
     final handledNatively = await ShareIntentService.finishShare(message);
     if (!handledNatively && mounted) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text(message)),
-      );
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(SnackBar(content: Text(message)));
     }
   }
 
@@ -171,76 +172,109 @@ class _MainWrapperState extends State<MainWrapper> {
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
+    final useRail = Breakpoints.useRail(context);
 
-    return Scaffold(
-      body: Column(
-        children: [
-          Expanded(
-            child: PopScope(
-              canPop: false,
-              onPopInvokedWithResult: (bool didPop, dynamic result) {
-                if (didPop) return;
-                showDialog(
-                  context: context,
-                  builder: (context) => AlertDialog(
-                    title: Text(l10n.exitAppTitle),
-                    content: Text(l10n.exitAppMessage),
-                    actions: [
-                      TextButton(
-                        onPressed: () => Navigator.of(context).pop(),
-                        child: Text(l10n.no),
-                      ),
-                      TextButton(
-                        onPressed: () => SystemNavigator.pop(),
-                        child: Text(
-                          l10n.yes,
-                          style: const TextStyle(fontWeight: FontWeight.bold),
-                        ),
-                      ),
-                    ],
+    final destinations = <_Destination>[
+      _Destination(Icons.music_note_outlined, Icons.music_note, l10n.songs),
+      _Destination(
+        Icons.temple_hindu_outlined,
+        Icons.temple_hindu,
+        l10n.temples,
+      ),
+      _Destination(Icons.category_outlined, Icons.category, l10n.categories),
+      _Destination(
+        Icons.library_books_outlined,
+        Icons.library_books,
+        l10n.myLibrary,
+      ),
+      _Destination(Icons.more_horiz_outlined, Icons.more_horiz, l10n.more),
+    ];
+
+    final content = PopScope(
+      canPop: false,
+      onPopInvokedWithResult: (bool didPop, dynamic result) {
+        if (didPop) return;
+        showDialog(
+          context: context,
+          builder: (context) => AlertDialog(
+            title: Text(l10n.exitAppTitle),
+            content: Text(l10n.exitAppMessage),
+            actions: [
+              TextButton(
+                onPressed: () => Navigator.of(context).pop(),
+                child: Text(l10n.no),
+              ),
+              TextButton(
+                onPressed: () => SystemNavigator.pop(),
+                child: Text(
+                  l10n.yes,
+                  style: const TextStyle(fontWeight: FontWeight.bold),
+                ),
+              ),
+            ],
+          ),
+        );
+      },
+      child: IndexedStack(index: _selectedIndex, children: _widgetOptions),
+    );
+
+    if (useRail) {
+      return Scaffold(
+        body: Row(
+          children: [
+            // Scrolls on short windows (a phone held sideways) so every
+            // destination stays reachable.
+            LayoutBuilder(
+              builder: (context, constraints) => SingleChildScrollView(
+                child: ConstrainedBox(
+                  constraints: BoxConstraints(minHeight: constraints.maxHeight),
+                  child: IntrinsicHeight(
+                    child: NavigationRail(
+                      selectedIndex: _selectedIndex,
+                      onDestinationSelected: _onDestinationSelected,
+                      labelType: NavigationRailLabelType.all,
+                      destinations: [
+                        for (final d in destinations)
+                          NavigationRailDestination(
+                            icon: Icon(d.icon),
+                            selectedIcon: Icon(d.selectedIcon),
+                            label: Text(d.label),
+                          ),
+                      ],
+                    ),
                   ),
-                );
-              },
-              child: IndexedStack(
-                index: _selectedIndex,
-                children: _widgetOptions,
+                ),
               ),
             ),
-          ),
-        ],
-      ),
+            Expanded(child: content),
+          ],
+        ),
+      );
+    }
+
+    return Scaffold(
+      body: content,
       bottomNavigationBar: NavigationBar(
         onDestinationSelected: _onDestinationSelected,
         selectedIndex: _selectedIndex,
         labelBehavior: NavigationDestinationLabelBehavior.alwaysShow,
-        destinations: <Widget>[
-          NavigationDestination(
-            icon: const Icon(Icons.music_note_outlined),
-            selectedIcon: const Icon(Icons.music_note),
-            label: l10n.songs,
-          ),
-          NavigationDestination(
-            icon: const Icon(Icons.temple_hindu_outlined),
-            selectedIcon: const Icon(Icons.temple_hindu),
-            label: l10n.temples,
-          ),
-          NavigationDestination(
-            icon: const Icon(Icons.category_outlined),
-            selectedIcon: const Icon(Icons.category),
-            label: l10n.categories,
-          ),
-          NavigationDestination(
-            icon: const Icon(Icons.library_books_outlined),
-            selectedIcon: const Icon(Icons.library_books),
-            label: l10n.myLibrary,
-          ),
-          NavigationDestination(
-            icon: const Icon(Icons.more_horiz_outlined),
-            selectedIcon: const Icon(Icons.more_horiz),
-            label: l10n.more,
-          ),
+        destinations: [
+          for (final d in destinations)
+            NavigationDestination(
+              icon: Icon(d.icon),
+              selectedIcon: Icon(d.selectedIcon),
+              label: d.label,
+            ),
         ],
       ),
     );
   }
+}
+
+class _Destination {
+  const _Destination(this.icon, this.selectedIcon, this.label);
+
+  final IconData icon;
+  final IconData selectedIcon;
+  final String label;
 }
