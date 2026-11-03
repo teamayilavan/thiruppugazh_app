@@ -48,6 +48,36 @@ void main() {
     });
   });
 
+  group('isLargeScreen', () {
+    Future<bool> check(WidgetTester tester, Size size) async {
+      tester.view.physicalSize = size;
+      tester.view.devicePixelRatio = 1;
+      addTearDown(tester.view.reset);
+      late bool result;
+      await tester.pumpWidget(
+        MaterialApp(
+          home: Builder(
+            builder: (context) {
+              result = Breakpoints.isLargeScreen(context);
+              return const SizedBox();
+            },
+          ),
+        ),
+      );
+      return result;
+    }
+
+    testWidgets('is false for a phone in either orientation', (tester) async {
+      expect(await check(tester, const Size(412, 915)), isFalse);
+      expect(await check(tester, const Size(915, 412)), isFalse);
+    });
+
+    testWidgets('is true for a tablet in either orientation', (tester) async {
+      expect(await check(tester, const Size(800, 1280)), isTrue);
+      expect(await check(tester, const Size(1280, 800)), isTrue);
+    });
+  });
+
   group('openSong', () {
     testWidgets('hands the song to the pane when there is one', (tester) async {
       Song? opened;

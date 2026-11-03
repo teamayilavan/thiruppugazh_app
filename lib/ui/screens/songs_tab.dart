@@ -27,7 +27,9 @@ class _SongsTabState extends State<SongsTab> {
       builder: (context, constraints) {
         // The rail has already taken its share, so compare against the
         // window class minus roughly its width.
-        final split = constraints.maxWidth >= Breakpoints.expanded - 80;
+        final split =
+            Breakpoints.isLargeScreen(context) &&
+            constraints.maxWidth >= Breakpoints.expanded - 80;
         if (!split) return const HomeScreen();
 
         final colors = Theme.of(context).colorScheme;

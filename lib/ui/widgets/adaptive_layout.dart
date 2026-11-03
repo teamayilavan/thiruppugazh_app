@@ -15,8 +15,13 @@ class Breakpoints {
   /// extra width becomes margin.
   static const double contentMaxWidth = 720;
 
-  static bool useRail(BuildContext context) =>
-      MediaQuery.sizeOf(context).width >= medium;
+  /// True on tablets and other windows that are at least [medium] in both
+  /// directions. A phone held sideways is wide but short, so it keeps the
+  /// phone layout.
+  static bool isLargeScreen(BuildContext context) =>
+      MediaQuery.sizeOf(context).shortestSide >= medium;
+
+  static bool useRail(BuildContext context) => isLargeScreen(context);
 }
 
 /// Centers [child] and stops it growing wider than [maxWidth], so lists and
