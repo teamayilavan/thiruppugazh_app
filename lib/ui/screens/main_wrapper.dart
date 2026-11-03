@@ -224,23 +224,32 @@ class _MainWrapperState extends State<MainWrapper> {
           children: [
             // Scrolls on short windows (a phone held sideways) so every
             // destination stays reachable.
-            LayoutBuilder(
-              builder: (context, constraints) => SingleChildScrollView(
-                child: ConstrainedBox(
-                  constraints: BoxConstraints(minHeight: constraints.maxHeight),
-                  child: IntrinsicHeight(
-                    child: NavigationRail(
-                      selectedIndex: _selectedIndex,
-                      onDestinationSelected: _onDestinationSelected,
-                      labelType: NavigationRailLabelType.all,
-                      destinations: [
-                        for (final d in destinations)
-                          NavigationRailDestination(
-                            icon: Icon(d.icon),
-                            selectedIcon: Icon(d.selectedIcon),
-                            label: Text(d.label),
-                          ),
-                      ],
+            // Keeps the rail clear of a camera cutout in landscape.
+            ColoredBox(
+              color: Theme.of(context).navigationRailTheme.backgroundColor!,
+              child: SafeArea(
+                right: false,
+                child: LayoutBuilder(
+                  builder: (context, constraints) => SingleChildScrollView(
+                    child: ConstrainedBox(
+                      constraints: BoxConstraints(
+                        minHeight: constraints.maxHeight,
+                      ),
+                      child: IntrinsicHeight(
+                        child: NavigationRail(
+                          selectedIndex: _selectedIndex,
+                          onDestinationSelected: _onDestinationSelected,
+                          labelType: NavigationRailLabelType.all,
+                          destinations: [
+                            for (final d in destinations)
+                              NavigationRailDestination(
+                                icon: Icon(d.icon),
+                                selectedIcon: Icon(d.selectedIcon),
+                                label: Text(d.label),
+                              ),
+                          ],
+                        ),
+                      ),
                     ),
                   ),
                 ),

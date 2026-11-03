@@ -5,7 +5,7 @@ Notable changes to this project. Format loosely follows [Keep a Changelog](https
 ## [Unreleased]
 
 ### Added
-- **Tablet and large-screen layout.** On devices at least 600 dp in both directions (tablets; phones in landscape keep the phone layout) the bottom bar becomes a side navigation rail. On the Songs tab, when there is room (about 840 dp, e.g. a tablet in landscape), the song list sits on the left and the open song on the right, so reading never leaves the list; the current song is highlighted, and the Continue card, Today's song and the random button open into the same pane. Lists, settings and lyrics keep a comfortable reading width (720 dp) instead of stretching edge to edge, and the six-abodes grid shows three across. Phones are unchanged. No data, schema or backup changes.
+- **Tablet and large-screen layout.** From 600 dp wide (tablets, and phones held sideways, where the bottom bar would use a fifth of the height) the bottom bar becomes a side navigation rail that stays clear of a camera cutout, and Home's hero image shrinks on short windows so songs stay in view. On the Songs tab, on tablets with room (about 840 dp wide, 600 dp on the short side), the song list sits on the left and the open song on the right, so reading never leaves the list; the current song is highlighted, and the Continue card, Today's song and the random button open into the same pane. Lists, settings and lyrics keep a comfortable reading width (720 dp) instead of stretching edge to edge, and the six-abodes grid shows three across. Phones are unchanged. No data, schema or backup changes.
 
 ## [1.6.0+8] — 2026-10-24
 

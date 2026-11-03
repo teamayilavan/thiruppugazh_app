@@ -16,12 +16,19 @@ class Breakpoints {
   static const double contentMaxWidth = 720;
 
   /// True on tablets and other windows that are at least [medium] in both
-  /// directions. A phone held sideways is wide but short, so it keeps the
-  /// phone layout.
+  /// directions. A phone held sideways is wide but short, so it is not.
   static bool isLargeScreen(BuildContext context) =>
       MediaQuery.sizeOf(context).shortestSide >= medium;
 
-  static bool useRail(BuildContext context) => isLargeScreen(context);
+  /// Navigation goes to the side whenever there is width for it. That
+  /// includes a phone held sideways, where the bottom bar would eat a fifth
+  /// of the height.
+  static bool useRail(BuildContext context) =>
+      MediaQuery.sizeOf(context).width >= medium;
+
+  /// A window shorter than this (a phone held sideways) shrinks the Home
+  /// hero image so the songs stay in view.
+  static const double shortHeight = 500;
 }
 
 /// Centers [child] and stops it growing wider than [maxWidth], so lists and

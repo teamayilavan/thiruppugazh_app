@@ -48,6 +48,37 @@ void main() {
     });
   });
 
+  group('useRail', () {
+    Future<bool> check(WidgetTester tester, Size size) async {
+      tester.view.physicalSize = size;
+      tester.view.devicePixelRatio = 1;
+      addTearDown(tester.view.reset);
+      late bool result;
+      await tester.pumpWidget(
+        MaterialApp(
+          home: Builder(
+            builder: (context) {
+              result = Breakpoints.useRail(context);
+              return const SizedBox();
+            },
+          ),
+        ),
+      );
+      return result;
+    }
+
+    testWidgets('is false for a phone held upright', (tester) async {
+      expect(await check(tester, const Size(412, 915)), isFalse);
+    });
+
+    testWidgets('is true for a phone held sideways and for tablets', (
+      tester,
+    ) async {
+      expect(await check(tester, const Size(915, 412)), isTrue);
+      expect(await check(tester, const Size(800, 1280)), isTrue);
+    });
+  });
+
   group('isLargeScreen', () {
     Future<bool> check(WidgetTester tester, Size size) async {
       tester.view.physicalSize = size;

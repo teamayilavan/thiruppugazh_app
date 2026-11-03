@@ -148,7 +148,11 @@ class _HomeScreenState extends State<HomeScreen> {
                         child: Image.asset(
                           'assets/images/hero.webp',
                           width: double.infinity,
-                          height: 350,
+                          height:
+                              MediaQuery.sizeOf(context).height <
+                                  Breakpoints.shortHeight
+                              ? MediaQuery.sizeOf(context).height * 0.4
+                              : 350,
                           fit: BoxFit.cover,
                           // The source is 2048x2048; decode only what the
                           // screen can show instead of ~16 MB of bitmap.
