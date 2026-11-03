@@ -21,7 +21,6 @@ class ArupadaiGrid extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final wide = MediaQuery.sizeOf(context).width >= Breakpoints.medium;
     final l10n = AppLocalizations.of(context)!;
     final templesByName = {
       for (final temple in temples) temple['name'] as String: temple,
@@ -43,22 +42,27 @@ class ArupadaiGrid extends StatelessWidget {
             style: Theme.of(context).textTheme.bodySmall,
           ),
           const SizedBox(height: 12),
-          GridView.builder(
-            shrinkWrap: true,
-            physics: const NeverScrollableScrollPhysics(),
-            // Three across once there is room, so the tiles don't balloon on
-            // tablets.
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: wide ? 3 : 2,
-              mainAxisSpacing: 12,
-              crossAxisSpacing: 12,
-              childAspectRatio: wide ? 1.5 : 1.35,
-            ),
-            itemCount: ArupadaiVeedu.abodes.length,
-            itemBuilder: (context, index) {
-              final abode = ArupadaiVeedu.abodes[index];
-              final temple = templesByName[abode.tamilName];
-              return _ArupadaiTile(abode: abode, temple: temple);
+          // Three across once the column itself has room (not the window:
+          // on a tablet this sits in a narrow list pane).
+          LayoutBuilder(
+            builder: (context, constraints) {
+              final wide = constraints.maxWidth >= Breakpoints.medium;
+              return GridView.builder(
+                shrinkWrap: true,
+                physics: const NeverScrollableScrollPhysics(),
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: wide ? 3 : 2,
+                  mainAxisSpacing: 12,
+                  crossAxisSpacing: 12,
+                  childAspectRatio: wide ? 1.5 : 1.35,
+                ),
+                itemCount: ArupadaiVeedu.abodes.length,
+                itemBuilder: (context, index) {
+                  final abode = ArupadaiVeedu.abodes[index];
+                  final temple = templesByName[abode.tamilName];
+                  return _ArupadaiTile(abode: abode, temple: temple);
+                },
+              );
             },
           ),
         ],
@@ -84,7 +88,8 @@ class _ArupadaiTile extends StatelessWidget {
       context,
     ).lyricsLanguage;
     final englishName = temple?['english_name'] as String?;
-    final displayName = (lyricsLang == LyricsLanguage.english && englishName != null)
+    final displayName =
+        (lyricsLang == LyricsLanguage.english && englishName != null)
         ? englishName
         : abode.tamilName;
     final songCount = temple?['song_count'] as int?;

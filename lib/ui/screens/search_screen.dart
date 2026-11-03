@@ -6,7 +6,6 @@ import '../../data/models/song_model.dart';
 import '../../data/models/search_filter.dart';
 import '../../data/repositories/song_repository.dart';
 import '../../providers/lyrics_language_provider.dart';
-import 'song_detail_screen.dart';
 import '../../l10n/app_localizations.dart';
 import '../../../constants/app_constants.dart';
 
@@ -165,14 +164,10 @@ class _SearchScreenState extends State<SearchScreen> {
                                 displayPlace,
                                 style: Theme.of(context).textTheme.bodySmall,
                               ),
+                              tileColor: paneSelectionColor(context, song.id),
                               onTap: () {
                                 _searchFocusNode.unfocus();
-                                Navigator.of(context).push(
-                                  MaterialPageRoute(
-                                    builder: (context) =>
-                                        SongDetailScreen(song: song),
-                                  ),
-                                );
+                                openSong(context, song);
                               },
                             );
                           },

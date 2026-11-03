@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../data/models/song_model.dart';
+import '../../theme/app_theme.dart';
 import '../screens/song_detail_screen.dart';
 
 /// Window-width breakpoints (Material 3 window size classes).
@@ -76,22 +77,34 @@ class SongPaneScope extends InheritedWidget {
   });
 
   final int? selectedSongId;
-  final void Function(Song song) onOpen;
+
+  /// Null when there is no room for a pane right now; songs then open as
+  /// full pages.
+  final void Function(Song song)? onOpen;
 
   static SongPaneScope? maybeOf(BuildContext context) =>
       context.dependOnInheritedWidgetOfExactType<SongPaneScope>();
 
   @override
   bool updateShouldNotify(SongPaneScope old) =>
-      selectedSongId != old.selectedSongId;
+      selectedSongId != old.selectedSongId ||
+      (onOpen == null) != (old.onOpen == null);
+}
+
+/// Background for the list row of the song open in the reading pane, or null
+/// for every other row (and when there is no pane).
+Color? paneSelectionColor(BuildContext context, int songId) {
+  final scope = SongPaneScope.maybeOf(context);
+  if (scope?.selectedSongId != songId) return null;
+  return Theme.of(context).extension<AppColorExtension>()!.card;
 }
 
 /// Opens [song] in the reading pane when there is one, otherwise as a full
 /// screen on top of the current page.
 void openSong(BuildContext context, Song song) {
-  final scope = SongPaneScope.maybeOf(context);
-  if (scope != null) {
-    scope.onOpen(song);
+  final onOpen = SongPaneScope.maybeOf(context)?.onOpen;
+  if (onOpen != null) {
+    onOpen(song);
     return;
   }
   Navigator.of(

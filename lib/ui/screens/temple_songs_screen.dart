@@ -5,7 +5,6 @@ import '../../data/repositories/song_repository.dart';
 import '../../data/models/song_model.dart';
 import '../../l10n/app_localizations.dart';
 import '../../providers/lyrics_language_provider.dart';
-import 'song_detail_screen.dart';
 
 class TempleSongsScreen extends StatefulWidget {
   final String templeName; // Tamil name — used for DB query
@@ -91,14 +90,8 @@ class _TempleSongsScreenState extends State<TempleSongsScreen> {
                           style: Theme.of(context).textTheme.bodySmall,
                         )
                       : null,
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => SongDetailScreen(song: song),
-                      ),
-                    );
-                  },
+                  tileColor: paneSelectionColor(context, song.id),
+                  onTap: () => openSong(context, song),
                 );
               },
             );

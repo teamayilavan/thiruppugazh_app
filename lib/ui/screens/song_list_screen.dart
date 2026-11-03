@@ -9,7 +9,6 @@ import '../../data/repositories/song_repository.dart';
 import '../../l10n/app_localizations.dart';
 import '../../providers/lyrics_language_provider.dart';
 import '../widgets/error_display_widget.dart';
-import 'song_detail_screen.dart';
 
 class SongListScreen extends StatefulWidget {
   final Category category;
@@ -118,13 +117,8 @@ class _SongListScreenState extends State<SongListScreen> {
                         //change text size
                         style: Theme.of(context).textTheme.bodySmall,
                       ),
-                      onTap: () {
-                        Navigator.of(context).push(
-                          MaterialPageRoute(
-                            builder: (context) => SongDetailScreen(song: song),
-                          ),
-                        );
-                      },
+                      tileColor: paneSelectionColor(context, song.id),
+                      onTap: () => openSong(context, song),
                     );
                   },
                   // This builds the divider between each ListTile

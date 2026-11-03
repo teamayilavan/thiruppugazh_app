@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:thiruppugazh/data/models/song_model.dart';
+import 'package:thiruppugazh/theme/app_theme.dart';
 import 'package:thiruppugazh/ui/widgets/adaptive_layout.dart';
 
 Song _song(int id) =>
@@ -106,6 +107,50 @@ void main() {
     testWidgets('is true for a tablet in either orientation', (tester) async {
       expect(await check(tester, const Size(800, 1280)), isTrue);
       expect(await check(tester, const Size(1280, 800)), isTrue);
+    });
+  });
+
+  group('paneSelectionColor', () {
+    Future<Color?> colorFor(WidgetTester tester, int? selected, int row) async {
+      Color? result;
+      await tester.pumpWidget(
+        MaterialApp(
+          theme: lightTheme,
+          home: SongPaneScope(
+            selectedSongId: selected,
+            onOpen: (_) {},
+            child: Builder(
+              builder: (context) {
+                result = paneSelectionColor(context, row);
+                return const SizedBox();
+              },
+            ),
+          ),
+        ),
+      );
+      return result;
+    }
+
+    testWidgets('marks only the song open in the pane', (tester) async {
+      expect(await colorFor(tester, 3, 3), isNotNull);
+      expect(await colorFor(tester, 3, 4), isNull);
+      expect(await colorFor(tester, null, 3), isNull);
+    });
+
+    testWidgets('does nothing without a pane', (tester) async {
+      Color? result = Colors.red;
+      await tester.pumpWidget(
+        MaterialApp(
+          theme: lightTheme,
+          home: Builder(
+            builder: (context) {
+              result = paneSelectionColor(context, 3);
+              return const SizedBox();
+            },
+          ),
+        ),
+      );
+      expect(result, isNull);
     });
   });
 
