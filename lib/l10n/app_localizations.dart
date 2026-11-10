@@ -1382,6 +1382,24 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Recently read'**
   String get recentlyRead;
+
+  /// No description provided for @highlightsHint.
+  ///
+  /// In en, this message translates to:
+  /// **'On a song, select some lines and choose Highlight. They will be gathered here.'**
+  String get highlightsHint;
+
+  /// No description provided for @notesHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Use Song Note on any song to write a reflection. Your notes will be gathered here.'**
+  String get notesHint;
+
+  /// No description provided for @linksHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Use Add Link on a song, or share a link from YouTube or any app and choose Thiruppugazh.'**
+  String get linksHint;
 }
 
 class _AppLocalizationsDelegate

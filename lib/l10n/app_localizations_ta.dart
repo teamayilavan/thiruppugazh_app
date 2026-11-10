@@ -707,4 +707,16 @@ class AppLocalizationsTa extends AppLocalizations {
 
   @override
   String get recentlyRead => 'சமீபத்தில் படித்தவை';
+
+  @override
+  String get highlightsHint =>
+      'ஒரு பாடலில் சில வரிகளைத் தேர்ந்தெடுத்து “வண்ணமிடு” என்பதைத் தொடவும். அவை இங்கே சேரும்.';
+
+  @override
+  String get notesHint =>
+      'எந்தப் பாடலிலும் “பாடல் குறிப்பு” மூலம் உங்கள் எண்ணங்களை எழுதலாம். அவை இங்கே சேரும்.';
+
+  @override
+  String get linksHint =>
+      'ஒரு பாடலில் “இணைப்பைச் சேர்” என்பதைப் பயன்படுத்தவும்; அல்லது YouTube அல்லது வேறு செயலியிலிருந்து இணைப்பைப் பகிர்ந்து திருப்புகழைத் தேர்ந்தெடுக்கவும்.';
 }

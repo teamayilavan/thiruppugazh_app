@@ -203,15 +203,15 @@ void main() {
             ChangeNotifierProvider(create: (_) => LyricsLanguageProvider()),
             ChangeNotifierProvider(create: (_) => ReadingStateProvider()),
           ],
-          child: MaterialApp(
-            localizationsDelegates: const [
+          child: const MaterialApp(
+            localizationsDelegates: [
               AppLocalizations.delegate,
               GlobalMaterialLocalizations.delegate,
               GlobalWidgetsLocalizations.delegate,
               GlobalCupertinoLocalizations.delegate,
             ],
             supportedLocales: AppLocalizations.supportedLocales,
-            home: const PickSongScreen(url: 'https://a.com'),
+            home: PickSongScreen(url: 'https://a.com'),
           ),
         ),
       );

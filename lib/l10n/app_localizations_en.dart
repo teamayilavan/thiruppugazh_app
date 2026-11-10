@@ -701,4 +701,16 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get recentlyRead => 'Recently read';
+
+  @override
+  String get highlightsHint =>
+      'On a song, select some lines and choose Highlight. They will be gathered here.';
+
+  @override
+  String get notesHint =>
+      'Use Song Note on any song to write a reflection. Your notes will be gathered here.';
+
+  @override
+  String get linksHint =>
+      'Use Add Link on a song, or share a link from YouTube or any app and choose Thiruppugazh.';
 }

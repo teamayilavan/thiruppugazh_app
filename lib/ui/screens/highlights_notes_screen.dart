@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../widgets/adaptive_layout.dart';
 import 'package:provider/provider.dart';
+import '../widgets/empty_hint.dart';
 import '../../data/repositories/song_repository.dart';
 import '../../l10n/app_localizations.dart';
 import '../widgets/link_actions.dart';
@@ -95,7 +96,11 @@ class _HighlightsListState extends State<HighlightsList> {
         }
         final rows = snapshot.data ?? [];
         if (rows.isEmpty) {
-          return Center(child: Text(l10n.noHighlightsFound));
+          return EmptyHint(
+            icon: Icons.highlight,
+            title: l10n.noHighlightsFound,
+            hint: l10n.highlightsHint,
+          );
         }
 
         // Group rows by song_id
@@ -199,7 +204,11 @@ class _NotesListState extends State<NotesList> {
         }
         final rows = snapshot.data ?? [];
         if (rows.isEmpty) {
-          return Center(child: Text(l10n.noNotesFound));
+          return EmptyHint(
+            icon: Icons.note,
+            title: l10n.noNotesFound,
+            hint: l10n.notesHint,
+          );
         }
 
         return ListView.separated(
@@ -328,7 +337,11 @@ class _LinksListState extends State<LinksList> {
         }
         final rows = snapshot.data ?? [];
         if (rows.isEmpty) {
-          return Center(child: Text(l10n.noLinksFound));
+          return EmptyHint(
+            icon: Icons.link,
+            title: l10n.noLinksFound,
+            hint: l10n.linksHint,
+          );
         }
 
         return ListView.separated(
