@@ -518,6 +518,19 @@ CHECKS["murugan"] += [
     ("kpd", "46", "திருப்பரங்குன்றிடை", "Deivayanai arrives at Thiruparankundram"), ("kpd", "86", "பரங்குன்றில்வைகினான்", "Murugan stays at Thiruparankundram"), ("kpd", "87", "தெய்வயானை", "Indra gives Deivayanai"),
 ]
 
+CHECKS["murugan"] += [
+    ("kpk", "1851", "தினைப்புனத்தைக்", "Valli guards the millet field"), ("kpk", "1854", "தணிகை", "Murugan at Tiruttani first"), ("kpk", "1865", "வேட்டுவக்கோலத்தைக்கொடுகுமரன்தோன்றினான்", "Murugan appears in a hunter's form"),
+    ("kpk", "1875", "வேங்கையின்உருவமாகி", "Murugan stands as a Vengai tree"), ("kpk", "1880", "முளைத்ததென்னா", "Valli: a new tree has sprung up"), ("kpk", "1882", "மானுடநல்வடிவங்கொடுநின்றான்", "he takes a human form again"),
+    ("kpk", "1894", "விருத்தவேடமதுகொண்டு", "he takes an old ascetic's guise"), ("kpk", "1900", "பசிநோய", "he complains of hunger"), ("kpk", "1902", "தெண்ணீர்", "he asks for water"),
+    ("kpk", "1910", "தந்திமுகத்தெந்தைதனை", "he thinks of the elephant-faced one"), ("kpk", "1911", "தந்திக்கடவுள்", "the elephant god comes"), ("kpk", "1912", "இவ்வேழங்காத்தருள்க", "Valli begs the old man to save her from the elephant"),
+    ("kpk", "1916", "முந்நான்குதோளும்", "the true twelve-armed form"), ("kpk", "1996", "வேங்கைப்பொன்றிகழ்அதளின்மீது", "seated in her father's house on a Vengai hide"), ("kpk", "1999", "தண்புனல்தாரை", "Nambi pours the water of giving"),
+]
+
+CHECKS["murugan"] += [
+    ("kpa", "1214", "மெய்த்தமிழ்முனிவன்", "Agastya the Tamil sage"), ("kpa", "1214", "குன்றுருக்கொண்டு", "Krouncha takes a mountain form"), ("kpa", "1219", "குறுமுனிபாணித்தண்டால்", "Agastya strikes it with his staff"),
+    ("kpa", "1220", "நீண்மலையாகி", "cursed to stay a mountain"), ("kpa", "1221", "வேற்படைதன்னிற்பின்னாள்விளிகுதி", "to die later by Murugan's Vel"), ("kp", "807", "பொதியமலை", "Shiva sends Agastya to Pothigai"),
+]
+
 REF2 = {
     "n-sundarar-wedding": [PPX("12000", "Sundarar: Thadutatkonda Puranam (Thirumalai Sargam)", "vv. ~189-230; 189 and 220 checked", "the old man demands to see the bond; Sundarar scorns him")],
     "n-sundarar-messenger": [PPX("12290", "Eyarkon Kalikkama Nayanar Puranam", "v. 8 (Shiva sent as messenger), v. 337 (at Paravai's house); both checked")],
@@ -537,10 +550,14 @@ REF2 = {
     "m-saravana": [KPR("padalam 13 Saravana Padalam, vv. 1015-1051 (1032 and 1048 checked)"), R("Shiva set", "shiva/stories/murugan-skanda-birth.md", "", "local", "")],
     "m-brahma-prison": [KPR("padalam 16 Ayanaich Chiraipuri, vv. 1205-1223 (1219, 1223 checked); padalam 17 Ayanaich Chirai Neekku, vv. 1224-1265"), R("Shiva set", "shiva/stories/murugan-pranava.md", "Murugan teaches Shiva the Pranava", "local", "")],
     "m-tarakasura": [KPR("padalam 20 Tarakan Varaip Padalam, vv. 1329-1531 (1332 checked)")],
-    "m-krouncha": [KPR("the mountain is introduced in the Tarakan padalam, vv. 1329-1331 (1329 checked)", "the great battle is in the Yuddha Kandam, which is not on Wikisource")],
+    "m-krouncha": [KPR("the mountain is introduced in the Tarakan padalam, vv. 1329-1331 (1329 checked); the Vel bursts Tarakan and the mountain, vv. 1509-1516", "the whole episode is in the first kandam; the Yuddha Kandam is not involved"),
+                   KPM("Asura Kandam", "pmuni0268", "padalam 24 Kiraunja Padalam, vv. 1210-1222: Krouncha takes the form of a mountain to trap Agastya on his way south; Agastya sees through the illusion, strikes it with his staff and curses him to stay a mountain until Murugan's Vel destroys him (1219-1221)", "this is the origin of the mountain that the songs say Murugan pierced")],
+    "m-agastya": [KPM("Asura Kandam", "pmuni0268", "Agastya is the 'Tamil sage' (vv. 1214, 1222, 1224)", "he is called a master of Tamil but is not said to be taught by Murugan"),
+                  NOT_IN("Kanda Puranam, all six kandams (Project Madurai text; Wikisource for Utpatti)", "a keyword search found no verse in which Murugan teaches Agastya; the nearest are Shiva sending Agastya south to Mount Pothigai (Utpatti 805-808) and the Krouncha curse. The tradition rests on the songs and on Arunagiri's own accounts")],
     "m-deivayanai": [KPR("v. 1276 Airavata tends Deivayanai as the Milk Ocean tended Lakshmi; vv. 1275-1277 name her and Valli as Murugan's future wives (1275 and 1276 checked)"),
                      KPM("Deva Kandam", "pmuni0304", "padalam 2 Deivayanai Ammai Tirumana Padalam, vv. 36-303; vv. 42-46 (Indra sends Deivayanai from Meru on Airavata to Thiruparankundram), 86-88 (Murugan at Thiruparankundram, Indra gives Deivayanai, the wedding is announced), 132 (Murugan reaches Thiruparankundram for the wedding)", "the wedding place is stated in the text: Thiruparankundram")],
-    "m-valli-disguise": [KPR("v. 1277 names Valli (checked)", "the wooing is in a later kandam, not on Wikisource")],
+    "m-valli-disguise": [KPR("v. 1277 names Valli (checked)", "the wooing is in the Daksha Kandam"),
+                         KPM("Daksha Kandam", "pmuni0318_02", "padalam 24 Valliyammai Tirumana Padalam, vv. 1801-2067: Murugan goes from Tiruttani to Valli's mountain (1854-1866); as a hunter (1865); as a Vengai tree when her father comes (1875-1882); as an old Saiva ascetic asking for food and water (1894-1904); Vinayaka as the elephant (1910-1915); the true form shown (1916-1919); the wedding in Nambi's house (1996-2000)", "the text says Vengai; the songs' English commentary sometimes says 'neem', which does not occur in the padalam")],
     "m-sea-dried": [KPM("Yuddha Kandam", "pmuni0293_03", "padalam 13 Surapadman Vadhai, vv. 2864 (Sura goes into the middle of the sea), 2882-2883 (the Vel's fire spreads over the seas), 2776 (the peacock's wings dry the sea), 2592 (the sea dries in the duel)", "the Puranam does not say the Vel dried the sea to drive Sura out; that is the songs' telling. Sura stands in the sea as the mango tree"),
                     TVPR(13, "Kadal Suvara Vel Vitta", "", "a separate sport in which the Pandya prince Ugrakumara dries the sea with the Vel Shiva gives him (13 checked)")],
     "m-mango-sura": [KPM("Yuddha Kandam", "pmuni0293_03", "padalam 13 Surapadman Vadhai, vv. 2864-2868 (Sura goes into the sea and becomes a mango tree 1,100 yojanas tall), 2884-2886 (the Vel strikes and the tree falls), 2887 (Sura takes his own form again; the Vel splits him in two)", "the Puranam has the Vel fell the tree and then split Sura's body; the songs fold both into 'split the mango tree'")],
@@ -666,7 +683,7 @@ def _cache(name):
     return _CACHE[name]
 
 # Kanda Puranam kandams after the first, from Project Madurai (parse_kp_pm.py); numbers run within the kandam
-KPPM = {"kpm": "kp_mahendra.json", "kpy": "kp_yuddha.json", "kpd": "kp_deva.json", "kcp": "kanchi_part1.json"}
+KPPM = {"kpm": "kp_mahendra.json", "kpy": "kp_yuddha.json", "kpd": "kp_deva.json", "kpk": "kp_daksha.json", "kpa": "kp_asura.json", "kcp": "kanchi_part1.json"}
 
 def run_verse_checks(set_key):
     """Re-check each verse cited for a set against the cached source text.
@@ -820,10 +837,10 @@ def write_all(songs, by_slug):
         if chk:
             L += ["", "## Verse checks (re-run on every build)", "",
                   "Texts are cached in `scripts/.cache/` (git-ignored): `pp_all.json` = Periya Puranam sections from thevaaram.org (id 12000+10n = puranam n, verse numbers restart in each), "
-                  "`tvp.json` = Tiruvilaiyadal Puranam padalam pages on Tamil Wikisource, `kp_verses.json` = Kanda Puranam on Tamil Wikisource (global verse numbers, first kandam and the start of the second only); `kp_mahendra.json`, `kp_yuddha.json`, `kp_deva.json` = the Mahendra, Yuddha and Deva kandams from Project Madurai's Unicode text, made by `parse_kp_pm.py` (verse numbers run within each kandam; the Yuddha page omits verses 894, 916-925 and 1901). "
+                  "`tvp.json` = Tiruvilaiyadal Puranam padalam pages on Tamil Wikisource, `kp_verses.json` = Kanda Puranam on Tamil Wikisource (global verse numbers, first kandam and the start of the second only); `kp_mahendra.json`, `kp_yuddha.json`, `kp_deva.json`, `kp_daksha.json`, `kp_asura.json` = the Mahendra, Yuddha, Deva, Daksha and Asura kandams from Project Madurai's Unicode text, made by `parse_kp_pm.py` (verse numbers run within each kandam; the Yuddha page omits verses 894, 916-925 and 1901). "
                   "A line passes if the word occurs in that verse or page once spaces are removed.", "",
                   "| Text | Location | Word | Shows | Result |", "|---|---|---|---|---|"]
-            names = {"pp": "Periya Puranam", "tvp": "Tiruvilaiyadal Puranam padalam", "kp": "Kanda Puranam verse (Utpatti)", "kpm": "Kanda Puranam, Mahendra Kandam verse", "kpy": "Kanda Puranam, Yuddha Kandam verse", "kpd": "Kanda Puranam, Deva Kandam verse", "kcp": "Kanchi Puranam (Sivagnana Munivar) part 1 verse"}
+            names = {"pp": "Periya Puranam", "tvp": "Tiruvilaiyadal Puranam padalam", "kp": "Kanda Puranam verse (Utpatti)", "kpm": "Kanda Puranam, Mahendra Kandam verse", "kpy": "Kanda Puranam, Yuddha Kandam verse", "kpd": "Kanda Puranam, Deva Kandam verse", "kpk": "Kanda Puranam, Daksha Kandam verse", "kpa": "Kanda Puranam, Asura Kandam verse", "kcp": "Kanchi Puranam (Sivagnana Munivar) part 1 verse"}
             for src, loc, word, lab, ok in chk:
                 L.append(f"| {names[src]} | {loc} | {word} | {lab} | {'ok' if ok else ('NOT FOUND' if ok is False else 'cache missing')} |")
             bad = [c for c in chk if c[4] is False]
