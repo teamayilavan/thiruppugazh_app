@@ -41,3 +41,5 @@ Texts are cached in `scripts/.cache/` (git-ignored): `pp_all.json` = Periya Pura
 | Markandeya Purana (Devi Mahatmya) verse | 83.38 | पादेनाक्रम्यकण्ठेचशूलेनैनमताडयत् | she presses his neck with her foot and strikes with the spear | ok |
 | Markandeya Purana (Devi Mahatmya) verse | 83.40 | शिरश्छित्त्वानिपातितः | she beheads him | ok |
 | Markandeya Purana (Devi Mahatmya) verse | 84.2 | शक्रादयःसुरगणा | the gods hymn her | ok |
+| Tevaram (thevaaram.org) verse | 11.2:1 | அங்கங்குளிர்ந்தனலாடும்எங்கள்அப்பனிடந்திருஆலங்காடே | Shiva dances at Alangadu | ok |
+| Tevaram (thevaaram.org) verse | 11.2:7 | நட்டம்அழலுமிழ்ந்தோரிகதிக்கஆடும்அப்பனிடம்திருஆலங்காடே | he dances with fire and jackals howling | ok |

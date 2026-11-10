@@ -4,14 +4,15 @@
 
 `n-cheraman-kailasa` | Other Tamil Shaiva saints and poets | 1 songs
 
-The Chera king Cheraman Perumal (Kazharitrarivar) was a close friend of Sundarar (PP Kazharitrarivar puranam 112-118, 173-175). The song's commentary says the king rode a horse to Kailasa in Sundarar's company and sang his Kailaya Gnana Ula there; the Puranam sections downloaded do not contain the ascent, so this rests on the song and tradition.
+The Chera king Cheraman Perumal (Kazharitrarivar) was a close friend of Sundarar (PP Kazharitrarivar puranam 112-118, 173-175). The Puranam (v. 174) says Sundarar went up to Tirukkailai on a great elephant and then turns to Cheraman's act of riding his horse; Cheraman's own Tirukkailaya Gnana Ula (Tirumurai 11.8) is the poem the song calls the Adi Ula. The song's commentary says the king rode a horse to Kailasa in Sundarar's company; the Ula itself does not name Sundarar.
 
 ## References
 
 | Source | Reference | Note | Status |
 |---|---|---|---|
 | Periya Puranam, Kazharitrarivar (Cheraman Perumal) Nayanar Puranam (Tirumurai 12) | vv. 112-118 (the friendship), 173-175 (Cheraman misses Sundarar; 173 checked) [https://thevaaram.org/thirumurai_1/onepage.php?thiru=12&Song_idField=12370] | the Kailasa ascent itself was not located in the downloaded sections | machine-read from the opened page; re-checked on every build |
-| Adi Ula (Tirumurai 11) |  | Cheraman's poem on the Kailasa journey | from memory, not opened |
+| Periya Puranam, Kazharitrarivar (Cheraman Perumal) Nayanar Puranam (Tirumurai 12) | v. 174: Sundarar goes up to Tirukkailai on a great elephant; the Puranam then tells of Cheraman's act of riding his horse (174 checked) [https://thevaaram.org/thirumurai_1/onepage.php?thiru=12&Song_idField=12370] | the next verses return to the story of other saints; the ascent itself is announced here | machine-read from the opened page; re-checked on every build |
+| Tirukkailaya Gnana Ula (Adi Ula), Tirumurai 11 | 197 verses (page read) [https://thevaaram.org/thirumurai_1/songview.php?thiru=11&Song_idField=11008&padhi=008] | Cheraman's own poem; its verses do not mention Sundarar, so the companionship rests on the Puranam v. 174 and the song | machine-read from thevaaram.org; re-checked on every build |
 
 Assignments start KEYWORD-LEVEL: a song is listed when its English commentary (and, where possible, a Tamil lyric line) matches the story. A story with a 'Hand-read notes' section was then read (in full, or the doubtful part, as that section says) and wrong songs removed; other stories were not. Confidence: **t** = a Tamil lyric line matched and the commentary agrees; **c** = commentary only (no Tamil keyword line found); **low** = commentary did not match, check by reading the song.
 

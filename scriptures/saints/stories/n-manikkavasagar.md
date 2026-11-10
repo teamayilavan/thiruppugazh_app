@@ -11,7 +11,7 @@ Sent by the Pandya king to buy horses, the minister Vathavurar met Shiva as a gu
 | Source | Reference | Note | Status |
 |---|---|---|---|
 | Tiruvilaiyadal Puranam (Paranjothi), padalam 58 Thiruvathavur Adigalukku Upadesitha | whole padalam [https://ta.wikisource.org/wiki/%E0%AE%A4%E0%AE%BF%E0%AE%B0%E0%AF%81%E0%AE%B5%E0%AE%BF%E0%AE%B3%E0%AF%88%E0%AE%AF%E0%AE%BE%E0%AE%9F%E0%AE%B1%E0%AF%8D_%E0%AE%AA%E0%AF%81%E0%AE%B0%E0%AE%BE%E0%AE%A3%E0%AE%AE%E0%AF%8D/58] | Manikkavasagar named (58 checked) | machine-read from Tamil Wikisource; re-checked on every build |
-| Tiruvasagam (Tirumurai 8) |  | not opened | from memory, not opened |
+| Tiruvasagam (Tirumurai 8, Manikkavasagar) | Sivapuranam, first section (page read) [https://thevaaram.org/thirumurai_1/songview.php?thiru=8&Song_idField=8101&padhi=101] | opens Namachchivaya vaazhga; the saint's work, not his biography, which is in the Tiruvilaiyadal Puranam above | machine-read from thevaaram.org; re-checked on every build |
 
 Assignments start KEYWORD-LEVEL: a song is listed when its English commentary (and, where possible, a Tamil lyric line) matches the story. A story with a 'Hand-read notes' section was then read (in full, or the doubtful part, as that section says) and wrong songs removed; other stories were not. Confidence: **t** = a Tamil lyric line matched and the commentary agrees; **c** = commentary only (no Tamil keyword line found); **low** = commentary did not match, check by reading the song.
 

@@ -51,3 +51,6 @@ Texts are cached in `scripts/.cache/` (git-ignored): `pp_all.json` = Periya Pura
 | Periya Puranam | 12100:121 | வாயினிற்கொண்டு | water carried in the mouth | ok |
 | Tiruvilaiyadal Puranam padalam | 57 | நந்தி | Nandi born a shark | ok |
 | Tiruvilaiyadal Puranam padalam | 57 | புன்னை | the baby found under the punnai tree | ok |
+| Periya Puranam | 12370:174 | மதவரைமேல் | Sundarar goes up to Kailasa on an elephant | ok |
+| Tevaram (thevaaram.org) verse | 11.17:1 | உலகம்உவப்ப | Tirumurukarruppadai opens | ok |
+| Tevaram (thevaaram.org) verse | 8.101:1 | நமச்சிவாயவாஅழ்க | Tiruvasagam opens Namachchivaya vaazhga | ok |
