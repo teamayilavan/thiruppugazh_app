@@ -78,6 +78,8 @@ They exist on this machine. On another machine recreate them (a few minutes):
 | `tvp.json` | Tiruvilaiyadal Puranam padalams 3, 4, 5, 13, 51-61 (rendered text, spaces removed) | `https://ta.wikisource.org/w/index.php?action=render&title=திருவிளையாடற்_புராணம்/NN` |
 | `kp_by_kandam.json`, `kp_verses.json` | Kanda Puranam: one Wikisource page (`கந்த_புராணம்`, action=raw). **Numbering restarts at 1 in each kandam** (Utpatti 1-1783, Asura 1-925). `kp_verses.json` is Utpatti only | parse lines `N<TAB> text`, new kandam when N falls back to <=5 |
 | `pm/*.html`, `kp_mahendra.json`, `kp_yuddha.json`, `kp_deva.json`, `kanchi_part1.json` | Kanda Puranam (Mahendra 1-1178, Yuddha 1-2967, Deva 1-421, Daksha 1-2067, Asura 1-~1880) and Kanchi Puranam part 1, Project Madurai Unicode text. Files `pmuni0286_01/02`, `0289_01/02/03`, `0293_01/02/03`, `0304`, `0307_01/02`, `0318_01/02`, `0251`, `0268`, `0273` (Kanda Puranam; Utpatti is `0239`, `0241`, `0249` and is also on Wikisource), `0292`, `0294`, `0299` (Kanchi Puranam); header pages must stay intact, so never commit them | download `https://projectmadurai.org/pm_etexts/utf8/<file>.html` into `.cache/pm/`, then `python -I scriptures/scripts/parse_kp_pm.py`. The page's printed verse numbers have typos; `parse_kp_pm.py` repairs them (see `OVERRIDE`). The Yuddha page omits verses 894, 916-925, 1901; Daksha lacks 632, 1361, 1704, 1738, 1747, 1754, 1870-1871; the last ~50 Asura verses drift by up to two. Numbers run within each kandam |
+| `markandeya_dm_verses.json`, `purananuru.json`, `tev_misc.json` | Devi Mahatmya Sanskrit (Markandeya Purana 81-93, Sanskrit Wikisource), Purananuru poems 101-160 and 201-210 (Tamil Wikisource), selected Tevaram/Tirumurai pages (thevaaram.org) | `python -I -X utf8 scriptures/scripts/fetch_misc.py` (add pages to `TEV` in that file) |
+| `tev_index.json` | every Tevaram pathigam of Tirumurai 1-7: place title and verse texts | `python -I -X utf8 scriptures/scripts/index_tevaram.py` (about 10 minutes, resumable, retries) |
 | `audit/` | all 293 reference URLs, file name = first 16 hex of sha1(url) | `audit_urls.py` then a curl loop (strip CR from the list first) |
 
 ## 5. Lessons and gotchas
@@ -102,6 +104,8 @@ They exist on this machine. On another machine recreate them (a few minutes):
 - Songs 555, 862, 911 use அப்பர் for "father" (Shiva), not the saint Appar.
 
 ## 7. Suggested next steps (in order of value for confidence)
+
+Done 2026-11-11 (last block): all 5 unpinned Kamba episodes pinned (birth, Surpanakha/Ravana, army march, army destroyed); candidate references settled (Vishnu: 4 confirmed, 1 replaced by Periya Thirumozhi 8.2.5, 7 removed as unsupported; Shiva: Skanda-birth MBh Vana 213-221 confirmed, Pandya-side Periya Puranam and Tiruvilaiyadal padalam 51 confirmed, 11 removed); Devi Mahatmya (Sanskrit), Purananuru, Tevaram 1.45 and Tirumurai 11/8 pages added with machine checks; Ganesha and Tamil-lore stories now cite the Kanda Puranam, Mahabharata CE or Purananuru or record that the searched text does not contain them.
 
 Done 2026-11-11 (later): step 1 and part of step 2 of the earlier list. Mahendra, Yuddha and Deva kandams of the Kanda Puranam are now cached and
 machine-checked (`parse_kp_pm.py`, checks `kpm`/`kpy`/`kpd`); briefs for m-mango-sura, m-sea-dried, m-peacock-cock, m-jayanta, m-deivayanai were rewritten from the text

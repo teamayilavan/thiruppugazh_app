@@ -48,7 +48,11 @@ def purananuru():
     print("purananuru", len(P), "poems")
 
 
-TEV = {"1.45": (1, 1045)}  # Sambandar, Thiruvalangadu
+TEV = {"1.45": (1, 1045),            # Sambandar, Thiruvalangadu
+       "11.2": (11, 11002),          # Karaikkal Ammaiyar, Mootha Tirupathigam
+       "11.8": (11, 11008),          # Cheraman Perumal, Tirukkailaya Gnana Ula (Adi Ula)
+       "11.17": (11, 11017),         # Nakkeerar, Tirumurukarruppadai
+       "8.101": (8, 8101)}           # Manikkavasagar, Tiruvasagam: Sivapuranam
 
 
 def tevaram():
