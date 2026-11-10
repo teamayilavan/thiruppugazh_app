@@ -4,7 +4,7 @@ Working notes for a repository of the Ramayana, Mahabharata, Puranic and other s
 stories that Arunagirinathar weaves into the Thiruppugazh. This folder is research material,
 not app code: nothing here is bundled into the app or touches the DB.
 
-**Start here each session:** read this file, then `STATUS.md` (what is done, what is next), then `WORKFLOW.md` (the repeatable process for a new deity such as Shiva, with a kickoff prompt).
+**Start here each session:** read `HANDOFF.md` (current state, rules, open items), then this file, then `STATUS.md` (what is done, what is next), then `WORKFLOW.md` (the repeatable process for a new deity such as Shiva, with a kickoff prompt).
 
 ## Layout
 
