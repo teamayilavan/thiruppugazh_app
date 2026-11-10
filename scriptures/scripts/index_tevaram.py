@@ -17,7 +17,7 @@ from pathlib import Path
 sys.stdout.reconfigure(encoding="utf-8")
 F = Path(__file__).resolve().parent / ".cache" / "tev_index.json"
 UA = {"User-Agent": "thiruppugazh-scriptures-research/1.0 (personal study)"}
-COUNTS = {1: 136, 2: 122, 3: 103, 4: 113, 5: 100, 6: 99, 7: 100}
+COUNTS = {4: 113, 7: 100, 5: 100, 6: 99, 1: 136, 2: 122, 3: 103}
 
 def fetch(t, p):
     url = f"https://thevaaram.org/thirumurai_1/onepage.php?thiru={t}&Song_idField={t * 1000 + p}"
@@ -47,6 +47,6 @@ if __name__ == "__main__":
             if p % 10 == 0:
                 F.write_text(json.dumps(d, ensure_ascii=False), encoding="utf-8")
                 print(k, d[k]["title"], flush=True)
-            time.sleep(0.4)
+            time.sleep(0.15)
     F.write_text(json.dumps(d, ensure_ascii=False), encoding="utf-8")
     print("done", len(d))

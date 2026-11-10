@@ -52,6 +52,9 @@ TEV = {"1.45": (1, 1045),            # Sambandar, Thiruvalangadu
        "11.2": (11, 11002),          # Karaikkal Ammaiyar, Mootha Tirupathigam
        "11.8": (11, 11008),          # Cheraman Perumal, Tirukkailaya Gnana Ula (Adi Ula)
        "11.17": (11, 11017),         # Nakkeerar, Tirumurukarruppadai
+       "4.94": (4, 4094),            # Appar, Thiruppathirippuliyur
+       "7.38": (7, 7038),            # Sundarar, Thiruvathigai Veerattanam
+       "7.92": (7, 7092),            # Sundarar, Thirupukkoliyur Avinashi
        "8.101": (8, 8101)}           # Manikkavasagar, Tiruvasagam: Sivapuranam
 
 
