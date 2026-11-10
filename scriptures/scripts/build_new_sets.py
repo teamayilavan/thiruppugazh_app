@@ -689,6 +689,9 @@ def write_all(songs, by_slug):
         d = SCR / key
         (d / "stories").mkdir(parents=True, exist_ok=True)
         slugs = [s for _, group in meta["domains"] for s in group]
+        for old in (d / "stories").glob("*.md"):   # drop story files of slugs that left this set
+            if old.stem not in slugs:
+                old.unlink()
         # stories
         for slug in slugs:
             st = catmap[slug]; recs = by_slug[slug]
