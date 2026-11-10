@@ -6,6 +6,15 @@ Notable changes to this project. Format loosely follows [Keep a Changelog](https
 
 ### Added
 - **Tablet and large-screen layout.** From 600 dp wide (tablets, and phones held sideways, where the bottom bar would use a fifth of the height) the bottom bar becomes a side navigation rail that stays clear of a camera cutout, and Home's hero image shrinks on short windows so songs stay in view. On the Songs tab, on tablets with room (about 840 dp wide, 600 dp on the short side), the song list sits on the left and the open song on the right, so reading never leaves the list; the current song is highlighted, and the Continue card, Today's song and the random button open into the same pane. Lists, settings and lyrics keep a comfortable reading width (720 dp) instead of stretching edge to edge, and the six-abodes grid shows three across. On tablets every tab keeps its own navigation, so a temple's songs, a category, Favorites, search and the Library all open songs in the same reading pane and the rail never disappears; the Back button and Esc step back inside the current tab. When the reader is wide enough, lyrics and word meanings sit side by side and scroll separately. Ctrl+F opens search for keyboard users. Phones are unchanged. No data, schema or backup changes.
+- **Reading pane on tablets: starts where you left off, and moves between songs.** The pane opens with the song you read last time instead of an empty page (it is only shown; your Continue card and any saved chanting position are untouched). A small bar above the song has previous and next buttons, and the Left and Right arrow keys do the same unless you are typing in a search box. Songs follow each other in song-number order, whichever list you opened them from. Phones are unchanged.
+- The song page's two floating buttons (favorite, add to category) now show a tooltip on hover, for mouse and stylus users.
+
+### Fixed
+- **Rotating a tablet no longer loses the open song.** Turning from landscape to portrait now keeps the song you were reading as a full page, and turning back moves it into the reading pane (it used to be squeezed into the list column).
+- **A failed start-up of the song database is retried.** If opening the database failed once (a lock, a busy disk), every later query in that session failed too until the app was closed. The next request now tries again.
+
+### Testing
+- New tests for the app shell at phone and tablet sizes in both orientations (navigation, reading pane, previous/next, arrow keys, back button, rotation), a layout overflow sweep over every tab in English and Tamil, the song page's two-column layout, and the database retry. The auto-backup debounce test no longer depends on timing. CI now also builds a debug APK.
 
 ## [1.6.0+8] — 2026-10-24
 
