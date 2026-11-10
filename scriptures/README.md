@@ -12,6 +12,8 @@ not app code: nothing here is bundled into the app or touches the DB.
 scriptures/
   README.md                    this file: goal, method, conventions
   STATUS.md                    running log and next steps (update at the end of every session)
+  import/
+    vishnu-shiva-categories.json   app backup file (version 1): creates the "Vishnu Songs" (228) and "Shiva Songs" (238) categories when loaded through Settings > Import; no personal data, not bundled in the app
   scripts/
     shortlist_maruga.py        regenerates the Vishnu shortlist from assets/thiruppugazh.db
   vishnu/
