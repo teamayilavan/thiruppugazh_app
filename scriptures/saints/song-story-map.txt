@@ -1,0 +1,26 @@
+# Song -> story map for Other Tamil Shaiva saints and poets (generated from the catalogue; keyword-level, not hand-read).
+#   song_id | story slugs | title | confidence per story (t/c/low)
+92 | n-nakkeerar | முலை முகம் | c
+104 | n-nakkeerar | அகல்வினை | t
+134 | n-sundarar-messenger | கருவின் உருவாகி | t
+170 | n-cheraman-kailasa | நாத விந்து | t
+172 | n-sundarar-paddy | நெற்றி வெயர்த்துளி | c
+431 | n-nakkeerar | தோதகப் பெரும் | c
+510 | n-kannappar | மச்ச மெச்சு | t
+512 | n-manikkavasagar | மருவு கடல்முகில் | t
+650 | n-nakkeerar | விலைக்கு மேனியில் | c
+664 | n-kannappar | வதன சரோருக | t
+681 | n-nakkeerar | கார்ச் சார் குழலார் | c
+717 | n-sundarar-wedding | மாதர் கொங்கையில் | t
+726 | n-nakkeerar | பிறவியான சடம் | c
+756 | n-vandi-pittu | வாட்டியெனை | t
+940 | n-sundarar-messenger | கத்தூரி யகரு | t
+947 | n-sundarar-gold | மதப்பட்ட விசால | c
+960 | n-vandi-pittu | சீத வாசனை மலர் | t
+1008 | n-nakkeerar | இலகு வேலெனு | c
+1192 | n-nakkeerar | முருகு லாவிய மைப்பா | t
+1211 | n-kannappar | ஆசார வீனன் | c
+1279 | n-nakkeerar | வீணை இசை | t
+1298 | n-sundarar-messenger | பரவைக்கு எத்தனை | t
+1317 | n-sundarar-messenger,n-vandi-pittu | பாசத்தால் விலை | t,t
+1320 | n-sundarar-crocodile | அழகு தவழ்குழல் | t

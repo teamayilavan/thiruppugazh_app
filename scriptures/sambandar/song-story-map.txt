@@ -1,0 +1,110 @@
+# Song -> story map for Thirugnana Sambandar (generated from the catalogue; keyword-level, not hand-read).
+#   song_id | story slugs | title | confidence per story (t/c/low)
+17 | sam-avatar,sam-jains | பொருப்புறுங் | c,t
+58 | sam-avatar | சந்தன சவ்வாது | c
+82 | sam-avatar | பூரண வார கும்ப | c
+104 | sam-avatar,sam-ordeals | அகல்வினை | t,c
+115 | sam-avatar | இத் தாரணிக்குள் | c
+116 | sam-avatar | இரவி என | c
+121 | sam-avatar,sam-three-saints | உயிர்க் கூடு | t,t
+123 | sam-avatar | ஒருபொழுதும் இருசரண | c
+132 | sam-avatar,sam-jains | கருகி அகன்று | c,t
+134 | sam-avatar,sam-birth | கருவின் உருவாகி | t,t
+137 | sam-avatar,sam-milk | கலவியி லிச்சி | c,t
+149 | sam-avatar,sam-ordeals | குறித்தமணி | c,c
+150 | sam-avatar,sam-poompavai | குன்றுங் குன்றும் | t,c
+171 | sam-avatar,sam-fever | நிகமம் எனில் | c,c
+189 | sam-avatar,sam-ordeals | மூல மந்திரம் | c,c
+257 | sam-avatar | கவடுற்ற சித்தர் | c
+261 | sam-avatar,sam-birth | கிறி மொழி | t,t
+263 | sam-avatar,sam-jains | குருவி என | c,t
+299 | sam-avatar,sam-fever | வரிக் கலையின் | c,c
+306 | sam-avatar,sam-jains | வஞ்சக லோப மூடர் | c,t
+308 | sam-avatar | ஈனமிகுத்துள பிறவி | c
+343 | sam-three-saints | சீசி முப்புர | c
+354 | sam-avatar,sam-yazhpanar | அம்புலி நீரை | c,c
+356 | sam-avatar | ஆரமணி வாரை | c
+358 | sam-avatar,sam-ordeals | உரைக் காரிகை | c,c
+405 | sam-avatar,sam-jains | உலையிலனல் | c,c
+426 | sam-avatar,sam-milk | தமரம் குரங்களும் | c,t
+490 | sam-avatar | விடுங்கைக்கு ஒத்த | c
+509 | sam-avatar,sam-jains | மகரமொடுறு குழை | c,c
+521 | sam-avatar,sam-birth | புமி அதனில் | t,t
+527 | sam-avatar,sam-fever | கோங்கிள நீரிளக | c,t
+540 | sam-avatar | வரைவில் பொய் | c
+542 | sam-ordeals | எழுகு நிறை நாபி | t
+550 | sam-avatar | அழுது அழுது ஆசார | t
+565 | sam-avatar | கயலைச் சருவி | c
+573 | sam-avatar,sam-fever | உருவேறவே ஜெபித்து | c,t
+603 | sam-avatar,sam-jains | புற்புதம் | t,t
+604 | sam-avatar | பொன் சித்ர | c
+617 | sam-avatar,sam-ordeals | பாட்டில் உருகிலை | c,c
+636 | sam-avatar | திருமகள் உலாவும் | c
+639 | sam-avatar,sam-fever | எதிரிலாத பத்தி | c,c
+641 | sam-avatar,sam-milk | சமர முக வேல் | t,c
+651 | sam-avatar | தாரணிக் கதி | c
+653 | sam-avatar,sam-jains | வேழம் உண்ட | c,t
+658 | sam-avatar,sam-jains | குவலயம் மல்கு | c,c
+666 | sam-avatar,sam-fever,sam-ordeals | அதிக ராய்ப்பொரு | c,c,c
+668 | sam-avatar,sam-jains | ஒருவரைச் சிறுமனை | c,t
+669 | sam-avatar,sam-jains | குலையமயி ரோதி | c,t
+674 | sam-avatar,sam-thiruvalangadu | பொன்றா மன்று | c,c
+677 | sam-avatar,sam-jains | தவர்வாள் தோமர | c,t
+681 | sam-avatar,sam-jains | கார்ச் சார் குழலார் | c,c
+693 | sam-avatar,sam-poompavai | களபம் மணி ஆரம் | c,t
+708 | sam-avatar | தோள் தப்பாமல் | c
+712 | sam-avatar | சீர் உலாவிய | c
+737 | sam-avatar,sam-milk | பரவுவரிக் கயல் | c,t
+744 | sam-avatar | பலபல தத்துவம் | c
+758 | sam-avatar,sam-birth,sam-palanquin | கறுவி மைக்கணி | c,t,t
+759 | sam-avatar | பூத்தார் சூடு | c
+762 | sam-avatar,sam-fever | மூல முண்டகனு பூதி | c,t
+764 | sam-avatar,sam-birth | அலைகடல் சிலை | t,t
+766 | sam-avatar | ஊனத்தசை தோல்கள் | t
+767 | sam-avatar,sam-jains | ஒய்யா ரச்சிலை | t,t
+768 | sam-avatar,sam-fever | கட்காமக்ரோத | t,c
+769 | sam-avatar,sam-jains | கொங்கு லாவிய | c,t
+771 | sam-avatar,sam-jains | சருவி இகழ்ந்து | c,t
+774 | sam-avatar,sam-birth | தினமணி சார்ங்க | t,t
+776 | sam-avatar,sam-todudaiya | மதனச்சொற் கார | t,c
+789 | sam-avatar,sam-fever | ஆடல் மாமத ராஜன் | c,c
+799 | sam-avatar,sam-jains | முலை குலுக்கிகள் | c,t
+822 | sam-avatar,sam-milk | பாலோ தேனோ பலவுறு | c,t
+823 | sam-avatar | கலகவிழி மாமகளிர் | c
+831 | sam-avatar | உரமுற் றிரு | c
+837 | sam-avatar,sam-birth,sam-milk | சுருதியாய் | t,t,t
+846 | sam-avatar | மலைக் கனத்தென | c
+859 | sam-avatar,sam-jains | இலகு குழைகிழிய | c,t
+878 | sam-avatar | திட்டெனப் பல | t
+888 | sam-avatar,sam-jains | வீங்கு பச்சிள | c,c
+902 | sam-avatar | இகல்கடின முகபடவி | c
+913 | sam-avatar,sam-birth | நெய்த்த சுரி | t,t
+920 | sam-avatar,sam-milk,sam-fever,sam-ordeals | காலன் வேல் கணை | c,t,c,t
+944 | sam-poompavai | பந்தப்பொற் பார | c
+959 | sam-avatar | பழிப்பர் வாழ்த்துவர் | c
+962 | sam-avatar,sam-fever | முகமெலா நெய் | c,t
+971 | sam-avatar | கரம் கமலம் மின் | c
+995 | sam-avatar | ஆவி காப்பது | c
+996 | sam-avatar | ஏகமாய் பலவாய் | c
+1022 | sam-avatar | முத்து மணிபணி | c
+1033 | sam-avatar | தோடு உற்ற காது | c
+1046 | sam-avatar,sam-milk | அயிலின் வாளி | c,c
+1072 | sam-avatar | இருந்த வீடும் | c
+1083 | sam-avatar | குடல் இடை தீது | c
+1098 | sam-avatar,sam-ordeals | நடை உடையிலே | c,c
+1100 | sam-avatar,sam-milk | அங்கதன் கண்டகன் | c,c
+1146 | sam-avatar | ஓது வித்தவர் | c
+1162 | sam-avatar,sam-fever,sam-jains | ஞானா விபூஷணி | c,c,t
+1166 | sam-avatar,sam-three-saints | நரையொடு பல் | c,c
+1209 | sam-avatar,sam-jains | அலமலமிப் புலால் | c,t
+1233 | sam-avatar | கன்னியர் கடு விடம் | c
+1257 | sam-avatar,sam-jains | நற்குணம் உளார் | c,t
+1263 | sam-avatar | பிரமனும் விரகொடு | c
+1266 | sam-avatar | மக்கள் பிறப்புக்குள் | c
+1270 | sam-avatar,sam-ordeals | மலம் தோல் சலம் | c,c
+1282 | sam-avatar | என்பந்த வினை | t
+1287 | sam-avatar,sam-milk | சமய பத்தி | c,t
+1291 | sam-avatar | துள்ளு மதவேள் | c
+1317 | sam-avatar,sam-birth | பாசத்தால் விலை | t,t
+1326 | sam-avatar | ஓருரு வாகி | c
+1327 | sam-avatar,sam-jains | சைவ முதல் | c,t

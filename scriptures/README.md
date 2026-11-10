@@ -54,6 +54,11 @@ scriptures/
 Build: `python -I scriptures/scripts/build_master.py --deity shiva` (default is vishnu).
 New deity or theme folders (e.g. `murugan-lore/`) follow the same shape.
 
+`sambandar/`, `saints/`, `devi/` and `murugan/` (added 2026-11-10) are generated from a hand-written catalogue in
+`scripts/build_new_sets.py` (`python -I scriptures/scripts/build_new_sets.py`). Each has `README.md`, `STORIES.md`, `by-song.md`,
+`song-story-map.txt`, `SOURCES.md` and `stories/`. Their song lists are keyword-level (English commentary sweep plus a quoted Tamil line
+where one matches); read the set's README before relying on counts.
+
 ## Stage 1: shortlist (done, first pass)
 
 Goal: find songs where Murugan is addressed as the *nephew* (மருகன்) of someone. In the

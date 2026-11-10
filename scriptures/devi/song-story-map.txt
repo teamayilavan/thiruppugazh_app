@@ -1,0 +1,42 @@
+# Song -> story map for Ambal, Parvati, Durga and Kali (generated from the catalogue; keyword-level, not hand-read).
+#   song_id | story slugs | title | confidence per story (t/c/low)
+32 | d-himavan | இருகுழை யெறிந்த | t
+60 | d-himavan | தகரநறை | c
+63 | d-himavan | தந்த பசிதனை | c
+94 | d-kali-dance,d-matangi | மூளும்வினை சேர | t,t
+107 | d-himavan | அபகார நிந்தை | t
+116 | d-himavan | இரவி என | c
+117 | d-kali-dance | இருகனக மாமேரு | t
+137 | d-himavan | கலவியி லிச்சி | c
+138 | d-battlefield | கலை கொடு | t
+146 | d-himavan | குருதி மலசலம் | c
+161 | d-himavan | சுருளளக பார | c
+163 | d-himavan | தகர நறுமலர் | c
+206 | d-himavan | எந்தத் திகையினும் | t
+239 | d-himavan | அமைவுற்று அடைய | t
+240 | d-himavan | அரகர சிவன் அரி | c
+242 | d-himavan | இருப்பவல் திருப்புகழ் | c
+288 | d-himavan | பொற் பதத்தினை | c
+291 | d-himavan,d-kamakshi-32,d-fisher | முகத்தை மினுக்கி | c,c,t
+292 | d-thiruvathigai | முகிலும் இரவியும் | t
+322 | d-himavan,d-kamakshi-32 | தலை வலையத்து | c,c
+338 | d-kanchi | கமலரு சோகாம்பர | t
+347 | d-kanchi | மக்கட்குக் கூற | t
+352 | d-kanchi | அறிவிலாப் பித்தர் | t
+354 | d-himavan | அம்புலி நீரை | c
+359 | d-himavan | ஓல மறைகள் | c
+365 | d-himavan | பரிமளம் மிக உள | t
+438 | d-kanchi,d-kamakshi-32 | முகத் துலக்கிகள் | c,t
+540 | d-kamakshi-32 | வரைவில் பொய் | t
+574 | d-idumbai | எதிரெதிர் கண்டோடி | c
+575 | d-mahisha | ஐந்து பூதமும் | c
+708 | d-angayarkanni | தோள் தப்பாமல் | c
+745 | d-pathiri | நிணமொடு குருதி | c
+894 | d-kamakshi-32 | நீரிழிவு குட்டம் | c
+900 | d-battlefield | அரி மருகோனே | c
+903 | d-battlefield | இலகு முலைவிலை | c
+1079 | d-battlefield | சுடரொளி கதிரவன் | c
+1126 | d-mahisha | ஆராத காதலாகி | c
+1127 | d-battlefield | ஆராதனர் ஆடம்பர | c
+1162 | d-pathiri | ஞானா விபூஷணி | c
+1165 | d-fisher | நகரம் இரு பாதமாகி | t

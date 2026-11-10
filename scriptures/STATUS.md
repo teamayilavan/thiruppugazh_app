@@ -1,5 +1,7 @@
 # Status
 
+**New story sets, keyword-level first pass (2026-11-10).** `sambandar/` (12 stories, 108 songs), `saints/` (10, 24), `devi/` (12, 40) and `murugan/` (14, 438) were built by `scripts/build_new_sets.py` from a sweep of the English commentary columns, with a Tamil lyric line quoted where one matches. They are NOT hand-read like shiva/ and vishnu/, have no PDF, and no verse numbers are machine-checked. Gaps and unverified sources are in each set's `SOURCES.md`. Not started: Ganesha and Tamil-lore sets (the research notes list them), a hand-read of the Murugan songs, a Periya Puranam verse check. Nothing is committed.
+
 **Shiva: first full pass done (2026-10-26).** 379 shortlisted songs hand-read, plus 6 from a second pass; 309 have a Shiva reading, 238 with a story in 20 stories, 71 without; 76 shortlisted songs were not about Shiva. Verse references from three research passes (Sanskrit, Tamil deeds, saints/Murugan); master build and reading PDF (`thiruppugazh-shiva-stories.pdf`, 572 pages). 12 stories have a Sanskrit reference, 19 a confirmed Tamil Shaiva verse, 11 both, none has neither. Open: gaps listed in `shiva/SOURCES.md` (Yama, Dakshinamurti, Bhikshatana, Pranava-at-Swamimalai, Sarabha), owner review of the PDF and of the 89 low-confidence songs, Tirumurai 9/11/12 and Tirukkovaiyar not searched. Nothing is committed.
 
 Last updated: 2026-10-26 (session 1, second part)
