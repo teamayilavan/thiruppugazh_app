@@ -1370,6 +1370,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Next song'**
   String get nextSong;
+
+  /// No description provided for @failedToLoadTemples.
+  ///
+  /// In en, this message translates to:
+  /// **'Failed to load temples'**
+  String get failedToLoadTemples;
 }
 
 class _AppLocalizationsDelegate

@@ -695,4 +695,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get nextSong => 'Next song';
+
+  @override
+  String get failedToLoadTemples => 'Failed to load temples';
 }

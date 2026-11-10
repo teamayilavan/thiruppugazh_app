@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 import '../../data/repositories/song_repository.dart';
 import '../../providers/lyrics_language_provider.dart';
 import '../widgets/arupadai_grid.dart';
+import '../widgets/error_display_widget.dart';
 import 'temple_songs_screen.dart';
 import '../../l10n/app_localizations.dart';
 
@@ -55,10 +56,9 @@ class _TemplesScreenState extends State<TemplesScreen> {
             }
 
             if (snapshot.hasError) {
-              return Center(
-                child: Text(
-                  '${AppLocalizations.of(context)!.anErrorOccurred}: ${snapshot.error}',
-                ),
+              return ErrorDisplayWidget(
+                errorMessage: AppLocalizations.of(context)!.failedToLoadTemples,
+                onRetry: _refreshTemples,
               );
             }
 

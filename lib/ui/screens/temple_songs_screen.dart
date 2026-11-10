@@ -5,6 +5,7 @@ import '../../data/repositories/song_repository.dart';
 import '../../data/models/song_model.dart';
 import '../../l10n/app_localizations.dart';
 import '../../providers/lyrics_language_provider.dart';
+import '../widgets/error_display_widget.dart';
 
 class TempleSongsScreen extends StatefulWidget {
   final String templeName; // Tamil name — used for DB query
@@ -26,6 +27,10 @@ class _TempleSongsScreenState extends State<TempleSongsScreen> {
   @override
   void initState() {
     super.initState();
+    _load();
+  }
+
+  void _load() {
     _songsFuture = Provider.of<SongRepository>(
       context,
       listen: false,
@@ -50,10 +55,9 @@ class _TempleSongsScreenState extends State<TempleSongsScreen> {
             }
 
             if (snapshot.hasError) {
-              return Center(
-                child: Text(
-                  '${AppLocalizations.of(context)!.anErrorOccurred}: ${snapshot.error}',
-                ),
+              return ErrorDisplayWidget(
+                errorMessage: AppLocalizations.of(context)!.failedToLoadSongs,
+                onRetry: () => setState(_load),
               );
             }
 
