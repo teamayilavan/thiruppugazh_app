@@ -54,3 +54,4 @@ Texts are cached in `scripts/.cache/` (git-ignored): `pp_all.json` = Periya Pura
 | Periya Puranam | 12370:174 | மதவரைமேல் | Sundarar goes up to Kailasa on an elephant | ok |
 | Tevaram (thevaaram.org) verse | 11.17:1 | உலகம்உவப்ப | Tirumurukarruppadai opens | ok |
 | Tevaram (thevaaram.org) verse | 8.101:1 | நமச்சிவாயவாஅழ்க | Tiruvasagam opens Namachchivaya vaazhga | ok |
+| Tevaram (thevaaram.org) verse | 7.92:4 | முதலையைப்பிள்ளைதரச்சொல்லு | the crocodile gives back the child | ok |

@@ -4,13 +4,14 @@
 
 `n-sundarar-crocodile` | Other Tamil Shaiva saints and poets | 1 songs
 
-Tradition and Sundarar's Avinashi hymn tell of a boy swallowed by a crocodile and given back alive years later when Sundarar sang to Shiva. This episode was NOT found in the Periya Puranam text.
+The songs say Sundarar sang at Avinashi and the lord made a crocodile give back a child it had swallowed. Sundarar's own hymn at Thirupukkoliyur Avinashi (Tevaram 7.92, v. 4) asks the lord to command Kala to make the crocodile on the bank give back the child, so the story is alluded to in the hymn. The full telling is not in the Periya Puranam.
 
 ## References
 
 | Source | Reference | Note | Status |
 |---|---|---|---|
-| Periya Puranam (all sections 12000-12700 downloaded) | not located | the word 'crocodile' (முதலை) occurs only in unrelated verses; the Avinashi story is tradition and the Tevaram 7 hymn, not the Puranam | searched, not found |
+| Tevaram 7.92 (Thirupukkoliyur Avinashi), Sundarar | pathigam 7.92, v. 4 (page read) [https://thevaaram.org/thirumurai_1/songview.php?thiru=7&Song_idField=7092&padhi=092] | v. 4 asks the lord to command Kala to make the crocodile on the bank give back the child ('karaikkal mudhalaiyaip pillai tharach chollu'): the hymn itself alludes to the story; the full telling is tradition, not in the Periya Puranam | machine-read from thevaaram.org; re-checked on every build |
+| Periya Puranam (all sections 12000-12700 downloaded) | not located | the word 'crocodile' (முதலை) occurs only in unrelated verses; the Avinashi story is tradition and the Tevaram 7.92 hymn, not the Puranam | searched, not found |
 
 Assignments start KEYWORD-LEVEL: a song is listed when its English commentary (and, where possible, a Tamil lyric line) matches the story. A story with a 'Hand-read notes' section was then read (in full, or the doubtful part, as that section says) and wrong songs removed; other stories were not. Confidence: **t** = a Tamil lyric line matched and the commentary agrees; **c** = commentary only (no Tamil keyword line found); **low** = commentary did not match, check by reading the song.
 

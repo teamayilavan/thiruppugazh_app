@@ -15,7 +15,7 @@
 | A mountain of paddy sent to Paravai | 1 | 1 | [n-sundarar-paddy](stories/n-sundarar-paddy.md) |
 | Sundarar and Cheraman Perumal go to Kailasa | 1 | 3 | [n-cheraman-kailasa](stories/n-cheraman-kailasa.md) |
 | Sundarar's gold from many shrines | 1 | 1 | [n-sundarar-gold](stories/n-sundarar-gold.md) |
-| Sundarar calls the crocodile to give back the boy | 1 | 1 | [n-sundarar-crocodile](stories/n-sundarar-crocodile.md) |
+| Sundarar calls the crocodile to give back the boy | 1 | 2 | [n-sundarar-crocodile](stories/n-sundarar-crocodile.md) |
 
 ## Manikkavasagar and the Madurai sports
 

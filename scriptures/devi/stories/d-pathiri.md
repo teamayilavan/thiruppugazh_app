@@ -4,12 +4,13 @@
 
 `d-pathiri` | Ambal, Parvati, Durga and Kali | 2 songs
 
-Temple legend: the Goddess performed a penance under the pathiri tree at Thiruppathirippuliyur (Cuddalore) to be one with Shiva; the shrine marks the spot with a bare pedestal.
+Temple legend: the Goddess performed a penance under the pathiri tree at Thiruppathirippuliyur (Cuddalore) to be one with Shiva; the shrine marks the spot with a bare pedestal. Appar's hymn at the shrine (Tevaram 4.94) names the place and Uma (v. 4) and the burning of the three cities (v. 7) but does not tell the penance.
 
 ## References
 
 | Source | Reference | Note | Status |
 |---|---|---|---|
+| Tevaram 4.94 (Thiruppathirippuliyur), Appar | pathigam 4.94, vv. 4 and 7 (page read) [https://thevaaram.org/thirumurai_1/songview.php?thiru=4&Song_idField=4094&padhi=094] | v. 4: the lord who dwells in love with the mountain-daughter (Uma) at Thiruppathirippuliyur; v. 7: he who burned the asuras' three cities. The hymn names the shrine and Uma but does not tell her penance under the pathiri tree | machine-read from thevaaram.org; re-checked on every build |
 | Thiruppathirippuliyur sthala puranam |  | Parvati worshipped here after 1007 other places, in the formless state, under the pathiri tree; the shrine marks the spot with a bare pedestal (temple websites) | search result only (tradition) |
 
 Assignments start KEYWORD-LEVEL: a song is listed when its English commentary (and, where possible, a Tamil lyric line) matches the story. A story with a 'Hand-read notes' section was then read (in full, or the doubtful part, as that section says) and wrong songs removed; other stories were not. Confidence: **t** = a Tamil lyric line matched and the commentary agrees; **c** = commentary only (no Tamil keyword line found); **low** = commentary did not match, check by reading the song.

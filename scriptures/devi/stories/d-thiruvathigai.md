@@ -4,13 +4,13 @@
 
 `d-thiruvathigai` | Ambal, Parvati, Durga and Kali | 1 songs
 
-Song 292 places the Goddess Abirami at Thiruvathigai, where Shiva burnt the three cities with Meru as his bow and she stood by him.
+Song 292 places the Goddess Abirami at Thiruvathigai, where Shiva burnt the three cities with Meru as his bow and she stood by him. Sundarar's hymn at Thiruvathigai Veerattanam (Tevaram 7.38, v. 9) praises the lord who bent the bow and burned the three cities with one arrow; the Goddess's presence at the shrine is temple tradition.
 
 ## References
 
 | Source | Reference | Note | Status |
 |---|---|---|---|
-| Tevaram (Thiruvathigai pathigams) |  | not opened | from memory, not opened |
+| Tevaram 7.38 (Thiruvathigai Veerattanam), Sundarar | pathigam 7.38, v. 9 (page read) [https://thevaaram.org/thirumurai_1/songview.php?thiru=7&Song_idField=7038&padhi=038] | the lord who made the bow and burned the three cities of the asuras with one arrow, praised at Thiruvathigai; the Goddess's own presence there (Abirami, Tripurasundari) is not in the hymn | machine-read from thevaaram.org; re-checked on every build |
 
 Assignments start KEYWORD-LEVEL: a song is listed when its English commentary (and, where possible, a Tamil lyric line) matches the story. A story with a 'Hand-read notes' section was then read (in full, or the doubtful part, as that section says) and wrong songs removed; other stories were not. Confidence: **t** = a Tamil lyric line matched and the commentary agrees; **c** = commentary only (no Tamil keyword line found); **low** = commentary did not match, check by reading the song.
 

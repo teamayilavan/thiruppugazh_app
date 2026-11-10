@@ -43,3 +43,6 @@ Texts are cached in `scripts/.cache/` (git-ignored): `pp_all.json` = Periya Pura
 | Markandeya Purana (Devi Mahatmya) verse | 84.2 | शक्रादयःसुरगणा | the gods hymn her | ok |
 | Tevaram (thevaaram.org) verse | 11.2:1 | அங்கங்குளிர்ந்தனலாடும்எங்கள்அப்பனிடந்திருஆலங்காடே | Shiva dances at Alangadu | ok |
 | Tevaram (thevaaram.org) verse | 11.2:7 | நட்டம்அழலுமிழ்ந்தோரிகதிக்கஆடும்அப்பனிடம்திருஆலங்காடே | he dances with fire and jackals howling | ok |
+| Tevaram (thevaaram.org) verse | 7.38:9 | புரமூன்றும்வேவ | the three cities burn | ok |
+| Tevaram (thevaaram.org) verse | 4.94:4 | மலைமகட்கே | dwells in love with the mountain-daughter | ok |
+| Tevaram (thevaaram.org) verse | 4.94:7 | திரிபுரந்தீயெழச்செற்றவனே | burned the three cities | ok |

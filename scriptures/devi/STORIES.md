@@ -13,7 +13,7 @@
 | Parvati, daughter of Himavan | 19 | 1 | [d-himavan](stories/d-himavan.md) |
 | Parvati's penance at Kanchi; the sand lingam | 4 | 4 | [d-kanchi](stories/d-kanchi.md) |
 | Kamakshi's thirty-two acts of charity | 5 | 1 | [d-kamakshi-32](stories/d-kamakshi-32.md) |
-| Penance at Thiruppathirippuliyur | 2 | 1 | [d-pathiri](stories/d-pathiri.md) |
+| Penance at Thiruppathirippuliyur | 2 | 2 | [d-pathiri](stories/d-pathiri.md) |
 | Abirami at Thiruvathigai, where the cities burn | 1 | 1 | [d-thiruvathigai](stories/d-thiruvathigai.md) |
 | Parvati as the fishermen's daughter | 2 | 1 | [d-fisher](stories/d-fisher.md) |
 | Angayarkanni (Meenakshi) at Madurai | 1 | 3 | [d-angayarkanni](stories/d-angayarkanni.md) |
