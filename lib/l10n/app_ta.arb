@@ -232,5 +232,6 @@
   "selectSongToRead": "இங்கே படிக்க ஒரு பாடலைத் தேர்ந்தெடுக்கவும்",
   "previousSong": "முந்தைய பாடல்",
   "nextSong": "அடுத்த பாடல்",
-  "failedToLoadTemples": "கோயில்களை ஏற்றுவதில் தோல்வி"
+  "failedToLoadTemples": "கோயில்களை ஏற்றுவதில் தோல்வி",
+  "recentlyRead": "சமீபத்தில் படித்தவை"
 }

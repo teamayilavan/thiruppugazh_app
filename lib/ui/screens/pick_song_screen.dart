@@ -10,6 +10,7 @@ import '../../data/models/song_model.dart';
 import '../../data/repositories/song_repository.dart';
 import '../../l10n/app_localizations.dart';
 import '../../providers/lyrics_language_provider.dart';
+import '../../providers/reading_state_provider.dart';
 
 /// What the picker hands back once a link has been saved.
 class PickSongResult {
@@ -38,8 +39,34 @@ class _PickSongScreenState extends State<PickSongScreen> {
   final TextEditingController _controller = TextEditingController();
   Timer? _debounce;
   List<Song> _results = [];
+
+  /// Songs read lately, offered before anything is typed: a link is usually
+  /// meant for the song you have just been reading.
+  List<Song> _recent = [];
   bool _isLoading = false;
   bool _saving = false;
+
+  @override
+  void initState() {
+    super.initState();
+    _loadRecent();
+  }
+
+  Future<void> _loadRecent() async {
+    final reading = context.read<ReadingStateProvider>();
+    final repo = context.read<SongRepository>();
+    await reading.ready;
+    try {
+      final songs = <Song>[];
+      for (final id in reading.recentSongIds) {
+        final song = await repo.getSongById(id);
+        if (song != null) songs.add(song);
+      }
+      if (mounted) setState(() => _recent = songs);
+    } catch (_) {
+      // Only a convenience; searching still works without it.
+    }
+  }
 
   @override
   void dispose() {
@@ -90,6 +117,58 @@ class _PickSongScreenState extends State<PickSongScreen> {
       ),
     );
     navigator.pop(PickSongResult(song: song, added: added));
+  }
+
+  Widget _tile(
+    BuildContext context,
+    Song song,
+    LyricsLanguage lyricsLang,
+    ThemeData theme,
+  ) {
+    final useEnglish =
+        lyricsLang == LyricsLanguage.english && song.hasEnglishContent;
+    final title = useEnglish ? (song.englishTitle ?? song.title) : song.title;
+    final place = useEnglish ? (song.englishVenue ?? song.place) : song.place;
+    return ListTile(
+      title: Text(title),
+      subtitle: Text(place, style: theme.textTheme.bodySmall),
+      onTap: _saving ? null : () => _choose(song),
+    );
+  }
+
+  Widget _buildBody(
+    BuildContext context,
+    AppLocalizations l10n,
+    LyricsLanguage lyricsLang,
+    ThemeData theme,
+  ) {
+    if (_isLoading) return const Center(child: CircularProgressIndicator());
+
+    final typing = _controller.text.trim().isNotEmpty;
+    if (!typing && _recent.isNotEmpty) {
+      return ListView(
+        children: [
+          Padding(
+            padding: const EdgeInsets.fromLTRB(16, 4, 16, 8),
+            child: Text(l10n.recentlyRead, style: theme.textTheme.titleSmall),
+          ),
+          for (final song in _recent) _tile(context, song, lyricsLang, theme),
+        ],
+      );
+    }
+    if (_results.isEmpty) {
+      return Center(
+        child: Text(
+          typing ? l10n.noResultsFound : l10n.startTypingToSearch,
+          style: theme.textTheme.bodyLarge,
+        ),
+      );
+    }
+    return ListView.builder(
+      itemCount: _results.length,
+      itemBuilder: (context, index) =>
+          _tile(context, _results[index], lyricsLang, theme),
+    );
   }
 
   @override
@@ -145,42 +224,7 @@ class _PickSongScreenState extends State<PickSongScreen> {
                 ),
               ),
             ),
-            Expanded(
-              child: _isLoading
-                  ? const Center(child: CircularProgressIndicator())
-                  : _results.isEmpty
-                  ? Center(
-                      child: Text(
-                        _controller.text.trim().isEmpty
-                            ? l10n.startTypingToSearch
-                            : l10n.noResultsFound,
-                        style: theme.textTheme.bodyLarge,
-                      ),
-                    )
-                  : ListView.builder(
-                      itemCount: _results.length,
-                      itemBuilder: (context, index) {
-                        final song = _results[index];
-                        final useEnglish =
-                            lyricsLang == LyricsLanguage.english &&
-                            song.hasEnglishContent;
-                        final title = useEnglish
-                            ? (song.englishTitle ?? song.title)
-                            : song.title;
-                        final place = useEnglish
-                            ? (song.englishVenue ?? song.place)
-                            : song.place;
-                        return ListTile(
-                          title: Text(title),
-                          subtitle: Text(
-                            place,
-                            style: theme.textTheme.bodySmall,
-                          ),
-                          onTap: _saving ? null : () => _choose(song),
-                        );
-                      },
-                    ),
-            ),
+            Expanded(child: _buildBody(context, l10n, lyricsLang, theme)),
           ],
         ),
       ),

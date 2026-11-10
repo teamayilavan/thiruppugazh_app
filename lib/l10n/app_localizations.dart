@@ -1376,6 +1376,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Failed to load temples'**
   String get failedToLoadTemples;
+
+  /// No description provided for @recentlyRead.
+  ///
+  /// In en, this message translates to:
+  /// **'Recently read'**
+  String get recentlyRead;
 }
 
 class _AppLocalizationsDelegate

@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -9,6 +11,7 @@ import 'package:thiruppugazh/data/models/song_model.dart';
 import 'package:thiruppugazh/data/repositories/song_repository.dart';
 import 'package:thiruppugazh/l10n/app_localizations.dart';
 import 'package:thiruppugazh/providers/lyrics_language_provider.dart';
+import 'package:thiruppugazh/providers/reading_state_provider.dart';
 import 'package:thiruppugazh/ui/screens/pick_song_screen.dart';
 
 Song _song(int id, String title) => Song(
@@ -38,6 +41,10 @@ class _FakeRepo extends SongRepository {
   ];
 
   @override
+  Future<Song?> getSongById(int id) async =>
+      id == 404 ? null : _song(id, 'Recent $id');
+
+  @override
   Future<bool> addLinkIfAbsent(SongLink link) async {
     if (alreadyHasLink) return false;
     saved.add(link);
@@ -58,6 +65,7 @@ Future<PickSongResult?> _pickFirstResult(
       providers: [
         ChangeNotifierProvider<SongRepository>.value(value: repo),
         ChangeNotifierProvider(create: (_) => LyricsLanguageProvider()),
+        ChangeNotifierProvider(create: (_) => ReadingStateProvider()),
       ],
       child: MaterialApp(
         localizationsDelegates: const [
@@ -101,7 +109,9 @@ Future<PickSongResult?> _pickFirstResult(
 }
 
 void main() {
-  testWidgets('saves the link and reports which song and that it was added', (tester) async {
+  testWidgets('saves the link and reports which song and that it was added', (
+    tester,
+  ) async {
     final repo = _FakeRepo(alreadyHasLink: false);
     final result = await _pickFirstResult(tester, repo);
 
@@ -122,7 +132,9 @@ void main() {
     expect(result.added, isFalse);
   });
 
-  testWidgets('backing out saves nothing and returns no result', (tester) async {
+  testWidgets('backing out saves nothing and returns no result', (
+    tester,
+  ) async {
     SharedPreferences.setMockInitialValues({});
     final repo = _FakeRepo(alreadyHasLink: false);
     PickSongResult? result = PickSongResult(song: _song(1, 'x'), added: true);
@@ -132,6 +144,8 @@ void main() {
         providers: [
           ChangeNotifierProvider<SongRepository>.value(value: repo),
           ChangeNotifierProvider(create: (_) => LyricsLanguageProvider()),
+          ChangeNotifierProvider(create: (_) => ReadingStateProvider()),
+          ChangeNotifierProvider(create: (_) => ReadingStateProvider()),
         ],
         child: MaterialApp(
           localizationsDelegates: const [
@@ -147,7 +161,8 @@ void main() {
                 onPressed: () async {
                   result = await Navigator.of(context).push<PickSongResult>(
                     MaterialPageRoute(
-                      builder: (_) => const PickSongScreen(url: 'https://a.com'),
+                      builder: (_) =>
+                          const PickSongScreen(url: 'https://a.com'),
                     ),
                   );
                 },
@@ -165,5 +180,91 @@ void main() {
 
     expect(result, isNull);
     expect(repo.saved, isEmpty);
+  });
+
+  group('before anything is typed', () {
+    Future<_FakeRepo> openPicker(
+      WidgetTester tester, {
+      required List<int> recent,
+    }) async {
+      SharedPreferences.setMockInitialValues({
+        if (recent.isNotEmpty)
+          'reading_state': jsonEncode({
+            'recent': recent,
+            'mode': 'read',
+            'chant': <String, int>{},
+          }),
+      });
+      final repo = _FakeRepo(alreadyHasLink: false);
+      await tester.pumpWidget(
+        MultiProvider(
+          providers: [
+            ChangeNotifierProvider<SongRepository>.value(value: repo),
+            ChangeNotifierProvider(create: (_) => LyricsLanguageProvider()),
+            ChangeNotifierProvider(create: (_) => ReadingStateProvider()),
+          ],
+          child: MaterialApp(
+            localizationsDelegates: const [
+              AppLocalizations.delegate,
+              GlobalMaterialLocalizations.delegate,
+              GlobalWidgetsLocalizations.delegate,
+              GlobalCupertinoLocalizations.delegate,
+            ],
+            supportedLocales: AppLocalizations.supportedLocales,
+            home: const PickSongScreen(url: 'https://a.com'),
+          ),
+        ),
+      );
+      await tester.runAsync(
+        () => Future<void>.delayed(const Duration(milliseconds: 50)),
+      );
+      await tester.pump();
+      await tester.pump(const Duration(milliseconds: 100));
+      return repo;
+    }
+
+    testWidgets('offers the songs read lately, most recent first', (
+      tester,
+    ) async {
+      await openPicker(tester, recent: [3, 2, 404]);
+      final l10n = AppLocalizations.of(tester.element(find.byType(Scaffold)))!;
+      expect(find.text(l10n.recentlyRead), findsOneWidget);
+      expect(find.text('Recent 3'), findsOneWidget);
+      expect(find.text('Recent 2'), findsOneWidget);
+      // A remembered song that no longer exists is skipped quietly.
+      expect(find.text('Recent 404'), findsNothing);
+      expect(
+        tester.getTopLeft(find.text('Recent 3')).dy,
+        lessThan(tester.getTopLeft(find.text('Recent 2')).dy),
+      );
+    });
+
+    testWidgets('picking a recent song saves the link on it', (tester) async {
+      final repo = await openPicker(tester, recent: [3, 2]);
+      await tester.tap(find.text('Recent 2'));
+      await tester.pumpAndSettle();
+      expect(repo.saved.single.songId, 2);
+      expect(repo.saved.single.url, 'https://a.com');
+    });
+
+    testWidgets('typing replaces the recent list with search results', (
+      tester,
+    ) async {
+      await openPicker(tester, recent: [3]);
+      await tester.enterText(find.byType(TextField), 'arukku');
+      await tester.pump(const Duration(seconds: 1));
+      await tester.pumpAndSettle();
+      expect(find.text('Recent 3'), findsNothing);
+      expect(find.text('Arukku Mangaiyar'), findsOneWidget);
+    });
+
+    testWidgets('with no history it still invites you to search', (
+      tester,
+    ) async {
+      await openPicker(tester, recent: []);
+      final l10n = AppLocalizations.of(tester.element(find.byType(Scaffold)))!;
+      expect(find.text(l10n.startTypingToSearch), findsOneWidget);
+      expect(find.text(l10n.recentlyRead), findsNothing);
+    });
   });
 }

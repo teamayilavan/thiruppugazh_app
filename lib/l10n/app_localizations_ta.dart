@@ -704,4 +704,7 @@ class AppLocalizationsTa extends AppLocalizations {
 
   @override
   String get failedToLoadTemples => 'கோயில்களை ஏற்றுவதில் தோல்வி';
+
+  @override
+  String get recentlyRead => 'சமீபத்தில் படித்தவை';
 }

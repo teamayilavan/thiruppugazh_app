@@ -698,4 +698,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get failedToLoadTemples => 'Failed to load temples';
+
+  @override
+  String get recentlyRead => 'Recently read';
 }
