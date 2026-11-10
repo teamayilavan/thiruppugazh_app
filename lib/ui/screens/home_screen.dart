@@ -6,10 +6,11 @@ import '../../providers/song_list_provider.dart';
 import '../../providers/lyrics_language_provider.dart';
 import '../widgets/continue_card.dart';
 import '../widgets/todays_song_card.dart';
-import 'song_detail_screen.dart';
+import '../widgets/adaptive_layout.dart';
 import 'search_screen.dart';
 import 'song_list_screen.dart';
 import '../../l10n/app_localizations.dart';
+import '../../theme/app_theme.dart';
 import '../../utils/app_logger.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -65,11 +66,7 @@ class _HomeScreenState extends State<HomeScreen> {
         return;
       }
 
-      Navigator.of(context).push(
-        MaterialPageRoute(
-          builder: (context) => SongDetailScreen(song: randomSong),
-        ),
-      );
+      openSong(context, randomSong);
     } catch (e, st) {
       AppLogger.error('Opening a random song failed', error: e, stackTrace: st);
       if (!mounted) return;
@@ -113,6 +110,10 @@ class _HomeScreenState extends State<HomeScreen> {
           final lyricsLang = Provider.of<LyricsLanguageProvider>(
             context,
           ).lyricsLanguage;
+          final selectedSongId = SongPaneScope.maybeOf(context)?.selectedSongId;
+          final selectedTileColor = Theme.of(
+            context,
+          ).extension<AppColorExtension>()!.card;
 
           return NotificationListener<ScrollNotification>(
             onNotification: (ScrollNotification scrollInfo) {
@@ -147,7 +148,11 @@ class _HomeScreenState extends State<HomeScreen> {
                         child: Image.asset(
                           'assets/images/hero.webp',
                           width: double.infinity,
-                          height: 350,
+                          height:
+                              MediaQuery.sizeOf(context).height <
+                                  Breakpoints.shortHeight
+                              ? MediaQuery.sizeOf(context).height * 0.4
+                              : 350,
                           fit: BoxFit.cover,
                           // The source is 2048x2048; decode only what the
                           // screen can show instead of ~16 MB of bitmap.
@@ -217,15 +222,10 @@ class _HomeScreenState extends State<HomeScreen> {
                                     : l10n.tuneNotAvailable,
                                 style: Theme.of(context).textTheme.bodySmall,
                               ),
-                              tileColor: listBackgroundColor,
-                              onTap: () {
-                                Navigator.of(context).push(
-                                  MaterialPageRoute(
-                                    builder: (context) =>
-                                        SongDetailScreen(song: song),
-                                  ),
-                                );
-                              },
+                              tileColor: song.id == selectedSongId
+                                  ? selectedTileColor
+                                  : listBackgroundColor,
+                              onTap: () => openSong(context, song),
                             ),
                           );
                         },

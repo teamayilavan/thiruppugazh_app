@@ -1,11 +1,11 @@
 import 'dart:async';
+import '../widgets/adaptive_layout.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../../data/models/song_model.dart';
 import '../../data/models/search_filter.dart';
 import '../../data/repositories/song_repository.dart';
 import '../../providers/lyrics_language_provider.dart';
-import 'song_detail_screen.dart';
 import '../../l10n/app_localizations.dart';
 import '../../../constants/app_constants.dart';
 
@@ -88,96 +88,94 @@ class _SearchScreenState extends State<SearchScreen> {
       },
       child: Scaffold(
         appBar: AppBar(title: Text(l10n.globalSearch)),
-        body: Column(
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(12.0),
-              child: TextField(
-                controller: _searchController,
-                focusNode: _searchFocusNode,
-                onChanged: _onSearchChanged,
-                autofocus: false,
-                decoration: InputDecoration(
-                  hintText: l10n.searchByTitleOrLyrics,
-                  prefixIcon: const Icon(Icons.search),
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(12.0),
+        body: ContentWidth(
+          child: Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(12.0),
+                child: TextField(
+                  controller: _searchController,
+                  focusNode: _searchFocusNode,
+                  onChanged: _onSearchChanged,
+                  autofocus: false,
+                  decoration: InputDecoration(
+                    hintText: l10n.searchByTitleOrLyrics,
+                    prefixIcon: const Icon(Icons.search),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(12.0),
+                    ),
+                    suffixIcon: _searchController.text.isNotEmpty
+                        ? IconButton(
+                            icon: const Icon(Icons.clear),
+                            onPressed: () {
+                              _searchController.clear();
+                              _performSearch('');
+                            },
+                          )
+                        : null,
                   ),
-                  suffixIcon: _searchController.text.isNotEmpty
-                      ? IconButton(
-                          icon: const Icon(Icons.clear),
-                          onPressed: () {
-                            _searchController.clear();
-                            _performSearch('');
-                          },
-                        )
-                      : null,
                 ),
               ),
-            ),
 
-            SearchFilterOptions(
-              filter: _filter,
-              onFilterChanged: (newFilter) {
-                _filter = newFilter;
-                _performSearch(_filter.query);
-              },
-            ),
+              SearchFilterOptions(
+                filter: _filter,
+                onFilterChanged: (newFilter) {
+                  _filter = newFilter;
+                  _performSearch(_filter.query);
+                },
+              ),
 
-            Expanded(
-              child: _isLoading
-                  ? const Center(child: CircularProgressIndicator())
-                  : _results.isEmpty
-                  ? Center(
-                      child: Text(
-                        _searchController.text.trim().isEmpty
-                            ? l10n.startTypingToSearch
-                            : l10n.noResultsFound,
-                        style: Theme.of(context).textTheme.bodyLarge,
-                      ),
-                    )
-                  : Scrollbar(
-                      controller: _scrollController,
-                      thumbVisibility: true,
-                      child: ListView.builder(
+              Expanded(
+                child: _isLoading
+                    ? const Center(child: CircularProgressIndicator())
+                    : _results.isEmpty
+                    ? Center(
+                        child: Text(
+                          _searchController.text.trim().isEmpty
+                              ? l10n.startTypingToSearch
+                              : l10n.noResultsFound,
+                          style: Theme.of(context).textTheme.bodyLarge,
+                        ),
+                      )
+                    : Scrollbar(
                         controller: _scrollController,
-                        itemCount: _results.length,
-                        itemBuilder: (context, index) {
-                          final song = _results[index];
-                          final useEnglish =
-                              lyricsLang == LyricsLanguage.english &&
-                              song.hasEnglishContent;
-                          final displayTitle = useEnglish
-                              ? (song.englishTitle ?? song.title)
-                              : song.title;
-                          final displayPlace = useEnglish
-                              ? (song.englishVenue ?? song.place)
-                              : song.place;
-                          return ListTile(
-                            leading: Text(
-                              (index + 1).toString(),
-                              style: Theme.of(context).textTheme.bodyLarge,
-                            ),
-                            title: Text(displayTitle),
-                            subtitle: Text(
-                              displayPlace,
-                              style: Theme.of(context).textTheme.bodySmall,
-                            ),
-                            onTap: () {
-                              _searchFocusNode.unfocus();
-                              Navigator.of(context).push(
-                                MaterialPageRoute(
-                                  builder: (context) =>
-                                      SongDetailScreen(song: song),
-                                ),
-                              );
-                            },
-                          );
-                        },
+                        thumbVisibility: true,
+                        child: ListView.builder(
+                          controller: _scrollController,
+                          itemCount: _results.length,
+                          itemBuilder: (context, index) {
+                            final song = _results[index];
+                            final useEnglish =
+                                lyricsLang == LyricsLanguage.english &&
+                                song.hasEnglishContent;
+                            final displayTitle = useEnglish
+                                ? (song.englishTitle ?? song.title)
+                                : song.title;
+                            final displayPlace = useEnglish
+                                ? (song.englishVenue ?? song.place)
+                                : song.place;
+                            return ListTile(
+                              leading: Text(
+                                (index + 1).toString(),
+                                style: Theme.of(context).textTheme.bodyLarge,
+                              ),
+                              title: Text(displayTitle),
+                              subtitle: Text(
+                                displayPlace,
+                                style: Theme.of(context).textTheme.bodySmall,
+                              ),
+                              tileColor: paneSelectionColor(context, song.id),
+                              onTap: () {
+                                _searchFocusNode.unfocus();
+                                openSong(context, song);
+                              },
+                            );
+                          },
+                        ),
                       ),
-                    ),
-            ),
-          ],
+              ),
+            ],
+          ),
         ),
       ),
     );

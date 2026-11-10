@@ -686,4 +686,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get couldNotOpenGithub => 'Couldn\'t open the GitHub repository';
+
+  @override
+  String get selectSongToRead => 'Choose a song to read it here';
 }

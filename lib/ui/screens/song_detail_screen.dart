@@ -7,6 +7,7 @@ import '../../data/models/highlight_model.dart';
 import '../../data/models/note_model.dart';
 import '../../data/models/link_model.dart';
 import '../../data/repositories/song_repository.dart';
+import '../widgets/adaptive_layout.dart';
 import '../widgets/add_to_category_dialog.dart';
 import '../widgets/add_link_sheet.dart';
 import '../widgets/link_actions.dart';
@@ -36,6 +37,9 @@ class SongDetailScreen extends StatefulWidget {
 }
 
 class _SongDetailScreenState extends State<SongDetailScreen> {
+  /// Width from which lyrics and meanings are shown side by side.
+  static const double _twoColumnWidth = 760;
+
   bool _isFavorite = false;
   bool _isFavoriteLoading = false;
   List<int> _categoryIds = [];
@@ -123,8 +127,10 @@ class _SongDetailScreenState extends State<SongDetailScreen> {
   Future<void> _deleteLink(SongLink link) async {
     if (link.id == null || !await confirmDeleteLink(context)) return;
     if (!mounted) return;
-    await Provider.of<SongRepository>(context, listen: false)
-        .deleteLink(link.id!);
+    await Provider.of<SongRepository>(
+      context,
+      listen: false,
+    ).deleteLink(link.id!);
     await _reloadLinks();
   }
 
@@ -457,236 +463,279 @@ ${_displayLyricsList.join('\n')}''';
     );
     final l10n = AppLocalizations.of(context)!;
 
+    final leftSlivers = <Widget>[
+      SliverToBoxAdapter(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            const SizedBox(height: 32),
+            Text(
+              _displayTitle,
+              style: Theme.of(
+                context,
+              ).textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.bold),
+              textAlign: TextAlign.center,
+            ),
+            if (_lyricsLanguage == LyricsLanguage.english &&
+                !widget.song.hasEnglishContent)
+              Padding(
+                padding: const EdgeInsets.only(top: 8.0),
+                child: Chip(
+                  label: Text(
+                    AppLocalizations.of(context)!.englishLyricsUnavailable,
+                    style: Theme.of(context).textTheme.bodySmall,
+                  ),
+                  backgroundColor: Theme.of(
+                    context,
+                  ).colorScheme.surfaceContainerHighest,
+                ),
+              ),
+            const SizedBox(height: 32),
+            SongInfoCard(place: _displayPlace, tune: _displayTune),
+            const SizedBox(height: 32),
+          ],
+        ),
+      ),
+
+      SliverToBoxAdapter(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                children: [
+                  Expanded(
+                    child: Text(
+                      l10n.lyrics,
+                      style: Theme.of(context).textTheme.bodyLarge,
+                    ),
+                  ),
+                  IconButton(
+                    icon: const Icon(Icons.play_circle_outline),
+                    tooltip: l10n.chantingMode,
+                    onPressed: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) =>
+                              ChantingScreen(song: widget.song),
+                        ),
+                      );
+                    },
+                  ),
+                  Consumer<LyricsFontSizeProvider>(
+                    builder: (context, fontSizeProvider, _) => Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        IconButton(
+                          icon: const Icon(Icons.text_decrease),
+                          tooltip: l10n.decreaseLyricsFontSize,
+                          onPressed: fontSizeProvider.canDecrease
+                              ? fontSizeProvider.decrease
+                              : null,
+                        ),
+                        IconButton(
+                          icon: const Icon(Icons.text_increase),
+                          tooltip: l10n.increaseLyricsFontSize,
+                          onPressed: fontSizeProvider.canIncrease
+                              ? fontSizeProvider.increase
+                              : null,
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 8),
+              const Divider(height: 16),
+              const SizedBox(height: 16),
+            ],
+          ),
+        ),
+      ),
+
+      SliverToBoxAdapter(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16.0),
+          child: SelectableText.rich(
+            TextSpan(children: _buildLyricsTextSpans(context)),
+            style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+              fontSize: context.watch<LyricsFontSizeProvider>().fontSize,
+              height: 1.5,
+              color: Colors.black,
+            ),
+            contextMenuBuilder: (context, editableTextState) {
+              return AdaptiveTextSelectionToolbar.buttonItems(
+                anchors: editableTextState.contextMenuAnchors,
+                buttonItems: [
+                  ...editableTextState.contextMenuButtonItems.where(
+                    (item) => item.type == ContextMenuButtonType.copy,
+                  ),
+                  ContextMenuButtonItem(
+                    onPressed: () {
+                      final selection =
+                          editableTextState.textEditingValue.selection;
+                      if (!selection.isValid) {
+                        editableTextState.hideToolbar();
+                        return;
+                      }
+
+                      // Find affected verses
+                      final start = selection.start;
+                      final end = selection.end;
+                      final affectedIndices = <int>[];
+
+                      for (final range in _verseRanges) {
+                        // Check for intersection
+                        if (range.start < end && range.end > start) {
+                          affectedIndices.add(range.index);
+                        }
+                      }
+
+                      editableTextState.hideToolbar();
+                      if (affectedIndices.isNotEmpty) {
+                        _toggleHighlights(affectedIndices);
+                      }
+                    },
+                    label: AppLocalizations.of(context)!.highlight,
+                  ),
+                ],
+              );
+            },
+          ),
+        ),
+      ),
+
+      SliverToBoxAdapter(
+        child: MayuragiriLyricsSection(
+          lines: _displayMayuragiriLyricsSeparated,
+          tuneLength: _displayTuneList.length,
+        ),
+      ),
+    ];
+    final rightSlivers = <Widget>[
+      SliverToBoxAdapter(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 32.0),
+          child: SongMeaningsCard(
+            title: l10n.meaning,
+            words: _displayWords,
+            meanings: _displayMeanings,
+          ),
+        ),
+      ),
+
+      SliverToBoxAdapter(child: _buildLinksSection(l10n)),
+
+      SliverToBoxAdapter(
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              _actionRow(
+                buttonStyle,
+                _ActionSpec(
+                  icon: _note != null ? Icons.note : Icons.note_add_outlined,
+                  label: l10n.songNote,
+                  onPressed: _showNoteDialog,
+                ),
+                _ActionSpec(
+                  icon: Icons.add_link,
+                  label: l10n.addLink,
+                  onPressed: _addLink,
+                ),
+              ),
+              _actionRow(
+                buttonStyle,
+                _ActionSpec(
+                  icon: Icons.share_outlined,
+                  label: l10n.shareText,
+                  onPressed: _shareSongText,
+                ),
+                _ActionSpec(
+                  icon: Icons.install_mobile,
+                  label: l10n.shareLink,
+                  onPressed: _shareSongLink,
+                ),
+              ),
+              _actionRow(
+                buttonStyle,
+                _ActionSpec(
+                  icon: Icons.language,
+                  label: l10n.openKaumaramPage,
+                  onPressed: () => openOnKaumaram(context, widget.song),
+                ),
+                _ActionSpec(
+                  icon: Icons.language,
+                  label: l10n.openMayuragiriPage,
+                  onPressed: () => openOnMayuragiri(context, widget.song),
+                ),
+              ),
+              _actionRow(
+                buttonStyle,
+                _ActionSpec(
+                  icon: Icons.smart_display,
+                  label: l10n.searchOnYouTube,
+                  onPressed: () => searchOnYouTube(context, widget.song),
+                ),
+                _ActionSpec(
+                  icon: Icons.search,
+                  label: l10n.searchInGoogle,
+                  onPressed: () => searchOnGoogle(context, widget.song),
+                ),
+              ),
+              // Clear the floating buttons so the last row stays tappable.
+              const SizedBox(height: 150),
+            ],
+          ),
+        ),
+      ),
+    ];
+
     return Scaffold(
-      body: CustomScrollView(
-        slivers: [
-          SliverToBoxAdapter(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
+      body: LayoutBuilder(
+        builder: (context, constraints) {
+          // With room, lyrics and meanings sit side by side and scroll
+          // separately, which suits studying a verse against its meaning.
+          if (Breakpoints.isLargeScreen(context) &&
+              constraints.maxWidth >= _twoColumnWidth) {
+            return Row(
               children: [
-                const SizedBox(height: 32),
-                Text(
-                  _displayTitle,
-                  style: Theme.of(context).textTheme.headlineSmall?.copyWith(
-                    fontWeight: FontWeight.bold,
-                  ),
-                  textAlign: TextAlign.center,
+                Expanded(child: CustomScrollView(slivers: leftSlivers)),
+                VerticalDivider(
+                  width: 1,
+                  color: Theme.of(context).colorScheme.outlineVariant,
                 ),
-                if (_lyricsLanguage == LyricsLanguage.english &&
-                    !widget.song.hasEnglishContent)
-                  Padding(
-                    padding: const EdgeInsets.only(top: 8.0),
-                    child: Chip(
-                      label: Text(
-                        AppLocalizations.of(context)!.englishLyricsUnavailable,
-                        style: Theme.of(context).textTheme.bodySmall,
+                Expanded(
+                  child: CustomScrollView(
+                    slivers: [
+                      // Keeps the text clear of the floating buttons.
+                      SliverPadding(
+                        padding: const EdgeInsets.only(right: 80),
+                        sliver: SliverMainAxisGroup(slivers: rightSlivers),
                       ),
-                      backgroundColor: Theme.of(
-                        context,
-                      ).colorScheme.surfaceContainerHighest,
-                    ),
+                    ],
                   ),
-                const SizedBox(height: 32),
-                SongInfoCard(place: _displayPlace, tune: _displayTune),
-                const SizedBox(height: 32),
+                ),
               ],
-            ),
-          ),
-
-          SliverToBoxAdapter(
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Row(
-                    children: [
-                      Expanded(
-                        child: Text(
-                          l10n.lyrics,
-                          style: Theme.of(context).textTheme.bodyLarge,
-                        ),
-                      ),
-                      IconButton(
-                        icon: const Icon(Icons.play_circle_outline),
-                        tooltip: l10n.chantingMode,
-                        onPressed: () {
-                          Navigator.of(context).push(
-                            MaterialPageRoute(
-                              builder: (context) =>
-                                  ChantingScreen(song: widget.song),
-                            ),
-                          );
-                        },
-                      ),
-                      Consumer<LyricsFontSizeProvider>(
-                        builder: (context, fontSizeProvider, _) => Row(
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            IconButton(
-                              icon: const Icon(Icons.text_decrease),
-                              tooltip: l10n.decreaseLyricsFontSize,
-                              onPressed: fontSizeProvider.canDecrease
-                                  ? fontSizeProvider.decrease
-                                  : null,
-                            ),
-                            IconButton(
-                              icon: const Icon(Icons.text_increase),
-                              tooltip: l10n.increaseLyricsFontSize,
-                              onPressed: fontSizeProvider.canIncrease
-                                  ? fontSizeProvider.increase
-                                  : null,
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
-                  const SizedBox(height: 8),
-                  const Divider(height: 16),
-                  const SizedBox(height: 16),
-                ],
-              ),
-            ),
-          ),
-
-          SliverToBoxAdapter(
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16.0),
-              child: SelectableText.rich(
-                TextSpan(children: _buildLyricsTextSpans(context)),
-                style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                  fontSize: context.watch<LyricsFontSizeProvider>().fontSize,
-                  height: 1.5,
-                  color: Colors.black,
+            );
+          }
+          // Otherwise one column; past a comfortable line length the extra
+          // width becomes margin, so lyrics stay readable.
+          return CustomScrollView(
+            slivers: [
+              SliverPadding(
+                padding: EdgeInsets.symmetric(
+                  horizontal: gutterFor(constraints.maxWidth),
                 ),
-                contextMenuBuilder: (context, editableTextState) {
-                  return AdaptiveTextSelectionToolbar.buttonItems(
-                    anchors: editableTextState.contextMenuAnchors,
-                    buttonItems: [
-                      ...editableTextState.contextMenuButtonItems.where(
-                        (item) => item.type == ContextMenuButtonType.copy,
-                      ),
-                      ContextMenuButtonItem(
-                        onPressed: () {
-                          final selection =
-                              editableTextState.textEditingValue.selection;
-                          if (!selection.isValid) {
-                            editableTextState.hideToolbar();
-                            return;
-                          }
-
-                          // Find affected verses
-                          final start = selection.start;
-                          final end = selection.end;
-                          final affectedIndices = <int>[];
-
-                          for (final range in _verseRanges) {
-                            // Check for intersection
-                            if (range.start < end && range.end > start) {
-                              affectedIndices.add(range.index);
-                            }
-                          }
-
-                          editableTextState.hideToolbar();
-                          if (affectedIndices.isNotEmpty) {
-                            _toggleHighlights(affectedIndices);
-                          }
-                        },
-                        label: AppLocalizations.of(context)!.highlight,
-                      ),
-                    ],
-                  );
-                },
+                sliver: SliverMainAxisGroup(
+                  slivers: [...leftSlivers, ...rightSlivers],
+                ),
               ),
-            ),
-          ),
-
-          SliverToBoxAdapter(
-            child: MayuragiriLyricsSection(
-              lines: _displayMayuragiriLyricsSeparated,
-              tuneLength: _displayTuneList.length,
-            ),
-          ),
-
-          SliverToBoxAdapter(
-            child: Padding(
-              padding: const EdgeInsets.symmetric(vertical: 32.0),
-              child: SongMeaningsCard(
-                title: l10n.meaning,
-                words: _displayWords,
-                meanings: _displayMeanings,
-              ),
-            ),
-          ),
-
-          SliverToBoxAdapter(child: _buildLinksSection(l10n)),
-
-          SliverToBoxAdapter(
-            child: Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: [
-                  _actionRow(
-                    buttonStyle,
-                    _ActionSpec(
-                      icon: _note != null ? Icons.note : Icons.note_add_outlined,
-                      label: l10n.songNote,
-                      onPressed: _showNoteDialog,
-                    ),
-                    _ActionSpec(
-                      icon: Icons.add_link,
-                      label: l10n.addLink,
-                      onPressed: _addLink,
-                    ),
-                  ),
-                  _actionRow(
-                    buttonStyle,
-                    _ActionSpec(
-                      icon: Icons.share_outlined,
-                      label: l10n.shareText,
-                      onPressed: _shareSongText,
-                    ),
-                    _ActionSpec(
-                      icon: Icons.install_mobile,
-                      label: l10n.shareLink,
-                      onPressed: _shareSongLink,
-                    ),
-                  ),
-                  _actionRow(
-                    buttonStyle,
-                    _ActionSpec(
-                      icon: Icons.language,
-                      label: l10n.openKaumaramPage,
-                      onPressed: () => openOnKaumaram(context, widget.song),
-                    ),
-                    _ActionSpec(
-                      icon: Icons.language,
-                      label: l10n.openMayuragiriPage,
-                      onPressed: () => openOnMayuragiri(context, widget.song),
-                    ),
-                  ),
-                  _actionRow(
-                    buttonStyle,
-                    _ActionSpec(
-                      icon: Icons.smart_display,
-                      label: l10n.searchOnYouTube,
-                      onPressed: () => searchOnYouTube(context, widget.song),
-                    ),
-                    _ActionSpec(
-                      icon: Icons.search,
-                      label: l10n.searchInGoogle,
-                      onPressed: () => searchOnGoogle(context, widget.song),
-                    ),
-                  ),
-                  // Clear the floating buttons so the last row stays tappable.
-                  const SizedBox(height: 150),
-                ],
-              ),
-            ),
-          ),
-        ],
+            ],
+          );
+        },
       ),
       floatingActionButton: Column(
         mainAxisSize: MainAxisSize.min,

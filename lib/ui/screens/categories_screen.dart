@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../widgets/adaptive_layout.dart';
 import 'package:provider/provider.dart';
 import '../../data/models/category_model.dart';
 import '../../data/repositories/song_repository.dart';
@@ -18,88 +19,90 @@ class CategoriesScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: Text(l10n.categories)),
       // ✅ Wrap the body with a Consumer to listen for changes
-      body: Consumer<SongRepository>(
-        builder: (context, repository, child) {
-          // The Consumer rebuilds this whenever notifyListeners() is called,
-          // giving the FutureBuilder a new future and causing it to reload.
-          return FutureBuilder<List<Category>>(
-            future: repository
-                .getAllCategories(), // ✨ Get future from the repository
-            builder: (context, snapshot) {
-              if (snapshot.connectionState == ConnectionState.waiting) {
-                return const Center(child: CircularProgressIndicator());
-              } else if (snapshot.hasError) {
-                return ErrorDisplayWidget(
-                  errorMessage: l10n.failedToLoadCategories,
-                  onRetry: null,
-                );
-              } else if (!snapshot.hasData || snapshot.data!.isEmpty) {
-                return Center(child: Text(l10n.noCategoriesFound));
-              }
+      body: ContentWidth(
+        child: Consumer<SongRepository>(
+          builder: (context, repository, child) {
+            // The Consumer rebuilds this whenever notifyListeners() is called,
+            // giving the FutureBuilder a new future and causing it to reload.
+            return FutureBuilder<List<Category>>(
+              future: repository
+                  .getAllCategories(), // ✨ Get future from the repository
+              builder: (context, snapshot) {
+                if (snapshot.connectionState == ConnectionState.waiting) {
+                  return const Center(child: CircularProgressIndicator());
+                } else if (snapshot.hasError) {
+                  return ErrorDisplayWidget(
+                    errorMessage: l10n.failedToLoadCategories,
+                    onRetry: null,
+                  );
+                } else if (!snapshot.hasData || snapshot.data!.isEmpty) {
+                  return Center(child: Text(l10n.noCategoriesFound));
+                }
 
-              final categories = snapshot.data!;
-              // Split categories into favorites and custom
-              final favorites = categories.where((c) => c.id == 1).toList();
-              final customCategories = categories
-                  .where((c) => c.id != 1)
-                  .toList();
+                final categories = snapshot.data!;
+                // Split categories into favorites and custom
+                final favorites = categories.where((c) => c.id == 1).toList();
+                final customCategories = categories
+                    .where((c) => c.id != 1)
+                    .toList();
 
-              return Scrollbar(
-                child: ListView(
-                  padding: const EdgeInsets.only(bottom: 80), // Space for FAB
-                  children: [
-                    // Favorites Section
-                    if (favorites.isNotEmpty)
-                      ...favorites.map(
-                        (category) => _buildCategoryTile(context, category),
-                      ),
-
-                    if (favorites.isNotEmpty) const Divider(),
-
-                    // Custom Categories Header
-                    Padding(
-                      padding: const EdgeInsets.fromLTRB(16, 16, 16, 8),
-                      child: Text(
-                        l10n.customCategories,
-                        style: Theme.of(context).textTheme.titleMedium
-                            ?.copyWith(
-                              color:
-                                  Theme.of(
-                                    context,
-                                  ).extension<AppColorExtension>()?.textHigh ??
-                                  Theme.of(context).colorScheme.onSurface,
-                              fontWeight: FontWeight.bold,
-                            ),
-                      ),
-                    ),
-
-                    // Custom Categories List or Empty State
-                    if (customCategories.isEmpty)
-                      Center(
-                        child: Padding(
-                          padding: const EdgeInsets.all(32.0),
-                          child: Text(
-                            l10n.noCustomCategories,
-                            textAlign: TextAlign.center,
-                            style: Theme.of(context).textTheme.bodyMedium
-                                ?.copyWith(
-                                  color: Theme.of(
-                                    context,
-                                  ).colorScheme.onSurfaceVariant,
-                                ),
-                          ),
+                return Scrollbar(
+                  child: ListView(
+                    padding: const EdgeInsets.only(bottom: 80), // Space for FAB
+                    children: [
+                      // Favorites Section
+                      if (favorites.isNotEmpty)
+                        ...favorites.map(
+                          (category) => _buildCategoryTile(context, category),
                         ),
-                      )
-                    else
-                      ...customCategories.map(
-                        (category) => _buildCategoryTile(context, category),
+
+                      if (favorites.isNotEmpty) const Divider(),
+
+                      // Custom Categories Header
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(16, 16, 16, 8),
+                        child: Text(
+                          l10n.customCategories,
+                          style: Theme.of(context).textTheme.titleMedium
+                              ?.copyWith(
+                                color:
+                                    Theme.of(context)
+                                        .extension<AppColorExtension>()
+                                        ?.textHigh ??
+                                    Theme.of(context).colorScheme.onSurface,
+                                fontWeight: FontWeight.bold,
+                              ),
+                        ),
                       ),
-                  ],
-                ),
-              );
-            },
-          );
-        },
+
+                      // Custom Categories List or Empty State
+                      if (customCategories.isEmpty)
+                        Center(
+                          child: Padding(
+                            padding: const EdgeInsets.all(32.0),
+                            child: Text(
+                              l10n.noCustomCategories,
+                              textAlign: TextAlign.center,
+                              style: Theme.of(context).textTheme.bodyMedium
+                                  ?.copyWith(
+                                    color: Theme.of(
+                                      context,
+                                    ).colorScheme.onSurfaceVariant,
+                                  ),
+                            ),
+                          ),
+                        )
+                      else
+                        ...customCategories.map(
+                          (category) => _buildCategoryTile(context, category),
+                        ),
+                    ],
+                  ),
+                );
+              },
+            );
+          },
+        ),
       ),
       floatingActionButton: Semantics(
         button: true,

@@ -7,7 +7,7 @@ import '../../l10n/app_localizations.dart';
 import '../../providers/lyrics_language_provider.dart';
 import '../../services/daily_song_service.dart';
 import '../../theme/app_theme.dart';
-import '../screens/song_detail_screen.dart';
+import 'adaptive_layout.dart';
 
 /// Today's song (இன்றைய பாடல்), picked deterministically from today's date
 /// via [dailySongIndexForDate] -- every installation shows the same song on
@@ -98,13 +98,7 @@ class _TodaysSongCardState extends State<TodaysSongCard> {
         child: Card(
           color: colors.card,
           child: InkWell(
-            onTap: () {
-              Navigator.of(context).push(
-                MaterialPageRoute(
-                  builder: (_) => SongDetailScreen(song: song),
-                ),
-              );
-            },
+            onTap: () => openSong(context, song),
             child: Padding(
               padding: const EdgeInsets.symmetric(
                 horizontal: 16.0,
@@ -136,8 +130,9 @@ class _TodaysSongCardState extends State<TodaysSongCard> {
                           const SizedBox(height: 4),
                           Text(
                             place,
-                            style: Theme.of(context).textTheme.bodySmall
-                                ?.copyWith(color: onCard),
+                            style: Theme.of(
+                              context,
+                            ).textTheme.bodySmall?.copyWith(color: onCard),
                           ),
                         ],
                       ],

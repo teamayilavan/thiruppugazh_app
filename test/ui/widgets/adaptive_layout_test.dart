@@ -1,0 +1,178 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_test/flutter_test.dart';
+import 'package:thiruppugazh/data/models/song_model.dart';
+import 'package:thiruppugazh/theme/app_theme.dart';
+import 'package:thiruppugazh/ui/widgets/adaptive_layout.dart';
+
+Song _song(int id) =>
+    Song.fromMap({'id': id, 'kaumaram_id': id, 'title': 't$id'});
+
+void main() {
+  group('gutterFor', () {
+    test('is zero when the width is at or below the max', () {
+      expect(gutterFor(400), 0);
+      expect(gutterFor(Breakpoints.contentMaxWidth), 0);
+    });
+
+    test('splits the extra width evenly', () {
+      expect(gutterFor(1000, maxWidth: 800), 100);
+    });
+  });
+
+  group('ContentWidth', () {
+    testWidgets('caps the child width and centers it', (tester) async {
+      tester.view.physicalSize = const Size(1600, 900);
+      tester.view.devicePixelRatio = 1;
+      addTearDown(tester.view.reset);
+
+      await tester.pumpWidget(
+        const MaterialApp(
+          home: ContentWidth(child: SizedBox.expand(key: Key('c'))),
+        ),
+      );
+      final rect = tester.getRect(find.byKey(const Key('c')));
+      expect(rect.width, Breakpoints.contentMaxWidth);
+      expect(rect.center.dx, 800);
+    });
+
+    testWidgets('does not shrink a narrow child', (tester) async {
+      tester.view.physicalSize = const Size(400, 900);
+      tester.view.devicePixelRatio = 1;
+      addTearDown(tester.view.reset);
+
+      await tester.pumpWidget(
+        const MaterialApp(
+          home: ContentWidth(child: SizedBox.expand(key: Key('c'))),
+        ),
+      );
+      expect(tester.getSize(find.byKey(const Key('c'))).width, 400);
+    });
+  });
+
+  group('useRail', () {
+    Future<bool> check(WidgetTester tester, Size size) async {
+      tester.view.physicalSize = size;
+      tester.view.devicePixelRatio = 1;
+      addTearDown(tester.view.reset);
+      late bool result;
+      await tester.pumpWidget(
+        MaterialApp(
+          home: Builder(
+            builder: (context) {
+              result = Breakpoints.useRail(context);
+              return const SizedBox();
+            },
+          ),
+        ),
+      );
+      return result;
+    }
+
+    testWidgets('is false for a phone held upright', (tester) async {
+      expect(await check(tester, const Size(412, 915)), isFalse);
+    });
+
+    testWidgets('is true for a phone held sideways and for tablets', (
+      tester,
+    ) async {
+      expect(await check(tester, const Size(915, 412)), isTrue);
+      expect(await check(tester, const Size(800, 1280)), isTrue);
+    });
+  });
+
+  group('isLargeScreen', () {
+    Future<bool> check(WidgetTester tester, Size size) async {
+      tester.view.physicalSize = size;
+      tester.view.devicePixelRatio = 1;
+      addTearDown(tester.view.reset);
+      late bool result;
+      await tester.pumpWidget(
+        MaterialApp(
+          home: Builder(
+            builder: (context) {
+              result = Breakpoints.isLargeScreen(context);
+              return const SizedBox();
+            },
+          ),
+        ),
+      );
+      return result;
+    }
+
+    testWidgets('is false for a phone in either orientation', (tester) async {
+      expect(await check(tester, const Size(412, 915)), isFalse);
+      expect(await check(tester, const Size(915, 412)), isFalse);
+    });
+
+    testWidgets('is true for a tablet in either orientation', (tester) async {
+      expect(await check(tester, const Size(800, 1280)), isTrue);
+      expect(await check(tester, const Size(1280, 800)), isTrue);
+    });
+  });
+
+  group('paneSelectionColor', () {
+    Future<Color?> colorFor(WidgetTester tester, int? selected, int row) async {
+      Color? result;
+      await tester.pumpWidget(
+        MaterialApp(
+          theme: lightTheme,
+          home: SongPaneScope(
+            selectedSongId: selected,
+            onOpen: (_) {},
+            child: Builder(
+              builder: (context) {
+                result = paneSelectionColor(context, row);
+                return const SizedBox();
+              },
+            ),
+          ),
+        ),
+      );
+      return result;
+    }
+
+    testWidgets('marks only the song open in the pane', (tester) async {
+      expect(await colorFor(tester, 3, 3), isNotNull);
+      expect(await colorFor(tester, 3, 4), isNull);
+      expect(await colorFor(tester, null, 3), isNull);
+    });
+
+    testWidgets('does nothing without a pane', (tester) async {
+      Color? result = Colors.red;
+      await tester.pumpWidget(
+        MaterialApp(
+          theme: lightTheme,
+          home: Builder(
+            builder: (context) {
+              result = paneSelectionColor(context, 3);
+              return const SizedBox();
+            },
+          ),
+        ),
+      );
+      expect(result, isNull);
+    });
+  });
+
+  group('openSong', () {
+    testWidgets('hands the song to the pane when there is one', (tester) async {
+      Song? opened;
+      await tester.pumpWidget(
+        MaterialApp(
+          home: SongPaneScope(
+            selectedSongId: null,
+            onOpen: (s) => opened = s,
+            child: Builder(
+              builder: (context) => TextButton(
+                onPressed: () => openSong(context, _song(7)),
+                child: const Text('go'),
+              ),
+            ),
+          ),
+        ),
+      );
+      await tester.tap(find.text('go'));
+      expect(opened?.id, 7);
+    });
+  });
+}

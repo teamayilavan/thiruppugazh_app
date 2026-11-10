@@ -1352,6 +1352,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Couldn\'t open the GitHub repository'**
   String get couldNotOpenGithub;
+
+  /// No description provided for @selectSongToRead.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose a song to read it here'**
+  String get selectSongToRead;
 }
 
 class _AppLocalizationsDelegate

@@ -275,5 +275,6 @@
   "backupShareText": "Backup of Thiruppugazh app data created on {date}",
   "@backupShareText": {"placeholders": {"date": {"type": "String"}}},
   "importUnknownDate": "an unknown date",
-  "couldNotOpenGithub": "Couldn't open the GitHub repository"
+  "couldNotOpenGithub": "Couldn't open the GitHub repository",
+  "selectSongToRead": "Choose a song to read it here"
 }

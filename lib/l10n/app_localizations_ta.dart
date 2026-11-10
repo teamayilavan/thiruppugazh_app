@@ -692,4 +692,7 @@ class AppLocalizationsTa extends AppLocalizations {
 
   @override
   String get couldNotOpenGithub => 'GitHub களஞ்சியத்தைத் திறக்க முடியவில்லை';
+
+  @override
+  String get selectSongToRead => 'இங்கே படிக்க ஒரு பாடலைத் தேர்ந்தெடுக்கவும்';
 }

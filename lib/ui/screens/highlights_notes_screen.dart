@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import '../widgets/adaptive_layout.dart';
 import 'package:provider/provider.dart';
 import '../../data/repositories/song_repository.dart';
-import 'song_detail_screen.dart';
 import '../../l10n/app_localizations.dart';
 import '../widgets/link_actions.dart';
 
@@ -32,8 +32,10 @@ class HighlightsNotesScreen extends StatelessWidget {
             ],
           ),
         ),
-        body: const TabBarView(
-          children: [HighlightsList(), NotesList(), LinksList()],
+        body: const ContentWidth(
+          child: TabBarView(
+            children: [HighlightsList(), NotesList(), LinksList()],
+          ),
         ),
       ),
     );
@@ -132,13 +134,7 @@ class _HighlightsListState extends State<HighlightsList> {
                 );
                 final song = await repo.getSongById(songId);
                 if (song != null && context.mounted) {
-                  await Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => SongDetailScreen(song: song),
-                    ),
-                  );
-                  _refresh();
+                  openSong(context, song);
                 }
               },
               trailing: const Icon(Icons.arrow_forward_ios, size: 16),
@@ -235,13 +231,7 @@ class _NotesListState extends State<NotesList> {
                 );
                 final song = await repo.getSongById(songId);
                 if (song != null && context.mounted) {
-                  await Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => SongDetailScreen(song: song),
-                    ),
-                  );
-                  _refresh();
+                  openSong(context, song);
                 }
               },
               trailing: IconButton(
@@ -363,7 +353,11 @@ class _LinksListState extends State<LinksList> {
               ),
               subtitle: Padding(
                 padding: const EdgeInsets.only(top: 4.0),
-                child: Text(shown, maxLines: 2, overflow: TextOverflow.ellipsis),
+                child: Text(
+                  shown,
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
+                ),
               ),
               onTap: () async {
                 final repo = Provider.of<SongRepository>(
@@ -372,13 +366,7 @@ class _LinksListState extends State<LinksList> {
                 );
                 final song = await repo.getSongById(songId);
                 if (song != null && context.mounted) {
-                  await Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => SongDetailScreen(song: song),
-                    ),
-                  );
-                  _refresh();
+                  openSong(context, song);
                 }
               },
               trailing: Row(

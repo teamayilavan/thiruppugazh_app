@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
+import '../widgets/adaptive_layout.dart';
 import 'package:provider/provider.dart';
 import '../../data/repositories/song_repository.dart';
 import '../../data/models/song_model.dart';
 import '../../l10n/app_localizations.dart';
 import '../../providers/lyrics_language_provider.dart';
-import 'song_detail_screen.dart';
 
 class TempleSongsScreen extends StatefulWidget {
   final String templeName; // Tamil name — used for DB query
@@ -41,64 +41,62 @@ class _TempleSongsScreenState extends State<TempleSongsScreen> {
       appBar: AppBar(
         title: Text(widget.templeDisplayName ?? widget.templeName),
       ),
-      body: FutureBuilder<List<Song>>(
-        future: _songsFuture,
-        builder: (context, snapshot) {
-          if (snapshot.connectionState == ConnectionState.waiting) {
-            return const Center(child: CircularProgressIndicator());
-          }
+      body: ContentWidth(
+        child: FutureBuilder<List<Song>>(
+          future: _songsFuture,
+          builder: (context, snapshot) {
+            if (snapshot.connectionState == ConnectionState.waiting) {
+              return const Center(child: CircularProgressIndicator());
+            }
 
-          if (snapshot.hasError) {
-            return Center(
-              child: Text(
-                '${AppLocalizations.of(context)!.anErrorOccurred}: ${snapshot.error}',
-              ),
-            );
-          }
-
-          final songs = snapshot.data ?? [];
-
-          if (songs.isEmpty) {
-            return Center(
-              child: Text(AppLocalizations.of(context)!.noSongsFoundForTemple),
-            );
-          }
-
-          return ListView.separated(
-            itemCount: songs.length,
-            separatorBuilder: (context, index) => const Divider(height: 1),
-            itemBuilder: (context, index) {
-              final song = songs[index];
-              final useEnglish =
-                  lyricsLang == LyricsLanguage.english &&
-                  song.hasEnglishContent;
-              final displayTitle = useEnglish
-                  ? (song.englishTitle ?? song.title)
-                  : song.title;
-              final displayPlace = useEnglish
-                  ? (song.englishVenue ?? song.place)
-                  : song.place;
-              return ListTile(
-                leading: Text('${index + 1}'),
-                title: Text(displayTitle),
-                subtitle: displayPlace.isNotEmpty
-                    ? Text(
-                        displayPlace,
-                        style: Theme.of(context).textTheme.bodySmall,
-                      )
-                    : null,
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => SongDetailScreen(song: song),
-                    ),
-                  );
-                },
+            if (snapshot.hasError) {
+              return Center(
+                child: Text(
+                  '${AppLocalizations.of(context)!.anErrorOccurred}: ${snapshot.error}',
+                ),
               );
-            },
-          );
-        },
+            }
+
+            final songs = snapshot.data ?? [];
+
+            if (songs.isEmpty) {
+              return Center(
+                child: Text(
+                  AppLocalizations.of(context)!.noSongsFoundForTemple,
+                ),
+              );
+            }
+
+            return ListView.separated(
+              itemCount: songs.length,
+              separatorBuilder: (context, index) => const Divider(height: 1),
+              itemBuilder: (context, index) {
+                final song = songs[index];
+                final useEnglish =
+                    lyricsLang == LyricsLanguage.english &&
+                    song.hasEnglishContent;
+                final displayTitle = useEnglish
+                    ? (song.englishTitle ?? song.title)
+                    : song.title;
+                final displayPlace = useEnglish
+                    ? (song.englishVenue ?? song.place)
+                    : song.place;
+                return ListTile(
+                  leading: Text('${index + 1}'),
+                  title: Text(displayTitle),
+                  subtitle: displayPlace.isNotEmpty
+                      ? Text(
+                          displayPlace,
+                          style: Theme.of(context).textTheme.bodySmall,
+                        )
+                      : null,
+                  tileColor: paneSelectionColor(context, song.id),
+                  onTap: () => openSong(context, song),
+                );
+              },
+            );
+          },
+        ),
       ),
     );
   }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../widgets/adaptive_layout.dart';
 import 'package:provider/provider.dart';
 import '../../data/repositories/song_repository.dart';
 import '../../providers/lyrics_language_provider.dart';
@@ -45,86 +46,88 @@ class _TemplesScreenState extends State<TemplesScreen> {
     ).lyricsLanguage;
     return Scaffold(
       appBar: AppBar(title: Text(AppLocalizations.of(context)!.temples)),
-      body: FutureBuilder<List<Map<String, dynamic>>>(
-        future: _templesFuture,
-        builder: (context, snapshot) {
-          if (snapshot.connectionState == ConnectionState.waiting) {
-            return const Center(child: CircularProgressIndicator());
-          }
+      body: ContentWidth(
+        child: FutureBuilder<List<Map<String, dynamic>>>(
+          future: _templesFuture,
+          builder: (context, snapshot) {
+            if (snapshot.connectionState == ConnectionState.waiting) {
+              return const Center(child: CircularProgressIndicator());
+            }
 
-          if (snapshot.hasError) {
-            return Center(
-              child: Text(
-                '${AppLocalizations.of(context)!.anErrorOccurred}: ${snapshot.error}',
+            if (snapshot.hasError) {
+              return Center(
+                child: Text(
+                  '${AppLocalizations.of(context)!.anErrorOccurred}: ${snapshot.error}',
+                ),
+              );
+            }
+
+            final temples = snapshot.data ?? [];
+
+            if (temples.isEmpty) {
+              return Center(
+                child: Text(AppLocalizations.of(context)!.noTemplesFound),
+              );
+            }
+
+            return Scrollbar(
+              controller: _scrollController,
+              thumbVisibility: true,
+              interactive: true,
+              thickness: 10.0,
+              radius: const Radius.circular(10.0),
+              child: CustomScrollView(
+                controller: _scrollController,
+                slivers: [
+                  SliverToBoxAdapter(child: ArupadaiGrid(temples: temples)),
+                  SliverPadding(
+                    padding: const EdgeInsets.fromLTRB(16.0, 24.0, 16.0, 0),
+                    sliver: SliverList.separated(
+                      itemCount: temples.length,
+                      separatorBuilder: (context, index) =>
+                          const SizedBox(height: 8),
+                      itemBuilder: (context, index) {
+                        final temple = temples[index];
+                        final name = temple['name'] as String;
+                        final englishName = temple['english_name'] as String?;
+                        final count = temple['song_count'] as int;
+
+                        final displayName =
+                            (lyricsLang == LyricsLanguage.english &&
+                                englishName != null)
+                            ? englishName
+                            : name;
+
+                        return ListTile(
+                          leading: Text(
+                            '${index + 1}',
+                            style: Theme.of(context).textTheme.bodyMedium,
+                          ),
+                          title: Text(displayName),
+                          trailing: Text(
+                            '$count',
+                            style: Theme.of(context).textTheme.bodyMedium,
+                          ),
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => TempleSongsScreen(
+                                  templeName: name,
+                                  templeDisplayName: displayName,
+                                ),
+                              ),
+                            );
+                          },
+                        );
+                      },
+                    ),
+                  ),
+                ],
               ),
             );
-          }
-
-          final temples = snapshot.data ?? [];
-
-          if (temples.isEmpty) {
-            return Center(
-              child: Text(AppLocalizations.of(context)!.noTemplesFound),
-            );
-          }
-
-          return Scrollbar(
-            controller: _scrollController,
-            thumbVisibility: true,
-            interactive: true,
-            thickness: 10.0,
-            radius: const Radius.circular(10.0),
-            child: CustomScrollView(
-              controller: _scrollController,
-              slivers: [
-                SliverToBoxAdapter(child: ArupadaiGrid(temples: temples)),
-                SliverPadding(
-                  padding: const EdgeInsets.fromLTRB(16.0, 24.0, 16.0, 0),
-                  sliver: SliverList.separated(
-                    itemCount: temples.length,
-                    separatorBuilder: (context, index) =>
-                        const SizedBox(height: 8),
-                    itemBuilder: (context, index) {
-                      final temple = temples[index];
-                      final name = temple['name'] as String;
-                      final englishName = temple['english_name'] as String?;
-                      final count = temple['song_count'] as int;
-
-                      final displayName =
-                          (lyricsLang == LyricsLanguage.english &&
-                              englishName != null)
-                          ? englishName
-                          : name;
-
-                      return ListTile(
-                        leading: Text(
-                          '${index + 1}',
-                          style: Theme.of(context).textTheme.bodyMedium,
-                        ),
-                        title: Text(displayName),
-                        trailing: Text(
-                          '$count',
-                          style: Theme.of(context).textTheme.bodyMedium,
-                        ),
-                        onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => TempleSongsScreen(
-                                templeName: name,
-                                templeDisplayName: displayName,
-                              ),
-                            ),
-                          );
-                        },
-                      );
-                    },
-                  ),
-                ),
-              ],
-            ),
-          );
-        },
+          },
+        ),
       ),
     );
   }

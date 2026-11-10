@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../widgets/adaptive_layout.dart';
 import '../../theme/app_theme.dart';
 
 /// The privacy policy, in Tamil and English. Kept as one screen of fixed text
@@ -16,36 +17,38 @@ class PrivacyPolicyScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Privacy Policy')),
-      body: SingleChildScrollView(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            _buildPolicy(
-              context,
-              title: 'தனியுரிமைக் கொள்கை',
-              updated: 'கடைசியாகப் புதுப்பிக்கப்பட்டது: $_lastUpdatedTa',
-              intro:
-                  'திருப்புகழ் செயலி ஒரு ஓப்பன் சோர்ஸ் (Open Source) பயன்பாடாக உருவாக்கப்பட்டுள்ளது. இந்தச் சேவையை டீம் அயிலவன் (Team Ayilavan) இலவசமாக வழங்குகிறது மற்றும் இது "உள்ளபடியே" (as is) பயன்படுத்துவதற்காக அமைக்கப்பட்டுள்ளது.',
-              sections: _tamilSections,
-              contactTitle: 'தொடர்புக்கு',
-              contact:
-                  'எங்கள் தனியுரிமைக் கொள்கை குறித்து ஏதேனும் கேள்விகள் அல்லது பரிந்துரைகள் இருந்தால், teamayilavan@gmail.com என்ற முகவரியில் எங்களைத் தொடர்பு கொள்ள தயங்க வேண்டாம்.',
-            ),
-            const Divider(height: 32.0, thickness: 1.0),
-            _buildPolicy(
-              context,
-              title: 'Privacy Policy',
-              updated: 'Last updated: $_lastUpdatedEn',
-              intro:
-                  'Thiruppugazh is built as an Open Source app. This service is provided by Team Ayilavan at no cost and is intended for use as is.',
-              sections: _englishSections,
-              contactTitle: 'Contact Us',
-              contact:
-                  'If you have any questions or suggestions about this Privacy Policy, do not hesitate to contact us at teamayilavan@gmail.com',
-            ),
-            const SizedBox(height: 32.0),
-          ],
+      body: ContentWidth(
+        child: SingleChildScrollView(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              _buildPolicy(
+                context,
+                title: 'தனியுரிமைக் கொள்கை',
+                updated: 'கடைசியாகப் புதுப்பிக்கப்பட்டது: $_lastUpdatedTa',
+                intro:
+                    'திருப்புகழ் செயலி ஒரு ஓப்பன் சோர்ஸ் (Open Source) பயன்பாடாக உருவாக்கப்பட்டுள்ளது. இந்தச் சேவையை டீம் அயிலவன் (Team Ayilavan) இலவசமாக வழங்குகிறது மற்றும் இது "உள்ளபடியே" (as is) பயன்படுத்துவதற்காக அமைக்கப்பட்டுள்ளது.',
+                sections: _tamilSections,
+                contactTitle: 'தொடர்புக்கு',
+                contact:
+                    'எங்கள் தனியுரிமைக் கொள்கை குறித்து ஏதேனும் கேள்விகள் அல்லது பரிந்துரைகள் இருந்தால், teamayilavan@gmail.com என்ற முகவரியில் எங்களைத் தொடர்பு கொள்ள தயங்க வேண்டாம்.',
+              ),
+              const Divider(height: 32.0, thickness: 1.0),
+              _buildPolicy(
+                context,
+                title: 'Privacy Policy',
+                updated: 'Last updated: $_lastUpdatedEn',
+                intro:
+                    'Thiruppugazh is built as an Open Source app. This service is provided by Team Ayilavan at no cost and is intended for use as is.',
+                sections: _englishSections,
+                contactTitle: 'Contact Us',
+                contact:
+                    'If you have any questions or suggestions about this Privacy Policy, do not hesitate to contact us at teamayilavan@gmail.com',
+              ),
+              const SizedBox(height: 32.0),
+            ],
+          ),
         ),
       ),
     );
