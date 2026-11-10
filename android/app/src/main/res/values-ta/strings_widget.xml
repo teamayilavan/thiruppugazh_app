@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="widget_name">இன்றைய பாடல்</string>
+    <string name="widget_description">இன்றைய திருப்புகழ்ப் பாடலைக் காட்டும். படிக்கத் தொடவும்.</string>
+</resources>

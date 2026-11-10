@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Shown by the system widget picker (follows the phone's language). -->
+    <string name="widget_name">Today\'s song</string>
+    <string name="widget_description">Shows the Thiruppugazh song of the day. Tap to read it.</string>
+    <!-- Shown inside the widget (follows the app\'s own language setting). -->
+    <string name="widget_label_en">Today\'s song</string>
+    <string name="widget_label_ta">இன்றைய பாடல்</string>
+    <string name="widget_open_app_en">Open Thiruppugazh</string>
+    <string name="widget_open_app_ta">திருப்புகழைத் திற</string>
+</resources>

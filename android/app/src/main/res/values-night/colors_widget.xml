@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- The app's dark palette: dbackground, a lighter green for the label
+         (the app's dtextHigh is a little too dark for small text on this
+         background), dtext. -->
+    <color name="widget_background">#FF1F4529</color>
+    <color name="widget_label">#FFA5D6A7</color>
+    <color name="widget_text">#FFECECEC</color>
+    <color name="widget_text_muted">#CCECECEC</color>
+</resources>

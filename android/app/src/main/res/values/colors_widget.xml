@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- The app's light palette (lib/theme/app_theme.dart): background,
+         textHigh, text. Muted text is the body text at reduced opacity. -->
+    <color name="widget_background">#FFD8EFD3</color>
+    <color name="widget_label">#FF196519</color>
+    <color name="widget_text">#FF0D3619</color>
+    <color name="widget_text_muted">#CC0D3619</color>
+</resources>
