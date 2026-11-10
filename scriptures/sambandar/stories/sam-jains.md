@@ -10,10 +10,10 @@ After losing the debates the Jains were impaled on stakes, according to the trad
 
 | Source | Reference | Note | Status |
 |---|---|---|---|
-| Periya Puranam, Sambandar Puranam | vv. 855-856 in the Shiva pass's running numbers [https://thevaaram.org/thirumurai_1/onepage.php?thiru=12&Song_idField=12280] |  | opened in the Shiva pass |
-| Shiva set | shiva/stories/saints-sambandar.md | the 20 songs and the Puranam verses already collected | local |
+| Periya Puranam, Sambandar Puranam (Tirumurai 12) | vv. 853-856 (856 checked), then the king takes the ash 857-858 [https://thevaaram.org/thirumurai_1/onepage.php?thiru=12&Song_idField=12280] |  | machine-read from the opened page (running verse numbers); the checks below are re-run on every build |
+| Shiva set | shiva/stories/saints-sambandar.md | the 20 songs already collected | local |
 
-Assignments are KEYWORD-LEVEL: a song is listed when its English commentary (and, where possible, a Tamil lyric line) matches the story. They have not been hand-read like `shiva/` and `vishnu/`. Confidence: **t** = a Tamil lyric line matched and the commentary agrees; **c** = commentary only (no Tamil keyword line found); **low** = commentary did not match, check by reading the song.
+Assignments start KEYWORD-LEVEL: a song is listed when its English commentary (and, where possible, a Tamil lyric line) matches the story. A story with a 'Hand-read notes' section was then read (in full, or the doubtful part, as that section says) and wrong songs removed; other stories were not. Confidence: **t** = a Tamil lyric line matched and the commentary agrees; **c** = commentary only (no Tamil keyword line found); **low** = commentary did not match, check by reading the song.
 
 ## Songs
 

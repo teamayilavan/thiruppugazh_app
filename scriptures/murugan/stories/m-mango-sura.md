@@ -12,7 +12,12 @@ In the last day of the war Surapadman took the form of a huge mango tree; Muruga
 |---|---|---|---|
 | Kanda Puranam, Yuddha Kandam | Sura samharam | kandam unconfirmed | search result only (tradition) |
 
-Assignments are KEYWORD-LEVEL: a song is listed when its English commentary (and, where possible, a Tamil lyric line) matches the story. They have not been hand-read like `shiva/` and `vishnu/`. Confidence: **t** = a Tamil lyric line matched and the commentary agrees; **c** = commentary only (no Tamil keyword line found); **low** = commentary did not match, check by reading the song.
+Assignments start KEYWORD-LEVEL: a song is listed when its English commentary (and, where possible, a Tamil lyric line) matches the story. A story with a 'Hand-read notes' section was then read (in full, or the doubtful part, as that section says) and wrong songs removed; other stories were not. Confidence: **t** = a Tamil lyric line matched and the commentary agrees; **c** = commentary only (no Tamil keyword line found); **low** = commentary did not match, check by reading the song.
+
+## Hand-read notes
+
+All 73 matches name Surapadman and the mango tree together with a verb of disguise, hiding or splitting.
+
 
 ## Songs
 

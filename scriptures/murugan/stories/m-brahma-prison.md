@@ -2,7 +2,7 @@
 
 # Brahma imprisoned for failing the Pranava
 
-`m-brahma-prison` | Murugan's own lore (Kanda Puranam) | 22 songs
+`m-brahma-prison` | Murugan's own lore (Kanda Puranam) | 15 songs
 
 When Brahma could not explain the meaning of Om to Murugan, the boy tapped his head and locked him in prison; Shiva then asked for his release. Related to the Shiva-set story murugan-pranava.
 
@@ -13,7 +13,19 @@ When Brahma could not explain the meaning of Om to Murugan, the boy tapped his h
 | Kanda Puranam / Skanda Purana | Brahma's imprisonment |  | search result only (tradition) |
 | Shiva set | shiva/stories/murugan-pranava.md | Murugan teaches Shiva the Pranava | local |
 
-Assignments are KEYWORD-LEVEL: a song is listed when its English commentary (and, where possible, a Tamil lyric line) matches the story. They have not been hand-read like `shiva/` and `vishnu/`. Confidence: **t** = a Tamil lyric line matched and the commentary agrees; **c** = commentary only (no Tamil keyword line found); **low** = commentary did not match, check by reading the song.
+Assignments start KEYWORD-LEVEL: a song is listed when its English commentary (and, where possible, a Tamil lyric line) matches the story. A story with a 'Hand-read notes' section was then read (in full, or the doubtful part, as that section says) and wrong songs removed; other stories were not. Confidence: **t** = a Tamil lyric line matched and the commentary agrees; **c** = commentary only (no Tamil keyword line found); **low** = commentary did not match, check by reading the song.
+
+## Hand-read notes
+
+All 22 read. Kept only songs saying Murugan imprisoned Brahma.
+
+- Removed after reading: 279 (Surapadman's prison, not Murugan's)
+- Removed after reading: 309 (Daksha's sacrifice and Saraswati)
+- Removed after reading: 380 (Brahma jailed by Sura, freed by Murugan)
+- Removed after reading: 544 (the Pranava lesson only (see shiva/murugan-pranava))
+- Removed after reading: 1036 (imprisoned by the mountain Krouncha, not by Murugan)
+- Removed after reading: 1155 (released from Sura's prison)
+- Removed after reading: 1236 (celestials freed from the demons)
 
 ## Songs
 
@@ -63,16 +75,6 @@ Commentary: ...holds the disc (Sudharsanam) in His hand and wears the golden cro
 
 Confidence t
 
-### 279 பகல் இராவினும் (திருத்தணிகை)
-
-> சிகர பூதரந் தகர நான்முகன்
-> **சிறுகு வாசவன் ...... சிறைமீளத்**
-> திமிர சாகரங் கதற மாமரஞ்
-
-Commentary: ...ly" jasmine and kadamba flowers decorating Your chest. You have chosen this beautiful place ThiruththaNigai as Your abode, Oh MurugA with the brilliant spear! Mount Krouncha with all its peaks was shattered into pieces; BrahmA and the humiliated IndrA, were liberated from their prisons by SUran; the dark turbulent seas were howling with the noise of the waves; and SUran, who took the disguise of a mango tree, was split into two parts; when You threw Your mighty Spear, Oh Great One! Day and night I have been using my organs to consume food ...
-
-Confidence t
-
 ### 284 பெருக்க உபாயம் (திருத்தணிகை)
 
 > கழற்புணை நீதந் ...... தருள்வாயே
@@ -80,23 +82,6 @@ Confidence t
 > சதுர்த்தச லோகங் ...... களும்வாழச்
 
 Commentary: ...oks which one reads aloud; (in order that I cross these seas,) kindly grant me the raft of Your hallowed feet, filled with the fragrance of kadappa flowers and the radiance of the dazzling anklets, Oh Lord! The arrogant Brahma, expert in the four VEdAs, was imprisoned; all the fourteen worlds prospered everyday; the seven seas and the famous seven mountains were shattered; and the demon SUran, who stood in the disguise of a mango tree, was uprooted, falling all alone; when You took the matchless spear in Your hallowed ha...
-
-Confidence t
-
-### 309 அதி மதம் கக்க (காஞ்சீபுரம்)
-
-> (no Tamil keyword line found; commentary quoted instead)
-
-Commentary: ...ity of Her consort by Her chastity was relieved of Her anguish (that She and Her consort SivA were deliberately humiliated by Her father, Dhakshan); the disgraced King Dhakshan was finished, being consumed by fire; that Brahmani Saraswathi lost her shine and felt ashamed having suffered mutilation (of her nose); such was His raging anger; He was Lord SivA, who ultimately triumphed on that day; and that SivA worships You in KAnchipuram where You are seated, Oh Great One! "He is the Great One whose hallowed shoulders are adorne...
-
-Confidence c
-
-### 380 முழுகிவட (திருவருணை)
-
-> திசைமுகன்மு ராரி மற்று மரியபல தேவ ருற்ற
-> **சிறையடைய மீள விட்ட ...... பெருமாளே.**
-
-Commentary: ...VaLLi with Your hallowed chest, Oh Lord! He holds on His matted hair a serpent with a gorgeous hood and the river Gangai which gushes with water; to that Lord SivA You once preached the PraNava ManthrA, Oh Great Master! Brahma, VishNu and other rare celestials were all imprisoned (by the demon SUran); You freed them from that prison and brought them out, Oh Great One! To the rays of the hot full moon that has taken a dip in the inferno at VadavAmuka (the destructive fire that erupts from the North Pole at the end of the aeon), to th...
 
 Confidence t
 
@@ -119,14 +104,6 @@ Confidence t
 Commentary: ...the gallows by Your war through Tamil hymns, Oh Great Master! You are the son of the unique SivA, who holds on His hands a pick-axe, a deer, BrahmA's skull, a hand drum (udukkai) and three-pronged weapon (TrisUlam). You imprisoned BrahmA, who sits on a lotus, took over his job of Creation and performed very well, Oh Muruga. At the pinnacle of the great Mount of Veda, eagles* prostrate daily; and at its bright gates, all DEvAs assemble and chant VEdAs and Tamil hymns, sounding like sea waves. ...
 
 Confidence t
-
-### 544 வேத வெற்பிலே (திருக்கழுக்குன்றம்)
-
-> (no Tamil keyword line found; commentary quoted instead)
-
-Commentary: ...rew his bejewelled crown into the sky and tried to pick it up with his toes by performing Oordhwa ThAndavam (toes going skyward); that SivA, One who taught His devoted Deva disciples, learnt the scripture from You while BrahmA, a student of SivA, was ashamed (for not knowing the meaning of OM). You taught SivA the significance of One Letter (OM) which includes in itself the meaning of the six-lettered ManthrA (OMNAMASIVAYA or SARAVANABHAVA), Oh Great One! The Mount of VEdAs (ThirukkazhukkundRam*) and the millet-f...
-
-Confidence c
 
 ### 793 இரக்கும் அவர்க்கு (திருவிடைக்கழி)
 
@@ -166,14 +143,6 @@ Commentary: ...with His long leg and kicked the evil-looking Yaman. That mighty 
 
 Confidence c
 
-### 1036 தீயும் பவனமும் (பொதுப்பாடல்கள்)
-
-> (no Tamil keyword line found; commentary quoted instead)
-
-Commentary: ...va-yOgA? You are the consort of VaLLi, the damsel living in the millet-field of VaLLimalai forest where bamboos, neem and viLa trees abound! The seven seas where many fish roam about were burnt down and became dried up; BrahmA, who chants VEdAs aloud with His four unique mouths, was imprisoned (in Kandagiri) by the mystic mountain Krouncham; and SUran who fought clandestinely from behind the huge cloud was felled, with his chest and two shoulders severed; when You fought with the sword, Oh Great One! This body is filled with the five elements, na...
-
-Confidence c
-
 ### 1128 ஆலாலத்தை (பொதுப்பாடல்கள்)
 
 > வேர்மா ளப்பொரு திட்டொளி ...... விடும்வேலா
@@ -184,16 +153,6 @@ Commentary: ... them all, along with Mount Krouncha where they lived and their s
 
 Confidence t
 
-### 1155 கோழையாய் ஆணவம் (பொதுப்பாடல்கள்)
-
-> ஏறியே யினிதி ருக்க ...... வருவோனே
-> **வேழமீ துறையும் வஜ்ர தேவர்கோ சிறைவி டுத்து**
-> வேதனா ரையும் விடுத்து ...... முடிசூடி
-
-Commentary: ...r, removed their misery (through You); then, You came to Mount KailAsh to relax with relish! You released from the prison King IndrA, who wields the weapon vajra and who rides the elephant, AirAvadham; You also released BrahmA from His prison and crowned IndrA as the King of the celestial land! You shot arrows from Your famous bow to knock down the head of the powerful demon SUran which vultures mounted and began plucking the flesh, Oh Great One! Some people, even though they are cowards, speak eg...
-
-Confidence t
-
 ### 1217 இடை இத்தனை (பொதுப்பாடல்கள்)
 
 > ஒருநிஷ்கள வடிவிற்புக வொருசற்றருள் ...... புரிவாயே
@@ -201,15 +160,6 @@ Confidence t
 > தெதிபட்சண க்ருதபட்சண செகபட்சண ...... னெனவோதும்
 
 Commentary: ... eradicate my worst vice, kindly bless me a little so that I could acquire the experience which is beyond any attributes, enabling me to enter a state of formless liberation! He went to complain (to Lord SivA) about the imprisonment of BrahmA, seated on a bright lotus, who exhibited a lack of consistancy; He is praised by all as the One who imbibed curd and refined butter (ghee) and also as the swallower of the entire world; and He is the brother-in-law of Lord SivA who gulped down poison; when th...
-
-Confidence t
-
-### 1236 குறைவது இன்றி (பொதுப்பாடல்கள்)
-
-> திசைமு கன்தி கைக்க அசுர ரன்ற டைத்த
-> **சிறைதி றந்து விட்ட ...... பெருமாளே.**
-
-Commentary: ... that sweet ManthrA, Oh MurugA! Although she was raised by KuRavAs of an inferior lineage, she was an enlightened girl; You embraced the bosom of that damsel VaLLi with Your broad chest, Oh Lord! To the consternation of BrahmA, all the celestials previously imprisoned by the demons, were all freed by You, Oh Great One! This delusory thing called life is adequately accommodated in this cottage of a body, amidst plenty of water and bones; when the body collapses, and the relatives stand around planning to lay it upon a bed...
 
 Confidence t
 

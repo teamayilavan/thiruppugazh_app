@@ -16,9 +16,9 @@ The life of Murugan as told in the Kanda Puranam (Kachiyappa Sivacharyar) and th
 2. Each story lists songs from that sweep; each assignment is re-checked against the commentary when this script runs, and a Tamil lyric line is quoted where one matches.
 3. Source locations come from web checks (see `SOURCES.md`); verse numbers are not machine-checked.
 
-Assignments by confidence: t=61, c=444, low=0.
+Assignments by confidence: t=56, c=423, low=0.
 
-Assignments are KEYWORD-LEVEL: a song is listed when its English commentary (and, where possible, a Tamil lyric line) matches the story. They have not been hand-read like `shiva/` and `vishnu/`. Confidence: **t** = a Tamil lyric line matched and the commentary agrees; **c** = commentary only (no Tamil keyword line found); **low** = commentary did not match, check by reading the song.
+Assignments start KEYWORD-LEVEL: a song is listed when its English commentary (and, where possible, a Tamil lyric line) matches the story. A story with a 'Hand-read notes' section was then read (in full, or the doubtful part, as that section says) and wrong songs removed; other stories were not. Confidence: **t** = a Tamil lyric line matched and the commentary agrees; **c** = commentary only (no Tamil keyword line found); **low** = commentary did not match, check by reading the song.
 
 ## Open questions
 

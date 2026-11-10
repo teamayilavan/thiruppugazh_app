@@ -10,9 +10,14 @@ The minstrel Thiruneelakanta Yazhpanar and his wife joined Sambandar and played 
 
 | Source | Reference | Note | Status |
 |---|---|---|---|
-| Periya Puranam, Sambandar Puranam | vv. 131-141 (arrival), 278-281 (golden cymbal mentioned), 440-459 (the lyre breaks); page numbering [https://thevaaram.org/thirumurai_1/onepage.php?thiru=12&Song_idField=12280] |  | opened (summary-level) |
+| Periya Puranam, Sambandar Puranam (Tirumurai 12) | vv. 131-141 (meeting), 278-281 (the cymbal), 448-452 (the lyre breaks) [https://thevaaram.org/thirumurai_1/onepage.php?thiru=12&Song_idField=12280] | 131, 278 and 450 checked | machine-read from the opened page (running verse numbers); the checks below are re-run on every build |
 
-Assignments are KEYWORD-LEVEL: a song is listed when its English commentary (and, where possible, a Tamil lyric line) matches the story. They have not been hand-read like `shiva/` and `vishnu/`. Confidence: **t** = a Tamil lyric line matched and the commentary agrees; **c** = commentary only (no Tamil keyword line found); **low** = commentary did not match, check by reading the song.
+Assignments start KEYWORD-LEVEL: a song is listed when its English commentary (and, where possible, a Tamil lyric line) matches the story. A story with a 'Hand-read notes' section was then read (in full, or the doubtful part, as that section says) and wrong songs removed; other stories were not. Confidence: **t** = a Tamil lyric line matched and the commentary agrees; **c** = commentary only (no Tamil keyword line found); **low** = commentary did not match, check by reading the song.
+
+## Hand-read notes
+
+Every song read against its quoted lines and commentary (2026-11-10); wrong matches were removed.
+
 
 ## Songs
 

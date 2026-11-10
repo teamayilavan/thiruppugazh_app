@@ -12,7 +12,12 @@ After the war Indra gave his daughter Deivayanai (Devasena), raised by Airavata,
 |---|---|---|---|
 | Kanda Puranam, Deva Kandam (per general accounts) |  |  | search result only (tradition) |
 
-Assignments are KEYWORD-LEVEL: a song is listed when its English commentary (and, where possible, a Tamil lyric line) matches the story. They have not been hand-read like `shiva/` and `vishnu/`. Confidence: **t** = a Tamil lyric line matched and the commentary agrees; **c** = commentary only (no Tamil keyword line found); **low** = commentary did not match, check by reading the song.
+Assignments start KEYWORD-LEVEL: a song is listed when its English commentary (and, where possible, a Tamil lyric line) matches the story. A story with a 'Hand-read notes' section was then read (in full, or the doubtful part, as that section says) and wrong songs removed; other stories were not. Confidence: **t** = a Tamil lyric line matched and the commentary agrees; **c** = commentary only (no Tamil keyword line found); **low** = commentary did not match, check by reading the song.
+
+## Hand-read notes
+
+All 42 read: each names Deivayanai as Murugan's wife, embraced by him, or Indra's daughter given to him. About half are consort-epithet mentions rather than a marriage narrative.
+
 
 ## Songs
 

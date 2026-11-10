@@ -2,7 +2,7 @@
 
 # Born in the Saravana lake; the six Krittikas
 
-`m-saravana` | Murugan's own lore (Kanda Puranam) | 22 songs
+`m-saravana` | Murugan's own lore (Kanda Puranam) | 21 songs
 
 Six sparks from Shiva's eye were carried by Agni and Ganga into the Saravana lake, became six babies, and were nursed by the six Krittika women; Parvati joined them into one child with six faces. Related to the Shiva-set story murugan-skanda-birth.
 
@@ -13,7 +13,13 @@ Six sparks from Shiva's eye were carried by Agni and Ganga into the Saravana lak
 | Kanda Puranam, Utpatti Kandam |  |  | search result only (tradition) |
 | Shiva set | shiva/stories/murugan-skanda-birth.md |  | local |
 
-Assignments are KEYWORD-LEVEL: a song is listed when its English commentary (and, where possible, a Tamil lyric line) matches the story. They have not been hand-read like `shiva/` and `vishnu/`. Confidence: **t** = a Tamil lyric line matched and the commentary agrees; **c** = commentary only (no Tamil keyword line found); **low** = commentary did not match, check by reading the song.
+Assignments start KEYWORD-LEVEL: a song is listed when its English commentary (and, where possible, a Tamil lyric line) matches the story. A story with a 'Hand-read notes' section was then read (in full, or the doubtful part, as that section says) and wrong songs removed; other stories were not. Confidence: **t** = a Tamil lyric line matched and the commentary agrees; **c** = commentary only (no Tamil keyword line found); **low** = commentary did not match, check by reading the song.
+
+## Hand-read notes
+
+All 22 read.
+
+- Removed after reading: 959 (the month of Karthigai, unrelated)
 
 ## Songs
 
@@ -103,16 +109,6 @@ Confidence c
 > **குகசர வணபவ வாய்ந்த தேவர்கள் ...... பெருமாளே.**
 
 Commentary: ...ted the speedy peacock and wielded the spear, Oh Lord MurugA! Oh MurugA, You are seated in this town Mylapore* where beetles abound swarming around flowers with quality honey; Oh valorous Lord GuhA, You were born in the SaravaNa pond; You are the Lord of the congenial celestials, Oh Great One! Their youthful and robust breasts, adorned with ornaments made of precious gems neatly strung in a row, are smeared with a paste of musk, sandalwood powder and incence; when those breasts hug my che...
-
-Confidence t
-
-### 959 பழிப்பர் வாழ்த்துவர் (மதுரை)
-
-> படுக்கை வீட்டினு ளவுஷத முதவுவர்
-> **அணைப்பர் கார்த்திகை வருதென வுறுபொருள்**
-> பறிப்பர் மாத்தையி லொருவிசை வருகென ...... அவரவர்க் குறவாயே
-
-Commentary: ...e willing to hug even a corpse. While being engaged in chatting, they slip into the bedroom to prepare some concoction to serve. Then they embrace tightly. Saying that they need money for the festive season in the month KArththigai (December), they extort money from their suitors; they address everyone naming some kind of relationship, inviting them to visit at least once a month. Their intention is to grab the entire wealth of the visitors.They chase away the non-paying customers. Beca...
 
 Confidence t
 

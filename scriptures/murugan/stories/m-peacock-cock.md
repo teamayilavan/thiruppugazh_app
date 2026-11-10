@@ -2,7 +2,7 @@
 
 # The peacock and the cock
 
-`m-peacock-cock` | Murugan's own lore (Kanda Puranam) | 11 songs
+`m-peacock-cock` | Murugan's own lore (Kanda Puranam) | 3 songs
 
 The two halves of the split Surapadman became Murugan's vehicle, the peacock, and the cock on his flag.
 
@@ -12,17 +12,14 @@ The two halves of the split Surapadman became Murugan's vehicle, the peacock, an
 |---|---|---|---|
 | Kanda Puranam, Yuddha Kandam |  |  | search result only (tradition) |
 
-Assignments are KEYWORD-LEVEL: a song is listed when its English commentary (and, where possible, a Tamil lyric line) matches the story. They have not been hand-read like `shiva/` and `vishnu/`. Confidence: **t** = a Tamil lyric line matched and the commentary agrees; **c** = commentary only (no Tamil keyword line found); **low** = commentary did not match, check by reading the song.
+Assignments start KEYWORD-LEVEL: a song is listed when its English commentary (and, where possible, a Tamil lyric line) matches the story. A story with a 'Hand-read notes' section was then read (in full, or the doubtful part, as that section says) and wrong songs removed; other stories were not. Confidence: **t** = a Tamil lyric line matched and the commentary agrees; **c** = commentary only (no Tamil keyword line found); **low** = commentary did not match, check by reading the song.
+
+## Hand-read notes
+
+Eleven songs matched automatically; all read. Only these three say the split body became the peacock and the cock; the other eight only say something was split.
+
 
 ## Songs
-
-### 52 கொடியனைய இடை (திருச்செந்தூர்)
-
-> (no Tamil keyword line found; commentary quoted instead)
-
-Commentary: ...reddish golden splendour; I have never performed any research of texts; (despite all my shortcomings,) will You not show compassion towards me by granting, with relish, Your twin lotus-feet, Oh Lord! Mounting the unique peacock that splits and casts away the body and torn parts of the serpent, You wielded Your spear that repeatedly split the bodies of the demons who were the enemies of the celestials, killing them on the spot, Oh Lord! He is the Lord with eight Divine Characteristics*, worshipped by the terrestrials and celestials; He is the Primordial Principle; He is without any shape or fo...
-
-Confidence c
 
 ### 323 இதத்துப் பற்றி (காஞ்சீபுரம்)
 
@@ -32,59 +29,11 @@ Commentary: ...blue lily and vetchi flower and wearing the kadappa flower? He be
 
 Confidence c
 
-### 359 ஓல மறைகள் (திருவானைக்கா)
-
-> (no Tamil keyword line found; commentary quoted instead)
-
-Commentary: ...e the greatness of Your lotus feet, Oh Lord!) When will I conquer the lusts, desires and vacillations caused by my sensory organs and have the honour of attaining Your feet? "Oh Youthful Kumara! GuhA! Kandha! Your Spear split the Mount Krouncha! Oh Rider of the Peacock!" So prayed IndrA, the leader of the Celestials, whose sufferings were eradicated by You. Fragrant sandal paste, auspicious and pure turmeric layer, and valiant ornamental shields adorn Your shoulders, Oh majestic lion! You wear the garland of victory at the ...
-
-Confidence c
-
-### 489 இணங்கித் தட்பொடு (சிதம்பரம்)
-
-> (no Tamil keyword line found; commentary quoted instead)
-
-Commentary: ...about the greatness of their lineage, You wielded the spear that killed them all in the battlefield, Oh Lord! You fought in such a way that many eagles and devils grabbed the corpses and began to pluck and devour; after splitting up the enemies and destroying them, You mounted the grand vehicle, namely, Your mighty peacock, Oh MurugA! Being separated from You, the wise men with their heart filled with love, are yearning to worship Your hallowed feet, adorned with anklets and golden kazhal (another kind of anklet) signifying Your valour, in Perum patRap puliyUr (Chidhambaram) wh...
-
-Confidence c
-
-### 634 கோங்க முகை (கழுகுமலை)
-
-> (no Tamil keyword line found; commentary quoted instead)
-
-Commentary: ...l I be able to swim across the vast sea of birth and attain Your unblemished and hallowed feet? Huge ships looking like mountains, many male sharks and female makara fish are copiously seen in the sea in which the demon SUran hid as a mango tree; he grew weary fighting the war and BrahmA became very scared, when You mounted the peacock and roamed about in Mount Kazhugumalai*, Oh Lord with the matchless spear! The hunters living in the tiger-infested forest were perplexed and the damsel VaLLi's heart melted when You stood in the disguise of a neem tree, Oh Lord KumarA! As the entreating devo...
-
-Confidence c
-
-### 702 விலையறுக்கவும் (மாடம்பாக்கம்)
-
-> (no Tamil keyword line found; commentary quoted instead)
-
-Commentary: ...ds numbering ten and his twenty big shoulders were knocked down simultaneously by an angry and matchless arrow wielded by RAmA; that Lord VishNu's son Manmathan (God of Love) is related to You as a cousin*, Oh Lord! You split the bodies of the demons hauling out their intestines and mounted the peacock, Oh Lord! In the paddy fields of this famous and beautiful town, MAdambakkam**, the kayal fish soar abundantly breaching the banks and jumping over to the sides where pearls from conches are showered brightly; You chose this town as Your abode with relish, Oh...
-
-Confidence c
-
 ### 732 அச்சா யிறுக்காணி (தச்சூர்)
 
 > (no Tamil keyword line found; commentary quoted instead)
 
 Commentary: ..., Hallowed Seed for Liberation! Getting involved in the aggressive war, Your angry spear severed the indestructible demon SUran and his family, Oh Lord with that mighty weapon! Oh Celestial Carpenter!* You carved out by splitting the mango tree (in which disguise SUran hid himself) the Peacock and the Rooster, Oh Mystical Lord! You prostrated at the feet of VaLLi, the damsel of the KuRavAs, befriended her as though You were the pupil of her eye and went to her place to unite with her in wedlock! In this world with four unvarying cardinal directions...
-
-Confidence c
-
-### 739 சீத மதியம் (திருவாமூர்)
-
-> (no Tamil keyword line found; commentary quoted instead)
-
-Commentary: ...ing waves, - all these make the night too long like the doom's day; how can I make the night go away? In the town ThiruvAmUr, made famous by the great lady, Thilakavathi*, You have Your abode, Oh Kumaresa! You mount the Peacock, Oh Lord! You are the greatest treasure found in the thoughts of Your loving devotees! You smack Yaman (God of Death) splitting his back, Oh Great One! The fire emitted by the rays of the cool moon, the bow bent by the fierce God of Love (Manmathan), and the sea throwing out swirling waves, - all these make the night too long like the doom's day; how can I make the night go away? ...
-
-Confidence c
-
-### 856 மதியஞ் சத்திரு (திருப்பந்தணை நல்லூர்)
-
-> (no Tamil keyword line found; commentary quoted instead)
-
-Commentary: ...ts - all prayed, and You blessed them graciously to be prosperous, Oh Lord! When the arrogant demon SUran accosted You with enmity, You scared him and his entire army by wielding the spear that rose like a wild-fire and split the mount Krouncha, Oh Great One! Their face is so beautiful that the moon is put to shame; even the peacock is intimidated (because it suffers in comparison to the elegance of these women); they look like a bunch of parrots; like the celestial damsels MEnakai and Rathi who have a sweet speech, these women walk with a lovely gait, with a waistline like the creeper v...
 
 Confidence c
 
@@ -97,11 +46,3 @@ Confidence c
 Commentary: ...tiful Tamil language, I must think in praise of You daily with Your kind blessings! You must dwell in my thoughts as my soulmate! The demon SUran hid himself (in the disguise of a mango tree) under the sea; his body was split and came up to the surface in two parts; those parts became the unique rooster and peacock; such power was wielded by Your Spear, Oh Lord! BrahmA, who has the swan as vehicle, and Lord Vishnu, who is the consort of Lakshmi seated on the lotus, searched in vain for His feet everywhere; to that Lord SivA You interpreted the meaning of the rare PraNav...
 
 Confidence t
-
-### 1284 கருப்பையில் (பொதுப்பாடல்கள்)
-
-> (no Tamil keyword line found; commentary quoted instead)
-
-Commentary: ...ayers. You are delighted to appear before Your devotees, support them firmly and accept their devotion! You are the great warrior holding the powerful SakthivEl (Spear) that pierced through Mount Krouncha. You mount the Peacock that sent the whole bunch of snakes into captivity between the split toes of its feet. You are well known for spreading Your rage throughout the battlefield. In the millet field, You took the hand of VaLLi, the damsel of the KuRavAs, in holy matrimony, Oh Great One! I do not want to be battered with an ovum in a womb for anoth...
-
-Confidence c

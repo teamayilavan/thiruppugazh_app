@@ -10,10 +10,10 @@ The songs say that Murugan himself took birth as the child saint Sambandar of Si
 
 | Source | Reference | Note | Status |
 |---|---|---|---|
-| Tevaram (Tirumurai 1-3) | Sambandar's 384 pathigams [https://thevaaram.org/thirumurai_1/songview.php?thiru=1&Song_idField=1001&padhi=001] | the hymns the songs call the Tamil Veda | opened in the Shiva pass |
-| Periya Puranam, Sambandar Puranam | whole puranam (~1256 verses, running numbers) [https://thevaaram.org/thirumurai_1/onepage.php?thiru=12&Song_idField=12280] | life of the saint | opened (summary-level) |
+| Tevaram (Tirumurai 1-3) | Sambandar's hymns [https://thevaaram.org/thirumurai_1/songview.php?thiru=1&Song_idField=1001&padhi=001] | the 'Tamil Veda' the songs mean | opened in the Shiva pass |
+| Periya Puranam, Sambandar Puranam (Tirumurai 12) | whole puranam, 1256 verses [https://thevaaram.org/thirumurai_1/onepage.php?thiru=12&Song_idField=12280] |  | machine-read from the opened page (running verse numbers); the checks below are re-run on every build |
 
-Assignments are KEYWORD-LEVEL: a song is listed when its English commentary (and, where possible, a Tamil lyric line) matches the story. They have not been hand-read like `shiva/` and `vishnu/`. Confidence: **t** = a Tamil lyric line matched and the commentary agrees; **c** = commentary only (no Tamil keyword line found); **low** = commentary did not match, check by reading the song.
+Assignments start KEYWORD-LEVEL: a song is listed when its English commentary (and, where possible, a Tamil lyric line) matches the story. A story with a 'Hand-read notes' section was then read (in full, or the doubtful part, as that section says) and wrong songs removed; other stories were not. Confidence: **t** = a Tamil lyric line matched and the commentary agrees; **c** = commentary only (no Tamil keyword line found); **low** = commentary did not match, check by reading the song.
 
 ## Songs
 

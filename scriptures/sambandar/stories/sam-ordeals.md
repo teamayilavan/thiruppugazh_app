@@ -10,12 +10,17 @@ The Jains proposed contests: both sides' palm-leaf scriptures were thrown into f
 
 | Source | Reference | Note | Status |
 |---|---|---|---|
-| Periya Puranam, Sambandar Puranam | fire test vv. 773-796, river test 797-816 (page numbering) [https://thevaaram.org/thirumurai_1/onepage.php?thiru=12&Song_idField=12280] |  | opened (summary-level) |
+| Periya Puranam, Sambandar Puranam (Tirumurai 12) | vv. 773-798 (fire test; 788 checked), 799-852 (river test; 807, 846 and 850 checked) [https://thevaaram.org/thirumurai_1/onepage.php?thiru=12&Song_idField=12280] |  | machine-read from the opened page (running verse numbers); the checks below are re-run on every build |
 | Tevaram 3.54.1 | Vazhga Andhanar [https://thevaaram.org/thirumurai_1/songview.php?thiru=3&Song_idField=3054&padhi=054] | river test | opened in the Shiva pass |
 | Tevaram 3.32.1 | Tiruvedagam [https://thevaaram.org/thirumurai_1/songview.php?thiru=3&Song_idField=3032&padhi=032] | the leaf halts | opened in the Shiva pass |
 | Tiruvilaiyadal Puranam | padalam 63 [https://ta.wikisource.org/wiki/%E0%AE%A4%E0%AE%BF%E0%AE%B0%E0%AF%81%E0%AE%B5%E0%AE%BF%E0%AE%B3%E0%AF%88%E0%AE%AF%E0%AE%BE%E0%AE%9F%E0%AE%B1%E0%AF%8D_%E0%AE%AA%E0%AF%81%E0%AE%B0%E0%AE%BE%E0%AE%A3%E0%AE%AE%E0%AF%8D/63] |  | opened in the Shiva pass |
 
-Assignments are KEYWORD-LEVEL: a song is listed when its English commentary (and, where possible, a Tamil lyric line) matches the story. They have not been hand-read like `shiva/` and `vishnu/`. Confidence: **t** = a Tamil lyric line matched and the commentary agrees; **c** = commentary only (no Tamil keyword line found); **low** = commentary did not match, check by reading the song.
+Assignments start KEYWORD-LEVEL: a song is listed when its English commentary (and, where possible, a Tamil lyric line) matches the story. A story with a 'Hand-read notes' section was then read (in full, or the doubtful part, as that section says) and wrong songs removed; other stories were not. Confidence: **t** = a Tamil lyric line matched and the commentary agrees; **c** = commentary only (no Tamil keyword line found); **low** = commentary did not match, check by reading the song.
+
+## Hand-read notes
+
+Every song read against its quoted lines and commentary (2026-11-10); wrong matches were removed.
+
 
 ## Songs
 

@@ -10,12 +10,17 @@ Under Jain influence the Pandya king (Koon Pandyan, later Nindrasir Nedumaran) f
 
 | Source | Reference | Note | Status |
 |---|---|---|---|
-| Periya Puranam, Sambandar Puranam | vv. 599-772 (page numbering): summons, the fire plot (678-704), the fever (705-716), the cure (736-772) [https://thevaaram.org/thirumurai_1/onepage.php?thiru=12&Song_idField=12280] |  | opened (summary-level) |
+| Periya Puranam, Sambandar Puranam (Tirumurai 12) | vv. 599-772 [https://thevaaram.org/thirumurai_1/onepage.php?thiru=12&Song_idField=12280] | summons 603-613; Madurai 645-668; the fire on the matham 678-704; the fever 705-772 (719, 772 checked) | machine-read from the opened page (running verse numbers); the checks below are re-run on every build |
 | Tevaram 2.66.1 | Mantiramavathu Neeru [https://thevaaram.org/thirumurai_1/songview.php?thiru=2&Song_idField=2066&padhi=066] | the ash hymn | opened in the Shiva pass |
-| Tevaram 3.39.1 | Maninernvizhi [https://thevaaram.org/thirumurai_1/songview.php?thiru=3&Song_idField=3039&padhi=039] | sung to the frightened queen | opened in the Shiva pass |
+| Tevaram 3.39.1 | Maninernvizhi [https://thevaaram.org/thirumurai_1/songview.php?thiru=3&Song_idField=3039&padhi=039] | sung to the queen | opened in the Shiva pass |
 | Tiruvilaiyadal Puranam | padalam 62 [https://ta.wikisource.org/wiki/%E0%AE%A4%E0%AE%BF%E0%AE%B0%E0%AF%81%E0%AE%B5%E0%AE%BF%E0%AE%B3%E0%AF%88%E0%AE%AF%E0%AE%BE%E0%AE%9F%E0%AE%B1%E0%AF%8D_%E0%AE%AA%E0%AF%81%E0%AE%B0%E0%AE%BE%E0%AE%A3%E0%AE%AE%E0%AF%8D/62] |  | opened in the Shiva pass |
 
-Assignments are KEYWORD-LEVEL: a song is listed when its English commentary (and, where possible, a Tamil lyric line) matches the story. They have not been hand-read like `shiva/` and `vishnu/`. Confidence: **t** = a Tamil lyric line matched and the commentary agrees; **c** = commentary only (no Tamil keyword line found); **low** = commentary did not match, check by reading the song.
+Assignments start KEYWORD-LEVEL: a song is listed when its English commentary (and, where possible, a Tamil lyric line) matches the story. A story with a 'Hand-read notes' section was then read (in full, or the doubtful part, as that section says) and wrong songs removed; other stories were not. Confidence: **t** = a Tamil lyric line matched and the commentary agrees; **c** = commentary only (no Tamil keyword line found); **low** = commentary did not match, check by reading the song.
+
+## Hand-read notes
+
+Every song read against its quoted lines and commentary (2026-11-10); wrong matches were removed.
+
 
 ## Songs
 

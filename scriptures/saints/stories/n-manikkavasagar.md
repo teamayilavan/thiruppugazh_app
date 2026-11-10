@@ -13,7 +13,12 @@ Sent by the Pandya king to buy horses, the minister Vathavurar met Shiva as a gu
 | Tiruvasagam (Tirumurai 8); Tiruvilaiyadal Puranam |  |  | from memory, not opened |
 | Shiva set | shiva/stories/saints-kurundam.md | the kurundam-tree meeting | local |
 
-Assignments are KEYWORD-LEVEL: a song is listed when its English commentary (and, where possible, a Tamil lyric line) matches the story. They have not been hand-read like `shiva/` and `vishnu/`. Confidence: **t** = a Tamil lyric line matched and the commentary agrees; **c** = commentary only (no Tamil keyword line found); **low** = commentary did not match, check by reading the song.
+Assignments start KEYWORD-LEVEL: a song is listed when its English commentary (and, where possible, a Tamil lyric line) matches the story. A story with a 'Hand-read notes' section was then read (in full, or the doubtful part, as that section says) and wrong songs removed; other stories were not. Confidence: **t** = a Tamil lyric line matched and the commentary agrees; **c** = commentary only (no Tamil keyword line found); **low** = commentary did not match, check by reading the song.
+
+## Hand-read notes
+
+Every song read against its quoted lines and commentary (2026-11-10); wrong matches were removed.
+
 
 ## Songs
 

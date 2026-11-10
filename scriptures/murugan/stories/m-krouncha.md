@@ -12,7 +12,12 @@ Murugan's Vel pierced the Krouncha mountain, the demon Tarakasura's hiding place
 |---|---|---|---|
 | Kanda Puranam / Skanda Purana | Taraka and Krouncha episode |  | search result only (tradition) |
 
-Assignments are KEYWORD-LEVEL: a song is listed when its English commentary (and, where possible, a Tamil lyric line) matches the story. They have not been hand-read like `shiva/` and `vishnu/`. Confidence: **t** = a Tamil lyric line matched and the commentary agrees; **c** = commentary only (no Tamil keyword line found); **low** = commentary did not match, check by reading the song.
+Assignments start KEYWORD-LEVEL: a song is listed when its English commentary (and, where possible, a Tamil lyric line) matches the story. A story with a 'Hand-read notes' section was then read (in full, or the doubtful part, as that section says) and wrong songs removed; other stories were not. Confidence: **t** = a Tamil lyric line matched and the commentary agrees; **c** = commentary only (no Tamil keyword line found); **low** = commentary did not match, check by reading the song.
+
+## Hand-read notes
+
+Commentary read for all 28 songs without a clear action verb beside the match: every one describes Murugan attacking the mountain. The 189 others have such a verb. Similes about the Krouncha bird are excluded by pattern.
+
 
 ## Songs
 

@@ -10,7 +10,42 @@
 
 ## Open questions and gaps
 
-- Verse numbers: the Shiva file cites running numbers (764, 846, 855); the page view used here puts the cure at 736-772 and the river test at 813-816. They differ. Pick one scheme before any machine-check.
-- Poompavai (Mylapore) is in the Periya Puranam late in the Sambandar Puranam; the verse range was not pinned. The hymn is Tevaram 2.47 (page opened). Accounts differ on how she died (bones in a pot; a snake-bite in one source).
-- Episodes in the Puranam with NO song found: golden cymbals (Tirukkolakka), the 1000 gold coins at Tiruvavaduthurai, the famine coins at Veezhimizhalai, the Thirumarugal snake-bite, the cure of Kolli Mazhavan's daughter. Not made into stories.
+- Periya Puranam numbering is now settled: the page and the Shiva file both use running verses 1-1256 (checks in this file's table).
+- Episodes in the Puranam with NO song found (exact verses): Thirumarugal snake-bite 472-484; purse of gold at Tiruvavaduthurai 418-431; famine coins 564-571; the Kollampudur boat 897-900 (898 checked); the Perumanam wedding and merging 1236-1256; the cure of Kolli Mazhavan's daughter 310-320. Not made into stories.
+- Poompavai: the Puranam says a snake bit her in the garden (vv. 1055-1058); her father kept her bones in a pot (v.1086). The hymn is Tevaram 2.47.
 - Sambandar's name appears in the commentary of ~105 songs; every one of them is in `sam-avatar`. Songs that tell a specific episode are also in that episode's story.
+
+## Verse checks (re-run on every build)
+
+Periya Puranam text: `scripts/.cache/pp_sambandar.json` (git-ignored; a parse of https://thevaaram.org/thirumurai_1/onepage.php?thiru=12&Song_idField=12280). A verse passes if the word occurs in it.
+
+| Verse | Word | Shows | Result |
+|---|---|---|---|
+| 68 | உமையம்மை | Uma feeds the child (golden bowl, v.68) | ok |
+| 76 | தோடுடைய | first hymn Todudaiya Seviyan | ok |
+| 131 | திருநீலகண்டத்துப்பெரும்பாணர் | Neelakanta Yazhpanar introduced | ok |
+| 278 | யாழ்ப்பெரும்பாணனார் | yazh and the golden cymbal passage | ok |
+| 450 | யாழினால் | the lyre cannot hold the hymn | ok |
+| 195 | சிவிகை | pearl palanquin given | ok |
+| 418 | திருவாவடுதுறை | Tiruvavaduthurai | ok |
+| 426 | கிழி | purse of gold (v.426-428) | ok |
+| 472 | திருமருகல் | Thirumarugal | ok |
+| 569 | காசு | famine coins (v.564-571) | ok |
+| 582 | கதவு | the temple doors at Maraikkadu | ok |
+| 609 | திருமறைக்காடு | Maraikkadu | ok |
+| 645 | மங்கையர்க்கரசி | Queen Mangaiyarkkarasi | ok |
+| 719 | வெப்பு | the king's fever | ok |
+| 772 | வெப்பெலாம் | the fever cured | ok |
+| 788 | தீ | the fire test | ok |
+| 807 | வைகை | the river test | ok |
+| 846 | திருக்கையால் | Sambandar's leaf in the river | ok |
+| 847 | கூன் | the hunchback straightened | ok |
+| 850 | ஏடகம் | the leaf halts at Edagam | ok |
+| 856 | கழு | the Jains on the stakes | ok |
+| 857 | நீறு | the king takes the ash | ok |
+| 898 | கொள்ளம்பூதூர் | the Kollampudur boat (no song) | ok |
+| 1033 | திருமயிலாபுரி | Mylapore opens (Sivanesar) | ok |
+| 1058 | பணம்விரித்து | the snake that bit Poompavai (hood spread) | ok |
+| 1088 | மட்டிட்ட | names the Poompavai hymn 'Mattitta' | ok |
+| 1119 | திருமயிலை | Mylapore | ok |
+| 1245 | பெருமணம் | Perumanam (no song) | ok |

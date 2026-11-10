@@ -311,19 +311,19 @@ CATALOGUE = [
       refs=[R("Mahabharata, Vana Parva", "", "not checked", MEMORY)]),
 
  # ------------------------------------------------------------------ MURUGAN (auto)
- dict(slug="m-mango-sura", set="murugan", title="Surapadman as a mango tree split by the Vel", auto=True,
+ dict(slug="m-mango-sura", set="murugan", review="All 73 matches name Surapadman and the mango tree together with a verb of disguise, hiding or splitting.", title="Surapadman as a mango tree split by the Vel", auto=True,
       en=r"(SUran|SUrapadman|Surapadman)[^.]{0,200}mango[- ]tree|mango[- ]tree[^.]{0,200}(SUran|Surapadman|split|felled|disguise)|(disguise|form) of (a |an )?(old )?mango", ta=r"மாமரம்|மாவாய்|மாவாகி|மாவடி|மாமுதல்",
       brief="In the last day of the war Surapadman took the form of a huge mango tree; Murugan's Vel split it in two, and the halves became the peacock and the cock.",
       refs=[R("Kanda Puranam, Yuddha Kandam", "Sura samharam", "kandam unconfirmed", SEARCH)]),
- dict(slug="m-krouncha", set="murugan", title="The Krouncha mountain pierced", auto=True,
+ dict(slug="m-krouncha", set="murugan", review="Commentary read for all 28 songs without a clear action verb beside the match: every one describes Murugan attacking the mountain. The 189 others have such a verb. Similes about the Krouncha bird are excluded by pattern.", title="The Krouncha mountain pierced", auto=True,
       en=r"Kroun?cha|Kraunch|KrouncA", excl=r"bird|anRil", ta=r"கிர[வௌெ]",
       brief="Murugan's Vel pierced the Krouncha mountain, the demon Tarakasura's hiding place and stronghold, which crumbled.",
       refs=[R("Kanda Puranam / Skanda Purana", "Taraka and Krouncha episode", "", SEARCH)]),
- dict(slug="m-sea-dried", set="murugan", title="The sea dried by the Vel", auto=True,
+ dict(slug="m-sea-dried", set="murugan", review="Pattern requires the sea or ocean drying or boiling; sampled, no false matches found.", title="The sea dried by the Vel", auto=True,
       en=r"(sea|ocean)[^.]{0,60}(dried|dry up|boil)|dried up the (sea|ocean)|(seven|seas)[^.]{0,40}dried", ta=r"கடல்வற்ற|வற்றிட|வற்றக்|வற்றி|வறள|அலைகடல்",
       brief="Surapadman fled into the sea; Murugan's Vel made the ocean dry up or boil, driving him out.",
       refs=[R("Kanda Puranam, Yuddha Kandam", "", "", SEARCH)]),
- dict(slug="m-peacock-cock", set="murugan", title="The peacock and the cock", auto=True,
+ dict(slug="m-peacock-cock", set="murugan", title="The peacock and the cock", ids=[323,732,945], review="Eleven songs matched automatically; all read. Only these three say the split body became the peacock and the cock; the other eight only say something was split.",
       en=r"(split|halves|two (parts|pieces))[^.]{0,120}(peacock|cock)|(peacock|cock)[^.]{0,120}(split|halves|two (parts|pieces))|(SUran|Surapadman|SUrapadman)[^.]{0,80}(became|turned into|transformed into|changed into)[^.]{0,40}(peacock|cock)", ta=r"சேவல்|மயில்",
       brief="The two halves of the split Surapadman became Murugan's vehicle, the peacock, and the cock on his flag.",
       refs=[R("Kanda Puranam, Yuddha Kandam", "", "", SEARCH)]),
@@ -335,7 +335,7 @@ CATALOGUE = [
       en=r"Jayanth", ta=r"சயந்த",
       brief="Indra's son Jayanta fled Surapadman's persecution and was freed from prison by Murugan, who restored the heavens to Indra.",
       refs=[R("Kanda Puranam, Mahendra Kandam / Yuddha Kandam", "", "kandam unconfirmed", SEARCH)]),
- dict(slug="m-brahma-prison", set="murugan", title="Brahma imprisoned for failing the Pranava", auto=True,
+ dict(slug="m-brahma-prison", set="murugan", review="All 22 read. Kept only songs saying Murugan imprisoned Brahma.", drop={279: "Surapadman's prison, not Murugan's", 309: "Daksha's sacrifice and Saraswati", 380: "Brahma jailed by Sura, freed by Murugan", 544: "the Pranava lesson only (see shiva/murugan-pranava)", 1036: "imprisoned by the mountain Krouncha, not by Murugan", 1155: "released from Sura's prison", 1236: "celestials freed from the demons"}, title="Brahma imprisoned for failing the Pranava", auto=True,
       en=r"BrahmA[^.]{0,60}(imprison|prison|jail|confin)|imprison[^.]{0,40}BrahmA|BrahmA[^.]{0,40}(ashamed|failed to explain)", excl=r"celestials were once imprisoned|DEvAs were imprisoned", ta=r"சிறை",
       brief="When Brahma could not explain the meaning of Om to Murugan, the boy tapped his head and locked him in prison; Shiva then asked for his release. Related to the Shiva-set story murugan-pranava.",
       refs=[R("Kanda Puranam / Skanda Purana", "Brahma's imprisonment", "", SEARCH),
@@ -344,22 +344,22 @@ CATALOGUE = [
       en=r"Agasth", ta=r"அகத்திய|அகத்தி",
       brief="Murugan is said to have taught Agastya the secret of the sage's own wisdom and to have given Tamil to him.",
       refs=[R("Skanda Purana; Tamil tradition", "", "", MEMORY)]),
- dict(slug="m-saravana", set="murugan", title="Born in the Saravana lake; the six Krittikas", auto=True,
+ dict(slug="m-saravana", set="murugan", review="All 22 read.", drop={959: "the month of Karthigai, unrelated"}, title="Born in the Saravana lake; the six Krittikas", auto=True,
       en=r"KAr(th|tth)igai|KArthikai|Karthigai|Karththigai|Krithika|Sa?ravaNa (lake|Lake|pond|Pond|Poigai|poigai)|Saravana (lake|Lake|pond|Pond|Poigai|poigai)",
       ta=r"சரவண|கார்த்திகை|பொய்கை",
       brief="Six sparks from Shiva's eye were carried by Agni and Ganga into the Saravana lake, became six babies, and were nursed by the six Krittika women; Parvati joined them into one child with six faces. Related to the Shiva-set story murugan-skanda-birth.",
       refs=[R("Kanda Puranam, Utpatti Kandam", "", "", SEARCH),
             R("Shiva set", "shiva/stories/murugan-skanda-birth.md", "", "local", "")]),
- dict(slug="m-valli-disguise", set="murugan", title="Murugan woos Valli in disguise", auto=True,
+ dict(slug="m-valli-disguise", set="murugan", review="All 25 name the old man, the sage, the neem or the Vengai tree beside Valli.", title="Murugan woos Valli in disguise", auto=True,
       en=r"(old man|aged man|elderly man|old hunter)[^.]{0,200}VaLLi|VaLLi[^.]{0,200}(old man|aged man|elderly man|old hunter)|(Vengai|vEngai|kino tree|neem tree)[^.]{0,200}(VaLLi|disguise)|disguise[^.]{0,120}(Vengai|vEngai|kino|neem)", ta=r"கிழவ|வேடன்|வேங்கை|வேடு|கிழ",
       brief="Murugan came to Valli, the hunter's daughter, in the millet field as a hunter, an old man and a Vengai tree, and won her.",
       refs=[R("Kanda Puranam, Valli Thirumanam", "kandam not confirmed", "", SEARCH)]),
- dict(slug="m-deivayanai", set="murugan", title="Murugan and Deivayanai, Indra's daughter", auto=True,
+ dict(slug="m-deivayanai", set="murugan", review="All 42 read: each names Deivayanai as Murugan's wife, embraced by him, or Indra's daughter given to him. About half are consort-epithet mentions rather than a marriage narrative.", title="Murugan and Deivayanai, Indra's daughter", auto=True,
       en=r"(marri|wed|matrimony|nuptial|wedding)[^.]{0,120}(DEvayAnai|DevayAnai|DEvAnai|Deivayanai)|(DEvayAnai|DevayAnai|DEvAnai|Deivayanai)[^.]{0,120}(marri|wed |wedded|matrimony|nuptial)",
       ta=r"தெய்வயானை|தெய்வானை|தேவசேனை|தேவகுஞ்சரி|இந்திரன்மகள|சுரபதிமகள",
       brief="After the war Indra gave his daughter Deivayanai (Devasena), raised by Airavata, to Murugan; the wedding is at Thiruparankundram. Many songs only name her as his consort beside Valli, so this list is partly epithet-level.",
       refs=[R("Kanda Puranam, Deva Kandam (per general accounts)", "", "", SEARCH)]),
- dict(slug="m-airavata", set="murugan", title="Airavata raises Deivayanai", auto=True,
+ dict(slug="m-airavata", set="murugan", review="Songs that only say Indra rides Airavata were removed; kept are those that name Deivayanai as reared by the elephant.", drop={x: "Indra's mount, not Deivayanai" for x in (81, 191, 213, 877, 900, 947, 1086, 1102, 1150, 1173)}, title="Airavata raises Deivayanai", auto=True,
       en=r"AirAvat|Airavat", ta=r"ஐராவத|வெள்ளையானை",
       brief="Deivayanai was brought up by Indra's white elephant Airavata, which is why songs call Murugan the son-in-law of Indra and Airavata's ward.",
       refs=[R("Kanda Puranam", "", "", SEARCH)]),
@@ -399,6 +399,65 @@ CATALOGUE = [
       refs=[R("Thiruvanaikka sthala puranam", "", "temple pages; Kochengat Chola is also a Nayanar in the Periya Puranam", SEARCH)]),
 ]
 
+# ---------------------------------------------------------------- exact Periya Puranam verses (2026-11-10)
+# The thevaaram.org page of the Sambandar Puranam was downloaded and every verse parsed (1256 verses, running numbers 1-1256,
+# the same scheme as shiva/stories/saints-sambandar.md). The text is cached in scripts/.cache/pp_sambandar.json (git-ignored).
+PPV = "machine-read from the opened page (running verse numbers); the checks below are re-run on every build"
+PP = lambda ref, note="": R("Periya Puranam, Sambandar Puranam (Tirumurai 12)", ref, note, PPV, PP_SAM)
+
+# (verse, Tamil text that must occur in it with spaces removed, what it shows)
+VERSE_CHECKS = [
+    (68, "உமையம்மை", "Uma feeds the child (golden bowl, v.68)"), (76, "தோடுடைய", "first hymn Todudaiya Seviyan"),
+    (131, "திருநீலகண்டத்துப்பெரும்பாணர்", "Neelakanta Yazhpanar introduced"), (278, "யாழ்ப்பெரும்பாணனார்", "yazh and the golden cymbal passage"),
+    (450, "யாழினால்", "the lyre cannot hold the hymn"), (195, "சிவிகை", "pearl palanquin given"),
+    (418, "திருவாவடுதுறை", "Tiruvavaduthurai"), (426, "கிழி", "purse of gold (v.426-428)"), (472, "திருமருகல்", "Thirumarugal"),
+    (569, "காசு", "famine coins (v.564-571)"), (582, "கதவு", "the temple doors at Maraikkadu"), (609, "திருமறைக்காடு", "Maraikkadu"),
+    (645, "மங்கையர்க்கரசி", "Queen Mangaiyarkkarasi"), (719, "வெப்பு", "the king's fever"), (772, "வெப்பெலாம்", "the fever cured"),
+    (788, "தீ", "the fire test"), (807, "வைகை", "the river test"), (846, "திருக்கையால்", "Sambandar's leaf in the river"),
+    (847, "கூன்", "the hunchback straightened"), (850, "ஏடகம்", "the leaf halts at Edagam"), (856, "கழு", "the Jains on the stakes"),
+    (857, "நீறு", "the king takes the ash"), (898, "கொள்ளம்பூதூர்", "the Kollampudur boat (no song)"), (1033, "திருமயிலாபுரி", "Mylapore opens (Sivanesar)"),
+    (1058, "பணம்விரித்து", "the snake that bit Poompavai (hood spread)"), (1088, "மட்டிட்ட", "names the Poompavai hymn 'Mattitta'"), (1119, "திருமயிலை", "Mylapore"), (1245, "பெருமணம்", "Perumanam (no song)"),
+]
+
+REF_OVERRIDES = {
+    "sam-avatar": [R("Tevaram (Tirumurai 1-3)", "Sambandar's hymns", "the 'Tamil Veda' the songs mean", OPENED_EARLIER, TEV111),
+                   PP("whole puranam, 1256 verses")],
+    "sam-birth": [PP("vv. 1-26", "the town, the parents, the birth")],
+    "sam-milk": [PP("vv. 59-69", "v.68 checked: Uma gives the milk in a bowl"), R("Tevaram 1.1.1", "Todudaiya Seviyan", "sung right after", OPENED_EARLIER, TEV111)],
+    "sam-todudaiya": [PP("vv. 70-76", "v.76 checked"), R("Tevaram 1.1.1", "Todudaiya Seviyan", "", OPENED_EARLIER, TEV111)],
+    "sam-yazhpanar": [PP("vv. 131-141 (meeting), 278-281 (the cymbal), 448-452 (the lyre breaks)", "131, 278 and 450 checked")],
+    "sam-palanquin": [PP("vv. 195-212", "v.195 checked")],
+    "sam-three-saints": [PP("vv. 274 (Appar visits), 576-592 (the doors; 582 and 587 checked), 597-609 (Maraikkadu)")],
+    "sam-poompavai": [PP("vv. 1033-1120", "Sivanesar's story from 1033; the snake-bite 1055-1058; the miracle at the Kapaliccharam around 1084-1100; v.1088 names the hymn"),
+                      R("Tevaram 2.47 (Thirumayilai)", "Mattitta Punnai", "the Poompavai pathigam; its page was opened", OPENED, TEV % (2, 2047, 47))],
+    "sam-fever": [PP("vv. 599-772", "summons 603-613; Madurai 645-668; the fire on the matham 678-704; the fever 705-772 (719, 772 checked)"),
+                  R("Tevaram 2.66.1", "Mantiramavathu Neeru", "the ash hymn", OPENED_EARLIER, TEV266),
+                  R("Tevaram 3.39.1", "Maninernvizhi", "sung to the queen", OPENED_EARLIER, TEV339),
+                  R("Tiruvilaiyadal Puranam", "padalam 62", "", OPENED_EARLIER, TVP62)],
+    "sam-ordeals": [PP("vv. 773-798 (fire test; 788 checked), 799-852 (river test; 807, 846 and 850 checked)"),
+                    R("Tevaram 3.54.1", "Vazhga Andhanar", "river test", OPENED_EARLIER, TEV354),
+                    R("Tevaram 3.32.1", "Tiruvedagam", "the leaf halts", OPENED_EARLIER, TEV332),
+                    R("Tiruvilaiyadal Puranam", "padalam 63", "", OPENED_EARLIER, TVP63)],
+    "sam-jains": [PP("vv. 853-856 (856 checked), then the king takes the ash 857-858"),
+                  R("Shiva set", "shiva/stories/saints-sambandar.md", "the 20 songs already collected", "local", "")],
+}
+for _st in CATALOGUE:
+    if _st["slug"] in REF_OVERRIDES:
+        _st["refs"] = REF_OVERRIDES[_st["slug"]]
+SETS["sambandar"]["open_q"] = [
+    "Periya Puranam numbering is now settled: the page and the Shiva file both use running verses 1-1256 (checks in this file's table).",
+    "Episodes in the Puranam with NO song found (exact verses): Thirumarugal snake-bite 472-484; purse of gold at Tiruvavaduthurai 418-431; famine coins 564-571; "
+    "the Kollampudur boat 897-900 (898 checked); the Perumanam wedding and merging 1236-1256; the cure of Kolli Mazhavan's daughter 310-320. Not made into stories.",
+    "Poompavai: the Puranam says a snake bit her in the garden (vv. 1055-1058); her father kept her bones in a pot (v.1086). The hymn is Tevaram 2.47.",
+    "Sambandar's name appears in the commentary of ~105 songs; every one of them is in `sam-avatar`. Songs that tell a specific episode are also in that episode's story.",
+]
+
+READ_ALL_SLUGS = {"sam-birth", "sam-milk", "sam-todudaiya", "sam-yazhpanar", "sam-palanquin", "sam-three-saints", "sam-thiruvalangadu",
+                  "sam-poompavai", "sam-fever", "sam-ordeals", "m-jayanta", "m-agastya"}
+for _st in CATALOGUE:
+    if _st["slug"] in READ_ALL_SLUGS or _st["set"] in ("saints", "devi", "ganesha", "tamil-lore"):
+        _st.setdefault("review", "Every song read against its quoted lines and commentary (2026-11-10); wrong matches were removed.")
+
 # ---------------------------------------------------------------- generator
 def norm(s):
     return re.sub(r"[\s\.…,;:!?'\"()\[\]\-–]", "", s or "")
@@ -426,6 +485,14 @@ def en_snippet(s, rx):
     a, b = max(0, m.start() - 220), min(len(blob), m.end() + 260)
     return ("..." if a else "") + blob[a:b] + ("..." if b < len(blob) else "")
 
+def run_verse_checks():
+    """Re-check each cited Periya Puranam verse against the cached page text; returns [(verse, word, label, True/False/None)]."""
+    cache = SCR / "scripts" / ".cache" / "pp_sambandar.json"
+    if not cache.exists():
+        return [(v, t, lab, None) for v, t, lab in VERSE_CHECKS]
+    vs = {int(k): re.sub(r"\s", "", v) for k, v in json.loads(cache.read_text(encoding="utf-8")).items()}
+    return [(v, t, lab, (t in vs.get(v, ""))) for v, t, lab in VERSE_CHECKS]
+
 def build():
     songs = load_db()
     by_slug = {}
@@ -445,6 +512,8 @@ def build():
             ids = [i for i, s in songs.items() if matches(" ".join(s["en"]).replace("\n", " "))]
         else:
             ids = st["ids"]
+        drop = st.get("drop", {})
+        ids = [i for i in ids if i not in drop]
         recs = []
         for i in sorted(set(ids)):
             if i not in songs:
@@ -473,8 +542,9 @@ def build():
     return songs, by_slug, warnings
 
 HEADER = ("<!-- Generated by scriptures/scripts/build_new_sets.py. Do not hand-edit: change the catalogue in that script and rerun. -->\n")
-NOTE = ("Assignments are KEYWORD-LEVEL: a song is listed when its English commentary (and, where possible, a Tamil lyric line) matches the story. "
-        "They have not been hand-read like `shiva/` and `vishnu/`. Confidence: **t** = a Tamil lyric line matched and the commentary agrees; "
+NOTE = ("Assignments start KEYWORD-LEVEL: a song is listed when its English commentary (and, where possible, a Tamil lyric line) matches the story. "
+        "A story with a 'Hand-read notes' section was then read (in full, or the doubtful part, as that section says) and wrong songs removed; "
+        "other stories were not. Confidence: **t** = a Tamil lyric line matched and the commentary agrees; "
         "**c** = commentary only (no Tamil keyword line found); **low** = commentary did not match, check by reading the song.")
 
 def clean(t):
@@ -495,6 +565,13 @@ def write_all(songs, by_slug):
                 r = ref + (f" [{url}]" if url else "")
                 L.append(f"| {src} | {r} | {note} | {status} |".replace("\n", " "))
             L.append("\n" + NOTE + "\n")
+            if st.get("review") or st.get("drop"):
+                L.append("## Hand-read notes\n")
+                if st.get("review"):
+                    L.append(st["review"] + "\n")
+                for i, why in sorted(st.get("drop", {}).items()):
+                    L.append(f"- Removed after reading: {i} ({why})")
+                L.append("")
             L.append("## Songs\n")
             for r in recs:
                 s = r["song"]
@@ -542,6 +619,15 @@ def write_all(songs, by_slug):
         for a, b, c in meta["sources"]:
             L.append(f"| {a} | {b} | {c} |")
         L += ["", "## Open questions and gaps\n"] + [f"- {q}" for q in meta["open_q"]]
+        if key == "sambandar":
+            chk = run_verse_checks()
+            L += ["", "## Verse checks (re-run on every build)", "",
+                  f"Periya Puranam text: `scripts/.cache/pp_sambandar.json` (git-ignored; a parse of {PP_SAM}). A verse passes if the word occurs in it.", "",
+                  "| Verse | Word | Shows | Result |", "|---|---|---|---|"]
+            for v, t, lab, ok in chk:
+                L.append(f"| {v} | {t} | {lab} | {'ok' if ok else ('NOT FOUND' if ok is False else 'cache missing')} |")
+            bad = [c for c in chk if c[3] is False]
+            print(f"sambandar verse checks: {len(chk) - len(bad)}/{len(chk)} ok" + (f", FAILED: {[c[0] for c in bad]}" if bad else ""))
         (d / "SOURCES.md").write_text("\n".join(L) + "\n", encoding="utf-8")
         # README
         counts = {c: sum(1 for sl in slugs for r in by_slug[sl] if r["conf"] == c) for c in ("t", "c", "low")}

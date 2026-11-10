@@ -18,13 +18,12 @@ One row per song: its stories.
 | 39 | கண்டுமொழி | [Murugan and Deivayanai, Indra's daughter](stories/m-deivayanai.md) |
 | 41 | கரிக்கொம்பம் | [The Krouncha mountain pierced](stories/m-krouncha.md) |
 | 48 | குடர்நிண மென்பு | [Surapadman as a mango tree split by the Vel](stories/m-mango-sura.md); [The Krouncha mountain pierced](stories/m-krouncha.md) |
-| 52 | கொடியனைய இடை | [The peacock and the cock](stories/m-peacock-cock.md) |
 | 57 | சத்தம் மிகு ஏழு | [Murugan and Deivayanai, Indra's daughter](stories/m-deivayanai.md) |
 | 58 | சந்தன சவ்வாது | [The Krouncha mountain pierced](stories/m-krouncha.md) |
 | 72 | நிலையாப் பொருளை | [Surapadman as a mango tree split by the Vel](stories/m-mango-sura.md); [The sea dried by the Vel](stories/m-sea-dried.md) |
 | 76 | படர்புவியின் மீது | [Murugan and Deivayanai, Indra's daughter](stories/m-deivayanai.md) |
 | 80 | பாத நூபுரம் | [Tarakasura](stories/m-tarakasura.md) |
-| 81 | புகரப் புங்க | [The Krouncha mountain pierced](stories/m-krouncha.md); [Airavata raises Deivayanai](stories/m-airavata.md) |
+| 81 | புகரப் புங்க | [The Krouncha mountain pierced](stories/m-krouncha.md) |
 | 82 | பூரண வார கும்ப | [Surapadman as a mango tree split by the Vel](stories/m-mango-sura.md) |
 | 83 | பெருக்கச் சஞ்சலித்து | [The Krouncha mountain pierced](stories/m-krouncha.md) |
 | 85 | மஞ்செனுங் குழல் | [The Krouncha mountain pierced](stories/m-krouncha.md) |
@@ -55,11 +54,10 @@ One row per song: its stories.
 | 168 | திமிர உததி | [The Krouncha mountain pierced](stories/m-krouncha.md) |
 | 172 | நெற்றி வெயர்த்துளி | [Murugan and Deivayanai, Indra's daughter](stories/m-deivayanai.md); [Airavata raises Deivayanai](stories/m-airavata.md) |
 | 174 | பஞ்ச பாதகன் | [The Krouncha mountain pierced](stories/m-krouncha.md) |
-| 191 | முருகு செறிகுழல் முகில் | [Born in the Saravana lake; the six Krittikas](stories/m-saravana.md); [Airavata raises Deivayanai](stories/m-airavata.md) |
+| 191 | முருகு செறிகுழல் முகில் | [Born in the Saravana lake; the six Krittikas](stories/m-saravana.md) |
 | 196 | வாதம் பித்தம் | [Murugan woos Valli in disguise](stories/m-valli-disguise.md) |
 | 197 | வாரணந் தனை | [Brahma imprisoned for failing the Pranava](stories/m-brahma-prison.md) |
 | 211 | கறை படும் உடம்பு | [Brahma imprisoned for failing the Pranava](stories/m-brahma-prison.md); [Murugan and Deivayanai, Indra's daughter](stories/m-deivayanai.md) |
-| 213 | குமரகுருபர முருக குகனே | [Airavata raises Deivayanai](stories/m-airavata.md) |
 | 215 | கோமள வெற்பினை | [Surapadman as a mango tree split by the Vel](stories/m-mango-sura.md) |
 | 219 | சேலும் அயிலும் | [The Krouncha mountain pierced](stories/m-krouncha.md) |
 | 221 | தெருவினில் நடவா | [The Krouncha mountain pierced](stories/m-krouncha.md) |
@@ -76,7 +74,7 @@ One row per song: its stories.
 | 265 | குவளைக் கணை | [The Krouncha mountain pierced](stories/m-krouncha.md) |
 | 266 | கூந்தல் அவிழ்த்து | [Murugan woos Valli in disguise](stories/m-valli-disguise.md) |
 | 276 | தொடத்துளக்கிகள் | [Murugan and Deivayanai, Indra's daughter](stories/m-deivayanai.md) |
-| 279 | பகல் இராவினும் | [Surapadman as a mango tree split by the Vel](stories/m-mango-sura.md); [The Krouncha mountain pierced](stories/m-krouncha.md); [Brahma imprisoned for failing the Pranava](stories/m-brahma-prison.md) |
+| 279 | பகல் இராவினும் | [Surapadman as a mango tree split by the Vel](stories/m-mango-sura.md); [The Krouncha mountain pierced](stories/m-krouncha.md) |
 | 284 | பெருக்க உபாயம் | [Surapadman as a mango tree split by the Vel](stories/m-mango-sura.md); [Brahma imprisoned for failing the Pranava](stories/m-brahma-prison.md) |
 | 286 | பொருவிக் கந்தொடு | [Murugan and Deivayanai, Indra's daughter](stories/m-deivayanai.md) |
 | 290 | மலை முலைச்சியர் | [The Krouncha mountain pierced](stories/m-krouncha.md) |
@@ -86,7 +84,7 @@ One row per song: its stories.
 | 301 | வினைக்கு இனமாகும் | [The Krouncha mountain pierced](stories/m-krouncha.md); [The sea dried by the Vel](stories/m-sea-dried.md) |
 | 302 | வெற்றி செயவுற்ற | [The Krouncha mountain pierced](stories/m-krouncha.md) |
 | 304 | எழுதிகழ் புவன | [The Krouncha mountain pierced](stories/m-krouncha.md) |
-| 309 | அதி மதம் கக்க | [Brahma imprisoned for failing the Pranava](stories/m-brahma-prison.md); [Murugan and Deivayanai, Indra's daughter](stories/m-deivayanai.md) |
+| 309 | அதி மதம் கக்க | [Murugan and Deivayanai, Indra's daughter](stories/m-deivayanai.md) |
 | 310 | கனக தம்பத்தை | [Surapadman as a mango tree split by the Vel](stories/m-mango-sura.md) |
 | 312 | கன க்ரவுஞ்சத்தில் | [The Krouncha mountain pierced](stories/m-krouncha.md) |
 | 313 | தெரியல் அம் செச்சை | [The Krouncha mountain pierced](stories/m-krouncha.md) |
@@ -110,7 +108,7 @@ One row per song: its stories.
 | 346 | மகுடக் கொப்பாட | [The Krouncha mountain pierced](stories/m-krouncha.md); [Murugan and Deivayanai, Indra's daughter](stories/m-deivayanai.md) |
 | 350 | வம்பறாச்சில | [Surapadman as a mango tree split by the Vel](stories/m-mango-sura.md); [The Krouncha mountain pierced](stories/m-krouncha.md) |
 | 352 | அறிவிலாப் பித்தர் | [Murugan woos Valli in disguise](stories/m-valli-disguise.md) |
-| 359 | ஓல மறைகள் | [The Krouncha mountain pierced](stories/m-krouncha.md); [The peacock and the cock](stories/m-peacock-cock.md) |
+| 359 | ஓல மறைகள் | [The Krouncha mountain pierced](stories/m-krouncha.md) |
 | 360 | கரு முகில் | [The Krouncha mountain pierced](stories/m-krouncha.md) |
 | 362 | குருதி புலால் என்பு | [Surapadman as a mango tree split by the Vel](stories/m-mango-sura.md); [The Krouncha mountain pierced](stories/m-krouncha.md) |
 | 371 | மகர மெறிகடல் | [Surapadman as a mango tree split by the Vel](stories/m-mango-sura.md) |
@@ -118,7 +116,6 @@ One row per song: its stories.
 | 373 | முருகு செறிகுழல் சொரு | [The Krouncha mountain pierced](stories/m-krouncha.md) |
 | 376 | கயல் விழித்தேன் | [Surapadman as a mango tree split by the Vel](stories/m-mango-sura.md); [The Krouncha mountain pierced](stories/m-krouncha.md) |
 | 378 | பரியகைப் பாசம் | [The Krouncha mountain pierced](stories/m-krouncha.md) |
-| 380 | முழுகிவட | [Brahma imprisoned for failing the Pranava](stories/m-brahma-prison.md) |
 | 381 | வடவை அனல் ஊடு | [The Krouncha mountain pierced](stories/m-krouncha.md) |
 | 383 | பேதக விரோத | [Murugan woos Valli in disguise](stories/m-valli-disguise.md) |
 | 385 | உருகும் மாமெழுகாக | [Tarakasura](stories/m-tarakasura.md); [Murugan and Deivayanai, Indra's daughter](stories/m-deivayanai.md) |
@@ -154,7 +151,6 @@ One row per song: its stories.
 | 475 | கூந்தலாழ விரிந்து | [The sea dried by the Vel](stories/m-sea-dried.md) |
 | 482 | காதைக் காதி | [Surapadman as a mango tree split by the Vel](stories/m-mango-sura.md) |
 | 485 | எலுப்புத் தோல் | [The Krouncha mountain pierced](stories/m-krouncha.md) |
-| 489 | இணங்கித் தட்பொடு | [The peacock and the cock](stories/m-peacock-cock.md) |
 | 493 | எழுகடல் மணலை | [The Krouncha mountain pierced](stories/m-krouncha.md) |
 | 500 | சகுட முந்தும் | [The sea dried by the Vel](stories/m-sea-dried.md) |
 | 508 | பனி போலத் துளி | [The Krouncha mountain pierced](stories/m-krouncha.md) |
@@ -166,7 +162,6 @@ One row per song: its stories.
 | 533 | முல்லைக்கும் மாரன் | [Born in the Saravana lake; the six Krittikas](stories/m-saravana.md) |
 | 542 | எழுகு நிறை நாபி | [Brahma imprisoned for failing the Pranava](stories/m-brahma-prison.md) |
 | 543 | ஓல மிட்ட சுரும்பு | [The Krouncha mountain pierced](stories/m-krouncha.md); [The sea dried by the Vel](stories/m-sea-dried.md) |
-| 544 | வேத வெற்பிலே | [Brahma imprisoned for failing the Pranava](stories/m-brahma-prison.md) |
 | 546 | கொலை கொண்ட | [Surapadman as a mango tree split by the Vel](stories/m-mango-sura.md) |
 | 548 | அந்தோ மனமே | [The Krouncha mountain pierced](stories/m-krouncha.md) |
 | 549 | அரிவையர் நெஞ்சுரு | [The Krouncha mountain pierced](stories/m-krouncha.md) |
@@ -190,7 +185,7 @@ One row per song: its stories.
 | 619 | மருவுமலர் வாசம் | [The Krouncha mountain pierced](stories/m-krouncha.md) |
 | 627 | பிறர் புகழ் இன்சொல் | [Murugan teaches Agastya](stories/m-agastya.md) |
 | 631 | வெடித்த வார்குழல் | [The Krouncha mountain pierced](stories/m-krouncha.md) |
-| 634 | கோங்க முகை | [Surapadman as a mango tree split by the Vel](stories/m-mango-sura.md); [The peacock and the cock](stories/m-peacock-cock.md); [Murugan woos Valli in disguise](stories/m-valli-disguise.md) |
+| 634 | கோங்க முகை | [Surapadman as a mango tree split by the Vel](stories/m-mango-sura.md); [Murugan woos Valli in disguise](stories/m-valli-disguise.md) |
 | 637 | அலகின் மாறு | [Surapadman as a mango tree split by the Vel](stories/m-mango-sura.md) |
 | 640 | கடகட கருவிகள் | [Murugan and Deivayanai, Indra's daughter](stories/m-deivayanai.md); [Airavata raises Deivayanai](stories/m-airavata.md) |
 | 649 | தொடுத்த வாள் | [The Krouncha mountain pierced](stories/m-krouncha.md); [Murugan and Deivayanai, Indra's daughter](stories/m-deivayanai.md) |
@@ -206,7 +201,6 @@ One row per song: its stories.
 | 695 | திரைவார் கடல் | [Surapadman as a mango tree split by the Vel](stories/m-mango-sura.md) |
 | 696 | நிரைதரு மணியணி | [The Krouncha mountain pierced](stories/m-krouncha.md); [Born in the Saravana lake; the six Krittikas](stories/m-saravana.md) |
 | 700 | தலங்களில் வரும் | [The Krouncha mountain pierced](stories/m-krouncha.md) |
-| 702 | விலையறுக்கவும் | [The peacock and the cock](stories/m-peacock-cock.md) |
 | 706 | ஞால மெங்கும் | [The Krouncha mountain pierced](stories/m-krouncha.md) |
 | 708 | தோள் தப்பாமல் | [Surapadman as a mango tree split by the Vel](stories/m-mango-sura.md) |
 | 711 | உருக்கு ஆர் வாளி | [Surapadman as a mango tree split by the Vel](stories/m-mango-sura.md); [Murugan and Deivayanai, Indra's daughter](stories/m-deivayanai.md) |
@@ -217,7 +211,6 @@ One row per song: its stories.
 | 729 | கண்க யற்பிணை | [Surapadman as a mango tree split by the Vel](stories/m-mango-sura.md) |
 | 732 | அச்சா யிறுக்காணி | [Surapadman as a mango tree split by the Vel](stories/m-mango-sura.md); [The peacock and the cock](stories/m-peacock-cock.md) |
 | 735 | தாரகாசுரன் சரிந்து | [Tarakasura](stories/m-tarakasura.md) |
-| 739 | சீத மதியம் | [The peacock and the cock](stories/m-peacock-cock.md) |
 | 740 | அரியயன் அறியாதவர் | [The Krouncha mountain pierced](stories/m-krouncha.md) |
 | 741 | ஆரத்தன பார | [The Krouncha mountain pierced](stories/m-krouncha.md) |
 | 743 | கோல மறை | [The Krouncha mountain pierced](stories/m-krouncha.md) |
@@ -254,29 +247,26 @@ One row per song: its stories.
 | 850 | இதசந்தன புழுகு | [Murugan and Deivayanai, Indra's daughter](stories/m-deivayanai.md) |
 | 852 | எகினி னம்பழி | [The Krouncha mountain pierced](stories/m-krouncha.md) |
 | 854 | கெண்டைகள் பொரும் | [Murugan and Deivayanai, Indra's daughter](stories/m-deivayanai.md) |
-| 856 | மதியஞ் சத்திரு | [The Krouncha mountain pierced](stories/m-krouncha.md); [The peacock and the cock](stories/m-peacock-cock.md) |
+| 856 | மதியஞ் சத்திரு | [The Krouncha mountain pierced](stories/m-krouncha.md) |
 | 862 | தனுநுதல் வெயர் | [Murugan and Deivayanai, Indra's daughter](stories/m-deivayanai.md) |
 | 868 | கறுத்த குஞ்சியும் | [The Krouncha mountain pierced](stories/m-krouncha.md) |
 | 873 | ஆசார வீனக்கு | [Surapadman as a mango tree split by the Vel](stories/m-mango-sura.md) |
 | 875 | கடகரிம ருப்பிற்க | [Surapadman as a mango tree split by the Vel](stories/m-mango-sura.md) |
-| 877 | தோடுற்றுக் காதள | [Airavata raises Deivayanai](stories/m-airavata.md) |
 | 878 | திட்டெனப் பல | [Murugan teaches Agastya](stories/m-agastya.md) |
 | 887 | சொரியு மாமுகில் | [The Krouncha mountain pierced](stories/m-krouncha.md) |
 | 892 | பஞ்ச புலனும் பழைய | [Murugan and Deivayanai, Indra's daughter](stories/m-deivayanai.md) |
 | 898 | ஈயெறும்பு நரி | [The Krouncha mountain pierced](stories/m-krouncha.md) |
 | 899 | ஆங்குடல் வளைந்து | [Murugan woos Valli in disguise](stories/m-valli-disguise.md) |
-| 900 | அரி மருகோனே | [Airavata raises Deivayanai](stories/m-airavata.md) |
 | 915 | மேகலை நெகிழ்த்து | [The Krouncha mountain pierced](stories/m-krouncha.md); [Murugan teaches Agastya](stories/m-agastya.md) |
 | 924 | இளநிர்க் குவட்டு | [The Krouncha mountain pierced](stories/m-krouncha.md) |
 | 929 | முகிலள கஞ்சரி | [The Krouncha mountain pierced](stories/m-krouncha.md) |
 | 934 | பரிவுறு நாரற்று | [The Krouncha mountain pierced](stories/m-krouncha.md) |
 | 945 | மனத்திரைந்தெழு | [Surapadman as a mango tree split by the Vel](stories/m-mango-sura.md); [The peacock and the cock](stories/m-peacock-cock.md) |
-| 947 | மதப்பட்ட விசால | [Airavata raises Deivayanai](stories/m-airavata.md) |
 | 950 | மைச் சரோருகம் | [The Krouncha mountain pierced](stories/m-krouncha.md) |
 | 951 | கலைஞர் எணும் கற்பு | [Surapadman as a mango tree split by the Vel](stories/m-mango-sura.md) |
 | 954 | இலைச்சுருட் கொடு | [Murugan teaches Agastya](stories/m-agastya.md) |
 | 956 | அலகு இல் அவுணரை | [The Krouncha mountain pierced](stories/m-krouncha.md) |
-| 959 | பழிப்பர் வாழ்த்துவர் | [Born in the Saravana lake; the six Krittikas](stories/m-saravana.md); [Murugan and Deivayanai, Indra's daughter](stories/m-deivayanai.md) |
+| 959 | பழிப்பர் வாழ்த்துவர் | [Murugan and Deivayanai, Indra's daughter](stories/m-deivayanai.md) |
 | 967 | முத்து நவரத்நமணி | [Tarakasura](stories/m-tarakasura.md) |
 | 973 | சுரும்பு அணி | [The Krouncha mountain pierced](stories/m-krouncha.md) |
 | 974 | மாலையில் வந்து | [Surapadman as a mango tree split by the Vel](stories/m-mango-sura.md) |
@@ -295,7 +285,7 @@ One row per song: its stories.
 | 1015 | விடம் என அயில் | [The Krouncha mountain pierced](stories/m-krouncha.md); [The sea dried by the Vel](stories/m-sea-dried.md) |
 | 1031 | காதில் ஓலை | [Surapadman as a mango tree split by the Vel](stories/m-mango-sura.md) |
 | 1034 | தோலத்தியால் | [Surapadman as a mango tree split by the Vel](stories/m-mango-sura.md) |
-| 1036 | தீயும் பவனமும் | [The Krouncha mountain pierced](stories/m-krouncha.md); [The sea dried by the Vel](stories/m-sea-dried.md); [Brahma imprisoned for failing the Pranava](stories/m-brahma-prison.md) |
+| 1036 | தீயும் பவனமும் | [The Krouncha mountain pierced](stories/m-krouncha.md); [The sea dried by the Vel](stories/m-sea-dried.md) |
 | 1049 | சுருதி ஊடு கேளாது | [The Krouncha mountain pierced](stories/m-krouncha.md) |
 | 1055 | சரியும் அவல | [The Krouncha mountain pierced](stories/m-krouncha.md) |
 | 1057 | குடரும் நீர் கொழு | [Murugan woos Valli in disguise](stories/m-valli-disguise.md) |
@@ -309,9 +299,8 @@ One row per song: its stories.
 | 1080 | குடம் என ஒத்த | [Born in the Saravana lake; the six Krittikas](stories/m-saravana.md) |
 | 1081 | மடவியர் எச்சில் | [Murugan teaches Agastya](stories/m-agastya.md) |
 | 1084 | கருதியே மெத்த | [The Krouncha mountain pierced](stories/m-krouncha.md) |
-| 1086 | அகிலநறுஞ் சேறு | [Airavata raises Deivayanai](stories/m-airavata.md) |
 | 1091 | அளகநிரை குலைய | [The Krouncha mountain pierced](stories/m-krouncha.md) |
-| 1102 | உம்பரார் அமுது | [Surapadman as a mango tree split by the Vel](stories/m-mango-sura.md); [The Krouncha mountain pierced](stories/m-krouncha.md); [Murugan and Deivayanai, Indra's daughter](stories/m-deivayanai.md); [Airavata raises Deivayanai](stories/m-airavata.md) |
+| 1102 | உம்பரார் அமுது | [Surapadman as a mango tree split by the Vel](stories/m-mango-sura.md); [The Krouncha mountain pierced](stories/m-krouncha.md); [Murugan and Deivayanai, Indra's daughter](stories/m-deivayanai.md) |
 | 1110 | பக்கம் உற நேரான | [The sea dried by the Vel](stories/m-sea-dried.md) |
 | 1112 | சுட்டதுபோல் ஆசை | [The Krouncha mountain pierced](stories/m-krouncha.md) |
 | 1114 | தத்துவத்துச் செயல் | [The Krouncha mountain pierced](stories/m-krouncha.md) |
@@ -332,17 +321,16 @@ One row per song: its stories.
 | 1145 | ஒக்க வண்டெழு | [The Krouncha mountain pierced](stories/m-krouncha.md); [Murugan and Deivayanai, Indra's daughter](stories/m-deivayanai.md) |
 | 1148 | கடைசி வந்தகன்று | [Surapadman as a mango tree split by the Vel](stories/m-mango-sura.md) |
 | 1149 | கதறிய கலைகொடு | [The Krouncha mountain pierced](stories/m-krouncha.md); [The sea dried by the Vel](stories/m-sea-dried.md); [Born in the Saravana lake; the six Krittikas](stories/m-saravana.md) |
-| 1150 | கலவியி னலமுரை | [The Krouncha mountain pierced](stories/m-krouncha.md); [Airavata raises Deivayanai](stories/m-airavata.md) |
+| 1150 | கலவியி னலமுரை | [The Krouncha mountain pierced](stories/m-krouncha.md) |
 | 1151 | கறுத்து நீவிடு | [The Krouncha mountain pierced](stories/m-krouncha.md) |
 | 1152 | குறிப்பரிய குழல் | [Murugan teaches Agastya](stories/m-agastya.md) |
 | 1154 | கொலைவிழி சுழல | [The Krouncha mountain pierced](stories/m-krouncha.md); [The sea dried by the Vel](stories/m-sea-dried.md) |
-| 1155 | கோழையாய் ஆணவம் | [Brahma imprisoned for failing the Pranava](stories/m-brahma-prison.md) |
 | 1157 | சுருதி வெகுமுக | [Murugan and Deivayanai, Indra's daughter](stories/m-deivayanai.md) |
 | 1159 | செம் கனல் புகை | [The Krouncha mountain pierced](stories/m-krouncha.md) |
 | 1164 | தனஞ் சற்றுக் குலுங்க | [The Krouncha mountain pierced](stories/m-krouncha.md) |
 | 1168 | நிருதரார்க்கு ஒரு | [The Krouncha mountain pierced](stories/m-krouncha.md) |
 | 1172 | பத்தித் தரள | [Tarakasura](stories/m-tarakasura.md) |
-| 1173 | பரதவித புண்டரிக | [The Krouncha mountain pierced](stories/m-krouncha.md); [Airavata raises Deivayanai](stories/m-airavata.md) |
+| 1173 | பரதவித புண்டரிக | [The Krouncha mountain pierced](stories/m-krouncha.md) |
 | 1177 | புகரில் சேவல | [The Krouncha mountain pierced](stories/m-krouncha.md) |
 | 1181 | பூசல் வந்திரு | [Surapadman as a mango tree split by the Vel](stories/m-mango-sura.md); [The Krouncha mountain pierced](stories/m-krouncha.md) |
 | 1187 | மாடமதிட் சுற்று | [The sea dried by the Vel](stories/m-sea-dried.md) |
@@ -368,7 +356,6 @@ One row per song: its stories.
 | 1233 | கன்னியர் கடு விடம் | [The Krouncha mountain pierced](stories/m-krouncha.md) |
 | 1234 | கிஞ்சுகம் என | [The Krouncha mountain pierced](stories/m-krouncha.md) |
 | 1235 | குடிமை மனையாட்டி | [Surapadman as a mango tree split by the Vel](stories/m-mango-sura.md); [The Krouncha mountain pierced](stories/m-krouncha.md); [The sea dried by the Vel](stories/m-sea-dried.md) |
-| 1236 | குறைவது இன்றி | [Brahma imprisoned for failing the Pranava](stories/m-brahma-prison.md) |
 | 1237 | கோகனகமுகிழ்த்த | [The sea dried by the Vel](stories/m-sea-dried.md) |
 | 1238 | சந்தம் புனைந்து | [The Krouncha mountain pierced](stories/m-krouncha.md) |
 | 1239 | சலமலம் | [The Krouncha mountain pierced](stories/m-krouncha.md) |
@@ -386,7 +373,7 @@ One row per song: its stories.
 | 1262 | பார நறுங்குழல் | [Murugan woos Valli in disguise](stories/m-valli-disguise.md) |
 | 1263 | பிரமனும் விரகொடு | [The Krouncha mountain pierced](stories/m-krouncha.md) |
 | 1266 | மக்கள் பிறப்புக்குள் | [Surapadman as a mango tree split by the Vel](stories/m-mango-sura.md) |
-| 1284 | கருப்பையில் | [The Krouncha mountain pierced](stories/m-krouncha.md); [The peacock and the cock](stories/m-peacock-cock.md) |
+| 1284 | கருப்பையில் | [The Krouncha mountain pierced](stories/m-krouncha.md) |
 | 1290 | தீது உற்றே எழு | [Surapadman as a mango tree split by the Vel](stories/m-mango-sura.md) |
 | 1296 | நீலங்கொள் | [The sea dried by the Vel](stories/m-sea-dried.md) |
 | 1299 | பிறவியலை | [Born in the Saravana lake; the six Krittikas](stories/m-saravana.md) |

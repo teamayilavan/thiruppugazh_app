@@ -18,11 +18,11 @@ Songs that name the child saint Sambandar of Sirkazhi, or tell an episode of his
 
 Assignments by confidence: t=58, c=121, low=0.
 
-Assignments are KEYWORD-LEVEL: a song is listed when its English commentary (and, where possible, a Tamil lyric line) matches the story. They have not been hand-read like `shiva/` and `vishnu/`. Confidence: **t** = a Tamil lyric line matched and the commentary agrees; **c** = commentary only (no Tamil keyword line found); **low** = commentary did not match, check by reading the song.
+Assignments start KEYWORD-LEVEL: a song is listed when its English commentary (and, where possible, a Tamil lyric line) matches the story. A story with a 'Hand-read notes' section was then read (in full, or the doubtful part, as that section says) and wrong songs removed; other stories were not. Confidence: **t** = a Tamil lyric line matched and the commentary agrees; **c** = commentary only (no Tamil keyword line found); **low** = commentary did not match, check by reading the song.
 
 ## Open questions
 
-- Verse numbers: the Shiva file cites running numbers (764, 846, 855); the page view used here puts the cure at 736-772 and the river test at 813-816. They differ. Pick one scheme before any machine-check.
-- Poompavai (Mylapore) is in the Periya Puranam late in the Sambandar Puranam; the verse range was not pinned. The hymn is Tevaram 2.47 (page opened). Accounts differ on how she died (bones in a pot; a snake-bite in one source).
-- Episodes in the Puranam with NO song found: golden cymbals (Tirukkolakka), the 1000 gold coins at Tiruvavaduthurai, the famine coins at Veezhimizhalai, the Thirumarugal snake-bite, the cure of Kolli Mazhavan's daughter. Not made into stories.
+- Periya Puranam numbering is now settled: the page and the Shiva file both use running verses 1-1256 (checks in this file's table).
+- Episodes in the Puranam with NO song found (exact verses): Thirumarugal snake-bite 472-484; purse of gold at Tiruvavaduthurai 418-431; famine coins 564-571; the Kollampudur boat 897-900 (898 checked); the Perumanam wedding and merging 1236-1256; the cure of Kolli Mazhavan's daughter 310-320. Not made into stories.
+- Poompavai: the Puranam says a snake bit her in the garden (vv. 1055-1058); her father kept her bones in a pot (v.1086). The hymn is Tevaram 2.47.
 - Sambandar's name appears in the commentary of ~105 songs; every one of them is in `sam-avatar`. Songs that tell a specific episode are also in that episode's story.

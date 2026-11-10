@@ -12,13 +12,12 @@
 39 | m-deivayanai | கண்டுமொழி | c
 41 | m-krouncha | கரிக்கொம்பம் | c
 48 | m-mango-sura,m-krouncha | குடர்நிண மென்பு | c,c
-52 | m-peacock-cock | கொடியனைய இடை | c
 57 | m-deivayanai | சத்தம் மிகு ஏழு | c
 58 | m-krouncha | சந்தன சவ்வாது | c
 72 | m-mango-sura,m-sea-dried | நிலையாப் பொருளை | c,c
 76 | m-deivayanai | படர்புவியின் மீது | c
 80 | m-tarakasura | பாத நூபுரம் | c
-81 | m-krouncha,m-airavata | புகரப் புங்க | c,c
+81 | m-krouncha | புகரப் புங்க | c
 82 | m-mango-sura | பூரண வார கும்ப | t
 83 | m-krouncha | பெருக்கச் சஞ்சலித்து | c
 85 | m-krouncha | மஞ்செனுங் குழல் | c
@@ -49,11 +48,10 @@
 168 | m-krouncha | திமிர உததி | c
 172 | m-deivayanai,m-airavata | நெற்றி வெயர்த்துளி | c,c
 174 | m-krouncha | பஞ்ச பாதகன் | c
-191 | m-saravana,m-airavata | முருகு செறிகுழல் முகில் | t,c
+191 | m-saravana | முருகு செறிகுழல் முகில் | t
 196 | m-valli-disguise | வாதம் பித்தம் | c
 197 | m-brahma-prison | வாரணந் தனை | c
 211 | m-brahma-prison,m-deivayanai | கறை படும் உடம்பு | t,c
-213 | m-airavata | குமரகுருபர முருக குகனே | c
 215 | m-mango-sura | கோமள வெற்பினை | c
 219 | m-krouncha | சேலும் அயிலும் | c
 221 | m-krouncha | தெருவினில் நடவா | c
@@ -70,7 +68,7 @@
 265 | m-krouncha | குவளைக் கணை | c
 266 | m-valli-disguise | கூந்தல் அவிழ்த்து | t
 276 | m-deivayanai | தொடத்துளக்கிகள் | c
-279 | m-mango-sura,m-krouncha,m-brahma-prison | பகல் இராவினும் | c,c,t
+279 | m-mango-sura,m-krouncha | பகல் இராவினும் | c,c
 284 | m-mango-sura,m-brahma-prison | பெருக்க உபாயம் | c,t
 286 | m-deivayanai | பொருவிக் கந்தொடு | c
 290 | m-krouncha | மலை முலைச்சியர் | c
@@ -80,7 +78,7 @@
 301 | m-krouncha,m-sea-dried | வினைக்கு இனமாகும் | c,c
 302 | m-krouncha | வெற்றி செயவுற்ற | c
 304 | m-krouncha | எழுதிகழ் புவன | c
-309 | m-brahma-prison,m-deivayanai | அதி மதம் கக்க | c,c
+309 | m-deivayanai | அதி மதம் கக்க | c
 310 | m-mango-sura | கனக தம்பத்தை | c
 312 | m-krouncha | கன க்ரவுஞ்சத்தில் | c
 313 | m-krouncha | தெரியல் அம் செச்சை | c
@@ -104,7 +102,7 @@
 346 | m-krouncha,m-deivayanai | மகுடக் கொப்பாட | c,c
 350 | m-mango-sura,m-krouncha | வம்பறாச்சில | c,c
 352 | m-valli-disguise | அறிவிலாப் பித்தர் | t
-359 | m-krouncha,m-peacock-cock | ஓல மறைகள் | c,c
+359 | m-krouncha | ஓல மறைகள் | c
 360 | m-krouncha | கரு முகில் | c
 362 | m-mango-sura,m-krouncha | குருதி புலால் என்பு | c,c
 371 | m-mango-sura | மகர மெறிகடல் | c
@@ -112,7 +110,6 @@
 373 | m-krouncha | முருகு செறிகுழல் சொரு | c
 376 | m-mango-sura,m-krouncha | கயல் விழித்தேன் | c,c
 378 | m-krouncha | பரியகைப் பாசம் | c
-380 | m-brahma-prison | முழுகிவட | t
 381 | m-krouncha | வடவை அனல் ஊடு | c
 383 | m-valli-disguise | பேதக விரோத | c
 385 | m-tarakasura,m-deivayanai | உருகும் மாமெழுகாக | c,c
@@ -148,7 +145,6 @@
 475 | m-sea-dried | கூந்தலாழ விரிந்து | c
 482 | m-mango-sura | காதைக் காதி | c
 485 | m-krouncha | எலுப்புத் தோல் | c
-489 | m-peacock-cock | இணங்கித் தட்பொடு | c
 493 | m-krouncha | எழுகடல் மணலை | c
 500 | m-sea-dried | சகுட முந்தும் | c
 508 | m-krouncha | பனி போலத் துளி | c
@@ -160,7 +156,6 @@
 533 | m-saravana | முல்லைக்கும் மாரன் | c
 542 | m-brahma-prison | எழுகு நிறை நாபி | t
 543 | m-krouncha,m-sea-dried | ஓல மிட்ட சுரும்பு | c,t
-544 | m-brahma-prison | வேத வெற்பிலே | c
 546 | m-mango-sura | கொலை கொண்ட | c
 548 | m-krouncha | அந்தோ மனமே | c
 549 | m-krouncha | அரிவையர் நெஞ்சுரு | c
@@ -184,7 +179,7 @@
 619 | m-krouncha | மருவுமலர் வாசம் | c
 627 | m-agastya | பிறர் புகழ் இன்சொல் | c
 631 | m-krouncha | வெடித்த வார்குழல் | c
-634 | m-mango-sura,m-peacock-cock,m-valli-disguise | கோங்க முகை | c,c,t
+634 | m-mango-sura,m-valli-disguise | கோங்க முகை | c,t
 637 | m-mango-sura | அலகின் மாறு | c
 640 | m-deivayanai,m-airavata | கடகட கருவிகள் | c,c
 649 | m-krouncha,m-deivayanai | தொடுத்த வாள் | c,c
@@ -200,7 +195,6 @@
 695 | m-mango-sura | திரைவார் கடல் | c
 696 | m-krouncha,m-saravana | நிரைதரு மணியணி | c,t
 700 | m-krouncha | தலங்களில் வரும் | c
-702 | m-peacock-cock | விலையறுக்கவும் | c
 706 | m-krouncha | ஞால மெங்கும் | c
 708 | m-mango-sura | தோள் தப்பாமல் | c
 711 | m-mango-sura,m-deivayanai | உருக்கு ஆர் வாளி | c,c
@@ -211,7 +205,6 @@
 729 | m-mango-sura | கண்க யற்பிணை | c
 732 | m-mango-sura,m-peacock-cock | அச்சா யிறுக்காணி | c,c
 735 | m-tarakasura | தாரகாசுரன் சரிந்து | t
-739 | m-peacock-cock | சீத மதியம் | c
 740 | m-krouncha | அரியயன் அறியாதவர் | c
 741 | m-krouncha | ஆரத்தன பார | c
 743 | m-krouncha | கோல மறை | c
@@ -248,29 +241,26 @@
 850 | m-deivayanai | இதசந்தன புழுகு | c
 852 | m-krouncha | எகினி னம்பழி | c
 854 | m-deivayanai | கெண்டைகள் பொரும் | c
-856 | m-krouncha,m-peacock-cock | மதியஞ் சத்திரு | t,c
+856 | m-krouncha | மதியஞ் சத்திரு | t
 862 | m-deivayanai | தனுநுதல் வெயர் | c
 868 | m-krouncha | கறுத்த குஞ்சியும் | c
 873 | m-mango-sura | ஆசார வீனக்கு | c
 875 | m-mango-sura | கடகரிம ருப்பிற்க | c
-877 | m-airavata | தோடுற்றுக் காதள | c
 878 | m-agastya | திட்டெனப் பல | c
 887 | m-krouncha | சொரியு மாமுகில் | c
 892 | m-deivayanai | பஞ்ச புலனும் பழைய | c
 898 | m-krouncha | ஈயெறும்பு நரி | c
 899 | m-valli-disguise | ஆங்குடல் வளைந்து | t
-900 | m-airavata | அரி மருகோனே | c
 915 | m-krouncha,m-agastya | மேகலை நெகிழ்த்து | c,c
 924 | m-krouncha | இளநிர்க் குவட்டு | c
 929 | m-krouncha | முகிலள கஞ்சரி | c
 934 | m-krouncha | பரிவுறு நாரற்று | c
 945 | m-mango-sura,m-peacock-cock | மனத்திரைந்தெழு | c,t
-947 | m-airavata | மதப்பட்ட விசால | c
 950 | m-krouncha | மைச் சரோருகம் | c
 951 | m-mango-sura | கலைஞர் எணும் கற்பு | c
 954 | m-agastya | இலைச்சுருட் கொடு | c
 956 | m-krouncha | அலகு இல் அவுணரை | c
-959 | m-saravana,m-deivayanai | பழிப்பர் வாழ்த்துவர் | t,t
+959 | m-deivayanai | பழிப்பர் வாழ்த்துவர் | t
 967 | m-tarakasura | முத்து நவரத்நமணி | c
 973 | m-krouncha | சுரும்பு அணி | c
 974 | m-mango-sura | மாலையில் வந்து | c
@@ -289,7 +279,7 @@
 1015 | m-krouncha,m-sea-dried | விடம் என அயில் | c,t
 1031 | m-mango-sura | காதில் ஓலை | c
 1034 | m-mango-sura | தோலத்தியால் | c
-1036 | m-krouncha,m-sea-dried,m-brahma-prison | தீயும் பவனமும் | c,c,c
+1036 | m-krouncha,m-sea-dried | தீயும் பவனமும் | c,c
 1049 | m-krouncha | சுருதி ஊடு கேளாது | c
 1055 | m-krouncha | சரியும் அவல | c
 1057 | m-valli-disguise | குடரும் நீர் கொழு | c
@@ -303,9 +293,8 @@
 1080 | m-saravana | குடம் என ஒத்த | t
 1081 | m-agastya | மடவியர் எச்சில் | c
 1084 | m-krouncha | கருதியே மெத்த | c
-1086 | m-airavata | அகிலநறுஞ் சேறு | c
 1091 | m-krouncha | அளகநிரை குலைய | c
-1102 | m-mango-sura,m-krouncha,m-deivayanai,m-airavata | உம்பரார் அமுது | c,c,c,c
+1102 | m-mango-sura,m-krouncha,m-deivayanai | உம்பரார் அமுது | c,c,c
 1110 | m-sea-dried | பக்கம் உற நேரான | c
 1112 | m-krouncha | சுட்டதுபோல் ஆசை | c
 1114 | m-krouncha | தத்துவத்துச் செயல் | c
@@ -326,17 +315,16 @@
 1145 | m-krouncha,m-deivayanai | ஒக்க வண்டெழு | c,c
 1148 | m-mango-sura | கடைசி வந்தகன்று | c
 1149 | m-krouncha,m-sea-dried,m-saravana | கதறிய கலைகொடு | c,c,c
-1150 | m-krouncha,m-airavata | கலவியி னலமுரை | c,c
+1150 | m-krouncha | கலவியி னலமுரை | c
 1151 | m-krouncha | கறுத்து நீவிடு | c
 1152 | m-agastya | குறிப்பரிய குழல் | t
 1154 | m-krouncha,m-sea-dried | கொலைவிழி சுழல | c,c
-1155 | m-brahma-prison | கோழையாய் ஆணவம் | t
 1157 | m-deivayanai | சுருதி வெகுமுக | c
 1159 | m-krouncha | செம் கனல் புகை | c
 1164 | m-krouncha | தனஞ் சற்றுக் குலுங்க | c
 1168 | m-krouncha | நிருதரார்க்கு ஒரு | c
 1172 | m-tarakasura | பத்தித் தரள | c
-1173 | m-krouncha,m-airavata | பரதவித புண்டரிக | c,c
+1173 | m-krouncha | பரதவித புண்டரிக | c
 1177 | m-krouncha | புகரில் சேவல | c
 1181 | m-mango-sura,m-krouncha | பூசல் வந்திரு | c,c
 1187 | m-sea-dried | மாடமதிட் சுற்று | c
@@ -362,7 +350,6 @@
 1233 | m-krouncha | கன்னியர் கடு விடம் | c
 1234 | m-krouncha | கிஞ்சுகம் என | c
 1235 | m-mango-sura,m-krouncha,m-sea-dried | குடிமை மனையாட்டி | c,c,c
-1236 | m-brahma-prison | குறைவது இன்றி | t
 1237 | m-sea-dried | கோகனகமுகிழ்த்த | c
 1238 | m-krouncha | சந்தம் புனைந்து | c
 1239 | m-krouncha | சலமலம் | c
@@ -380,7 +367,7 @@
 1262 | m-valli-disguise | பார நறுங்குழல் | t
 1263 | m-krouncha | பிரமனும் விரகொடு | c
 1266 | m-mango-sura | மக்கள் பிறப்புக்குள் | c
-1284 | m-krouncha,m-peacock-cock | கருப்பையில் | c,c
+1284 | m-krouncha | கருப்பையில் | c
 1290 | m-mango-sura | தீது உற்றே எழு | c
 1296 | m-sea-dried | நீலங்கொள் | c
 1299 | m-saravana | பிறவியலை | t

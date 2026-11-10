@@ -2,7 +2,7 @@
 
 # Airavata raises Deivayanai
 
-`m-airavata` | Murugan's own lore (Kanda Puranam) | 22 songs
+`m-airavata` | Murugan's own lore (Kanda Puranam) | 12 songs
 
 Deivayanai was brought up by Indra's white elephant Airavata, which is why songs call Murugan the son-in-law of Indra and Airavata's ward.
 
@@ -12,39 +12,30 @@ Deivayanai was brought up by Indra's white elephant Airavata, which is why songs
 |---|---|---|---|
 | Kanda Puranam |  |  | search result only (tradition) |
 
-Assignments are KEYWORD-LEVEL: a song is listed when its English commentary (and, where possible, a Tamil lyric line) matches the story. They have not been hand-read like `shiva/` and `vishnu/`. Confidence: **t** = a Tamil lyric line matched and the commentary agrees; **c** = commentary only (no Tamil keyword line found); **low** = commentary did not match, check by reading the song.
+Assignments start KEYWORD-LEVEL: a song is listed when its English commentary (and, where possible, a Tamil lyric line) matches the story. A story with a 'Hand-read notes' section was then read (in full, or the doubtful part, as that section says) and wrong songs removed; other stories were not. Confidence: **t** = a Tamil lyric line matched and the commentary agrees; **c** = commentary only (no Tamil keyword line found); **low** = commentary did not match, check by reading the song.
+
+## Hand-read notes
+
+Songs that only say Indra rides Airavata were removed; kept are those that name Deivayanai as reared by the elephant.
+
+- Removed after reading: 81 (Indra's mount, not Deivayanai)
+- Removed after reading: 191 (Indra's mount, not Deivayanai)
+- Removed after reading: 213 (Indra's mount, not Deivayanai)
+- Removed after reading: 877 (Indra's mount, not Deivayanai)
+- Removed after reading: 900 (Indra's mount, not Deivayanai)
+- Removed after reading: 947 (Indra's mount, not Deivayanai)
+- Removed after reading: 1086 (Indra's mount, not Deivayanai)
+- Removed after reading: 1102 (Indra's mount, not Deivayanai)
+- Removed after reading: 1150 (Indra's mount, not Deivayanai)
+- Removed after reading: 1173 (Indra's mount, not Deivayanai)
 
 ## Songs
-
-### 81 புகரப் புங்க (திருச்செந்தூர்)
-
-> (no Tamil keyword line found; commentary quoted instead)
-
-Commentary: There is this dotted, beautiful, pure and mountain-like elephant, AirAvatham; and the one who mounts it and also the clouds is IndrA. There is this unique collection of Scriptures, called VEdAs, a repository of all arts, whose meaning is well interpreted by BrahmA. There is this humongous red Snake called AdhisEshan upon whom He sl...
-
-Confidence c
 
 ### 172 நெற்றி வெயர்த்துளி (பழநி)
 
 > (no Tamil keyword line found; commentary quoted instead)
 
 Commentary: ...y of paddy that was heaped up like a mountain*; He is the Primordial and Causal Principle; and You are the child of that Lord SivA! In the celestial town AmarAvathi filled with KaRpaga trees, there was a white elephant (AirAvatham); it reared the damsel DEvayAnai very caringly; and You hugged her with Your broad and hallowed shoulders, Oh Lord! When IndrA, the leader of the dark cloud-like celestials, became terrified (of the demon SUran), great sages worshipped You offering prayers...
-
-Confidence c
-
-### 191 முருகு செறிகுழல் முகில் (பழநி)
-
-> (no Tamil keyword line found; commentary quoted instead)
-
-Commentary: ...t this fool the grace to attain Your hallowed feet, adorned with anklets, Oh Lord! From the boisterous seas, AlakAla poison emerged along with the divine nectar; Lord VishNu, Brahma, Indra who mounts the white elephant (AirAvatham) and others screamed and surrendered to Him seeking refuge; that poison was imbibed by Lord SivA of Mount KailAsh; You are His dear child, Oh Lord! The bodies of the warring demons were severed, the earth was thunder-struck, the wavy seas were shattered to...
-
-Confidence c
-
-### 213 குமரகுருபர முருக குகனே (சுவாமிமலை)
-
-> (no Tamil keyword line found; commentary quoted instead)
-
-Commentary: ...nce! Oh MurugA, You made it possible for IndrA, the Lord of the celestials, to regain His domain and roam about freely! Lord VishNu, whose shoulders are hugged by Goddess Lakshmi, BrahmA and IndrA, mounting the elephant AirAvatham, come to worship You in Your abodes at Mount Pazhani and KadhirgAmam, Oh Epitome of the Saiva Religion, with six hallowed faces! You are seated in SwAmimalai, Oh Great One! "Oh KumarA, the Great Master, MurugA, GuhA, the consort of VaLLi who is the damsel ...
 
 Confidence c
 
@@ -117,62 +108,6 @@ Confidence c
 > (no Tamil keyword line found; commentary quoted instead)
 
 Commentary: ... me The young asura (demonic) warriors shower terrific arrows by bending their bows, but You smash the encircling army by sending arrows Yourself, Oh Kumaresa! The fragrance exuding DEvayAnai, daughter of the elephant, (AirAvatham), with bamboo-like soft shoulders and VaLLi, the beautiful damsel of KuRavAs, who adores You, both hugged You. For those devotees who entertain no grouse or any attachment, You are their Asset! You have Your abode as Kanchirankudi (Ettikudi*) where You app...
-
-Confidence c
-
-### 877 தோடுற்றுக் காதள (திருப்பழையாறை)
-
-> (no Tamil keyword line found; commentary quoted instead)
-
-Commentary: ...ttlefield, Oh Brave One! You are an expert in all the activities of Your field! You wielded the spear upon the demon SUran, who surpassed all demons who were themselves expert-charioteers! You are seated on the elephant AirAvatham exuding grace, Oh Young one! He is an eminent dancer; on His side is UmAdEvi concorporate; He wears the scriptures as His elegant loin-cloth; that Lord SivA graciously delivered You, in elation, as His Son, Oh MurugA! This town PazhaiyARai* has temple-towe...
-
-Confidence c
-
-### 900 அரி மருகோனே (வயலூர்)
-
-> (no Tamil keyword line found; commentary quoted instead)
-
-Commentary: ...inciples of Pathi-Pasu-PAsam?* You hold the weapon of Trident in Your hand! Once, making noise like the waves of a turbulent sea, and intoxicated with crude wine, Mother Durga danced; and IndrA, who mounts the elephant (AirAvatham), shouted "Oh Our Commander-in-Chief, Victory to You!"; when You entered the battlefield. SUran, who was scared, screamed uncontrollably; and his intestines were preyed upon by hounds, ghosts, devils, eagles, jackals and crows; when You fought with the mig...
-
-Confidence c
-
-### 947 மதப்பட்ட விசால (திருப்புக்கொளியூர்)
-
-> (no Tamil keyword line found; commentary quoted instead)
-
-Commentary: ...elegant trunk with which it feeds itself; it has exceedingly reddish eyes and a very speedy gait; around its neck a rope is tied with hanging bells that jingle with a loud noise; mounting, in style, that white elephant, AirAvatham, You go about in a procession and later relax peacefully under the shade of the rich and fertile KaRpaga tree; in the golden land of the celestials that has palaces with mountain-like fortress walls and courtyards filled with moonlight, You are reigning wi...
-
-Confidence c
-
-### 1086 அகிலநறுஞ் சேறு (பொதுப்பாடல்கள்)
-
-> (no Tamil keyword line found; commentary quoted instead)
-
-Commentary: ...lexion! Kindly bless me to prostrate at Your feet saying "I am worshipping You, Oh Lord!" The Sun, the Moon, Lord BrahmA seated on the lotus around which the beetles hum, Lord VishNu, Lord IndrA who mounts the elephant (AirAvatham) that has a crystal-white hue, has a huge and majestic body, has oozing saliva of rage and has garlands made of gems and decorative garment on the reddish forehead of its big and spotted face, and all others were facing extinction (at the end of the aeon) ...
-
-Confidence c
-
-### 1102 உம்பரார் அமுது (பொதுப்பாடல்கள்)
-
-> (no Tamil keyword line found; commentary quoted instead)
-
-Commentary: ...excitement; I hug them so tightly that their moon-like face perspires; thinking only about drowning in a sea of bliss, how could I ever tread the righteous path? He rides the clouds and mounts the mountain-like elephant AirAvatham, as His vehicle, that has four unique tusks* and legs like white pillars; He is Indra who hugs PulOmasai (Indrani)'s protruding bosom looking like a heavy pot and a mountain; He sired and reared DEvayAnai, who mounts the cloud as her vehicle, and You marri...
-
-Confidence c
-
-### 1150 கலவியி னலமுரை (பொதுப்பாடல்கள்)
-
-> (no Tamil keyword line found; commentary quoted instead)
-
-Commentary: ...er, Lord VishNU; Both those Lords lauded You in adoration; Indra, who worships his erudite and scholarly master, Brahaspathi (Jupiter), and who, as the leader of the celestials, rides the victorious and strong elephant, AirAvatham, wearing an ornamental cloth decorating its head, was relieved of his anxiety and fear; when You wielded Your spear destroying the huge mountain Krouncha in the north; making the sea, full of jumpy makara fish, scream in fear, You attacked the demon SUran ...
-
-Confidence c
-
-### 1173 பரதவித புண்டரிக (பொதுப்பாடல்கள்)
-
-> (no Tamil keyword line found; commentary quoted instead)
-
-Commentary: ...being tied to the barrel with a tiny rope by the milk-maids who were angry at His act of stealth committed by jumping over to the vessel hanging from the ceiling; He is Lord IndrA who rides the white and fierce elephant AirAvatham that has a dribbling jaw with wild rage and is like a mountain ever ready for war; having realised that worshipping You is their duty, they (the three of them) are prostrating at Your feet; You lost Your temper with Lord Brahma who could not interpret the ...
 
 Confidence c
 

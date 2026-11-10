@@ -10,9 +10,14 @@ Sambandar met Appar at Sirkazhi and Tiruvarur and travelled with him; at Vedaran
 
 | Source | Reference | Note | Status |
 |---|---|---|---|
-| Periya Puranam, Sambandar Puranam | vv. 269-277 (first meeting), 493-508 (Tiruvarur), 576-592 (the doors); page numbering [https://thevaaram.org/thirumurai_1/onepage.php?thiru=12&Song_idField=12280] |  | opened (summary-level) |
+| Periya Puranam, Sambandar Puranam (Tirumurai 12) | vv. 274 (Appar visits), 576-592 (the doors; 582 and 587 checked), 597-609 (Maraikkadu) [https://thevaaram.org/thirumurai_1/onepage.php?thiru=12&Song_idField=12280] |  | machine-read from the opened page (running verse numbers); the checks below are re-run on every build |
 
-Assignments are KEYWORD-LEVEL: a song is listed when its English commentary (and, where possible, a Tamil lyric line) matches the story. They have not been hand-read like `shiva/` and `vishnu/`. Confidence: **t** = a Tamil lyric line matched and the commentary agrees; **c** = commentary only (no Tamil keyword line found); **low** = commentary did not match, check by reading the song.
+Assignments start KEYWORD-LEVEL: a song is listed when its English commentary (and, where possible, a Tamil lyric line) matches the story. A story with a 'Hand-read notes' section was then read (in full, or the doubtful part, as that section says) and wrong songs removed; other stories were not. Confidence: **t** = a Tamil lyric line matched and the commentary agrees; **c** = commentary only (no Tamil keyword line found); **low** = commentary did not match, check by reading the song.
+
+## Hand-read notes
+
+Every song read against its quoted lines and commentary (2026-11-10); wrong matches were removed.
+
 
 ## Songs
 

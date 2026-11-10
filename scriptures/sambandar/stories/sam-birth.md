@@ -10,9 +10,14 @@ Sambandar was born at Sirkazhi (Pugali, Kazhumalam, Kochchai: the town has twelv
 
 | Source | Reference | Note | Status |
 |---|---|---|---|
-| Periya Puranam, Sambandar Puranam | vv. 1-26 (page numbering): the town and its twelve names (v. 14), the parents (15-18), the birth (19-26) [https://thevaaram.org/thirumurai_1/onepage.php?thiru=12&Song_idField=12280] |  | opened (summary-level) |
+| Periya Puranam, Sambandar Puranam (Tirumurai 12) | vv. 1-26 [https://thevaaram.org/thirumurai_1/onepage.php?thiru=12&Song_idField=12280] | the town, the parents, the birth | machine-read from the opened page (running verse numbers); the checks below are re-run on every build |
 
-Assignments are KEYWORD-LEVEL: a song is listed when its English commentary (and, where possible, a Tamil lyric line) matches the story. They have not been hand-read like `shiva/` and `vishnu/`. Confidence: **t** = a Tamil lyric line matched and the commentary agrees; **c** = commentary only (no Tamil keyword line found); **low** = commentary did not match, check by reading the song.
+Assignments start KEYWORD-LEVEL: a song is listed when its English commentary (and, where possible, a Tamil lyric line) matches the story. A story with a 'Hand-read notes' section was then read (in full, or the doubtful part, as that section says) and wrong songs removed; other stories were not. Confidence: **t** = a Tamil lyric line matched and the commentary agrees; **c** = commentary only (no Tamil keyword line found); **low** = commentary did not match, check by reading the song.
+
+## Hand-read notes
+
+Every song read against its quoted lines and commentary (2026-11-10); wrong matches were removed.
+
 
 ## Songs
 

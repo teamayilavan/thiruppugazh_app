@@ -10,10 +10,15 @@ At Mylapore the merchant Sivanesar had kept the ashes and bones of his dead daug
 
 | Source | Reference | Note | Status |
 |---|---|---|---|
-| Periya Puranam, Sambandar Puranam | late in the puranam; verse range not pinned (the page view did not reach it) |  | from memory, not opened |
-| Tevaram 2.47 (Thirumayilai / Mylapore) | the 'Poompavai' pathigam; the page's history note says Sambandar had the pot of bones brought and sang the decad [https://thevaaram.org/thirumurai_1/songview.php?thiru=2&Song_idField=2047&padhi=047] | number confirmed on the opened page; a search snippet recalled '2.61' from memory, which does not match | opened (summary-level) |
+| Periya Puranam, Sambandar Puranam (Tirumurai 12) | vv. 1033-1120 [https://thevaaram.org/thirumurai_1/onepage.php?thiru=12&Song_idField=12280] | Sivanesar's story from 1033; the snake-bite 1055-1058; the miracle at the Kapaliccharam around 1084-1100; v.1088 names the hymn | machine-read from the opened page (running verse numbers); the checks below are re-run on every build |
+| Tevaram 2.47 (Thirumayilai) | Mattitta Punnai [https://thevaaram.org/thirumurai_1/songview.php?thiru=2&Song_idField=2047&padhi=047] | the Poompavai pathigam; its page was opened | opened (summary-level) |
 
-Assignments are KEYWORD-LEVEL: a song is listed when its English commentary (and, where possible, a Tamil lyric line) matches the story. They have not been hand-read like `shiva/` and `vishnu/`. Confidence: **t** = a Tamil lyric line matched and the commentary agrees; **c** = commentary only (no Tamil keyword line found); **low** = commentary did not match, check by reading the song.
+Assignments start KEYWORD-LEVEL: a song is listed when its English commentary (and, where possible, a Tamil lyric line) matches the story. A story with a 'Hand-read notes' section was then read (in full, or the doubtful part, as that section says) and wrong songs removed; other stories were not. Confidence: **t** = a Tamil lyric line matched and the commentary agrees; **c** = commentary only (no Tamil keyword line found); **low** = commentary did not match, check by reading the song.
+
+## Hand-read notes
+
+Every song read against its quoted lines and commentary (2026-11-10); wrong matches were removed.
+
 
 ## Songs
 
