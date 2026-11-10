@@ -153,20 +153,20 @@
    "confirmed": true
   },
   {
-   "text": "Periya Puranam",
-   "ref": "Ninra Cir Nedumara Nayanar puranam (PP no. 50) and Mangayarkkarasi / Kulachchirai puranams (PP 66, 22)",
-   "first_words_ta": "",
-   "gist": "Further Pandya-side accounts of the same events; not opened or read in this pass.",
+   "text": "Periya Puranam, Ninra Cir Nedumara Nayanar Puranam (Tirumurai 12)",
+   "ref": "v. 2",
+   "first_words_ta": "அந்நாளில் ஆளுடைய பிள்ளையார்",
+   "gist": "The Pandya king, freed from the Jain snare by Sambandar's grace, rules Tennadu with Shiva's worship spreading (section read).",
    "url": "https://thevaaram.org/thirumurai_1/onepage.php?thiru=12&Song_idField=12500",
-   "confirmed": false
+   "confirmed": true
   },
   {
-   "text": "Tiruvilaiyadal Puranam (Perumparrap Puliyur Nambi)",
-   "ref": "Tiruvalavayudaiyar Tiruvilaiyadal, Sambandar section",
-   "first_words_ta": "",
-   "gist": "Earlier Sanskrit-derived retelling by Nambi; not found online in this pass.",
-   "url": "",
-   "confirmed": false
+   "text": "Periya Puranam, Kulachchirai Nayanar Puranam (Tirumurai 12)",
+   "ref": "v. 10",
+   "first_words_ta": "புன்னயத்தரு",
+   "gist": "Kulachchirai, the Pandya minister, who removed the lies (of the Jains) and made the southern land praise the holy ash, bows at the feet of the lord of Kazhi (Sambandar) (section read).",
+   "url": "https://thevaaram.org/thirumurai_1/onepage.php?thiru=12&Song_idField=12220",
+   "confirmed": true
   }
  ],
  "shiva-tiruvilaiyadal": [
@@ -267,20 +267,12 @@
    "confirmed": true
   },
   {
-   "text": "Tiruvilaiyadal Puranam (Paranjothi Munivar)",
-   "ref": "Padalam 49-51 (Tiruvalavayana, Sundara perambu eytha, Sangappalagai thanta padalam) and Sokkanathar items",
+   "text": "Tiruvilaiyadal Puranam (Paranjothi Munivar; prose retelling by R. Srinivasan on Tamil Wikisource)",
+   "ref": "Padalam 51 (Sangap palagai thanda padalam)",
    "first_words_ta": "",
-   "gist": "Likely home of the Sokkar (Sundareswarar of Madurai) stories and Sangam board; chapter titles seen in the index only, text not read.",
-   "url": "https://ta.wikisource.org/wiki/%E0%AE%A4%E0%AE%BF%E0%AE%B0%E0%AF%81%E0%AE%B5%E0%AE%BF%E0%AE%B3%E0%AF%88%E0%AE%AF%E0%AE%BE%E0%AE%9F%E0%AE%B1%E0%AF%8D_%E0%AE%AA%E0%AF%81%E0%AE%B0%E0%AE%BE%E0%AE%A3%E0%AE%AE%E0%AF%8D/49",
-   "confirmed": false
-  },
-  {
-   "text": "Tirumurai 11 (Nakkeerar)",
-   "ref": "Tirumurukarruppadai",
-   "first_words_ta": "",
-   "gist": "Nakkeerar's Murugan poem, tied by tradition to Murugan helping him; not opened.",
-   "url": "",
-   "confirmed": false
+   "gist": "The Sangam plank given by Shiva (page read; the word is also machine-checked in the tamil-lore set).",
+   "url": "https://ta.wikisource.org/wiki/%E0%AE%A4%E0%AE%BF%E0%AE%B0%E0%AF%81%E0%AE%B5%E0%AE%BF%E0%AE%B3%E0%AF%88%E0%AE%AF%E0%AE%BE%E0%AE%9F%E0%AE%B1%E0%AF%8D_%E0%AE%AA%E0%AF%81%E0%AE%B0%E0%AE%BE%E0%AE%A3%E0%AE%AE%E0%AF%8D/51",
+   "confirmed": true
   }
  ],
  "shiva-nayanmar": [
@@ -443,22 +435,6 @@
    "gist": "The parents prepare their own son for the feast.",
    "url": "https://thevaaram.org/thirumurai_1/onepage.php?thiru=12&Song_idField=12360",
    "confirmed": true
-  },
-  {
-   "text": "Tirukkovaiyar / Tiruvasagam (Manikkavasagar)",
-   "ref": "Tirukkovaiyar",
-   "first_words_ta": "",
-   "gist": "Manikkavasagar's love poem in Tirumurai 8 (Song_idField 8201 onwards on thevaaram.org); no specific saint episode linked to the songs; not read.",
-   "url": "",
-   "confirmed": false
-  },
-  {
-   "text": "Periya Puranam",
-   "ref": "Kachchiyappar is Kanda Puranam's author, not a Periya Puranam saint",
-   "first_words_ta": "",
-   "gist": "Song 1114 names Kachchiyappar; his biography is not in Periya Puranam. No source found online in this pass.",
-   "url": "",
-   "confirmed": false
   }
  ],
  "shiva-kurundam": [
@@ -485,14 +461,6 @@
    "gist": "Lord who sat under the kurundam tree is listed among his deeds.",
    "url": "https://thevaaram.org/thirumurai_1/onepage.php?thiru=8&Song_idField=8102",
    "confirmed": true
-  },
-  {
-   "text": "Periya Puranam",
-   "ref": "Manikkavasagar has no puranam in Periya Puranam",
-   "first_words_ta": "",
-   "gist": "Not Sekkizhar's subject; Manikkavasagar's story comes from the Tiruvilaiyadal Puranam and Vadavurar Puranam.",
-   "url": "",
-   "confirmed": false
   }
  ],
  "shiva-pranava": [
@@ -583,22 +551,6 @@
    "gist": "Retells Brahma's failure to explain Om, his imprisonment, and Shiva receiving the Upadesa; cites the Tamil Skanda Puranam; does not name Swamimalai.",
    "url": "https://kaumaram.com/articles/esoteric_anubhuti/esoteric_kandar_anubhuti36.html",
    "confirmed": true
-  },
-  {
-   "text": "Swamimalai sthala purana",
-   "ref": "Swamimalai as the site where Murugan taught Shiva (as Swaminatha)",
-   "first_words_ta": "",
-   "gist": "Tradition in temple lore; I did not find a text with verse numbers. Kanda Puranam above does not name Swamimalai.",
-   "url": "",
-   "confirmed": false
-  },
-  {
-   "text": "Skanda Purana (Sankara Samhita, Sanskrit)",
-   "ref": "Chapter for the Brahma imprisonment not found",
-   "first_words_ta": "",
-   "gist": "A search found only a devotional summary; no chapter number located.",
-   "url": "",
-   "confirmed": false
   }
  ],
  "shiva-skanda-birth": [
@@ -707,20 +659,12 @@
    "confirmed": true
   },
   {
-   "text": "Mahabharata",
-   "ref": "Shalya Parva 44.6-13",
+   "text": "Mahabharata (Critical Edition), Shalya parva",
+   "ref": "Shalya 44.5-14 (the gods gather for Skanda's installation)",
    "first_words_ta": "",
-   "gist": "Outline of the birth stages as cited in Tagare's note; the Mahabharata text itself was not opened.",
-   "url": "",
-   "confirmed": false
-  },
-  {
-   "text": "Shiva Purana",
-   "ref": "Rudra Samhita, Kumara Khanda",
-   "first_words_ta": "",
-   "gist": "Another birth account; not opened in this pass.",
-   "url": "",
-   "confirmed": false
+   "gist": "Lists the gods and sages who assemble when Skanda is installed as commander (GRETIL Critical Edition lines read). This is the coronation, not the birth.",
+   "url": "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/2_epic/mbh/mbh_09_u.htm",
+   "confirmed": true
   }
  ]
 }

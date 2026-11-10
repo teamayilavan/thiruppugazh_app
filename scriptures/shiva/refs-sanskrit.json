@@ -108,13 +108,6 @@
    "gist": "Churning of the ocean; Shiva swallows the poison",
    "url": "https://www.wisdomlib.org/hinduism/book/the-skanda-purana/d/doc365957.html",
    "confirmed": true
-  },
-  {
-   "src": "Mahabharata (Critical Edition)",
-   "ref": "MBh 13,14.116; 13,17.40",
-   "gist": "Only the epithet Nilakantha; no poison narrative found in CE Adi 1,15-17 by keyword search",
-   "url": "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/2_epic/mbh/mbh_13_u.htm",
-   "confirmed": false
   }
  ],
  "shiva-daksha": [
@@ -161,29 +154,7 @@
    "confirmed": true
   }
  ],
- "shiva-yama": [
-  {
-   "src": "Bhagavata Purana",
-   "ref": "SB 12.10.3-19",
-   "gist": "Markandeya in trance seen by Shiva and Uma and granted a boon (no Yama kicking in the Bhagavata)",
-   "url": "https://vedabase.io/en/library/sb/12/10/",
-   "confirmed": false
-  },
-  {
-   "src": "Linga Purana",
-   "ref": "Linga Purana 1.30 (Sage Shveta)",
-   "gist": "Shiva appears and humbles Kala/Yama who came for the devotee Shveta: same motif as Markandeya, different devotee",
-   "url": "https://www.wisdomlib.org/hinduism/book/the-linga-purana/d/doc1195243.html",
-   "confirmed": false
-  },
-  {
-   "src": "Skanda Purana",
-   "ref": "Skanda Purana, Kedara-khanda ch.32 (Burning of Kala)",
-   "gist": "Shiva burns Kala to save King Shveta: Markandeya-type story",
-   "url": "https://www.wisdomlib.org/hinduism/book/the-skanda-purana/d/doc365981.html",
-   "confirmed": false
-  }
- ],
+ "shiva-yama": [],
  "shiva-brahma-head": [
   {
    "src": "Shiva Purana",
@@ -200,13 +171,6 @@
    "confirmed": true
   },
   {
-   "src": "Linga Purana",
-   "ref": "Linga Purana 1.17",
-   "gist": "Context only: the chapter is the Lingodbhava (fiery pillar). An editor's note on the page says Brahma lost his fifth head, in one version for lying, in another for speaking disrespectfully of Shiva",
-   "url": "https://www.wisdomlib.org/hinduism/book/the-linga-purana/d/doc1195230.html",
-   "confirmed": false
-  },
-  {
    "src": "Shiva Purana",
    "ref": "Shiva Purana, Satarudra-samhita ch.9 (Bhairava)",
    "gist": "After cutting off Brahma's head, Bhairava wanders the three worlds with the skull in his hand in the Kapalika vow, pursued by Brahmahatya (the guilt of killing a brahmin)",
@@ -215,13 +179,6 @@
   }
  ],
  "shiva-bhikshatana": [
-  {
-   "src": "Shiva Purana",
-   "ref": "Shiva Purana, Satarudra-samhita ch.31 (Bhikshuvarya)",
-   "gist": "Shiva as mendicant incarnation (a different tale, not the Daruka-forest Bhikshatana)",
-   "url": "https://www.wisdomlib.org/hinduism/book/shiva-purana-english/d/doc226427.html",
-   "confirmed": false
-  },
   {
    "src": "Linga Purana",
    "ref": "Linga Purana 1.29",
@@ -324,13 +281,6 @@
    "gist": "Shiva as a dancing actor",
    "url": "https://www.wisdomlib.org/hinduism/book/shiva-purana-english/d/doc226430.html",
    "confirmed": true
-  },
-  {
-   "src": "Mahabharata (Critical Edition)",
-   "ref": "MBh 13,17.49",
-   "gist": "Name list: nrityapriya, nityanarta (fond of dance)",
-   "url": "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/2_epic/mbh/mbh_13_u.htm",
-   "confirmed": false
   }
  ],
  "shiva-skanda-birth": [
@@ -365,9 +315,9 @@
   {
    "src": "Mahabharata (Critical Edition)",
    "ref": "MBh 3,213-221",
-   "gist": "Skanda born of Agni and Svaha (variant)",
+   "gist": "Vana parva, Markandeya-samasya: a variant birth. Skanda is born of Agni's seed carried by Svaha (214.015: svahaya, in the pit), his mother-claimants come to him (215), he is enthroned as commander of the gods (218) (GRETIL Critical Edition lines read).",
    "url": "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/2_epic/mbh/mbh_03_u.htm",
-   "confirmed": false
+   "confirmed": true
   }
  ]
 }

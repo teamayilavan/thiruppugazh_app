@@ -19,7 +19,7 @@ YK, SK, AK, KK, BK, AYK = "யுத்த_காண்டம்", "சுந்
 
 ep("birth", "Rama's birth and childhood",
    [(B, 18, "18.7–14", "Births of Rama and his brothers; Rama as Vishnu's portion")],
-   [(BK, "திரு_அவதாரப்_படலம்", [])], "Song 68 (Kausalya calling the child) has no exact verse; the allusion is general.")
+   [(BK, "திரு_அவதாரப்_படலம்", [18, 101, 115])], "18: Vishnu tells the gods to be born as vanaras; 101: Kausalya bears him; 115: he is named Rama. Song 68 (Kausalya calling the child) has no exact verse; the allusion is general.")
 ep("tataka", "Tataka killed", [(B, 26, "26.25", "Tataka is felled by Rama's arrow")],
    [(BK, "தாடகை_வதைப்_படலம்", [45, 49])])
 ep("yajna", "Vishwamitra's sacrifice protected", [(B, 30, "30 (whole sarga)", "Rama guards the sacrifice; Subahu killed, Maricha flung away")],
@@ -38,7 +38,8 @@ ep("khara", "Khara, Dushana and Trishira killed", [(A, 30, "30.26–31", "Rama's
    [(AK, "கரன்_வதைப்_படலம்", [127, 131, 136, 158, 161, 182, 185])],
    "Kamba order: Trishira loses two heads (127), fights on (131), falls (136); Dushana loses his head (161); Khara's right arm (182) and head (185).")
 ep("sita-abduction", "Surpanakha mutilated; Ravana carries Sita off", [(A, 18, "18.21", "Lakshmana cuts off Surpanakha's ears and nose"), (A, 49, "49.23", "Ravana carries Sita off through the sky")],
-   [(AK, "சூர்ப்பணகைப்_படலம்", []), (AK, "இராவணன்_சூழ்ச்சிப்_படலம்", [])], "Kamba verses not pinned yet.")
+   [(AK, "சூர்ப்பணகைப்_படலம்", [116]), (AK, "இராவணன்_சூழ்ச்சிப்_படலம்", [72, 73])],
+   "116: Rama learns that Lakshmana cut off Surpanakha's ears and nose. 72-73: in Kamba Ravana does not touch Sita; he digs up the ground a yojana deep around her hut and rises into the sky with it.")
 ep("sita-jewels", "Sita's dropped jewels", [(K, 6, "6.11–20", "Sugriva shows Rama the ornaments and cloth Sita dropped")], [], "Kamba not located.")
 ep("maricha", "Maricha as the golden deer", [(A, 44, "44.16–23", "Maricha struck by Rama's arrow, cries in Rama's voice, dies")],
    [(AK, "மாரீசன்_வதைப்_படலம்", [43, 47, 75, 77, 80])],
@@ -53,7 +54,8 @@ ep("vali", "Vali killed", [(K, 16, "16.32–36", "Rama draws and releases the ar
 ep("sugriva-crown", "Sugriva crowned", [(K, 26, "26 (whole sarga)", "Sugriva's coronation")],
    [(KK, "அரசியற்_படலம்", [5])], "In Kamba Lakshmana places the crown on Sugriva at Rama's order (verse 5).")
 ep("army-march", "The vanara army marches to Lanka", [(Y, 4, "4.62–70", "The army marches south, eager for Sita's release")],
-   [(KK, "தானை_காண்_படலம்", [])])
+   [(KK, "தானை_காண்_படலம்", [1, 5]), (YK, "கடல்_காண்_படலம்", [1, 2])],
+   "Kamba spreads the march: the vanara hosts gather and set out in Kishkindha (1, 5: Kesari goes like a sea), and Rama reaches the sea with the army at the start of the Yuddha Kandam (1: the host fills the shore; 2: Rama sees the sea).")
 ep("lanka-burnt", "Hanuman burns Lanka", [(S, 53, "53.3–5", "Ravana orders the monkey's tail burnt"), (S, 54, "54.6–47", "Hanuman leaps from roof to roof and burns the city")],
    [(SK, "இலங்கை_எரியூட்டு_படலம்", [1, 6, 32, 37])])
 ep("ocean-arrow", "Rama's anger at the ocean", [(Y, 21, "21.17–26", "Rama threatens to dry the ocean, takes the bow and looses the arrow")],
@@ -78,7 +80,7 @@ ep("atikaya", "Atikaya killed", [(Y, 71, "71.111", "Lakshmana cuts off his head"
 ep("indrajit", "Indrajit killed", [(Y, 90, "90 (whole sarga)", "Lakshmana kills Indrajit")],
    [(YK, "இந்திரசித்து_வதைப்_படலம்", [51, 53])])
 ep("army-destroyed", "Ravana's army destroyed", [(Y, 93, "93.7–34", "Rama destroys the rakshasa troops")],
-   [(YK, "படைத்_தலைவர்_வதைப்_படலம்", [])], "General battle; no single verse.")
+   [(YK, "படைத்_தலைவர்_வதைப்_படலம்", [36, 52])], "36: vanaras and rakshasas join battle; 52: the rakshasa army is destroyed and a flood of blood spreads.")
 ep("heads-cut", "Ravana's heads cut off and regrow", [(Y, 107, "107.54–58", "Rama cuts Ravana's head; it regrows; a hundred are cut")],
    [(YK, "இராவணன்_வதைப்_படலம்", [148, 149, 151, 154, 161, 162])])
 ep("ravana-death", "Ravana killed by the Brahma weapon", [(Y, 108, "108.15–22", "Rama looses the Brahma weapon; it tears Ravana's heart; he falls from his chariot")],

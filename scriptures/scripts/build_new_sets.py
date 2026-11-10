@@ -531,6 +531,9 @@ CHECKS["murugan"] += [
     ("kpa", "1220", "நீண்மலையாகி", "cursed to stay a mountain"), ("kpa", "1221", "வேற்படைதன்னிற்பின்னாள்விளிகுதி", "to die later by Murugan's Vel"), ("kp", "807", "பொதியமலை", "Shiva sends Agastya to Pothigai"),
 ]
 
+CHECKS["murugan"] += [("kp", "640", "மலையரசன்றன்மகள்", "Parvati as the mountain king's daughter"), ("kpd", "45", "யிராவத்", "Deivayanai travels on Airavata")]
+CHECKS["devi"] += [("kpy", "992", "காளிமேலவர்தொகையினை", "Kali's hosts in the war"), ("kpy", "1251", "காளி", "Kali amid the dead"), ("kpy", "1416", "சண்டிகை", "Chandika joins the battle"), ("kpy", "2386", "உமையவள்கோட்டத்தினின்று", "the Kanchi temple of Uma named")]
+
 REF2 = {
     "n-sundarar-wedding": [PPX("12000", "Sundarar: Thadutatkonda Puranam (Thirumalai Sargam)", "vv. ~189-230; 189 and 220 checked", "the old man demands to see the bond; Sundarar scorns him")],
     "n-sundarar-messenger": [PPX("12290", "Eyarkon Kalikkama Nayanar Puranam", "v. 8 (Shiva sent as messenger), v. 337 (at Paravai's house); both checked")],
@@ -566,12 +569,23 @@ REF2 = {
     "m-jayanta": [KPM("Mahendra Kandam", "pmuni0286_01", "padalam 9 Jayantan Pulambu Padalam, v. 337 (Jayantan in prison with the devas); padalam 11, v. 450 (Veerabahu reaches the prison)"),
                   KPM("Yuddha Kandam", "pmuni0293_03", "padalam 16 Meetchip Padalam, vv. 2935-2943 (Murugan orders Veerabahu to bring Jayantan and the devas back from prison; Veerabahu goes and frees them)"),
                   KPM("Deva Kandam", "pmuni0304", "v. 36 (Indra rules the golden city again), v. 42 (Sura dead, the devas freed from prison)")],
+    "m-airavata": [KPR("v. 1276 Airavata tends Deivayanai as the Milk Ocean tended Lakshmi (checked)"),
+                   KPM("Deva Kandam", "pmuni0304", "v. 45 (Deivayanai leaves Meru on Airavata for Thiruparankundram)")],
+    "g-valli-elephant": [KPM("Daksha Kandam", "pmuni0318_02", "padalam 24, vv. 1910-1915: Murugan thinks of the elephant-faced one, Vinayaka comes as a roaring elephant (the text says elephant; 'one-tusked' is not stated), Valli runs back and embraces the old man, and Murugan thanks Vinayaka, who goes", "all of these verses are machine-checked (1910-1912)")],
+    "g-race": [NOT_IN("Kanda Puranam, Utpatti, Daksha and Deva kandams (keyword search)", "no passage about a race round the world or a fruit; the contest is later Shaiva and Pazhani tradition and the songs")],
+    "g-scribe": [NOT_IN("Mahabharata Critical Edition, Adi parva (GRETIL text searched)", "no passage in which Ganesha writes the epic; the text has only an invocation to Ganapati. The scribe story is in later recensions and tradition")],
+    "d-battlefield": [KPM("Yuddha Kandam", "pmuni0289_03", "vv. 992 (Kali's hosts), 1251 (Kali amid the dancing headless bodies)", "the war is full of Kali, her hosts and fiends feasting"),
+                      KPM("Yuddha Kandam", "pmuni0293_01", "vv. 1394-1436 (Chandika / Kali arrives with her army and fights Murugan's host)", "the 'kulavai' cry is not in these verses")],
+    "d-himavan": [KPR("v. 640 Shiva, as an old man, speaks of 'the daughter of the king of the rich mountain' (Parvati) doing penance (checked)", "Parvati as Himavan's daughter is named in the first kandam; the songs' 'boon after Himavan's penance' was not found")],
+    "t-agastya": [KPR("vv. 805-808 Shiva sends Agastya (the Tamil sage) south to Mount Pothigai; 807 checked"),
+                  KPM("Asura Kandam", "pmuni0268", "vv. 1214, 1222, 1224 call Agastya the Tamil sage (the 'true Tamil' sage)", "text says nothing about Murugan teaching him")],
     "d-mahisha": [R("Devi Mahatmya, Madhyama Charitra", "ch. 2 (Mahishasura's armies), ch. 3 (Mahishasura slain), ch. 4 (hymn of the gods)", "Markandeya Purana chapters 81-93 in the Banerjee edition, 78-90 in the Venkatesh Press edition; chapter titles taken from two printed-edition descriptions found by search, the Sanskrit text was not fetched", SEARCH)],
     "d-kamakshi-32": [NOT_IN("Kanchi Puranam of Sivagnana Munivar, parts 1-3 (vv. 1-1691), searched on Project Madurai", "the words for 'thirty-two' (முப்பத்திரண்டு and spelling variants) do not occur in the three parts; Kamakshi is named only in invocation v. 5. Earlier searches also found no source; the tradition rests on the songs' commentary")],
     "d-kali-dance": [R("Thiruvalangadu sthala puranam", "", "the dance contest and the raised foot are told on every temple page; accounts differ (17 poses; an earring or an anklet gem; left or right leg)", SEARCH),
                      R("Mootha Tirupathigam (Karaikkal Ammaiyar, Tirumurai 11)", "", "named by one source as the hymn of Tiruvalangadu; an Appar hymn on the contest is claimed but no hymn number was found", SEARCH)],
     "d-kanchi": [R("Ekambareswarar temple legend (Kanchi)", "", "sand lingam under the mango tree, the flooding Vegavati, bangle marks; several temple websites agree", SEARCH),
                  R("Kanchi Puranam (Sivagnana Munivar), part 1 (Project Madurai text)", "invocation vv. 4-6", "v. 4: Parvati's worship is broken off when the river Kampa rises; she clasps the lingam, and the Lord of the one mango tree (oru ma) is praised; v. 6 praises Kamakkottiyammai who gives the mark of her breasts (4 and 6 checked)", PMS, PM_URL + "pmuni0292.html"),
+                 KPM("Yuddha Kandam", "pmuni0293_03", "v. 2386 names the temple of Uma at Kanchi (Kanchi umaiyaval kottam)", "Kanda Puranam knows the Kanchi shrine of the Goddess"),
                  NOT_IN("Kanchi Puranam, parts 1-3 (vv. 1-1691, padalams 1-50)", "the three parts on Project Madurai give the Ekambam story only in the invocation; the padalam on Ekambam itself is not in them, so the bangle marks and the Vegavati detail rest on temple tradition")],
     "d-pathiri": [R("Thiruppathirippuliyur sthala puranam", "", "Parvati worshipped here after 1007 other places, in the formless state, under the pathiri tree; the shrine marks the spot with a bare pedestal (temple websites)", SEARCH)],
     "t-sangam": [TVPR(51, "Sangap Palakai Thanda", "", "the Sangam plank (51 checked)"), TVPR(55, "Sangaththar Kalagam Theertha", "", "Rudrasarman settles the poets' quarrel (55 checked)")],
