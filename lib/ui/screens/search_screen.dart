@@ -168,6 +168,9 @@ class _SearchScreenState extends State<SearchScreen> {
       context,
     ).lyricsLanguage;
     return GestureDetector(
+      // A tap on empty space only closes the keyboard; to a screen reader it is
+      // not a control, so it must not appear as a full-screen unlabeled button.
+      excludeFromSemantics: true,
       onTap: () {
         _searchFocusNode.unfocus();
       },
@@ -191,6 +194,7 @@ class _SearchScreenState extends State<SearchScreen> {
                     ),
                     suffixIcon: _searchController.text.isNotEmpty
                         ? IconButton(
+                            tooltip: l10n.clearSearch,
                             icon: const Icon(Icons.clear),
                             onPressed: () {
                               _searchController.clear();

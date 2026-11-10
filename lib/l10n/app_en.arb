@@ -288,5 +288,6 @@
   "keepScreenOnReadingHint": "Stops the screen from dimming on a song page. Chanting mode always does this.",
   "recentSearches": "Recent searches",
   "clearRecentSearches": "Clear",
-  "filterLibraryHint": "Filter by song or text"
+  "filterLibraryHint": "Filter by song or text",
+  "clearSearch": "Clear search"
 }

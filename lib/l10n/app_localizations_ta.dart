@@ -735,4 +735,7 @@ class AppLocalizationsTa extends AppLocalizations {
 
   @override
   String get filterLibraryHint => 'பாடல் அல்லது உரையால் வடிகட்டு';
+
+  @override
+  String get clearSearch => 'தேடலை அழி';
 }

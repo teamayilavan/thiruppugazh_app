@@ -278,6 +278,7 @@ class _HomeScreenState extends State<HomeScreen> {
             hint: _isRandomLoading ? l10n.loading : l10n.tapToViewRandomSong,
             child: FloatingActionButton.small(
               heroTag: 'fab_random_song',
+              tooltip: l10n.randomSong,
               onPressed: _isRandomLoading ? null : _openRandomSong,
               child: _isRandomLoading
                   ? const SizedBox(
@@ -291,6 +292,7 @@ class _HomeScreenState extends State<HomeScreen> {
           const SizedBox(height: 16),
           FloatingActionButton(
             heroTag: 'fab_search',
+            tooltip: l10n.globalSearch,
             onPressed: () {
               Navigator.of(context).push(
                 MaterialPageRoute(builder: (context) => const SearchScreen()),

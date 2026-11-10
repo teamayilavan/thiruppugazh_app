@@ -2,6 +2,7 @@ import 'package:thiruppugazh/data/models/category_model.dart';
 import 'package:thiruppugazh/data/models/highlight_model.dart';
 import 'package:thiruppugazh/data/models/link_model.dart';
 import 'package:thiruppugazh/data/models/note_model.dart';
+import 'package:thiruppugazh/data/models/search_filter.dart';
 import 'package:thiruppugazh/data/models/song_model.dart';
 import 'package:thiruppugazh/data/repositories/song_repository.dart';
 
@@ -70,6 +71,13 @@ class FakeSongRepo extends SongRepository {
   }
 
   @override
+  Future<List<Song>> searchSongsWithFilter(SearchFilter filter) async {
+    final q = filter.query.trim().toLowerCase();
+    if (q.isEmpty) return [];
+    return testSongs.where((s) => s.title.toLowerCase().contains(q)).toList();
+  }
+
+  @override
   Future<List<Map<String, dynamic>>> getAllTemples() async => [];
 
   @override
@@ -95,4 +103,46 @@ class FakeSongRepo extends SongRepository {
 
   @override
   Future<List<Map<String, dynamic>>> getLinksWithSongs() async => [];
+}
+
+/// [FakeSongRepo] with some highlights, notes and links in the Library.
+class PopulatedFakeSongRepo extends FakeSongRepo {
+  @override
+  Future<List<Map<String, dynamic>>> getHighlightsWithSongs() async => [
+    for (final s in testSongs.take(3))
+      {
+        'id': s.id,
+        'song_id': s.id,
+        'verse_index': 0,
+        'text_content': 'a highlighted line',
+        'created_at': '2026-01-01',
+        'song_title': s.title,
+      },
+  ];
+
+  @override
+  Future<List<Map<String, dynamic>>> getNotesWithSongs() async => [
+    for (final s in testSongs.take(3))
+      {
+        'id': s.id,
+        'song_id': s.id,
+        'content': 'My note on ${s.title}',
+        'created_at': '2026-01-01',
+        'updated_at': '2026-01-01',
+        'song_title': s.title,
+      },
+  ];
+
+  @override
+  Future<List<Map<String, dynamic>>> getLinksWithSongs() async => [
+    for (final s in testSongs.take(3))
+      {
+        'id': s.id,
+        'song_id': s.id,
+        'url': 'https://youtu.be/${s.id}',
+        'title': 'A recital of ${s.title}',
+        'created_at': '2026-01-01',
+        'song_title': s.title,
+      },
+  ];
 }

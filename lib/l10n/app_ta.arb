@@ -241,5 +241,6 @@
   "keepScreenOnReadingHint": "பாடல் பக்கத்தில் திரை மங்காமல் இருக்கும். பாராயண முறையில் எப்போதும் இவ்வாறே இருக்கும்.",
   "recentSearches": "சமீபத்திய தேடல்கள்",
   "clearRecentSearches": "அழி",
-  "filterLibraryHint": "பாடல் அல்லது உரையால் வடிகட்டு"
+  "filterLibraryHint": "பாடல் அல்லது உரையால் வடிகட்டு",
+  "clearSearch": "தேடலை அழி"
 }

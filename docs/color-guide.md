@@ -42,6 +42,8 @@ Source of truth: `lib/theme/app_theme.dart` — `AppColors` class and `AppColorE
 |---|---|---|
 | `primary` | `#80AF81` | `#609755` |
 | `onPrimary` | `#0D3619` | `#ECECEC` |
+| `primaryContainer` | `#80AF81` (default) | `#2F7340` (`dprimaryContainer`, darkened for 4.5:1 text contrast) |
+| `onPrimaryContainer` | `#0D3619` (default) | `#ECECEC` |
 | `surface` | `#D8EFD3` | `#1F4529` |
 | `onSurface` | `#0D3619` | `#ECECEC` |
 | `error` | `Colors.red` | `Colors.red` |

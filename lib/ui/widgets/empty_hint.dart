@@ -17,14 +17,16 @@ class EmptyHint extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    final muted = theme.colorScheme.onSurface.withValues(alpha: 0.6);
+    // The icon can be faint; the words must stay readable (4.5:1).
+    final faint = theme.colorScheme.onSurface.withValues(alpha: 0.6);
+    final muted = theme.colorScheme.onSurface.withValues(alpha: 0.8);
     return Center(
       child: SingleChildScrollView(
         padding: const EdgeInsets.all(32),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Icon(icon, size: 48, color: muted),
+            Icon(icon, size: 48, color: faint),
             const SizedBox(height: 16),
             Text(
               title,

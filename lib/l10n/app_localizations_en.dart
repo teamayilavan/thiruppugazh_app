@@ -729,4 +729,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get filterLibraryHint => 'Filter by song or text';
+
+  @override
+  String get clearSearch => 'Clear search';
 }

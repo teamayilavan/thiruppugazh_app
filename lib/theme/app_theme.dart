@@ -63,6 +63,10 @@ class AppColors {
   static const Color dtext = Color(0xFFECECEC);
   static const Color dtextMuted = Color(0xFFA9A9A9);
   static const Color daccent = Color(0xFF609755);
+
+  /// Filled buttons on the song page. Darker than [daccent] so the light button
+  /// text reaches 4.5:1 contrast (it was 2.9:1 on [daccent]).
+  static const Color dprimaryContainer = Color(0xFF2F7340);
 }
 
 // 3. Create your ThemeData objects
@@ -147,9 +151,11 @@ final darkTheme = ThemeData(
     brightness: Brightness.dark,
     primary: AppColors.daccent,
     onPrimary: AppColors.dtext,
+    primaryContainer: AppColors.dprimaryContainer,
+    onPrimaryContainer: AppColors.dtext,
     secondary: AppColors.daccent,
     onSecondary: AppColors.dtext,
-    secondaryContainer: AppColors.daccent,
+    secondaryContainer: AppColors.dprimaryContainer,
     onSecondaryContainer: AppColors.dtext,
     surface: AppColors.dbackground,
     onSurface: AppColors.dtext,
@@ -162,6 +168,12 @@ final darkTheme = ThemeData(
   ),
   outlinedButtonTheme: OutlinedButtonThemeData(
     style: OutlinedButton.styleFrom(foregroundColor: AppColors.dtext),
+  ),
+  filledButtonTheme: FilledButtonThemeData(
+    style: FilledButton.styleFrom(
+      backgroundColor: AppColors.dprimaryContainer,
+      foregroundColor: AppColors.dtext,
+    ),
   ),
   extensions: const <ThemeExtension<dynamic>>[
     AppColorExtension(

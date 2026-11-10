@@ -214,6 +214,7 @@ class _PickSongScreenState extends State<PickSongScreen> {
                   ),
                   suffixIcon: _controller.text.isNotEmpty
                       ? IconButton(
+                          tooltip: l10n.clearSearch,
                           icon: const Icon(Icons.clear),
                           onPressed: () {
                             _controller.clear();
