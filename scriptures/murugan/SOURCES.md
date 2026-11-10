@@ -18,7 +18,7 @@
 
 ## Verse checks (re-run on every build)
 
-Texts are cached in `scripts/.cache/` (git-ignored): `pp_all.json` = Periya Puranam sections from thevaaram.org (id 12000+10n = puranam n, verse numbers restart in each), `tvp.json` = Tiruvilaiyadal Puranam padalam pages on Tamil Wikisource, `kp_verses.json` = Kanda Puranam on Tamil Wikisource (global verse numbers, first kandam and the start of the second only); `kp_mahendra.json`, `kp_yuddha.json`, `kp_deva.json` = the Mahendra, Yuddha and Deva kandams from Project Madurai's Unicode text, made by `parse_kp_pm.py` (verse numbers run within each kandam; the Yuddha page omits verses 894, 916-925 and 1901). A line passes if the word occurs in that verse or page once spaces are removed.
+Texts are cached in `scripts/.cache/` (git-ignored): `pp_all.json` = Periya Puranam sections from thevaaram.org (id 12000+10n = puranam n, verse numbers restart in each), `tvp.json` = Tiruvilaiyadal Puranam padalam pages on Tamil Wikisource, `kp_verses.json` = Kanda Puranam on Tamil Wikisource (global verse numbers, first kandam and the start of the second only); `kp_mahendra.json`, `kp_yuddha.json`, `kp_deva.json`, `kp_daksha.json`, `kp_asura.json` = the Mahendra, Yuddha, Deva, Daksha and Asura kandams from Project Madurai's Unicode text, made by `parse_kp_pm.py` (verse numbers run within each kandam; the Yuddha page omits verses 894, 916-925 and 1901). A line passes if the word occurs in that verse or page once spaces are removed.
 
 | Text | Location | Word | Shows | Result |
 |---|---|---|---|---|
@@ -61,3 +61,24 @@ Texts are cached in `scripts/.cache/` (git-ignored): `pp_all.json` = Periya Pura
 | Kanda Puranam, Deva Kandam verse | 46 | திருப்பரங்குன்றிடை | Deivayanai arrives at Thiruparankundram | ok |
 | Kanda Puranam, Deva Kandam verse | 86 | பரங்குன்றில்வைகினான் | Murugan stays at Thiruparankundram | ok |
 | Kanda Puranam, Deva Kandam verse | 87 | தெய்வயானை | Indra gives Deivayanai | ok |
+| Kanda Puranam, Daksha Kandam verse | 1851 | தினைப்புனத்தைக் | Valli guards the millet field | ok |
+| Kanda Puranam, Daksha Kandam verse | 1854 | தணிகை | Murugan at Tiruttani first | ok |
+| Kanda Puranam, Daksha Kandam verse | 1865 | வேட்டுவக்கோலத்தைக்கொடுகுமரன்தோன்றினான் | Murugan appears in a hunter's form | ok |
+| Kanda Puranam, Daksha Kandam verse | 1875 | வேங்கையின்உருவமாகி | Murugan stands as a Vengai tree | ok |
+| Kanda Puranam, Daksha Kandam verse | 1880 | முளைத்ததென்னா | Valli: a new tree has sprung up | ok |
+| Kanda Puranam, Daksha Kandam verse | 1882 | மானுடநல்வடிவங்கொடுநின்றான் | he takes a human form again | ok |
+| Kanda Puranam, Daksha Kandam verse | 1894 | விருத்தவேடமதுகொண்டு | he takes an old ascetic's guise | ok |
+| Kanda Puranam, Daksha Kandam verse | 1900 | பசிநோய | he complains of hunger | ok |
+| Kanda Puranam, Daksha Kandam verse | 1902 | தெண்ணீர் | he asks for water | ok |
+| Kanda Puranam, Daksha Kandam verse | 1910 | தந்திமுகத்தெந்தைதனை | he thinks of the elephant-faced one | ok |
+| Kanda Puranam, Daksha Kandam verse | 1911 | தந்திக்கடவுள் | the elephant god comes | ok |
+| Kanda Puranam, Daksha Kandam verse | 1912 | இவ்வேழங்காத்தருள்க | Valli begs the old man to save her from the elephant | ok |
+| Kanda Puranam, Daksha Kandam verse | 1916 | முந்நான்குதோளும் | the true twelve-armed form | ok |
+| Kanda Puranam, Daksha Kandam verse | 1996 | வேங்கைப்பொன்றிகழ்அதளின்மீது | seated in her father's house on a Vengai hide | ok |
+| Kanda Puranam, Daksha Kandam verse | 1999 | தண்புனல்தாரை | Nambi pours the water of giving | ok |
+| Kanda Puranam, Asura Kandam verse | 1214 | மெய்த்தமிழ்முனிவன் | Agastya the Tamil sage | ok |
+| Kanda Puranam, Asura Kandam verse | 1214 | குன்றுருக்கொண்டு | Krouncha takes a mountain form | ok |
+| Kanda Puranam, Asura Kandam verse | 1219 | குறுமுனிபாணித்தண்டால் | Agastya strikes it with his staff | ok |
+| Kanda Puranam, Asura Kandam verse | 1220 | நீண்மலையாகி | cursed to stay a mountain | ok |
+| Kanda Puranam, Asura Kandam verse | 1221 | வேற்படைதன்னிற்பின்னாள்விளிகுதி | to die later by Murugan's Vel | ok |
+| Kanda Puranam verse (Utpatti) | 807 | பொதியமலை | Shiva sends Agastya to Pothigai | ok |

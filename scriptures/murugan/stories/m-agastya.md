@@ -4,13 +4,14 @@
 
 `m-agastya` | Murugan's own lore (Kanda Puranam) | 7 songs
 
-The songs say Murugan taught the sage Agastya, who dwells on Mount Pothigai, the essence of Tamil knowledge. The Kanda Puranam text checked has no such passage in its first kandam.
+The songs say Murugan taught the sage Agastya, who dwells on Mount Pothigai, the essence of Tamil knowledge. A keyword search of all six kandams of the Kanda Puranam found no verse in which Murugan teaches Agastya. In the text Shiva sends Agastya south to Pothigai (Utpatti 805-808) and he is called the Tamil sage (Asura Kandam 1214, 1224); Murugan's only dealing with him is that his Vel later ends the mountain Agastya cursed (Krouncha). So this belongs to the songs and wider tradition, not to the Kanda Puranam.
 
 ## References
 
 | Source | Reference | Note | Status |
 |---|---|---|---|
-| Skanda Purana; Tamil tradition |  |  | from memory, not opened |
+| Kanda Puranam (Kachiyappar), Asura Kandam (Project Madurai text) | Agastya is the 'Tamil sage' (vv. 1214, 1222, 1224) [https://projectmadurai.org/pm_etexts/utf8/pmuni0268.html] | he is called a master of Tamil but is not said to be taught by Murugan | machine-read from Project Madurai (Unicode text); re-checked on every build |
+| Kanda Puranam, all six kandams (Project Madurai text; Wikisource for Utpatti) | not located | a keyword search found no verse in which Murugan teaches Agastya; the nearest are Shiva sending Agastya south to Mount Pothigai (Utpatti 805-808) and the Krouncha curse. The tradition rests on the songs and on Arunagiri's own accounts | searched, not found |
 
 Assignments start KEYWORD-LEVEL: a song is listed when its English commentary (and, where possible, a Tamil lyric line) matches the story. A story with a 'Hand-read notes' section was then read (in full, or the doubtful part, as that section says) and wrong songs removed; other stories were not. Confidence: **t** = a Tamil lyric line matched and the commentary agrees; **c** = commentary only (no Tamil keyword line found); **low** = commentary did not match, check by reading the song.
 

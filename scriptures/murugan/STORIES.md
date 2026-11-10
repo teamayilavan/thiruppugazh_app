@@ -11,7 +11,7 @@
 | Story | Songs | Primary refs | File |
 |---|---|---|---|
 | Surapadman as a mango tree split by the Vel | 73 | 1 | [m-mango-sura](stories/m-mango-sura.md) |
-| The Krouncha mountain pierced | 217 | 1 | [m-krouncha](stories/m-krouncha.md) |
+| The Krouncha mountain pierced | 217 | 2 | [m-krouncha](stories/m-krouncha.md) |
 | The sea dried by the Vel | 48 | 2 | [m-sea-dried](stories/m-sea-dried.md) |
 | The peacock and the cock | 3 | 1 | [m-peacock-cock](stories/m-peacock-cock.md) |
 | Tarakasura | 15 | 1 | [m-tarakasura](stories/m-tarakasura.md) |
@@ -22,7 +22,7 @@
 | Story | Songs | Primary refs | File |
 |---|---|---|---|
 | Brahma imprisoned for failing the Pranava | 15 | 2 | [m-brahma-prison](stories/m-brahma-prison.md) |
-| Murugan teaches Agastya | 7 | 1 | [m-agastya](stories/m-agastya.md) |
+| Murugan teaches Agastya | 7 | 2 | [m-agastya](stories/m-agastya.md) |
 
 ## Birth and childhood
 
@@ -34,6 +34,6 @@
 
 | Story | Songs | Primary refs | File |
 |---|---|---|---|
-| Murugan woos Valli in disguise | 25 | 1 | [m-valli-disguise](stories/m-valli-disguise.md) |
+| Murugan woos Valli in disguise | 25 | 2 | [m-valli-disguise](stories/m-valli-disguise.md) |
 | Murugan and Deivayanai, Indra's daughter | 42 | 2 | [m-deivayanai](stories/m-deivayanai.md) |
 | Airavata raises Deivayanai | 12 | 1 | [m-airavata](stories/m-airavata.md) |

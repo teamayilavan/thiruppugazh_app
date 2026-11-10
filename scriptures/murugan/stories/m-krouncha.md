@@ -4,13 +4,14 @@
 
 `m-krouncha` | Murugan's own lore (Kanda Puranam) | 217 songs
 
-In the Kanda Puranam Krouncha is an asura whom Agastya's curse turned into a mountain; the demon Tarakan lives beside it in a city of illusion, and Krouncha's own magic troubles Murugan's host (Utpatti Kandam 1329-1336, 1416-1433). Murugan's Vel bursts Tarakan and the mountain together (1509-1516). The songs also use 'Krouncha pierced' for the whole war.
+In the Kanda Puranam Krouncha is an asura who takes the form of a mountain to trap the sage Agastya on his journey south; Agastya strikes it with his staff and curses him to stay a mountain until Murugan's Vel destroys him (Asura Kandam, padalam 24, vv. 1210-1222, Project Madurai text). The demon Tarakan lives beside it in a city of illusion, and Krouncha's own magic troubles Murugan's host (Utpatti Kandam 1329-1336, 1416-1433). Murugan's Vel bursts Tarakan and the mountain together (1509-1516). The songs also use 'Krouncha pierced' for the whole war.
 
 ## References
 
 | Source | Reference | Note | Status |
 |---|---|---|---|
-| Kanda Puranam (Kachiyappar), Utpatti Kandam | the mountain is introduced in the Tarakan padalam, vv. 1329-1331 (1329 checked) [https://ta.wikisource.org/wiki/%E0%AE%95%E0%AE%A8%E0%AF%8D%E0%AE%A4_%E0%AE%AA%E0%AF%81%E0%AE%B0%E0%AE%BE%E0%AE%A3%E0%AE%AE%E0%AF%8D] | the great battle is in the Yuddha Kandam, which is not on Wikisource | machine-read from Tamil Wikisource (first kandam and the start of the second only) |
+| Kanda Puranam (Kachiyappar), Utpatti Kandam | the mountain is introduced in the Tarakan padalam, vv. 1329-1331 (1329 checked); the Vel bursts Tarakan and the mountain, vv. 1509-1516 [https://ta.wikisource.org/wiki/%E0%AE%95%E0%AE%A8%E0%AF%8D%E0%AE%A4_%E0%AE%AA%E0%AF%81%E0%AE%B0%E0%AE%BE%E0%AE%A3%E0%AE%AE%E0%AF%8D] | the whole episode is in the first kandam; the Yuddha Kandam is not involved | machine-read from Tamil Wikisource (first kandam and the start of the second only) |
+| Kanda Puranam (Kachiyappar), Asura Kandam (Project Madurai text) | padalam 24 Kiraunja Padalam, vv. 1210-1222: Krouncha takes the form of a mountain to trap Agastya on his way south; Agastya sees through the illusion, strikes it with his staff and curses him to stay a mountain until Murugan's Vel destroys him (1219-1221) [https://projectmadurai.org/pm_etexts/utf8/pmuni0268.html] | this is the origin of the mountain that the songs say Murugan pierced | machine-read from Project Madurai (Unicode text); re-checked on every build |
 
 Assignments start KEYWORD-LEVEL: a song is listed when its English commentary (and, where possible, a Tamil lyric line) matches the story. A story with a 'Hand-read notes' section was then read (in full, or the doubtful part, as that section says) and wrong songs removed; other stories were not. Confidence: **t** = a Tamil lyric line matched and the commentary agrees; **c** = commentary only (no Tamil keyword line found); **low** = commentary did not match, check by reading the song.
 

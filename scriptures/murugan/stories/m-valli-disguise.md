@@ -4,13 +4,14 @@
 
 `m-valli-disguise` | Murugan's own lore (Kanda Puranam) | 25 songs
 
-The songs say Murugan came to Valli, the hunter's daughter, in the millet field as a hunter, an old man and a Vengai tree, and won her. The Kanda Puranam first kandam only foretells Valli and Deivayanai as his wives (vv. 1275-1277); the wooing is in a later kandam not checkable online.
+The Kanda Puranam (Daksha Kandam, padalam 24, vv. 1801-2067) tells it this way. Murugan leaves Mount Kanda for Tiruttani (1854) and then comes to Valli's mountain, where she guards the millet field from the birds (1851, 1866). He appears first as a hunter (1865). When her father Nambi and the hunters come, he stands in the field as a Vengai tree (1875-1881) and turns back into a man when they leave (1882). He returns as an old Saiva ascetic (1894-1896), asks for food and water (1900-1904), and when Valli drives him off (1905-1909) he calls Vinayaka, who comes as an elephant; Valli runs back and clings to the old man (1910-1913). Vinayaka leaves and Murugan shows his six-faced, twelve-armed form (1914-1919). The wedding is held in Nambi's house, with Narada arranging the rites (1996-2000). The text names the Vengai, not the neem some English commentaries say; no neem occurs in the padalam. Text: Project Madurai.
 
 ## References
 
 | Source | Reference | Note | Status |
 |---|---|---|---|
-| Kanda Puranam (Kachiyappar), Utpatti Kandam | v. 1277 names Valli (checked) [https://ta.wikisource.org/wiki/%E0%AE%95%E0%AE%A8%E0%AF%8D%E0%AE%A4_%E0%AE%AA%E0%AF%81%E0%AE%B0%E0%AE%BE%E0%AE%A3%E0%AE%AE%E0%AF%8D] | the wooing is in a later kandam, not on Wikisource | machine-read from Tamil Wikisource (first kandam and the start of the second only) |
+| Kanda Puranam (Kachiyappar), Utpatti Kandam | v. 1277 names Valli (checked) [https://ta.wikisource.org/wiki/%E0%AE%95%E0%AE%A8%E0%AF%8D%E0%AE%A4_%E0%AE%AA%E0%AF%81%E0%AE%B0%E0%AE%BE%E0%AE%A3%E0%AE%AE%E0%AF%8D] | the wooing is in the Daksha Kandam | machine-read from Tamil Wikisource (first kandam and the start of the second only) |
+| Kanda Puranam (Kachiyappar), Daksha Kandam (Project Madurai text) | padalam 24 Valliyammai Tirumana Padalam, vv. 1801-2067: Murugan goes from Tiruttani to Valli's mountain (1854-1866); as a hunter (1865); as a Vengai tree when her father comes (1875-1882); as an old Saiva ascetic asking for food and water (1894-1904); Vinayaka as the elephant (1910-1915); the true form shown (1916-1919); the wedding in Nambi's house (1996-2000) [https://projectmadurai.org/pm_etexts/utf8/pmuni0318_02.html] | the text says Vengai; the songs' English commentary sometimes says 'neem', which does not occur in the padalam | machine-read from Project Madurai (Unicode text); re-checked on every build |
 
 Assignments start KEYWORD-LEVEL: a song is listed when its English commentary (and, where possible, a Tamil lyric line) matches the story. A story with a 'Hand-read notes' section was then read (in full, or the doubtful part, as that section says) and wrong songs removed; other stories were not. Confidence: **t** = a Tamil lyric line matched and the commentary agrees; **c** = commentary only (no Tamil keyword line found); **low** = commentary did not match, check by reading the song.
 
