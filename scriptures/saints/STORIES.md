@@ -22,11 +22,11 @@
 | Story | Songs | Primary refs | File |
 |---|---|---|---|
 | Manikkavasagar and the horses at Perunthurai | 1 | 2 | [n-manikkavasagar](stories/n-manikkavasagar.md) |
-| Shiva carries earth for Vandi's pittu; beaten by the Pandya | 3 | 1 | [n-vandi-pittu](stories/n-vandi-pittu.md) |
+| Shiva carries earth for Vandi's pittu; beaten by the Pandya | 3 | 3 | [n-vandi-pittu](stories/n-vandi-pittu.md) |
 
 ## Other devotees
 
 | Story | Songs | Primary refs | File |
 |---|---|---|---|
 | Kannappar, the hunter devotee | 3 | 1 | [n-kannappar](stories/n-kannappar.md) |
-| Nakkeerar in the cave; Tirumurugatruppadai | 9 | 2 | [n-nakkeerar](stories/n-nakkeerar.md) |
+| Nakkeerar in the cave; Tirumurugatruppadai | 9 | 5 | [n-nakkeerar](stories/n-nakkeerar.md) |

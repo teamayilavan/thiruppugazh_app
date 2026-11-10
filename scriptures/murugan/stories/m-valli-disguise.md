@@ -10,7 +10,7 @@ Murugan came to Valli, the hunter's daughter, in the millet field as a hunter, a
 
 | Source | Reference | Note | Status |
 |---|---|---|---|
-| Kanda Puranam, Valli Thirumanam | kandam not confirmed |  | search result only (tradition) |
+| Kanda Puranam (Kachiyappar), Utpatti Kandam | v. 1277 names Valli (checked) [https://ta.wikisource.org/wiki/%E0%AE%95%E0%AE%A8%E0%AF%8D%E0%AE%A4_%E0%AE%AA%E0%AF%81%E0%AE%B0%E0%AE%BE%E0%AE%A3%E0%AE%AE%E0%AF%8D] | the wooing is in a later kandam, not on Wikisource | machine-read from Tamil Wikisource (first kandam and the start of the second only) |
 
 Assignments start KEYWORD-LEVEL: a song is listed when its English commentary (and, where possible, a Tamil lyric line) matches the story. A story with a 'Hand-read notes' section was then read (in full, or the doubtful part, as that section says) and wrong songs removed; other stories were not. Confidence: **t** = a Tamil lyric line matched and the commentary agrees; **c** = commentary only (no Tamil keyword line found); **low** = commentary did not match, check by reading the song.
 

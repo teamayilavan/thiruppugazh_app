@@ -10,7 +10,7 @@ At Avinashi a boy was swallowed by a crocodile. Years later Sundarar sang to Shi
 
 | Source | Reference | Note | Status |
 |---|---|---|---|
-| Periya Puranam, Sundarar Puranam; Tevaram 7 (Avinashi) | pathigam not checked |  | from memory, not opened |
+| Periya Puranam (all sections 12000-12700 downloaded) | not located | the word 'crocodile' (முதலை) occurs only in unrelated verses; the Avinashi story is tradition and the Tevaram 7 hymn, not the Puranam | searched, not found |
 
 Assignments start KEYWORD-LEVEL: a song is listed when its English commentary (and, where possible, a Tamil lyric line) matches the story. A story with a 'Hand-read notes' section was then read (in full, or the doubtful part, as that section says) and wrong songs removed; other stories were not. Confidence: **t** = a Tamil lyric line matched and the commentary agrees; **c** = commentary only (no Tamil keyword line found); **low** = commentary did not match, check by reading the song.
 

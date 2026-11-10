@@ -4,12 +4,39 @@
 
 | Source | What was done | Status |
 |---|---|---|
-| Periya Puranam (Tirumurai 12): Sundarar, Cheraman Perumal, Kannappar puranams | not opened this session | from memory, not opened |
-| Tiruvasagam (Tirumurai 8) and Tiruvilaiyadal Puranam: Manikkavasagar, Vandi's pittu | not opened this session | from memory, not opened |
-| Tirumurugatruppadai (Nakkeerar, Tirumurai 11) | cave legend found on blogs and temple pages only | search result only (tradition) |
+| Periya Puranam sections 12000-12700 (thevaaram.org) | all downloaded and parsed; used: Thirumalai Sargam/Thadutatkonda (12000), Kannappar (12100), Eyarkon Kalikkama (12290), Kazharitrarivar (12370) | opened; verses re-checked on every build |
+| Tiruvilaiyadal Puranam padalams 52-54, 58-61 (Tamil Wikisource) | rendered pages fetched; keywords re-checked on every build | opened; re-checked on every build |
+| Tiruvasagam (Tirumurai 8), Tirumurugatruppadai (Tirumurai 11), Adi Ula | not opened | from memory, not opened |
 
 ## Open questions and gaps
 
-- Songs 555, 862 and 911 contain the Tamil word அப்பர் (Appar or 'father'?). Read in context before deciding.
+- Songs 555, 862 and 911: the word அப்பர் means 'father' (Shiva), not the saint Appar. Resolved; no story.
 - No Tamil lyric names Siruthondar, Karaikkal Ammaiyar, Chandesar, Nandanar or Thirumoolar (Thirumoolar only as a name in 425).
-- Tevaram/Periya Puranam verse references for Sundarar's episodes were not looked up.
+- Sundarar and the crocodile (song 1320) is NOT in the Periya Puranam text searched; it comes from tradition and Sundarar's Avinashi hymn (Tevaram 7), not checked.
+- Cheraman's Kailasa ascent: the Puranam's Cheraman section ends with him missing Sundarar (vv. 173-175); the ascent verses were not located in the downloaded sections.
+- Nakkeerar's cave captivity and the Tirumurugatruppadai are not in the Tiruvilaiyadal Puranam padalams 52-54 (those tell the Dharumi poem quarrel); the cave is tradition.
+
+## Verse checks (re-run on every build)
+
+Texts are cached in `scripts/.cache/` (git-ignored): `pp_all.json` = Periya Puranam sections from thevaaram.org (id 12000+10n = puranam n, verse numbers restart in each), `tvp.json` = Tiruvilaiyadal Puranam padalam pages on Tamil Wikisource, `kp_verses.json` = Kanda Puranam on Tamil Wikisource (global verse numbers, first kandam and the start of the second only). A line passes if the word occurs in that verse or page once spaces are removed.
+
+| Text | Location | Word | Shows | Result |
+|---|---|---|---|---|
+| Periya Puranam | 12000:189 | ஓலைகாட்டென்று | the old man demands the bond (wedding dispute) | ok |
+| Periya Puranam | 12000:220 | பித்தா | Sundarar's 'Pitha' hymn at Thiruvennainallur | ok |
+| Periya Puranam | 12290:8 | தூதுவிட்ட | Shiva sent as messenger | ok |
+| Periya Puranam | 12290:337 | தூதர் | the messenger at Paravai's house | ok |
+| Periya Puranam | 12290:10 | குண்டையூர் | Kundaiyur | ok |
+| Periya Puranam | 12290:11 | செந்நெல் | the paddy | ok |
+| Periya Puranam | 12370:166 | வேடர்வடிவாய் | Shiva's hosts as hunters take Sundarar's gold (Poondi) | ok |
+| Periya Puranam | 12370:173 | ஆரூரர்தமை | Cheraman misses Sundarar | ok |
+| Periya Puranam | 12100:173 | அம்பால் | Kannappar's arrow and his eye | ok |
+| Periya Puranam | 12100:175 | அப்பிய | the eye placed on the lingam | ok |
+| Tiruvilaiyadal Puranam padalam | 52 | தருமி | Dharumi (Nakkeerar's quarrel) | ok |
+| Tiruvilaiyadal Puranam padalam | 53 | கீரன் | Keeran rescued from the tank | ok |
+| Tiruvilaiyadal Puranam padalam | 54 | கீரன் | Keeran taught | ok |
+| Tiruvilaiyadal Puranam padalam | 58 | வாதவூர் | Manikkavasagar | ok |
+| Tiruvilaiyadal Puranam padalam | 59 | குதிரை | foxes turned into horses | ok |
+| Tiruvilaiyadal Puranam padalam | 60 | நரி | horses turned back into foxes | ok |
+| Tiruvilaiyadal Puranam padalam | 61 | வந்தி | Vandi | ok |
+| Tiruvilaiyadal Puranam padalam | 61 | பிட்டு | the pittu | ok |

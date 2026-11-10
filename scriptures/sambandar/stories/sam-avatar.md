@@ -15,6 +15,11 @@ The songs say that Murugan himself took birth as the child saint Sambandar of Si
 
 Assignments start KEYWORD-LEVEL: a song is listed when its English commentary (and, where possible, a Tamil lyric line) matches the story. A story with a 'Hand-read notes' section was then read (in full, or the doubtful part, as that section says) and wrong songs removed; other stories were not. Confidence: **t** = a Tamil lyric line matched and the commentary agrees; **c** = commentary only (no Tamil keyword line found); **low** = commentary did not match, check by reading the song.
 
+## Hand-read notes
+
+All 105 read. 95 say outright that Murugan came as, or is, Sambandar. Four (121, 354, 521, 1166) name the saint as a separate figure (author of the Tevaram, companion of Yazhpanar, one of the three saints) without identifying him with Murugan; they stay here because they name him.
+
+
 ## Songs
 
 ### 17 பொருப்புறுங் (திருப்பரங்குன்றம்)

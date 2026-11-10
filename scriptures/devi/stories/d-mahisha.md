@@ -10,7 +10,7 @@ Durga killed the buffalo demon Mahishasura; the songs mention it in passing amon
 
 | Source | Reference | Note | Status |
 |---|---|---|---|
-| Devi Mahatmya, Madhyama Charitra | ch. 2-4 (Markandeya Purana ~81-93; numbering varies by edition) | chapter structure from web search; text not read | search result only (tradition) |
+| Devi Mahatmya, Madhyama Charitra | ch. 2 (Mahishasura's armies), ch. 3 (Mahishasura slain), ch. 4 (hymn of the gods) | Markandeya Purana chapters 81-93 in the Banerjee edition, 78-90 in the Venkatesh Press edition; chapter titles taken from two printed-edition descriptions found by search, the Sanskrit text was not fetched | search result only (tradition) |
 
 Assignments start KEYWORD-LEVEL: a song is listed when its English commentary (and, where possible, a Tamil lyric line) matches the story. A story with a 'Hand-read notes' section was then read (in full, or the doubtful part, as that section says) and wrong songs removed; other stories were not. Confidence: **t** = a Tamil lyric line matched and the commentary agrees; **c** = commentary only (no Tamil keyword line found); **low** = commentary did not match, check by reading the song.
 

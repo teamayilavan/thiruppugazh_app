@@ -10,7 +10,8 @@ Kali, furious after killing demons, threatened Shiva's town of Thiruvalangadu. S
 
 | Source | Reference | Note | Status |
 |---|---|---|---|
-| Sthala puranam of Thiruvalangadu |  | Appar's hymn is cited by temple sources; Later Chola Temples (Wisdomlib) quotes a purana | search result only (tradition) |
+| Thiruvalangadu sthala puranam |  | the dance contest and the raised foot are told on every temple page; accounts differ (17 poses; an earring or an anklet gem; left or right leg) | search result only (tradition) |
+| Mootha Tirupathigam (Karaikkal Ammaiyar, Tirumurai 11) |  | named by one source as the hymn of Tiruvalangadu; an Appar hymn on the contest is claimed but no hymn number was found | search result only (tradition) |
 
 Assignments start KEYWORD-LEVEL: a song is listed when its English commentary (and, where possible, a Tamil lyric line) matches the story. A story with a 'Hand-read notes' section was then read (in full, or the doubtful part, as that section says) and wrong songs removed; other stories were not. Confidence: **t** = a Tamil lyric line matched and the commentary agrees; **c** = commentary only (no Tamil keyword line found); **low** = commentary did not match, check by reading the song.
 

@@ -10,7 +10,7 @@ At Kanchi the Goddess is said to have performed thirty-two dharmas (aram) as act
 
 | Source | Reference | Note | Status |
 |---|---|---|---|
-| Kanchi tradition | source text not found |  | from memory, not opened |
+| Kanchi Puranam / Kachi Kalambagam / Tamil devotional literature | not located | two searches found no source for 'thirty-two dharmas'; one tour-guide blog speaks of 24 pillars and 'acharams'. The tradition is named only in the songs' commentary | searched, not found |
 
 Assignments start KEYWORD-LEVEL: a song is listed when its English commentary (and, where possible, a Tamil lyric line) matches the story. A story with a 'Hand-read notes' section was then read (in full, or the doubtful part, as that section says) and wrong songs removed; other stories were not. Confidence: **t** = a Tamil lyric line matched and the commentary agrees; **c** = commentary only (no Tamil keyword line found); **low** = commentary did not match, check by reading the song.
 

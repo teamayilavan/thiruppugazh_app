@@ -10,7 +10,7 @@ Two Shiva attendants, cursed to be an elephant and a spider, worshipped the ling
 
 | Source | Reference | Note | Status |
 |---|---|---|---|
-| Thiruvanaikka sthala puranam |  | temple pages; Kochengat Chola is also a Nayanar in the Periya Puranam | search result only (tradition) |
+| Periya Puranam, Kochchengat Chola Nayanar Puranam (Tirumurai 12) | vv. 2-6 (spider, web and elephant at Thiruvanaikka), 7-12 (Kochchengat's birth); 3, 4 and 12 checked [https://thevaaram.org/thirumurai_1/onepage.php?thiru=12&Song_idField=12680] |  | machine-read from the opened page; re-checked on every build |
 
 Assignments start KEYWORD-LEVEL: a song is listed when its English commentary (and, where possible, a Tamil lyric line) matches the story. A story with a 'Hand-read notes' section was then read (in full, or the doubtful part, as that section says) and wrong songs removed; other stories were not. Confidence: **t** = a Tamil lyric line matched and the commentary agrees; **c** = commentary only (no Tamil keyword line found); **low** = commentary did not match, check by reading the song.
 

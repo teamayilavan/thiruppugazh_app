@@ -16,13 +16,13 @@
 | Penance at Thiruppathirippuliyur | 2 | 1 | [d-pathiri](stories/d-pathiri.md) |
 | Abirami at Thiruvathigai, where the cities burn | 1 | 1 | [d-thiruvathigai](stories/d-thiruvathigai.md) |
 | Parvati as the fishermen's daughter | 2 | 1 | [d-fisher](stories/d-fisher.md) |
-| Angayarkanni (Meenakshi) at Madurai | 1 | 1 | [d-angayarkanni](stories/d-angayarkanni.md) |
+| Angayarkanni (Meenakshi) at Madurai | 1 | 3 | [d-angayarkanni](stories/d-angayarkanni.md) |
 
 ## Kali and Durga
 
 | Story | Songs | Primary refs | File |
 |---|---|---|---|
-| Kali challenges Shiva to a dance | 2 | 1 | [d-kali-dance](stories/d-kali-dance.md) |
+| Kali challenges Shiva to a dance | 2 | 2 | [d-kali-dance](stories/d-kali-dance.md) |
 | Durga slays Mahishasura | 2 | 1 | [d-mahisha](stories/d-mahisha.md) |
 | Durga and Bhadrakali dance on Murugan's battlefield | 5 | 1 | [d-battlefield](stories/d-battlefield.md) |
 | Matangi, the sage's daughter | 1 | 1 | [d-matangi](stories/d-matangi.md) |

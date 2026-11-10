@@ -36,4 +36,4 @@
 |---|---|---|---|
 | The Pandya's fever and hunchback cured with holy ash | 12 | 4 | [sam-fever](stories/sam-fever.md) |
 | Palm-leaf in the fire and against the Vaigai | 10 | 4 | [sam-ordeals](stories/sam-ordeals.md) |
-| The Jains impaled (further songs) | 23 | 2 | [sam-jains](stories/sam-jains.md) |
+| The Jains impaled (further songs) | 21 | 2 | [sam-jains](stories/sam-jains.md) |

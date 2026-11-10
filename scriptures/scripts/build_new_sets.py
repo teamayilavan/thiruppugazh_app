@@ -140,7 +140,7 @@ def R(src, ref, note, status, url=""):
 
 CATALOGUE = [
  # ------------------------------------------------------------------ SAMBANDAR
- dict(slug="sam-avatar", set="sambandar", title="Murugan comes as Sambandar (the Tamil Veda)", ids=SAM_ALL,
+ dict(slug="sam-avatar", set="sambandar", title="Murugan comes as Sambandar (the Tamil Veda)", ids=SAM_ALL, review="All 105 read. 95 say outright that Murugan came as, or is, Sambandar. Four (121, 354, 521, 1166) name the saint as a separate figure (author of the Tevaram, companion of Yazhpanar, one of the three saints) without identifying him with Murugan; they stay here because they name him.",
       en=r"Sambandh|ThirugnAna|GnAna ?Sambandh|Sambandhan", ta=r"சம்பந்|ஞானசம்|கவுணிய|புகலி|காழி",
       brief=("The songs say that Murugan himself took birth as the child saint Sambandar of Sirkazhi and gave the world the Tevaram hymns, "
              "'the Tamil Veda'. Most of these songs state this in one line without telling an episode; the specific episodes are in the stories that follow. "
@@ -203,7 +203,7 @@ CATALOGUE = [
             R("Tevaram 3.54.1", "Vazhga Andhanar", "river test", OPENED_EARLIER, TEV354),
             R("Tevaram 3.32.1", "Tiruvedagam", "the leaf halts", OPENED_EARLIER, TEV332),
             R("Tiruvilaiyadal Puranam", "padalam 63", "", OPENED_EARLIER, TVP63)]),
- dict(slug="sam-jains", set="sambandar", title="The Jains impaled (further songs)", ids=[17,132,263,306,405,509,603,653,658,668,669,677,681,767,769,771,799,859,888,1162,1209,1257,1327],
+ dict(slug="sam-jains", set="sambandar", review="All 23 read.", drop={771: "Jains stunned by the hymns, not impaled", 888: "Jains named, no gallows"}, title="The Jains impaled (further songs)", ids=[17,132,263,306,405,509,603,653,658,668,669,677,681,767,769,771,799,859,888,1162,1209,1257,1327],
       en=r"[Ss]amaNA|[Cc]hamaNA|[Cc]amaNA|gallows|Jain", ta=r"சமண|கழு|அமண|அருகர்",
       brief=("After losing the debates the Jains were impaled on stakes, according to the tradition the Thiruppugazh repeats. These are songs beyond the 20 already in "
              "`shiva/stories/saints-sambandar.md`; some ids appear in both."),
@@ -319,7 +319,7 @@ CATALOGUE = [
       en=r"Kroun?cha|Kraunch|KrouncA", excl=r"bird|anRil", ta=r"கிர[வௌெ]",
       brief="Murugan's Vel pierced the Krouncha mountain, the demon Tarakasura's hiding place and stronghold, which crumbled.",
       refs=[R("Kanda Puranam / Skanda Purana", "Taraka and Krouncha episode", "", SEARCH)]),
- dict(slug="m-sea-dried", set="murugan", review="Pattern requires the sea or ocean drying or boiling; sampled, no false matches found.", title="The sea dried by the Vel", auto=True,
+ dict(slug="m-sea-dried", set="murugan", review="All 48 checked: each has the sea or ocean drying, boiling or burning beside the match.", title="The sea dried by the Vel", auto=True,
       en=r"(sea|ocean)[^.]{0,60}(dried|dry up|boil)|dried up the (sea|ocean)|(seven|seas)[^.]{0,40}dried", ta=r"கடல்வற்ற|வற்றிட|வற்றக்|வற்றி|வறள|அலைகடல்",
       brief="Surapadman fled into the sea; Murugan's Vel made the ocean dry up or boil, driving him out.",
       refs=[R("Kanda Puranam, Yuddha Kandam", "", "", SEARCH)]),
@@ -327,7 +327,7 @@ CATALOGUE = [
       en=r"(split|halves|two (parts|pieces))[^.]{0,120}(peacock|cock)|(peacock|cock)[^.]{0,120}(split|halves|two (parts|pieces))|(SUran|Surapadman|SUrapadman)[^.]{0,80}(became|turned into|transformed into|changed into)[^.]{0,40}(peacock|cock)", ta=r"சேவல்|மயில்",
       brief="The two halves of the split Surapadman became Murugan's vehicle, the peacock, and the cock on his flag.",
       refs=[R("Kanda Puranam, Yuddha Kandam", "", "", SEARCH)]),
- dict(slug="m-tarakasura", set="murugan", title="Tarakasura", auto=True,
+ dict(slug="m-tarakasura", set="murugan", review="All 15 read: each says Tarakasura was killed or dismembered.", title="Tarakasura", auto=True,
       en=r"Tharaka|Taraka", ta=r"தாரக",
       brief="Tarakasura, Surapadman's brother, was killed by Murugan before the final battle (Asura Kandam).",
       refs=[R("Kanda Puranam, Asura Kandam", "", "", SEARCH)]),
@@ -444,12 +444,128 @@ REF_OVERRIDES = {
 for _st in CATALOGUE:
     if _st["slug"] in REF_OVERRIDES:
         _st["refs"] = REF_OVERRIDES[_st["slug"]]
+# ---- the other sets: exact locations in the texts opened on 2026-11-10 -------------------------------------------------
+KP_URL = "https://ta.wikisource.org/wiki/%E0%AE%95%E0%AE%A8%E0%AF%8D%E0%AE%A4_%E0%AE%AA%E0%AF%81%E0%AE%B0%E0%AE%BE%E0%AE%A3%E0%AE%AE%E0%AF%8D"
+PPS = "machine-read from the opened page; re-checked on every build"
+def PPX(pid, title, ref, note=""):
+    return R(f"Periya Puranam, {title} (Tirumurai 12)", ref, note, PPS, f"https://thevaaram.org/thirumurai_1/onepage.php?thiru=12&Song_idField={pid}")
+def TVPR(n, name, ref="", note=""):
+    return R(f"Tiruvilaiyadal Puranam (Paranjothi), padalam {n} {name}", ref or "whole padalam", note, "machine-read from Tamil Wikisource; re-checked on every build", TVP62[:-2] + f"{n:02d}")
+def KPR(ref, note=""):
+    return R("Kanda Puranam (Kachiyappar), Utpatti Kandam", ref, note, "machine-read from Tamil Wikisource (first kandam and the start of the second only)", KP_URL)
+NOT_IN = lambda src, why: R(src, "not located", why, "searched, not found", "")
+
+CHECKS = {"sambandar": [("pp", f"12280:{v}", t, lab) for v, t, lab in VERSE_CHECKS]}
+CHECKS["saints"] = [
+    ("pp", "12000:189", "ஓலைகாட்டென்று", "the old man demands the bond (wedding dispute)"), ("pp", "12000:220", "பித்தா", "Sundarar's 'Pitha' hymn at Thiruvennainallur"),
+    ("pp", "12290:8", "தூதுவிட்ட", "Shiva sent as messenger"), ("pp", "12290:337", "தூதர்", "the messenger at Paravai's house"),
+    ("pp", "12290:10", "குண்டையூர்", "Kundaiyur"), ("pp", "12290:11", "செந்நெல்", "the paddy"),
+    ("pp", "12370:166", "வேடர்வடிவாய்", "Shiva's hosts as hunters take Sundarar's gold (Poondi)"), ("pp", "12370:173", "ஆரூரர்தமை", "Cheraman misses Sundarar"),
+    ("pp", "12100:173", "அம்பால்", "Kannappar's arrow and his eye"), ("pp", "12100:175", "அப்பிய", "the eye placed on the lingam"),
+    ("tvp", "52", "தருமி", "Dharumi (Nakkeerar's quarrel)"), ("tvp", "53", "கீரன்", "Keeran rescued from the tank"), ("tvp", "54", "கீரன்", "Keeran taught"),
+    ("tvp", "58", "வாதவூர்", "Manikkavasagar"), ("tvp", "59", "குதிரை", "foxes turned into horses"), ("tvp", "60", "நரி", "horses turned back into foxes"),
+    ("tvp", "61", "வந்தி", "Vandi"), ("tvp", "61", "பிட்டு", "the pittu"),
+]
+CHECKS["devi"] = [("tvp", "3", "திருநகரம்", "Madurai founded"), ("tvp", "4", "தடாதகை", "Tatatakai (Meenakshi)"), ("tvp", "57", "வலை", "Shiva casts the net"), ("tvp", "57", "சுறா", "the shark")]
+CHECKS["murugan"] = [
+    ("kp", "1032", "சரவண", "Saravana"), ("kp", "1048", "பொய்கை", "the lake"), ("kp", "1219", "சிறை", "Brahma jailed"), ("kp", "1223", "சிறை", "Brahma in prison"),
+    ("kp", "1329", "கிரவுஞ்ச", "Krouncha"), ("kp", "1332", "தாரக", "Tarakan"), ("kp", "1275", "தெய்வயானை", "Deivayanai named"), ("kp", "1277", "வள்ளி", "Valli named"),
+    ("tvp", "13", "வேல்", "the Vel dries the sea (Ugrakumara Pandyan)"), ("tvp", "13", "கடல்", "the sea"),
+]
+CHECKS["tamil-lore"] = [
+    ("tvp", "51", "சங்கப்பலகை", "the Sangam plank"), ("tvp", "55", "உருத்திரசன்மன்", "Rudrasarman"), ("tvp", "52", "தருமி", "Dharumi"),
+    ("pp", "12680:3", "திருவானைக்கா", "Thiruvanaikka named"), ("pp", "12680:4", "சிலம்பிவலை", "the spider's web"), ("pp", "12680:12", "கோச்செங்கட்சோழர்", "Kochchengat Chola"),
+]
+
+REF2 = {
+    "n-sundarar-wedding": [PPX("12000", "Sundarar: Thadutatkonda Puranam (Thirumalai Sargam)", "vv. ~189-230; 189 and 220 checked", "the old man demands to see the bond; Sundarar scorns him")],
+    "n-sundarar-messenger": [PPX("12290", "Eyarkon Kalikkama Nayanar Puranam", "v. 8 (Shiva sent as messenger), v. 337 (at Paravai's house); both checked")],
+    "n-sundarar-paddy": [PPX("12290", "Eyarkon Kalikkama Nayanar Puranam", "vv. 10-27 (Kundaiyur and the paddy); 10 and 11 checked")],
+    "n-cheraman-kailasa": [PPX("12370", "Kazharitrarivar (Cheraman Perumal) Nayanar Puranam", "vv. 112-118 (the friendship), 173-175 (Cheraman misses Sundarar; 173 checked)", "the Kailasa ascent itself was not located in the downloaded sections"),
+                           R("Adi Ula (Tirumurai 11)", "", "Cheraman's poem on the Kailasa journey", MEMORY)],
+    "n-sundarar-gold": [PPX("12370", "Kazharitrarivar Nayanar Puranam", "vv. 164-172 (Tirumurugan Poondi: Shiva's hosts as hunters take Sundarar's gold; 166 checked)", "song 947 speaks of earning gold for Paravai at many shrines; that reading is not confirmed in the Puranam")],
+    "n-sundarar-crocodile": [NOT_IN("Periya Puranam (all sections 12000-12700 downloaded)", "the word 'crocodile' (முதலை) occurs only in unrelated verses; the Avinashi story is tradition and the Tevaram 7 hymn, not the Puranam")],
+    "n-manikkavasagar": [TVPR(58, "Thiruvathavur Adigalukku Upadesitha", "", "Manikkavasagar named (58 checked)"), R("Tiruvasagam (Tirumurai 8)", "", "not opened", MEMORY)],
+    "n-vandi-pittu": [TVPR(61, "Man Sumantha", "", "Vandi and the pittu (61 checked)"), TVPR(59, "Nari Pariyakkiya"), TVPR(60, "Pari Nariyakiya")],
+    "n-kannappar": [PPX("12100", "Kannappa Nayanar Puranam", "vv. 173-176 (the eye offering; 173 and 175 checked)")],
+    "n-nakkeerar": [TVPR(52, "Tarumikkup Porkizhi Aliththa", "", "Dharumi and Nakkeerar's quarrel with Shiva (52 checked)"), TVPR(53, "Keeranaik Karai Etriya", "", "Nakkeerar saved from the tank"), TVPR(54, "Keeranukku Upadesiththa"),
+                    NOT_IN("Tiruvilaiyadal Puranam padalams 52-54", "the cave captivity and Tirumurugatruppadai are not in these padalams; that story is tradition"),
+                    R("Tirumurugatruppadai (Tirumurai 11)", "", "", MEMORY)],
+    "d-fisher": [TVPR(57, "Valai Veesina", "", "Shiva casts the net; the shark (57 checked)")],
+    "d-angayarkanni": [TVPR(3, "Thirunagaram Kanda", "", "Madurai founded"), TVPR(4, "Tatatakai Pirati Thiruavatara", "", "Meenakshi's birth (4 checked)"), TVPR(5, "Thirumana", "", "the wedding")],
+    "m-saravana": [KPR("padalam 13 Saravana Padalam, vv. 1015-1051 (1032 and 1048 checked)"), R("Shiva set", "shiva/stories/murugan-skanda-birth.md", "", "local", "")],
+    "m-brahma-prison": [KPR("padalam 16 Ayanaich Chiraipuri, vv. 1205-1223 (1219, 1223 checked); padalam 17 Ayanaich Chirai Neekku, vv. 1224-1265"), R("Shiva set", "shiva/stories/murugan-pranava.md", "Murugan teaches Shiva the Pranava", "local", "")],
+    "m-tarakasura": [KPR("padalam 20 Tarakan Varaip Padalam, vv. 1329-1531 (1332 checked)")],
+    "m-krouncha": [KPR("the mountain is introduced in the Tarakan padalam, vv. 1329-1331 (1329 checked)", "the great battle is in the Yuddha Kandam, which is not on Wikisource")],
+    "m-deivayanai": [KPR("vv. 1275-1277 name Deivayanai and Valli as Murugan's future wives (1275 checked)", "the wedding itself is in a later kandam not on Wikisource")],
+    "m-valli-disguise": [KPR("v. 1277 names Valli (checked)", "the wooing is in a later kandam, not on Wikisource")],
+    "m-sea-dried": [TVPR(13, "Kadal Suvara Vel Vitta", "", "a separate sport in which the Pandya prince Ugrakumara dries the sea with the Vel Shiva gives him (13 checked)"), R("Kanda Puranam, Yuddha Kandam", "", "not on Wikisource", SEARCH)],
+    "d-mahisha": [R("Devi Mahatmya, Madhyama Charitra", "ch. 2 (Mahishasura's armies), ch. 3 (Mahishasura slain), ch. 4 (hymn of the gods)", "Markandeya Purana chapters 81-93 in the Banerjee edition, 78-90 in the Venkatesh Press edition; chapter titles taken from two printed-edition descriptions found by search, the Sanskrit text was not fetched", SEARCH)],
+    "d-kamakshi-32": [NOT_IN("Kanchi Puranam / Kachi Kalambagam / Tamil devotional literature", "two searches found no source for 'thirty-two dharmas'; one tour-guide blog speaks of 24 pillars and 'acharams'. The tradition is named only in the songs' commentary")],
+    "d-kali-dance": [R("Thiruvalangadu sthala puranam", "", "the dance contest and the raised foot are told on every temple page; accounts differ (17 poses; an earring or an anklet gem; left or right leg)", SEARCH),
+                     R("Mootha Tirupathigam (Karaikkal Ammaiyar, Tirumurai 11)", "", "named by one source as the hymn of Tiruvalangadu; an Appar hymn on the contest is claimed but no hymn number was found", SEARCH)],
+    "d-kanchi": [R("Ekambareswarar temple legend (Kanchi)", "", "sand lingam under the mango tree, the flooding Vegavati, bangle marks; several temple websites agree", SEARCH),
+                 NOT_IN("Kanchi Puranam / Thirukkurippu Thondar Puranam", "named by a temple site as the text; the text itself was not found online")],
+    "d-pathiri": [R("Thiruppathirippuliyur sthala puranam", "", "Parvati worshipped here after 1007 other places, in the formless state, under the pathiri tree; the shrine marks the spot with a bare pedestal (temple websites)", SEARCH)],
+    "t-sangam": [TVPR(51, "Sangap Palakai Thanda", "", "the Sangam plank (51 checked)"), TVPR(55, "Sangaththar Kalagam Theertha", "", "Rudrasarman settles the poets' quarrel (55 checked)")],
+    "t-spider-elephant": [PPX("12680", "Kochchengat Chola Nayanar Puranam", "vv. 2-6 (spider, web and elephant at Thiruvanaikka), 7-12 (Kochchengat's birth); 3, 4 and 12 checked")],
+}
+for _st in CATALOGUE:
+    if _st["slug"] in REF2:
+        _st["refs"] = REF2[_st["slug"]]
+
 SETS["sambandar"]["open_q"] = [
     "Periya Puranam numbering is now settled: the page and the Shiva file both use running verses 1-1256 (checks in this file's table).",
     "Episodes in the Puranam with NO song found (exact verses): Thirumarugal snake-bite 472-484; purse of gold at Tiruvavaduthurai 418-431; famine coins 564-571; "
     "the Kollampudur boat 897-900 (898 checked); the Perumanam wedding and merging 1236-1256; the cure of Kolli Mazhavan's daughter 310-320. Not made into stories.",
     "Poompavai: the Puranam says a snake bit her in the garden (vv. 1055-1058); her father kept her bones in a pot (v.1086). The hymn is Tevaram 2.47.",
     "Sambandar's name appears in the commentary of ~105 songs; every one of them is in `sam-avatar`. Songs that tell a specific episode are also in that episode's story.",
+]
+
+SETS["saints"]["sources"] = [
+    ("Periya Puranam sections 12000-12700 (thevaaram.org)", "all downloaded and parsed; used: Thirumalai Sargam/Thadutatkonda (12000), Kannappar (12100), Eyarkon Kalikkama (12290), Kazharitrarivar (12370)", "opened; verses re-checked on every build"),
+    ("Tiruvilaiyadal Puranam padalams 52-54, 58-61 (Tamil Wikisource)", "rendered pages fetched; keywords re-checked on every build", "opened; re-checked on every build"),
+    ("Tiruvasagam (Tirumurai 8), Tirumurugatruppadai (Tirumurai 11), Adi Ula", "not opened", MEMORY),
+]
+SETS["saints"]["open_q"] = [
+    "Songs 555, 862 and 911: the word அப்பர் means 'father' (Shiva), not the saint Appar. Resolved; no story.",
+    "No Tamil lyric names Siruthondar, Karaikkal Ammaiyar, Chandesar, Nandanar or Thirumoolar (Thirumoolar only as a name in 425).",
+    "Sundarar and the crocodile (song 1320) is NOT in the Periya Puranam text searched; it comes from tradition and Sundarar's Avinashi hymn (Tevaram 7), not checked.",
+    "Cheraman's Kailasa ascent: the Puranam's Cheraman section ends with him missing Sundarar (vv. 173-175); the ascent verses were not located in the downloaded sections.",
+    "Nakkeerar's cave captivity and the Tirumurugatruppadai are not in the Tiruvilaiyadal Puranam padalams 52-54 (those tell the Dharumi poem quarrel); the cave is tradition.",
+]
+SETS["devi"]["sources"] = [
+    ("Devi Mahatmya, Madhyama Charitra ch. 2-4 (Markandeya Purana 81-93 or 78-90 by edition)", "chapter titles from printed-edition descriptions found by search; the Sanskrit text could not be fetched (GRETIL 404, sanskritdocuments blocked)", SEARCH),
+    ("Tiruvilaiyadal Puranam padalams 3-5, 57 (Tamil Wikisource)", "rendered pages fetched; keywords re-checked on every build", "opened; re-checked on every build"),
+    ("Sthala puranams: Kanchi (Ekambareswarar), Thiruppathirippuliyur, Thiruvalangadu", "temple and news pages only; the Tamil texts were not found online", SEARCH),
+]
+SETS["devi"]["open_q"] = [
+    "Shumbha, Nishumbha and Raktabija are NOT in the songs: the Tamil string சும்ப is only part of other words. No story made.",
+    "Kamakshi's thirty-two dharmas: no source text found after two searches; the tradition is named only in the songs' commentary.",
+    "Thiruvalangadu's dance contest: accounts differ (17 poses; an earring or an anklet gem; left or right leg). One source names Karaikkal Ammaiyar's Mootha Tirupathigam; an Appar hymn is claimed but no number was found.",
+    "Song 53 (Vana Durga, Kali) may mention Parvati giving the Vel; not confirmed, not assigned.",
+]
+SETS["murugan"]["sources"] = [
+    ("Kanda Puranam (Kachiyappar), Utpatti Kandam and the start of the Asura Kandam (Tamil Wikisource)", "one 1.2 MB page parsed into 1781 verses (global numbers 1-1783); padalam names and verse ranges taken from its headings; keywords re-checked on every build", "opened; re-checked on every build"),
+    ("Kanda Puranam, Mahendra, Yuddha, Deva and Daksha Kandams", "not on Wikisource (searches returned nothing); the war, Valli and Deivayanai stories cannot be machine-checked", "not available"),
+    ("Tiruvilaiyadal Puranam padalam 13 (the Pandya prince Ugrakumara dries the sea with a Vel)", "a different story from Murugan's; may be what some 'sea dried' lines recall", "opened; re-checked on every build"),
+]
+SETS["murugan"]["open_q"] = [
+    "Which kandam holds the Valli marriage: still unknown. The Wikisource text names Valli and Deivayanai only as future wives (vv. 1275-1277).",
+    "Padalams pinned: Saravana 13 (vv. 1015-1051), Brahma imprisoned 16 (1205-1223) and freed 17 (1224-1265), Tarakan 20 (1329-1531).",
+    "Not in the Wikisource text: the mango tree, peacock and cock, Jayanta, Agastya, the sea drying; they sit in the Asura/Yuddha kandams.",
+    "Already in the Shiva set: Murugan teaches Shiva the Pranava (68 songs) and Murugan born from Shiva's eye (4).",
+    "Ganesha frightening Valli and the fruit contest moved to `ganesha/`; Agastya and Tamil are also in `tamil-lore/`.",
+]
+SETS["tamil-lore"]["sources"] = [
+    ("Tiruvilaiyadal Puranam padalams 51, 52, 55 (Tamil Wikisource)", "rendered pages fetched; keywords re-checked on every build", "opened; re-checked on every build"),
+    ("Periya Puranam, Kochchengat Chola Nayanar Puranam (12680, vv. 2-12)", "parsed; the spider-and-elephant story is in the text itself", "opened; re-checked on every build"),
+    ("Sangam poems (Purananuru) for Pari and Kari; Tirukkural", "not opened", MEMORY),
+]
+SETS["tamil-lore"]["open_q"] = [
+    "Not in the songs: Silappathikaram, Manimekalai, Avvaiyar, Kamban as a character, Kapilar (one passing mention in song 138 among sages).",
+    "Nakkeerar is in `saints/n-nakkeerar`; the Vandi and Vaigai stories in `saints/n-vandi-pittu`.",
+    "t-spider-elephant now rests on the Periya Puranam text (Kochchengat Chola puranam), not only on temple pages.",
 ]
 
 READ_ALL_SLUGS = {"sam-birth", "sam-milk", "sam-todudaiya", "sam-yazhpanar", "sam-palanquin", "sam-three-saints", "sam-thiruvalangadu",
@@ -485,13 +601,30 @@ def en_snippet(s, rx):
     a, b = max(0, m.start() - 220), min(len(blob), m.end() + 260)
     return ("..." if a else "") + blob[a:b] + ("..." if b < len(blob) else "")
 
-def run_verse_checks():
-    """Re-check each cited Periya Puranam verse against the cached page text; returns [(verse, word, label, True/False/None)]."""
-    cache = SCR / "scripts" / ".cache" / "pp_sambandar.json"
-    if not cache.exists():
-        return [(v, t, lab, None) for v, t, lab in VERSE_CHECKS]
-    vs = {int(k): re.sub(r"\s", "", v) for k, v in json.loads(cache.read_text(encoding="utf-8")).items()}
-    return [(v, t, lab, (t in vs.get(v, ""))) for v, t, lab in VERSE_CHECKS]
+_CACHE = {}
+
+def _cache(name):
+    if name not in _CACHE:
+        f = SCR / "scripts" / ".cache" / name
+        _CACHE[name] = json.loads(f.read_text(encoding="utf-8")) if f.exists() else None
+    return _CACHE[name]
+
+def run_verse_checks(set_key):
+    """Re-check each verse cited for a set against the cached source text.
+    Returns [(source, location, word, label, True/False/None)]; None = cache file missing."""
+    out = []
+    for src, loc, word, label in CHECKS.get(set_key, []):
+        text = None
+        if src == "pp":
+            d = _cache("pp_all.json"); pid, n = loc.split(":")
+            text = d and d.get(pid, {}).get(n)
+        elif src == "tvp":
+            d = _cache("tvp.json"); text = d and d.get(loc)
+        elif src == "kp":
+            d = _cache("kp_verses.json"); text = d and d.get(loc)
+        ok = None if (_cache({"pp": "pp_all.json", "tvp": "tvp.json", "kp": "kp_verses.json"}[src]) is None) else (word in re.sub(r"\s", "", text or ""))
+        out.append((src, loc, word, label, ok))
+    return out
 
 def build():
     songs = load_db()
@@ -619,15 +752,18 @@ def write_all(songs, by_slug):
         for a, b, c in meta["sources"]:
             L.append(f"| {a} | {b} | {c} |")
         L += ["", "## Open questions and gaps\n"] + [f"- {q}" for q in meta["open_q"]]
-        if key == "sambandar":
-            chk = run_verse_checks()
+        chk = run_verse_checks(key)
+        if chk:
             L += ["", "## Verse checks (re-run on every build)", "",
-                  f"Periya Puranam text: `scripts/.cache/pp_sambandar.json` (git-ignored; a parse of {PP_SAM}). A verse passes if the word occurs in it.", "",
-                  "| Verse | Word | Shows | Result |", "|---|---|---|---|"]
-            for v, t, lab, ok in chk:
-                L.append(f"| {v} | {t} | {lab} | {'ok' if ok else ('NOT FOUND' if ok is False else 'cache missing')} |")
-            bad = [c for c in chk if c[3] is False]
-            print(f"sambandar verse checks: {len(chk) - len(bad)}/{len(chk)} ok" + (f", FAILED: {[c[0] for c in bad]}" if bad else ""))
+                  "Texts are cached in `scripts/.cache/` (git-ignored): `pp_all.json` = Periya Puranam sections from thevaaram.org (id 12000+10n = puranam n, verse numbers restart in each), "
+                  "`tvp.json` = Tiruvilaiyadal Puranam padalam pages on Tamil Wikisource, `kp_verses.json` = Kanda Puranam on Tamil Wikisource (global verse numbers, first kandam and the start of the second only). "
+                  "A line passes if the word occurs in that verse or page once spaces are removed.", "",
+                  "| Text | Location | Word | Shows | Result |", "|---|---|---|---|---|"]
+            names = {"pp": "Periya Puranam", "tvp": "Tiruvilaiyadal Puranam padalam", "kp": "Kanda Puranam verse"}
+            for src, loc, word, lab, ok in chk:
+                L.append(f"| {names[src]} | {loc} | {word} | {lab} | {'ok' if ok else ('NOT FOUND' if ok is False else 'cache missing')} |")
+            bad = [c for c in chk if c[4] is False]
+            print(f"{key} checks: {len(chk) - len(bad)}/{len(chk)} ok" + (f", FAILED: {[(c[0], c[1]) for c in bad]}" if bad else ""))
         (d / "SOURCES.md").write_text("\n".join(L) + "\n", encoding="utf-8")
         # README
         counts = {c: sum(1 for sl in slugs for r in by_slug[sl] if r["conf"] == c) for c in ("t", "c", "low")}

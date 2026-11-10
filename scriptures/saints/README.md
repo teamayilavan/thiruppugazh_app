@@ -22,6 +22,8 @@ Assignments start KEYWORD-LEVEL: a song is listed when its English commentary (a
 
 ## Open questions
 
-- Songs 555, 862 and 911 contain the Tamil word அப்பர் (Appar or 'father'?). Read in context before deciding.
+- Songs 555, 862 and 911: the word அப்பர் means 'father' (Shiva), not the saint Appar. Resolved; no story.
 - No Tamil lyric names Siruthondar, Karaikkal Ammaiyar, Chandesar, Nandanar or Thirumoolar (Thirumoolar only as a name in 425).
-- Tevaram/Periya Puranam verse references for Sundarar's episodes were not looked up.
+- Sundarar and the crocodile (song 1320) is NOT in the Periya Puranam text searched; it comes from tradition and Sundarar's Avinashi hymn (Tevaram 7), not checked.
+- Cheraman's Kailasa ascent: the Puranam's Cheraman section ends with him missing Sundarar (vv. 173-175); the ascent verses were not located in the downloaded sections.
+- Nakkeerar's cave captivity and the Tirumurugatruppadai are not in the Tiruvilaiyadal Puranam padalams 52-54 (those tell the Dharumi poem quarrel); the cave is tradition.

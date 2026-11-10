@@ -24,3 +24,4 @@ Assignments start KEYWORD-LEVEL: a song is listed when its English commentary (a
 
 - Not in the songs: Silappathikaram, Manimekalai, Avvaiyar, Kamban as a character, Kapilar (one passing mention in song 138 among sages).
 - Nakkeerar is in `saints/n-nakkeerar`; the Vandi and Vaigai stories in `saints/n-vandi-pittu`.
+- t-spider-elephant now rests on the Periya Puranam text (Kochchengat Chola puranam), not only on temple pages.

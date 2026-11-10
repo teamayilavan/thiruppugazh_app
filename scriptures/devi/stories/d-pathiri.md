@@ -10,7 +10,7 @@ The Goddess performed a penance under the pathiri tree at Thiruppathirippuliyur 
 
 | Source | Reference | Note | Status |
 |---|---|---|---|
-| Sthala puranam of Thiruppathirippuliyur |  | temple websites; also dice game and blindfolded Shiva versions | search result only (tradition) |
+| Thiruppathirippuliyur sthala puranam |  | Parvati worshipped here after 1007 other places, in the formless state, under the pathiri tree; the shrine marks the spot with a bare pedestal (temple websites) | search result only (tradition) |
 
 Assignments start KEYWORD-LEVEL: a song is listed when its English commentary (and, where possible, a Tamil lyric line) matches the story. A story with a 'Hand-read notes' section was then read (in full, or the doubtful part, as that section says) and wrong songs removed; other stories were not. Confidence: **t** = a Tamil lyric line matched and the commentary agrees; **c** = commentary only (no Tamil keyword line found); **low** = commentary did not match, check by reading the song.
 

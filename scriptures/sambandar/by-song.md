@@ -70,7 +70,7 @@ One row per song: its stories.
 | 767 | ஒய்யா ரச்சிலை | [Murugan comes as Sambandar (the Tamil Veda)](stories/sam-avatar.md); [The Jains impaled (further songs)](stories/sam-jains.md) |
 | 768 | கட்காமக்ரோத | [Murugan comes as Sambandar (the Tamil Veda)](stories/sam-avatar.md); [The Pandya's fever and hunchback cured with holy ash](stories/sam-fever.md) |
 | 769 | கொங்கு லாவிய | [Murugan comes as Sambandar (the Tamil Veda)](stories/sam-avatar.md); [The Jains impaled (further songs)](stories/sam-jains.md) |
-| 771 | சருவி இகழ்ந்து | [Murugan comes as Sambandar (the Tamil Veda)](stories/sam-avatar.md); [The Jains impaled (further songs)](stories/sam-jains.md) |
+| 771 | சருவி இகழ்ந்து | [Murugan comes as Sambandar (the Tamil Veda)](stories/sam-avatar.md) |
 | 774 | தினமணி சார்ங்க | [Murugan comes as Sambandar (the Tamil Veda)](stories/sam-avatar.md); [Born at Sirkazhi among the Kavuniyas](stories/sam-birth.md) |
 | 776 | மதனச்சொற் கார | [Murugan comes as Sambandar (the Tamil Veda)](stories/sam-avatar.md); ['Todudaiya Seviyan', the first hymn](stories/sam-todudaiya.md) |
 | 789 | ஆடல் மாமத ராஜன் | [Murugan comes as Sambandar (the Tamil Veda)](stories/sam-avatar.md); [The Pandya's fever and hunchback cured with holy ash](stories/sam-fever.md) |
@@ -82,7 +82,7 @@ One row per song: its stories.
 | 846 | மலைக் கனத்தென | [Murugan comes as Sambandar (the Tamil Veda)](stories/sam-avatar.md) |
 | 859 | இலகு குழைகிழிய | [Murugan comes as Sambandar (the Tamil Veda)](stories/sam-avatar.md); [The Jains impaled (further songs)](stories/sam-jains.md) |
 | 878 | திட்டெனப் பல | [Murugan comes as Sambandar (the Tamil Veda)](stories/sam-avatar.md) |
-| 888 | வீங்கு பச்சிள | [Murugan comes as Sambandar (the Tamil Veda)](stories/sam-avatar.md); [The Jains impaled (further songs)](stories/sam-jains.md) |
+| 888 | வீங்கு பச்சிள | [Murugan comes as Sambandar (the Tamil Veda)](stories/sam-avatar.md) |
 | 902 | இகல்கடின முகபடவி | [Murugan comes as Sambandar (the Tamil Veda)](stories/sam-avatar.md) |
 | 913 | நெய்த்த சுரி | [Murugan comes as Sambandar (the Tamil Veda)](stories/sam-avatar.md); [Born at Sirkazhi among the Kavuniyas](stories/sam-birth.md) |
 | 920 | காலன் வேல் கணை | [Murugan comes as Sambandar (the Tamil Veda)](stories/sam-avatar.md); [Uma feeds the crying child the milk of wisdom](stories/sam-milk.md); [The Pandya's fever and hunchback cured with holy ash](stories/sam-fever.md); [Palm-leaf in the fire and against the Vaigai](stories/sam-ordeals.md) |

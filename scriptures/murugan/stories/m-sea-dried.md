@@ -10,13 +10,14 @@ Surapadman fled into the sea; Murugan's Vel made the ocean dry up or boil, drivi
 
 | Source | Reference | Note | Status |
 |---|---|---|---|
-| Kanda Puranam, Yuddha Kandam |  |  | search result only (tradition) |
+| Tiruvilaiyadal Puranam (Paranjothi), padalam 13 Kadal Suvara Vel Vitta | whole padalam [https://ta.wikisource.org/wiki/%E0%AE%A4%E0%AE%BF%E0%AE%B0%E0%AF%81%E0%AE%B5%E0%AE%BF%E0%AE%B3%E0%AF%88%E0%AE%AF%E0%AE%BE%E0%AE%9F%E0%AE%B1%E0%AF%8D_%E0%AE%AA%E0%AF%81%E0%AE%B0%E0%AE%BE%E0%AE%A3%E0%AE%AE%E0%AF%8D/13] | a separate sport in which the Pandya prince Ugrakumara dries the sea with the Vel Shiva gives him (13 checked) | machine-read from Tamil Wikisource; re-checked on every build |
+| Kanda Puranam, Yuddha Kandam |  | not on Wikisource | search result only (tradition) |
 
 Assignments start KEYWORD-LEVEL: a song is listed when its English commentary (and, where possible, a Tamil lyric line) matches the story. A story with a 'Hand-read notes' section was then read (in full, or the doubtful part, as that section says) and wrong songs removed; other stories were not. Confidence: **t** = a Tamil lyric line matched and the commentary agrees; **c** = commentary only (no Tamil keyword line found); **low** = commentary did not match, check by reading the song.
 
 ## Hand-read notes
 
-Pattern requires the sea or ocean drying or boiling; sampled, no false matches found.
+All 48 checked: each has the sea or ocean drying, boiling or burning beside the match.
 
 
 ## Songs

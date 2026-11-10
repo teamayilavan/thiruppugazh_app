@@ -17,35 +17,35 @@
 
 ## Verse checks (re-run on every build)
 
-Periya Puranam text: `scripts/.cache/pp_sambandar.json` (git-ignored; a parse of https://thevaaram.org/thirumurai_1/onepage.php?thiru=12&Song_idField=12280). A verse passes if the word occurs in it.
+Texts are cached in `scripts/.cache/` (git-ignored): `pp_all.json` = Periya Puranam sections from thevaaram.org (id 12000+10n = puranam n, verse numbers restart in each), `tvp.json` = Tiruvilaiyadal Puranam padalam pages on Tamil Wikisource, `kp_verses.json` = Kanda Puranam on Tamil Wikisource (global verse numbers, first kandam and the start of the second only). A line passes if the word occurs in that verse or page once spaces are removed.
 
-| Verse | Word | Shows | Result |
-|---|---|---|---|
-| 68 | உமையம்மை | Uma feeds the child (golden bowl, v.68) | ok |
-| 76 | தோடுடைய | first hymn Todudaiya Seviyan | ok |
-| 131 | திருநீலகண்டத்துப்பெரும்பாணர் | Neelakanta Yazhpanar introduced | ok |
-| 278 | யாழ்ப்பெரும்பாணனார் | yazh and the golden cymbal passage | ok |
-| 450 | யாழினால் | the lyre cannot hold the hymn | ok |
-| 195 | சிவிகை | pearl palanquin given | ok |
-| 418 | திருவாவடுதுறை | Tiruvavaduthurai | ok |
-| 426 | கிழி | purse of gold (v.426-428) | ok |
-| 472 | திருமருகல் | Thirumarugal | ok |
-| 569 | காசு | famine coins (v.564-571) | ok |
-| 582 | கதவு | the temple doors at Maraikkadu | ok |
-| 609 | திருமறைக்காடு | Maraikkadu | ok |
-| 645 | மங்கையர்க்கரசி | Queen Mangaiyarkkarasi | ok |
-| 719 | வெப்பு | the king's fever | ok |
-| 772 | வெப்பெலாம் | the fever cured | ok |
-| 788 | தீ | the fire test | ok |
-| 807 | வைகை | the river test | ok |
-| 846 | திருக்கையால் | Sambandar's leaf in the river | ok |
-| 847 | கூன் | the hunchback straightened | ok |
-| 850 | ஏடகம் | the leaf halts at Edagam | ok |
-| 856 | கழு | the Jains on the stakes | ok |
-| 857 | நீறு | the king takes the ash | ok |
-| 898 | கொள்ளம்பூதூர் | the Kollampudur boat (no song) | ok |
-| 1033 | திருமயிலாபுரி | Mylapore opens (Sivanesar) | ok |
-| 1058 | பணம்விரித்து | the snake that bit Poompavai (hood spread) | ok |
-| 1088 | மட்டிட்ட | names the Poompavai hymn 'Mattitta' | ok |
-| 1119 | திருமயிலை | Mylapore | ok |
-| 1245 | பெருமணம் | Perumanam (no song) | ok |
+| Text | Location | Word | Shows | Result |
+|---|---|---|---|---|
+| Periya Puranam | 12280:68 | உமையம்மை | Uma feeds the child (golden bowl, v.68) | ok |
+| Periya Puranam | 12280:76 | தோடுடைய | first hymn Todudaiya Seviyan | ok |
+| Periya Puranam | 12280:131 | திருநீலகண்டத்துப்பெரும்பாணர் | Neelakanta Yazhpanar introduced | ok |
+| Periya Puranam | 12280:278 | யாழ்ப்பெரும்பாணனார் | yazh and the golden cymbal passage | ok |
+| Periya Puranam | 12280:450 | யாழினால் | the lyre cannot hold the hymn | ok |
+| Periya Puranam | 12280:195 | சிவிகை | pearl palanquin given | ok |
+| Periya Puranam | 12280:418 | திருவாவடுதுறை | Tiruvavaduthurai | ok |
+| Periya Puranam | 12280:426 | கிழி | purse of gold (v.426-428) | ok |
+| Periya Puranam | 12280:472 | திருமருகல் | Thirumarugal | ok |
+| Periya Puranam | 12280:569 | காசு | famine coins (v.564-571) | ok |
+| Periya Puranam | 12280:582 | கதவு | the temple doors at Maraikkadu | ok |
+| Periya Puranam | 12280:609 | திருமறைக்காடு | Maraikkadu | ok |
+| Periya Puranam | 12280:645 | மங்கையர்க்கரசி | Queen Mangaiyarkkarasi | ok |
+| Periya Puranam | 12280:719 | வெப்பு | the king's fever | ok |
+| Periya Puranam | 12280:772 | வெப்பெலாம் | the fever cured | ok |
+| Periya Puranam | 12280:788 | தீ | the fire test | ok |
+| Periya Puranam | 12280:807 | வைகை | the river test | ok |
+| Periya Puranam | 12280:846 | திருக்கையால் | Sambandar's leaf in the river | ok |
+| Periya Puranam | 12280:847 | கூன் | the hunchback straightened | ok |
+| Periya Puranam | 12280:850 | ஏடகம் | the leaf halts at Edagam | ok |
+| Periya Puranam | 12280:856 | கழு | the Jains on the stakes | ok |
+| Periya Puranam | 12280:857 | நீறு | the king takes the ash | ok |
+| Periya Puranam | 12280:898 | கொள்ளம்பூதூர் | the Kollampudur boat (no song) | ok |
+| Periya Puranam | 12280:1033 | திருமயிலாபுரி | Mylapore opens (Sivanesar) | ok |
+| Periya Puranam | 12280:1058 | பணம்விரித்து | the snake that bit Poompavai (hood spread) | ok |
+| Periya Puranam | 12280:1088 | மட்டிட்ட | names the Poompavai hymn 'Mattitta' | ok |
+| Periya Puranam | 12280:1119 | திருமயிலை | Mylapore | ok |
+| Periya Puranam | 12280:1245 | பெருமணம் | Perumanam (no song) | ok |

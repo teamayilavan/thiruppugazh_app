@@ -10,7 +10,7 @@ Pleased by Sundarar's Tamil hymns, Shiva ordered heaps of paddy at Kundaiyur del
 
 | Source | Reference | Note | Status |
 |---|---|---|---|
-| Periya Puranam, Sundarar Puranam |  |  | from memory, not opened |
+| Periya Puranam, Eyarkon Kalikkama Nayanar Puranam (Tirumurai 12) | vv. 10-27 (Kundaiyur and the paddy); 10 and 11 checked [https://thevaaram.org/thirumurai_1/onepage.php?thiru=12&Song_idField=12290] |  | machine-read from the opened page; re-checked on every build |
 
 Assignments start KEYWORD-LEVEL: a song is listed when its English commentary (and, where possible, a Tamil lyric line) matches the story. A story with a 'Hand-read notes' section was then read (in full, or the doubtful part, as that section says) and wrong songs removed; other stories were not. Confidence: **t** = a Tamil lyric line matched and the commentary agrees; **c** = commentary only (no Tamil keyword line found); **low** = commentary did not match, check by reading the song.
 

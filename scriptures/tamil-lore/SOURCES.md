@@ -4,9 +4,25 @@
 
 | Source | What was done | Status |
 |---|---|---|
-| Tiruvilaiyadal Puranam; Sangam poems; sthala puranams | not opened this session | from memory, not opened |
+| Tiruvilaiyadal Puranam padalams 51, 52, 55 (Tamil Wikisource) | rendered pages fetched; keywords re-checked on every build | opened; re-checked on every build |
+| Periya Puranam, Kochchengat Chola Nayanar Puranam (12680, vv. 2-12) | parsed; the spider-and-elephant story is in the text itself | opened; re-checked on every build |
+| Sangam poems (Purananuru) for Pari and Kari; Tirukkural | not opened | from memory, not opened |
 
 ## Open questions and gaps
 
 - Not in the songs: Silappathikaram, Manimekalai, Avvaiyar, Kamban as a character, Kapilar (one passing mention in song 138 among sages).
 - Nakkeerar is in `saints/n-nakkeerar`; the Vandi and Vaigai stories in `saints/n-vandi-pittu`.
+- t-spider-elephant now rests on the Periya Puranam text (Kochchengat Chola puranam), not only on temple pages.
+
+## Verse checks (re-run on every build)
+
+Texts are cached in `scripts/.cache/` (git-ignored): `pp_all.json` = Periya Puranam sections from thevaaram.org (id 12000+10n = puranam n, verse numbers restart in each), `tvp.json` = Tiruvilaiyadal Puranam padalam pages on Tamil Wikisource, `kp_verses.json` = Kanda Puranam on Tamil Wikisource (global verse numbers, first kandam and the start of the second only). A line passes if the word occurs in that verse or page once spaces are removed.
+
+| Text | Location | Word | Shows | Result |
+|---|---|---|---|---|
+| Tiruvilaiyadal Puranam padalam | 51 | சங்கப்பலகை | the Sangam plank | ok |
+| Tiruvilaiyadal Puranam padalam | 55 | உருத்திரசன்மன் | Rudrasarman | ok |
+| Tiruvilaiyadal Puranam padalam | 52 | தருமி | Dharumi | ok |
+| Periya Puranam | 12680:3 | திருவானைக்கா | Thiruvanaikka named | ok |
+| Periya Puranam | 12680:4 | சிலம்பிவலை | the spider's web | ok |
+| Periya Puranam | 12680:12 | கோச்செங்கட்சோழர் | Kochchengat Chola | ok |

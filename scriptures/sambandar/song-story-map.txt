@@ -64,7 +64,7 @@
 767 | sam-avatar,sam-jains | ஒய்யா ரச்சிலை | t,t
 768 | sam-avatar,sam-fever | கட்காமக்ரோத | t,c
 769 | sam-avatar,sam-jains | கொங்கு லாவிய | c,t
-771 | sam-avatar,sam-jains | சருவி இகழ்ந்து | c,t
+771 | sam-avatar | சருவி இகழ்ந்து | c
 774 | sam-avatar,sam-birth | தினமணி சார்ங்க | t,t
 776 | sam-avatar,sam-todudaiya | மதனச்சொற் கார | t,c
 789 | sam-avatar,sam-fever | ஆடல் மாமத ராஜன் | c,c
@@ -76,7 +76,7 @@
 846 | sam-avatar | மலைக் கனத்தென | c
 859 | sam-avatar,sam-jains | இலகு குழைகிழிய | c,t
 878 | sam-avatar | திட்டெனப் பல | t
-888 | sam-avatar,sam-jains | வீங்கு பச்சிள | c,c
+888 | sam-avatar | வீங்கு பச்சிள | c
 902 | sam-avatar | இகல்கடின முகபடவி | c
 913 | sam-avatar,sam-birth | நெய்த்த சுரி | t,t
 920 | sam-avatar,sam-milk,sam-fever,sam-ordeals | காலன் வேல் கணை | c,c,c,t

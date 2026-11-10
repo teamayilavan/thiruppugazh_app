@@ -10,7 +10,9 @@ When the Vaigai flooded, every household owed a share of the embankment. Old Van
 
 | Source | Reference | Note | Status |
 |---|---|---|---|
-| Tiruvilaiyadal Puranam (Paranjothi) | Pittukku Man Sumantha padalam |  | from memory, not opened |
+| Tiruvilaiyadal Puranam (Paranjothi), padalam 61 Man Sumantha | whole padalam [https://ta.wikisource.org/wiki/%E0%AE%A4%E0%AE%BF%E0%AE%B0%E0%AF%81%E0%AE%B5%E0%AE%BF%E0%AE%B3%E0%AF%88%E0%AE%AF%E0%AE%BE%E0%AE%9F%E0%AE%B1%E0%AF%8D_%E0%AE%AA%E0%AF%81%E0%AE%B0%E0%AE%BE%E0%AE%A3%E0%AE%AE%E0%AF%8D/61] | Vandi and the pittu (61 checked) | machine-read from Tamil Wikisource; re-checked on every build |
+| Tiruvilaiyadal Puranam (Paranjothi), padalam 59 Nari Pariyakkiya | whole padalam [https://ta.wikisource.org/wiki/%E0%AE%A4%E0%AE%BF%E0%AE%B0%E0%AF%81%E0%AE%B5%E0%AE%BF%E0%AE%B3%E0%AF%88%E0%AE%AF%E0%AE%BE%E0%AE%9F%E0%AE%B1%E0%AF%8D_%E0%AE%AA%E0%AF%81%E0%AE%B0%E0%AE%BE%E0%AE%A3%E0%AE%AE%E0%AF%8D/59] |  | machine-read from Tamil Wikisource; re-checked on every build |
+| Tiruvilaiyadal Puranam (Paranjothi), padalam 60 Pari Nariyakiya | whole padalam [https://ta.wikisource.org/wiki/%E0%AE%A4%E0%AE%BF%E0%AE%B0%E0%AF%81%E0%AE%B5%E0%AE%BF%E0%AE%B3%E0%AF%88%E0%AE%AF%E0%AE%BE%E0%AE%9F%E0%AE%B1%E0%AF%8D_%E0%AE%AA%E0%AF%81%E0%AE%B0%E0%AE%BE%E0%AE%A3%E0%AE%AE%E0%AF%8D/60] |  | machine-read from Tamil Wikisource; re-checked on every build |
 
 Assignments start KEYWORD-LEVEL: a song is listed when its English commentary (and, where possible, a Tamil lyric line) matches the story. A story with a 'Hand-read notes' section was then read (in full, or the doubtful part, as that section says) and wrong songs removed; other stories were not. Confidence: **t** = a Tamil lyric line matched and the commentary agrees; **c** = commentary only (no Tamil keyword line found); **low** = commentary did not match, check by reading the song.
 

@@ -22,8 +22,8 @@ Assignments start KEYWORD-LEVEL: a song is listed when its English commentary (a
 
 ## Open questions
 
-- Which kandam holds the Valli marriage was not confirmed.
-- Kanda Puranam verses are not pinned for any story here.
-- Counts for Surasamharam stories are inflated by songs that only list Murugan's deeds in a line; read before relying on them.
+- Which kandam holds the Valli marriage: still unknown. The Wikisource text names Valli and Deivayanai only as future wives (vv. 1275-1277).
+- Padalams pinned: Saravana 13 (vv. 1015-1051), Brahma imprisoned 16 (1205-1223) and freed 17 (1224-1265), Tarakan 20 (1329-1531).
+- Not in the Wikisource text: the mango tree, peacock and cock, Jayanta, Agastya, the sea drying; they sit in the Asura/Yuddha kandams.
 - Already in the Shiva set: Murugan teaches Shiva the Pranava (68 songs) and Murugan born from Shiva's eye (4).
 - Ganesha frightening Valli and the fruit contest moved to `ganesha/`; Agastya and Tamil are also in `tamil-lore/`.

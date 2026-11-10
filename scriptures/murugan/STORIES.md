@@ -12,7 +12,7 @@
 |---|---|---|---|
 | Surapadman as a mango tree split by the Vel | 73 | 1 | [m-mango-sura](stories/m-mango-sura.md) |
 | The Krouncha mountain pierced | 217 | 1 | [m-krouncha](stories/m-krouncha.md) |
-| The sea dried by the Vel | 48 | 1 | [m-sea-dried](stories/m-sea-dried.md) |
+| The sea dried by the Vel | 48 | 2 | [m-sea-dried](stories/m-sea-dried.md) |
 | The peacock and the cock | 3 | 1 | [m-peacock-cock](stories/m-peacock-cock.md) |
 | Tarakasura | 15 | 1 | [m-tarakasura](stories/m-tarakasura.md) |
 | Jayanta, Indra's son, freed from Sura's prison | 1 | 1 | [m-jayanta](stories/m-jayanta.md) |

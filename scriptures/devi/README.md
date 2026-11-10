@@ -23,6 +23,6 @@ Assignments start KEYWORD-LEVEL: a song is listed when its English commentary (a
 ## Open questions
 
 - Shumbha, Nishumbha and Raktabija are NOT in the songs: the Tamil string சும்ப is only part of other words. No story made.
-- Kamakshi's thirty-two dharmas (முப்பத்திரண்டு அறம்): the source text was not found.
+- Kamakshi's thirty-two dharmas: no source text found after two searches; the tradition is named only in the songs' commentary.
+- Thiruvalangadu's dance contest: accounts differ (17 poses; an earring or an anklet gem; left or right leg). One source names Karaikkal Ammaiyar's Mootha Tirupathigam; an Appar hymn is claimed but no number was found.
 - Song 53 (Vana Durga, Kali) may mention Parvati giving the Vel; not confirmed, not assigned.
-- Kanchi tradition says Parvati embraced the sand lingam as the Vegavati flooded; the Tamil text names are from a temple site.

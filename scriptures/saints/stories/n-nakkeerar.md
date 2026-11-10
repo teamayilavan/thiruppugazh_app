@@ -10,8 +10,11 @@ The poet Nakkeerar was seized by a demon and shut in a cave at Thiruparankundram
 
 | Source | Reference | Note | Status |
 |---|---|---|---|
-| Tirumurugatruppadai (Tirumurai 11) |  | the poem sung in the cave | search result only (tradition) |
-| Nakkeerar legend | blogs and temple pages | no padalam number found | search result only (tradition) |
+| Tiruvilaiyadal Puranam (Paranjothi), padalam 52 Tarumikkup Porkizhi Aliththa | whole padalam [https://ta.wikisource.org/wiki/%E0%AE%A4%E0%AE%BF%E0%AE%B0%E0%AF%81%E0%AE%B5%E0%AE%BF%E0%AE%B3%E0%AF%88%E0%AE%AF%E0%AE%BE%E0%AE%9F%E0%AE%B1%E0%AF%8D_%E0%AE%AA%E0%AF%81%E0%AE%B0%E0%AE%BE%E0%AE%A3%E0%AE%AE%E0%AF%8D/52] | Dharumi and Nakkeerar's quarrel with Shiva (52 checked) | machine-read from Tamil Wikisource; re-checked on every build |
+| Tiruvilaiyadal Puranam (Paranjothi), padalam 53 Keeranaik Karai Etriya | whole padalam [https://ta.wikisource.org/wiki/%E0%AE%A4%E0%AE%BF%E0%AE%B0%E0%AF%81%E0%AE%B5%E0%AE%BF%E0%AE%B3%E0%AF%88%E0%AE%AF%E0%AE%BE%E0%AE%9F%E0%AE%B1%E0%AF%8D_%E0%AE%AA%E0%AF%81%E0%AE%B0%E0%AE%BE%E0%AE%A3%E0%AE%AE%E0%AF%8D/53] | Nakkeerar saved from the tank | machine-read from Tamil Wikisource; re-checked on every build |
+| Tiruvilaiyadal Puranam (Paranjothi), padalam 54 Keeranukku Upadesiththa | whole padalam [https://ta.wikisource.org/wiki/%E0%AE%A4%E0%AE%BF%E0%AE%B0%E0%AF%81%E0%AE%B5%E0%AE%BF%E0%AE%B3%E0%AF%88%E0%AE%AF%E0%AE%BE%E0%AE%9F%E0%AE%B1%E0%AF%8D_%E0%AE%AA%E0%AF%81%E0%AE%B0%E0%AE%BE%E0%AE%A3%E0%AE%AE%E0%AF%8D/54] |  | machine-read from Tamil Wikisource; re-checked on every build |
+| Tiruvilaiyadal Puranam padalams 52-54 | not located | the cave captivity and Tirumurugatruppadai are not in these padalams; that story is tradition | searched, not found |
+| Tirumurugatruppadai (Tirumurai 11) |  |  | from memory, not opened |
 
 Assignments start KEYWORD-LEVEL: a song is listed when its English commentary (and, where possible, a Tamil lyric line) matches the story. A story with a 'Hand-read notes' section was then read (in full, or the doubtful part, as that section says) and wrong songs removed; other stories were not. Confidence: **t** = a Tamil lyric line matched and the commentary agrees; **c** = commentary only (no Tamil keyword line found); **low** = commentary did not match, check by reading the song.
 

@@ -10,8 +10,8 @@ Parvati made a sand lingam under the mango tree beside the Vegavati and worshipp
 
 | Source | Reference | Note | Status |
 |---|---|---|---|
-| Kanchi Puranam; Thirukkurippu Thondar Puranam | named by a temple website | text not found | search result only (tradition) |
-| Ekambareswarar legend | temple pages |  | search result only (tradition) |
+| Ekambareswarar temple legend (Kanchi) |  | sand lingam under the mango tree, the flooding Vegavati, bangle marks; several temple websites agree | search result only (tradition) |
+| Kanchi Puranam / Thirukkurippu Thondar Puranam | not located | named by a temple site as the text; the text itself was not found online | searched, not found |
 
 Assignments start KEYWORD-LEVEL: a song is listed when its English commentary (and, where possible, a Tamil lyric line) matches the story. A story with a 'Hand-read notes' section was then read (in full, or the doubtful part, as that section says) and wrong songs removed; other stories were not. Confidence: **t** = a Tamil lyric line matched and the commentary agrees; **c** = commentary only (no Tamil keyword line found); **low** = commentary did not match, check by reading the song.
 

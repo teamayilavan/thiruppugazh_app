@@ -4,14 +4,31 @@
 
 | Source | What was done | Status |
 |---|---|---|
-| Kanda Puranam (Kachiyappa Sivacharyar), six kandams: Utpatti, Asura, Mahendra, Yuddha, Deva, Daksha | kandam list from web search; episode-to-kandam mapping and padalam numbers not confirmed | search result only (tradition) |
-| Skanda Purana, Sankara Samhita (source of the Tamil work) | not opened | from memory, not opened |
-| Tirumurugatruppadai (Nakkeerar) | not opened | from memory, not opened |
+| Kanda Puranam (Kachiyappar), Utpatti Kandam and the start of the Asura Kandam (Tamil Wikisource) | one 1.2 MB page parsed into 1781 verses (global numbers 1-1783); padalam names and verse ranges taken from its headings; keywords re-checked on every build | opened; re-checked on every build |
+| Kanda Puranam, Mahendra, Yuddha, Deva and Daksha Kandams | not on Wikisource (searches returned nothing); the war, Valli and Deivayanai stories cannot be machine-checked | not available |
+| Tiruvilaiyadal Puranam padalam 13 (the Pandya prince Ugrakumara dries the sea with a Vel) | a different story from Murugan's; may be what some 'sea dried' lines recall | opened; re-checked on every build |
 
 ## Open questions and gaps
 
-- Which kandam holds the Valli marriage was not confirmed.
-- Kanda Puranam verses are not pinned for any story here.
-- Counts for Surasamharam stories are inflated by songs that only list Murugan's deeds in a line; read before relying on them.
+- Which kandam holds the Valli marriage: still unknown. The Wikisource text names Valli and Deivayanai only as future wives (vv. 1275-1277).
+- Padalams pinned: Saravana 13 (vv. 1015-1051), Brahma imprisoned 16 (1205-1223) and freed 17 (1224-1265), Tarakan 20 (1329-1531).
+- Not in the Wikisource text: the mango tree, peacock and cock, Jayanta, Agastya, the sea drying; they sit in the Asura/Yuddha kandams.
 - Already in the Shiva set: Murugan teaches Shiva the Pranava (68 songs) and Murugan born from Shiva's eye (4).
 - Ganesha frightening Valli and the fruit contest moved to `ganesha/`; Agastya and Tamil are also in `tamil-lore/`.
+
+## Verse checks (re-run on every build)
+
+Texts are cached in `scripts/.cache/` (git-ignored): `pp_all.json` = Periya Puranam sections from thevaaram.org (id 12000+10n = puranam n, verse numbers restart in each), `tvp.json` = Tiruvilaiyadal Puranam padalam pages on Tamil Wikisource, `kp_verses.json` = Kanda Puranam on Tamil Wikisource (global verse numbers, first kandam and the start of the second only). A line passes if the word occurs in that verse or page once spaces are removed.
+
+| Text | Location | Word | Shows | Result |
+|---|---|---|---|---|
+| Kanda Puranam verse | 1032 | சரவண | Saravana | ok |
+| Kanda Puranam verse | 1048 | பொய்கை | the lake | ok |
+| Kanda Puranam verse | 1219 | சிறை | Brahma jailed | ok |
+| Kanda Puranam verse | 1223 | சிறை | Brahma in prison | ok |
+| Kanda Puranam verse | 1329 | கிரவுஞ்ச | Krouncha | ok |
+| Kanda Puranam verse | 1332 | தாரக | Tarakan | ok |
+| Kanda Puranam verse | 1275 | தெய்வயானை | Deivayanai named | ok |
+| Kanda Puranam verse | 1277 | வள்ளி | Valli named | ok |
+| Tiruvilaiyadal Puranam padalam | 13 | வேல் | the Vel dries the sea (Ugrakumara Pandyan) | ok |
+| Tiruvilaiyadal Puranam padalam | 13 | கடல் | the sea | ok |

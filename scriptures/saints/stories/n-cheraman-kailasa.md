@@ -10,8 +10,8 @@ The Chera king Cheraman Perumal, Sundarar's friend, rode a divine horse to Kaila
 
 | Source | Reference | Note | Status |
 |---|---|---|---|
-| Periya Puranam, Cheraman Perumal Nayanar Puranam |  |  | from memory, not opened |
-| Adi Ula (Tirumurai 11) |  | Cheraman's poem | from memory, not opened |
+| Periya Puranam, Kazharitrarivar (Cheraman Perumal) Nayanar Puranam (Tirumurai 12) | vv. 112-118 (the friendship), 173-175 (Cheraman misses Sundarar; 173 checked) [https://thevaaram.org/thirumurai_1/onepage.php?thiru=12&Song_idField=12370] | the Kailasa ascent itself was not located in the downloaded sections | machine-read from the opened page; re-checked on every build |
+| Adi Ula (Tirumurai 11) |  | Cheraman's poem on the Kailasa journey | from memory, not opened |
 
 Assignments start KEYWORD-LEVEL: a song is listed when its English commentary (and, where possible, a Tamil lyric line) matches the story. A story with a 'Hand-read notes' section was then read (in full, or the doubtful part, as that section says) and wrong songs removed; other stories were not. Confidence: **t** = a Tamil lyric line matched and the commentary agrees; **c** = commentary only (no Tamil keyword line found); **low** = commentary did not match, check by reading the song.
 

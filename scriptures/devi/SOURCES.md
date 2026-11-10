@@ -4,14 +4,24 @@
 
 | Source | What was done | Status |
 |---|---|---|
-| Devi Mahatmya (Markandeya Purana, usually ch. 81-93; numbering varies by edition): Mahishasura = Madhyama Charitra, ch. 2-4 | chapter structure from a web search; not read | search result only (tradition) |
-| Kanchi Puranam; Thirukkurippu Thondar Puranam (Parvati and the sand lingam at Kanchi) | named by a temple website; text not found | search result only (tradition) |
-| Sthala puranams: Thiruppathirippuliyur, Thiruvalangadu (Kali's dance contest), Kanchi | temple and news pages | search result only (tradition) |
-| Tiruvilaiyadal Puranam: Parvati as the fisherman's daughter, Angayarkanni | not opened this session | from memory, not opened |
+| Devi Mahatmya, Madhyama Charitra ch. 2-4 (Markandeya Purana 81-93 or 78-90 by edition) | chapter titles from printed-edition descriptions found by search; the Sanskrit text could not be fetched (GRETIL 404, sanskritdocuments blocked) | search result only (tradition) |
+| Tiruvilaiyadal Puranam padalams 3-5, 57 (Tamil Wikisource) | rendered pages fetched; keywords re-checked on every build | opened; re-checked on every build |
+| Sthala puranams: Kanchi (Ekambareswarar), Thiruppathirippuliyur, Thiruvalangadu | temple and news pages only; the Tamil texts were not found online | search result only (tradition) |
 
 ## Open questions and gaps
 
 - Shumbha, Nishumbha and Raktabija are NOT in the songs: the Tamil string சும்ப is only part of other words. No story made.
-- Kamakshi's thirty-two dharmas (முப்பத்திரண்டு அறம்): the source text was not found.
+- Kamakshi's thirty-two dharmas: no source text found after two searches; the tradition is named only in the songs' commentary.
+- Thiruvalangadu's dance contest: accounts differ (17 poses; an earring or an anklet gem; left or right leg). One source names Karaikkal Ammaiyar's Mootha Tirupathigam; an Appar hymn is claimed but no number was found.
 - Song 53 (Vana Durga, Kali) may mention Parvati giving the Vel; not confirmed, not assigned.
-- Kanchi tradition says Parvati embraced the sand lingam as the Vegavati flooded; the Tamil text names are from a temple site.
+
+## Verse checks (re-run on every build)
+
+Texts are cached in `scripts/.cache/` (git-ignored): `pp_all.json` = Periya Puranam sections from thevaaram.org (id 12000+10n = puranam n, verse numbers restart in each), `tvp.json` = Tiruvilaiyadal Puranam padalam pages on Tamil Wikisource, `kp_verses.json` = Kanda Puranam on Tamil Wikisource (global verse numbers, first kandam and the start of the second only). A line passes if the word occurs in that verse or page once spaces are removed.
+
+| Text | Location | Word | Shows | Result |
+|---|---|---|---|---|
+| Tiruvilaiyadal Puranam padalam | 3 | திருநகரம் | Madurai founded | ok |
+| Tiruvilaiyadal Puranam padalam | 4 | தடாதகை | Tatatakai (Meenakshi) | ok |
+| Tiruvilaiyadal Puranam padalam | 57 | வலை | Shiva casts the net | ok |
+| Tiruvilaiyadal Puranam padalam | 57 | சுறா | the shark | ok |

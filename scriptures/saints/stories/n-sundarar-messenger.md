@@ -10,7 +10,7 @@ Sundarar had quarrelled with his wife Paravai at Tiruvarur. Shiva himself walked
 
 | Source | Reference | Note | Status |
 |---|---|---|---|
-| Periya Puranam, Sundarar Puranam (Tirumurai 12) | the Tiruvarur section |  | from memory, not opened |
+| Periya Puranam, Eyarkon Kalikkama Nayanar Puranam (Tirumurai 12) | v. 8 (Shiva sent as messenger), v. 337 (at Paravai's house); both checked [https://thevaaram.org/thirumurai_1/onepage.php?thiru=12&Song_idField=12290] |  | machine-read from the opened page; re-checked on every build |
 
 Assignments start KEYWORD-LEVEL: a song is listed when its English commentary (and, where possible, a Tamil lyric line) matches the story. A story with a 'Hand-read notes' section was then read (in full, or the doubtful part, as that section says) and wrong songs removed; other stories were not. Confidence: **t** = a Tamil lyric line matched and the commentary agrees; **c** = commentary only (no Tamil keyword line found); **low** = commentary did not match, check by reading the song.
 

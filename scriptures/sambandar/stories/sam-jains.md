@@ -2,7 +2,7 @@
 
 # The Jains impaled (further songs)
 
-`sam-jains` | Thirugnana Sambandar | 23 songs
+`sam-jains` | Thirugnana Sambandar | 21 songs
 
 After losing the debates the Jains were impaled on stakes, according to the tradition the Thiruppugazh repeats. These are songs beyond the 20 already in `shiva/stories/saints-sambandar.md`; some ids appear in both.
 
@@ -14,6 +14,13 @@ After losing the debates the Jains were impaled on stakes, according to the trad
 | Shiva set | shiva/stories/saints-sambandar.md | the 20 songs already collected | local |
 
 Assignments start KEYWORD-LEVEL: a song is listed when its English commentary (and, where possible, a Tamil lyric line) matches the story. A story with a 'Hand-read notes' section was then read (in full, or the doubtful part, as that section says) and wrong songs removed; other stories were not. Confidence: **t** = a Tamil lyric line matched and the commentary agrees; **c** = commentary only (no Tamil keyword line found); **low** = commentary did not match, check by reading the song.
+
+## Hand-read notes
+
+All 23 read.
+
+- Removed after reading: 771 (Jains stunned by the hymns, not impaled)
+- Removed after reading: 888 (Jains named, no gallows)
 
 ## Songs
 
@@ -158,16 +165,6 @@ Commentary: ...rd! Oh Lord with six hallowed faces, You are seated in this beaut
 
 Confidence t
 
-### 771 சருவி இகழ்ந்து (சீகாழி)
-
-> பெருமைக ளுங்கன முங்குண மும்பயில்
-> **சரவண மும்பொறை யும்புக ழுந்திகழ் ...... தனிவேலும்**
-> விருது துலங்க சிகண்டியி லண்டரு
-
-Commentary: All the religions, bickering among themselves, caught in delusions and throwing temper tantrums; those non-religious ones who deny even the existence of God; and those ChamaNas, whose members pluck the hair (of the Master-to-be among them)*; were all in a state of shell-shock when You (as ThirugnAna Sambandhar) narrated the endearing songs (ThEvAram) in Tamil. That command**; Your compassion; Your triumphs; Your auspicious glories;...
-
-Confidence t
-
 ### 799 முலை குலுக்கிகள் (திருவிடைக்கழி)
 
 > கவலை யற்றிட நினதருள் ...... புரிவாயே
@@ -187,14 +184,6 @@ Confidence t
 Commentary: ...that Lord SivA, You preached the silent ManthrA, Oh Master! You wear the garland of the kadappa flowers! She is the daughter of the hunters who live in the beautiful forest; You married that VaLLi, Oh Leader! Making the samaNAs jump at the gallows, You came (as ThirugnAna Sambandhar) to wage a well-contemplated war of words, Oh Kumara! Oh Supreme Master! You graciously shower all the righteous things! You are seated in ThiruvidaimaruthUr! You are the Lord of the wisest sages, Oh Gr...
 
 Confidence t
-
-### 888 வீங்கு பச்சிள (திருப்பூந்துருத்தி)
-
-> (no Tamil keyword line found; commentary quoted instead)
-
-Commentary: ... path towards true knowledge so that I could attain Your hallowed feet by the easiest method and lead a life of sustained and great penance, Oh Lord! Remaining the cause of deep contemplation by a whole group of debased SamaNA priests (who followed the doctrine of Jainic principles), You came to Madhurai (as ThirugnAna Sambandhar), Oh Son of Lord SivA! You graciously preached to Lord SivA who danced amidst tumultous noise, Oh Lord that mounts the peacock! Oh Great Warrior! Those wh...
-
-Confidence c
 
 ### 1162 ஞானா விபூஷணி (பொதுப்பாடல்கள்)
 

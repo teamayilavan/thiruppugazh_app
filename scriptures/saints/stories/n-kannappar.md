@@ -10,7 +10,7 @@ The hunter Kannappar washed the Kalahasti lingam with water from his mouth, offe
 
 | Source | Reference | Note | Status |
 |---|---|---|---|
-| Periya Puranam, Kannappa Nayanar Puranam |  |  | from memory, not opened |
+| Periya Puranam, Kannappa Nayanar Puranam (Tirumurai 12) | vv. 173-176 (the eye offering; 173 and 175 checked) [https://thevaaram.org/thirumurai_1/onepage.php?thiru=12&Song_idField=12100] |  | machine-read from the opened page; re-checked on every build |
 
 Assignments start KEYWORD-LEVEL: a song is listed when its English commentary (and, where possible, a Tamil lyric line) matches the story. A story with a 'Hand-read notes' section was then read (in full, or the doubtful part, as that section says) and wrong songs removed; other stories were not. Confidence: **t** = a Tamil lyric line matched and the commentary agrees; **c** = commentary only (no Tamil keyword line found); **low** = commentary did not match, check by reading the song.
 
