@@ -695,4 +695,10 @@ class AppLocalizationsTa extends AppLocalizations {
 
   @override
   String get selectSongToRead => 'இங்கே படிக்க ஒரு பாடலைத் தேர்ந்தெடுக்கவும்';
+
+  @override
+  String get previousSong => 'முந்தைய பாடல்';
+
+  @override
+  String get nextSong => 'அடுத்த பாடல்';
 }

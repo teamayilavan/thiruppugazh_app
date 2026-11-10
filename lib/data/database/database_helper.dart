@@ -606,6 +606,22 @@ class DatabaseHelper {
     return Song.fromMap(maps.first);
   }
 
+  /// The song after (or before) [id] in song-number order, or null at either
+  /// end. Used by the reading pane's previous/next buttons; it doesn't assume
+  /// the ids are contiguous.
+  Future<Song?> getAdjacentSong(int id, {required bool next}) async {
+    final db = await database;
+    final maps = await db.query(
+      'songs',
+      where: next ? 'id > ?' : 'id < ?',
+      whereArgs: [id],
+      orderBy: next ? 'id ASC' : 'id DESC',
+      limit: 1,
+    );
+    if (maps.isEmpty) return null;
+    return Song.fromMap(maps.first);
+  }
+
   Future<Song?> getRandomSong() async {
     // A random offset into an id-ordered scan; ORDER BY RANDOM() would sort
     // every (wide) song row just to keep one.

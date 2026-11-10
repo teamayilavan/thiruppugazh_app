@@ -105,6 +105,12 @@ class SongRepository extends ChangeNotifier {
     return await dbHelper.getSongById(id);
   }
 
+  /// The song after ([next] true) or before [id] in song-number order, or
+  /// null at either end.
+  Future<Song?> getAdjacentSong(int id, {required bool next}) async {
+    return await dbHelper.getAdjacentSong(id, next: next);
+  }
+
   /// Fetches a single random song.
   Future<Song?> getRandomSong() async {
     return await dbHelper.getRandomSong();

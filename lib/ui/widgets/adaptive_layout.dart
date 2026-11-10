@@ -99,6 +99,18 @@ Color? paneSelectionColor(BuildContext context, int songId) {
   return Theme.of(context).extension<AppColorExtension>()!.card;
 }
 
+/// Name of the full-screen song page's route. The shell looks for it when a
+/// tablet turns from portrait to landscape, to move that song into the reading
+/// pane instead of squeezing a full page into the list column.
+const String songRouteName = 'song-detail';
+
+/// The full-screen page for [song]. Its route carries the song, so the shell
+/// can recover it.
+Route<void> songRoute(Song song) => MaterialPageRoute<void>(
+  settings: RouteSettings(name: songRouteName, arguments: song),
+  builder: (_) => SongDetailScreen(song: song),
+);
+
 /// Opens [song] in the reading pane when there is one, otherwise as a full
 /// screen on top of the current page.
 void openSong(BuildContext context, Song song) {
@@ -107,7 +119,5 @@ void openSong(BuildContext context, Song song) {
     onOpen(song);
     return;
   }
-  Navigator.of(
-    context,
-  ).push(MaterialPageRoute(builder: (_) => SongDetailScreen(song: song)));
+  Navigator.of(context).push(songRoute(song));
 }

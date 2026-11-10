@@ -276,5 +276,7 @@
   "@backupShareText": {"placeholders": {"date": {"type": "String"}}},
   "importUnknownDate": "an unknown date",
   "couldNotOpenGithub": "Couldn't open the GitHub repository",
-  "selectSongToRead": "Choose a song to read it here"
+  "selectSongToRead": "Choose a song to read it here",
+  "previousSong": "Previous song",
+  "nextSong": "Next song"
 }

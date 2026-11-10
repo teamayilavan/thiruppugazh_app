@@ -1358,6 +1358,18 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Choose a song to read it here'**
   String get selectSongToRead;
+
+  /// No description provided for @previousSong.
+  ///
+  /// In en, this message translates to:
+  /// **'Previous song'**
+  String get previousSong;
+
+  /// No description provided for @nextSong.
+  ///
+  /// In en, this message translates to:
+  /// **'Next song'**
+  String get nextSong;
 }
 
 class _AppLocalizationsDelegate

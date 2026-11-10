@@ -20,6 +20,8 @@ import '../../utils/link_utils.dart';
 import '../../providers/lyrics_language_provider.dart';
 import '../../constants/app_constants.dart';
 import '../../l10n/app_localizations.dart';
+import '../../providers/reading_state_provider.dart';
+import '../../utils/app_logger.dart';
 
 class MainWrapper extends StatefulWidget {
   const MainWrapper({super.key});
@@ -36,7 +38,23 @@ class _MainWrapperState extends State<MainWrapper> {
 
   /// The song open in the reading pane (tablets only).
   Song? _selected;
+
+  /// The songs before and after [_selected] in song-number order, for the
+  /// reader's previous/next buttons and the arrow keys. Null at either end,
+  /// and until they have loaded.
+  Song? _prevSong;
+  Song? _nextSong;
+
+  /// True once the user has opened a song in the pane themselves, as opposed
+  /// to the pane showing the song remembered from last time. Only then is a
+  /// rotation to portrait expected to keep that song on screen.
+  bool _readerOpen = false;
+
   bool _paneActive = false;
+
+  /// Whether the last layout had room for the list and the reader side by
+  /// side, so a change (rotation, resizing) can be noticed.
+  bool _wasSplit = false;
 
   // On large screens each tab keeps its own navigator, so pages opened from a
   // tab (a temple's songs, search) stay inside it and the rail and reading
@@ -65,6 +83,90 @@ class _MainWrapperState extends State<MainWrapper> {
     HardwareKeyboard.instance.addHandler(_handleKey);
     _initDeepLinks();
     _initShareIntake();
+    _restoreLastSong();
+  }
+
+  /// Puts the song read last time into the reading pane, so a tablet doesn't
+  /// start on an empty pane. It only fills the pane; nothing is opened or
+  /// recorded, and a song the user picks first is never replaced.
+  Future<void> _restoreLastSong() async {
+    final reading = context.read<ReadingStateProvider>();
+    final repo = context.read<SongRepository>();
+    await reading.ready;
+    final id = reading.lastSongId;
+    if (id == null || !mounted || _selected != null) return;
+    try {
+      final song = await repo.getSongById(id);
+      if (song == null || !mounted || _selected != null) return;
+      setState(() => _selected = song);
+      _loadNeighbours(song);
+    } catch (e, st) {
+      AppLogger.error(
+        'Restoring the last song failed',
+        error: e,
+        stackTrace: st,
+      );
+    }
+  }
+
+  /// Shows [song] in the reading pane.
+  void _select(Song song) {
+    setState(() {
+      _selected = song;
+      _readerOpen = true;
+      _prevSong = null;
+      _nextSong = null;
+    });
+    _loadNeighbours(song);
+  }
+
+  Future<void> _loadNeighbours(Song song) async {
+    final repo = context.read<SongRepository>();
+    try {
+      final prev = await repo.getAdjacentSong(song.id, next: false);
+      final next = await repo.getAdjacentSong(song.id, next: true);
+      // The user may have moved on while this was loading.
+      if (!mounted || _selected?.id != song.id) return;
+      setState(() {
+        _prevSong = prev;
+        _nextSong = next;
+      });
+    } catch (e, st) {
+      AppLogger.error(
+        'Loading neighbouring songs failed',
+        error: e,
+        stackTrace: st,
+      );
+    }
+  }
+
+  /// A tablet changed between "list and reader side by side" and a single
+  /// column (rotation, a resized window). A full-screen song page left in a
+  /// tab would be squeezed into the list column, so it moves into the pane;
+  /// and a song open in the pane becomes a full page, so it isn't lost.
+  void _onSplitChanged(bool split) {
+    if (!mounted) return;
+    if (split) {
+      Song? found;
+      for (final key in _navKeys) {
+        key.currentState?.popUntil((route) {
+          final args = route.settings.arguments;
+          if (route.settings.name == songRouteName && args is Song) {
+            found = args;
+            return false;
+          }
+          return true;
+        });
+      }
+      if (found != null) _select(found!);
+    } else if (_readerOpen &&
+        _selected != null &&
+        _selectedIndex != _settingsIndex) {
+      final nav = _tabNavigator;
+      if (nav == null) return;
+      nav.push(songRoute(_selected!));
+      setState(() => _readerOpen = false);
+    }
   }
 
   @override
@@ -171,13 +273,9 @@ class _MainWrapperState extends State<MainWrapper> {
 
         if (song != null && mounted) {
           if (_paneActive) {
-            setState(() => _selected = song);
+            _select(song);
           } else {
-            Navigator.of(context).push(
-              MaterialPageRoute(
-                builder: (context) => SongDetailScreen(song: song),
-              ),
-            );
+            Navigator.of(context).push(songRoute(song));
           }
         }
       }
@@ -221,7 +319,28 @@ class _MainWrapperState extends State<MainWrapper> {
       return true;
     }
     if (key == LogicalKeyboardKey.escape) return _popTabPage();
+    if (key == LogicalKeyboardKey.arrowLeft ||
+        key == LogicalKeyboardKey.arrowRight) {
+      // Previous / next song in the reader, unless the arrows are moving a
+      // text cursor.
+      if (!_paneActive || _selected == null || _isEditingText()) return false;
+      final target = key == LogicalKeyboardKey.arrowLeft
+          ? _prevSong
+          : _nextSong;
+      if (target == null) return false;
+      _select(target);
+      return true;
+    }
     return false;
+  }
+
+  /// True while the keyboard focus is in a text field the user can type in
+  /// (the search box). Selectable lyrics are read-only and don't count.
+  bool _isEditingText() {
+    final context = FocusManager.instance.primaryFocus?.context;
+    if (context == null) return false;
+    final editable = context.findAncestorStateOfType<EditableTextState>();
+    return editable != null && !editable.widget.readOnly;
   }
 
   void _openSearch() {
@@ -347,6 +466,12 @@ class _MainWrapperState extends State<MainWrapper> {
                       constraints.maxWidth >= Breakpoints.expanded - 80;
                   final showReader = split && _selectedIndex != _settingsIndex;
                   _paneActive = showReader;
+                  if (split != _wasSplit) {
+                    _wasSplit = split;
+                    WidgetsBinding.instance.addPostFrameCallback(
+                      (_) => _onSplitChanged(split),
+                    );
+                  }
                   final selected = _selected;
                   return Row(
                     children: [
@@ -356,9 +481,7 @@ class _MainWrapperState extends State<MainWrapper> {
                             : constraints.maxWidth,
                         child: SongPaneScope(
                           selectedSongId: showReader ? selected?.id : null,
-                          onOpen: showReader
-                              ? (song) => setState(() => _selected = song)
-                              : null,
+                          onOpen: showReader ? _select : null,
                           child: tabsWithBack,
                         ),
                       ),
@@ -371,9 +494,21 @@ class _MainWrapperState extends State<MainWrapper> {
                         Expanded(
                           child: selected == null
                               ? _EmptyReader(message: l10n.selectSongToRead)
-                              : SongDetailScreen(
-                                  key: ValueKey(selected.id),
-                                  song: selected,
+                              : Column(
+                                  children: [
+                                    _ReaderBar(
+                                      previous: _prevSong,
+                                      next: _nextSong,
+                                      onSelect: _select,
+                                    ),
+                                    Expanded(
+                                      child: SongDetailScreen(
+                                        key: ValueKey(selected.id),
+                                        song: selected,
+                                        recordOpened: _readerOpen,
+                                      ),
+                                    ),
+                                  ],
                                 ),
                         ),
                     ],
@@ -420,6 +555,49 @@ class _TabNavigator extends StatelessWidget {
     return Navigator(
       key: navKey,
       onGenerateRoute: (_) => MaterialPageRoute<void>(builder: (_) => child),
+    );
+  }
+}
+
+/// Previous / next song, above the reading pane. Songs follow each other in
+/// song-number order, whichever list the song was opened from.
+class _ReaderBar extends StatelessWidget {
+  const _ReaderBar({
+    required this.previous,
+    required this.next,
+    required this.onSelect,
+  });
+
+  final Song? previous;
+  final Song? next;
+  final ValueChanged<Song> onSelect;
+
+  @override
+  Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
+    final prev = previous;
+    final nxt = next;
+    return SafeArea(
+      bottom: false,
+      left: false,
+      child: SizedBox(
+        height: 48,
+        child: Row(
+          children: [
+            IconButton(
+              icon: const Icon(Icons.chevron_left),
+              tooltip: l10n.previousSong,
+              onPressed: prev == null ? null : () => onSelect(prev),
+            ),
+            const Spacer(),
+            IconButton(
+              icon: const Icon(Icons.chevron_right),
+              tooltip: l10n.nextSong,
+              onPressed: nxt == null ? null : () => onSelect(nxt),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }

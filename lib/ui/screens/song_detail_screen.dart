@@ -30,7 +30,17 @@ List<String> selectMayuragiriLyrics(Song song, bool useEnglish) {
 
 class SongDetailScreen extends StatefulWidget {
   final Song song;
-  const SongDetailScreen({super.key, required this.song});
+
+  /// Whether opening this page counts as "last read" for the Home Continue
+  /// card. The reading pane passes false for the song it restores at start-up,
+  /// so showing it doesn't wipe a saved chanting position.
+  final bool recordOpened;
+
+  const SongDetailScreen({
+    super.key,
+    required this.song,
+    this.recordOpened = true,
+  });
 
   @override
   State<SongDetailScreen> createState() => _SongDetailScreenState();
@@ -85,7 +95,9 @@ class _SongDetailScreenState extends State<SongDetailScreen> {
     final repo = Provider.of<SongRepository>(context, listen: false);
     _loadCategoryInfo(repo);
     // Remember this song so Home can offer "Continue".
-    context.read<ReadingStateProvider>().recordOpened(widget.song.id);
+    if (widget.recordOpened) {
+      context.read<ReadingStateProvider>().recordOpened(widget.song.id);
+    }
   }
 
   @override
@@ -747,6 +759,9 @@ ${_displayLyricsList.join('\n')}''';
             child: FloatingActionButton(
               heroTag: 'fab_favorite',
               onPressed: _isFavoriteLoading ? null : _toggleFavorite,
+              tooltip: _isFavorite
+                  ? l10n.removeFromFavorites
+                  : l10n.addToFavorites,
               child: _isFavoriteLoading
                   ? const SizedBox(
                       width: 24,
@@ -770,6 +785,7 @@ ${_displayLyricsList.join('\n')}''';
             hint: l10n.tapToAddCategories,
             child: FloatingActionButton(
               heroTag: 'fab_add_category',
+              tooltip: l10n.addToCategories,
               onPressed: () {
                 showModalBottomSheet(
                   context: context,

@@ -689,4 +689,10 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get selectSongToRead => 'Choose a song to read it here';
+
+  @override
+  String get previousSong => 'Previous song';
+
+  @override
+  String get nextSong => 'Next song';
 }
