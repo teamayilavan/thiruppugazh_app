@@ -55,7 +55,20 @@ class DatabaseHelper {
 
   /// Returns the singleton database instance, initializing it if necessary.
   /// Caches the Future itself so concurrent callers all await the same init.
-  Future<Database> get database => _databaseFuture ??= _initDatabase();
+  ///
+  /// A failed open is not kept: the next caller tries again, so one bad moment
+  /// at startup (a lock, a busy disk) cannot leave every query in this
+  /// process failing until the app is restarted.
+  Future<Database> get database => _databaseFuture ??= _openOnce();
+
+  Future<Database> _openOnce() async {
+    try {
+      return await _initDatabase();
+    } catch (_) {
+      _databaseFuture = null;
+      rethrow;
+    }
+  }
 
   /// Runs [action] inside a single sqflite transaction. Pass the given
   /// [Transaction] as the `executor` argument to the executor-aware helper
