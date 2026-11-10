@@ -4,13 +4,14 @@
 
 `m-deivayanai` | Murugan's own lore (Kanda Puranam) | 42 songs
 
-Indra's daughter Deivayanai (Devasena), raised by Airavata, is Murugan's wife; tradition places the wedding at Thiruparankundram. Many songs only name her as his consort beside Valli, so this list is partly epithet-level. The first kandam of the Kanda Puranam foretells the marriage (vv. 1275-1277).
+Indra's daughter Deivayanai (Devasena) is brought up by Airavata (KP Utpatti 1276). After Surapadman's death Indra decides to give her to Murugan (Deva 36); she travels from Meru on Airavata to Thiruparankundram (45-46), where Murugan has come, and the wedding takes place there (padalam 2, vv. 36-303; the place is named in vv. 46, 86 and 132). Many songs only name her as his consort beside Valli, so this list is partly epithet-level. Text: Kanda Puranam, Deva Kandam (Project Madurai) and Utpatti Kandam (Wikisource).
 
 ## References
 
 | Source | Reference | Note | Status |
 |---|---|---|---|
-| Kanda Puranam (Kachiyappar), Utpatti Kandam | vv. 1275-1277 name Deivayanai and Valli as Murugan's future wives (1275 checked) [https://ta.wikisource.org/wiki/%E0%AE%95%E0%AE%A8%E0%AF%8D%E0%AE%A4_%E0%AE%AA%E0%AF%81%E0%AE%B0%E0%AE%BE%E0%AE%A3%E0%AE%AE%E0%AF%8D] | the wedding itself is in a later kandam not on Wikisource | machine-read from Tamil Wikisource (first kandam and the start of the second only) |
+| Kanda Puranam (Kachiyappar), Utpatti Kandam | v. 1276 Airavata tends Deivayanai as the Milk Ocean tended Lakshmi; vv. 1275-1277 name her and Valli as Murugan's future wives (1275 and 1276 checked) [https://ta.wikisource.org/wiki/%E0%AE%95%E0%AE%A8%E0%AF%8D%E0%AE%A4_%E0%AE%AA%E0%AF%81%E0%AE%B0%E0%AE%BE%E0%AE%A3%E0%AE%AE%E0%AF%8D] |  | machine-read from Tamil Wikisource (first kandam and the start of the second only) |
+| Kanda Puranam (Kachiyappar), Deva Kandam (Project Madurai text) | padalam 2 Deivayanai Ammai Tirumana Padalam, vv. 36-303; vv. 42-46 (Indra sends Deivayanai from Meru on Airavata to Thiruparankundram), 86-88 (Murugan at Thiruparankundram, Indra gives Deivayanai, the wedding is announced), 132 (Murugan reaches Thiruparankundram for the wedding) [https://projectmadurai.org/pm_etexts/utf8/pmuni0304.html] | the wedding place is stated in the text: Thiruparankundram | machine-read from Project Madurai (Unicode text); re-checked on every build |
 
 Assignments start KEYWORD-LEVEL: a song is listed when its English commentary (and, where possible, a Tamil lyric line) matches the story. A story with a 'Hand-read notes' section was then read (in full, or the doubtful part, as that section says) and wrong songs removed; other stories were not. Confidence: **t** = a Tamil lyric line matched and the commentary agrees; **c** = commentary only (no Tamil keyword line found); **low** = commentary did not match, check by reading the song.
 

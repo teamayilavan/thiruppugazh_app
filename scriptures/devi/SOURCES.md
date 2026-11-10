@@ -17,7 +17,7 @@
 
 ## Verse checks (re-run on every build)
 
-Texts are cached in `scripts/.cache/` (git-ignored): `pp_all.json` = Periya Puranam sections from thevaaram.org (id 12000+10n = puranam n, verse numbers restart in each), `tvp.json` = Tiruvilaiyadal Puranam padalam pages on Tamil Wikisource, `kp_verses.json` = Kanda Puranam on Tamil Wikisource (global verse numbers, first kandam and the start of the second only). A line passes if the word occurs in that verse or page once spaces are removed.
+Texts are cached in `scripts/.cache/` (git-ignored): `pp_all.json` = Periya Puranam sections from thevaaram.org (id 12000+10n = puranam n, verse numbers restart in each), `tvp.json` = Tiruvilaiyadal Puranam padalam pages on Tamil Wikisource, `kp_verses.json` = Kanda Puranam on Tamil Wikisource (global verse numbers, first kandam and the start of the second only); `kp_mahendra.json`, `kp_yuddha.json`, `kp_deva.json` = the Mahendra, Yuddha and Deva kandams from Project Madurai's Unicode text, made by `parse_kp_pm.py` (verse numbers run within each kandam; the Yuddha page omits verses 894, 916-925 and 1901). A line passes if the word occurs in that verse or page once spaces are removed.
 
 | Text | Location | Word | Shows | Result |
 |---|---|---|---|---|
@@ -25,6 +25,10 @@ Texts are cached in `scripts/.cache/` (git-ignored): `pp_all.json` = Periya Pura
 | Tiruvilaiyadal Puranam padalam | 4 | தடாதகை | Tatatakai (Meenakshi) | ok |
 | Tiruvilaiyadal Puranam padalam | 57 | வலை | Shiva casts the net | ok |
 | Tiruvilaiyadal Puranam padalam | 57 | சுறா | the shark | ok |
+| Kanchi Puranam (Sivagnana Munivar) part 1 verse | 4 | ஒருமாவிற்பெருமானை | the Lord of the one mango tree | ok |
+| Kanchi Puranam (Sivagnana Munivar) part 1 verse | 4 | கம்பை | the river Kampa interrupts Parvati's worship | ok |
+| Kanchi Puranam (Sivagnana Munivar) part 1 verse | 6 | முலைச்சுவடு | the mark of the breasts | ok |
+| Kanchi Puranam (Sivagnana Munivar) part 1 verse | 5 | காமக்கோட்டத்துமை | Kamakshi named | ok |
 | Tiruvilaiyadal Puranam padalam | 57 | நந்தி | Nandi the shark | ok |
 | Tiruvilaiyadal Puranam padalam | 57 | புன்னை | the baby under the punnai tree | ok |
 | Tiruvilaiyadal Puranam padalam | 57 | மீனாட்சி | the fisher-girl is Meenakshi | ok |

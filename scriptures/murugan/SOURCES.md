@@ -18,25 +18,46 @@
 
 ## Verse checks (re-run on every build)
 
-Texts are cached in `scripts/.cache/` (git-ignored): `pp_all.json` = Periya Puranam sections from thevaaram.org (id 12000+10n = puranam n, verse numbers restart in each), `tvp.json` = Tiruvilaiyadal Puranam padalam pages on Tamil Wikisource, `kp_verses.json` = Kanda Puranam on Tamil Wikisource (global verse numbers, first kandam and the start of the second only). A line passes if the word occurs in that verse or page once spaces are removed.
+Texts are cached in `scripts/.cache/` (git-ignored): `pp_all.json` = Periya Puranam sections from thevaaram.org (id 12000+10n = puranam n, verse numbers restart in each), `tvp.json` = Tiruvilaiyadal Puranam padalam pages on Tamil Wikisource, `kp_verses.json` = Kanda Puranam on Tamil Wikisource (global verse numbers, first kandam and the start of the second only); `kp_mahendra.json`, `kp_yuddha.json`, `kp_deva.json` = the Mahendra, Yuddha and Deva kandams from Project Madurai's Unicode text, made by `parse_kp_pm.py` (verse numbers run within each kandam; the Yuddha page omits verses 894, 916-925 and 1901). A line passes if the word occurs in that verse or page once spaces are removed.
 
 | Text | Location | Word | Shows | Result |
 |---|---|---|---|---|
-| Kanda Puranam verse | 1032 | சரவண | Saravana | ok |
-| Kanda Puranam verse | 1048 | பொய்கை | the lake | ok |
-| Kanda Puranam verse | 1219 | சிறை | Brahma jailed | ok |
-| Kanda Puranam verse | 1223 | சிறை | Brahma in prison | ok |
-| Kanda Puranam verse | 1329 | கிரவுஞ்ச | Krouncha | ok |
-| Kanda Puranam verse | 1332 | தாரக | Tarakan | ok |
-| Kanda Puranam verse | 1275 | தெய்வயானை | Deivayanai named | ok |
-| Kanda Puranam verse | 1277 | வள்ளி | Valli named | ok |
+| Kanda Puranam verse (Utpatti) | 1032 | சரவண | Saravana | ok |
+| Kanda Puranam verse (Utpatti) | 1048 | பொய்கை | the lake | ok |
+| Kanda Puranam verse (Utpatti) | 1219 | சிறை | Brahma jailed | ok |
+| Kanda Puranam verse (Utpatti) | 1223 | சிறை | Brahma in prison | ok |
+| Kanda Puranam verse (Utpatti) | 1329 | கிரவுஞ்ச | Krouncha | ok |
+| Kanda Puranam verse (Utpatti) | 1332 | தாரக | Tarakan | ok |
+| Kanda Puranam verse (Utpatti) | 1275 | தெய்வயானை | Deivayanai named | ok |
+| Kanda Puranam verse (Utpatti) | 1277 | வள்ளி | Valli named | ok |
 | Tiruvilaiyadal Puranam padalam | 13 | வேல் | the Vel dries the sea (Ugrakumara Pandyan) | ok |
 | Tiruvilaiyadal Puranam padalam | 13 | கடல் | the sea | ok |
-| Kanda Puranam verse | 1331 | குறுமுனிசூளின் | Krouncha cursed into a mountain by Agastya | ok |
-| Kanda Puranam verse | 1336 | தாரகன் | Tarakan beside the mountain | ok |
-| Kanda Puranam verse | 1515 | தாரக | the Vel kills Tarakan and the mountain | ok |
-| Kanda Puranam verse | 1213 | குடிலை | Brahma gives only the letter-form of Om | ok |
-| Kanda Puranam verse | 1220 | படைப்பது | Murugan takes over creation | ok |
-| Kanda Puranam verse | 917 | கங்கையில் | the sparks are sent to the Ganga | ok |
-| Kanda Puranam verse | 966 | ஆரலாகும்மாதர் | the six Krittika women | ok |
-| Kanda Puranam verse | 1034 | ராறுபன்னிருபுய | six faces and twelve arms | ok |
+| Kanda Puranam verse (Utpatti) | 1331 | குறுமுனிசூளின் | Krouncha cursed into a mountain by Agastya | ok |
+| Kanda Puranam verse (Utpatti) | 1336 | தாரகன் | Tarakan beside the mountain | ok |
+| Kanda Puranam verse (Utpatti) | 1515 | தாரக | the Vel kills Tarakan and the mountain | ok |
+| Kanda Puranam verse (Utpatti) | 1213 | குடிலை | Brahma gives only the letter-form of Om | ok |
+| Kanda Puranam verse (Utpatti) | 1220 | படைப்பது | Murugan takes over creation | ok |
+| Kanda Puranam verse (Utpatti) | 917 | கங்கையில் | the sparks are sent to the Ganga | ok |
+| Kanda Puranam verse (Utpatti) | 966 | ஆரலாகும்மாதர் | the six Krittika women | ok |
+| Kanda Puranam verse (Utpatti) | 1034 | ராறுபன்னிருபுய | six faces and twelve arms | ok |
+| Kanda Puranam, Yuddha Kandam verse | 2864 | தொடுகடல்நடுவண் | Sura goes into the middle of the sea | ok |
+| Kanda Puranam, Yuddha Kandam verse | 2865 | சூதமாய் | he stands as a mango tree | ok |
+| Kanda Puranam, Yuddha Kandam verse | 2867 | பராரைமாவுருவமாகி | a huge mango form | ok |
+| Kanda Puranam, Yuddha Kandam verse | 2886 | மாவுருச்சாய்தலோடும் | the mango form falls | ok |
+| Kanda Puranam, Yuddha Kandam verse | 2887 | கூறாக்கி | the body is split in two | ok |
+| Kanda Puranam, Yuddha Kandam verse | 2889 | சேவலும்மயிலுமாகி | the two halves become a cock and a peacock | ok |
+| Kanda Puranam, Yuddha Kandam verse | 2894 | கொடியேஆகி | the cock is told to become the banner | ok |
+| Kanda Puranam, Yuddha Kandam verse | 2896 | மஞ்ஞையேறி | Murugan mounts the peacock | ok |
+| Kanda Puranam, Yuddha Kandam verse | 2775 | மயிலாய்த்தோன்றி | Indra appears as a peacock | ok |
+| Kanda Puranam, Yuddha Kandam verse | 2779 | மகவான்தன்மேல் | Murugan mounts Indra the peacock | ok |
+| Kanda Puranam, Yuddha Kandam verse | 2776 | வறந்திடப் | the peacock's wings dry the sea | ok |
+| Kanda Puranam, Yuddha Kandam verse | 2592 | வறந்துளது | the sea dried in the duel | ok |
+| Kanda Puranam, Yuddha Kandam verse | 2883 | பௌவம் | the Vel's fire spreads over the seas | ok |
+| Kanda Puranam, Mahendra Kandam verse | 337 | சயந்தன் | Jayantan in prison with the devas | ok |
+| Kanda Puranam, Yuddha Kandam verse | 2936 | சயந்தன் | Murugan orders Jayantan freed | ok |
+| Kanda Puranam, Yuddha Kandam verse | 2938 | சிறைக்களத்துச்சென்றனனே | Veerabahu goes to the prison | ok |
+| Kanda Puranam, Deva Kandam verse | 36 | வேந்தியல்முறை | Indra's rule restored | ok |
+| Kanda Puranam verse (Utpatti) | 1276 | அயிராவதம் | Airavata tends Deivayanai | ok |
+| Kanda Puranam, Deva Kandam verse | 46 | திருப்பரங்குன்றிடை | Deivayanai arrives at Thiruparankundram | ok |
+| Kanda Puranam, Deva Kandam verse | 86 | பரங்குன்றில்வைகினான் | Murugan stays at Thiruparankundram | ok |
+| Kanda Puranam, Deva Kandam verse | 87 | தெய்வயானை | Indra gives Deivayanai | ok |

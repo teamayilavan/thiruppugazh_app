@@ -4,13 +4,13 @@
 
 `m-mango-sura` | Murugan's own lore (Kanda Puranam) | 73 songs
 
-As the songs retell the war: on its last day Surapadman took the form of a huge mango tree in the sea; Murugan's Vel split it in two, and the halves became the peacock and the cock. The war itself is in the Yuddha Kandam, which could not be checked online.
+On the last day of the war, Surapadman went into the middle of the sea (KP Yuddha 2864) and stood there as a huge mango tree, 1,100 yojanas tall, whose shade spread over the seas, the sky and the earth (2865-2868). The Vel struck the tree down (2884-2886); Surapadman took his own form again and attacked, and the Vel tore his chest and split his body in two (2887). The songs fold these two moments into "the Vel split the mango tree". Text: Kanda Puranam, Yuddha Kandam, padalam 13 (Project Madurai).
 
 ## References
 
 | Source | Reference | Note | Status |
 |---|---|---|---|
-| Kanda Puranam, Yuddha Kandam | Sura samharam | kandam unconfirmed | search result only (tradition) |
+| Kanda Puranam (Kachiyappar), Yuddha Kandam (Project Madurai text) | padalam 13 Surapadman Vadhai, vv. 2864-2868 (Sura goes into the sea and becomes a mango tree 1,100 yojanas tall), 2884-2886 (the Vel strikes and the tree falls), 2887 (Sura takes his own form again; the Vel splits him in two) [https://projectmadurai.org/pm_etexts/utf8/pmuni0293_03.html] | the Puranam has the Vel fell the tree and then split Sura's body; the songs fold both into 'split the mango tree' | machine-read from Project Madurai (Unicode text); re-checked on every build |
 
 Assignments start KEYWORD-LEVEL: a song is listed when its English commentary (and, where possible, a Tamil lyric line) matches the story. A story with a 'Hand-read notes' section was then read (in full, or the doubtful part, as that section says) and wrong songs removed; other stories were not. Confidence: **t** = a Tamil lyric line matched and the commentary agrees; **c** = commentary only (no Tamil keyword line found); **low** = commentary did not match, check by reading the song.
 

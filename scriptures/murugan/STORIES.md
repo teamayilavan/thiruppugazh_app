@@ -15,7 +15,7 @@
 | The sea dried by the Vel | 48 | 2 | [m-sea-dried](stories/m-sea-dried.md) |
 | The peacock and the cock | 3 | 1 | [m-peacock-cock](stories/m-peacock-cock.md) |
 | Tarakasura | 15 | 1 | [m-tarakasura](stories/m-tarakasura.md) |
-| Jayanta, Indra's son, freed from Sura's prison | 1 | 1 | [m-jayanta](stories/m-jayanta.md) |
+| Jayanta, Indra's son, freed from Sura's prison | 1 | 3 | [m-jayanta](stories/m-jayanta.md) |
 
 ## Brahma and the sages
 
@@ -35,5 +35,5 @@
 | Story | Songs | Primary refs | File |
 |---|---|---|---|
 | Murugan woos Valli in disguise | 25 | 1 | [m-valli-disguise](stories/m-valli-disguise.md) |
-| Murugan and Deivayanai, Indra's daughter | 42 | 1 | [m-deivayanai](stories/m-deivayanai.md) |
+| Murugan and Deivayanai, Indra's daughter | 42 | 2 | [m-deivayanai](stories/m-deivayanai.md) |
 | Airavata raises Deivayanai | 12 | 1 | [m-airavata](stories/m-airavata.md) |

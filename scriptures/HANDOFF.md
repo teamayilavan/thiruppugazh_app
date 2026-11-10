@@ -1,4 +1,4 @@
-# Scripture work: handoff (written 2026-11-11)
+# Scripture work: handoff (written 2026-11-11, updated end of session 2026-11-11 later)
 
 Read this first in the next session, then `README.md` (layout), `STATUS.md` (log) and `AUDIT.md` (what is verified).
 `scriptures/` is research material. It is never bundled into the app and never touches `lib/`, the DB or the schema.
@@ -24,7 +24,7 @@ thorough and accurate"). The last two sessions therefore went into verification,
 **Correction of an earlier message:** I once said "948 songs covered" and "392 in no story". That counted map rows for songs without a story.
 The true figures are 788 and 552.
 
-Git: everything is committed and pushed on `next` (last commit `85e3e3f`). Nothing under `scriptures/` is uncommitted. `main` is untouched.
+Git: at the start of this session everything was committed and pushed on `next` (`02314ac`). This session's changes (parse_kp_pm.py, build_new_sets.py, new_sets_briefs.py and the regenerated murugan/devi/saints/sambandar/tamil-lore files) are uncommitted until the owner asks. `main` is untouched.
 
 ## 2. Owner decisions that bind the next session
 
@@ -77,6 +77,7 @@ They exist on this machine. On another machine recreate them (a few minutes):
 | `pp_all.json` | Periya Puranam, every section: `{section_id: {verse: text}}`; section id = `12000 + 10n` from `https://thevaaram.org/thirumurai_1/onepage.php?thiru=12&Song_idField=<id>` (n = 0..70); verse numbers restart in each section; Sambandar is 12280 (1256 verses), Kannappar 12100, Eyarkon 12290, Kazharitrarivar 12370, Kochchengat 12680 | download each page, regex `class="heading">N</span></h3>...class="Padal">` |
 | `tvp.json` | Tiruvilaiyadal Puranam padalams 3, 4, 5, 13, 51-61 (rendered text, spaces removed) | `https://ta.wikisource.org/w/index.php?action=render&title=திருவிளையாடற்_புராணம்/NN` |
 | `kp_by_kandam.json`, `kp_verses.json` | Kanda Puranam: one Wikisource page (`கந்த_புராணம்`, action=raw). **Numbering restarts at 1 in each kandam** (Utpatti 1-1783, Asura 1-925). `kp_verses.json` is Utpatti only | parse lines `N<TAB> text`, new kandam when N falls back to <=5 |
+| `pm/*.html`, `kp_mahendra.json`, `kp_yuddha.json`, `kp_deva.json`, `kanchi_part1.json` | Kanda Puranam (Mahendra 1-1178, Yuddha 1-2967, Deva 1-421) and Kanchi Puranam part 1, Project Madurai Unicode text. Files `pmuni0286_01/02`, `0289_01/02/03`, `0293_01/02/03`, `0304` (Kanda Puranam), `0292`, `0294`, `0299` (Kanchi Puranam); header pages must stay intact, so never commit them | download `https://projectmadurai.org/pm_etexts/utf8/<file>.html` into `.cache/pm/`, then `python -I scriptures/scripts/parse_kp_pm.py`. The page's printed verse numbers have typos; `parse_kp_pm.py` repairs them (see `OVERRIDE`). The Yuddha page omits verses 894, 916-925, 1901. Numbers run within each kandam |
 | `audit/` | all 293 reference URLs, file name = first 16 hex of sha1(url) | `audit_urls.py` then a curl loop (strip CR from the list first) |
 
 ## 5. Lessons and gotchas
@@ -87,13 +88,13 @@ They exist on this machine. On another machine recreate them (a few minutes):
 - thevaaram.org verse numbers are running numbers within a puranam/pathigam; the Shiva file and the newer sets use the same scheme (settled).
 - The koyil.org (Divya Prabandham) site is still publishing; some pasurams (e.g. Periya Thirumozhi 11.5.5) are not up yet. Pages carry transliteration, not Tamil script, so Tamil opening words are matched by a consonant skeleton (`audit_dp.py`).
 - Valmiki net groups shlokas as `1-75-14b, 15, 16a`; one interior shloka (1.36.15) is unlabelled.
-- Kanda Puranam Wikisource has only the first kandam and the start of the second. Yuddha, Deva, Daksha kandams are not there; nothing found by search.
+- Kanda Puranam Wikisource has only the first kandam and the start of the second. The Mahendra, Yuddha and Deva kandams are on Project Madurai (see caches). Not found yet: the Valli padalam, the Daksha kandam, and the Asura kandam beyond Wikisource's start.
 - Windows: write URL lists with `\n` only; avoid long heredocs containing Tamil or quotes (use the Write tool then run); print Tamil with `sys.stdout.reconfigure(encoding="utf-8")`.
 - Generated files must not be hand-edited. A brief in a generated story file is overwritten on the next build.
 
 ## 6. What is NOT verified (be honest about these when telling stories)
 
-- **Songs/tradition only (labelled in the briefs):** Surasamharam details (mango tree, peacock and cock, sea dried), Jayanta, Agastya taught by Murugan, Valli's wooing, Deivayanai's wedding place, Ganesha as the elephant, the world race, the Mahabharata scribe, Nakkeerar's cave, Sundarar and the crocodile, Cheraman's Kailasa ascent, Sundarar's gold in song 947, Kamakshi's thirty-two dharmas, the Thiruvalangadu contest details, the Kanchi and Pathiri temple legends.
+- **Songs/tradition only (labelled in the briefs):** the sea dried by the Vel (the Puranam has Sura stand in the sea; the Vel's fire spreads over the seas), Agastya taught by Murugan, Valli's wooing (its padalam is not in the Project Madurai files found), Ganesha as the elephant, the world race, the Mahabharata scribe, Nakkeerar's cave, Sundarar and the crocodile, Cheraman's Kailasa ascent, Sundarar's gold in song 947, Kamakshi's thirty-two dharmas, the Thiruvalangadu contest details, the Kanchi and Pathiri temple legends.
 - **Never fetched:** Devi Mahatmya Sanskrit (GRETIL 404, sanskritdocuments blocked); chapter numbers come from two edition descriptions (81-93 Banerjee, 78-90 Venkatesh). Tiruvasagam, Tirumurugatruppadai, Adi Ula, Sangam poems, Tevaram hymn numbers for Sundarar's episodes.
 - **Existence checked, not wording:** Kamba and Valmiki verse numbers for Vishnu (the verse exists and was read against the episode title, but the Tamil/English wording was not compared line by line).
 - **Candidates:** Shiva has 11 and Vishnu 13 Tamil references still labelled candidates (`confirmed: false`); 5 Kamba references say "verse not pinned" (birth, Surpanakha, Ravana's scheming, army march, army destroyed).
@@ -102,17 +103,22 @@ They exist on this machine. On another machine recreate them (a few minutes):
 
 ## 7. Suggested next steps (in order of value for confidence)
 
-1. Find a source for the later Kanda Puranam kandams (tamilvu.org, archive.org text, other Wikisource/Project Madurai editions). That would let the whole Murugan set be checked against text, the biggest remaining gap (381 songs).
-2. Fetch a Devi Mahatmya Sanskrit text and pin chapter/verse for `d-mahisha`; look for a Kanchi Puranam / sthala puranam text for `d-kanchi`, `d-kamakshi-32`, `d-pathiri`, and a Tiruvalangadu source for `d-kali-dance`.
+Done 2026-11-11 (later): step 1 and part of step 2 of the earlier list. Mahendra, Yuddha and Deva kandams of the Kanda Puranam are now cached and
+machine-checked (`parse_kp_pm.py`, checks `kpm`/`kpy`/`kpd`); briefs for m-mango-sura, m-sea-dried, m-peacock-cock, m-jayanta, m-deivayanai were rewritten from the text
+(Surapadman goes into the sea as a mango tree, 1,100 yojanas; the Vel fells the tree and splits his body; the halves return as cock and peacock; Indra had earlier been a peacock mount;
+Veerabahu frees Jayanta; the wedding is at Thiruparankundram). The Kanchi Puranam (Sivagnana Munivar, vv. 1-1691) was searched: only invocation vv. 4-6 support the Ekambam legend (Kampa river, embrace, breast mark); no 'thirty-two dharmas'.
+
+1. Read the rest of the Kanda Puranam text for the Murugan stories not yet checked against it: m-krouncha and m-tarakasura (Asura kandam, find it), the war details in `m-mango-sura` (Banukopan, Hiranyan, Simhamukhan days), and look for the Valli padalam (try Project Madurai file numbers around `pm0286`-`pm0304`, the catalogue at https://www.projectmadurai.org/pmworks.html, and tamilvu).
+2. Devi: Devi Mahatmya Sanskrit for `d-mahisha`; a Thiruvalangadu source for `d-kali-dance`; the Ekambam padalam of the Kanchi Puranam (may be a separate part) for `d-kanchi`.
 3. Pin the 5 unpinned Kamba verses (padalam page names for two of them 404; check the real Wikisource page titles with the prefix-search API).
 4. Confirm the remaining 11 Shiva and 13 Vishnu candidate Tamil references, or remove them.
 5. Open Tevaram hymns for Sundarar's episodes and Tiruvasagam/Tirumurugatruppadai pages; add them to `REF2`/`CHECKS` in `build_new_sets.py`.
 6. Compare Kamba/Valmiki wording with each Vishnu episode (deeper than the existence check) for the stories that will be told most (Gajendra, Vamana, Krishna butter, Ramayana war).
-7. Only after 1-6: the 552 songs in no story (a second pass using the commentary sweep, then reading), and any new stories.
+7. Only after 1-6: the 552 songs in no story, and any new stories.
 8. The app side is undecided. If stories ever go into the app, the CLAUDE.md principles apply (offline, quiet, opt-in, Tamil layout testing, additive schema with backup export). Nothing is planned.
 
 ## 8. Kickoff prompt for the next session
 
 > Read scriptures/HANDOFF.md, then README.md, STATUS.md and AUDIT.md. We are continuing accuracy work on the existing 142 stories (no new stories, no PDFs).
-> Start with step 1 of section 7 (a text of the later Kanda Puranam kandams), report what you find before changing data, and keep every change
+> Start with step 1 of section 7, report what you find before changing data, and keep every change
 > machine-checked through build_new_sets.py. Commit only when I ask.

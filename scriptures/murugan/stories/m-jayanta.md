@@ -4,13 +4,15 @@
 
 `m-jayanta` | Murugan's own lore (Kanda Puranam) | 1 songs
 
-The song's commentary says Indra's son Jayanta fled Surapadman's persecution and was freed from prison by Murugan, who restored the heavens to Indra (Mahendra/Yuddha Kandam, not checkable online).
+Indra's son Jayanta (Jayantan) is held in Surapadman's prison in Mahendrapuri with the devas (KP Mahendra 337, 450). After Surapadman's death Murugan orders Veerabahu to bring Jayanta and the devas back from the prison, and Veerabahu goes and frees them (Yuddha 2935-2943). Indra then rules the golden city again (Deva 36, 42). In the text it is Veerabahu, at Murugan's command, who frees them; the song's commentary says "by Murugan". Text: Project Madurai.
 
 ## References
 
 | Source | Reference | Note | Status |
 |---|---|---|---|
-| Kanda Puranam, Mahendra Kandam / Yuddha Kandam |  | kandam unconfirmed | search result only (tradition) |
+| Kanda Puranam (Kachiyappar), Mahendra Kandam (Project Madurai text) | padalam 9 Jayantan Pulambu Padalam, v. 337 (Jayantan in prison with the devas); padalam 11, v. 450 (Veerabahu reaches the prison) [https://projectmadurai.org/pm_etexts/utf8/pmuni0286_01.html] |  | machine-read from Project Madurai (Unicode text); re-checked on every build |
+| Kanda Puranam (Kachiyappar), Yuddha Kandam (Project Madurai text) | padalam 16 Meetchip Padalam, vv. 2935-2943 (Murugan orders Veerabahu to bring Jayantan and the devas back from prison; Veerabahu goes and frees them) [https://projectmadurai.org/pm_etexts/utf8/pmuni0293_03.html] |  | machine-read from Project Madurai (Unicode text); re-checked on every build |
+| Kanda Puranam (Kachiyappar), Deva Kandam (Project Madurai text) | v. 36 (Indra rules the golden city again), v. 42 (Sura dead, the devas freed from prison) [https://projectmadurai.org/pm_etexts/utf8/pmuni0304.html] |  | machine-read from Project Madurai (Unicode text); re-checked on every build |
 
 Assignments start KEYWORD-LEVEL: a song is listed when its English commentary (and, where possible, a Tamil lyric line) matches the story. A story with a 'Hand-read notes' section was then read (in full, or the doubtful part, as that section says) and wrong songs removed; other stories were not. Confidence: **t** = a Tamil lyric line matched and the commentary agrees; **c** = commentary only (no Tamil keyword line found); **low** = commentary did not match, check by reading the song.
 

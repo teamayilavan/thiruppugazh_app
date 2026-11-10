@@ -4,13 +4,13 @@
 
 `m-peacock-cock` | Murugan's own lore (Kanda Puranam) | 3 songs
 
-As the songs retell the war: the two halves of the split Surapadman became Murugan's vehicle, the peacock, and the cock on his flag. The Yuddha Kandam could not be checked online.
+The Kanda Puranam tells it in this order. Surapadman's body is split (Yuddha 2887), but by his boon he does not die: the two halves rise again as a cock and a peacock and come to fight (2889-2891). Murugan's glance cleanses him of his hatred (2892-2893). The cock is told to become the banner on Murugan's chariot (2894-2895), and the peacock is the mount he rides (2896-2900). Earlier in the same padalam Indra had himself become a peacock and carried Murugan into battle (2775-2780); the lasting vehicle and banner come from Surapadman's two halves. Text: Yuddha Kandam, padalam 13 (Project Madurai).
 
 ## References
 
 | Source | Reference | Note | Status |
 |---|---|---|---|
-| Kanda Puranam, Yuddha Kandam |  |  | search result only (tradition) |
+| Kanda Puranam (Kachiyappar), Yuddha Kandam (Project Madurai text) | padalam 13 Surapadman Vadhai, vv. 2889-2895 (the two halves rise as a cock and a peacock and attack; Murugan's look cleanses Sura; the cock becomes his banner), 2896-2900 (Murugan mounts the peacock) [https://projectmadurai.org/pm_etexts/utf8/pmuni0293_03.html] | earlier in the same padalam Indra himself becomes a peacock and carries Murugan (vv. 2775-2780); the permanent vehicle and banner come from Sura's two halves | machine-read from Project Madurai (Unicode text); re-checked on every build |
 
 Assignments start KEYWORD-LEVEL: a song is listed when its English commentary (and, where possible, a Tamil lyric line) matches the story. A story with a 'Hand-read notes' section was then read (in full, or the doubtful part, as that section says) and wrong songs removed; other stories were not. Confidence: **t** = a Tamil lyric line matched and the commentary agrees; **c** = commentary only (no Tamil keyword line found); **low** = commentary did not match, check by reading the song.
 

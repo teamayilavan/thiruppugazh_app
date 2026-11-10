@@ -4,14 +4,15 @@
 
 `d-kanchi` | Ambal, Parvati, Durga and Kali | 4 songs
 
-Temple legend: Parvati made a sand lingam under the mango tree beside the Vegavati and worshipped it; when the river flooded she embraced the lingam to save it, and her bangles left their marks. Shiva then wedded her. The songs add the scar on his chest left by her breast.
+Temple legend: Parvati made a sand lingam under the mango tree beside the Vegavati and worshipped it; when the river flooded she embraced the lingam to save it, and her bangles left their marks. Shiva then wedded her. The songs add the scar on his chest left by her breast. What the Kanchi Puranam (Sivagnana Munivar, invocation vv. 4-6) confirms: Parvati's worship is broken off when the river Kampa rises, she clasps the lingam, and the Lord of the one mango tree takes the mark of her breasts. The 'Vegavati' and the bangle marks are not in the parts of the Puranam that could be read; they are temple tradition.
 
 ## References
 
 | Source | Reference | Note | Status |
 |---|---|---|---|
 | Ekambareswarar temple legend (Kanchi) |  | sand lingam under the mango tree, the flooding Vegavati, bangle marks; several temple websites agree | search result only (tradition) |
-| Kanchi Puranam / Thirukkurippu Thondar Puranam | not located | named by a temple site as the text; the text itself was not found online | searched, not found |
+| Kanchi Puranam (Sivagnana Munivar), part 1 (Project Madurai text) | invocation vv. 4-6 [https://projectmadurai.org/pm_etexts/utf8/pmuni0292.html] | v. 4: Parvati's worship is broken off when the river Kampa rises; she clasps the lingam, and the Lord of the one mango tree (oru ma) is praised; v. 6 praises Kamakkottiyammai who gives the mark of her breasts (4 and 6 checked) | machine-read from Project Madurai (Unicode text); re-checked on every build |
+| Kanchi Puranam, parts 1-3 (vv. 1-1691, padalams 1-50) | not located | the three parts on Project Madurai give the Ekambam story only in the invocation; the padalam on Ekambam itself is not in them, so the bangle marks and the Vegavati detail rest on temple tradition | searched, not found |
 
 Assignments start KEYWORD-LEVEL: a song is listed when its English commentary (and, where possible, a Tamil lyric line) matches the story. A story with a 'Hand-read notes' section was then read (in full, or the doubtful part, as that section says) and wrong songs removed; other stories were not. Confidence: **t** = a Tamil lyric line matched and the commentary agrees; **c** = commentary only (no Tamil keyword line found); **low** = commentary did not match, check by reading the song.
 
