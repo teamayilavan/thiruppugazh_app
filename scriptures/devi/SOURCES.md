@@ -32,3 +32,7 @@ Texts are cached in `scripts/.cache/` (git-ignored): `pp_all.json` = Periya Pura
 | Tiruvilaiyadal Puranam padalam | 57 | நந்தி | Nandi the shark | ok |
 | Tiruvilaiyadal Puranam padalam | 57 | புன்னை | the baby under the punnai tree | ok |
 | Tiruvilaiyadal Puranam padalam | 57 | மீனாட்சி | the fisher-girl is Meenakshi | ok |
+| Kanda Puranam, Yuddha Kandam verse | 992 | காளிமேலவர்தொகையினை | Kali's hosts in the war | ok |
+| Kanda Puranam, Yuddha Kandam verse | 1251 | காளி | Kali amid the dead | ok |
+| Kanda Puranam, Yuddha Kandam verse | 1416 | சண்டிகை | Chandika joins the battle | ok |
+| Kanda Puranam, Yuddha Kandam verse | 2386 | உமையவள்கோட்டத்தினின்று | the Kanchi temple of Uma named | ok |

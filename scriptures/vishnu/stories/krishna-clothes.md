@@ -12,7 +12,6 @@ Gopis bathing in the Yamuna to win Krishna as husband find their clothes taken t
 | Divya Prabandham | Nachiyar Thirumozhi 3.2 | இதுவென் புகுந்தது — The girls beg Krishna, who danced on Kaliya, to return the clothes kept on the kurundham tree. [https://divyaprabandham.koyil.org/index.php/2024/07/nachchiyar-thirumozhi-3-2/] |
 | Divya Prabandham | Nachiyar Thirumozhi 3.3 | எல்லே இதென்ன இளமை — They complain that making them stand in water unclothed while he climbs the kurundham tree is mischief. [https://divyaprabandham.koyil.org/index.php/2024/07/nachchiyar-thirumozhi-3-3/] |
 | Divya Prabandham | Nachiyar Thirumozhi 3.4 | பரக்க விழித்தெங்கும் — Even if you will not return the clothes, stop pretending not to know our suffering. [https://divyaprabandham.koyil.org/index.php/2024/07/nachchiyar-thirumozhi-3-4/] |
-| Divya Prabandham (candidate) | Periyazhwar Thirumozhi 4.4.7 | குருந்தம் ஒன்று — Mentions a distinctive kurundham tree at Thirukkottiyur; not clearly the clothes episode. [https://divyaprabandham.koyil.org/index.php/2026/08/periyazhwar-thirumozhi-4-4-7/] |
 
 ## Songs
 

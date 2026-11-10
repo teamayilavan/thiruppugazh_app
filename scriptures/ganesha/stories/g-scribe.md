@@ -4,13 +4,13 @@
 
 `g-scribe` | Ganesha | 3 songs
 
-The songs say Ganesha wrote the Mahabharata on Mount Meru with his broken tusk while Vyasa narrated it (songs 88, 1016, 1315). Tradition; not found in the texts checked.
+The songs say Ganesha wrote the Mahabharata on Mount Meru with his broken tusk while Vyasa narrated it (songs 88, 1016, 1315). The Critical Edition of the Adi parva has no such passage, only an invocation to Ganapati; the story is later tradition.
 
 ## References
 
 | Source | Reference | Note | Status |
 |---|---|---|---|
-| Mahabharata, Adi Parva frame story (not in the Critical Edition text) |  | tradition | from memory, not opened |
+| Mahabharata Critical Edition, Adi parva (GRETIL text searched) | not located | no passage in which Ganesha writes the epic; the text has only an invocation to Ganapati. The scribe story is in later recensions and tradition | searched, not found |
 
 Assignments start KEYWORD-LEVEL: a song is listed when its English commentary (and, where possible, a Tamil lyric line) matches the story. A story with a 'Hand-read notes' section was then read (in full, or the doubtful part, as that section says) and wrong songs removed; other stories were not. Confidence: **t** = a Tamil lyric line matched and the commentary agrees; **c** = commentary only (no Tamil keyword line found); **low** = commentary did not match, check by reading the song.
 

@@ -4,13 +4,13 @@
 
 `g-race` | Ganesha | 2 songs
 
-Song 30 says Murugan flew round the world on his peacock in a contest with Ganesha; song 532 says the prized fruit was nonetheless given to Ganesha. Popular Pazhani tradition adds that Ganesha went round his parents and that Murugan then left for Pazhani in anger.
+Song 30 says Murugan flew round the world on his peacock in a contest with Ganesha; song 532 says the prized fruit was nonetheless given to Ganesha. Popular Pazhani tradition adds that Ganesha went round his parents and that Murugan then left for Pazhani in anger. A keyword search of the Kanda Puranam (Utpatti, Daksha, Deva) found no such contest: this is later tradition and the songs.
 
 ## References
 
 | Source | Reference | Note | Status |
 |---|---|---|---|
-| Skanda Purana / Tamil tradition |  |  | from memory, not opened |
+| Kanda Puranam, Utpatti, Daksha and Deva kandams (keyword search) | not located | no passage about a race round the world or a fruit; the contest is later Shaiva and Pazhani tradition and the songs | searched, not found |
 
 Assignments start KEYWORD-LEVEL: a song is listed when its English commentary (and, where possible, a Tamil lyric line) matches the story. A story with a 'Hand-read notes' section was then read (in full, or the doubtful part, as that section says) and wrong songs removed; other stories were not. Confidence: **t** = a Tamil lyric line matched and the commentary agrees; **c** = commentary only (no Tamil keyword line found); **low** = commentary did not match, check by reading the song.
 

@@ -12,9 +12,11 @@ Valmiki = `Kanda sarga.shloka` as numbered on valmikiramayan.net. Kamba = padala
 
 **Kamba Ramayanam**
 
-- திரு அவதாரப் படலம் (பால காண்டம்): verse not pinned yet
+- திரு அவதாரப் படலம் 18: 'வான் உளோர் அனைவரும் வானரங்கள் ஆய், / கானினும், வரையினும், கடி தடத்தினும், / சேனையோடு அவதரித்திடுமின் சென்று' என, / ஆனனம் மலர்ந்தனன் -அருளின் ஆழியான்:
+- திரு அவதாரப் படலம் 101: ஒரு பகல் உலகு எலாம் உதரத்துள் பொதிந்து, / அரு மறைக்கு உணர்வு அரும் அவனை, அஞ்சனக் / கரு முகிற் கொழுந்து எழில் காட்டும் சோதியை, / திரு உறப் பயந்தனள் - த…
+- திரு அவதாரப் படலம் 115: சுரா மலைய, தளர் கைக் கரி எய்த்தே, / 'அரா-அணையில் துயில்வோய்!' என, அந் நாள், / விராவி, அளித்தருள் மெய்ப்பொருளுக்கே, / 'இராமன்' எனப் பெயர் ஈந்தனன் அன்றே…
 
-Note: Song 68 (Kausalya calling the child) has no exact verse; the allusion is general.
+Note: 18: Vishnu tells the gods to be born as vanaras; 101: Kausalya bears him; 115: he is named Rama. Song 68 (Kausalya calling the child) has no exact verse; the allusion is general.
 
 Songs: 68
 
@@ -35,7 +37,7 @@ Songs: 366, 649
 
 **Valmiki Ramayana**
 
-- Bala 31 (whole sarga): Rama guards the sacrifice; Subahu killed, Maricha flung away
+- Bala 30 (whole sarga): Rama guards the sacrifice; Subahu killed, Maricha flung away
 
 **Kamba Ramayanam**
 
@@ -134,10 +136,11 @@ Songs: 961, 1295
 
 **Kamba Ramayanam**
 
-- சூர்ப்பணகைப் படலம் (ஆரணிய காண்டம்): verse not pinned yet
-- இராவணன் சூழ்ச்சிப் படலம் (ஆரணிய காண்டம்): verse not pinned yet
+- சூர்ப்பணகைப் படலம் 116: அரிந்தான் என்பதும் உணர்ந்தான்; அவளை, 'நீயார்?' என்றான்.
+- இராவணன் சூழ்ச்சிப் படலம் 72: கீண்டான் நிலம்; யோசனை கிழொடு மேல்.
+- இராவணன் சூழ்ச்சிப் படலம் 73: விண்தான் எழியா எழுவான் விரைவான்.
 
-Note: Kamba verses not pinned yet.
+Note: 116: Rama learns that Lakshmana cut off Surpanakha's ears and nose. 72-73: in Kamba Ravana does not touch Sita; he digs up the ground a yojana deep around her hut and rises into the sky with it.
 
 Songs: 272
 
@@ -237,7 +240,12 @@ Songs: 128
 
 **Kamba Ramayanam**
 
-- தானை காண் படலம் (கிட்கிந்தா காண்டம்): verse not pinned yet
+- தானை காண் படலம் 1: ==சேனைத் தலைவர் தம் பெருஞ் சேனையுடன் வந்து சேர்தல்== / <poem> / அன்று அவண் இறுத்தனர்; அலரி கீழ்ட்டிசைப் / பொன் திணி நெடு வரை பொலிவுறாதமுன், / வன் திறல…
+- தானை காண் படலம் 5: ஐம்பது ஆய நூறாயிர கோடி எண் அமைந்த, / மொய்ம்பு மால் வரை புரை நெடு வானரம் மொய்ப்ப, - / இம்பர் ஞாலத்தும் வானத்தும் எழுதிய சீர்த்தி / நம்பனைத் தந்த கேசரி …
+- கடல் காண் படலம் 1: ஊழி திரியும் காலத்தும் உலையா நிலைய உயர் கிரியும், / வாழி வற்றா மறி கடலும், மண்ணும், வட பால் வான் தோய, / பாழித் தெற்கு உள்ளன கிரியும் நிலனும் தாழ, பரந்…
+- கடல் காண் படலம் 2: பொங்கிப் பரந்த பெருஞ் சேனை, புறத்தும் அகத்தும், புடை சுற்ற- / சங்கின் பொலிந்த தகையாளைப் பிரிந்த பின்பு, தமக்கு இனம் ஆம் / கொங்கின் பொலிந்த தாமரையின் க…
+
+Note: Kamba spreads the march: the vanara hosts gather and set out in Kishkindha (1, 5: Kesari goes like a sea), and Rama reaches the sea with the army at the start of the Yuddha Kandam (1: the host fills the shore; 2: Rama sees the sea).
 
 Songs: 941, 1231
 
@@ -406,9 +414,10 @@ Songs: none
 
 **Kamba Ramayanam**
 
-- படைத் தலைவர் வதைப் படலம் (யுத்த காண்டம்): verse not pinned yet
+- படைத் தலைவர் வதைப் படலம் 36: ஆர்த்து எதிர் நடந்தது, அவ் அரியின் ஆர்கலி / தீர்த்தனை வாழ்த்தி; ஒத்து இரண்டு சேனையும் / போர்த் தொழில் புரிந்தன; புலவர் போக்கு இலார், / வேர்த்து உயிர் …
+- படைத் தலைவர் வதைப் படலம் 52: இன்ன காலையின், ஈர்-ஐந்து வெள்ளம், வந்து ஏற்ற / மின்னும் வெள் எயிற்று அரக்கர் தம் சேனையில், வீரன் / அன்ன வெஞ் சமத்து ஆறு வெள்ளத்தையும் அறுத்தான்; / சொன…
 
-Note: General battle; no single verse.
+Note: 36: vanaras and rakshasas join battle; 52: the rakshasa army is destroyed and a flood of blood spreads.
 
 Songs: 9, 27, 66, 95, 200, 230, 373, 524, 623, 707, 750, 788, 806, 807, 839, 845, 876, 882, 893
 

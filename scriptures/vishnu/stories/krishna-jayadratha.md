@@ -11,7 +11,6 @@ On the fourteenth day Krishna hides the sun (tradition: with the Sudarshana disc
 | Mahabharata (Critical Edition) | 7,121.015c … 7,121.032c | Krishna urges Arjuna to cut Jayadratha's head before sunset; Arjuna beheads him (constituted text, no sun-hiding) — “abravīt pāṇḍavaṃ tatra tvaramāṇo janārdanaḥ / dhanaṃjaya śiraś chindhi saindhavasya durātmanaḥ” |
 | Mahabharata (Critical Edition) | 7,121.014d*1010_03 … 7,121.041b*1025_01 | Star passage (interpolation): Krishna remembers the Sudarshana discus and has darkness cover the sun; later he withdraws it — “sasmāra cakraṃ daityārir hariś cakraṃ sudarśanam / astaṃ gatam ivādityaṃ tamasā chādayeti vai” |
 | Divya Prabandham | Periyazhwar Thirumozhi 4.1.8 | நாழிகை கூறிட்டுக் காத்து நின்ற — Kings guard Jayadratha counting the hours; Krishna hides the sun with the divine discus; Arjuna's arrow rolls Jayadratha's head away. [https://divyaprabandham.koyil.org/index.php/2026/07/periyazhwar-thirumozhi-4-1-8/] |
-| Divya Prabandham (candidate) | Mudhal Thiruvandhadhi / Nanmugan Thiruvandhadhi / Periya Thirumozhi not located |  — A search result says these also refer to the discus covering the sun; verse numbers not found. [https://granthams.koyil.org/?p=7977] |
 
 Note: The Sudarshana/darkness version is in a star passage of the Critical Edition (Vulgate Drona 146, Ganguli section CXLVI).
 

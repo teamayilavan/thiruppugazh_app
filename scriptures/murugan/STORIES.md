@@ -36,4 +36,4 @@
 |---|---|---|---|
 | Murugan woos Valli in disguise | 25 | 2 | [m-valli-disguise](stories/m-valli-disguise.md) |
 | Murugan and Deivayanai, Indra's daughter | 42 | 2 | [m-deivayanai](stories/m-deivayanai.md) |
-| Airavata raises Deivayanai | 12 | 1 | [m-airavata](stories/m-airavata.md) |
+| Airavata raises Deivayanai | 12 | 2 | [m-airavata](stories/m-airavata.md) |

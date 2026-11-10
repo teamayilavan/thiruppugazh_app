@@ -28,8 +28,6 @@ Songs naming Appar, Sundarar (for whom Shiva went as messenger to his wife Parav
 | Tamil Shaiva texts | Periya Puranam (Sekkizhar, Tirumurai 12) Kannappar puranam (PP no. 10), verse 178 | செங்கண்வெள் விடையின் பாகர் திண்ணனார் — The Lord stays his hand with the word 'Kannappa, stay'. [https://thevaaram.org/thirumurai_1/onepage.php?thiru=12&Song_idField=12100] |
 | Tamil Shaiva texts | Periya Puranam (Sekkizhar, Tirumurai 12) Siruthondar puranam (PP no. 36), verse 54 | வள்ள லாரும் மனையாரை நோக்கி — The Lord comes as a devotee asking for a child's flesh; the couple agree. [https://thevaaram.org/thirumurai_1/onepage.php?thiru=12&Song_idField=12360] |
 | Tamil Shaiva texts | Periya Puranam (Sekkizhar, Tirumurai 12) Siruthondar puranam (PP no. 36), verse 62 | ஒன்று மனத்தார் இருவர்களும் உலகர் — The parents prepare their own son for the feast. [https://thevaaram.org/thirumurai_1/onepage.php?thiru=12&Song_idField=12360] |
-| Tamil Shaiva texts (candidate) | Tirukkovaiyar / Tiruvasagam (Manikkavasagar) Tirukkovaiyar |  — Manikkavasagar's love poem in Tirumurai 8 (Song_idField 8201 onwards on thevaaram.org); no specific saint episode linked to the songs; not read. [] |
-| Tamil Shaiva texts (candidate) | Periya Puranam Kachchiyappar is Kanda Puranam's author, not a Periya Puranam saint |  — Song 1114 names Kachchiyappar; his biography is not in Periya Puranam. No source found online in this pass. [] |
 
 ## Songs
 

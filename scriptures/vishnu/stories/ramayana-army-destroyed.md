@@ -9,10 +9,11 @@ Rama destroys the rakshasa troops of Ravana's army (Valmiki Yuddha 93.7-34).
 | Source | Reference | What it says / quote |
 |---|---|---|
 | Valmiki Ramayana | Yuddha 93.7–34 | Rama destroys the rakshasa troops |
-| Kamba Ramayanam | படைத் தலைவர் வதைப் படலம் (verse not pinned) |  |
+| Kamba Ramayanam | படைத் தலைவர் வதைப் படலம் 36 | “ஆர்த்து எதிர் நடந்தது, அவ் அரியின் ஆர்கலி / தீர்த்தனை வாழ்த்தி; ஒத்து இரண்டு சேனையும் / போர்த் தொழில் புரிந்தன; புலவர் போக்கு இலார், / வேர்த்து உயிர் பதைத்தனர், நடுங்கி வ” |
+| Kamba Ramayanam | படைத் தலைவர் வதைப் படலம் 52 | “இன்ன காலையின், ஈர்-ஐந்து வெள்ளம், வந்து ஏற்ற / மின்னும் வெள் எயிற்று அரக்கர் தம் சேனையில், வீரன் / அன்ன வெஞ் சமத்து ஆறு வெள்ளத்தையும் அறுத்தான்; / சொன்ன நாலையும் இலக்குவன” |
 | Divya Prabandham | Perumal Thirumozhi 10.7 | kurai kadalai adalambAl — Rama kills Ravana and his demon army. [https://divyaprabandham.koyil.org/index.php/2023/09/perumal-thirumozhi-10-7/] |
 
-Note: General battle; no single verse.
+Note: 36: vanaras and rakshasas join battle; 52: the rakshasa army is destroyed and a flood of blood spreads.
 
 ## Songs
 

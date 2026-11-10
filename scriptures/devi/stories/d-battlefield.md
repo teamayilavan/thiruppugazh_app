@@ -10,7 +10,8 @@ When Murugan fought the demons, the Goddess's attendants and Bhadrakali danced o
 
 | Source | Reference | Note | Status |
 |---|---|---|---|
-| Kanda Puranam, Yuddha Kandam | battle scenes | kandam unconfirmed | from memory, not opened |
+| Kanda Puranam (Kachiyappar), Yuddha Kandam (Project Madurai text) | vv. 992 (Kali's hosts), 1251 (Kali amid the dancing headless bodies) [https://projectmadurai.org/pm_etexts/utf8/pmuni0289_03.html] | the war is full of Kali, her hosts and fiends feasting | machine-read from Project Madurai (Unicode text); re-checked on every build |
+| Kanda Puranam (Kachiyappar), Yuddha Kandam (Project Madurai text) | vv. 1394-1436 (Chandika / Kali arrives with her army and fights Murugan's host) [https://projectmadurai.org/pm_etexts/utf8/pmuni0293_01.html] | the 'kulavai' cry is not in these verses | machine-read from Project Madurai (Unicode text); re-checked on every build |
 
 Assignments start KEYWORD-LEVEL: a song is listed when its English commentary (and, where possible, a Tamil lyric line) matches the story. A story with a 'Hand-read notes' section was then read (in full, or the doubtful part, as that section says) and wrong songs removed; other stories were not. Confidence: **t** = a Tamil lyric line matched and the commentary agrees; **c** = commentary only (no Tamil keyword line found); **low** = commentary did not match, check by reading the song.
 

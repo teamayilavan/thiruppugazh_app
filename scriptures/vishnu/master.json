@@ -19,7 +19,7 @@
    "eid": "birth",
    "title": "Rama's birth and childhood",
    "brief": "Kausalya calls the infant Rama to her ('come here, king'). The Thiruppugazh image is of the child Vishnu as a mother's baby.",
-   "note": "Song 68 (Kausalya calling the child) has no exact verse; the allusion is general.",
+   "note": "18: Vishnu tells the gods to be born as vanaras; 101: Kausalya bears him; 115: he is named Rama. Song 68 (Kausalya calling the child) has no exact verse; the allusion is general.",
    "refs": [
     {
      "src": "Valmiki Ramayana",
@@ -29,8 +29,21 @@
     },
     {
      "src": "Kamba Ramayanam",
-     "ref": "திரு அவதாரப் படலம் (verse not pinned)",
-     "pinned": false
+     "ref": "திரு அவதாரப் படலம் 18",
+     "quote": "'வான் உளோர் அனைவரும் வானரங்கள் ஆய், / கானினும், வரையினும், கடி தடத்தினும், / சேனையோடு அவதரித்திடுமின் சென்று' என, / ஆனனம் மலர்ந்தனன் -அருளின் ஆழியான்:",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "திரு அவதாரப் படலம் 101",
+     "quote": "ஒரு பகல் உலகு எலாம் உதரத்துள் பொதிந்து, / அரு மறைக்கு உணர்வு அரும் அவனை, அஞ்சனக் / கரு முகிற் கொழுந்து எழில் காட்டும் சோதியை, / திரு உறப் பயந்தனள் - திறம் கொள் கோசலை.",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "திரு அவதாரப் படலம் 115",
+     "quote": "சுரா மலைய, தளர் கைக் கரி எய்த்தே, / 'அரா-அணையில் துயில்வோய்!' என, அந் நாள், / விராவி, அளித்தருள் மெய்ப்பொருளுக்கே, / 'இராமன்' எனப் பெயர் ஈந்தனன் அன்றே.",
+     "pinned": true
     }
    ],
    "dp": [
@@ -185,14 +198,6 @@
      "gist": "Commentary only: Rama stays on the shore because stones might free cursed women as Ahalya was freed.",
      "url": "https://divyaprabandham.koyil.org/index.php/2026/07/periyazhwar-thirumozhi-4-1-3/",
      "confirmed": true
-    },
-    {
-     "prabandham": "Periyazhwar Thirumozhi",
-     "ref": "4.4.6",
-     "first": "bUdham aindhodu",
-     "gist": "Search snippet says the commentary mentions Ahalya's release by Rama's feet; page not opened.",
-     "url": "https://divyaprabandham.koyil.org/index.php/2026/08/periyazhwar-thirumozhi-4-4-6/",
-     "confirmed": false
     }
    ],
    "songs": {
@@ -500,7 +505,7 @@
    "eid": "sita-abduction",
    "title": "Surpanakha mutilated; Ravana carries Sita off",
    "brief": "After Lakshmana cuts off Surpanakha's nose and ears, Ravana lures Rama away with the golden deer and carries Sita through the sky.",
-   "note": "Kamba verses not pinned yet.",
+   "note": "116: Rama learns that Lakshmana cut off Surpanakha's ears and nose. 72-73: in Kamba Ravana does not touch Sita; he digs up the ground a yojana deep around her hut and rises into the sky with it.",
    "refs": [
     {
      "src": "Valmiki Ramayana",
@@ -516,13 +521,21 @@
     },
     {
      "src": "Kamba Ramayanam",
-     "ref": "சூர்ப்பணகைப் படலம் (verse not pinned)",
-     "pinned": false
+     "ref": "சூர்ப்பணகைப் படலம் 116",
+     "quote": "அரிந்தான் என்பதும் உணர்ந்தான்; அவளை, 'நீயார்?' என்றான்.",
+     "pinned": true
     },
     {
      "src": "Kamba Ramayanam",
-     "ref": "இராவணன் சூழ்ச்சிப் படலம் (verse not pinned)",
-     "pinned": false
+     "ref": "இராவணன் சூழ்ச்சிப் படலம் 72",
+     "quote": "கீண்டான் நிலம்; யோசனை கிழொடு மேல்.",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "இராவணன் சூழ்ச்சிப் படலம் 73",
+     "quote": "விண்தான் எழியா எழுவான் விரைவான்.",
+     "pinned": true
     }
    ],
    "dp": [],
@@ -839,7 +852,7 @@
    "eid": "army-march",
    "title": "The vanara army marches to Lanka",
    "brief": "Sugriva's vanara army sets out south for Lanka, eager to free Sita (Valmiki Yuddha 4.62-70).",
-   "note": "",
+   "note": "Kamba spreads the march: the vanara hosts gather and set out in Kishkindha (1, 5: Kesari goes like a sea), and Rama reaches the sea with the army at the start of the Yuddha Kandam (1: the host fills the shore; 2: Rama sees the sea).",
    "refs": [
     {
      "src": "Valmiki Ramayana",
@@ -849,8 +862,27 @@
     },
     {
      "src": "Kamba Ramayanam",
-     "ref": "தானை காண் படலம் (verse not pinned)",
-     "pinned": false
+     "ref": "தானை காண் படலம் 1",
+     "quote": "==சேனைத் தலைவர் தம் பெருஞ் சேனையுடன் வந்து சேர்தல்== / <poem> / அன்று அவண் இறுத்தனர்; அலரி கீழ்ட்டிசைப் / பொன் திணி நெடு வரை பொலிவுறாதமுன், / வன் திறல் தூதுவர் கொணர, வானர",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "தானை காண் படலம் 5",
+     "quote": "ஐம்பது ஆய நூறாயிர கோடி எண் அமைந்த, / மொய்ம்பு மால் வரை புரை நெடு வானரம் மொய்ப்ப, - / இம்பர் ஞாலத்தும் வானத்தும் எழுதிய சீர்த்தி / நம்பனைத் தந்த கேசரி - கடல் என நடந்தான்.",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "கடல் காண் படலம் 1",
+     "quote": "ஊழி திரியும் காலத்தும் உலையா நிலைய உயர் கிரியும், / வாழி வற்றா மறி கடலும், மண்ணும், வட பால் வான் தோய, / பாழித் தெற்கு உள்ளன கிரியும் நிலனும் தாழ, பரந்து எழுந்த / ஏழு-பத்த",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "கடல் காண் படலம் 2",
+     "quote": "பொங்கிப் பரந்த பெருஞ் சேனை, புறத்தும் அகத்தும், புடை சுற்ற- / சங்கின் பொலிந்த தகையாளைப் பிரிந்த பின்பு, தமக்கு இனம் ஆம் / கொங்கின் பொலிந்த தாமரையின் குழுவும் துயில்வுற்று",
+     "pinned": true
     }
    ],
    "dp": [],
@@ -1232,14 +1264,6 @@
      "gist": "Vibhishana surrenders and is given Lanka (commentary cites Yuddha 19.42, 19.7, 112.26).",
      "url": "https://divyaprabandham.koyil.org/index.php/2026/06/periyazhwar-thirumozhi-3-9-10/",
      "confirmed": true
-    },
-    {
-     "prabandham": "Periya Thirumozhi",
-     "ref": "7.1.5",
-     "first": "villEr nudhal",
-     "gist": "Commentary cites Yuddha 18.33 (the vow to protect those who surrender) but narrates no episode.",
-     "url": "https://divyaprabandham.koyil.org/index.php/2025/09/periya-thirumozhi-7-1-5/",
-     "confirmed": false
     }
    ],
    "songs": {
@@ -1369,16 +1393,7 @@
      "pinned": true
     }
    ],
-   "dp": [
-    {
-     "prabandham": "Thirumalai",
-     "ref": "6",
-     "first": "",
-     "gist": "Search result says Kumbhakarna appears in passing as an adviser to Ravana; no killing described; page not opened.",
-     "url": "https://divyaprabandham.koyil.org/index.php/2016/08/thirumalai-6/",
-     "confirmed": false
-    }
-   ],
+   "dp": [],
    "songs": {
     "961": {
      "conf": "l",
@@ -1505,7 +1520,7 @@
    "eid": "army-destroyed",
    "title": "Ravana's army destroyed",
    "brief": "Rama destroys the rakshasa troops of Ravana's army (Valmiki Yuddha 93.7-34).",
-   "note": "General battle; no single verse.",
+   "note": "36: vanaras and rakshasas join battle; 52: the rakshasa army is destroyed and a flood of blood spreads.",
    "refs": [
     {
      "src": "Valmiki Ramayana",
@@ -1515,8 +1530,15 @@
     },
     {
      "src": "Kamba Ramayanam",
-     "ref": "படைத் தலைவர் வதைப் படலம் (verse not pinned)",
-     "pinned": false
+     "ref": "படைத் தலைவர் வதைப் படலம் 36",
+     "quote": "ஆர்த்து எதிர் நடந்தது, அவ் அரியின் ஆர்கலி / தீர்த்தனை வாழ்த்தி; ஒத்து இரண்டு சேனையும் / போர்த் தொழில் புரிந்தன; புலவர் போக்கு இலார், / வேர்த்து உயிர் பதைத்தனர், நடுங்கி வ",
+     "pinned": true
+    },
+    {
+     "src": "Kamba Ramayanam",
+     "ref": "படைத் தலைவர் வதைப் படலம் 52",
+     "quote": "இன்ன காலையின், ஈர்-ஐந்து வெள்ளம், வந்து ஏற்ற / மின்னும் வெள் எயிற்று அரக்கர் தம் சேனையில், வீரன் / அன்ன வெஞ் சமத்து ஆறு வெள்ளத்தையும் அறுத்தான்; / சொன்ன நாலையும் இலக்குவன",
+     "pinned": true
     }
    ],
    "dp": [
@@ -2569,11 +2591,11 @@
     },
     {
      "prabandham": "Periya Thirumozhi",
-     "ref": "11.5.5",
-     "first": "கண்ணிக் குறுங்கயிற்றால் கட்டுண்டான்",
-     "gist": "He was bound with a short, many-knotted rope.",
+     "ref": "8.2.5",
+     "first": "கண்ணனூர் கண்ணபுரம்",
+     "gist": "A girl, if the story of Krishna who ate butter and was bound for it (veNNey uNdu AppuNda) is told, loses her golden colour (page read). Periya Thirumozhi 11.5.5 is not yet published on the site.",
      "url": "https://divyaprabandham.koyil.org/index.php/2026/04/periya-thirumozhi-8-2-5/",
-     "confirmed": false
+     "confirmed": true
     }
    ],
    "songs": {
@@ -2989,14 +3011,6 @@
      "gist": "Even if you will not return the clothes, stop pretending not to know our suffering.",
      "url": "https://divyaprabandham.koyil.org/index.php/2024/07/nachchiyar-thirumozhi-3-4/",
      "confirmed": true
-    },
-    {
-     "prabandham": "Periyazhwar Thirumozhi",
-     "ref": "4.4.7",
-     "first": "குருந்தம் ஒன்று",
-     "gist": "Mentions a distinctive kurundham tree at Thirukkottiyur; not clearly the clothes episode.",
-     "url": "https://divyaprabandham.koyil.org/index.php/2026/08/periyazhwar-thirumozhi-4-4-7/",
-     "confirmed": false
     }
    ],
    "songs": {
@@ -3676,16 +3690,7 @@
      "pinned": true
     }
    ],
-   "dp": [
-    {
-     "prabandham": "Periya Thirumozhi",
-     "ref": "8.1.2",
-     "first": "செருவரை",
-     "gist": "Commentary cites Mahabharata Bhishma parva where the discus climbs into Krishna's hand; link to the verse not confirmed.",
-     "url": "https://divyaprabandham.koyil.org/index.php/2026/02/periya-thirumozhi-8-1-2/",
-     "confirmed": false
-    }
-   ],
+   "dp": [],
    "songs": {}
   },
   "krishna-jayadratha": {
@@ -3719,14 +3724,6 @@
      "gist": "Kings guard Jayadratha counting the hours; Krishna hides the sun with the divine discus; Arjuna's arrow rolls Jayadratha's head away.",
      "url": "https://divyaprabandham.koyil.org/index.php/2026/07/periyazhwar-thirumozhi-4-1-8/",
      "confirmed": true
-    },
-    {
-     "prabandham": "Mudhal Thiruvandhadhi / Nanmugan Thiruvandhadhi / Periya Thirumozhi",
-     "ref": "not located",
-     "first": "",
-     "gist": "A search result says these also refer to the discus covering the sun; verse numbers not found.",
-     "url": "https://granthams.koyil.org/?p=7977",
-     "confirmed": false
     }
    ],
    "songs": {
@@ -4150,10 +4147,10 @@
     {
      "prabandham": "Thiruppavai",
      "ref": "30",
-     "first": "vangak kadal kadaindha",
-     "gist": "Opens with 'the Madhava who churned the ocean'; only the title and a search snippet seen.",
+     "first": "வங்கக் கடல் கடைந்த",
+     "gist": "Last pasuram of Thiruppavai opens vangak kadal kadaindha mAdhavanai: 'the Madhava who churned the ocean' (page read).",
      "url": "https://divyaprabandham.koyil.org/index.php/2015/01/thiruppavai-30-vangak-kadal-kadaindha-and-vazhi-thirunamam-etc/",
-     "confirmed": false
+     "confirmed": true
     }
    ],
    "songs": {
@@ -4250,10 +4247,10 @@
     {
      "prabandham": "Thiruppavai",
      "ref": "30",
-     "first": "vangak kadal kadaindha",
-     "gist": "Opens with 'the Madhava who churned the ocean'; only the title and a search snippet seen.",
+     "first": "வங்கக் கடல் கடைந்த",
+     "gist": "Last pasuram of Thiruppavai opens vangak kadal kadaindha mAdhavanai: 'the Madhava who churned the ocean' (page read).",
      "url": "https://divyaprabandham.koyil.org/index.php/2015/01/thiruppavai-30-vangak-kadal-kadaindha-and-vazhi-thirunamam-etc/",
-     "confirmed": false
+     "confirmed": true
     }
    ],
    "songs": {
@@ -4324,10 +4321,10 @@
     {
      "prabandham": "Thiruppavai",
      "ref": "30",
-     "first": "vangak kadal kadaindha",
-     "gist": "Opens with 'the Madhava who churned the ocean'; only the title and a search snippet seen.",
+     "first": "வங்கக் கடல் கடைந்த",
+     "gist": "Last pasuram of Thiruppavai opens vangak kadal kadaindha mAdhavanai: 'the Madhava who churned the ocean' (page read).",
      "url": "https://divyaprabandham.koyil.org/index.php/2015/01/thiruppavai-30-vangak-kadal-kadaindha-and-vazhi-thirunamam-etc/",
-     "confirmed": false
+     "confirmed": true
     }
    ],
    "songs": {
@@ -4640,10 +4637,10 @@
     {
      "prabandham": "Periya Thirumozhi",
      "ref": "7.7.5",
-     "first": "viNdAn viN puga",
-     "gist": "Search snippet only: Narasimha holds and tears Hiranya's chest.",
+     "first": "விண்டான் விண் புக",
+     "gist": "Narasimha in the cruel battle holds Hiranya's chest with his nails and tears it open (pasuram opens viNdAn viN puga, page read).",
      "url": "https://divyaprabandham.koyil.org/index.php/2025/11/periya-thirumozhi-7-7-5/",
-     "confirmed": false
+     "confirmed": true
     },
     {
      "prabandham": "Nanmugan Thiruvandhadhi",

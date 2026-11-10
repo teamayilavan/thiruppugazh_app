@@ -19,8 +19,6 @@ Brahma could not explain the meaning of Om, so Murugan imprisoned him. When Shiv
 | Tamil Shaiva texts | Kanda Puranam (Kachchiyappa Sivachariyar) Utpatti Kandam, Padalam 17, v 1262 | என்றலும் நகைத்து மைந்த எமக்கருள் — Shiva offers his ear and Murugan whispers the meaning of the one word Kudilai (Om). [https://ta.wikisource.org/wiki/%E0%AE%95%E0%AE%A8%E0%AF%8D%E0%AE%A4_%E0%AE%AA%E0%AF%81%E0%AE%B0%E0%AE%BE%E0%AE%A3%E0%AE%AE%E0%AF%8D] |
 | Tamil Shaiva texts | Kanda Puranam (Kachchiyappa Sivachariyar) Utpatti Kandam, Padalam 17, v 1265 | ஆங்குறு குமரப் புத்தேள் அருமறைக் — At his hill Murugan explains the truth of the one syllable Om to a young sage and also teaches the Lord's scripture (reading uncertain). [https://ta.wikisource.org/wiki/%E0%AE%95%E0%AE%A8%E0%AF%8D%E0%AE%A4_%E0%AE%AA%E0%AF%81%E0%AE%B0%E0%AE%BE%E0%AE%A3%E0%AE%AE%E0%AF%8D] |
 | Tamil Shaiva texts | kaumaram.com (devotional website, secondary) Kandar Anubhuti 36 article |  — Retells Brahma's failure to explain Om, his imprisonment, and Shiva receiving the Upadesa; cites the Tamil Skanda Puranam; does not name Swamimalai. [https://kaumaram.com/articles/esoteric_anubhuti/esoteric_kandar_anubhuti36.html] |
-| Tamil Shaiva texts (candidate) | Swamimalai sthala purana Swamimalai as the site where Murugan taught Shiva (as Swaminatha) |  — Tradition in temple lore; I did not find a text with verse numbers. Kanda Puranam above does not name Swamimalai. [] |
-| Tamil Shaiva texts (candidate) | Skanda Purana (Sankara Samhita, Sanskrit) Chapter for the Brahma imprisonment not found |  — A search found only a devotional summary; no chapter number located. [] |
 
 ## Songs
 

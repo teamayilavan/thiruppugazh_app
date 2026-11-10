@@ -8,7 +8,6 @@ Carrying the skull bowl, Shiva wandered naked through the Daruka forest asking f
 
 | Source | Reference | What it says / quote |
 |---|---|---|
-| Shiva Purana | Shiva Purana, Satarudra-samhita ch.31 (Bhikshuvarya) | Shiva as mendicant incarnation (a different tale, not the Daruka-forest Bhikshatana) |
 | Linga Purana | Linga Purana 1.29 | Rudra, nude, dark and handsome, goes to the Daruka forest to test the sages' faith and their wives |
 | Tamil Shaiva texts | Tevaram (Sambandar) Tirumurai 3, pathigam 3.104 (திருப்பரிதிநியமம்), verse 1; Tirumurai.pathigam.verse as numbered on thevaaram.org | விண்கொண்ட தூமதி சூடிநீடு — Sambandar at Tiruparithiniyamam: a ten-verse refrain of the beggar who goes for alms and steals the beauty of the women's glances. [https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=3&Song_idField=3104] |
 | Tamil Shaiva texts | Tevaram (Sambandar) Tirumurai 3, pathigam 3.104 (திருப்பரிதிநியமம்), verse 7; Tirumurai.pathigam.verse as numbered on thevaaram.org | பிறைவளர் செஞ்சடை பின்றயங்கப் — Same pathigam: going from house to house for alms, he makes women's bangles slip and steals their beauty. [https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=3&Song_idField=3104] |

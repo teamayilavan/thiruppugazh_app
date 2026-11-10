@@ -10,7 +10,8 @@ The songs say the sage Agastya of Mount Pothigai worshipped Murugan in Tamil and
 
 | Source | Reference | Note | Status |
 |---|---|---|---|
-| Tamil tradition |  |  | from memory, not opened |
+| Kanda Puranam (Kachiyappar), Utpatti Kandam | vv. 805-808 Shiva sends Agastya (the Tamil sage) south to Mount Pothigai; 807 checked [https://ta.wikisource.org/wiki/%E0%AE%95%E0%AE%A8%E0%AF%8D%E0%AE%A4_%E0%AE%AA%E0%AF%81%E0%AE%B0%E0%AE%BE%E0%AE%A3%E0%AE%AE%E0%AF%8D] |  | machine-read from Tamil Wikisource (first kandam and the start of the second only) |
+| Kanda Puranam (Kachiyappar), Asura Kandam (Project Madurai text) | vv. 1214, 1222, 1224 call Agastya the Tamil sage (the 'true Tamil' sage) [https://projectmadurai.org/pm_etexts/utf8/pmuni0268.html] | text says nothing about Murugan teaching him | machine-read from Project Madurai (Unicode text); re-checked on every build |
 
 Assignments start KEYWORD-LEVEL: a song is listed when its English commentary (and, where possible, a Tamil lyric line) matches the story. A story with a 'Hand-read notes' section was then read (in full, or the doubtful part, as that section says) and wrong songs removed; other stories were not. Confidence: **t** = a Tamil lyric line matched and the commentary agrees; **c** = commentary only (no Tamil keyword line found); **low** = commentary did not match, check by reading the song.
 

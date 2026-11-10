@@ -10,7 +10,7 @@ Parvati (Imayavalli, Umadevi) is the daughter of Himavan, the Mountain-King, bor
 
 | Source | Reference | Note | Status |
 |---|---|---|---|
-| Puranic and Tamil devotional tradition | no single text pinned |  | from memory, not opened |
+| Kanda Puranam (Kachiyappar), Utpatti Kandam | v. 640 Shiva, as an old man, speaks of 'the daughter of the king of the rich mountain' (Parvati) doing penance (checked) [https://ta.wikisource.org/wiki/%E0%AE%95%E0%AE%A8%E0%AF%8D%E0%AE%A4_%E0%AE%AA%E0%AF%81%E0%AE%B0%E0%AE%BE%E0%AE%A3%E0%AE%AE%E0%AF%8D] | Parvati as Himavan's daughter is named in the first kandam; the songs' 'boon after Himavan's penance' was not found | machine-read from Tamil Wikisource (first kandam and the start of the second only) |
 
 Assignments start KEYWORD-LEVEL: a song is listed when its English commentary (and, where possible, a Tamil lyric line) matches the story. A story with a 'Hand-read notes' section was then read (in full, or the doubtful part, as that section says) and wrong songs removed; other stories were not. Confidence: **t** = a Tamil lyric line matched and the commentary agrees; **c** = commentary only (no Tamil keyword line found); **low** = commentary did not match, check by reading the song.
 

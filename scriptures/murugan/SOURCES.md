@@ -82,3 +82,5 @@ Texts are cached in `scripts/.cache/` (git-ignored): `pp_all.json` = Periya Pura
 | Kanda Puranam, Asura Kandam verse | 1220 | நீண்மலையாகி | cursed to stay a mountain | ok |
 | Kanda Puranam, Asura Kandam verse | 1221 | வேற்படைதன்னிற்பின்னாள்விளிகுதி | to die later by Murugan's Vel | ok |
 | Kanda Puranam verse (Utpatti) | 807 | பொதியமலை | Shiva sends Agastya to Pothigai | ok |
+| Kanda Puranam verse (Utpatti) | 640 | மலையரசன்றன்மகள் | Parvati as the mountain king's daughter | ok |
+| Kanda Puranam, Deva Kandam verse | 45 | யிராவத் | Deivayanai travels on Airavata | ok |

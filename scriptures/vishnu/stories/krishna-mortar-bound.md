@@ -12,7 +12,7 @@ Caught stealing, Krishna sits on an upturned mortar giving butter to monkeys and
 | Bhagavata Purana | SB 10.9.15-18 | Every rope is two fingers short; at last he lets her bind him |
 | Divya Prabandham | Periyazhwar Thirumozhi 3.9.9 | மாயச் சகடம் — Tied to the mortar by Yashoda, he crawled with it and snapped the twin trees. [https://divyaprabandham.koyil.org/index.php/2026/06/periyazhwar-thirumozhi-3-9-9/] |
 | Divya Prabandham | Periya Thirumadal 95 | பின்னும் உரலோடு — Mentions his greatness in being bound with the mortar. [https://divyaprabandham.koyil.org/index.php/2019/11/periya-thirumadal-95/] |
-| Divya Prabandham (candidate) | Periya Thirumozhi 11.5.5 | கண்ணிக் குறுங்கயிற்றால் கட்டுண்டான் — He was bound with a short, many-knotted rope. [https://divyaprabandham.koyil.org/index.php/2026/04/periya-thirumozhi-8-2-5/] |
+| Divya Prabandham | Periya Thirumozhi 8.2.5 | கண்ணனூர் கண்ணபுரம் — A girl, if the story of Krishna who ate butter and was bound for it (veNNey uNdu AppuNda) is told, loses her golden colour (page read). Periya Thirumozhi 11.5.5 is not yet published on the site. [https://divyaprabandham.koyil.org/index.php/2026/04/periya-thirumozhi-8-2-5/] |
 
 ## Songs
 

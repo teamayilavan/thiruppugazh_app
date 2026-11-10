@@ -4,13 +4,13 @@
 
 `g-valli-elephant` | Ganesha | 4 songs
 
-The songs say Ganesha took the form of a wild one-tusked elephant so that Valli, frightened, ran to Murugan's arms (songs 146, 715). Tradition, not a checked text.
+In the Kanda Puranam (Daksha Kandam, padalam 24, vv. 1910-1915) Murugan, disguised as an old ascetic, thinks of Vinayaka, who comes as a roaring elephant; Valli runs back and clings to the old man; Murugan thanks Vinayaka, who leaves, and then shows his true form. The text says elephant; it does not say one-tusked. Text: Project Madurai.
 
 ## References
 
 | Source | Reference | Note | Status |
 |---|---|---|---|
-| Kanda Puranam, Valli Thirumanam |  |  | search result only (tradition) |
+| Kanda Puranam (Kachiyappar), Daksha Kandam (Project Madurai text) | padalam 24, vv. 1910-1915: Murugan thinks of the elephant-faced one, Vinayaka comes as a roaring elephant (the text says elephant; 'one-tusked' is not stated), Valli runs back and embraces the old man, and Murugan thanks Vinayaka, who goes [https://projectmadurai.org/pm_etexts/utf8/pmuni0318_02.html] | all of these verses are machine-checked (1910-1912) | machine-read from Project Madurai (Unicode text); re-checked on every build |
 
 Assignments start KEYWORD-LEVEL: a song is listed when its English commentary (and, where possible, a Tamil lyric line) matches the story. A story with a 'Hand-read notes' section was then read (in full, or the doubtful part, as that section says) and wrong songs removed; other stories were not. Confidence: **t** = a Tamil lyric line matched and the commentary agrees; **c** = commentary only (no Tamil keyword line found); **low** = commentary did not match, check by reading the song.
 

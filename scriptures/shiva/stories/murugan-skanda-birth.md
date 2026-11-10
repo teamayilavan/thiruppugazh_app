@@ -12,7 +12,7 @@ Six sparks from Shiva's forehead eye were carried by Agni (and Vayu) to the Gang
 | Mahabharata (Critical Edition) | MBh 9,43.7-14; 13,84-86 | Rudra's tejas goes to Agni and Ganga; Krittikas find the child in the reed thicket; named Skanda/Guha |
 | Shiva Purana | Shiva Purana, Rudra-samhita 4 (Kumara-khanda) ch.2 | Birth of Shiva's son: Shiva's seed, Agni, Parvati's curse |
 | Skanda Purana | Skanda Purana, Kedara-khanda ch.27 (Birth of Kumara Karttikeya) | Birth of Kumara |
-| Mahabharata (Critical Edition) | MBh 3,213-221 | Skanda born of Agni and Svaha (variant) |
+| Mahabharata (Critical Edition) | MBh 3,213-221 | Vana parva, Markandeya-samasya: a variant birth. Skanda is born of Agni's seed carried by Svaha (214.015: svahaya, in the pit), his mother-claimants come to him (215), he is enthroned as commander of the gods (218) (GRETIL Critical Edition lines read). |
 | Tamil Shaiva texts | Kanda Puranam (Kachchiyappa Sivachariyar) Utpatti Kandam, Padalam 11 (Tiruvavatara Padalam, vv 851-977), v 906 | வெந்திற லவுணரை வீட்டு தற்கொரு — The devas ask Shiva for a son to destroy the demons. [https://ta.wikisource.org/wiki/%E0%AE%95%E0%AE%A8%E0%AF%8D%E0%AE%A4_%E0%AE%AA%E0%AF%81%E0%AE%B0%E0%AE%BE%E0%AE%A3%E0%AE%AE%E0%AF%8D] |
 | Tamil Shaiva texts | Kanda Puranam (Kachchiyappa Sivachariyar) Utpatti Kandam, Padalam 11, v 914 | தன்னருள் நிலைமையாற் சண்மு கத்திடை — Through the six faces, sparks of fire come from his forehead eyes. [https://ta.wikisource.org/wiki/%E0%AE%95%E0%AE%A8%E0%AF%8D%E0%AE%A4_%E0%AE%AA%E0%AF%81%E0%AE%B0%E0%AE%BE%E0%AE%A3%E0%AE%AE%E0%AF%8D] |
 | Tamil Shaiva texts | Kanda Puranam (Kachchiyappa Sivachariyar) Utpatti Kandam, Padalam 11, v 915 | அந்தியம் பெருநிறத் தமலன் அவ்வகை — Six sparks gather and come before Shiva. [https://ta.wikisource.org/wiki/%E0%AE%95%E0%AE%A8%E0%AF%8D%E0%AE%A4_%E0%AE%AA%E0%AF%81%E0%AE%B0%E0%AE%BE%E0%AE%A3%E0%AE%AE%E0%AF%8D] |
@@ -26,8 +26,7 @@ Six sparks from Shiva's forehead eye were carried by Agni (and Vayu) to the Gang
 | Tamil Shaiva texts | Kanda Puranam (Kachchiyappa Sivachariyar) Utpatti Kandam, Padalam 13, v 1035 | எந்தை சத்திகள் உயிரெலாம் ஒடுங்குறு — The six forms join into one, Kandan. [https://ta.wikisource.org/wiki/%E0%AE%95%E0%AE%A8%E0%AF%8D%E0%AE%A4_%E0%AE%AA%E0%AF%81%E0%AE%B0%E0%AE%BE%E0%AE%A3%E0%AE%AE%E0%AF%8D] |
 | Tamil Shaiva texts | Skanda Purana (Maheshvara-khanda, Kedara-khanda), tr. G. V. Tagare Chapter 27 (The Birth of Kumara Karttikeya) |  — Sanskrit-derived birth account: Shiva's semen taken by Agni, passed to the Krittikas and Ganga; not the forehead-eye version of the Tamil Kanda Puranam. [https://www.wisdomlib.org/hinduism/book/the-skanda-purana/d/doc365974.html] |
 | Tamil Shaiva texts | Skanda Purana, tr. G. V. Tagare Appendix 1 (The story of Skanda's birth) |  — Compares the Mahabharata Shalya outline with the Skanda Purana's elaborations. [https://www.wisdomlib.org/hinduism/book/the-skanda-purana/d/doc365976.html] |
-| Tamil Shaiva texts (candidate) | Mahabharata Shalya Parva 44.6-13 |  — Outline of the birth stages as cited in Tagare's note; the Mahabharata text itself was not opened. [] |
-| Tamil Shaiva texts (candidate) | Shiva Purana Rudra Samhita, Kumara Khanda |  — Another birth account; not opened in this pass. [] |
+| Tamil Shaiva texts | Mahabharata (Critical Edition), Shalya parva Shalya 44.5-14 (the gods gather for Skanda's installation) |  — Lists the gods and sages who assemble when Skanda is installed as commander (GRETIL Critical Edition lines read). This is the coronation, not the birth. [http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/2_epic/mbh/mbh_09_u.htm] |
 
 ## Songs
 

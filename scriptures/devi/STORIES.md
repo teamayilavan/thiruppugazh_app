@@ -11,7 +11,7 @@
 | Story | Songs | Primary refs | File |
 |---|---|---|---|
 | Parvati, daughter of Himavan | 19 | 1 | [d-himavan](stories/d-himavan.md) |
-| Parvati's penance at Kanchi; the sand lingam | 4 | 3 | [d-kanchi](stories/d-kanchi.md) |
+| Parvati's penance at Kanchi; the sand lingam | 4 | 4 | [d-kanchi](stories/d-kanchi.md) |
 | Kamakshi's thirty-two acts of charity | 5 | 1 | [d-kamakshi-32](stories/d-kamakshi-32.md) |
 | Penance at Thiruppathirippuliyur | 2 | 1 | [d-pathiri](stories/d-pathiri.md) |
 | Abirami at Thiruvathigai, where the cities burn | 1 | 1 | [d-thiruvathigai](stories/d-thiruvathigai.md) |
@@ -24,6 +24,6 @@
 |---|---|---|---|
 | Kali challenges Shiva to a dance | 2 | 2 | [d-kali-dance](stories/d-kali-dance.md) |
 | Durga slays Mahishasura | 2 | 1 | [d-mahisha](stories/d-mahisha.md) |
-| Durga and Bhadrakali dance on Murugan's battlefield | 5 | 1 | [d-battlefield](stories/d-battlefield.md) |
+| Durga and Bhadrakali dance on Murugan's battlefield | 5 | 2 | [d-battlefield](stories/d-battlefield.md) |
 | Matangi, the sage's daughter | 1 | 1 | [d-matangi](stories/d-matangi.md) |
 | Durga of the Idumbai forest and the Pandavas | 1 | 1 | [d-idumbai](stories/d-idumbai.md) |

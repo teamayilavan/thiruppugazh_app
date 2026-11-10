@@ -10,7 +10,6 @@ Shiva dances: the Ananda Tandava in the golden hall at Chidambaram (Thillai), th
 |---|---|---|
 | Linga Purana | Linga Purana 1.106 | Tandava dance of Shiva at dusk with ghosts and goblins, to please the Goddess |
 | Shiva Purana | Shiva Purana, Satarudra-samhita ch.34 (Sunartaka Nata) | Shiva as a dancing actor |
-| Mahabharata (Critical Edition) | MBh 13,17.49 | Name list: nrityapriya, nityanarta (fond of dance) |
 | Tamil Shaiva texts | Tevaram (Appar) Tirumurai 4, pathigam 4.81 (கோயில்), verse 4; Tirumurai.pathigam.verse as numbered on thevaaram.org | குனித்த புருவமுங் கொவ்வைச்செவ் — Appar's Tillai verse: the curved brow, red lips, gentle smile, matted hair and the raised golden foot: the vision of the dancing Lord. [https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=4&Song_idField=4081] |
 | Tamil Shaiva texts | Tevaram (Appar) Tirumurai 4, pathigam 4.22 (கோயில்), verse 2; Tirumurai.pathigam.verse as numbered on thevaaram.org | ஏறனா ரேறு தம்பா — Appar at Tillai: the Lord with the Ganga in his hair and the Lady at his side dances in the blazing fire in the Chitrambalam. [https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=4&Song_idField=4022] |
 | Tamil Shaiva texts | Tevaram (Sambandar) Tirumurai 3, pathigam 3.1 (கோயில்), verse 1; Tirumurai.pathigam.verse as numbered on thevaaram.org | ஆடி னாய்நறு நெய்யொடு — Sambandar at Tillai: praises the Lord bathed in ghee, milk and curd who abides in the Chitrambalam of the Tillai Brahmins. [https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=3&Song_idField=3001] |

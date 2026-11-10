@@ -8,9 +8,6 @@ The boy sage Markandeya, fated to die at sixteen, held the Shiva linga. Yama thr
 
 | Source | Reference | What it says / quote |
 |---|---|---|
-| Bhagavata Purana | SB 12.10.3-19 | Markandeya in trance seen by Shiva and Uma and granted a boon (no Yama kicking in the Bhagavata) |
-| Linga Purana | Linga Purana 1.30 (Sage Shveta) | Shiva appears and humbles Kala/Yama who came for the devotee Shveta: same motif as Markandeya, different devotee |
-| Skanda Purana | Skanda Purana, Kedara-khanda ch.32 (Burning of Kala) | Shiva burns Kala to save King Shveta: Markandeya-type story |
 | Tamil Shaiva texts | Tevaram (Appar) Tirumurai 4, pathigam 4.107 (திருக்கடவூர் வீரட்டம்), verse 1; Tirumurai.pathigam.verse as numbered on thevaaram.org | மருட்டுயர் தீரவன் றர்ச்சித்த — Appar at Kadavur Virattam: for the boy Markandeya he kicked fierce Yama, whose tongue lolled and fangs showed. [https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=4&Song_idField=4107] |
 | Tamil Shaiva texts | Tevaram (Appar) Tirumurai 4, pathigam 4.107 (திருக்கடவூர் வீரட்டம்), verse 2; Tirumurai.pathigam.verse as numbered on thevaaram.org | பதத்தெழு மந்திர மஞ்செழுத் — Appar at Kadavur: the boy worshipped chanting the five letters; Shiva kicked angry Yama so that blood ran from his eyes. [https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=4&Song_idField=4107] |
 | Tamil Shaiva texts | Tevaram (Appar) Tirumurai 4, pathigam 4.31 (திருக்கடவூர் வீரட்டம்), verse 9; Tirumurai.pathigam.verse as numbered on thevaaram.org | சேலினே ரனையகண்ணார் திறம்விட்டுச் — Appar at Kadavur Virattam: for Markandeya, who worshipped with milk, curd and ghee, he kicked Yama. [https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=4&Song_idField=4031] |

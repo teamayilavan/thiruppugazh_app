@@ -11,7 +11,6 @@ The Pandya's minister Manikkavasagar went to buy horses and met Shiva as a guru 
 | Tamil Shaiva texts | Tiruvilaiyadal Puranam (Paranjothi Munivar; prose retelling by R. Srinivasan on Tamil Wikisource) Padalam 58 (Tiruvadavurar-ukku upadesitha padalam) |  — Prose retelling: at Tirupperunthurai the Lord sits as Guru under the kurundam tree; Vadavurar is initiated, then cannot find him again. [https://ta.wikisource.org/wiki/%E0%AE%A4%E0%AE%BF%E0%AE%B0%E0%AF%81%E0%AE%B5%E0%AE%BF%E0%AE%B3%E0%AF%88%E0%AE%AF%E0%AE%BE%E0%AE%9F%E0%AE%B1%E0%AF%8D_%E0%AE%AA%E0%AF%81%E0%AE%B0%E0%AE%BE%E0%AE%A3%E0%AE%AE%E0%AF%8D/58] |
 | Tamil Shaiva texts | Tiruvasagam (Manikkavasagar, Tirumurai 8) Arutpathu (section 29), verse 1 | சோதியே சுடரே சூழொளி விளக்கே — Lord of Tiruperunthurai in the kurundam grove who is called by the devotee. [https://thevaaram.org/thirumurai_1/onepage.php?thiru=8&Song_idField=8129] |
 | Tamil Shaiva texts | Tiruvasagam (Manikkavasagar, Tirumurai 8) Kirththit Tiruvagaval (section 2), lines about 59-60 | குருந்தின் கீழன் றிருந்த கொள்கையும் — Lord who sat under the kurundam tree is listed among his deeds. [https://thevaaram.org/thirumurai_1/onepage.php?thiru=8&Song_idField=8102] |
-| Tamil Shaiva texts (candidate) | Periya Puranam Manikkavasagar has no puranam in Periya Puranam |  — Not Sekkizhar's subject; Manikkavasagar's story comes from the Tiruvilaiyadal Puranam and Vadavurar Puranam. [] |
 
 ## Songs
 

@@ -716,14 +716,6 @@
      "quote": "",
      "pinned": true,
      "url": "https://www.wisdomlib.org/hinduism/book/the-skanda-purana/d/doc365957.html"
-    },
-    {
-     "src": "Mahabharata (Critical Edition)",
-     "ref": "MBh 13,14.116; 13,17.40",
-     "gist": "Only the epithet Nilakantha; no poison narrative found in CE Adi 1,15-17 by keyword search",
-     "quote": "",
-     "pinned": false,
-     "url": "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/2_epic/mbh/mbh_13_u.htm"
     }
    ],
    "dp": [
@@ -1044,32 +1036,7 @@
    "title": "Shiva kicks Yama (Markandeya)",
    "brief": "The boy sage Markandeya, fated to die at sixteen, held the Shiva linga. Yama threw his noose and it fell around the linga as well. Shiva came out of it, kicked Yama down (Kalantaka, Kalasamharamurti) and gave Markandeya lasting youth.",
    "note": "",
-   "refs": [
-    {
-     "src": "Bhagavata Purana",
-     "ref": "SB 12.10.3-19",
-     "gist": "Markandeya in trance seen by Shiva and Uma and granted a boon (no Yama kicking in the Bhagavata)",
-     "quote": "",
-     "pinned": false,
-     "url": "https://vedabase.io/en/library/sb/12/10/"
-    },
-    {
-     "src": "Linga Purana",
-     "ref": "Linga Purana 1.30 (Sage Shveta)",
-     "gist": "Shiva appears and humbles Kala/Yama who came for the devotee Shveta: same motif as Markandeya, different devotee",
-     "quote": "",
-     "pinned": false,
-     "url": "https://www.wisdomlib.org/hinduism/book/the-linga-purana/d/doc1195243.html"
-    },
-    {
-     "src": "Skanda Purana",
-     "ref": "Skanda Purana, Kedara-khanda ch.32 (Burning of Kala)",
-     "gist": "Shiva burns Kala to save King Shveta: Markandeya-type story",
-     "quote": "",
-     "pinned": false,
-     "url": "https://www.wisdomlib.org/hinduism/book/the-skanda-purana/d/doc365981.html"
-    }
-   ],
+   "refs": [],
    "dp": [
     {
      "prabandham": "Tevaram (Appar)",
@@ -1214,14 +1181,6 @@
      "quote": "",
      "pinned": true,
      "url": "https://www.wisdomlib.org/hinduism/book/the-skanda-purana/d/doc423769.html"
-    },
-    {
-     "src": "Linga Purana",
-     "ref": "Linga Purana 1.17",
-     "gist": "Context only: the chapter is the Lingodbhava (fiery pillar). An editor's note on the page says Brahma lost his fifth head, in one version for lying, in another for speaking disrespectfully of Shiva",
-     "quote": "",
-     "pinned": false,
-     "url": "https://www.wisdomlib.org/hinduism/book/the-linga-purana/d/doc1195230.html"
     },
     {
      "src": "Shiva Purana",
@@ -1369,14 +1328,6 @@
    "brief": "Carrying the skull bowl, Shiva wandered naked through the Daruka forest asking for alms, bewitching the sages' wives and breaking the sages' pride in rites. Vishnu appears as Mohini beside him in the story.",
    "note": "",
    "refs": [
-    {
-     "src": "Shiva Purana",
-     "ref": "Shiva Purana, Satarudra-samhita ch.31 (Bhikshuvarya)",
-     "gist": "Shiva as mendicant incarnation (a different tale, not the Daruka-forest Bhikshatana)",
-     "quote": "",
-     "pinned": false,
-     "url": "https://www.wisdomlib.org/hinduism/book/shiva-purana-english/d/doc226427.html"
-    },
     {
      "src": "Linga Purana",
      "ref": "Linga Purana 1.29",
@@ -1953,14 +1904,6 @@
      "quote": "",
      "pinned": true,
      "url": "https://www.wisdomlib.org/hinduism/book/shiva-purana-english/d/doc226430.html"
-    },
-    {
-     "src": "Mahabharata (Critical Edition)",
-     "ref": "MBh 13,17.49",
-     "gist": "Name list: nrityapriya, nityanarta (fond of dance)",
-     "quote": "",
-     "pinned": false,
-     "url": "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/2_epic/mbh/mbh_13_u.htm"
     }
    ],
    "dp": [
@@ -2729,20 +2672,20 @@
      "confirmed": true
     },
     {
-     "prabandham": "Periya Puranam",
-     "ref": "Ninra Cir Nedumara Nayanar puranam (PP no. 50) and Mangayarkkarasi / Kulachchirai puranams (PP 66, 22)",
-     "first": "",
-     "gist": "Further Pandya-side accounts of the same events; not opened or read in this pass.",
+     "prabandham": "Periya Puranam, Ninra Cir Nedumara Nayanar Puranam (Tirumurai 12)",
+     "ref": "v. 2",
+     "first": "அந்நாளில் ஆளுடைய பிள்ளையார்",
+     "gist": "The Pandya king, freed from the Jain snare by Sambandar's grace, rules Tennadu with Shiva's worship spreading (section read).",
      "url": "https://thevaaram.org/thirumurai_1/onepage.php?thiru=12&Song_idField=12500",
-     "confirmed": false
+     "confirmed": true
     },
     {
-     "prabandham": "Tiruvilaiyadal Puranam (Perumparrap Puliyur Nambi)",
-     "ref": "Tiruvalavayudaiyar Tiruvilaiyadal, Sambandar section",
-     "first": "",
-     "gist": "Earlier Sanskrit-derived retelling by Nambi; not found online in this pass.",
-     "url": "",
-     "confirmed": false
+     "prabandham": "Periya Puranam, Kulachchirai Nayanar Puranam (Tirumurai 12)",
+     "ref": "v. 10",
+     "first": "புன்னயத்தரு",
+     "gist": "Kulachchirai, the Pandya minister, who removed the lies (of the Jains) and made the southern land praise the holy ash, bows at the feet of the lord of Kazhi (Sambandar) (section read).",
+     "url": "https://thevaaram.org/thirumurai_1/onepage.php?thiru=12&Song_idField=12220",
+     "confirmed": true
     }
    ],
    "songs": {
@@ -2934,20 +2877,12 @@
      "confirmed": true
     },
     {
-     "prabandham": "Tiruvilaiyadal Puranam (Paranjothi Munivar)",
-     "ref": "Padalam 49-51 (Tiruvalavayana, Sundara perambu eytha, Sangappalagai thanta padalam) and Sokkanathar items",
+     "prabandham": "Tiruvilaiyadal Puranam (Paranjothi Munivar; prose retelling by R. Srinivasan on Tamil Wikisource)",
+     "ref": "Padalam 51 (Sangap palagai thanda padalam)",
      "first": "",
-     "gist": "Likely home of the Sokkar (Sundareswarar of Madurai) stories and Sangam board; chapter titles seen in the index only, text not read.",
-     "url": "https://ta.wikisource.org/wiki/%E0%AE%A4%E0%AE%BF%E0%AE%B0%E0%AF%81%E0%AE%B5%E0%AE%BF%E0%AE%B3%E0%AF%88%E0%AE%AF%E0%AE%BE%E0%AE%9F%E0%AE%B1%E0%AF%8D_%E0%AE%AA%E0%AF%81%E0%AE%B0%E0%AE%BE%E0%AE%A3%E0%AE%AE%E0%AF%8D/49",
-     "confirmed": false
-    },
-    {
-     "prabandham": "Tirumurai 11 (Nakkeerar)",
-     "ref": "Tirumurukarruppadai",
-     "first": "",
-     "gist": "Nakkeerar's Murugan poem, tied by tradition to Murugan helping him; not opened.",
-     "url": "",
-     "confirmed": false
+     "gist": "The Sangam plank given by Shiva (page read; the word is also machine-checked in the tamil-lore set).",
+     "url": "https://ta.wikisource.org/wiki/%E0%AE%A4%E0%AE%BF%E0%AE%B0%E0%AF%81%E0%AE%B5%E0%AE%BF%E0%AE%B3%E0%AF%88%E0%AE%AF%E0%AE%BE%E0%AE%9F%E0%AE%B1%E0%AF%8D_%E0%AE%AA%E0%AF%81%E0%AE%B0%E0%AE%BE%E0%AE%A3%E0%AE%AE%E0%AF%8D/51",
+     "confirmed": true
     }
    ],
    "songs": {
@@ -3149,22 +3084,6 @@
      "gist": "The parents prepare their own son for the feast.",
      "url": "https://thevaaram.org/thirumurai_1/onepage.php?thiru=12&Song_idField=12360",
      "confirmed": true
-    },
-    {
-     "prabandham": "Tirukkovaiyar / Tiruvasagam (Manikkavasagar)",
-     "ref": "Tirukkovaiyar",
-     "first": "",
-     "gist": "Manikkavasagar's love poem in Tirumurai 8 (Song_idField 8201 onwards on thevaaram.org); no specific saint episode linked to the songs; not read.",
-     "url": "",
-     "confirmed": false
-    },
-    {
-     "prabandham": "Periya Puranam",
-     "ref": "Kachchiyappar is Kanda Puranam's author, not a Periya Puranam saint",
-     "first": "",
-     "gist": "Song 1114 names Kachchiyappar; his biography is not in Periya Puranam. No source found online in this pass.",
-     "url": "",
-     "confirmed": false
     }
    ],
    "songs": {
@@ -3230,14 +3149,6 @@
      "gist": "Lord who sat under the kurundam tree is listed among his deeds.",
      "url": "https://thevaaram.org/thirumurai_1/onepage.php?thiru=8&Song_idField=8102",
      "confirmed": true
-    },
-    {
-     "prabandham": "Periya Puranam",
-     "ref": "Manikkavasagar has no puranam in Periya Puranam",
-     "first": "",
-     "gist": "Not Sekkizhar's subject; Manikkavasagar's story comes from the Tiruvilaiyadal Puranam and Vadavurar Puranam.",
-     "url": "",
-     "confirmed": false
     }
    ],
    "songs": {
@@ -3351,22 +3262,6 @@
      "gist": "Retells Brahma's failure to explain Om, his imprisonment, and Shiva receiving the Upadesa; cites the Tamil Skanda Puranam; does not name Swamimalai.",
      "url": "https://kaumaram.com/articles/esoteric_anubhuti/esoteric_kandar_anubhuti36.html",
      "confirmed": true
-    },
-    {
-     "prabandham": "Swamimalai sthala purana",
-     "ref": "Swamimalai as the site where Murugan taught Shiva (as Swaminatha)",
-     "first": "",
-     "gist": "Tradition in temple lore; I did not find a text with verse numbers. Kanda Puranam above does not name Swamimalai.",
-     "url": "",
-     "confirmed": false
-    },
-    {
-     "prabandham": "Skanda Purana (Sankara Samhita, Sanskrit)",
-     "ref": "Chapter for the Brahma imprisonment not found",
-     "first": "",
-     "gist": "A search found only a devotional summary; no chapter number located.",
-     "url": "",
-     "confirmed": false
     }
    ],
    "songs": {
@@ -3687,9 +3582,9 @@
     {
      "src": "Mahabharata (Critical Edition)",
      "ref": "MBh 3,213-221",
-     "gist": "Skanda born of Agni and Svaha (variant)",
+     "gist": "Vana parva, Markandeya-samasya: a variant birth. Skanda is born of Agni's seed carried by Svaha (214.015: svahaya, in the pit), his mother-claimants come to him (215), he is enthroned as commander of the gods (218) (GRETIL Critical Edition lines read).",
      "quote": "",
-     "pinned": false,
+     "pinned": true,
      "url": "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/2_epic/mbh/mbh_03_u.htm"
     }
    ],
@@ -3799,20 +3694,12 @@
      "confirmed": true
     },
     {
-     "prabandham": "Mahabharata",
-     "ref": "Shalya Parva 44.6-13",
+     "prabandham": "Mahabharata (Critical Edition), Shalya parva",
+     "ref": "Shalya 44.5-14 (the gods gather for Skanda's installation)",
      "first": "",
-     "gist": "Outline of the birth stages as cited in Tagare's note; the Mahabharata text itself was not opened.",
-     "url": "",
-     "confirmed": false
-    },
-    {
-     "prabandham": "Shiva Purana",
-     "ref": "Rudra Samhita, Kumara Khanda",
-     "first": "",
-     "gist": "Another birth account; not opened in this pass.",
-     "url": "",
-     "confirmed": false
+     "gist": "Lists the gods and sages who assemble when Skanda is installed as commander (GRETIL Critical Edition lines read). This is the coronation, not the birth.",
+     "url": "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/2_epic/mbh/mbh_09_u.htm",
+     "confirmed": true
     }
    ],
    "songs": {

@@ -12,7 +12,6 @@ On the way to Mithila the dust of Rama's feet frees Ahalya, Gautama's wife, who 
 | Kamba Ramayanam | அகலிகைப் படலம் 14 | “கண்ட கல்மிசைக் காகுத்தன் கழல்-துகள் கதுவ,- / உண்ட பேதைமை மயக்கு அற வேறுபட்டு, உருவம் / கொண்டு, மெய் உணர்பவன் கழல் கூடியது ஒப்ப,- / பண்டை வண்ணமாய் நின்றனள்; மா முனி பணிப்ப” |
 | Kamba Ramayanam | அகலிகைப் படலம் 15 | “'மா இரு விசும்பின் கங்கை மண் மிசைக் கொணர்ந்தோன் மைந்த! / மேயின உவகையோடு மின் என ஒதுங்கி நின்றாள், / தீவினை நயந்து செய்த தேவர்கோன் தனக்குச் செங் கண் / ஆயிரம் அளித்தோன் பன்” |
 | Divya Prabandham | Periyazhwar Thirumozhi 4.1.3 | kolai yAnai — Commentary only: Rama stays on the shore because stones might free cursed women as Ahalya was freed. [https://divyaprabandham.koyil.org/index.php/2026/07/periyazhwar-thirumozhi-4-1-3/] |
-| Divya Prabandham (candidate) | Periyazhwar Thirumozhi 4.4.6 | bUdham aindhodu — Search snippet says the commentary mentions Ahalya's release by Rama's feet; page not opened. [https://divyaprabandham.koyil.org/index.php/2026/08/periyazhwar-thirumozhi-4-4-6/] |
 
 Note: In Valmiki Rama does not touch the stone with his foot; the 'dust of his feet frees her' image is Kamba (Ahalya padalam 14).
 

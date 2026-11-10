@@ -11,7 +11,7 @@
 | Story | Songs | Primary refs | File |
 |---|---|---|---|
 | Murugan as Rudrasarman at the Madurai Sangam | 5 | 2 | [t-sangam](stories/t-sangam.md) |
-| Agastya of Pothigai and Tamil | 6 | 1 | [t-agastya](stories/t-agastya.md) |
+| Agastya of Pothigai and Tamil | 6 | 2 | [t-agastya](stories/t-agastya.md) |
 | Pari, Kari and the model donors | 5 | 1 | [t-patrons](stories/t-patrons.md) |
 | The Tamil classics named in the songs | 4 | 1 | [t-classics](stories/t-classics.md) |
 

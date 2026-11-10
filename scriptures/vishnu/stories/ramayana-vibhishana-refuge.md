@@ -16,7 +16,6 @@ Ravana's brother Vibhishana, rejected for urging the return of Sita, joins Rama 
 | Kamba Ramayanam | வீடணன் அடைக்கலப் படலம் 129 | “மார்க்கடம் சூழ்ந்த வைப்பின் இளையவன் மருங்கு காப்ப, / நாற் கடல் உடுத்த பாரின் நாயகன் புதல்வன், நாமப் / பாற் கடல் சுற்ற, விற் கை வட வரை பாங்கு நிற்ப, / கார்க் கடல் கமலம் பூ” |
 | Kamba Ramayanam | வீடணன் அடைக்கலப் படலம் 143 | “'குகனொடும் ஐவர் ஆனேம் முன்பு; பின், குன்று சூழ்வான் / மகனொடும், அறுவர் ஆனேம்; எம்முழை அன்பின் வந்த / அகன் அமர் காதல் ஐய! நின்னொடும் எழுவர் ஆனேம்; / புகல் அருங் கானம் தந்த” |
 | Divya Prabandham | Periyazhwar Thirumozhi 3.9.10 | kArAr kadalai — Vibhishana surrenders and is given Lanka (commentary cites Yuddha 19.42, 19.7, 112.26). [https://divyaprabandham.koyil.org/index.php/2026/06/periyazhwar-thirumozhi-3-9-10/] |
-| Divya Prabandham (candidate) | Periya Thirumozhi 7.1.5 | villEr nudhal — Commentary cites Yuddha 18.33 (the vow to protect those who surrender) but narrates no episode. [https://divyaprabandham.koyil.org/index.php/2025/09/periya-thirumozhi-7-1-5/] |
 
 Note: In Kamba Rama grants refuge through Sugriva (121) and makes Vibhishana the seventh brother (143); in Valmiki the debate with Sugriva comes first.
 

@@ -4,13 +4,14 @@
 
 `m-airavata` | Murugan's own lore (Kanda Puranam) | 12 songs
 
-The songs say Deivayanai was brought up by Indra's white elephant Airavata.
+The Kanda Puranam says Airavata, the great white elephant, tended Deivayanai as the Milk Ocean tended Lakshmi (Utpatti 1276), and in the Deva Kandam she rides Airavata from Meru to Thiruparankundram to be married to Murugan (v. 45). The songs' 'brought up by Airavata' therefore follows the text.
 
 ## References
 
 | Source | Reference | Note | Status |
 |---|---|---|---|
-| Kanda Puranam |  |  | search result only (tradition) |
+| Kanda Puranam (Kachiyappar), Utpatti Kandam | v. 1276 Airavata tends Deivayanai as the Milk Ocean tended Lakshmi (checked) [https://ta.wikisource.org/wiki/%E0%AE%95%E0%AE%A8%E0%AF%8D%E0%AE%A4_%E0%AE%AA%E0%AF%81%E0%AE%B0%E0%AE%BE%E0%AE%A3%E0%AE%AE%E0%AF%8D] |  | machine-read from Tamil Wikisource (first kandam and the start of the second only) |
+| Kanda Puranam (Kachiyappar), Deva Kandam (Project Madurai text) | v. 45 (Deivayanai leaves Meru on Airavata for Thiruparankundram) [https://projectmadurai.org/pm_etexts/utf8/pmuni0304.html] |  | machine-read from Project Madurai (Unicode text); re-checked on every build |
 
 Assignments start KEYWORD-LEVEL: a song is listed when its English commentary (and, where possible, a Tamil lyric line) matches the story. A story with a 'Hand-read notes' section was then read (in full, or the doubtful part, as that section says) and wrong songs removed; other stories were not. Confidence: **t** = a Tamil lyric line matched and the commentary agrees; **c** = commentary only (no Tamil keyword line found); **low** = commentary did not match, check by reading the song.
 

@@ -15,7 +15,7 @@ Vishnu appears from a pillar as man-lion at dusk and tears open the demon Hirany
 | Divya Prabandham | Periya Thirumozhi 1.10.5 | thUNAy adhanUdu — The Lord came out of the pillar and tore Hiranya's chest; the decad is at Thiruvenkatam (Thirumala). [https://divyaprabandham.koyil.org/index.php/2021/07/periya-thirumozhi-1-10-5/] |
 | Divya Prabandham | Periya Thirumozhi 3.10.4 | OdAdha vAL ariyin — Narasimha opens Hiranya's chest with his nails and shows Prahlada mercy; at Arimeya Vinnagaram, Thirunangur. [https://divyaprabandham.koyil.org/index.php/2022/11/periya-thirumozhi-3-10-4/] |
 | Divya Prabandham | Periya Thirumozhi 3.3.8 | pongi amaril — When Hiranya attacked Prahlada the Lord appeared as Narasimha and tore him; at Thillai Chitrakoodam. [https://divyaprabandham.koyil.org/index.php/2022/07/periya-thirumozhi-3-3-8/] |
-| Divya Prabandham (candidate) | Periya Thirumozhi 7.7.5 | viNdAn viN puga — Search snippet only: Narasimha holds and tears Hiranya's chest. [https://divyaprabandham.koyil.org/index.php/2025/11/periya-thirumozhi-7-7-5/] |
+| Divya Prabandham | Periya Thirumozhi 7.7.5 | விண்டான் விண் புக — Narasimha in the cruel battle holds Hiranya's chest with his nails and tears it open (pasuram opens viNdAn viN puga, page read). [https://divyaprabandham.koyil.org/index.php/2025/11/periya-thirumozhi-7-7-5/] |
 | Divya Prabandham | Nanmugan Thiruvandhadhi 18 | மாறாய தானவனை வள்ளுகிரால் — The demon Hiranya's chest split in two by the sharp nails of the Man-Lion (Narasimha). [https://divyaprabandham.koyil.org/index.php/2018/07/nanmugan-thiruvandhadhi-18/] |
 
 Note: Kamba places the Narasimha story inside the Yuddha Kandam as Vibhishana's warning to Ravana.

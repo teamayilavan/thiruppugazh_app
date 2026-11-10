@@ -13,7 +13,7 @@ Vishnu takes the form of the beautiful woman Mohini; the demons are charmed by h
 | Divya Prabandham | Periya Thirumozhi 3.10.2 | venRi migu naragan — Names the churning of the ocean with the Mandara mountain for the devas; Mohini not mentioned; Arimeya Vinnagaram. [https://divyaprabandham.koyil.org/index.php/2022/11/periya-thirumozhi-3-10-2/] |
 | Divya Prabandham | Thiruchchandha Viruththam (Thirumazhisai Alvar) 81 | kadaindha pARkadal — After Durvasa's curse the gods' wealth went into the milk ocean; the Lord churned it, then reclined there; the Lord stands at Thiruvengadam. [https://divyaprabandham.koyil.org/index.php/2024/01/thiruchchandha-viruththam-81/] |
 | Divya Prabandham | Irandam Thiruvandhadhi (Bhutattalvar) 30 | nIyanRu ulagaLandhAy — Also names the churning of the dark ocean for Lakshmi and the nectar. [https://divyaprabandham.koyil.org/index.php/2017/10/irandam-thiruvandhadhi-30/] |
-| Divya Prabandham (candidate) | Thiruppavai 30 | vangak kadal kadaindha — Opens with 'the Madhava who churned the ocean'; only the title and a search snippet seen. [https://divyaprabandham.koyil.org/index.php/2015/01/thiruppavai-30-vangak-kadal-kadaindha-and-vazhi-thirunamam-etc/] |
+| Divya Prabandham | Thiruppavai 30 | வங்கக் கடல் கடைந்த — Last pasuram of Thiruppavai opens vangak kadal kadaindha mAdhavanai: 'the Madhava who churned the ocean' (page read). [https://divyaprabandham.koyil.org/index.php/2015/01/thiruppavai-30-vangak-kadal-kadaindha-and-vazhi-thirunamam-etc/] |
 
 Note: Nectar given to the gods by Vishnu as Mohini.
 

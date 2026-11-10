@@ -10,10 +10,11 @@ After Lakshmana cuts off Surpanakha's nose and ears, Ravana lures Rama away with
 |---|---|---|
 | Valmiki Ramayana | Aranya 18.21 | Lakshmana cuts off Surpanakha's ears and nose |
 | Valmiki Ramayana | Aranya 49.23 | Ravana carries Sita off through the sky |
-| Kamba Ramayanam | சூர்ப்பணகைப் படலம் (verse not pinned) |  |
-| Kamba Ramayanam | இராவணன் சூழ்ச்சிப் படலம் (verse not pinned) |  |
+| Kamba Ramayanam | சூர்ப்பணகைப் படலம் 116 | “அரிந்தான் என்பதும் உணர்ந்தான்; அவளை, 'நீயார்?' என்றான்.” |
+| Kamba Ramayanam | இராவணன் சூழ்ச்சிப் படலம் 72 | “கீண்டான் நிலம்; யோசனை கிழொடு மேல்.” |
+| Kamba Ramayanam | இராவணன் சூழ்ச்சிப் படலம் 73 | “விண்தான் எழியா எழுவான் விரைவான்.” |
 
-Note: Kamba verses not pinned yet.
+Note: 116: Rama learns that Lakshmana cut off Surpanakha's ears and nose. 72-73: in Kamba Ravana does not touch Sita; he digs up the ground a yojana deep around her hut and rises into the sky with it.
 
 ## Songs
 
