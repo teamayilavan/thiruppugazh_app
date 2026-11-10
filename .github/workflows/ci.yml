@@ -27,3 +27,14 @@ jobs:
 
       - name: Run tests
         run: flutter test
+
+      # Catches Gradle, manifest and Kotlin breakage that analyze and the unit
+      # tests cannot see. The signed release build (code shrinking, lint) is
+      # still done by hand before a release.
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Build debug APK
+        run: flutter build apk --debug

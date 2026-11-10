@@ -82,7 +82,16 @@ void main() {
     service.onMutation();
     expect(buildCalls, 0); // not yet -- still debouncing
 
-    await Future.delayed(const Duration(milliseconds: 60));
+    // Wait for the write instead of guessing how long it takes: a fixed
+    // pause made this flaky on a busy machine.
+    final deadline = DateTime.now().add(const Duration(seconds: 5));
+    while (buildCalls == 0 && DateTime.now().isBefore(deadline)) {
+      await Future.delayed(const Duration(milliseconds: 10));
+    }
+    expect(buildCalls, 1);
+
+    // The three mutations were one burst, so nothing else follows.
+    await Future.delayed(const Duration(milliseconds: 100));
     expect(buildCalls, 1);
 
     service.dispose();
