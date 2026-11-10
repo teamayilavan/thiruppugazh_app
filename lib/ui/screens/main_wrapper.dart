@@ -15,6 +15,8 @@ import '../../data/models/song_model.dart';
 import '../../data/repositories/song_repository.dart';
 import 'song_detail_screen.dart';
 import 'pick_song_screen.dart';
+import '../../services/daily_song_service.dart';
+import '../../services/reminder_notification_service.dart';
 import '../../services/share_intent_service.dart';
 import '../../utils/link_utils.dart';
 import '../../providers/lyrics_language_provider.dart';
@@ -76,6 +78,7 @@ class _MainWrapperState extends State<MainWrapper> {
   late AppLinks _appLinks;
   StreamSubscription<Uri>? _linkSubscription;
   StreamSubscription<String>? _shareSubscription;
+  StreamSubscription<void>? _reminderSubscription;
 
   @override
   void initState() {
@@ -84,6 +87,38 @@ class _MainWrapperState extends State<MainWrapper> {
     _initDeepLinks();
     _initShareIntake();
     _restoreLastSong();
+    _initReminderTaps();
+  }
+
+  /// Tapping the daily reminder opens today's song -- the same pick as the
+  /// Home card -- whether the app was closed, in the background or open.
+  Future<void> _initReminderTaps() async {
+    _reminderSubscription = ReminderNotificationService.taps.listen(
+      (_) => _openTodaysSong(),
+    );
+    if (await ReminderNotificationService.launchedFromReminder()) {
+      await _openTodaysSong();
+    }
+  }
+
+  Future<void> _openTodaysSong() async {
+    if (!mounted) return;
+    final repo = context.read<SongRepository>();
+    try {
+      final count = await repo.getSongsCount();
+      if (count <= 0) return;
+      final song = await repo.getSongByIndex(
+        dailySongIndexForDate(DateTime.now(), count),
+      );
+      if (song == null || !mounted) return;
+      if (_paneActive) {
+        _select(song);
+      } else {
+        (_tabNavigator ?? Navigator.of(context)).push(songRoute(song));
+      }
+    } catch (e, st) {
+      AppLogger.error("Opening today's song failed", error: e, stackTrace: st);
+    }
   }
 
   /// Puts the song read last time into the reading pane, so a tablet doesn't
@@ -173,6 +208,7 @@ class _MainWrapperState extends State<MainWrapper> {
   void dispose() {
     HardwareKeyboard.instance.removeHandler(_handleKey);
     _shareSubscription?.cancel();
+    _reminderSubscription?.cancel();
     _linkSubscription?.cancel();
     super.dispose();
   }

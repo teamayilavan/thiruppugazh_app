@@ -1,3 +1,6 @@
+import 'dart:async';
+import 'dart:io' show Platform;
+
 import 'package:flutter/material.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:flutter_timezone/flutter_timezone.dart';
@@ -24,6 +27,52 @@ class ReminderNotificationService {
   static const int _notificationId = 8000;
 
   bool _pluginInitialized = false;
+
+  static final StreamController<void> _taps =
+      StreamController<void>.broadcast();
+
+  /// Fires when the user taps the daily reminder while the app is running (or
+  /// in the background). A tap that launches the app is reported by
+  /// [launchedFromReminder] instead.
+  static Stream<void> get taps => _taps.stream;
+
+  /// Whether [response] is for the daily reminder. It matches on the
+  /// notification's id, so reminders scheduled by earlier versions (which
+  /// carry no payload) count too.
+  @visibleForTesting
+  static bool isReminderResponse(NotificationResponse? response) =>
+      response != null && response.id == _notificationId;
+
+  @visibleForTesting
+  static void emitTapForTesting() => _taps.add(null);
+
+  static bool _launchChecked = false;
+
+  /// Replaceable in tests, where there is no notification plugin.
+  @visibleForTesting
+  static Future<bool> Function() launchCheck = _launchedFromReminderNative;
+
+  /// True once per run if the app was started by tapping the daily reminder.
+  static Future<bool> launchedFromReminder() => launchCheck();
+
+  static Future<bool> _launchedFromReminderNative() async {
+    if (!Platform.isAndroid || _launchChecked) return false;
+    _launchChecked = true;
+    try {
+      final service = ReminderNotificationService();
+      await service._ensureInitialized();
+      final details = await service._plugin.getNotificationAppLaunchDetails();
+      return details?.didNotificationLaunchApp == true &&
+          isReminderResponse(details?.notificationResponse);
+    } catch (e, st) {
+      AppLogger.error(
+        'Could not read the notification launch details',
+        error: e,
+        stackTrace: st,
+      );
+      return false;
+    }
+  }
 
   /// The device's time zone, so the reminder follows local daylight-saving
   /// changes. Falls back to UTC (the previous behaviour) if the zone can't
@@ -90,7 +139,12 @@ class ReminderNotificationService {
         requestSoundPermission: false,
       ),
     );
-    await _plugin.initialize(settings: initSettings);
+    await _plugin.initialize(
+      settings: initSettings,
+      onDidReceiveNotificationResponse: (response) {
+        if (isReminderResponse(response)) _taps.add(null);
+      },
+    );
     _pluginInitialized = true;
   }
 
@@ -132,7 +186,11 @@ class ReminderNotificationService {
   /// Schedules the reminder to repeat every day at [time]. Cancels any
   /// previous schedule first, so this is safe to call again whenever the
   /// devotee changes the time.
-  Future<void> scheduleDaily(TimeOfDay time, {required String title, required String body}) async {
+  Future<void> scheduleDaily(
+    TimeOfDay time, {
+    required String title,
+    required String body,
+  }) async {
     await _ensureInitialized();
     await cancel();
 

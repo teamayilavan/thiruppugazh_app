@@ -18,6 +18,8 @@ import 'package:thiruppugazh/providers/reading_state_provider.dart';
 import 'package:thiruppugazh/providers/reminder_settings_provider.dart';
 import 'package:thiruppugazh/providers/song_list_provider.dart';
 import 'package:thiruppugazh/providers/theme_provider.dart';
+import 'package:thiruppugazh/services/daily_song_service.dart';
+import 'package:thiruppugazh/services/reminder_notification_service.dart';
 import 'package:thiruppugazh/theme/app_theme.dart';
 import 'package:thiruppugazh/ui/screens/main_wrapper.dart';
 import 'package:thiruppugazh/ui/screens/song_detail_screen.dart';
@@ -329,6 +331,51 @@ void main() {
       await _settle(tester);
 
       // The user never opened it, so rotating doesn't push a page.
+      expect(find.byType(SongDetailScreen), findsNothing);
+    });
+  });
+
+  group('the daily reminder', () {
+    // The same song the Home card shows.
+    String todaysTitle() =>
+        testSongs[dailySongIndexForDate(DateTime.now(), testSongs.length)]
+            .title;
+
+    testWidgets("a tap opens today's song in the reading pane", (tester) async {
+      await _pump(tester, _tabletLandscape);
+      expect(_readerHint(tester), findsOneWidget);
+
+      ReminderNotificationService.emitTapForTesting();
+      await _settle(tester);
+      expect(_heading(todaysTitle()), findsOneWidget);
+    });
+
+    testWidgets("a tap opens today's song as a page on a phone", (
+      tester,
+    ) async {
+      await _pump(tester, _phonePortrait);
+      expect(find.byType(SongDetailScreen), findsNothing);
+
+      ReminderNotificationService.emitTapForTesting();
+      await _settle(tester);
+      expect(find.byType(SongDetailScreen), findsOneWidget);
+      expect(_heading(todaysTitle()), findsOneWidget);
+    });
+
+    testWidgets("starting the app from the reminder opens today's song", (
+      tester,
+    ) async {
+      final original = ReminderNotificationService.launchCheck;
+      ReminderNotificationService.launchCheck = () async => true;
+      addTearDown(() => ReminderNotificationService.launchCheck = original);
+
+      await _pump(tester, _phonePortrait);
+      expect(find.byType(SongDetailScreen), findsOneWidget);
+      expect(_heading(todaysTitle()), findsOneWidget);
+    });
+
+    testWidgets('a normal start does not open a song', (tester) async {
+      await _pump(tester, _phonePortrait);
       expect(find.byType(SongDetailScreen), findsNothing);
     });
   });
