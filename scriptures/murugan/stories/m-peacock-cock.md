@@ -2,7 +2,7 @@
 
 # The peacock and the cock
 
-`m-peacock-cock` | Murugan's own lore (Kanda Puranam) | 56 songs
+`m-peacock-cock` | Murugan's own lore (Kanda Puranam) | 11 songs
 
 The two halves of the split Surapadman became Murugan's vehicle, the peacock, and the cock on his flag.
 
@@ -16,59 +16,11 @@ Assignments are KEYWORD-LEVEL: a song is listed when its English commentary (and
 
 ## Songs
 
-### 48 குடர்நிண மென்பு (திருச்செந்தூர்)
-
-> சரவண கந்த முருகக டம்ப
-> **தனிமயில் கொண்டு ...... பார்சூழ்ந் தவனே**
-> சுடர்படர் குன்று தொளைபட அண்டர்
-
-Commentary: ...and flew around the world! The bright and luminous Mount Krouncha was pierced, and the celestials worshipped as You wielded the Spear from Your matchless reddish hand! Your chariot is nothing but the speediest bird, the Peacock, Oh Warrior! When SUran stood (as a mango tree) in the midst of wavy seas, You became his God of Death! The intestines, fat, bones, urine, faeces spurting blood, nerves, pus and flesh; all these are wrapped within the skin, constituting this small cottage of a body - this piece of w...
-
-Confidence t
-
-### 54 கொலை மதகரி (திருச்செந்தூர்)
-
-> செந்திற் ...... பதிவேலா
-> **விலைநிகர் நுதலிப மயில்குற மகளும்வி**
-> ரும்பிப் ...... புணர்வோனே
-
-Commentary: ...ou in order to firmly place Your hallowed feet in my mind? He took the northern mountain MEru as a bow in His hand; You are the child, with sweet words, of that Lord SivA! By wielding Your spear, You destroyed the demon SUran who stood in the sea; and You are seated in the town of ThiruchchendhUr! These girls have beautiful forehead resembling a bow; they are the peacock-like DEvayAnai, reared by the elephant (AyrAvadham) and VaLLi, the damsel of the KuRavAs, both of whom are Your dear consorts! You mount the emerald-green peacock that displays emblems of victory, Oh KumarA! You are the self-emerging Lord, Oh Great One! The p...
-
-Confidence t
-
-### 59 சேமக் கோமள (திருச்செந்தூர்)
+### 52 கொடியனைய இடை (திருச்செந்தூர்)
 
 > (no Tamil keyword line found; commentary quoted instead)
 
-Commentary: ...th of the body which degenerates due to the mischief played upon it by the five elements, and all the desires to which the human beings are attached. Why is it that some people are slaves to such attachments? The ocean, SUran and Mount MEru were all destroyed when You drove Your Peacock like a chariot; that Peacock has blue neck and holds a very poisonous snake in its legs. You are wearing kadappa flowers symbolizing Your victory. You are the Treasure of ThiruchchendhUr! For those who regularly perform the rites at the sacrificial pyres, UmAdEvi reserves a place in the ...
-
-Confidence c
-
-### 188 மூலம் கிளர் ஓர் (பழநி)
-
-> தோளுந்தலை தூள்பட வேஅவர்
-> **சூளுங்கெட வேல்விடு சேவக ...... மயில்வீரா**
-> காலின்கழ லோசையு நூபுர
-
-Commentary: ...xe, a unique hand-drum, a skull of one of the heads of BrahmA, and Who also wears serpents, elegant studs and large ear-hoops as jewels! Shattering the arms, chest, bow, sword, strong shoulders and the head of the demon SUran, and destroying SUran's vow (that He would never release the celestials from his prisons), You wielded the Spear, Oh valorous Lord mounting the peacock! The thunderous sounds from all kinds of jingling anklets marking Your triumph symbolise the sounds heard at the end of aeons when You dance, Oh Lord! You unabashedly embraced VaLLi, the daughter of the deer that came to the VaLLimalai forest, Oh Master! You ...
-
-Confidence t
-
-### 224 நிலவினிலே (சுவாமிமலை)
-
-> குலைபடு சூர னங்க மழிபட வேலெ றிந்த
-> **குமரக டோர வெங்கண் ...... மயில்வாழ்வே**
-> கொடுமுடி யாய்வ ளர்ந்து புயனிலை போலு யர்ந்த
-
-Commentary: ..., Mount KailAsh, the abode of Lord SivA, the golden Mount MEru, all lives and the five elements were all preceded by the primordial Goddess PArvathi, and You were reared by Her grace, Oh Lord KumarA! The astounded demon SUran was destroyed when Your spear pierced his body, Oh KumarA! You mount with relish the strong and powerful peacock, Oh Lord! The peak of the Mount SwAmimalai is so tall that the clouds hang over it, and You are seated in this place, Oh Great One! The assortment of flowers adorning their dense hair appears as if they have been selectively plucked from the moon; their match...
-
-Confidence t
-
-### 284 பெருக்க உபாயம் (திருத்தணிகை)
-
-> (no Tamil keyword line found; commentary quoted instead)
-
-Commentary: ...ce of the dazzling anklets, Oh Lord! The arrogant Brahma, expert in the four VEdAs, was imprisoned; all the fourteen worlds prospered everyday; the seven seas and the famous seven mountains were shattered; and the demon SUran, who stood in the disguise of a mango tree, was uprooted, falling all alone; when You took the matchless spear in Your hallowed hand and fought, Oh Lord! You mount the exultant peacock, Oh Treasure! You are seated in ThiruththaNigai where the vast and true Knowledge and the three branches of Tamil language flourish, Oh Great One! These whores are filled with detailed and tricky ideas; everyday I have been indulging merrily on their great bo...
+Commentary: ...reddish golden splendour; I have never performed any research of texts; (despite all my shortcomings,) will You not show compassion towards me by granting, with relish, Your twin lotus-feet, Oh Lord! Mounting the unique peacock that splits and casts away the body and torn parts of the serpent, You wielded Your spear that repeatedly split the bodies of the demons who were the enemies of the celestials, killing them on the spot, Oh Lord! He is the Lord with eight Divine Characteristics*, worshipped by the terrestrials and celestials; He is the Primordial Principle; He is without any shape or fo...
 
 Confidence c
 
@@ -76,114 +28,23 @@ Confidence c
 
 > (no Tamil keyword line found; commentary quoted instead)
 
-Commentary: ...dorned with bunches of reddish flowers, bedecked with garlands of blue lily and vetchi flower and wearing the kadappa flower? He became enraged and stood in the disguise of a devious mango tree; You destroyed that demon SUran and took charge of him (by adopting the two portions of his split-body, one, the peacock, as Your vehicle and the other, the rooster, on Your staff); and the golden Krouncha, the mountain of the dynasty of the demons, along with its treachery, was annihilated by Your piercing spear, Oh Lord! The stem of Your valorous staff of Rooster is made of b...
+Commentary: ...blue lily and vetchi flower and wearing the kadappa flower? He became enraged and stood in the disguise of a devious mango tree; You destroyed that demon SUran and took charge of him (by adopting the two portions of his split-body, one, the peacock, as Your vehicle and the other, the rooster, on Your staff); and the golden Krouncha, the mountain of the dynasty of the demons, along with its treachery, was annihilated by Your piercing spear, Oh Lord! The stem of Your valorous staff of Rooster is made of b...
 
 Confidence c
 
-### 341 கொத்தார் பற் கால் (காஞ்சீபுரம்)
+### 359 ஓல மறைகள் (திருவானைக்கா)
 
 > (no Tamil keyword line found; commentary quoted instead)
 
-Commentary: ...; sobbing with the sounds of "a A u u" these relatives walk up to the cremation ground, burn down the corpse, (take a dip in water) and leave that place; will such a silly grief never end? Oh Immortal One, You mount the peacock with a beautiful and broad plume, Oh KumarA belonging to KAnchipuram! As the evil demon SUran ran in defeat and hid in the sea, You charged up to the wide sea and fought with him! On Your shoulders, adorned with the pearl necklace, You happily wear the garland of white kAnthaL flowers without fail. You never age! You are eternally young! Oh my father!...
+Commentary: ...e the greatness of Your lotus feet, Oh Lord!) When will I conquer the lusts, desires and vacillations caused by my sensory organs and have the honour of attaining Your feet? "Oh Youthful Kumara! GuhA! Kandha! Your Spear split the Mount Krouncha! Oh Rider of the Peacock!" So prayed IndrA, the leader of the Celestials, whose sufferings were eradicated by You. Fragrant sandal paste, auspicious and pure turmeric layer, and valiant ornamental shields adorn Your shoulders, Oh majestic lion! You wear the garland of victory at the ...
 
 Confidence c
 
-### 383 பேதக விரோத (திருவருணை)
-
-> தாழ்விலுயி ராகச் ...... சிந்தையாலுன்
-> **தாரைவடி வேலைச் சேவல்தனை யேனற்**
-> சாரல்மற மானைச் ...... சிந்தியேனோ
-
-Commentary: ...to meditate on these? Seated on a central flowery seat, mounted on an elephant* or Your peacock, You come out in procession in the streets of ThiruvaNNAmalai, Oh Lord Kandha! The good old celestials, in whose land lives peacock-like DEvayAnai, reared by the white elephant (AirAvadham), were all released from the prisons of SUran by Your going to war with him, Oh Lord with the Spear! The biggest sinner, SUran, and other demons, with a large battalion of soldiers, were all destroyed in the battle; To save this earth and the celestial world, You showed Your mercy, Oh Lord! Thinking abou...
-
-Confidence t
-
-### 385 உருகும் மாமெழுகாக (திருவருணை)
-
-> நெகிழ நாடிய தோதக மாடியு
-> **முவமை மாமயில் போல்நிற மேனிய ...... ருரையாடுங்**
-> கரவ தாமன மாதர்கள் நீள்வலை
-
-Commentary: ...ahama, who chants the VEdic hymns, and by other celestials; He holds in His hands five* kinds of weapons; He wears the fine garland of ThuLasi on His chest; He is the mystic Lord VishNu, and You are His nephew, Oh Lord! SUran, ThArakan and Singamukan, who considered themselves as the immortal leaders of the demons, were shredded to pieces by Your aggressively fighting bright spear, Oh Lord! You mounted the peacock and went around the seven worlds! Your youthful and dazzling faces on Your great body radiate like millions of suns! You are the child of UmAdEvi embraced by Lord SivA! You are the consummate poet of all arts! This town has beautiful temple towers tall as gol...
-
-Confidence t
-
-### 396 இடருக்கு இடர் (திருவருணை)
-
-> மறவக் குலமாமொரு குறமெய்த் திருமாமகள்
-> **மகிழப் புனமேவிய ...... மயில்வீரா**
-> அடரப் படர்கேதகை மடலிற் றழைசேர்வய
-
-Commentary: ... my suffering, is it fair that my life fades out in solitude upon a decorated floral bed with no one next to me? Will there be no end to my agony of separation? Oh Lord, You wielded Your fiery spear and killed the demon SUran who fought ferociously like the golden mount MEru in the north! You are the valorous one, mounted on the peacock, who went to the millet-field to the delight of VaLLi, the unique damsel of the hunters and who is the renowned daughter of the truthful Goddess Lakshmi! You reside in the streets of ThiruvaNNAmalai surrounded by paddy fields where leafy flowers of thAzhai gr...
-
-Confidence t
-
-### 398 இரத சுரதமுலை (திருவருணை)
+### 489 இணங்கித் தட்பொடு (சிதம்பரம்)
 
 > (no Tamil keyword line found; commentary quoted instead)
 
-Commentary: ...otees to pieces, You annihilated the entire armies of the demons who were evil murderers, Oh Handsome One! You are seated in places like ThiruchchendhUr and nAgamalai known as ThiruchchengkOdu! When the rebellious demon SUran waged a war against You harboring utter enmity against Your hallowed feet filled with compassion, You mounted the peacock petrifying him, Oh KanthA! You are seated in the northern side of the large temple tower of Lord SivA in ThiruvaNNAmalai, Oh Great One with six hallowed faces! Their succulent and enjoyable breasts keep on pressing my chest; beads of sweat appear on their for...
-
-Confidence c
-
-### 421 சிவமாதுடனே (திருவருணை)
-
-> (no Tamil keyword line found; commentary quoted instead)
-
-Commentary: ...nd all the DEvAs, "this younger son of God (Murugan) is that person" as they exclaimed; the VEdAs also said that it was so. In order that I too can play (like You), could You ask SivA to grant me a beautiful spear and a peacock? The entire world screamed that it (SUran's tyranny) was not fair; so You took the fiery spear and beheaded the demons (asuras). The seven seas rose in commotion and the great sages were saved when You threw Your spear! With enchanting beauty like a flower is the damsel of KuRavas, VaLLi; You love he...
-
-Confidence c
-
-### 481 ஆரத்தோடு அணி (சிதம்பரம்)
-
-> (no Tamil keyword line found; commentary quoted instead)
-
-Commentary: ...immersed in a sea of passion, jolting them in that process; these whores are capable of acting like the she-devil, neeli; kindly bless me so that I do not have any passionate relationship with them! You mounted the blue peacock which was like a lion that emerged only to destroy the demon SUran and his clan; the entire sea was filled with dust particles and became dehydrated; the demons on the battlefield bled profusely when You fought the war; and many gangs of devils surrounded and danced to the tune of "thAnath thAnana thAnana thAnana" as You wie...
-
-Confidence c
-
-### 488 சுரும்பு உற்ற (சிதம்பரம்)
-
-> (no Tamil keyword line found; commentary quoted instead)
-
-Commentary: ... which is surrounded by paddy fields filled with sugarcanes! To remove the miseries of those devotees who worship You ardently by offering flowers in an orderly manner, You appear before them mounted on Your comfortable peacock, Oh Lord! When the demon SUran surged forward aggressively, accompanied by his clan, You wielded the Spear and knocked him down, like a child's play, making him roll over the ground, Oh Great One! Because of the cooing of the cuckoos that love to gather in the groves where beetles swarm, b...
-
-Confidence c
-
-### 513 மனமே உனக்குறுதி (சிதம்பரம்)
-
-> வருவா யுரைத்தமொழி ...... தவறாதே
-> **மயில்வாக னக்கடவுள் அடியார் தமக்கரசு**
-> மனமாயை யற்றசுக ...... மதிபாலன்
-
-Commentary: ...ower; You are the Master of that SivA! The Trinity (consisting of BrahmA, Vishnu and SivA) came along by Your side, praising You and showering flowers like rain all the way; You beheaded the entire clan of the old demon SUran, Oh MurugA! Her words are sweet like the molten jaggery and her teeth are like pearls; She looks like the peacock; for that VaLLi, Your heart melts out of love! Oh MurugA! You have Your abode at PuliyUr (Chidhambaram), where the air is thick with the fragrance of Tamil, Oh Great One! Hark, Oh my mind, I shall tell you something which will bolster your confidence. Come cl...
-
-Confidence t
-
-### 531 ஐயுமுறு நோயும் (வள்ளிமலை)
-
-> வெள்ளமுது மாவைப் ...... பொருதோனே
-> **வையமுழு தாளு மையமயில் வீர**
-> வல்லமுரு காமுத் ...... தமிழ்வேளே
-
-Commentary: ...ncarnate! Once, in the grove at VaLLimalai, You embraced VaLLi ardently with Your twelve fair shoulders! To liberate the DEvAs, associated with IndrA who mounts the white elephant AirAvadham, You fought in the seas with SUran who stood resolutely as an old mango tree! You rule the entire world and mount Your Peacock! You are MurugA having an abode at Thiruvallam*! You are the Master of the three branches of Tamil! The creepers that produce the VaLLi roots are aplenty in VaLLimalai** where VaLLi, Your consort lives, Oh Great One! The phlegm, the disesases caused by it, th...
-
-Confidence t
-
-### 545 நீல மயில் சேரும் (பேறைநகர்)
-
-> **நீலமயில் சேரு மந்தி மாலை நிக ராகி யந்த**
-> காரமிக வேநி றைந்த ...... குழலாலும்
-
-Commentary: ...s Lakshmi on His chest; He emerged from the tall pillar of reddish gold in the middle of the hall in the ferocious form of half-man and half-lion (Narasimham); You are the nephew of that VishNu! Mounted elegantly on the peacock with a beautiful plume, You conquered the demon SUran and his clan with the famous spear held in Your hallowed hand, Oh MurugA! All the young female swans gather and play together in this place, PERainagar**, which is Your abode, Oh Great One! By the pitch dark hair whose darkness is comparable to the evening wh...
-
-Confidence t
-
-### 547 அங்கை நீட்டி (திருசிராப்பள்ளி)
-
-> (no Tamil keyword line found; commentary quoted instead)
-
-Commentary: ...abava), they praised Your glory promptly; You are the protector and benefactor of the celestial world! You are the presiding Deity in VayalUr, Oh Lord! With the spear in Your hallowed hand, You conquered the evil demon, SUran; against the background beating of drums made of leather, and the dancing of fiends on the battlefield after devouring the corpses of demons, You come mounted on the peacock, Oh Valorous One! The abundant clouds hover day and night over the reddish golden and beautiful temple towers of this pretty mountainous town ThirichirAppaLLi where You are seated; You are the Lord of the celestials, Oh Great One! They beckon by gesturing wit...
+Commentary: ...about the greatness of their lineage, You wielded the spear that killed them all in the battlefield, Oh Lord! You fought in such a way that many eagles and devils grabbed the corpses and began to pluck and devour; after splitting up the enemies and destroying them, You mounted the grand vehicle, namely, Your mighty peacock, Oh MurugA! Being separated from You, the wise men with their heart filled with love, are yearning to worship Your hallowed feet, adorned with anklets and golden kazhal (another kind of anklet) signifying Your valour, in Perum patRap puliyUr (Chidhambaram) wh...
 
 Confidence c
 
@@ -195,72 +56,11 @@ Commentary: ...l I be able to swim across the vast sea of birth and attain Your 
 
 Confidence c
 
-### 645 மரு அறா வெற்றி (கதிர்காமம்)
-
-> முருகனே பத்த ரருகனே முத்தி
-> **முதல்வனே பச்சை ...... மயில்வீரா**
-> முடுகிமே லிட்ட கொடியசூர் கெட்டு
-
-Commentary: ...ld and ruby, Oh Lord! You have Your abode in this famous place, KadhirgAmam! Oh MurugA! You stay very close to Your devotees! You are the foremost One delivering liberation! You are the valorous One who mounts the green peacock! When the evil demon SUran confronted You swiftly, You wielded Your weapon, the spear, to destroy and kill him, Oh Great One! The fragrance of his flowery arrows still lingers; wielding those triumphant arrows and holding his bow (of sugarcane) in his hand, Manmathan, God of Love, stan...
-
-Confidence t
-
-### 675 புவிபுனல் காலும் (திருவாலங்காடு)
+### 702 விலையறுக்கவும் (மாடம்பாக்கம்)
 
 > (no Tamil keyword line found; commentary quoted instead)
 
-Commentary: ...rd SivA danced His Cosmic Dance; You are His child, oh MurugA! Vishnu, holding Goddess Lakshmi in His heart, praised; and BrahmA, whose four faces point to the four directions, worshipped You daily; when You mounted the Peacock to protect this world and the world of the celestials; You conquered Mount Krouncha and defeated SUran; You attacked the seven seas and the mango tree (in which SUran had disguised himself) by drawing Your sharp Spear and throwing it in the battlefield, Oh Lord Kumara! To the joy of the entire world, You are seated in PazhanaiyUr*** and ThiruvAlankAdu where Yo...
-
-Confidence c
-
-### 677 தவர்வாள் தோமர (திருவோத்தூர்)
-
-> (no Tamil keyword line found; commentary quoted instead)
-
-Commentary: Armed with a bow, sword, mace and trident, he massacred many people - that SUran; the seven oceans that were filled to the brink; and the seven mountains were all burnt like a dry leaf by the bright Spear; the Rooster with legs capable of fighting; the horse-like dancing peacock which is of bluish hue; VaLLi, the deer-like damsel of the foresters, guarding the millet-field and with lips of coral colour; the honey-like sweet damsel of the celestials, the unique one, DEvayAnai, are all keeping nice company with You, Oh Great One, Your ...
-
-Confidence c
-
-### 683 சோதி மாமதி (வடதிருமுல்லைவாயில்)
-
-> (no Tamil keyword line found; commentary quoted instead)
-
-Commentary: ...en a foolish sinner having lost my peace of mind; will I ever reach the righteous path? When the celestials praised You in worship, addressing You as "Oh the Primordial Lord!", You attacked their enemy, namely the demon SUran, and totally smashed him to pieces by angrily mounting the peacock and wielding Your long spear, Oh Lord! He happily went to every town where the shepherds resided, climbed on top of the stone-barrel and reached for the butter kept in the 'uRi' (hanging holder of containers); stealthily picking up that butter, He ate it to H...
-
-Confidence c
-
-### 692 இணையது இலதாம் (திருமயிலை)
-
-> கணகணென வீர தண்டை சரணமதி லேவி ளங்க
-> **கலபமயில் மேலு கந்த ...... குமரேசா**
-> கறுவிவரு சூர னங்க மிருபிளவ தாக விண்டு
-
-Commentary: ...hores; am I to be ensnared in their profession, roaming in a daze and falling into the bottomless pit of lust for them? The anklets of bravery on Your hallowed feet make the sound of "gaNa gaNa" as You happily mount the peacock with beautiful plumes! When the demon SUran charged in the war angrily, You wielded the spear in such a way that his body was split into two and he fell down screaming! On His pretty matted hair, He wears kondRai (Indian laburnum) flower, aRugam (cynodon) grass, crescent moon and river Gangai; He held ...
-
-Confidence t
-
-### 701 தோடு உறும் குழை (மாடம்பாக்கம்)
-
-> (no Tamil keyword line found; commentary quoted instead)
-
-Commentary: ...e VEdAs, seeks You as the Lord who transcends beyond the reach of the matchless delusion and One who gives tranquility! You are the Lord with twelve hallowed shoulders! "Oh valorous One, You destroyed the battling demon SUran with Your bright spear! You mount the great peacock as Your vehicle, Oh KandhA! You are full of miracles! Please teach me!" - so said Lord SivA to whom You preached the meaning of PraNava ManthrA that generates a bliss of knowledge that cannot be created through description by words, Oh Great Master! You have ...
-
-Confidence c
-
-### 712 சீர் உலாவிய (திருப்போரூர்)
-
-> **சீரு லாவிய வோதிம மான மாநடை மாமயில்**
-> சேய சாயல்க லாமதி ...... முகமானார்
-
-Commentary: ... One who came as ThirugnAna Sambandhar and sang many hymns (ThEvAram) describing the scriptures and mythologies for the benefit of all! You are full of compassion, Oh MurugA! You wielded the spear upon the warring demon SUran, causing mud to rise in the sea, Oh mighty King! Oh valorous One, You mount the beautiful peacock! BrahmA, who is seated on the lotus, Lord VishNu and Lord SivA, in the half of whose body UmAdEvi is concorporate, worship this place called ThiruppOrUr,* which is Your abode, Oh Great One! Their beautiful gait is like that of the famous swan; their grand loo...
-
-Confidence t
-
-### 716 நீள் புயல் குழல் (உத்தரமேரூர்)
-
-> (no Tamil keyword line found; commentary quoted instead)
-
-Commentary: ...and rage, those enlightened ones who freely stroll about, and the vEdic experts numbering a thousand and two hundred* have all assembled in UththaramErUr,** which is also Your abode; You skillfully mounted the beautiful peacock with colourful feathers and fought with the demon SUran who came to the war with hostility and shattered him to pieces with Your spear, Oh Lord! You stand loftily as the consort of VaLLi, the daughter born to a deer, Oh Great One! Loving the whores with long hair, dark as the cloud, I became passionately involved ...
+Commentary: ...ds numbering ten and his twenty big shoulders were knocked down simultaneously by an angry and matchless arrow wielded by RAmA; that Lord VishNu's son Manmathan (God of Love) is related to You as a cousin*, Oh Lord! You split the bodies of the demons hauling out their intestines and mounted the peacock, Oh Lord! In the paddy fields of this famous and beautiful town, MAdambakkam**, the kayal fish soar abundantly breaching the banks and jumping over to the sides where pearls from conches are showered brightly; You chose this town as Your abode with relish, Oh...
 
 Confidence c
 
@@ -268,33 +68,23 @@ Confidence c
 
 > (no Tamil keyword line found; commentary quoted instead)
 
-Commentary: ...in Tamil language (denoting Lord SivA) was explained to this poor soul when You preached to me, Oh, Hallowed Seed for Liberation! Getting involved in the aggressive war, Your angry spear severed the indestructible demon SUran and his family, Oh Lord with that mighty weapon! Oh Celestial Carpenter!* You carved out by splitting the mango tree (in which disguise SUran hid himself) the Peacock and the Rooster, Oh Mystical Lord! You prostrated at the feet of VaLLi, the damsel of the KuRavAs, befriended her as though You were the pupil of her eye and went to her place to unite with her in wedlock! In this world with four unvarying cardinal directions...
+Commentary: ..., Hallowed Seed for Liberation! Getting involved in the aggressive war, Your angry spear severed the indestructible demon SUran and his family, Oh Lord with that mighty weapon! Oh Celestial Carpenter!* You carved out by splitting the mango tree (in which disguise SUran hid himself) the Peacock and the Rooster, Oh Mystical Lord! You prostrated at the feet of VaLLi, the damsel of the KuRavAs, befriended her as though You were the pupil of her eye and went to her place to unite with her in wedlock! In this world with four unvarying cardinal directions...
 
 Confidence c
 
-### 773 செக்கர்வானப் பிறை (சீகாழி)
+### 739 சீத மதியம் (திருவாமூர்)
 
 > (no Tamil keyword line found; commentary quoted instead)
 
-Commentary: ... was beyond comprehension; It was the origin of all scriptures, and You, as the Entity of True Knowledge, preached It! Vanquishing the arrogance of Mount Krouncha, You also pierced with Your spear, the body of the demon SUran who assumed the disguise of a mango tree, Oh valorous One, mounted on the horse-like peacock! Oh handsome KumarA! Oh Lord, Your shoulders are adorned with garlands of flowers like blue lily and vetchi! You are seated in Your abode at Kochchai (SeegAzhi*) as the Master of the three branches of Tamil, Oh Great One! Not only because of the crescent moon...
+Commentary: ...ing waves, - all these make the night too long like the doom's day; how can I make the night go away? In the town ThiruvAmUr, made famous by the great lady, Thilakavathi*, You have Your abode, Oh Kumaresa! You mount the Peacock, Oh Lord! You are the greatest treasure found in the thoughts of Your loving devotees! You smack Yaman (God of Death) splitting his back, Oh Great One! The fire emitted by the rays of the cool moon, the bow bent by the fierce God of Love (Manmathan), and the sea throwing out swirling waves, - all these make the night too long like the doom's day; how can I make the night go away? ...
 
 Confidence c
 
-### 915 மேகலை நெகிழ்த்து (வயலூர்)
-
-> வாகையை முடித்துக் காட்டி கானவர் சமர்த்தைக் காட்டி
-> **வாழ்மயில் நடத்திக் காட்டு ...... மிளையோனே**
-> மாமலை வெதுப்பிக் காட்டி தானவர் திறத்தைக் காட்டி
-
-Commentary: ...ow of sugarcane to be his weapon, Oh MurugA of VayalUr!* (Unknown to the hunters) You abducted VaLLi successfully and proved the futility of the watch of the hunters, and drove all over the world Your great vehicle, the peacock (which is the demon SUran restored to righteous life), Oh Young Lord! You scorched the huge mountain Krouncha proving the ineffectiveness of the strength of the demons and protected the heads of the celestials, Oh Great One! They deliberately loosen their golden waist-band (mEkalai); ...
-
-Confidence t
-
-### 934 பரிவுறு நாரற்று (சேலம்)
+### 856 மதியஞ் சத்திரு (திருப்பந்தணை நல்லூர்)
 
 > (no Tamil keyword line found; commentary quoted instead)
 
-Commentary: ...mil language, with its three branches, namely, literature, music and drama. You are the unique son of Lord SivA, in the form of the great effulgence, and You reside in this prosperous place, SElam. The hostile mounts of SUran and he himself, with his entire clan, perished in the war, and mounting Your matchless peacock, You flew around the world! You are the younger brother of Lord Ganapathi, with the spotted face of an elephant. You are full of wonders, Oh Great One! As the moon is radiating fire without any compassion or kindness; as the southerly breeze from Mount Pothig...
+Commentary: ...ts - all prayed, and You blessed them graciously to be prosperous, Oh Lord! When the arrogant demon SUran accosted You with enmity, You scared him and his entire army by wielding the spear that rose like a wild-fire and split the mount Krouncha, Oh Great One! Their face is so beautiful that the moon is put to shame; even the peacock is intimidated (because it suffers in comparison to the elegance of these women); they look like a bunch of parrots; like the celestial damsels MEnakai and Rathi who have a sweet speech, these women walk with a lovely gait, with a waistline like the creeper v...
 
 Confidence c
 
@@ -304,202 +94,14 @@ Confidence c
 > **இணைப்ப தந்தர வேமயில் மீதினில் ...... வரவேணும்**
 > கனத்த செந்தமி ழால்நினை யேதின
 
-Commentary: ...k, to grant me Your two hallowed feet! Choosing rich and lofty words of the beautiful Tamil language, I must think in praise of You daily with Your kind blessings! You must dwell in my thoughts as my soulmate! The demon SUran hid himself (in the disguise of a mango tree) under the sea; his body was split and came up to the surface in two parts; those parts became the unique rooster and peacock; such power was wielded by Your Spear, Oh Lord! BrahmA, who has the swan as vehicle, and Lord Vishnu, who is the consort of Lakshmi seated on the lotus, searched in vain for His feet everywhere; to that Lord SivA You interpreted the meaning of the rare PraNav...
+Commentary: ...tiful Tamil language, I must think in praise of You daily with Your kind blessings! You must dwell in my thoughts as my soulmate! The demon SUran hid himself (in the disguise of a mango tree) under the sea; his body was split and came up to the surface in two parts; those parts became the unique rooster and peacock; such power was wielded by Your Spear, Oh Lord! BrahmA, who has the swan as vehicle, and Lord Vishnu, who is the consort of Lakshmi seated on the lotus, searched in vain for His feet everywhere; to that Lord SivA You interpreted the meaning of the rare PraNav...
 
 Confidence t
 
-### 969 கார் குழல் குலைந்து (ஸ்ரீ புருஷமங்கை)
+### 1284 கருப்பையில் (பொதுப்பாடல்கள்)
 
 > (no Tamil keyword line found; commentary quoted instead)
 
-Commentary: ...onate thoughts; to eradicate my mental agony, kindly come and grant me Your blessings! Oh KanthA, when You come walking, the dainty anklets on Your hallowed feet sway elegantly; as Your symbol, You display the matchless Peacock (* an aspect of SUran) and You hold in Your hand the sharp spear, Oh Lord! You are the son of UmAdEvi, the Goddess of great eminence; You acclaimed as Your staff, the Rooster (which was another aspect of SUran that came* towards You) and were seated in ThiruchchendhUr as its Treas...
+Commentary: ...ayers. You are delighted to appear before Your devotees, support them firmly and accept their devotion! You are the great warrior holding the powerful SakthivEl (Spear) that pierced through Mount Krouncha. You mount the Peacock that sent the whole bunch of snakes into captivity between the split toes of its feet. You are well known for spreading Your rage throughout the battlefield. In the millet field, You took the hand of VaLLi, the damsel of the KuRavAs, in holy matrimony, Oh Great One! I do not want to be battered with an ovum in a womb for anoth...
 
 Confidence c
-
-### 972 கொந்தள வோலை குலு (இலஞ்சி)
-
-> (no Tamil keyword line found; commentary quoted instead)
-
-Commentary: ...he is KALi; and that PArvathi delivered Lord GaNapathi with an elephant-face, and You are His younger brother, Oh Lord! Removing the fear of Indra, Brahma and other celestials, You wielded the Spear to destroy the demon SUran making his life pass out and mounted the great Peacock with relish, Oh Substance of all VEdAs! She lives in a respectable field of millet; She is the damsel who instilled passion in You; She is bestowed with all virtues of Goddess Lakshmi; and You have the distinct honour of being the apt consort of that VaLLi wh...
-
-Confidence c
-
-### 984 வானோர் வழுத்துனது (இராமேசுரம்)
-
-> (no Tamil keyword line found; commentary quoted instead)
-
-Commentary: ... a million copulations with them with uncontrolled passion, playing about in their slushy genitals that look like the hood of a serpent; and why can I not avoid the resultant misery? Winning the celestial land in a war, SUran, the leader of the demons stood out proudly, and You confronted him entering the battlefield and firmly anchored Your two hallowed feet on the ground, Oh Lord! Mounting Your fierce vehicle, the Peacock, You triumphed in the war, Oh Valorous One! You are the consort of VaLLi, the damsel of the KuRavAs! He is the Supreme Primeval Principle; to that Lord SivA, You readily preached the significance of VEdAs and Scriptures, Oh Matchless and Wise One! You are the...
-
-Confidence c
-
-### 988 ஆகத்தே தப்பாமல் (காமத்தூர்)
-
-> (no Tamil keyword line found; commentary quoted instead)
-
-Commentary: ...hould not be left to roast in her own bed like a flower on fire; letting her live, will You not kindly join her so that she could find solace at Your hallowed feet which is the only source of her happiness? Mounting the peacock (IndrA), You fought in the sea chasing away and destroying the demon SUran, Oh valorous One! The rooster crows in the morning letting the sun rise; that rooster, with feathers, adorns Your staff, Oh Lord! She has the maturity to select words of speech, sweet like the molten jaggery; You are delighted with that VaLLi and are in deep ...
-
-Confidence c
-
-### 1005 நெடிய வட (பொதுப்பாடல்கள்)
-
-> (no Tamil keyword line found; commentary quoted instead)
-
-Commentary: The long northern range of mountain (Mount MEru) was shattered; the seven hills (surrounding SUran's country) were smashed to smithreen; the very old leader of the snakes (AdhisEshan) had his closely formed hoods torn to pieces; and the earth shuddered; when Your matchless peacock played around! That peacock, along with Your staff on which is engraved the rooster that crows and spits out the sun* every morning, Your compassion, Your eternal greatness, Your red complexion, Your youth, Your strength, Your two hallowed feet, Your hair ado...
-
-Confidence c
-
-### 1011 உரை தரு பர சமய (பொதுப்பாடல்கள்)
-
-> (no Tamil keyword line found; commentary quoted instead)
-
-Commentary: ...raciously assured them saying "Let your fear end; you do not have to be scared anymore"; the strong demons and their endless armies were dispatched to the land of Yaman (God of Death); the chest of the confronting demon SUran was split open; and in that impact, the wide sea dried up spewing out a lot of dust as You wielded Your triumphant spear, Oh Lord! You mount the peacock having an emerald-green plume, Oh SarvaNA; You are the smartest One! He is capable of reciting the four ancient VEdAs till the very end and He is seated on the fragrant lotus; that Lord BrahmA, the mystic Lord VishNu, who slumbers on the poisonous serpent-bed...
-
-Confidence c
-
-### 1022 முத்து மணிபணி (பொதுப்பாடல்கள்)
-
-> மெத்த அலைகடலும் வாய்விட் டோட
-> **வெற்றி மயில்மிசைகொ டேகிச் சூரர்**
-> மெய்க்கு ளுறஇலகு வேலைப் போகைக் ...... கெறிவோனே
-
-Commentary: ...sang (coming as ThirugnAna Sambandhar) and roamed about to many places of worship like people do customarily on this earth, Oh Lord! As the seas, tossing massive waves, began to scream loudly, You mounted the triumphant peacock and went (to the battlefield) to wield the dazzling spear that pierced the body of the demon SUran, Oh Lord! In victorious wars involving battles with bows, these hunters were dexterous; She lived in their fields where millet seeds were planted and also in Mount VaLLimalai where the bamboos produced nice pearls; She is VaLLi, the peacock-like damsel, and Y...
-
-Confidence t
-
-### 1030 பேரவா அறா (பொதுப்பாடல்கள்)
-
-> (no Tamil keyword line found; commentary quoted instead)
-
-Commentary: ...many diseases. Reading many pompous and vain books that deal with religious bickerings, I, the lowly dog, do not wish to waste my precious life. For that, You have to shower some blessings on me. The lord of all demons, SUrapadman, and his kin had an easy access to You! You mount the peacock! You are Lord KumArA! You are the consort of creeper-like VaLLi, the damsel of the hunter-tribe! You possess extraordinary valour! You show great resolve in displaying Your courage! You are the Lord of all Lords! You are the Greatest One among all the Celesti...
-
-Confidence c
-
-### 1031 காதில் ஓலை (பொதுப்பாடல்கள்)
-
-> (no Tamil keyword line found; commentary quoted instead)
-
-Commentary: ... You loved VaLLi, Your favourite damsel of the KuRavAs, to such an extent that she united with You, Oh Lord with valorous shoulders! You picked up Your bright spear and wielded it in the wavy sea fighting with the demon SUran, hiding there as a mango tree, and with the seven hills which served (as a fortress for SUran), Oh Lord! You mounted the horse-like peacock which danced so fiercely as to shatter the entire armies of the demons, Oh Great One! The eyes, resembling the arrows of Manmathan (God of Love), that reach up to and tear the ears of the whores wearing earstuds, their speech sounding like the music of the yA...
-
-Confidence c
-
-### 1082 கரு மயல் ஏறி (பொதுப்பாடல்கள்)
-
-> கியலிசை பாடத் ...... தரவேணும்
-> **திருமயில் சேர்பொற் புயனென வாழத்**
-> தெரியல னோடப் ...... பொரும்வீரா
-
-Commentary: ...or-step to take my life by throwing the tightly-twisted rope of bondage around my neck, kindly grant me, your devotee who thinks solely of you as refuge, the boon of singing songs in literary and musical Tamil language! SUran was known for his shapely shoulders which were described as the seat of the peacock-like Goddess, Lakshmi; You fought with that enemy, SUran, chasing him away, with his back to the battlefield, Oh valorous One! In this world, several Tamil poems are praiseworthy; You wear garlands of such poems and garlands made of rich scriptures, adorning ...
-
-Confidence t
-
-### 1106 ஞாலமோடு ஒப்ப (பொதுப்பாடல்கள்)
-
-> (no Tamil keyword line found; commentary quoted instead)
-
-Commentary: ...ng (by their own cacophony) the voice of the wise sage-like elders, relegating the true meaning of their advice to the background; I do not wish to be defeated by such fools; Oh Lord with the Spear, You mounted the blue peacock with thick plumes and fought fiercely, felling and destroying the evil demon SUran! Kindly teach me the right material in the scriptures that would enable me to praise Your hallowed feet everyday for a long time with loving devotion and without any fear! Lord VishNu, who slumbers on a ferocious serpent AdhisEshan in the middle of the beauti...
-
-Confidence c
-
-### 1143 எட்டுடன் ஒரு (பொதுப்பாடல்கள்)
-
-> (no Tamil keyword line found; commentary quoted instead)
-
-Commentary: ...ver before stated and which could only be perceived; Stating that It was the only blissful and Cosmic Truth, You graciously preached into His right ear the significance of that ManthrA, Oh Master of Masters! The body of SUran, the leader of the Demons, who fought a meticulous war, was shattered to pieces when You swiftly wielded Your sharp spear; You have such powerful and strong shoulders! Mounting the emerald-green peacock, You dance so beautifully! IndrA, the Leader of the celestials, who wields the weapon vajra, who has the elegant elephant (AirAvadham), the horse (Uchchaisravas) and chariots, owes His status to You, His dear son-in-law! You are also the Lord of the prosperou...
-
-Confidence c
-
-### 1170 நீரும் என்பு (பொதுப்பாடல்கள்)
-
-> (no Tamil keyword line found; commentary quoted instead)
-
-Commentary: ...fate, Yaman (God of Death), mounting his vehicle, buffalo, would come promptly to throw the rope (of attachment) around me, and this body of flesh is bound to perish; will that magic cycle ever end? To prevent the demon SUran from running away abducting the honour of the entire world, You mounted the pretty peacock and wielded Your spear, Oh valorous One! He adorns His shoulders with a garland of bones and His tress with the river Ganga; He dances the cosmic dance; He is the Cosort of PArvathi, the pretty peacock-like Goddess; to that Lord SivA You preached the most sec...
-
-Confidence c
-
-### 1216 ஆலும் மயில் போல் (பொதுப்பாடல்கள்)
-
-> **ஆலுமயில் போலுற்ற தோகையர்க ளேமெத்த**
-> ஆரவட மேலிட்ட ...... முலைமீதே
-
-Commentary: ...with eyes wide like the sea; and You are her Consort, Oh Lord! You are the younger brother of GaNapathi, the Lord with the face of a frenzied elephant! You swiftly wielded the spear aimed at the broad chest of the demon SUran who came to the battlefield valorously, Oh Great One! Women who look like the dancing peacock, wearing pearl necklace on their big bosom, wrapped in appropriate dress, stand at the street-corners; I do not want to speak in the least about these whores; instead, (I wish to speak of) Your spear, Your mounting the beautiful, valorous and blue peacock, Yo...
-
-Confidence t
-
-### 1224 ஏட்டிலே வரை (பொதுப்பாடல்கள்)
-
-> (no Tamil keyword line found; commentary quoted instead)
-
-Commentary: ... of my body? In the Land of the great IndrA, with a thousand eyes, lives DEvayAnai, who was reared by AirAvatham, the white elephant with tusks; she is Your consort. The earth wears the ocean as clothing; in that ocean, SUran created havoc, and You fought with Your Spear with Peacock as Your vehicle. You reside in several mounts* in Kongu NAdu! The hunters living in the mounts hold large bows with taut strings; and You married VaLLi, the damsel of that tribe, who followed their tradition. Fresh flowers are showered daily at Your feet by D...
-
-Confidence c
-
-### 1230 கலைகோட்டு வல்லி (பொதுப்பாடல்கள்)
-
-> திணிகோட்டு வெள்ளி பவனாட்டி லுள்ள
-> **சிறைமீட்ட தில்ல ...... மயில்வீரா**
-> அலைகோட்டு வெள்ள மலைமாக்கள் விள்ள
-
-Commentary: ...ded by the parrot-like damsel, VaLLi; You hankered after her bosom, Oh Young Lord, MurugA! Lord IndrA had the white elephant, AyrAvadham, which had strong ivory tusks; the DEvAs in his celestial land were imprisoned (by SUran); You freed them all, Oh valorous Lord, mounting the peacock of the forest! The huge multitude of mountain-like demons who flooded the seas and mountains were all destroyed; Mount Krouncha and other seven mountains were all knocked down by Your favourite spear, Oh Lord! Those devotees have the ability to worship Your h...
-
-Confidence t
-
-### 1258 நாகாங்க ரோமம் (பொதுப்பாடல்கள்)
-
-> (no Tamil keyword line found; commentary quoted instead)
-
-Commentary: ...ay with the seven mountains (of the demon, SUran) over which the clouds hover! I extol Your exquisite magnanimity in showering the boons sought by anyone who worships You! He screamed non-stop previously, and that demon SUran, endowed with ten attributes, was trounced in the battlefield as You, mounting the peacock, displaying the staff with the emblem of Rooster held in Your hand and showing Your spear to all those spectators of the world, protected the star-filled celestial world of the DEvAs, Oh Great One! Displaying the pubic hair on their genital looking like a ser...
-
-Confidence c
-
-### 1293 நாரியர்கள் ஆசை (பொதுப்பாடல்கள்)
-
-> சூரர்கிளை தூளெழப் ...... பொரும்வேலா
-> **தோகைமயில் வாகனப் ...... பெருமாளே.**
-
-Commentary: ...he rich nectar, sweet as sugar and honey! You are the Causal substance in the entire world, Oh virtuous one! You embraced VaLLi, the damsel of the kuRavAs living in a forest! You fought with the entire clan of the demon SUran and reduced them to ashes, Oh Lord with the Spear! You mount the peacock with a beautiful plume as Your vehicle, Oh Great One! Without thinking about lust for women, I wish to meditate on Your two lotus feet; kindly grant me the blissful experience comparable to the rich nectar, sweet as sugar and honey! You are the Causal substan...
-
-Confidence t
-
-### 1297 பட்டுப் படாத (பொதுப்பாடல்கள்)
-
-> (no Tamil keyword line found; commentary quoted instead)
-
-Commentary: ...s; the rays from the moon scorch me while the moon itself remains bright and cold; and is it fair that I should be subjected to these pangs of separation from You? Your valour is matchless! The hostile and argumentative SUran and his clan were annihilated by You as their God of Death! Your vehicle Peacock's valour is absolutely uncontrollable! None else can ever be Your equal, Oh Great One! Attacking me with His flowery arrows, and at the same time being invisible, Manmathan (Love God) haunts me; the neighbouring women harrass me with their taunts; the rays fr...
-
-Confidence c
-
-### 1303 வாரி மீதே (பொதுப்பாடல்கள்)
-
-> (no Tamil keyword line found; commentary quoted instead)
-
-Commentary: ...shot by Manmathan (Love God), and the scandal mongering by the women of the world make my sinful life (due to separation from You) very miserable. Is this fair? You have the spear that pierced through the broad chest of SUran! You are the Eternal Light! You are the king who mounted the peacock! You married DEvayAnai, who proudly embraced Your chest with passion! You are the Leader of the Trinity and all DEvAs, Oh Great One! The moon rising above the sea, the flowery arrows shot by Manmathan (Love God), and the scandal mongering by the women of the ...
-
-Confidence c
-
-### 1316 துடிகொள் நோய் (பழமுதிர்ச்சோலை)
-
-> தலையின் மூளை நீறு பட்டு
-> **முடிவ தாக ஆடு நிர்த்த ...... மயில்வீரா**
-> முநிவர் தேவர் ஞான முற்ற
-
-Commentary: ...at bridge He went to the enemy's land, destroyed armies of elephants and chariots in the battlefield and killed Ravana, the ten-headed one, with His arrow; He is Rama, and You are His nephew! The menacing demons, namely SUran, Padman, Singamukan and TharakAsuran* were killed, with their brains shattered to pieces, and then Your peacock danced a special dance (called thudi), Oh valorous One! Many sages and celestials attained enlightenment in this impeccable grove at this great mountain (PazhamuthirchOlai**), which is Your abode, Oh MurugA with the Spear! You are the son of ThyAgar (the Sacr...
-
-Confidence t
-
-### 1319 வார்குழையை (பழமுதிர்ச்சோலை)
-
-> (no Tamil keyword line found; commentary quoted instead)
-
-Commentary: ...Mount MEru, and looking like a great golden pot; She has enormous compassion and looks exquisitely beautiful; She wears around her shoulders an ornament called thOrai; She is YOgini, of tremendous adroitness; She is the peacock-like Goddess UmAdEvi; and You are Her son, Oh Lord! You destroyed the entire kith and kin of the demon SUran and took Your seat in Pazhamuthir cOlai holding the spear in Your hand, Oh Great One! (Their eyes are) reaching the long and swinging ear-studs; they are capable of scaring even Manmathan (God of Love); they flirt with Yaman (God of Death), an expert in mysti...
-
-Confidence c
-
-### 1324 தங்க மிகுந்த (புதிய பாடல்கள்)
-
-> கொண்ட வரிந்த விதத்தி னாடர
-> **சங்கி லிகொண்டு பிணித்து மாமயில்**
-> கொஞ்சி மகிழ்ந்த வறட்டு வீணியர் ...... உறவாமோ
-
-Commentary: ...ughty and vain whores be of any good to me? In the milky ocean, that delivered the Moon, there appeared an evil AlakAla poison but that never scared Him in the least; however, that Lord SivA was frightened (by the demon SUran), and as He remained trembling, You mounted the peacock and severed the head of the demon Singamukan, tore off the limbs of the demon ThArakan and wielded the spear that lunged like the saraba, the eight-legged monstrous bird, Oh Great Master! She is the Divine damsel and mother who leads the way towards liberatio...
-
-Confidence t

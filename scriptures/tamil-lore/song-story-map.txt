@@ -1,0 +1,23 @@
+# Song -> story map for Tamil literary lore (generated from the catalogue; keyword-level, not hand-read).
+#   song_id | story slugs | title | confidence per story (t/c/low)
+60 | t-classics | தகரநறை | c
+76 | t-classics | படர்புவியின் மீது | c
+104 | t-classics | அகல்வினை | c
+126 | t-sangam | கடலைச் சிறை | t
+169 | t-patrons | தோகைமயிலே கமல | t
+171 | t-classics | நிகமம் எனில் | c
+175 | t-patrons | பாரியான கொடை | t
+180 | t-agastya | மந்தரமதெனவே | c
+306 | t-patrons | வஞ்சக லோப மூடர் | t
+358 | t-spider-elephant | உரைக் காரிகை | t
+436 | t-patrons | போக கற்ப | t
+451 | t-sangam | இருவினையின் மதி | c
+568 | t-sangam | சீரான கோல கால | c
+619 | t-agastya | மருவுமலர் வாசம் | c
+915 | t-agastya | மேகலை நெகிழ்த்து | c
+935 | t-patrons | சங்குவார் முடி | c
+954 | t-agastya | இலைச்சுருட் கொடு | c
+987 | t-sangam | வழக்குச் சொற்பயில் | c
+992 | t-sangam | போத நிர்க்குண | c
+1081 | t-agastya | மடவியர் எச்சில் | c
+1299 | t-agastya | பிறவியலை | c

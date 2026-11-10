@@ -14,3 +14,4 @@
 - Kanda Puranam verses are not pinned for any story here.
 - Counts for Surasamharam stories are inflated by songs that only list Murugan's deeds in a line; read before relying on them.
 - Already in the Shiva set: Murugan teaches Shiva the Pranava (68 songs) and Murugan born from Shiva's eye (4).
+- Ganesha frightening Valli and the fruit contest moved to `ganesha/`; Agastya and Tamil are also in `tamil-lore/`.

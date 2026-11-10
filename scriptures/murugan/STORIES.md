@@ -2,8 +2,8 @@
 
 # Stories index: Murugan's own lore (Kanda Puranam)
 
-- Stories: **14**
-- Distinct songs assigned: **438**
+- Stories: **12**
+- Distinct songs assigned: **394**
 - Assignments are KEYWORD-LEVEL: a song is listed when its English commentary (and, where possible, a Tamil lyric line) matches the story. They have not been hand-read like `shiva/` and `vishnu/`. Confidence: **t** = a Tamil lyric line matched and the commentary agrees; **c** = commentary only (no Tamil keyword line found); **low** = commentary did not match, check by reading the song.
 
 ## Surasamharam
@@ -11,9 +11,9 @@
 | Story | Songs | Primary refs | File |
 |---|---|---|---|
 | Surapadman as a mango tree split by the Vel | 73 | 1 | [m-mango-sura](stories/m-mango-sura.md) |
-| The Krouncha mountain pierced | 228 | 1 | [m-krouncha](stories/m-krouncha.md) |
+| The Krouncha mountain pierced | 217 | 1 | [m-krouncha](stories/m-krouncha.md) |
 | The sea dried by the Vel | 48 | 1 | [m-sea-dried](stories/m-sea-dried.md) |
-| The peacock and the cock | 56 | 1 | [m-peacock-cock](stories/m-peacock-cock.md) |
+| The peacock and the cock | 11 | 1 | [m-peacock-cock](stories/m-peacock-cock.md) |
 | Tarakasura | 15 | 1 | [m-tarakasura](stories/m-tarakasura.md) |
 | Jayanta, Indra's son, freed from Sura's prison | 1 | 1 | [m-jayanta](stories/m-jayanta.md) |
 
@@ -21,21 +21,19 @@
 
 | Story | Songs | Primary refs | File |
 |---|---|---|---|
-| Brahma imprisoned for failing the Pranava | 23 | 2 | [m-brahma-prison](stories/m-brahma-prison.md) |
+| Brahma imprisoned for failing the Pranava | 22 | 2 | [m-brahma-prison](stories/m-brahma-prison.md) |
 | Murugan teaches Agastya | 7 | 1 | [m-agastya](stories/m-agastya.md) |
 
 ## Birth and childhood
 
 | Story | Songs | Primary refs | File |
 |---|---|---|---|
-| Born in the Saravana lake; the six Krittikas | 19 | 2 | [m-saravana](stories/m-saravana.md) |
+| Born in the Saravana lake; the six Krittikas | 22 | 2 | [m-saravana](stories/m-saravana.md) |
 
 ## Valli and Deivayanai
 
 | Story | Songs | Primary refs | File |
 |---|---|---|---|
 | Murugan woos Valli in disguise | 25 | 1 | [m-valli-disguise](stories/m-valli-disguise.md) |
-| Ganesha as an elephant frightens Valli | 9 | 1 | [m-valli-elephant](stories/m-valli-elephant.md) |
-| Murugan marries Deivayanai, Indra's daughter | 42 | 1 | [m-deivayanai](stories/m-deivayanai.md) |
+| Murugan and Deivayanai, Indra's daughter | 42 | 1 | [m-deivayanai](stories/m-deivayanai.md) |
 | Airavata raises Deivayanai | 22 | 1 | [m-airavata](stories/m-airavata.md) |
-| The fruit contest around the world | 3 | 1 | [m-mango-fruit](stories/m-mango-fruit.md) |

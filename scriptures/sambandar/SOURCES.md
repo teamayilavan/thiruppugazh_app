@@ -11,6 +11,6 @@
 ## Open questions and gaps
 
 - Verse numbers: the Shiva file cites running numbers (764, 846, 855); the page view used here puts the cure at 736-772 and the river test at 813-816. They differ. Pick one scheme before any machine-check.
-- Poompavai (Mylapore) is in the Periya Puranam late in the Sambandar Puranam; the verse range was not pinned. Hymn is believed to be Tevaram 2.47 (from memory).
+- Poompavai (Mylapore) is in the Periya Puranam late in the Sambandar Puranam; the verse range was not pinned. The hymn is Tevaram 2.47 (page opened). Accounts differ on how she died (bones in a pot; a snake-bite in one source).
 - Episodes in the Puranam with NO song found: golden cymbals (Tirukkolakka), the 1000 gold coins at Tiruvavaduthurai, the famine coins at Veezhimizhalai, the Thirumarugal snake-bite, the cure of Kolli Mazhavan's daughter. Not made into stories.
 - Sambandar's name appears in the commentary of ~105 songs; every one of them is in `sam-avatar`. Songs that tell a specific episode are also in that episode's story.

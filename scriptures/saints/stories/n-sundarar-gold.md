@@ -20,6 +20,6 @@ Assignments are KEYWORD-LEVEL: a song is listed when its English commentary (and
 
 > (no Tamil keyword line found; commentary quoted instead)
 
-Commentary: ...with hanging bells that jingle with a loud noise; mounting, in style, that white elephant, AirAvatham, You go about in a procession and later relax peacefully under the shade of the rich and fertile KaRpaga tree; in the golden land of the celestials that has palaces with mountain-like fortress walls and courtyards filled with moonlight, You are reigning with nobility, surrounded by the worshipping DEvAs, Oh Lord with a youthful mien! Appearing in person in VayalUr to grant me You...
+Commentary: ...EvAs, Oh Lord with a youthful mien! Appearing in person in VayalUr to grant me Your vision, You took charge of me graciously, Oh Lord! To elate his matchless lover, Paravai NAcchiyAr of ThiruvArUr, by showering on her a thousand sovereigns of gold, he went to many Saivite shrines* to earn that gold; when that devotee, Sundarar went to those places, singing ThEvAram hymns maintaining rhythmic beats, with a determined perseverance and an effusive mind, he became exhausted due to excessive heat of...
 
 Confidence c

@@ -31,7 +31,7 @@ Confidence c
 
 > (no Tamil keyword line found; commentary quoted instead)
 
-Commentary: ...tly adjust and correctly wear their attire and ornaments embedded with selectively chosen precious gems; they unlock their dark hair and tie it neatly into a tuft; they curl up their coral-like red lips that munch betel leaves along with betel-nuts; with their spear-like eyes, they hustle their suitors inviting them to come closer to them; they dish out delusory passion and corrupt their good sense; these whores hug (their suitors) tightly with their bosom bearing nail-marks; and, ...
+Commentary: ...iests, whose heads were shaven and hearts filled with treachery, were sent to the gallows, with their ribs broken, as You spread the holy ash entering the sacred town, Madhurai; there, You placed, in fire and water, the palm leaves on which the famous hymns (ThEvAram) were scribed, coming as the wise and powerful king of poets (ThirugnAnasambandhar), Oh Lord! On His dense and closely matted hair, He wears the crescent moon; to the elation and appreciation of that Lord SivA, Your father,...
 
 Confidence c
 
@@ -39,7 +39,7 @@ Confidence c
 
 > (no Tamil keyword line found; commentary quoted instead)
 
-Commentary: ...ow on, it is Your turn to look after me graciously. (When ChamaNas tried to cure PANdiyan who was sick), their peacock feather was burnt, their sacred water in the kamaNdalu (kettle-shaped jar) boiled and the asoka tree leaves (used to pacify the patient) were also burnt; and the ChamaNas got scared and were left dumbfounded due to the humiliation they suffered (at the hands of ThirugnAna SambandhAr). When ThirugnAna Sambandhar led the debate, he floated a palm leaf, with words of ...
+Commentary: ...y the patient) were also burnt; and the ChamaNas got scared and were left dumbfounded due to the humiliation they suffered (at the hands of ThirugnAna SambandhAr). When ThirugnAna Sambandhar led the debate, he floated a palm leaf, with words of blessing written on them, on the Vaigai River against the current; the Pandya King also recovered fully from his illness (due to Sambandhar's holy ash); and the devious ChamaNas were sent to the gallows and their bodies pierced! Such was Your v...
 
 Confidence c
 
@@ -47,7 +47,7 @@ Confidence c
 
 > (no Tamil keyword line found; commentary quoted instead)
 
-Commentary: ...not wrap any clothes around their waist (but wore grassy reeds); they were in Madhurai where the language, Tamil, prospered; You went there (as ThirugnAna Sambandhar); (to defeat the ChamaNas in debates) You placed palm-leaves (on which holy poems were scribed) in fire and water and earned fame as the Treasure of Justice! You are seated in the eastern side of the paddy fields where the sEl fish swim in water in abundance, Oh reddish Lord! There was a spider, in deep contemplation o...
+Commentary: ... did not wrap any clothes around their waist (but wore grassy reeds); they were in Madhurai where the language, Tamil, prospered; You went there (as ThirugnAna Sambandhar); (to defeat the ChamaNas in debates) You placed palm-leaves (on which holy poems were scribed) in fire and water and earned fame as the Treasure of Justice! You are seated in the eastern side of the paddy fields where the sEl fish swim in water in abundance, Oh reddish Lord! There was a spider, in deep contemplation o...
 
 Confidence c
 

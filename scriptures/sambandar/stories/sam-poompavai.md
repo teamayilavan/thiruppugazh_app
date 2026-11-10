@@ -11,7 +11,7 @@ At Mylapore the merchant Sivanesar had kept the ashes and bones of his dead daug
 | Source | Reference | Note | Status |
 |---|---|---|---|
 | Periya Puranam, Sambandar Puranam | late in the puranam; verse range not pinned (the page view did not reach it) |  | from memory, not opened |
-| Tevaram, Sambandar, Mylapore pathigam | believed 2.47 (Mattitta Punnai); not opened |  | from memory, not opened |
+| Tevaram 2.47 (Thirumayilai / Mylapore) | the 'Poompavai' pathigam; the page's history note says Sambandar had the pot of bones brought and sang the decad [https://thevaaram.org/thirumurai_1/songview.php?thiru=2&Song_idField=2047&padhi=047] | number confirmed on the opened page; a search snippet recalled '2.61' from memory, which does not match | opened (summary-level) |
 
 Assignments are KEYWORD-LEVEL: a song is listed when its English commentary (and, where possible, a Tamil lyric line) matches the story. They have not been hand-read like `shiva/` and `vishnu/`. Confidence: **t** = a Tamil lyric line matched and the commentary agrees; **c** = commentary only (no Tamil keyword line found); **low** = commentary did not match, check by reading the song.
 

@@ -1,0 +1,11 @@
+# Song -> story map for Ganesha (generated from the catalogue; keyword-level, not hand-read).
+#   song_id | story slugs | title | confidence per story (t/c/low)
+24 | g-valli-elephant | அம்பொத்த விழி | t
+30 | g-race | அனைவரும் மருண்டு | t
+88 | g-scribe | மாய வாடை | t
+146 | g-valli-elephant | குருதி மலசலம் | t
+446 | g-valli-elephant | சரக்கு ஏறி இத்த | c
+532 | g-race | கை ஒத்து வாழும் | c
+715 | g-valli-elephant | தோல் எலும்பு | t
+1016 | g-scribe | குகையில் நவநாதர் | t
+1315 | g-scribe | சீர் சிறக்கும் மேனி | t

@@ -59,7 +59,7 @@ SETS = {
             ("Tiruvilaiyadal Puranam (Paranjothi), padalams 62-63", "prose retelling on Tamil Wikisource, opened in the Shiva pass.", OPENED_EARLIER),
         ],
         open_q=["Verse numbers: the Shiva file cites running numbers (764, 846, 855); the page view used here puts the cure at 736-772 and the river test at 813-816. They differ. Pick one scheme before any machine-check.",
-                "Poompavai (Mylapore) is in the Periya Puranam late in the Sambandar Puranam; the verse range was not pinned. Hymn is believed to be Tevaram 2.47 (from memory).",
+                "Poompavai (Mylapore) is in the Periya Puranam late in the Sambandar Puranam; the verse range was not pinned. The hymn is Tevaram 2.47 (page opened). Accounts differ on how she died (bones in a pot; a snake-bite in one source).",
                 "Episodes in the Puranam with NO song found: golden cymbals (Tirukkolakka), the 1000 gold coins at Tiruvavaduthurai, the famine coins at Veezhimizhalai, the Thirumarugal snake-bite, the cure of Kolli Mazhavan's daughter. Not made into stories.",
                 "Sambandar's name appears in the commentary of ~105 songs; every one of them is in `sam-avatar`. Songs that tell a specific episode are also in that episode's story."]),
     "saints": dict(
@@ -104,7 +104,7 @@ SETS = {
         domains=[("Surasamharam", ["m-mango-sura", "m-krouncha", "m-sea-dried", "m-peacock-cock", "m-tarakasura", "m-jayanta"]),
                  ("Brahma and the sages", ["m-brahma-prison", "m-agastya"]),
                  ("Birth and childhood", ["m-saravana"]),
-                 ("Valli and Deivayanai", ["m-valli-disguise", "m-valli-elephant", "m-deivayanai", "m-airavata", "m-mango-fruit"])],
+                 ("Valli and Deivayanai", ["m-valli-disguise", "m-deivayanai", "m-airavata"])],
         sources=[
             ("Kanda Puranam (Kachiyappa Sivacharyar), six kandams: Utpatti, Asura, Mahendra, Yuddha, Deva, Daksha", "kandam list from web search; episode-to-kandam mapping and padalam numbers not confirmed", SEARCH),
             ("Skanda Purana, Sankara Samhita (source of the Tamil work)", "not opened", MEMORY),
@@ -113,7 +113,23 @@ SETS = {
         open_q=["Which kandam holds the Valli marriage was not confirmed.",
                 "Kanda Puranam verses are not pinned for any story here.",
                 "Counts for Surasamharam stories are inflated by songs that only list Murugan's deeds in a line; read before relying on them.",
-                "Already in the Shiva set: Murugan teaches Shiva the Pranava (68 songs) and Murugan born from Shiva's eye (4)."]),
+                "Already in the Shiva set: Murugan teaches Shiva the Pranava (68 songs) and Murugan born from Shiva's eye (4).",
+                "Ganesha frightening Valli and the fruit contest moved to `ganesha/`; Agastya and Tamil are also in `tamil-lore/`."]),
+    "ganesha": dict(
+        name="Ganesha",
+        intro=("Three Ganesha stories the songs allude to, usually as 'you are the younger brother of Ganapathi': the elephant that frightens Valli, "
+               "the race around the world, and the scribe of the Mahabharata."),
+        domains=[("Ganesha", ["g-valli-elephant", "g-race", "g-scribe"])],
+        sources=[("Mahabharata (frame story), Shiva Purana Kumara Khanda, Tamil tradition", "not opened", MEMORY)],
+        open_q=["The fruit version of the race (Narada's fruit, Pazhani) is in the commentary of only one song (532); song 30 has the race without the fruit, 934 is weaker.",
+                "Not found in the songs: Ganesha and the Kaveri crow, Gajamukhasura, Avvaiyar's Vinayagar Agaval."]),
+    "tamil-lore": dict(
+        name="Tamil literary lore",
+        intro="References to Sangam and classical Tamil tradition: the Madurai Sangam, Agastya, Pari and Kari, and a temple legend of the Chola country.",
+        domains=[("Sangam and classics", ["t-sangam", "t-agastya", "t-patrons", "t-classics"]), ("Temple legend", ["t-spider-elephant"])],
+        sources=[("Tiruvilaiyadal Puranam; Sangam poems; sthala puranams", "not opened this session", MEMORY)],
+        open_q=["Not in the songs: Silappathikaram, Manimekalai, Avvaiyar, Kamban as a character, Kapilar (one passing mention in song 138 among sages).",
+                "Nakkeerar is in `saints/n-nakkeerar`; the Vandi and Vaigai stories in `saints/n-vandi-pittu`."]),
 }
 
 # ---------------------------------------------------------------- the stories
@@ -137,7 +153,7 @@ CATALOGUE = [
              "The songs name the town and the lineage."),
       refs=[R("Periya Puranam, Sambandar Puranam", "vv. 1-26 (page numbering): the town and its twelve names (v. 14), the parents (15-18), the birth (19-26)", "", OPENED, PP_SAM)]),
  dict(slug="sam-milk", set="sambandar", title="Uma feeds the crying child the milk of wisdom", ids=[137,426,641,737,822,837,920,1046,1100,1287],
-      en=r"milk|breast-?fed|breast", ta=r"உமை|உமா|ஞானப்பால்|பாலுண்|அமுதுண்|முலை",
+      en=r"milk|breast-?fed|breast", ta=r"உமைமுலை|முலையின்செழும்பால்|பாலுண்|ஞானப்பால்|பாற்கொடு|பால்குடி|அமுதுண்",
       brief=("As a three-year-old Sambandar was left on the bank of the temple tank while his father bathed, and cried. Shiva and Uma appeared, and Uma gave him milk "
              "of Shiva-wisdom from a golden bowl. The songs say the hymns flowed from that milk."),
       refs=[R("Periya Puranam, Sambandar Puranam", "vv. 59-69 (page numbering); the Shiva pass cites vv. 66 and 68 in running numbers", "", OPENED, PP_SAM),
@@ -170,7 +186,7 @@ CATALOGUE = [
       brief=("At Mylapore the merchant Sivanesar had kept the ashes and bones of his dead daughter Poompavai, hoping for Sambandar. The saint sang a Tevaram hymn "
              "and she rose from the pot as a living girl. The songs say 'brought the skeleton back as a girl'."),
       refs=[R("Periya Puranam, Sambandar Puranam", "late in the puranam; verse range not pinned (the page view did not reach it)", "", MEMORY),
-            R("Tevaram, Sambandar, Mylapore pathigam", "believed 2.47 (Mattitta Punnai); not opened", "", MEMORY)]),
+            R("Tevaram 2.47 (Thirumayilai / Mylapore)", "the 'Poompavai' pathigam; the page's history note says Sambandar had the pot of bones brought and sang the decad", "number confirmed on the opened page; a search snippet recalled '2.61' from memory, which does not match", OPENED, TEV % (2, 2047, 47))]),
  dict(slug="sam-fever", set="sambandar", title="The Pandya's fever and hunchback cured with holy ash", ids=[171,299,527,573,639,666,762,768,789,920,962,1162],
       en=r"fever|hunch|PANdiy|Pandiy|Pandya", ta=r"வெப்பு|கூன்|நீறு|பாண்டிய|நெடுமாற|வெண்பொடி|திருநீ",
       brief=("Under Jain influence the Pandya king (Koon Pandyan, later Nindrasir Nedumaran) fell to a fever after the Jains' fire was turned on him. Queen Mangaiyarkkarasi "
@@ -180,7 +196,7 @@ CATALOGUE = [
             R("Tevaram 3.39.1", "Maninernvizhi", "sung to the frightened queen", OPENED_EARLIER, TEV339),
             R("Tiruvilaiyadal Puranam", "padalam 62", "", OPENED_EARLIER, TVP62)]),
  dict(slug="sam-ordeals", set="sambandar", title="Palm-leaf in the fire and against the Vaigai", ids=[104,149,189,358,542,617,666,920,1098,1270],
-      en=r"palm[- ]?leaf|Vaigai|leaves", ta=r"ஏடு|வைகை|புனல்|எதிரேற|கனல்|தீயிட",
+      en=r"palm[- ]?(leaf|leaves)|Vaigai|Vaihai", ta=r"ஏடு|வைகை|புனல்|எதிரேற|கனல்|தீயிட",
       brief=("The Jains proposed contests: both sides' palm-leaf scriptures were thrown into fire (Sambandar's stayed green), then into the flooded Vaigai (his leaf went upstream "
              "and halted at Tiruvedagam while theirs was swept away)."),
       refs=[R("Periya Puranam, Sambandar Puranam", "fire test vv. 773-796, river test 797-816 (page numbering)", "", OPENED, PP_SAM),
@@ -213,7 +229,7 @@ CATALOGUE = [
       refs=[R("Periya Puranam, Cheraman Perumal Nayanar Puranam", "", "", MEMORY),
             R("Adi Ula (Tirumurai 11)", "", "Cheraman's poem", MEMORY)]),
  dict(slug="n-sundarar-gold", set="saints", title="Sundarar's gold from many shrines", ids=[947],
-      en=r"thousand sovereigns|gold|Tiruvarur|ThiruvArUr", ta=r"பொன்",
+      en=r"thousand sovereigns|earn that gold", ta=r"பொன்",
       brief="Sundarar went to many Shaivite shrines to earn gold for Paravai, exhausted by the walking. Shiva supplied it.",
       refs=[R("Periya Puranam, Sundarar Puranam", "Tiruppukkoliyur / Tirumurugan Poondi episode", "", MEMORY)]),
  dict(slug="n-sundarar-crocodile", set="saints", title="Sundarar calls the crocodile to give back the boy", ids=[1320],
@@ -257,7 +273,7 @@ CATALOGUE = [
       brief="At Kanchi the Goddess is said to have performed thirty-two dharmas (aram) as acts of charity; the songs call her the one who did them.",
       refs=[R("Kanchi tradition", "source text not found", "", MEMORY)]),
  dict(slug="d-pathiri", set="devi", title="Penance at Thiruppathirippuliyur", ids=[745,1162],
-      en=r"pAthiri|Padal|PAdalanagar|ThiruppAthirip|penance", ta=r"பாதிரி|பாடலி|புலியூர்|தவம்",
+      en=r"pAthiri|PAdalanagar|ThiruppAthirip", ta=r"பாதிரி|பாடலி|புலியூர்|தவம்",
       brief="The Goddess performed a penance under the pathiri tree at Thiruppathirippuliyur (Cuddalore) to be one with Shiva; the shrine marks the spot with a bare pedestal.",
       refs=[R("Sthala puranam of Thiruppathirippuliyur", "", "temple websites; also dice game and blindfolded Shiva versions", SEARCH)]),
  dict(slug="d-thiruvathigai", set="devi", title="Abirami at Thiruvathigai, where the cities burn", ids=[292],
@@ -296,11 +312,11 @@ CATALOGUE = [
 
  # ------------------------------------------------------------------ MURUGAN (auto)
  dict(slug="m-mango-sura", set="murugan", title="Surapadman as a mango tree split by the Vel", auto=True,
-      en=r"(SUran|SUrapadman|Surapadman|demon)[^.]{0,200}mango[- ]tree|mango[- ]tree[^.]{0,200}(SUran|Surapadman|demon|split|felled|disguise)|(disguise|form) of (a |an )?(old )?mango", ta=r"மாமரம்|மாவாய்|மாவாகி|மாவடி|மாமுதல்",
+      en=r"(SUran|SUrapadman|Surapadman)[^.]{0,200}mango[- ]tree|mango[- ]tree[^.]{0,200}(SUran|Surapadman|split|felled|disguise)|(disguise|form) of (a |an )?(old )?mango", ta=r"மாமரம்|மாவாய்|மாவாகி|மாவடி|மாமுதல்",
       brief="In the last day of the war Surapadman took the form of a huge mango tree; Murugan's Vel split it in two, and the halves became the peacock and the cock.",
       refs=[R("Kanda Puranam, Yuddha Kandam", "Sura samharam", "kandam unconfirmed", SEARCH)]),
  dict(slug="m-krouncha", set="murugan", title="The Krouncha mountain pierced", auto=True,
-      en=r"Kroun?cha|Kraunch|KrouncA", ta=r"கிர[வௌெ]",
+      en=r"Kroun?cha|Kraunch|KrouncA", excl=r"bird|anRil", ta=r"கிர[வௌெ]",
       brief="Murugan's Vel pierced the Krouncha mountain, the demon Tarakasura's hiding place and stronghold, which crumbled.",
       refs=[R("Kanda Puranam / Skanda Purana", "Taraka and Krouncha episode", "", SEARCH)]),
  dict(slug="m-sea-dried", set="murugan", title="The sea dried by the Vel", auto=True,
@@ -308,7 +324,7 @@ CATALOGUE = [
       brief="Surapadman fled into the sea; Murugan's Vel made the ocean dry up or boil, driving him out.",
       refs=[R("Kanda Puranam, Yuddha Kandam", "", "", SEARCH)]),
  dict(slug="m-peacock-cock", set="murugan", title="The peacock and the cock", auto=True,
-      en=r"(SUran|Surapadman|SUrapadman)[^.]{0,200}(peacock|cock)|(peacock|cock)[^.]{0,120}(SUran|Surapadman)", ta=r"சேவல்|மயில்",
+      en=r"(split|halves|two (parts|pieces))[^.]{0,120}(peacock|cock)|(peacock|cock)[^.]{0,120}(split|halves|two (parts|pieces))|(SUran|Surapadman|SUrapadman)[^.]{0,80}(became|turned into|transformed into|changed into)[^.]{0,40}(peacock|cock)", ta=r"சேவல்|மயில்",
       brief="The two halves of the split Surapadman became Murugan's vehicle, the peacock, and the cock on his flag.",
       refs=[R("Kanda Puranam, Yuddha Kandam", "", "", SEARCH)]),
  dict(slug="m-tarakasura", set="murugan", title="Tarakasura", auto=True,
@@ -320,7 +336,7 @@ CATALOGUE = [
       brief="Indra's son Jayanta fled Surapadman's persecution and was freed from prison by Murugan, who restored the heavens to Indra.",
       refs=[R("Kanda Puranam, Mahendra Kandam / Yuddha Kandam", "", "kandam unconfirmed", SEARCH)]),
  dict(slug="m-brahma-prison", set="murugan", title="Brahma imprisoned for failing the Pranava", auto=True,
-      en=r"BrahmA[^.]{0,60}(imprison|prison|jail|confin)|imprison[^.]{0,40}BrahmA|BrahmA[^.]{0,40}(ashamed|failed to explain)", ta=r"சிறை",
+      en=r"BrahmA[^.]{0,60}(imprison|prison|jail|confin)|imprison[^.]{0,40}BrahmA|BrahmA[^.]{0,40}(ashamed|failed to explain)", excl=r"celestials were once imprisoned|DEvAs were imprisoned", ta=r"சிறை",
       brief="When Brahma could not explain the meaning of Om to Murugan, the boy tapped his head and locked him in prison; Shiva then asked for his release. Related to the Shiva-set story murugan-pranava.",
       refs=[R("Kanda Puranam / Skanda Purana", "Brahma's imprisonment", "", SEARCH),
             R("Shiva set", "shiva/stories/murugan-pranava.md", "Murugan teaches Shiva the Pranava", "local", "")]),
@@ -329,7 +345,7 @@ CATALOGUE = [
       brief="Murugan is said to have taught Agastya the secret of the sage's own wisdom and to have given Tamil to him.",
       refs=[R("Skanda Purana; Tamil tradition", "", "", MEMORY)]),
  dict(slug="m-saravana", set="murugan", title="Born in the Saravana lake; the six Krittikas", auto=True,
-      en=r"(six|6)[^.]{0,40}(KArthigai|Karthigai|Krithika|nymphs|ladies|mothers|damsels|maidens|women)|Saravana (lake|Lake|pond|Poigai|poigai)|SaravaNa (lake|Lake|pond)|(KArthigai|Karthigai) (women|ladies|mothers)",
+      en=r"KAr(th|tth)igai|KArthikai|Karthigai|Karththigai|Krithika|Sa?ravaNa (lake|Lake|pond|Pond|Poigai|poigai)|Saravana (lake|Lake|pond|Pond|Poigai|poigai)",
       ta=r"சரவண|கார்த்திகை|பொய்கை",
       brief="Six sparks from Shiva's eye were carried by Agni and Ganga into the Saravana lake, became six babies, and were nursed by the six Krittika women; Parvati joined them into one child with six faces. Related to the Shiva-set story murugan-skanda-birth.",
       refs=[R("Kanda Puranam, Utpatti Kandam", "", "", SEARCH),
@@ -338,23 +354,49 @@ CATALOGUE = [
       en=r"(old man|aged man|elderly man|old hunter)[^.]{0,200}VaLLi|VaLLi[^.]{0,200}(old man|aged man|elderly man|old hunter)|(Vengai|vEngai|kino tree|neem tree)[^.]{0,200}(VaLLi|disguise)|disguise[^.]{0,120}(Vengai|vEngai|kino|neem)", ta=r"கிழவ|வேடன்|வேங்கை|வேடு|கிழ",
       brief="Murugan came to Valli, the hunter's daughter, in the millet field as a hunter, an old man and a Vengai tree, and won her.",
       refs=[R("Kanda Puranam, Valli Thirumanam", "kandam not confirmed", "", SEARCH)]),
- dict(slug="m-valli-elephant", set="murugan", title="Ganesha as an elephant frightens Valli", ids=[24,146,193,446,465,668,715,832,971],
-      en=r"tusked elephant|elephant", ta=r"யானை|ஆனை|கரி|களிறு|கணபதி|கஜ",
-      brief="To make Valli run into Murugan's arms, Murugan asked his brother Ganesha to appear as a wild elephant; Valli clung to Murugan in fear.",
-      refs=[R("Kanda Puranam, Valli Thirumanam", "", "", SEARCH)]),
- dict(slug="m-deivayanai", set="murugan", title="Murugan marries Deivayanai, Indra's daughter", auto=True,
+ dict(slug="m-deivayanai", set="murugan", title="Murugan and Deivayanai, Indra's daughter", auto=True,
       en=r"(marri|wed|matrimony|nuptial|wedding)[^.]{0,120}(DEvayAnai|DevayAnai|DEvAnai|Deivayanai)|(DEvayAnai|DevayAnai|DEvAnai|Deivayanai)[^.]{0,120}(marri|wed |wedded|matrimony|nuptial)",
       ta=r"தெய்வயானை|தெய்வானை|தேவசேனை|தேவகுஞ்சரி|இந்திரன்மகள|சுரபதிமகள",
-      brief="After the war Indra gave his daughter Deivayanai (Devasena), raised by Airavata, to Murugan; the wedding is at Thiruparankundram.",
+      brief="After the war Indra gave his daughter Deivayanai (Devasena), raised by Airavata, to Murugan; the wedding is at Thiruparankundram. Many songs only name her as his consort beside Valli, so this list is partly epithet-level.",
       refs=[R("Kanda Puranam, Deva Kandam (per general accounts)", "", "", SEARCH)]),
  dict(slug="m-airavata", set="murugan", title="Airavata raises Deivayanai", auto=True,
       en=r"AirAvat|Airavat", ta=r"ஐராவத|வெள்ளையானை",
       brief="Deivayanai was brought up by Indra's white elephant Airavata, which is why songs call Murugan the son-in-law of Indra and Airavata's ward.",
       refs=[R("Kanda Puranam", "", "", SEARCH)]),
- dict(slug="m-mango-fruit", set="murugan", title="The fruit contest around the world", ids=[30,532,934],
-      en=r"fruit|mango|circled|went around|flew around|competition", ta=r"கனி|பழம்|உலகை|மயில்மிசை",
+ dict(slug="g-valli-elephant", set="ganesha", title="Ganesha as an elephant frightens Valli", ids=[24,146,446,715],
+      en=r"tusked elephant|elephant", ta=r"யானை|ஆனை|கரி|களிறு|கணபதி|கஜ",
+      brief="To make Valli run into Murugan's arms, Murugan asked his brother Ganesha to appear as a wild elephant; Valli clung to Murugan in fear.",
+      refs=[R("Kanda Puranam, Valli Thirumanam", "", "", SEARCH)]),
+ dict(slug="g-race", set="ganesha", title="The race around the world; the fruit", ids=[30,532],
+      en=r"flew around|circular orbit|went around|fruit|competition|circled", ta=r"கனி|பழம்|உலகை|வலம்|வலமாய்",
       brief="Narada's fruit of wisdom was to go to the son who circled the world first; Murugan flew round on his peacock, Ganesha went round his parents, and Murugan left for Pazhani in anger.",
       refs=[R("Skanda Purana / Tamil tradition", "", "", MEMORY)]),
+ dict(slug="g-scribe", set="ganesha", title="Ganesha writes the Mahabharata with his broken tusk", ids=[88,1016,1315],
+      en=r"scrib|wrote the MahAbhAratham|BhAratham", ta=r"பாரத|மேரு|மருப்பு|கொம்பு|தந்த",
+      brief="Vyasa dictated the Mahabharata and Ganesha wrote it down on Mount Meru, breaking off his own tusk for a pen when the first one failed.",
+      refs=[R("Mahabharata, Adi Parva frame story (not in the Critical Edition text)", "", "tradition", MEMORY)]),
+ dict(slug="t-sangam", set="tamil-lore", title="Murugan as Rudrasarman at the Madurai Sangam", ids=[126,451,568,987,992],
+      en=r"Rudra|Sangam Poet|plank of (Tamil )?Sangam|forty-nine|Sangam poets", ta=r"சங்கப்பலகை|சங்கம்|உருத்திர|ருத்ர|அகப்பொருள்",
+      brief=("When the Sangam poets of Madurai could not agree on the meaning of Shiva's Iraiyanar Akapporul, the mute boy Rudrasarman, born in a merchant family, "
+             "was brought; he sat on the Sangam plank and the 49 poets' dispute was settled. The songs say Murugan was that boy."),
+      refs=[R("Tiruvilaiyadal Puranam (Paranjothi)", "Sangam sports", "padalam not pinned", MEMORY),
+            R("Iraiyanar Akapporul commentary (Nakkeerar)", "", "tradition", MEMORY)]),
+ dict(slug="t-agastya", set="tamil-lore", title="Agastya of Pothigai and Tamil", ids=[180,619,915,954,1081,1299],
+      en=r"Agasth[^.]{0,80}Tamil|Tamil[^.]{0,80}Agasth|Pothigai|Pothikai", ta=r"அகத்திய|அகத்தி|பொதிய",
+      brief="The sage Agastya of Mount Pothigai, who gave Tamil its grammar, worshipped Murugan in Tamil and was taught the essence of Tamil knowledge by him. Also in `murugan/m-agastya`.",
+      refs=[R("Tamil tradition", "", "", MEMORY)]),
+ dict(slug="t-patrons", set="tamil-lore", title="Pari, Kari and the model donors", ids=[169,175,306,436,935],
+      en=r"PAri|KAri|twenty-one|celebrated philanthropists", ta=r"பாரி|காரி|வள்ளல்",
+      brief="The poet says he wasted his verse comparing miserly patrons with Pari, Kari and the other great donors of the Sangam age. The names are used as models of generosity.",
+      refs=[R("Sangam poems (Purananuru)", "Pari, Kari and the seven last great donors", "", MEMORY)]),
+ dict(slug="t-classics", set="tamil-lore", title="The Tamil classics named in the songs", ids=[60,76,104,171],
+      en=r"Sangam|[Tt]hirukkural|ThirukkuRaL|ThiruvaLLuvar", ta=r"குறள்|திருக்குறள்|சங்கம்|முத்தமிழ்",
+      brief="Songs where the poet lists the Tamil classics (Tirukkural, Sangam literature) that false scholars claim to know. A reference list, not a story.",
+      refs=[R("Tirukkural; Sangam literature", "", "", MEMORY)]),
+ dict(slug="t-spider-elephant", set="tamil-lore", title="The spider and the elephant at Thiruvanaikka", ids=[358],
+      en=r"spider", ta=r"சிலந்தி|நூல்|ஆனை|யானை",
+      brief="Two Shiva attendants, cursed to be an elephant and a spider, worshipped the lingam at Thiruvanaikka; they fought and died, and the spider was reborn as the Chola king Kochchengat.",
+      refs=[R("Thiruvanaikka sthala puranam", "", "temple pages; Kochengat Chola is also a Nayanar in the Periya Puranam", SEARCH)]),
 ]
 
 # ---------------------------------------------------------------- generator
@@ -390,8 +432,17 @@ def build():
     warnings = []
     for st in CATALOGUE:
         enrx = re.compile(st["en"], re.I)
+        exrx = re.compile(st["excl"], re.I) if st.get("excl") else None
+
+        def matches(txt):
+            """True if the story pattern matches somewhere whose 100-char neighbourhood does not match `excl`."""
+            for m in enrx.finditer(txt):
+                if not exrx or not exrx.search(txt[max(0, m.start() - 100): m.end() + 100]):
+                    return True
+            return False
+
         if st.get("auto"):
-            ids = [i for i, s in songs.items() if enrx.search(" ".join(s["en"]).replace("\n", " "))]
+            ids = [i for i, s in songs.items() if matches(" ".join(s["en"]).replace("\n", " "))]
         else:
             ids = st["ids"]
         recs = []
@@ -400,7 +451,7 @@ def build():
                 warnings.append(f"{st['slug']}: song {i} not in DB"); continue
             s = songs[i]
             blob = " ".join(s["en"]).replace("\n", " ")
-            en_ok = bool(enrx.search(blob))
+            en_ok = matches(blob)
             quote = None
             rx = re.compile(st["ta"]) if st.get("ta") else None
             if rx:

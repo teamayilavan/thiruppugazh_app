@@ -19,13 +19,11 @@ Assignments are KEYWORD-LEVEL: a song is listed when its English commentary (and
 
 ### 137 கலவியி லிச்சி (பழநி)
 
-> பயில்தரு வெற்புத் தருஞ்செ ழுங்கொடி
-> **பணைமுலை மெத்தப் பொதிந்து பண்புறு ...... கின்றபாலைப்**
-> பலதிசை மெச்சத் தெரிந்த செந்தமிழ்
+> (no Tamil keyword line found; commentary quoted instead)
 
 Commentary: These whores are deeply interested in carnal pleasure, standing (at their door-step) to sell their two huge breasts for a price; doting on them so much that their kayal-like eyes turn red, seeking the pleasure of their company, frequently imbibing from their lips that look like kovvai fruit, losing self-control due to such indulgence, engaging in provocative acts that enh...
 
-Confidence t
+Confidence c
 
 ### 426 தமரம் குரங்களும் (திருவருணை)
 
@@ -47,43 +45,35 @@ Confidence c
 
 ### 737 பரவுவரிக் கயல் (திருவதிகை)
 
-> பவளநிறத் ததரம்விளைத் ...... தமுதூறல்
-> **பருகிநிறத் தரளமணிக் களபமுலைக் குவடசையப்**
-> படைமதனக் கலையடவிப் ...... பொதுமாதர்
+> (no Tamil keyword line found; commentary quoted instead)
 
 Commentary: ... by swiftly wielding His arrow; You are the nephew of that RAmA (Lord VishNu), Oh Lord KumarA! She is Goddess PArvathi, concorporate on the left side of Lord SivA, who belongs to Mount KailAsh; She willingly considered (breast-feeding You) and blessed You with the ability to compose many a song as the famous poet, ThirugnAna Sambandhar! Reaching up to the top of dense kamuku (betelnut) trees, knocking down bunches of many plantains and creating waves among the crops of paddy in the...
 
-Confidence t
+Confidence c
 
 ### 822 பாலோ தேனோ பலவுறு (திருவாரூர்)
 
-> ஓதார் சீராள் கதிர்மதி குலவிய
-> **தோடாள் கோடா ரிணைமுலை குமரிமுன் ...... அருள்பாலா**
-> தூயா ராயார் இதுசுக சிவபத
+> (no Tamil keyword line found; commentary quoted instead)
 
 Commentary: "Is it milk, honey or a slice of the sweet jack fruit? Is it the nectar of the celestials or jaggery made from sugarcane juice? Or is it the Divine milk breastfed by UmAdEvi to Her child ThirugnAna Sambandhar who sang the heartrending Divine Hymns (ThEvAram)? What else c...
 
-Confidence t
+Confidence c
 
 ### 837 சுருதியாய் (திருக்குடவாயில்)
 
-> கவுணி யோர்குல வேதிய னாயுமை ...... கனபாரக்
-> **களப பூண்முலை யூறிய பாலுணு**
-> மதலை யாய்மிகு பாடலின் மீறிய
+> (no Tamil keyword line found; commentary quoted instead)
 
 Commentary: ...tly concealed** so that no one could see them, and You came as the prince (in SeegAzhi) taking birth as a brahmin in the KauNiya lineage; You became the distinguished child (ThirugnAna SambandhAr) who imbibed the divine milk from the heavy, sandal-paste-smeared bosom of Mother PArvathi; You were the prolific poet who sang great songs (ThEvAram) and were performing many a miracle; at that time, the confronting ChamaNas (who challenged You for a debate were defeated and) sent to ga...
 
-Confidence t
+Confidence c
 
 ### 920 காலன் வேல் கணை (பூவாளூர்)
 
-> மாலை மூட்டிகள் வானூ டேநிமிர்
-> **ஆனை போற்பொர நேரே போர்முலை**
-> மார்பு காட்டிகள் நானா பேதக ...... மெனமாயா
+> (no Tamil keyword line found; commentary quoted instead)
 
 Commentary: ...thout discrimination; they are like witches serving as receptacles for carnal pleasure; they are mystical figures hankering after money; they provoke excessive and delusory passion; they display in a vulgar manner their breasts that look like combative elephants facing the sky and ready to charge forward; is it worth my while to spend precious time with such distractive whores capable of performing multifarious feats of magic? Will there be a day when You will kindly invite me and ...
 
-Confidence t
+Confidence c
 
 ### 1046 அயிலின் வாளி (பொதுப்பாடல்கள்)
 

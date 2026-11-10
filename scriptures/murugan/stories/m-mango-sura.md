@@ -36,7 +36,7 @@ Confidence c
 
 > (no Tamil keyword line found; commentary quoted instead)
 
-Commentary: ...arily discharged on my bed. I was dying. For me, the right path towards salvation is the expansive bright light, beyond description for the Scriptures, emanating from Your Lotus-Feet, which You must kindly grant me. The demons (asuras), who were murderers, were destroyed; the big ocean dried up as a little pond; and the old mango tree (in which disguise was SUran) was hit and split into two; when You threw the burning Spear with a firm grip. You happily reside on the shore of ThiruchchendhUr, Oh KumarA, Lord SivA, with everlasting pure form, was taught by You the meaning of OM, which is be...
+Commentary: ...light, beyond description for the Scriptures, emanating from Your Lotus-Feet, which You must kindly grant me. The demons (asuras), who were murderers, were destroyed; the big ocean dried up as a little pond; and the old mango tree (in which disguise was SUran) was hit and split into two; when You threw the burning Spear with a firm grip. You happily reside on the shore of ThiruchchendhUr, Oh KumarA, Lord SivA, with everlasting pure form, was taught by You the meaning of OM, which is beyond everything. But You are so easy to reach fo...
 
 Confidence c
 
@@ -46,7 +46,7 @@ Confidence c
 > **ஆர்கலி யூடெ ழுந்து மாவடி வாகி நின்ற**
 > சூரனை மாள வென்று வானுல காளு மண்ட
 
-Commentary: ...e greatness of the ManthrAs, the essence of the VEdAs, and the VEdAs themselves; He excelled in love and remained an embodiment of Total Knowledge; He is none other than You coming as ThirugnAna Sambandhar, Oh Lord! The demon SUran took the disguise of a mango tree and stood amidst the sea; one day, You conquered and killed him, thereby eradicating the major misery suffered by the DEvAs who ruled the celestial land; thus in aiding the celestials, You were elated, Oh Lord MurugA! When the elephant (GajEndran) screamed fo...
+Commentary: ...tness of the ManthrAs, the essence of the VEdAs, and the VEdAs themselves; He excelled in love and remained an embodiment of Total Knowledge; He is none other than You coming as ThirugnAna Sambandhar, Oh Lord! The demon SUran took the disguise of a mango tree and stood amidst the sea; one day, You conquered and killed him, thereby eradicating the major misery suffered by the DEvAs who ruled the celestial land; thus in aiding the celestials, You were elated, Oh Lord MurugA! When the elephant (GajEndran) screamed fo...
 
 Confidence t
 
@@ -62,7 +62,7 @@ Confidence c
 
 > (no Tamil keyword line found; commentary quoted instead)
 
-Commentary: ...aist. In order to grab the money of their suitors, they get in their way using many a tactic and copulate with them. Will it do me any good to have a liaison with such treacherous whores who feign so many acts? When the demon SUran took the disguise of a mango tree in the sea and began to accost You, his body was severed and destroyed by the spear in Your hand, that proffered his fleshy intestines to elate and satiate the fire** on Your staff, Oh Lord GuhA! In the great mountain at KadhirgAmam, in Pazhani, in Thanicchay...
+Commentary: ...In order to grab the money of their suitors, they get in their way using many a tactic and copulate with them. Will it do me any good to have a liaison with such treacherous whores who feign so many acts? When the demon SUran took the disguise of a mango tree in the sea and began to accost You, his body was severed and destroyed by the spear in Your hand, that proffered his fleshy intestines to elate and satiate the fire** on Your staff, Oh Lord GuhA! In the great mountain at KadhirgAmam, in Pazhani, in Thanicchay...
 
 Confidence c
 
@@ -78,7 +78,7 @@ Confidence c
 
 > (no Tamil keyword line found; commentary quoted instead)
 
-Commentary: ...radiance of the dazzling anklets, Oh Lord! The arrogant Brahma, expert in the four VEdAs, was imprisoned; all the fourteen worlds prospered everyday; the seven seas and the famous seven mountains were shattered; and the demon SUran, who stood in the disguise of a mango tree, was uprooted, falling all alone; when You took the matchless spear in Your hallowed hand and fought, Oh Lord! You mount the exultant peacock, Oh Treasure! You are seated in ThiruththaNigai where the vast and true Knowledge and the three branches of Tamil lan...
+Commentary: ...ce of the dazzling anklets, Oh Lord! The arrogant Brahma, expert in the four VEdAs, was imprisoned; all the fourteen worlds prospered everyday; the seven seas and the famous seven mountains were shattered; and the demon SUran, who stood in the disguise of a mango tree, was uprooted, falling all alone; when You took the matchless spear in Your hallowed hand and fought, Oh Lord! You mount the exultant peacock, Oh Treasure! You are seated in ThiruththaNigai where the vast and true Knowledge and the three branches of Tamil lan...
 
 Confidence c
 
@@ -86,7 +86,7 @@ Confidence c
 
 > (no Tamil keyword line found; commentary quoted instead)
 
-Commentary: ...ke golden pillars, decorated with vetchi garland and by a bunch of weapons like Your celebrated and triumphant sword; You have the lotus-like hand that held the reddish and powerful spear which annihilated with rage the demon SUran hiding in the sea, lurking with a treacherous motive, in the disguise of a unique mango tree; Oh KumarA!" - so saying, people worship You, singing poems about Your glory, and immerse themselves in those songs with full understanding of their meaning; Yet, the same people of this earth, out of sheer ignorance, approach (rich) persons, speaking to them...
+Commentary: ...den pillars, decorated with vetchi garland and by a bunch of weapons like Your celebrated and triumphant sword; You have the lotus-like hand that held the reddish and powerful spear which annihilated with rage the demon SUran hiding in the sea, lurking with a treacherous motive, in the disguise of a unique mango tree; Oh KumarA!" - so saying, people worship You, singing poems about Your glory, and immerse themselves in those songs with full understanding of their meaning; Yet, the same people of this earth, out of sheer ignorance, approach (rich) persons, speaking to them...
 
 Confidence c
 
@@ -102,7 +102,7 @@ Confidence c
 
 > (no Tamil keyword line found; commentary quoted instead)
 
-Commentary: ... seven hills (that stood guard for him) by smashing them to pieces; You devastated him and wreaked havoc on the sea with circular waves by shrinking it; after ranting and raving on the ground with an intent to kill, the demon SUran hid (in the sea) in the disguise of a mango tree, bearing the weight of his anger and shame in his heart; You fought with him and wielded Your spear to destroy him, Oh Lord! In order to unite with VaLLi, the beautiful damsel of the KuRavAs, in the millet field, you praised her with enticing words and then m...
+Commentary: ... hills (that stood guard for him) by smashing them to pieces; You devastated him and wreaked havoc on the sea with circular waves by shrinking it; after ranting and raving on the ground with an intent to kill, the demon SUran hid (in the sea) in the disguise of a mango tree, bearing the weight of his anger and shame in his heart; You fought with him and wielded Your spear to destroy him, Oh Lord! In order to unite with VaLLi, the beautiful damsel of the KuRavAs, in the millet field, you praised her with enticing words and then m...
 
 Confidence c
 
@@ -118,7 +118,7 @@ Confidence c
 
 > (no Tamil keyword line found; commentary quoted instead)
 
-Commentary: ...h life and) die repeatedly and take many births again and again. (For that) I have to keep on meditating on Your name; kindly bless me with Your cool and hallowed feet adorned with reddish vetchi flowers! You chased the demon SUran, followed him right into the sea where he disguised himself as a mango tree; and You startled him with Your mighty fighting, Oh Lord with the spear! You are the beloved consort of DEvayAnai, the parrot of the celestial land, who is spotlessly pure, full of love and is blessed with beautiful bosom! You attacked and pierced the huge mo...
+Commentary: ... and) die repeatedly and take many births again and again. (For that) I have to keep on meditating on Your name; kindly bless me with Your cool and hallowed feet adorned with reddish vetchi flowers! You chased the demon SUran, followed him right into the sea where he disguised himself as a mango tree; and You startled him with Your mighty fighting, Oh Lord with the spear! You are the beloved consort of DEvayAnai, the parrot of the celestial land, who is spotlessly pure, full of love and is blessed with beautiful bosom! You attacked and pierced the huge mo...
 
 Confidence c
 
@@ -126,7 +126,7 @@ Confidence c
 
 > (no Tamil keyword line found; commentary quoted instead)
 
-Commentary: ...ham, and to the elephant (VishNu*) who had become feeble (through long penance), Oh Lord! You offered flowers, in worship**, to the parrot-like, prattling, damsel, VaLLi, and offered her Your garland of Vetchi! When the demon SUran assumed the disguise of a mango tree and stood in the roaring sea in a dangerous spot, You wielded on him Your SakthivEl (Powerful Spear); You hold in Your hand that Powerful Spear granted to You by Mother PArvathi, the symbol of chastity, and have chosen KAnchipuram as Your abode, Oh Handsome a...
+Commentary: ...nd to the elephant (VishNu*) who had become feeble (through long penance), Oh Lord! You offered flowers, in worship**, to the parrot-like, prattling, damsel, VaLLi, and offered her Your garland of Vetchi! When the demon SUran assumed the disguise of a mango tree and stood in the roaring sea in a dangerous spot, You wielded on him Your SakthivEl (Powerful Spear); You hold in Your hand that Powerful Spear granted to You by Mother PArvathi, the symbol of chastity, and have chosen KAnchipuram as Your abode, Oh Handsome a...
 
 Confidence c
 
@@ -134,7 +134,7 @@ Confidence c
 
 > (no Tamil keyword line found; commentary quoted instead)
 
-Commentary: ...be fortunate to acquire the ability to cogently recite immaculate Tamil poems at will, leading to my liberation! He dared to engage in combat at many places here and there; he confronted You at a close range; he was the demon SUran who wielded several weapons and fought vigorously; unable to hold on to his weakening body, he abandoned the weapons, hid under the sea out of fear and assumed the disguise of a mango tree; all his valour, along with arrogance, stood there falteringly in a totter while his eyes and other sensory organs were devastated; only (by reflex) his hands were clapping loudly and the body shook for a few split seconds when the powerful spear (SakthivEl) ...
+Commentary: ...tunate to acquire the ability to cogently recite immaculate Tamil poems at will, leading to my liberation! He dared to engage in combat at many places here and there; he confronted You at a close range; he was the demon SUran who wielded several weapons and fought vigorously; unable to hold on to his weakening body, he abandoned the weapons, hid under the sea out of fear and assumed the disguise of a mango tree; all his valour, along with arrogance, stood there falteringly in a totter while his eyes and other sensory organs were devastated; only (by reflex) his hands were clapping loudly and the body shook for a few split seconds when the powerful spear (SakthivEl) ...
 
 Confidence c
 
@@ -158,7 +158,7 @@ Confidence c
 
 > (no Tamil keyword line found; commentary quoted instead)
 
-Commentary: ... bosom covered by beautiful blouse and pearl strings, I do not want to roam about bent on engaging in sinful activities; for that, kindly grant me a mind full of devotion that will enable me to sing Your glory! When the demon SUran came in the disguise of a mango tree, Your battling spear pierced through it, condemning and destroying him altogether, Oh Lord! You are the beloved consort of DEvayAnai, the matchless, parrot-like damsel of the celestial land full of rubies and other gems! You hold in Your elegant hand the staf...
+Commentary: ... covered by beautiful blouse and pearl strings, I do not want to roam about bent on engaging in sinful activities; for that, kindly grant me a mind full of devotion that will enable me to sing Your glory! When the demon SUran came in the disguise of a mango tree, Your battling spear pierced through it, condemning and destroying him altogether, Oh Lord! You are the beloved consort of DEvayAnai, the matchless, parrot-like damsel of the celestial land full of rubies and other gems! You hold in Your elegant hand the staf...
 
 Confidence c
 
@@ -166,7 +166,7 @@ Confidence c
 
 > (no Tamil keyword line found; commentary quoted instead)
 
-Commentary: ...y be placed; will You not show me even the slightest consideration for that? With Your spear, possessing extraordinary strength and sparkling like lightning, the matchless Mount Krouncha was crushed into powder; and the demon, SUran, who took the disguise of a mango tree, was conquered by You, Oh Lord! You have twelve strong shoulders! Your hallowed chest is adorned with the garland of vetchi flowers! In order to embrace the shoulders of EgAmbarEswar (SivA), adorned with serpents, She, the Divine Mother (KAmakshi) of great ch...
+Commentary: ...aced; will You not show me even the slightest consideration for that? With Your spear, possessing extraordinary strength and sparkling like lightning, the matchless Mount Krouncha was crushed into powder; and the demon, SUran, who took the disguise of a mango tree, was conquered by You, Oh Lord! You have twelve strong shoulders! Your hallowed chest is adorned with the garland of vetchi flowers! In order to embrace the shoulders of EgAmbarEswar (SivA), adorned with serpents, She, the Divine Mother (KAmakshi) of great ch...
 
 Confidence c
 
@@ -174,7 +174,7 @@ Confidence c
 
 > (no Tamil keyword line found; commentary quoted instead)
 
-Commentary: ...gant ones, suffering due to my attachment to them. Ending such blemish, please bestow on me Your grace so that I can attain the blissful heaven! With a unique spear, You pierced the large mount of Krouncha; and also the demons and, SUran in the disguise of a mango tree, along with the seas roaring with waves, were all shattered to pieces when You fought with them with Your lotus-like hand, Oh warrior! Great sages, the Celestials living in heaven and Your devotees who prostrate at Your feet with devotion are all privileged t...
+Commentary: ...uffering due to my attachment to them. Ending such blemish, please bestow on me Your grace so that I can attain the blissful heaven! With a unique spear, You pierced the large mount of Krouncha; and also the demons and, SUran in the disguise of a mango tree, along with the seas roaring with waves, were all shattered to pieces when You fought with them with Your lotus-like hand, Oh warrior! Great sages, the Celestials living in heaven and Your devotees who prostrate at Your feet with devotion are all privileged t...
 
 Confidence c
 
@@ -182,7 +182,7 @@ Confidence c
 
 > (no Tamil keyword line found; commentary quoted instead)
 
-Commentary: ...onately uttered to me in ThiruvaNNAmalai; nor will I ever forget Your two hallowed feet, Oh Lord! Indra, the leader of the DEvAs of the celestial world, praised You; the seven hills (that were like a fortress around the demon SUran) along with Mount ChakravALa were trampled; the famous golden mountain MEru in the north was completely shattered; SUran, in the disguise of an old mango tree, screamed uncontrollably and was torn to pieces amidst the whirls in the sea; the demons who created much menace were shattered to pieces as You mounted the greenish horse, namely, Your Peacock, Oh Lord! You are the favourite child of Goddess PArvathi, the pe...
+Commentary: ...y uttered to me in ThiruvaNNAmalai; nor will I ever forget Your two hallowed feet, Oh Lord! Indra, the leader of the DEvAs of the celestial world, praised You; the seven hills (that were like a fortress around the demon SUran) along with Mount ChakravALa were trampled; the famous golden mountain MEru in the north was completely shattered; SUran, in the disguise of an old mango tree, screamed uncontrollably and was torn to pieces amidst the whirls in the sea; the demons who created much menace were shattered to pieces as You mounted the greenish horse, namely, Your Peacock, Oh Lord! You are the favourite child of Goddess PArvathi, the pe...
 
 Confidence c
 
@@ -198,7 +198,7 @@ Confidence c
 
 > (no Tamil keyword line found; commentary quoted instead)
 
-Commentary: ... where I was ready to cry; I sought to create gold through mystic alchemy and in that process roamed about aimlessly; please understand my misery a little and show the compassion and grace to remove my wretchedness. The demon SUran, who hid in the wavy sea disguised as a mango tree, was split apart; the rare mount, Krouncha, was shattered to pieces; then You entered the celestial land to hold the hands of the great damsel, DEvayAnai, in holy matrimony; You chose ThiruvaNNAmalai as Your favourite abode; and You are merciful to all Your d...
+Commentary: ... I was ready to cry; I sought to create gold through mystic alchemy and in that process roamed about aimlessly; please understand my misery a little and show the compassion and grace to remove my wretchedness. The demon SUran, who hid in the wavy sea disguised as a mango tree, was split apart; the rare mount, Krouncha, was shattered to pieces; then You entered the celestial land to hold the hands of the great damsel, DEvayAnai, in holy matrimony; You chose ThiruvaNNAmalai as Your favourite abode; and You are merciful to all Your d...
 
 Confidence c
 
@@ -206,7 +206,7 @@ Confidence c
 
 > (no Tamil keyword line found; commentary quoted instead)
 
-Commentary: ... charitable acts (in KAncheepuram) and who is worshipped outstandingly on this earth are all exhilarated in Your presence, Oh Immortal and Great One! You are the leader seated in ThiruvaNNAmalai! On the battlefield, the demon SUran, the leader of the matchless warriors, (who came in the disguise of a mango tree) was felled, broken, trodden upon and killed by You, letting the celestials resettle in their golden land, Oh Lord! You are the Great One worshipped by Your devotees! These women apply make-up profusely on their face. They lack conventional discipline. These ...
+Commentary: ...table acts (in KAncheepuram) and who is worshipped outstandingly on this earth are all exhilarated in Your presence, Oh Immortal and Great One! You are the leader seated in ThiruvaNNAmalai! On the battlefield, the demon SUran, the leader of the matchless warriors, (who came in the disguise of a mango tree) was felled, broken, trodden upon and killed by You, letting the celestials resettle in their golden land, Oh Lord! You are the Great One worshipped by Your devotees! These women apply make-up profusely on their face. They lack conventional discipline. These ...
 
 Confidence c
 
@@ -214,7 +214,7 @@ Confidence c
 
 > (no Tamil keyword line found; commentary quoted instead)
 
-Commentary: ...passionate hankering for them, kindly show me certain righteous ways and means! Loving the damsel, VaLLi, You went inside the forest of the hunters on Your fragrant feet that became red from the strain! When the magical demon SUran hid in the sea (in the disguise of a mango tree), You ended the war by killing him with Your sharp spear, Oh Lord! Your abode is PuliyUr (Chidhambaram) where chariots driven on the streets raise so much dust that the sun's chariot becomes indistinct; there You are seated in the western temple tower; well-i...
+Commentary: ...nate hankering for them, kindly show me certain righteous ways and means! Loving the damsel, VaLLi, You went inside the forest of the hunters on Your fragrant feet that became red from the strain! When the magical demon SUran hid in the sea (in the disguise of a mango tree), You ended the war by killing him with Your sharp spear, Oh Lord! Your abode is PuliyUr (Chidhambaram) where chariots driven on the streets raise so much dust that the sun's chariot becomes indistinct; there You are seated in the western temple tower; well-i...
 
 Confidence c
 
@@ -230,7 +230,7 @@ Confidence c
 
 > (no Tamil keyword line found; commentary quoted instead)
 
-Commentary: ... close in on me raising an uproar, armed with the mace and the rope of bondage, to take my life, kindly grant me Your hallowed feet! The wavy sea roared aloud sounding "kO kO"; and the elegant bow and arrows held by the demon SUran, standing in the disguise of a mango tree, were shattered to pieces; when You wielded from Your hand the long and famous, fiery spear that has an inherent effulgence, symbolic of justice, Oh Valiant One! You are very brave, endearing and handsome, Oh Matchless One! In the disguise of a hunter You wen...
+Commentary: ... in on me raising an uproar, armed with the mace and the rope of bondage, to take my life, kindly grant me Your hallowed feet! The wavy sea roared aloud sounding "kO kO"; and the elegant bow and arrows held by the demon SUran, standing in the disguise of a mango tree, were shattered to pieces; when You wielded from Your hand the long and famous, fiery spear that has an inherent effulgence, symbolic of justice, Oh Valiant One! You are very brave, endearing and handsome, Oh Matchless One! In the disguise of a hunter You wen...
 
 Confidence c
 
@@ -238,7 +238,7 @@ Confidence c
 
 > (no Tamil keyword line found; commentary quoted instead)
 
-Commentary: ...rpass the dainty and beautiful pot and the mount, I have lost all values like happiness and grace, my intelligence is gone and even my basic sense has vanished; how will I ever be able to attain salvation? When once the demon SUran, in the disguise of a mango tree, hid inside the dark seas over which clouds hang, You annihilated him by wielding Your spear; with that kind of commanding prowess, You fought the war and eradicated the grief of the celestials, Oh Famous One! You successfully composed (coming as ThirugnAna S...
+Commentary: ...the dainty and beautiful pot and the mount, I have lost all values like happiness and grace, my intelligence is gone and even my basic sense has vanished; how will I ever be able to attain salvation? When once the demon SUran, in the disguise of a mango tree, hid inside the dark seas over which clouds hang, You annihilated him by wielding Your spear; with that kind of commanding prowess, You fought the war and eradicated the grief of the celestials, Oh Famous One! You successfully composed (coming as ThirugnAna S...
 
 Confidence c
 
@@ -246,7 +246,7 @@ Confidence c
 
 > (no Tamil keyword line found; commentary quoted instead)
 
-Commentary: ...she slapped Him, He began to cry holding both His ears; when He played on the flute sweetly, many species of cows in herds followed Him home without tiring; that famous Lord VishNu is Your Uncle, Oh Lord of VayalUr! The demon SUran was extremely proud that his weapons never remained idle even for a single day without partaking in a war; when he stood in the disguise of a mango tree in the sea, You wielded the wonderful spear held in Your hand on the sea to destroy him, Oh Lord! You have Your abode in VirAlimalai*, Oh Great One! These women are personification of illusion and are full of astuteness. They deceive with sweet words with a h...
+Commentary: ...apped Him, He began to cry holding both His ears; when He played on the flute sweetly, many species of cows in herds followed Him home without tiring; that famous Lord VishNu is Your Uncle, Oh Lord of VayalUr! The demon SUran was extremely proud that his weapons never remained idle even for a single day without partaking in a war; when he stood in the disguise of a mango tree in the sea, You wielded the wonderful spear held in Your hand on the sea to destroy him, Oh Lord! You have Your abode in VirAlimalai*, Oh Great One! These women are personification of illusion and are full of astuteness. They deceive with sweet words with a h...
 
 Confidence c
 
@@ -254,7 +254,7 @@ Confidence c
 
 > (no Tamil keyword line found; commentary quoted instead)
 
-Commentary: In those coral-like red lips (of the whores), in their black hair like darkness, in their exhilarating breasts and in their lotus-like palms, my mind simply melted; in the middle of the sea, You shook the huge mango tree (SUran in disguise) along with its flowers and fruits (and killed that demon) and after that, You came to rest in this place called Mount Serpent (ThiruchchengkOdu)*; rather than singing the praise of this great mountain, I, the lowly slave, was carrying on with this body filled with bones and faeces and fell into the burning hell; ho...
+Commentary: In those coral-like red lips (of the whores), in their black hair like darkness, in their exhilarating breasts and in their lotus-like palms, my mind simply melted; in the middle of the sea, You shook the huge mango tree (SUran in disguise) along with its flowers and fruits (and killed that demon) and after that, You came to rest in this place called Mount Serpent (ThiruchchengkOdu)*; rather than singing the praise of this great mountain, I, the lowly slave, was carrying on with this body fille...
 
 Confidence c
 
@@ -262,7 +262,7 @@ Confidence c
 
 > (no Tamil keyword line found; commentary quoted instead)
 
-Commentary: ...en will I be able to swim across the vast sea of birth and attain Your unblemished and hallowed feet? Huge ships looking like mountains, many male sharks and female makara fish are copiously seen in the sea in which the demon SUran hid as a mango tree; he grew weary fighting the war and BrahmA became very scared, when You mounted the peacock and roamed about in Mount Kazhugumalai*, Oh Lord with the matchless spear! The hunters living in the tiger-infested forest were perplexed and the damsel VaLLi's heart ...
+Commentary: ...l I be able to swim across the vast sea of birth and attain Your unblemished and hallowed feet? Huge ships looking like mountains, many male sharks and female makara fish are copiously seen in the sea in which the demon SUran hid as a mango tree; he grew weary fighting the war and BrahmA became very scared, when You mounted the peacock and roamed about in Mount Kazhugumalai*, Oh Lord with the matchless spear! The hunters living in the tiger-infested forest were perplexed and the damsel VaLLi's heart ...
 
 Confidence c
 
@@ -286,7 +286,7 @@ Confidence c
 
 > (no Tamil keyword line found; commentary quoted instead)
 
-Commentary: ...r hearts were filled with darkness and delusion as the demon kings harassed them immensely. To end their sufferings, You took the mighty spear in Your hand and threw it at SUran and split his body into two. The arrogant demon, SUran, who had disguised himself as a mango tree, was destroyed and killed by You, Oh strong and powerful one! You reside in the beautiful town, Mylapore*, Oh Great One! I roam around with people in this world, surrounded by wavy seas, but without saying any prayers to You. Every day, I must first have my h...
+Commentary: ...s were filled with darkness and delusion as the demon kings harassed them immensely. To end their sufferings, You took the mighty spear in Your hand and threw it at SUran and split his body into two. The arrogant demon, SUran, who had disguised himself as a mango tree, was destroyed and killed by You, Oh strong and powerful one! You reside in the beautiful town, Mylapore*, Oh Great One! I roam around with people in this world, surrounded by wavy seas, but without saying any prayers to You. Every day, I must first have my h...
 
 Confidence c
 
@@ -294,7 +294,7 @@ Confidence c
 
 > (no Tamil keyword line found; commentary quoted instead)
 
-Commentary: ...onsumed by fire; I do not want to decay and die in this miserable way; kindly relieve me from the bondage of attachment to the worldly desires and entrust me at the holy feet of the enlightened people! When the battling demon SUran faced defeat and ran away to hide (assuming the disguise of a mango tree), You fought with him fiercely in the sea, Oh Lord with the spear! To DEvayAnai, reared by the Divine elephant (AirAvadham), and to the honey-like sweet VaLLi who grew up in the forest, You gave a chain of pearls and a garland of kadappa flowers, Oh valorous ...
+Commentary: ...d by fire; I do not want to decay and die in this miserable way; kindly relieve me from the bondage of attachment to the worldly desires and entrust me at the holy feet of the enlightened people! When the battling demon SUran faced defeat and ran away to hide (assuming the disguise of a mango tree), You fought with him fiercely in the sea, Oh Lord with the spear! To DEvayAnai, reared by the Divine elephant (AirAvadham), and to the honey-like sweet VaLLi who grew up in the forest, You gave a chain of pearls and a garland of kadappa flowers, Oh valorous ...
 
 Confidence c
 
@@ -318,7 +318,7 @@ Confidence c
 
 > (no Tamil keyword line found; commentary quoted instead)
 
-Commentary: ...shawl the hide of a wild elephant; and You are the great Treasure of that Lord SivA! You are delightfully seated in ThiruvAmAththUr* surrounded by cool groves; with Your gracious blessings the entire world prospers; the demons who were spread in all the directions reaching sky-high and who resorted to harassing everyone were driven away shrieking in fear when You wielded the raging and powerful spear on the huge mango tree (in which disguise was the demon SUran), Oh Great One! Their eyes are akin to kayal fish and female deer; their sugarcane-like shoulders are akin to bamboo of good species; yes, yes, it is indeed so; just like the budding lotus blossoms, their prominent, poin...
+Commentary: ...ire world prospers; the demons who were spread in all the directions reaching sky-high and who resorted to harassing everyone were driven away shrieking in fear when You wielded the raging and powerful spear on the huge mango tree (in which disguise was the demon SUran), Oh Great One! Their eyes are akin to kayal fish and female deer; their sugarcane-like shoulders are akin to bamboo of good species; yes, yes, it is indeed so; just like the budding lotus blossoms, their prominent, pointed and large bosom could be compared t...
 
 Confidence c
 
@@ -326,7 +326,7 @@ Confidence c
 
 > (no Tamil keyword line found; commentary quoted instead)
 
-Commentary: ...r 'a' in Tamil language (denoting Lord SivA) was explained to this poor soul when You preached to me, Oh, Hallowed Seed for Liberation! Getting involved in the aggressive war, Your angry spear severed the indestructible demon SUran and his family, Oh Lord with that mighty weapon! Oh Celestial Carpenter!* You carved out by splitting the mango tree (in which disguise SUran hid himself) the Peacock and the Rooster, Oh Mystical Lord! You prostrated at the feet of VaLLi, the damsel of the KuRavAs, befriended her as though You were the pupil of her eye and went to her place to unite with her in wedlock! In ...
+Commentary: ...in Tamil language (denoting Lord SivA) was explained to this poor soul when You preached to me, Oh, Hallowed Seed for Liberation! Getting involved in the aggressive war, Your angry spear severed the indestructible demon SUran and his family, Oh Lord with that mighty weapon! Oh Celestial Carpenter!* You carved out by splitting the mango tree (in which disguise SUran hid himself) the Peacock and the Rooster, Oh Mystical Lord! You prostrated at the feet of VaLLi, the damsel of the KuRavAs, befriended her as though You were the pupil of her eye and went to her place to unite with her in wedlock! In ...
 
 Confidence c
 
@@ -342,7 +342,7 @@ Confidence c
 
 > (no Tamil keyword line found; commentary quoted instead)
 
-Commentary: ...d in the cowherd's lineage; and You are His nephew, Oh Lord! He danced the (Cosmic) Dance with His hallowed feet as Sages NArathar and Thumpuru provided the background music; and You are the child of that Lord SivA! The demon SUran and all his torturous acts went inside the sea and hid (as a mango tree); destroying them and letting the Sun's chariot run its usual course, You wielded Your spear, Oh Lord! The bright tributary, chitRARu, that merges with the pure and fragrant water of River KAvEri, runs around this place, KadambUr* which is Your abode; You are...
+Commentary: ...he cowherd's lineage; and You are His nephew, Oh Lord! He danced the (Cosmic) Dance with His hallowed feet as Sages NArathar and Thumpuru provided the background music; and You are the child of that Lord SivA! The demon SUran and all his torturous acts went inside the sea and hid (as a mango tree); destroying them and letting the Sun's chariot run its usual course, You wielded Your spear, Oh Lord! The bright tributary, chitRARu, that merges with the pure and fragrant water of River KAvEri, runs around this place, KadambUr* which is Your abode; You are...
 
 Confidence c
 
@@ -350,7 +350,7 @@ Confidence c
 
 > (no Tamil keyword line found; commentary quoted instead)
 
-Commentary: ...od, It was beyond comprehension; It was the origin of all scriptures, and You, as the Entity of True Knowledge, preached It! Vanquishing the arrogance of Mount Krouncha, You also pierced with Your spear, the body of the demon SUran who assumed the disguise of a mango tree, Oh valorous One, mounted on the horse-like peacock! Oh handsome KumarA! Oh Lord, Your shoulders are adorned with garlands of flowers like blue lily and vetchi! You are seated in Your abode at Kochchai (SeegAzhi*) as the Master of the three branches of Tamil,...
+Commentary: ... was beyond comprehension; It was the origin of all scriptures, and You, as the Entity of True Knowledge, preached It! Vanquishing the arrogance of Mount Krouncha, You also pierced with Your spear, the body of the demon SUran who assumed the disguise of a mango tree, Oh valorous One, mounted on the horse-like peacock! Oh handsome KumarA! Oh Lord, Your shoulders are adorned with garlands of flowers like blue lily and vetchi! You are seated in Your abode at Kochchai (SeegAzhi*) as the Master of the three branches of Tamil,...
 
 Confidence c
 
@@ -382,7 +382,7 @@ Confidence c
 
 > (no Tamil keyword line found; commentary quoted instead)
 
-Commentary: ...e heard it well at once and rushed to its rescue lovingly, mounted on the Garudan; You are the favourite nephew of that matchless Lord VishNu! You possess the unique weapon, the Powerful Spear, that savagely severed the demon SUran who came in the disguise of a mango tree in the sea, Oh Lord! You have chosen as Your abode the shrine at Thiruchchaththimuththam* where Lord SivA is also seated, Oh Great One! They reveal themselves as the bright ivory tusks of the elephant in a frenzy; they look like a golden pot that is spread cl...
+Commentary: ...d it well at once and rushed to its rescue lovingly, mounted on the Garudan; You are the favourite nephew of that matchless Lord VishNu! You possess the unique weapon, the Powerful Spear, that savagely severed the demon SUran who came in the disguise of a mango tree in the sea, Oh Lord! You have chosen as Your abode the shrine at Thiruchchaththimuththam* where Lord SivA is also seated, Oh Great One! They reveal themselves as the bright ivory tusks of the elephant in a frenzy; they look like a golden pot that is spread cl...
 
 Confidence c
 
@@ -390,7 +390,7 @@ Confidence c
 
 > (no Tamil keyword line found; commentary quoted instead)
 
-Commentary: ...peacock, to grant me Your two hallowed feet! Choosing rich and lofty words of the beautiful Tamil language, I must think in praise of You daily with Your kind blessings! You must dwell in my thoughts as my soulmate! The demon SUran hid himself (in the disguise of a mango tree) under the sea; his body was split and came up to the surface in two parts; those parts became the unique rooster and peacock; such power was wielded by Your Spear, Oh Lord! BrahmA, who has the swan as vehicle, and Lord Vishnu, who is the consort of Lakshmi s...
+Commentary: ...k, to grant me Your two hallowed feet! Choosing rich and lofty words of the beautiful Tamil language, I must think in praise of You daily with Your kind blessings! You must dwell in my thoughts as my soulmate! The demon SUran hid himself (in the disguise of a mango tree) under the sea; his body was split and came up to the surface in two parts; those parts became the unique rooster and peacock; such power was wielded by Your Spear, Oh Lord! BrahmA, who has the swan as vehicle, and Lord Vishnu, who is the consort of Lakshmi s...
 
 Confidence c
 
@@ -398,7 +398,7 @@ Confidence c
 
 > (no Tamil keyword line found; commentary quoted instead)
 
-Commentary: ...green creeper-like damsel, VaLLi, who was reared by the KuRavAs, deemed as murderers and belonging to low lineage; She hugged Your shoulders and chest adorned with garlands of vetchi flowers, Oh Lord! As the confronting demon SUran, in the disguise of a wild big mango tree, was killed, the seas rose roaring; Mount ChakravALam was pierced into two and the mountains in all the eight directions were scattered all over the ten directions*; and You mounted the horse-like beautiful peacock raring to go and flew around the seven world...
+Commentary: ...creeper-like damsel, VaLLi, who was reared by the KuRavAs, deemed as murderers and belonging to low lineage; She hugged Your shoulders and chest adorned with garlands of vetchi flowers, Oh Lord! As the confronting demon SUran, in the disguise of a wild big mango tree, was killed, the seas rose roaring; Mount ChakravALam was pierced into two and the mountains in all the eight directions were scattered all over the ten directions*; and You mounted the horse-like beautiful peacock raring to go and flew around the seven world...
 
 Confidence c
 
@@ -406,7 +406,7 @@ Confidence c
 
 > (no Tamil keyword line found; commentary quoted instead)
 
-Commentary: ...d Your deep love for her, Oh Lord Kumara! This town, Ilanji**, is famous for the surrounding groves and fertile paddy fields all around; it is Your happy abode, Oh Lord! The sun was scared to rise from the sea where the demon SUran hid, disguised like a mango tree; You conquered that SUran, Oh Great One! The well-garlanded Manmathan (God of Love) always comes out in the evening and shoots his flowery arrows that provoke extreme lust; the cool northerly winds blow bringing along the fragrance of flowers which feels like...
+Commentary: ... deep love for her, Oh Lord Kumara! This town, Ilanji**, is famous for the surrounding groves and fertile paddy fields all around; it is Your happy abode, Oh Lord! The sun was scared to rise from the sea where the demon SUran hid, disguised like a mango tree; You conquered that SUran, Oh Great One! The well-garlanded Manmathan (God of Love) always comes out in the evening and shoots his flowery arrows that provoke extreme lust; the cool northerly winds blow bringing along the fragrance of flowers which feels like...
 
 Confidence c
 
@@ -414,7 +414,7 @@ Confidence c
 
 > (no Tamil keyword line found; commentary quoted instead)
 
-Commentary: ...Your glory dedicating their love, You graciously grant Your hallowed feet, Oh Lord! Mounting the peacock that thrashed bunches of fierce and swift snakes, and wielding the spear from Your hand, You destroyed the valiant demon SUran, disguised as a mango tree, and shattered the famous Mount Krouncha as the celestials worshipped You showering flowers and praying "Oh Lord with the Spear, Hail to You!" The ocean made an uproarious noise when You wielded the spear, Oh Great One! "It is the one and only one. It is also...
+Commentary: ...lory dedicating their love, You graciously grant Your hallowed feet, Oh Lord! Mounting the peacock that thrashed bunches of fierce and swift snakes, and wielding the spear from Your hand, You destroyed the valiant demon SUran, disguised as a mango tree, and shattered the famous Mount Krouncha as the celestials worshipped You showering flowers and praying "Oh Lord with the Spear, Hail to You!" The ocean made an uproarious noise when You wielded the spear, Oh Great One! "It is the one and only one. It is also...
 
 Confidence c
 
@@ -430,7 +430,7 @@ Confidence c
 
 > (no Tamil keyword line found; commentary quoted instead)
 
-Commentary: ...e to confer salvation so that I too become more sensible and chant Your name? Mount Krouncha in the north was pierced and destroyed; the wavy seas dried up; victory was achieved in all the eight cardinal directions; the demons who confronted You and fought with vigour were shattered to pieces; and, after defeating them, You challenged the demon SUran, who took the disguise of a tall mango tree, by attacking him with Your spear, Oh Great Warrior! He wears on His dense and matted hair the crescent moon and wavy water of the river Gangai; He is Lord SivA, Your father; You preached to Him the meaning of the PraNava ManthrA and earned name and fame as t...
+Commentary: ...oyed; the wavy seas dried up; victory was achieved in all the eight cardinal directions; the demons who confronted You and fought with vigour were shattered to pieces; and, after defeating them, You challenged the demon SUran, who took the disguise of a tall mango tree, by attacking him with Your spear, Oh Great Warrior! He wears on His dense and matted hair the crescent moon and wavy water of the river Gangai; He is Lord SivA, Your father; You preached to Him the meaning of the PraNava ManthrA and earned name and fame as t...
 
 Confidence c
 
@@ -438,7 +438,7 @@ Confidence c
 
 > (no Tamil keyword line found; commentary quoted instead)
 
-Commentary: ...fices! You loved VaLLi, Your favourite damsel of the KuRavAs, to such an extent that she united with You, Oh Lord with valorous shoulders! You picked up Your bright spear and wielded it in the wavy sea fighting with the demon SUran, hiding there as a mango tree, and with the seven hills which served (as a fortress for SUran), Oh Lord! You mounted the horse-like peacock which danced so fiercely as to shatter the entire armies of the demons, Oh Great One! The eyes, resembling the arrows of Manmathan (God of Love), tha...
+Commentary: ... You loved VaLLi, Your favourite damsel of the KuRavAs, to such an extent that she united with You, Oh Lord with valorous shoulders! You picked up Your bright spear and wielded it in the wavy sea fighting with the demon SUran, hiding there as a mango tree, and with the seven hills which served (as a fortress for SUran), Oh Lord! You mounted the horse-like peacock which danced so fiercely as to shatter the entire armies of the demons, Oh Great One! The eyes, resembling the arrows of Manmathan (God of Love), tha...
 
 Confidence c
 
@@ -462,7 +462,7 @@ Confidence c
 
 > (no Tamil keyword line found; commentary quoted instead)
 
-Commentary: ...protruding bosom looking like a heavy pot and a mountain; He sired and reared DEvayAnai, who mounts the cloud as her vehicle, and You married her, Oh valorous One! One day, terrifying the sea, the mount Krouncha and the demon SUran who was in the disguise of a mango tree, who were all shuddering, and for freeing the celestials from their prisons, You wielded the spear from Your hallowed hand, seated on the lotus praised by the four VEdAs that have many subdivisions, Oh Great One! It tastes like the nectar imbibed by the celes...
+Commentary: ...ding bosom looking like a heavy pot and a mountain; He sired and reared DEvayAnai, who mounts the cloud as her vehicle, and You married her, Oh valorous One! One day, terrifying the sea, the mount Krouncha and the demon SUran who was in the disguise of a mango tree, who were all shuddering, and for freeing the celestials from their prisons, You wielded the spear from Your hallowed hand, seated on the lotus praised by the four VEdAs that have many subdivisions, Oh Great One! It tastes like the nectar imbibed by the celes...
 
 Confidence c
 
@@ -478,7 +478,7 @@ Confidence c
 
 > (no Tamil keyword line found; commentary quoted instead)
 
-Commentary: ...the true knowledge that stands alone, way beyond the reach of all those worldly attachments! To help the DEvAs who used to live in the beautiful and golden celestial land, You went to the battlefield; You confronted the demons and knocked down the mount Krouncha; You entered the sea approaching the demon in disguise (as a mango tree) and wielded the spear piercing that SUran and smashing him to pieces, Oh Lord! When the Poet (PoyyAmozhi) first sang a song, there was a flaw in the meaning; You pointed out the flaw and offered him a revised song with correct meaning, Oh Lord!* You are like...
+Commentary: ... DEvAs who used to live in the beautiful and golden celestial land, You went to the battlefield; You confronted the demons and knocked down the mount Krouncha; You entered the sea approaching the demon in disguise (as a mango tree) and wielded the spear piercing that SUran and smashing him to pieces, Oh Lord! When the Poet (PoyyAmozhi) first sang a song, there was a flaw in the meaning; You pointed out the flaw and offered him a revised song with correct meaning, Oh Lord!* You are like a rare pearl! You are the deity in charge ...
 
 Confidence c
 
@@ -502,7 +502,7 @@ Confidence c
 
 > (no Tamil keyword line found; commentary quoted instead)
 
-Commentary: ... heads were knocked off and smashed; the seven hills rose screaming, along with Mount MEru which once served as the bow to Lord SivA who wears the crescent moon on His matted hair, and the mount whirled; the confronting demon SUran, in the disguise of a mango tree, shuddered and shrieked as You fought with him subduing his treacherous thought and arrogance by wielding Your chaste and matchless spear, Oh Lord! You enjoy residing on the mountains, Oh Lord! You are the most virtuous One worshipped and lauded by Sage Agast...
+Commentary: ... were knocked off and smashed; the seven hills rose screaming, along with Mount MEru which once served as the bow to Lord SivA who wears the crescent moon on His matted hair, and the mount whirled; the confronting demon SUran, in the disguise of a mango tree, shuddered and shrieked as You fought with him subduing his treacherous thought and arrogance by wielding Your chaste and matchless spear, Oh Lord! You enjoy residing on the mountains, Oh Lord! You are the most virtuous One worshipped and lauded by Sage Agast...
 
 Confidence c
 
@@ -512,7 +512,7 @@ Confidence c
 > **குறவர் தங்கள்பி ரானே மாமரம்**
 > நெறுநெ றென்றடி வேரோ டேநிலை
 
-Commentary: ...ating upon the hallowed feet of that Lord, were graciously blessed to attain the shade of His feet; that Lord SivA adores You, Oh Lord KanthA! You are the Leader of the KuRavAs who dwell in the forest, Oh Lord! When the demon SUran took the disguise of a mango tree, You uprooted that tree which shook and collapsed with a thud by wielding the victorious spear in Your hallowed hand, Oh valorous One! In the grove where cuckoos and krouncha birds make cooing sound and where honey oozes from the blossomed flowers, You united...
+Commentary: ...upon the hallowed feet of that Lord, were graciously blessed to attain the shade of His feet; that Lord SivA adores You, Oh Lord KanthA! You are the Leader of the KuRavAs who dwell in the forest, Oh Lord! When the demon SUran took the disguise of a mango tree, You uprooted that tree which shook and collapsed with a thud by wielding the victorious spear in Your hallowed hand, Oh valorous One! In the grove where cuckoos and krouncha birds make cooing sound and where honey oozes from the blossomed flowers, You united...
 
 Confidence t
 
@@ -520,7 +520,7 @@ Confidence t
 
 > (no Tamil keyword line found; commentary quoted instead)
 
-Commentary: ...ing of love; Indra, the leader of the celestials, sought refuge and his golden celestial land was redeemed for him; the large sea with makara fish first rose as if it was furious and then subsided; the large clan of the demon SUran was completely annihilated; when that SUran, coming in the disguise of a mango tree, confronted BrahmA making Him scream in terror, You uprooted that tree (SUran) with Your hallowed hand and split him apart, Oh Handsome One! Your mind was so overwhelmed to take over the entire forest (of VaLLimalai) which is sought after by beautiful beetles...
+Commentary: ... love; Indra, the leader of the celestials, sought refuge and his golden celestial land was redeemed for him; the large sea with makara fish first rose as if it was furious and then subsided; the large clan of the demon SUran was completely annihilated; when that SUran, coming in the disguise of a mango tree, confronted BrahmA making Him scream in terror, You uprooted that tree (SUran) with Your hallowed hand and split him apart, Oh Handsome One! Your mind was so overwhelmed to take over the entire forest (of VaLLimalai) which is sought after by beautiful beetles...
 
 Confidence c
 
@@ -536,7 +536,7 @@ Confidence c
 
 > (no Tamil keyword line found; commentary quoted instead)
 
-Commentary: ...r help seeking Him while He was slumbering in the milky ocean, He appeared before the elephant to rescue him; when that Lord VishNu sought Your help, You confronted and ripped apart the broad mountain, Krouncha, and the demon SUran who was in the disguise of a mango tree by wielding Your spear sending shock waves throughout the mountainous regions, Oh Lord! When the evil poison AlakAlam gushed out with a roar, He gulped down that poison and stored it in His neck; He gave a part of His body to Goddess PArvathi who is concorpor...
+Commentary: ... seeking Him while He was slumbering in the milky ocean, He appeared before the elephant to rescue him; when that Lord VishNu sought Your help, You confronted and ripped apart the broad mountain, Krouncha, and the demon SUran who was in the disguise of a mango tree by wielding Your spear sending shock waves throughout the mountainous regions, Oh Lord! When the evil poison AlakAlam gushed out with a roar, He gulped down that poison and stored it in His neck; He gave a part of His body to Goddess PArvathi who is concorpor...
 
 Confidence c
 
@@ -544,7 +544,7 @@ Confidence c
 
 > (no Tamil keyword line found; commentary quoted instead)
 
-Commentary: ...available to the hundred KauravAs (headed by DuriyOdhanan), He (as KrishNa) volunteered to drive for Arjunan with compassion; slumbering on a banyan leaf on the ocean, He snored with a big grunt (being relieved that the demon SUran was finished); that VishNu exhaled peacefully, remaining fully conscious during His sleep; the perplexed SUran took the disguise of a mango tree, shrieked in terror along with his seven protective mountains, and the seas roared when You held the spear in Your hand that shattered (that mango tree and the mountains), Oh Great One! He wages a war with arrows of budding flowers and a unique bow of sugarca...
+Commentary: ...ble to the hundred KauravAs (headed by DuriyOdhanan), He (as KrishNa) volunteered to drive for Arjunan with compassion; slumbering on a banyan leaf on the ocean, He snored with a big grunt (being relieved that the demon SUran was finished); that VishNu exhaled peacefully, remaining fully conscious during His sleep; the perplexed SUran took the disguise of a mango tree, shrieked in terror along with his seven protective mountains, and the seas roared when You held the spear in Your hand that shattered (that mango tree and the mountains), Oh Great One! He wages a war with arrows of budding flowers and a unique bow of sugarca...
 
 Confidence c
 
@@ -568,7 +568,7 @@ Confidence c
 
 > (no Tamil keyword line found; commentary quoted instead)
 
-Commentary: ...e piece of rag; then the body is laid in the dismal cremation ground to be burnt down! At that time, kindly grant me Your reddish, lotus-like, unblemished and hallowed feet which are the best refuge for me. The uprooted demon SUran, disguised as a big mango tree, fell down screaming, breaking apart with a cracking noise; his entire clan was destroyed root and branch; the armies of the demons were defeated; the rare mountains, Krouncha and the seven protective hills, screamed when shattered; Your spear flashed blood-r...
+Commentary: ...e of rag; then the body is laid in the dismal cremation ground to be burnt down! At that time, kindly grant me Your reddish, lotus-like, unblemished and hallowed feet which are the best refuge for me. The uprooted demon SUran, disguised as a big mango tree, fell down screaming, breaking apart with a cracking noise; his entire clan was destroyed root and branch; the armies of the demons were defeated; the rare mountains, Krouncha and the seven protective hills, screamed when shattered; Your spear flashed blood-r...
 
 Confidence c
 
@@ -576,7 +576,7 @@ Confidence c
 
 > (no Tamil keyword line found; commentary quoted instead)
 
-Commentary: ...t open jaws spew flesh; making the scared and screaming SUrapadhman**, the realised one, run for life, while the sea, a vast deluge, tossing pearls through its waves and containing plenty of fish, rose in agitation; the demon SUran in the disguise of a mango tree was terrified with its branches breaking and giving way; the countless conch shells that yield pearls and the eight elephants with trunks (guarding the eight directions) got scared and went into hiding; when You raised the staff of Rooster in Your hand, Oh va...
+Commentary: ... jaws spew flesh; making the scared and screaming SUrapadhman**, the realised one, run for life, while the sea, a vast deluge, tossing pearls through its waves and containing plenty of fish, rose in agitation; the demon SUran in the disguise of a mango tree was terrified with its branches breaking and giving way; the countless conch shells that yield pearls and the eight elephants with trunks (guarding the eight directions) got scared and went into hiding; when You raised the staff of Rooster in Your hand, Oh va...
 
 Confidence c
 
@@ -584,7 +584,7 @@ Confidence c
 
 > (no Tamil keyword line found; commentary quoted instead)
 
-Commentary: ...erates eternal bliss! "Brahma, who is well-versed in VEdAs from time immemorial, and who is wearing the sacred thread, became stunned when You tamed His arrogance; You also smashed the mount Krouncha to pieces; when the demon SUran hid in the sea as a mango tree, You hounded him out with Your triumphant Spear, Oh famous King, we bow to You" - so saying, Lord VishNu holding the disc in His hand, Lord SivA on whose left side DEvi PArvathi is concorporate and Indra, bestowed with a myriad of eyes, praised You chanting t...
+Commentary: ... eternal bliss! "Brahma, who is well-versed in VEdAs from time immemorial, and who is wearing the sacred thread, became stunned when You tamed His arrogance; You also smashed the mount Krouncha to pieces; when the demon SUran hid in the sea as a mango tree, You hounded him out with Your triumphant Spear, Oh famous King, we bow to You" - so saying, Lord VishNu holding the disc in His hand, Lord SivA on whose left side DEvi PArvathi is concorporate and Indra, bestowed with a myriad of eyes, praised You chanting t...
 
 Confidence c
 
@@ -592,7 +592,7 @@ Confidence c
 
 > (no Tamil keyword line found; commentary quoted instead)
 
-Commentary: ...ee eyes and matted hair; He is the great Sidhdha, Lord SivA; in order to inculcate in His mind the significance of liberation, You preached to Him right from the beginning, Oh Lord! Incensed with anger, You attacked the demon SUran, who took the disguise of a mango tree full of bunches of flowers, and destroyed him by piercing with Your spear, Oh Great One! In this birth in which I have taken the human form, the siblings, the relatives and the wife all came in the middle, quarrelled with me every day and were eager to grab w...
+Commentary: ...s and matted hair; He is the great Sidhdha, Lord SivA; in order to inculcate in His mind the significance of liberation, You preached to Him right from the beginning, Oh Lord! Incensed with anger, You attacked the demon SUran, who took the disguise of a mango tree full of bunches of flowers, and destroyed him by piercing with Your spear, Oh Great One! In this birth in which I have taken the human form, the siblings, the relatives and the wife all came in the middle, quarrelled with me every day and were eager to grab w...
 
 Confidence c
 

@@ -2,7 +2,7 @@
 
 # The Krouncha mountain pierced
 
-`m-krouncha` | Murugan's own lore (Kanda Puranam) | 228 songs
+`m-krouncha` | Murugan's own lore (Kanda Puranam) | 217 songs
 
 Murugan's Vel pierced the Krouncha mountain, the demon Tarakasura's hiding place and stronghold, which crumbled.
 
@@ -642,14 +642,6 @@ Commentary: ...e hallowed feet of the Lord! This holy Mountain will save us from
 
 Confidence c
 
-### 427 தமிழோதிய குயிலோ (திருவருணை)
-
-> (no Tamil keyword line found; commentary quoted instead)
-
-Commentary: Shall I compare their voice to that of the cuckoo revealing the sweetness of Tamil language? or to that of the peacock, rooster, pigeon, parrot, crane, the sweet-sounding krouncha or the beautiful beetle? These whores are endowed with a sweet voice (of many birds) emanating from their reddish, shapely and great throat; and their lips have a taste of a combination of the jack fruit, honey and the plantain. Their huge breasts looking lik...
-
-Confidence c
-
 ### 428 தலையை மழித்து (திருவருணை)
 
 > (no Tamil keyword line found; commentary quoted instead)
@@ -687,14 +679,6 @@ Confidence c
 > (no Tamil keyword line found; commentary quoted instead)
 
 Commentary: ... with a jerk due to fatigue (of over-eating); the garudans (bald-eagles) danced around the battlefield, the crows flew away, the jackals gathered in herds and the magical fiends danced merrily; because of the dark mount Krouncha was burnt down and thrown into the wavy sea, the corals in the bowels of the sea shrank and split open; the mountains on this side of the sea were singed by the fire and shattered to pieces; and the serpent AdhisEshan, who bears the earth on its head, shrieke...
-
-Confidence c
-
-### 460 தத்தையென்று (சிதம்பரம்)
-
-> (no Tamil keyword line found; commentary quoted instead)
-
-Commentary: ...en dance like the peacock. With arrow-like eyes and hair resembling rain-bearing cloud, these statuette-like women have lilting anklets that give out sound in measured beats. Their milk-bearing bosom looks like the blue krouncha bird and like a golden pot with which they hug (their suitors) tightly. These pretty women appearing as if they came off a painting deceive and grab money. They establish a blatant lie as truth through their insistence. These beautiful whores are capable of m...
 
 Confidence c
 
@@ -746,14 +730,6 @@ Commentary: ...e appointed day for the visit of the evil God of Death (Yaman), t
 
 Confidence c
 
-### 512 மருவு கடல்முகில் (சிதம்பரம்)
-
-> (no Tamil keyword line found; commentary quoted instead)
-
-Commentary: ... the young bamboo-shoot. The claw on their pretty finger-nails look like the nose of the parrot. Looking like a symmetrical pair of mounts, their round breasts, with stains of decolorisation, are pointed, resembling the krouncha bird and the golden pot, standing erect with a display of the heaving strands of pearls and corals. The string of hairs on their banyan-leaf-like belly appears like a row of darkness. Their beautiful navel looks like a whirlpool. Their waist, shaped like a ha...
-
-Confidence c
-
 ### 522 முகத்தைப் பிலுக்கி (கயிலைமலை)
 
 > (no Tamil keyword line found; commentary quoted instead)
@@ -775,14 +751,6 @@ Confidence c
 > (no Tamil keyword line found; commentary quoted instead)
 
 Commentary: ...e rejoicing of the jumping fiends; the dumbfounded demons fell down screaming uncontrollably; blood gushed in the battlefield like a river; the seas became dried up and shrank suddenly; the magical and treacherous mount Krouncha was shattered, falling down with a thud; the exalted celestials and others sang songs of praise hailing You "Oh my Lord, Oh my Lord as You came with the spear, Oh, Sun of Knowledge!" You married VaLLi, the damsel of the KuRavAs of VaLLimalai, Oh Lord with mou...
-
-Confidence c
-
-### 547 அங்கை நீட்டி (திருசிராப்பள்ளி)
-
-> (no Tamil keyword line found; commentary quoted instead)
-
-Commentary: ...he amount offered; they entice with their eyes that surpass the arrows in sharpness; they treacherously converse citing the text from erotic manuals; from their throat emanate the sounds of birds like the cuckoo and the krouncha bird; with their sharp nails they scratch the body (of their suitors) and harass; they gently pat as suggested in the sex manuals and stimulate; holding tightly on to their suitors seeking their company, these whores, from the very beginning, make them develo...
 
 Confidence c
 
@@ -1179,14 +1147,6 @@ Commentary: ...ter space were shattered to pieces and became chaotic; the bowels
 
 Confidence c
 
-### 878 திட்டெனப் பல (திருச்சக்கிரப்பள்ளி)
-
-> (no Tamil keyword line found; commentary quoted instead)
-
-Commentary: ... are used in comparison, those bubbles are destroyed in a fraction of a second; if the lotus buds in the fields are sought in comparison, those buds are driven in many ways by the water; if the powerful chakravAka bird (krouncha) is taken up for comparison, these breasts let the bird free to fly in the sky; they provoke the mind of the men by waging war and destroy them in the ensuing fight; if the crown of the God of Love, Manmathan, holding the flowery arrows and the bow of sugarca...
-
-Confidence c
-
 ### 887 சொரியு மாமுகில் (திருவையாறு)
 
 > (no Tamil keyword line found; commentary quoted instead)
@@ -1208,14 +1168,6 @@ Confidence c
 > (no Tamil keyword line found; commentary quoted instead)
 
 Commentary: ...ully and proved the futility of the watch of the hunters, and drove all over the world Your great vehicle, the peacock (which is the demon SUran restored to righteous life), Oh Young Lord! You scorched the huge mountain Krouncha proving the ineffectiveness of the strength of the demons and protected the heads of the celestials, Oh Great One! They deliberately loosen their golden waist-band (mEkalai); they let go their long hair freely to drift; they roll their spear-like eyes; they s...
-
-Confidence c
-
-### 922 புணரியும் (தென்கடம்பந்துறை)
-
-> (no Tamil keyword line found; commentary quoted instead)
-
-Commentary: ...the arrows of Manmathan (God of Love), the beetle, the dark kayal fish, the keNdai fish, Yaman (God of Death), the lotus, the bird sakOram that gobbles up the fresh moonlight, the venom and Your spear that smashed Mount Krouncha to pieces are all comparable to them; those eyes are combative, wide, rolling in several directions, having reddish tinge in their middle and the corners, hiding treacherous thoughts and are highly demonstrative with all sweetness before the young men of the ...
 
 Confidence c
 
@@ -1312,14 +1264,6 @@ Confidence c
 > (no Tamil keyword line found; commentary quoted instead)
 
 Commentary: ...e seven worlds with His two feet; He is Lord VishNu, and You are His handsome nephew, Oh Lord! Making the bodies of the demons shudder with pain, agitating the wavy seas, and shredding into pieces the entire mountain of Krouncha comparable in size to Mount MEru in the North, You wielded Your spear, Oh Great One! In their kayal-fish-like eyes that streak up to the elegant ears and collide piercingly with the swinging studs, in their moving speech that is musical, in their fragrant and...
-
-Confidence c
-
-### 1005 நெடிய வட (பொதுப்பாடல்கள்)
-
-> (no Tamil keyword line found; commentary quoted instead)
-
-Commentary: ...a swayed roaring as if its bowels were split open; the mango tree (SUran in disguise) with plenty of baby mangoes was felled with a great noise as it was uprooted; and the mountain with the name of the large, tall bird (Krouncham) was pierced and destroyed when You wielded the bright spear, Oh Lord! The thunder and the sharp Kulicham (IndrA's weapon) are the weapons belonging to Her; the white, large and beautiful elephant, AirAvadham, which swallows food through the snout and from w...
 
 Confidence c
 
@@ -1427,14 +1371,6 @@ Commentary: ...asai (Indrani)'s protruding bosom looking like a heavy pot and a 
 
 Confidence c
 
-### 1103 வண்டுதான் மிக (பொதுப்பாடல்கள்)
-
-> (no Tamil keyword line found; commentary quoted instead)
-
-Commentary: ... they are wearing have come loose; the bliss from the famous erotic art of imbibing their saliva, filled with novelty and tasting like the fruit, is derived in many a way; both of our bodies droop; like a pair of anRil (krouncha) birds, both our minds unite perfectly; I have been abundantly enjoying passionate experience through the youthful bosom of these women; making me give up that kind of interplay with them, when will You bless me graciously so that I could melt in contemplativ...
-
-Confidence c
-
 ### 1112 சுட்டதுபோல் ஆசை (பொதுப்பாடல்கள்)
 
 > (no Tamil keyword line found; commentary quoted instead)
@@ -1504,14 +1440,6 @@ Confidence c
 > (no Tamil keyword line found; commentary quoted instead)
 
 Commentary: ...autiful tresses; He mounts the great bull, Nandi; He is Lord SivA, who has kind words for His devotees; He holds in His two hands a deer and a pick-axe; to the delight of that SivA, You preached to Him graciously! Mount Krouncha was pierced and split into two parts; the vast sea was totally shaken; people in this beautiful world were terrified and sought Your refuge; and kings of the demons, bereft of power, lost their lustre; when You astounded all by wielding Your sharp spear, Oh W...
-
-Confidence c
-
-### 1141 உறவு சிங்கிகள் (பொதுப்பாடல்கள்)
-
-> (no Tamil keyword line found; commentary quoted instead)
-
-Commentary: ...hen the demon SUran took the disguise of a mango tree, You uprooted that tree which shook and collapsed with a thud by wielding the victorious spear in Your hallowed hand, Oh valorous One! In the grove where cuckoos and krouncha birds make cooing sound and where honey oozes from the blossomed flowers, You united with VaLLi, the beautiful damsel of the KuRavAs, Oh Great One! They mischievously invent relationship and babble on. They are the receptacles of passion. They address their s...
 
 Confidence c
 
@@ -1656,14 +1584,6 @@ Confidence c
 > (no Tamil keyword line found; commentary quoted instead)
 
 Commentary: ...some celestial elephant (AirAvadham). "In order that DEvayAnai, who is seated on that elephant, hugs Your bejewelled and mighty shoulders, in order that the demons are destroyed, in order that the erstwhile golden mount Krouncha is shattered and in its place weeds and grass abound, and in order that the seas catch fire and dry up, He gets enraged; that brave angry warrior child Kandhan is ours" so praise Lord SivA and DEvi UmA, lovingly! The entire people of all the worlds and the ce...
-
-Confidence c
-
-### 1222 எதிரொருவர் இலை (பொதுப்பாடல்கள்)
-
-> (no Tamil keyword line found; commentary quoted instead)
-
-Commentary: ...ip them? It fought with the demons (sons of Thithi), bathed in the river of their blood and became blood red in colour; You hold that Spear in Your reddish hand! With Your majestic form, You destroyed the crest of Mount Krouncha and turned it into powder! Oh Lord, You mount the beautiful bird, Peacock, with an emerald-green hue! The ancient RudrAs numbering eleven, the twelve Suns, with their chariots attached with galloping horses who drive them around in the skies, the two prescrib...
 
 Confidence c
 
@@ -1825,14 +1745,6 @@ Confidence c
 > (no Tamil keyword line found; commentary quoted instead)
 
 Commentary: ...er of IndrA with the weapon VajrAyutha (mace), and went after VaLLi, the damsel of the KuRavAs, to whom You lost Your heart, and roamed around in the millet-field with plenty of cool millet! The mighty and evil mount of Krouncha was pierced by Your spear and destroyed; You caused a major war; and towered above all! You reside with relish in the loftiest mountain in a fierce form, Oh Great One! My hair has become gray like the crane's feather; my strong teeth have begun to loosen and ...
-
-Confidence c
-
-### 1326 ஓருரு வாகி (திருவெழுகூற்றிருக்கை)
-
-> (no Tamil keyword line found; commentary quoted instead)
-
-Commentary: ...nthAram, pArijAtham, santhAnam and arichanthanam); this mountain has a secretive appearance like the four (4) vEdAs; it has three (3) distinctive reddish peaks as its crest; that mountain has the name of the bird anRil (KrounchA); it was split into two (2) when You wielded Your singularly (1) unique spear, Oh Lord! Choosing SwAmimalai, on the northern bank of River KAvEri, as Your lotus feet are extolled by VEdic priests chanting the six-lettered manthrA, SaravaNabava, You are seated...
 
 Confidence c
 

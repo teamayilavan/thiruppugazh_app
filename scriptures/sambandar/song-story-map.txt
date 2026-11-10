@@ -10,7 +10,7 @@
 123 | sam-avatar | ஒருபொழுதும் இருசரண | c
 132 | sam-avatar,sam-jains | கருகி அகன்று | c,t
 134 | sam-avatar,sam-birth | கருவின் உருவாகி | t,t
-137 | sam-avatar,sam-milk | கலவியி லிச்சி | c,t
+137 | sam-avatar,sam-milk | கலவியி லிச்சி | c,c
 149 | sam-avatar,sam-ordeals | குறித்தமணி | c,c
 150 | sam-avatar,sam-poompavai | குன்றுங் குன்றும் | t,c
 171 | sam-avatar,sam-fever | நிகமம் எனில் | c,c
@@ -54,7 +54,7 @@
 693 | sam-avatar,sam-poompavai | களபம் மணி ஆரம் | c,t
 708 | sam-avatar | தோள் தப்பாமல் | c
 712 | sam-avatar | சீர் உலாவிய | c
-737 | sam-avatar,sam-milk | பரவுவரிக் கயல் | c,t
+737 | sam-avatar,sam-milk | பரவுவரிக் கயல் | c,c
 744 | sam-avatar | பலபல தத்துவம் | c
 758 | sam-avatar,sam-birth,sam-palanquin | கறுவி மைக்கணி | c,t,t
 759 | sam-avatar | பூத்தார் சூடு | c
@@ -69,17 +69,17 @@
 776 | sam-avatar,sam-todudaiya | மதனச்சொற் கார | t,c
 789 | sam-avatar,sam-fever | ஆடல் மாமத ராஜன் | c,c
 799 | sam-avatar,sam-jains | முலை குலுக்கிகள் | c,t
-822 | sam-avatar,sam-milk | பாலோ தேனோ பலவுறு | c,t
+822 | sam-avatar,sam-milk | பாலோ தேனோ பலவுறு | c,c
 823 | sam-avatar | கலகவிழி மாமகளிர் | c
 831 | sam-avatar | உரமுற் றிரு | c
-837 | sam-avatar,sam-birth,sam-milk | சுருதியாய் | t,t,t
+837 | sam-avatar,sam-birth,sam-milk | சுருதியாய் | t,t,c
 846 | sam-avatar | மலைக் கனத்தென | c
 859 | sam-avatar,sam-jains | இலகு குழைகிழிய | c,t
 878 | sam-avatar | திட்டெனப் பல | t
 888 | sam-avatar,sam-jains | வீங்கு பச்சிள | c,c
 902 | sam-avatar | இகல்கடின முகபடவி | c
 913 | sam-avatar,sam-birth | நெய்த்த சுரி | t,t
-920 | sam-avatar,sam-milk,sam-fever,sam-ordeals | காலன் வேல் கணை | c,t,c,t
+920 | sam-avatar,sam-milk,sam-fever,sam-ordeals | காலன் வேல் கணை | c,c,c,t
 944 | sam-poompavai | பந்தப்பொற் பார | c
 959 | sam-avatar | பழிப்பர் வாழ்த்துவர் | c
 962 | sam-avatar,sam-fever | முகமெலா நெய் | c,t

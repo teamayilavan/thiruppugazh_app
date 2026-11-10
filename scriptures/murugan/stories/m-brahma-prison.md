@@ -2,7 +2,7 @@
 
 # Brahma imprisoned for failing the Pranava
 
-`m-brahma-prison` | Murugan's own lore (Kanda Puranam) | 23 songs
+`m-brahma-prison` | Murugan's own lore (Kanda Puranam) | 22 songs
 
 When Brahma could not explain the meaning of Om to Murugan, the boy tapped his head and locked him in prison; Shiva then asked for his release. Related to the Shiva-set story murugan-pranava.
 
@@ -60,15 +60,6 @@ Confidence c
 > புயலுடன டங்க வேபிழைத்
 
 Commentary: ...holds the disc (Sudharsanam) in His hand and wears the golden crown, beseeched You, saying "Oh the son of Lord SivA who wears the crescent moon, kindly save us all (by killing the demon SUran)"; You were so enraged with Brahman that You imprisoned Him; in a moment, You fought and conquered the menacingly advancing demon SUran! The powerful elephant AirAvadham was large and elegant, with fluid oozing from his jaws denoting its ferocity; the young damsel, DEvayAnai, was reared by that white elephant, a...
-
-Confidence t
-
-### 250 எனை அடைந்த (திருத்தணிகை)
-
-> திசைமு கன்தி கைக்க அசுர ரன்ற டைத்த
-> **சிறைதி றந்து விட்ட ...... பெருமாளே.**
-
-Commentary: ...the field of VaLLimalai, known for an abundant growth of millet, and You embraced her with Your hallowed chest, knowing her devotion towards You. The celestials were once imprisoned by the demons to the consternation of BrahmA; and You unlocked those prisons and liberated the DEvAs, Oh Great One! Leprosy that has afflicted me, biliousness that has attacked me due to my bad deeds, fever that makes me feel as if my body is on fire, convulsion (known as muyalakan) that shakes my body with unspeakable pain, constant...
 
 Confidence t
 

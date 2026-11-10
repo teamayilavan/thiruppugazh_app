@@ -2,7 +2,7 @@
 
 # Born in the Saravana lake; the six Krittikas
 
-`m-saravana` | Murugan's own lore (Kanda Puranam) | 19 songs
+`m-saravana` | Murugan's own lore (Kanda Puranam) | 22 songs
 
 Six sparks from Shiva's eye were carried by Agni and Ganga into the Saravana lake, became six babies, and were nursed by the six Krittika women; Parvati joined them into one child with six faces. Related to the Shiva-set story murugan-skanda-birth.
 
@@ -41,7 +41,7 @@ Confidence t
 
 > (no Tamil keyword line found; commentary quoted instead)
 
-Commentary: ...to attain realisation through penance, have declared, after solemn contemplation, in chaste literary Tamil and through Tamil music that the six-faced Lord ARumugan is none other than this child who was breast-fed by the six KArthigai maids; as the devotees dancing uniquely around You worship Your hallowed feet, You are seated elegantly in the town of ThiruvaNNAmalai, Oh Great One! Comparing their hair to utter darkness that has overshadowed its rival, namely, the dark cloud, their face to...
+Commentary: ...ttain realisation through penance, have declared, after solemn contemplation, in chaste literary Tamil and through Tamil music that the six-faced Lord ARumugan is none other than this child who was breast-fed by the six KArthigai maids; as the devotees dancing uniquely around You worship Your hallowed feet, You are seated elegantly in the town of ThiruvaNNAmalai, Oh Great One! Comparing their hair to utter darkness that has overshadowed its rival, namely, the dark cloud, their face to...
 
 Confidence c
 
@@ -85,7 +85,7 @@ Confidence c
 > **சீகார்த்திகை யாய அறுவகை**
 > மாதாக்கள்கு மார னெனவெகு
 
-Commentary: ... agni, the inferno that appears during the deluge of the aeon; She is virtues-incorporated; She has blue complexion; She is the deity in charge of the three worlds including the sky; as that PArvathi DEvi along with the six divine KArthikai Mothers, cuddled You, their pet son, calling You "Oh KumArA", You graciously preached the righteous way that is interpreted in the upanishads and VEdAs to Lord SivA, the leader of Mount KailAsh in the North, and became His great Master who removed the blemish called ...
+Commentary: ...inferno that appears during the deluge of the aeon; She is virtues-incorporated; She has blue complexion; She is the deity in charge of the three worlds including the sky; as that PArvathi DEvi along with the six divine KArthikai Mothers, cuddled You, their pet son, calling You "Oh KumArA", You graciously preached the righteous way that is interpreted in the upanishads and VEdAs to Lord SivA, the leader of Mount KailAsh in the North, and became His great Master who removed the blemish...
 
 Confidence t
 
@@ -93,7 +93,7 @@ Confidence t
 
 > (no Tamil keyword line found; commentary quoted instead)
 
-Commentary: ...y; You are hailed by the people of this vast world as the child of that graceful Lord SivA, Oh Wonderful Lord! "You destroyed the demon SUran; You are the favourite Lord of the celestials; You are the child nourished by six (KArththigai) women, Oh Lord KumarA! You wear the garland of kadappa flowers, Oh Valorous One! You are the handsome Master of Lord SivA! You are the consort of the celestial damsel, DEvayAnai!" - so praising You, the celestials who have researched into the VEdAs and the scriptur...
+Commentary: ...u are hailed by the people of this vast world as the child of that graceful Lord SivA, Oh Wonderful Lord! "You destroyed the demon SUran; You are the favourite Lord of the celestials; You are the child nourished by six (KArththigai) women, Oh Lord KumarA! You wear the garland of kadappa flowers, Oh Valorous One! You are the handsome Master of Lord SivA! You are the consort of the celestial damsel, DEvayAnai!" - so praising You, the celestials who have researched into the VEdAs and the s...
 
 Confidence c
 
@@ -106,13 +106,23 @@ Commentary: ...ted the speedy peacock and wielded the spear, Oh Lord MurugA! Oh 
 
 Confidence t
 
+### 959 பழிப்பர் வாழ்த்துவர் (மதுரை)
+
+> படுக்கை வீட்டினு ளவுஷத முதவுவர்
+> **அணைப்பர் கார்த்திகை வருதென வுறுபொருள்**
+> பறிப்பர் மாத்தையி லொருவிசை வருகென ...... அவரவர்க் குறவாயே
+
+Commentary: ...e willing to hug even a corpse. While being engaged in chatting, they slip into the bedroom to prepare some concoction to serve. Then they embrace tightly. Saying that they need money for the festive season in the month KArththigai (December), they extort money from their suitors; they address everyone naming some kind of relationship, inviting them to visit at least once a month. Their intention is to grab the entire wealth of the visitors.They chase away the non-paying customers. Beca...
+
+Confidence t
+
 ### 986 விரகற நோக்கியும் (எழுகரைநாடு)
 
 > விழைவுகு ராப்புனை ...... யுங்குமார
 > **முருகஷ டாக்ஷர சரவண கார்த்திகை**
 > முலைநுகர் பார்த்திப ...... என்றுபாடி
 
-Commentary: ...d night, I should concentrate only on You and nothing else. "Oh KumarA, You love to wear garlands of kurA flowers; Oh MurugA, ShatAksharA (six-lettered Lord), SaravaNabavA, Oh King, who as a child suckled the breasts of Karthigai women" I would like to sing as above! With my words fumbling, I should worship You crying repeatedly. I should belong to You completely; and thereupon, would You not give me the Eternal Knowledge that is beyond anything else in this world? You showed* me the path t...
+Commentary: ...d night, I should concentrate only on You and nothing else. "Oh KumarA, You love to wear garlands of kurA flowers; Oh MurugA, ShatAksharA (six-lettered Lord), SaravaNabavA, Oh King, who as a child suckled the breasts of Karthigai women" I would like to sing as above! With my words fumbling, I should worship You crying repeatedly. I should belong to You completely; and thereupon, would You not give me the Eternal Knowledge that is beyond anything else in this world? You showed* me the ...
 
 Confidence t
 
@@ -122,7 +132,7 @@ Confidence t
 > **யாக ராத்திகழ் கார்த்திகை ...... பெறுவாழ்வே**
 > மேவி னார்க்கருள் தேக்குது வாத சாக்ஷ ஷடாக்ஷர
 
-Commentary: ...! Oh Handsome One, You came (as ThirugnAna Sambandhar) to sing four different varieties* of poetry! You are the deliverer of Eternal Bliss! You are the supreme sacrificer! You are the great treasure brought forth by the six Karththigai Women who appear as stars in the night! Upon those devotees who prostrate at Your feet, Your twelve eyes bestow abundant grace! You are the Lord represented by the six holy letters (SaravaNabava)! You hold the sharp spear that shattered Mount Krouncha! Oh valorous ...
+Commentary: ... Handsome One, You came (as ThirugnAna Sambandhar) to sing four different varieties* of poetry! You are the deliverer of Eternal Bliss! You are the supreme sacrificer! You are the great treasure brought forth by the six Karththigai Women who appear as stars in the night! Upon those devotees who prostrate at Your feet, Your twelve eyes bestow abundant grace! You are the Lord represented by the six holy letters (SaravaNabava)! You hold the sharp spear that shattered Mount Krouncha! Oh val...
 
 Confidence t
 
@@ -132,7 +142,17 @@ Confidence t
 > **கிறைவ குருபர சரவண வெகுமுக**
 > ககன புனிதையும் வனிதைய ரறுவரும்
 
-Commentary: ..., along with the golden celestial land are Her properties; She is the peerless damsel, DEvayAnai; You are Her Lord, Oh Great Master! Oh Saravanabhava! The River Ganga gushing with a thousand faces from the skies and the six damsels of KArthigai equally claim You as their child because You were delivered to them by Goddess PArvathi. You are the Lord of the Celestials, Oh Great One! The long northern range of mountain (Mount MEru) was shattered; the seven hills (surrounding SUran's country) were smash...
+Commentary: ...e golden celestial land are Her properties; She is the peerless damsel, DEvayAnai; You are Her Lord, Oh Great Master! Oh Saravanabhava! The River Ganga gushing with a thousand faces from the skies and the six damsels of KArthigai equally claim You as their child because You were delivered to them by Goddess PArvathi. You are the Lord of the Celestials, Oh Great One! The long northern range of mountain (Mount MEru) was shattered; the seven hills (surrounding SUran's country) were smash...
+
+Confidence t
+
+### 1058 பொதுவதாய்த் தனி (பொதுப்பாடல்கள்)
+
+> வுரவ கோக்கிரி ...... நண்பவானோர்
+> **முதல்வ பார்ப்பதி புதல்வ கார்த்திகை**
+> முலைகள் தேக்கிட ...... வுண்டவாழ்வே
+
+Commentary: ...e a matchless brave horse, Oh valorous One! You are an adoring friend of all mountains in this world! You are the leader of the celestials. You are the beloved child of Mother PArvathi! You are the dear child of all the KArththigai damsels who nursed You with abundant milk from their bosoms! They have their seats on the lotus, the milky ocean and the mount KailAsh; They are respectively the elder Gods, namely BrahmA, Vishnu and SivA. You are the Leader above all of them, Oh Great One! Y...
 
 Confidence t
 
@@ -140,7 +160,7 @@ Confidence t
 
 > (no Tamil keyword line found; commentary quoted instead)
 
-Commentary: ...s, who fought with You in a confronting manner, You graciously freed the celestials from their prison, Oh Lord! Oh Handsome KumarA! Elating the people in the seven worlds, You as a child imbibed milk from the breasts of six KArththigai mothers, Oh Treasure! You are the Leader of the celestial land! You are the son of UmAdEvi! You are the Lord of the Trinity, namely, VishNu, SivA and BrahmA, Oh Great One! With a face looking like the full moon and with the sharp corners of the eyes that angrily coll...
+Commentary: ...ho fought with You in a confronting manner, You graciously freed the celestials from their prison, Oh Lord! Oh Handsome KumarA! Elating the people in the seven worlds, You as a child imbibed milk from the breasts of six KArththigai mothers, Oh Treasure! You are the Leader of the celestial land! You are the son of UmAdEvi! You are the Lord of the Trinity, namely, VishNu, SivA and BrahmA, Oh Great One! With a face looking like the full moon and with the sharp corners of the eyes that angr...
 
 Confidence c
 
@@ -158,7 +178,7 @@ Confidence t
 
 > (no Tamil keyword line found; commentary quoted instead)
 
-Commentary: ...miserably; is it fair? Your hallowed feet are like flower obviating the need to adorn them with anklets, dear child! In order to prostrate at Your feet, even the scriptures are unable to reach them, Oh Master! While the six divine KArthigai women offered their breast-milk every day telling You kindly, "Lo, here is the milk for You to imbibe", You were in the unique pond (SaravaNa) in the midst of the great river Gangai with a thousand faces comfortably tucked in upon a lotus, with fragrant thorns and ...
+Commentary: ...is it fair? Your hallowed feet are like flower obviating the need to adorn them with anklets, dear child! In order to prostrate at Your feet, even the scriptures are unable to reach them, Oh Master! While the six divine KArthigai women offered their breast-milk every day telling You kindly, "Lo, here is the milk for You to imbibe", You were in the unique pond (SaravaNa) in the midst of the great river Gangai with a thousand faces comfortably tucked in upon a lotus, with fragrant thorn...
 
 Confidence c
 
@@ -166,22 +186,33 @@ Confidence c
 
 > (no Tamil keyword line found; commentary quoted instead)
 
-Commentary: ...t have perforations in them, Your devotees play on many many kinds of instruments loudly; they praise Your bright hallowed feet and worship them daily; and You closely guard them, Oh Lord! Considering Your strength, the six foster-mothers of KArththigai took turn willingly and breast-fed You, one after the other, spoke to You words of love and sang lullaby to put You to sleep, Oh MurugA! With a smile on Your lips*, You persecuted the foolish demons, annihilated their lineage and removed the mi...
+Commentary: ... them, Your devotees play on many many kinds of instruments loudly; they praise Your bright hallowed feet and worship them daily; and You closely guard them, Oh Lord! Considering Your strength, the six foster-mothers of KArththigai took turn willingly and breast-fed You, one after the other, spoke to You words of love and sang lullaby to put You to sleep, Oh MurugA! With a smile on Your lips*, You persecuted the foolish demons, annihilated their lineage and removed the misery of the dep...
 
 Confidence c
 
-### 1259 பரிமள மலரடு (பொதுப்பாடல்கள்)
+### 1215 ஆல மேற்ற விழியினர் (பொதுப்பாடல்கள்)
 
-> (no Tamil keyword line found; commentary quoted instead)
+> காத லாற்க ருதுமுணர் ...... தருவாயே
+> **வேல கீர்த்தி விதரண சீலர் வாழ்த்து சரவண**
+> வியாழ கோத்ர மருவிய ...... முருகோனே
 
-Commentary: ...noise of the beating of several rare drums called thimilai and the sound of "mogu mogu" made by the hand-drums (udukkai), hundreds of devils danced when You took Your sharp spear and fought the battle, Oh Great One with six hallowed faces! The hair of these women is decked with fragrant flowers, soaked with the scent of akil (incence) and smeared with musk; large gemstones, diamond and pearls adorn their ear-lobes up to which their kayal-fish-like eyes jump as if they are invading; my lonely heart melts totally like w...
+Commentary: ...veral* disguises (and without revealing Your true identity), You worshipped VaLLi, the damsel of the KuRavAs, guarding the millet-field in VaLLimalai which is the abode of the hunters! You were known as the child of six KArththigai maids whom the entire world worships, and You materialised in the pond (SaravaNa) full of reedy grass! When the senior Lord SivA, Your father, beseeched You saying "Hail to You, Oh Master!", You preached to Him the PraNava ManthrA that gives Knowledge of eter...
 
-Confidence c
+Confidence t
+
+### 1299 பிறவியலை (பொதுப்பாடல்கள்)
+
+> குறுமுனிவ னேத்துமுத் ...... தமிழோனே
+> **குமரகுரு கார்த்திகைப் ...... பெருமாளே.**
+
+Commentary: ... For those who discern You in their intellect, You are the ocean of all virtues! You are the Lord of the three branches of Tamil, worshipped by the diminutive sage, Agasthya! Oh KumarA, the Master! You are adored by the KArththigai maids, Oh Great One! In order that I do not fall again into the wavy river of birth, and in order that I do not roam about aimlessly as per the dictates of Nature, I need Your firm and masterly interpretation of the Truth and the vision of Your hallowed feet....
+
+Confidence t
 
 ### 1326 ஓருரு வாகி (திருவெழுகூற்றிருக்கை)
 
 > (no Tamil keyword line found; commentary quoted instead)
 
-Commentary: ...6) faces; he had an extraordinary youth and handsomness (ezhil has two meanings: the number -7- and handsomness); he was ThirugnAna Sambandhar; and You were born as him in SeegAzhi, Oh Lord! You came as the child of the six (6) KArthigai maids (represented by the six star-constellation, KArthigai); You became the emperor of the Celestial world that possesses five (5) wish-yielding trees (namely, kaRpagam, manthAram, pArijAtham, santhAnam and arichanthanam); this mountain has a secretive appea...
+Commentary: ...; he had an extraordinary youth and handsomness (ezhil has two meanings: the number -7- and handsomness); he was ThirugnAna Sambandhar; and You were born as him in SeegAzhi, Oh Lord! You came as the child of the six (6) KArthigai maids (represented by the six star-constellation, KArthigai); You became the emperor of the Celestial world that possesses five (5) wish-yielding trees (namely, kaRpagam, manthAram, pArijAtham, santhAnam and arichanthanam); this mountain has a secretive appea...
 
 Confidence c

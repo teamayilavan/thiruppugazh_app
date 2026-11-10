@@ -20,7 +20,7 @@ Assignments are KEYWORD-LEVEL: a song is listed when its English commentary (and
 
 > (no Tamil keyword line found; commentary quoted instead)
 
-Commentary: ... stages of life, this body takes different shapes and is inflicted with contaminations. While in this little cottage of the body with nine portals* life is still sustained, I do not have the inclination to attempt great penance for my salvation. I do not have the virtues like meditation. I do not have any virility, righteousness or the capability even to love. I do not have any greatness. However, before my mind ceases to think, (You must graciously come to me) mounted on the unique...
+Commentary: ...ated mountains** were shattered, raising a dust storm; and the fierce wavy ocean was in tumult when You threw Your Spear, Oh MurugA! Once DEvi PArvathi, the Purest form of Mother, performed a unique penance in the great PAdalanagar (ThiruppAthirippuliyUr***) where You reside with relish, Oh Master! Oh Lord with six hallowed faces and the beloved of VaLLi, the damsel of KuRavas, You are worshipped by distinguished sages, Oh Great One! The muscles, combined with flesh, blood and nerves, t...
 
 Confidence c
 
@@ -28,6 +28,6 @@ Confidence c
 
 > (no Tamil keyword line found; commentary quoted instead)
 
-Commentary: She wears a unique ornament called the Knowledge; She is of the hue of dark cloud, She remains the Causal One for everything; She is the enchantress who instils desire in all lives; She is the Goddess who did penance under the shade of a pAthiri tree (in ThiruppAthirip puliyUr); She has an emerald-green complexion; She is the great illusionist; She is PArvathi, the possessor of all virtues; and She is UmAdEvi whose consort and a compassionate master is Lord SivA; and You ...
+Commentary: ... ornament called the Knowledge; She is of the hue of dark cloud, She remains the Causal One for everything; She is the enchantress who instils desire in all lives; She is the Goddess who did penance under the shade of a pAthiri tree (in ThiruppAthirip puliyUr); She has an emerald-green complexion; She is the great illusionist; She is PArvathi, the possessor of all virtues; and She is UmAdEvi whose consort and a compassionate master is Lord SivA; and You are the Master of that SivA! ...
 
 Confidence c
