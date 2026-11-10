@@ -4,13 +4,13 @@
 
 `d-mahisha` | Ambal, Parvati, Durga and Kali | 2 songs
 
-Durga killed the buffalo demon Mahishasura; the songs mention it in passing among the Goddess's deeds.
+In the Devi Mahatmya (Markandeya Purana 81-93 in this edition) Mahishasura defeats the gods and makes himself Indra (82.2). The gods' energies, Shiva's, Vishnu's and the rest, join into the Goddess (82.3-20), she destroys his armies, and in single combat she presses his neck with her foot, strikes him with her spear, and cuts off his head as he half emerges from the buffalo (83.38-40). The gods then hymn her (84). The songs mention the deed only in passing. Text: Sanskrit Wikisource.
 
 ## References
 
 | Source | Reference | Note | Status |
 |---|---|---|---|
-| Devi Mahatmya, Madhyama Charitra | ch. 2 (Mahishasura's armies), ch. 3 (Mahishasura slain), ch. 4 (hymn of the gods) | Markandeya Purana chapters 81-93 in the Banerjee edition, 78-90 in the Venkatesh Press edition; chapter titles taken from two printed-edition descriptions found by search, the Sanskrit text was not fetched | search result only (tradition) |
+| Markandeya Purana, Devi Mahatmya (Sanskrit, Wikisource) | ch. 82 (Mahishasura becomes Indra, the gods' energies form the Goddess, vv. 2-20; the gods go to Brahma, Shiva and Vishnu in 82.3), ch. 83 (his army and then Mahishasura slain, vv. 38-40), ch. 84 (the gods' hymn) [https://sa.wikisource.org/wiki/%E0%A4%AE%E0%A4%BE%E0%A4%B0%E0%A5%8D%E0%A4%95%E0%A4%A3%E0%A5%8D%E0%A4%A1%E0%A5%87%E0%A4%AF%E0%A4%AA%E0%A5%81%E0%A4%B0%E0%A4%BE%E0%A4%A3%E0%A4%AE%E0%A5%8D/%E0%A4%85%E0%A4%A7%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%AF%E0%A4%83_%E0%A5%A6%E0%A5%AE%E0%A5%A7-%E0%A5%A6%E0%A5%AE%E0%A5%AB] | chapter numbers are those of this edition (Banerjea numbering, Devi Mahatmya = 81-93; the Pune edition counts 78-90); the colophons name ch. 82 'Mahishasura's army slain', ch. 83 'Mahishasura slain', ch. 84 the hymn. Verses 82.2, 82.13, 83.38, 83.40 and 84.2 are machine-checked | machine-read from the Sanskrit text; re-checked on every build |
 
 Assignments start KEYWORD-LEVEL: a song is listed when its English commentary (and, where possible, a Tamil lyric line) matches the story. A story with a 'Hand-read notes' section was then read (in full, or the doubtful part, as that section says) and wrong songs removed; other stories were not. Confidence: **t** = a Tamil lyric line matched and the commentary agrees; **c** = commentary only (no Tamil keyword line found); **low** = commentary did not match, check by reading the song.
 

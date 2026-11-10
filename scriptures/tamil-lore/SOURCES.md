@@ -31,3 +31,10 @@ Texts are cached in `scripts/.cache/` (git-ignored): `pp_all.json` = Periya Pura
 | Periya Puranam | 12680:5 | துதிக்கையினில்புக்கு | the spider bites the elephant's trunk | ok |
 | Periya Puranam | 12680:8 | கமலவதி | Kamalavati | ok |
 | Periya Puranam | 12680:10 | கோச்செங்கண்ணானோ | the red-eyed child | ok |
+| Purananuru poem | 105 | வேள்பாரி | poem 105 praises Pari | ok |
+| Purananuru poem | 121 | மலையமான்திருமுடிக்காரி | poem 121 praises Kari | ok |
+| Purananuru poem | 127 | ஆய் | poem 127 praises Ay | ok |
+| Purananuru poem | 141 | பேகன் | poem 141 praises Pekan | ok |
+| Purananuru poem | 148 | நள்ளி | poem 148 praises Nalli | ok |
+| Purananuru poem | 151 | குமணன் | poem 151 praises Kumanan | ok |
+| Purananuru poem | 204 | ஓரி | poem 204 praises Ori | ok |

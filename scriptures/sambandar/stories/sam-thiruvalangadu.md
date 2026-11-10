@@ -4,13 +4,13 @@
 
 `sam-thiruvalangadu` | Thirugnana Sambandar | 1 songs
 
-Song 674 says Murugan came as Sambandar to Thiruvalangadu, where Shiva danced for the celestials. The link to the Kali contest is in the devi/ set (d-kali-dance).
+Song 674 says Murugan came as Sambandar to Thiruvalangadu, where Shiva danced for the celestials. Sambandar's own hymn at Thiruvalangadu is Tevaram 1.45 (12 verses; verse 1 names Alangadu and the Pazhaiyanur story of Neeli). The hymn does not describe the dance; that is the temple's tradition, see devi/d-kali-dance.
 
 ## References
 
 | Source | Reference | Note | Status |
 |---|---|---|---|
-| Tevaram, Sambandar (Thiruvalangadu pathigam) | pathigam number not checked |  | from memory, not opened |
+| Tevaram 1.45 (Thiruvalangadu), Sambandar | pathigam 1.45, 12 verses; v. 1 names Alangadu and the Pazhaiyanur story of Neeli [https://thevaaram.org/thirumurai_1/songview.php?thiru=1&Song_idField=1045&padhi=045] | Sambandar's own hymn at Thiruvalangadu exists and is read; its verses do not mention Shiva dancing for the celestials, so the dance is the temple's tradition (see devi/d-kali-dance), not part of the hymn | machine-read from thevaaram.org; re-checked on every build |
 
 Assignments start KEYWORD-LEVEL: a song is listed when its English commentary (and, where possible, a Tamil lyric line) matches the story. A story with a 'Hand-read notes' section was then read (in full, or the doubtful part, as that section says) and wrong songs removed; other stories were not. Confidence: **t** = a Tamil lyric line matched and the commentary agrees; **c** = commentary only (no Tamil keyword line found); **low** = commentary did not match, check by reading the song.
 

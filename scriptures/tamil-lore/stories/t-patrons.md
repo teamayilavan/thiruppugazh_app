@@ -4,13 +4,13 @@
 
 `t-patrons` | Tamil literary lore | 5 songs
 
-The poet says he wasted his verse comparing miserly patrons with Pari, Kari and the other great donors of the Sangam age. The names are used as models of generosity.
+The poet says he wasted his verse comparing miserly patrons with Pari, Kari and the other great donors of the Sangam age; the names are models of generosity. The Sangam poems that praise them are in the Purananuru: Pari (poems 105-111, by Kapilar), Kari (121-124, 126), Ay (127-130), Pekan (141-142), Nalli (148-150), Kumanan (151), Ori (204). The songs also name Karna and 'twenty-one donors', who are not Sangam patrons.
 
 ## References
 
 | Source | Reference | Note | Status |
 |---|---|---|---|
-| Sangam poems (Purananuru) | Pari, Kari and the seven last great donors |  | from memory, not opened |
+| Purananuru (Tamil Wikisource) | Pari: poems 105-111 (Kapilar, with the Pari-magalir lament 112-120); Kari (Malayaman Tirumudikkari): 121-124, 126; Ay Andiran: 127-130; Pekan: 141-142; Nalli: 148-150; Kumanan: 151; Ori: 204 [https://ta.wikisource.org/wiki/%E0%AE%AA%E0%AF%81%E0%AE%B1%E0%AE%A8%E0%AE%BE%E0%AE%A9%E0%AF%82%E0%AE%B1%E0%AF%81] | the Sangam poems in which the patrons are praised by name; poem headers (poet, patron) read and machine-checked for 105, 121, 127, 141, 148, 151 and 204. The songs also name Karna and the 'twenty-one donors', who are not Sangam patrons | machine-read from Tamil Wikisource; re-checked on every build |
 
 Assignments start KEYWORD-LEVEL: a song is listed when its English commentary (and, where possible, a Tamil lyric line) matches the story. A story with a 'Hand-read notes' section was then read (in full, or the doubtful part, as that section says) and wrong songs removed; other stories were not. Confidence: **t** = a Tamil lyric line matched and the commentary agrees; **c** = commentary only (no Tamil keyword line found); **low** = commentary did not match, check by reading the song.
 

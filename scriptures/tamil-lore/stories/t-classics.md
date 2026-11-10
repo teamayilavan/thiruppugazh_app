@@ -4,13 +4,14 @@
 
 `t-classics` | Tamil literary lore | 4 songs
 
-Songs where the poet lists the Tamil classics (Tirukkural, Sangam literature) that false scholars claim to know. A reference list, not a story.
+Songs where the poet lists the Tamil classics (Tirukkural, Sangam literature, Tevaram) that false scholars claim to know. A reference list, not a story: the songs name the works and quote no lines, so the citation is at work level.
 
 ## References
 
 | Source | Reference | Note | Status |
 |---|---|---|---|
-| Tirukkural; Sangam literature |  |  | from memory, not opened |
+| Purananuru (Tamil Wikisource) | e.g. poems 105-111 (Kapilar on Pari) as a sample of the Sangam texts the songs name [https://ta.wikisource.org/wiki/%E0%AE%AA%E0%AF%81%E0%AE%B1%E0%AE%A8%E0%AE%BE%E0%AE%A9%E0%AF%82%E0%AE%B1%E0%AF%81] | the songs name the classics in general ('Sangam literature', Tirukkural, Tevaram) and quote no lines; a work-level citation is all the songs support | machine-read from Tamil Wikisource; re-checked on every build |
+| Tirukkural | 133 chapters, 1330 couplets [https://ta.wikisource.org/wiki/%E0%AE%A4%E0%AE%BF%E0%AE%B0%E0%AF%81%E0%AE%95%E0%AF%8D%E0%AE%95%E0%AF%81%E0%AE%B1%E0%AE%B3%E0%AF%8D] | named in songs 60, 76, 104 and 171; not cited at couplet level because the songs name the work, not a couplet | standard text, title only |
 
 Assignments start KEYWORD-LEVEL: a song is listed when its English commentary (and, where possible, a Tamil lyric line) matches the story. A story with a 'Hand-read notes' section was then read (in full, or the doubtful part, as that section says) and wrong songs removed; other stories were not. Confidence: **t** = a Tamil lyric line matched and the commentary agrees; **c** = commentary only (no Tamil keyword line found); **low** = commentary did not match, check by reading the song.
 

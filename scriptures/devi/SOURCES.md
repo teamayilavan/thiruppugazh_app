@@ -36,3 +36,8 @@ Texts are cached in `scripts/.cache/` (git-ignored): `pp_all.json` = Periya Pura
 | Kanda Puranam, Yuddha Kandam verse | 1251 | காளி | Kali amid the dead | ok |
 | Kanda Puranam, Yuddha Kandam verse | 1416 | சண்டிகை | Chandika joins the battle | ok |
 | Kanda Puranam, Yuddha Kandam verse | 2386 | உமையவள்கோட்டத்தினின்று | the Kanchi temple of Uma named | ok |
+| Markandeya Purana (Devi Mahatmya) verse | 82.2 | जित्वाचसकलान्देवान | Mahishasura defeats all the gods and becomes Indra | ok |
+| Markandeya Purana (Devi Mahatmya) verse | 82.13 | यदभूच्छाम्भवंतेजस्तेनाजायततन्मुखम् | her face from Shiva's brilliance | ok |
+| Markandeya Purana (Devi Mahatmya) verse | 83.38 | पादेनाक्रम्यकण्ठेचशूलेनैनमताडयत् | she presses his neck with her foot and strikes with the spear | ok |
+| Markandeya Purana (Devi Mahatmya) verse | 83.40 | शिरश्छित्त्वानिपातितः | she beheads him | ok |
+| Markandeya Purana (Devi Mahatmya) verse | 84.2 | शक्रादयःसुरगणा | the gods hymn her | ok |

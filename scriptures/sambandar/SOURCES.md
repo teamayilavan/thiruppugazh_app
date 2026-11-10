@@ -60,3 +60,4 @@ Texts are cached in `scripts/.cache/` (git-ignored): `pp_all.json` = Periya Pura
 | Periya Puranam | 12280:786 | பச்சை | the leaf stays green in the fire | ok |
 | Periya Puranam | 12280:1053 | பூம்பாவை | Poompavai betrothed to Sambandar | ok |
 | Periya Puranam | 12280:1058 | பணம் | the snake that bit her | ok |
+| Tevaram (thevaaram.org) verse | 1.45:1 | பழையனூராலங்காட்டெம்அடிகளே | Tevaram 1.45, v. 1: Alangadu | ok |
