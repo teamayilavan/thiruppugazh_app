@@ -453,6 +453,10 @@ def TVPR(n, name, ref="", note=""):
     return R(f"Tiruvilaiyadal Puranam (Paranjothi), padalam {n} {name}", ref or "whole padalam", note, "machine-read from Tamil Wikisource; re-checked on every build", TVP62[:-2] + f"{n:02d}")
 def KPR(ref, note=""):
     return R("Kanda Puranam (Kachiyappar), Utpatti Kandam", ref, note, "machine-read from Tamil Wikisource (first kandam and the start of the second only)", KP_URL)
+PM_URL = "https://projectmadurai.org/pm_etexts/utf8/"
+PMS = "machine-read from Project Madurai (Unicode text); re-checked on every build"
+def KPM(kandam, f, ref, note=""):
+    return R(f"Kanda Puranam (Kachiyappar), {kandam} (Project Madurai text)", ref, note, PMS, PM_URL + f + ".html")
 NOT_IN = lambda src, why: R(src, "not located", why, "searched, not found", "")
 
 CHECKS = {"sambandar": [("pp", f"12280:{v}", t, lab) for v, t, lab in VERSE_CHECKS]}
@@ -491,7 +495,7 @@ CHECKS["saints"] += [
     ("pp", "12100:118", "வாயினில்", "Kannappar tastes the meat in his mouth"), ("pp", "12100:121", "வாயினிற்கொண்டு", "water carried in the mouth"),
     ("tvp", "57", "நந்தி", "Nandi born a shark"), ("tvp", "57", "புன்னை", "the baby found under the punnai tree"),
 ]
-CHECKS["devi"] += [("tvp", "57", "நந்தி", "Nandi the shark"), ("tvp", "57", "புன்னை", "the baby under the punnai tree"), ("tvp", "57", "மீனாட்சி", "the fisher-girl is Meenakshi")]
+CHECKS["devi"] += [("kcp", "4", "ஒருமாவிற்பெருமானை", "the Lord of the one mango tree"), ("kcp", "4", "கம்பை", "the river Kampa interrupts Parvati's worship"), ("kcp", "6", "முலைச்சுவடு", "the mark of the breasts"), ("kcp", "5", "காமக்கோட்டத்துமை", "Kamakshi named"), ("tvp", "57", "நந்தி", "Nandi the shark"), ("tvp", "57", "புன்னை", "the baby under the punnai tree"), ("tvp", "57", "மீனாட்சி", "the fisher-girl is Meenakshi")]
 CHECKS["murugan"] += [
     ("kp", "1331", "குறுமுனிசூளின்", "Krouncha cursed into a mountain by Agastya"), ("kp", "1336", "தாரகன்", "Tarakan beside the mountain"), ("kp", "1515", "தாரக", "the Vel kills Tarakan and the mountain"),
     ("kp", "1213", "குடிலை", "Brahma gives only the letter-form of Om"), ("kp", "1220", "படைப்பது", "Murugan takes over creation"),
@@ -500,6 +504,18 @@ CHECKS["murugan"] += [
 CHECKS["tamil-lore"] += [
     ("tvp", "55", "தனபதி", "the merchant Dhanapati"), ("tvp", "55", "கபிலர்", "Kapilar ranked highest"), ("pp", "12680:5", "துதிக்கையினில்புக்கு", "the spider bites the elephant's trunk"),
     ("pp", "12680:8", "கமலவதி", "Kamalavati"), ("pp", "12680:10", "கோச்செங்கண்ணானோ", "the red-eyed child"),
+]
+
+CHECKS["murugan"] += [
+    ("kpy", "2864", "தொடுகடல்நடுவண்", "Sura goes into the middle of the sea"), ("kpy", "2865", "சூதமாய்", "he stands as a mango tree"),
+    ("kpy", "2867", "பராரைமாவுருவமாகி", "a huge mango form"), ("kpy", "2886", "மாவுருச்சாய்தலோடும்", "the mango form falls"),
+    ("kpy", "2887", "கூறாக்கி", "the body is split in two"), ("kpy", "2889", "சேவலும்மயிலுமாகி", "the two halves become a cock and a peacock"),
+    ("kpy", "2894", "கொடியேஆகி", "the cock is told to become the banner"), ("kpy", "2896", "மஞ்ஞையேறி", "Murugan mounts the peacock"),
+    ("kpy", "2775", "மயிலாய்த்தோன்றி", "Indra appears as a peacock"), ("kpy", "2779", "மகவான்தன்மேல்", "Murugan mounts Indra the peacock"),
+    ("kpy", "2776", "வறந்திடப்", "the peacock's wings dry the sea"), ("kpy", "2592", "வறந்துளது", "the sea dried in the duel"), ("kpy", "2883", "பௌவம்", "the Vel's fire spreads over the seas"),
+    ("kpm", "337", "சயந்தன்", "Jayantan in prison with the devas"), ("kpy", "2936", "சயந்தன்", "Murugan orders Jayantan freed"), ("kpy", "2938", "சிறைக்களத்துச்சென்றனனே", "Veerabahu goes to the prison"),
+    ("kpd", "36", "வேந்தியல்முறை", "Indra's rule restored"), ("kp", "1276", "அயிராவதம்", "Airavata tends Deivayanai"),
+    ("kpd", "46", "திருப்பரங்குன்றிடை", "Deivayanai arrives at Thiruparankundram"), ("kpd", "86", "பரங்குன்றில்வைகினான்", "Murugan stays at Thiruparankundram"), ("kpd", "87", "தெய்வயானை", "Indra gives Deivayanai"),
 ]
 
 REF2 = {
@@ -522,15 +538,24 @@ REF2 = {
     "m-brahma-prison": [KPR("padalam 16 Ayanaich Chiraipuri, vv. 1205-1223 (1219, 1223 checked); padalam 17 Ayanaich Chirai Neekku, vv. 1224-1265"), R("Shiva set", "shiva/stories/murugan-pranava.md", "Murugan teaches Shiva the Pranava", "local", "")],
     "m-tarakasura": [KPR("padalam 20 Tarakan Varaip Padalam, vv. 1329-1531 (1332 checked)")],
     "m-krouncha": [KPR("the mountain is introduced in the Tarakan padalam, vv. 1329-1331 (1329 checked)", "the great battle is in the Yuddha Kandam, which is not on Wikisource")],
-    "m-deivayanai": [KPR("vv. 1275-1277 name Deivayanai and Valli as Murugan's future wives (1275 checked)", "the wedding itself is in a later kandam not on Wikisource")],
+    "m-deivayanai": [KPR("v. 1276 Airavata tends Deivayanai as the Milk Ocean tended Lakshmi; vv. 1275-1277 name her and Valli as Murugan's future wives (1275 and 1276 checked)"),
+                     KPM("Deva Kandam", "pmuni0304", "padalam 2 Deivayanai Ammai Tirumana Padalam, vv. 36-303; vv. 42-46 (Indra sends Deivayanai from Meru on Airavata to Thiruparankundram), 86-88 (Murugan at Thiruparankundram, Indra gives Deivayanai, the wedding is announced), 132 (Murugan reaches Thiruparankundram for the wedding)", "the wedding place is stated in the text: Thiruparankundram")],
     "m-valli-disguise": [KPR("v. 1277 names Valli (checked)", "the wooing is in a later kandam, not on Wikisource")],
-    "m-sea-dried": [TVPR(13, "Kadal Suvara Vel Vitta", "", "a separate sport in which the Pandya prince Ugrakumara dries the sea with the Vel Shiva gives him (13 checked)"), R("Kanda Puranam, Yuddha Kandam", "", "not on Wikisource", SEARCH)],
+    "m-sea-dried": [KPM("Yuddha Kandam", "pmuni0293_03", "padalam 13 Surapadman Vadhai, vv. 2864 (Sura goes into the middle of the sea), 2882-2883 (the Vel's fire spreads over the seas), 2776 (the peacock's wings dry the sea), 2592 (the sea dries in the duel)", "the Puranam does not say the Vel dried the sea to drive Sura out; that is the songs' telling. Sura stands in the sea as the mango tree"),
+                    TVPR(13, "Kadal Suvara Vel Vitta", "", "a separate sport in which the Pandya prince Ugrakumara dries the sea with the Vel Shiva gives him (13 checked)")],
+    "m-mango-sura": [KPM("Yuddha Kandam", "pmuni0293_03", "padalam 13 Surapadman Vadhai, vv. 2864-2868 (Sura goes into the sea and becomes a mango tree 1,100 yojanas tall), 2884-2886 (the Vel strikes and the tree falls), 2887 (Sura takes his own form again; the Vel splits him in two)", "the Puranam has the Vel fell the tree and then split Sura's body; the songs fold both into 'split the mango tree'")],
+    "m-peacock-cock": [KPM("Yuddha Kandam", "pmuni0293_03", "padalam 13 Surapadman Vadhai, vv. 2889-2895 (the two halves rise as a cock and a peacock and attack; Murugan's look cleanses Sura; the cock becomes his banner), 2896-2900 (Murugan mounts the peacock)", "earlier in the same padalam Indra himself becomes a peacock and carries Murugan (vv. 2775-2780); the permanent vehicle and banner come from Sura's two halves"),
+                       ],
+    "m-jayanta": [KPM("Mahendra Kandam", "pmuni0286_01", "padalam 9 Jayantan Pulambu Padalam, v. 337 (Jayantan in prison with the devas); padalam 11, v. 450 (Veerabahu reaches the prison)"),
+                  KPM("Yuddha Kandam", "pmuni0293_03", "padalam 16 Meetchip Padalam, vv. 2935-2943 (Murugan orders Veerabahu to bring Jayantan and the devas back from prison; Veerabahu goes and frees them)"),
+                  KPM("Deva Kandam", "pmuni0304", "v. 36 (Indra rules the golden city again), v. 42 (Sura dead, the devas freed from prison)")],
     "d-mahisha": [R("Devi Mahatmya, Madhyama Charitra", "ch. 2 (Mahishasura's armies), ch. 3 (Mahishasura slain), ch. 4 (hymn of the gods)", "Markandeya Purana chapters 81-93 in the Banerjee edition, 78-90 in the Venkatesh Press edition; chapter titles taken from two printed-edition descriptions found by search, the Sanskrit text was not fetched", SEARCH)],
-    "d-kamakshi-32": [NOT_IN("Kanchi Puranam / Kachi Kalambagam / Tamil devotional literature", "two searches found no source for 'thirty-two dharmas'; one tour-guide blog speaks of 24 pillars and 'acharams'. The tradition is named only in the songs' commentary")],
+    "d-kamakshi-32": [NOT_IN("Kanchi Puranam of Sivagnana Munivar, parts 1-3 (vv. 1-1691), searched on Project Madurai", "the words for 'thirty-two' (முப்பத்திரண்டு and spelling variants) do not occur in the three parts; Kamakshi is named only in invocation v. 5. Earlier searches also found no source; the tradition rests on the songs' commentary")],
     "d-kali-dance": [R("Thiruvalangadu sthala puranam", "", "the dance contest and the raised foot are told on every temple page; accounts differ (17 poses; an earring or an anklet gem; left or right leg)", SEARCH),
                      R("Mootha Tirupathigam (Karaikkal Ammaiyar, Tirumurai 11)", "", "named by one source as the hymn of Tiruvalangadu; an Appar hymn on the contest is claimed but no hymn number was found", SEARCH)],
     "d-kanchi": [R("Ekambareswarar temple legend (Kanchi)", "", "sand lingam under the mango tree, the flooding Vegavati, bangle marks; several temple websites agree", SEARCH),
-                 NOT_IN("Kanchi Puranam / Thirukkurippu Thondar Puranam", "named by a temple site as the text; the text itself was not found online")],
+                 R("Kanchi Puranam (Sivagnana Munivar), part 1 (Project Madurai text)", "invocation vv. 4-6", "v. 4: Parvati's worship is broken off when the river Kampa rises; she clasps the lingam, and the Lord of the one mango tree (oru ma) is praised; v. 6 praises Kamakkottiyammai who gives the mark of her breasts (4 and 6 checked)", PMS, PM_URL + "pmuni0292.html"),
+                 NOT_IN("Kanchi Puranam, parts 1-3 (vv. 1-1691, padalams 1-50)", "the three parts on Project Madurai give the Ekambam story only in the invocation; the padalam on Ekambam itself is not in them, so the bangle marks and the Vegavati detail rest on temple tradition")],
     "d-pathiri": [R("Thiruppathirippuliyur sthala puranam", "", "Parvati worshipped here after 1007 other places, in the formless state, under the pathiri tree; the shrine marks the spot with a bare pedestal (temple websites)", SEARCH)],
     "t-sangam": [TVPR(51, "Sangap Palakai Thanda", "", "the Sangam plank (51 checked)"), TVPR(55, "Sangaththar Kalagam Theertha", "", "Rudrasarman settles the poets' quarrel (55 checked)")],
     "t-spider-elephant": [PPX("12680", "Kochchengat Chola Nayanar Puranam", "vv. 2-6 (spider, web and elephant at Thiruvanaikka), 7-12 (Kochchengat's birth); 3, 4 and 12 checked")],
@@ -640,6 +665,9 @@ def _cache(name):
         _CACHE[name] = json.loads(f.read_text(encoding="utf-8")) if f.exists() else None
     return _CACHE[name]
 
+# Kanda Puranam kandams after the first, from Project Madurai (parse_kp_pm.py); numbers run within the kandam
+KPPM = {"kpm": "kp_mahendra.json", "kpy": "kp_yuddha.json", "kpd": "kp_deva.json", "kcp": "kanchi_part1.json"}
+
 def run_verse_checks(set_key):
     """Re-check each verse cited for a set against the cached source text.
     Returns [(source, location, word, label, True/False/None)]; None = cache file missing."""
@@ -653,7 +681,9 @@ def run_verse_checks(set_key):
             d = _cache("tvp.json"); text = d and d.get(loc)
         elif src == "kp":
             d = _cache("kp_verses.json"); text = d and d.get(loc)
-        ok = None if (_cache({"pp": "pp_all.json", "tvp": "tvp.json", "kp": "kp_verses.json"}[src]) is None) else (word in re.sub(r"\s", "", text or ""))
+        elif src in KPPM:
+            d = _cache(KPPM[src]); text = d and d.get(loc)
+        ok = None if (_cache({"pp": "pp_all.json", "tvp": "tvp.json", "kp": "kp_verses.json", **KPPM}[src]) is None) else (word in re.sub(r"\s", "", text or ""))
         out.append((src, loc, word, label, ok))
     return out
 
@@ -790,10 +820,10 @@ def write_all(songs, by_slug):
         if chk:
             L += ["", "## Verse checks (re-run on every build)", "",
                   "Texts are cached in `scripts/.cache/` (git-ignored): `pp_all.json` = Periya Puranam sections from thevaaram.org (id 12000+10n = puranam n, verse numbers restart in each), "
-                  "`tvp.json` = Tiruvilaiyadal Puranam padalam pages on Tamil Wikisource, `kp_verses.json` = Kanda Puranam on Tamil Wikisource (global verse numbers, first kandam and the start of the second only). "
+                  "`tvp.json` = Tiruvilaiyadal Puranam padalam pages on Tamil Wikisource, `kp_verses.json` = Kanda Puranam on Tamil Wikisource (global verse numbers, first kandam and the start of the second only); `kp_mahendra.json`, `kp_yuddha.json`, `kp_deva.json` = the Mahendra, Yuddha and Deva kandams from Project Madurai's Unicode text, made by `parse_kp_pm.py` (verse numbers run within each kandam; the Yuddha page omits verses 894, 916-925 and 1901). "
                   "A line passes if the word occurs in that verse or page once spaces are removed.", "",
                   "| Text | Location | Word | Shows | Result |", "|---|---|---|---|---|"]
-            names = {"pp": "Periya Puranam", "tvp": "Tiruvilaiyadal Puranam padalam", "kp": "Kanda Puranam verse"}
+            names = {"pp": "Periya Puranam", "tvp": "Tiruvilaiyadal Puranam padalam", "kp": "Kanda Puranam verse (Utpatti)", "kpm": "Kanda Puranam, Mahendra Kandam verse", "kpy": "Kanda Puranam, Yuddha Kandam verse", "kpd": "Kanda Puranam, Deva Kandam verse", "kcp": "Kanchi Puranam (Sivagnana Munivar) part 1 verse"}
             for src, loc, word, lab, ok in chk:
                 L.append(f"| {names[src]} | {loc} | {word} | {lab} | {'ok' if ok else ('NOT FOUND' if ok is False else 'cache missing')} |")
             bad = [c for c in chk if c[4] is False]
