@@ -4,7 +4,7 @@
 
 `t-agastya` | Tamil literary lore | 6 songs
 
-The sage Agastya of Mount Pothigai, who gave Tamil its grammar, worshipped Murugan in Tamil and was taught the essence of Tamil knowledge by him. Also in `murugan/m-agastya`.
+The songs say the sage Agastya of Mount Pothigai worshipped Murugan in Tamil and was taught the essence of Tamil knowledge by him; tradition makes Agastya the first Tamil grammarian. Also in `murugan/m-agastya`.
 
 ## References
 

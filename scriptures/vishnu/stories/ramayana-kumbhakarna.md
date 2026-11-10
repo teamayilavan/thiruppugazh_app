@@ -2,6 +2,8 @@
 
 `ramayana-kumbhakarna` | Ramayana | 1 songs | primary text + no confirmed DP
 
+Rama kills Ravana's brother Kumbhakarna, cutting off his head; the body falls on the wall of Lanka (Valmiki Yuddha 67.165-172; Kamba, Kumbakarnan Vadhai Padalam 337-359).
+
 ## References
 
 | Source | Reference | What it says / quote |

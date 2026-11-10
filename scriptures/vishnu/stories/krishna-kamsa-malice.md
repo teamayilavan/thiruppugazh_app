@@ -2,7 +2,7 @@
 
 `krishna-kamsa-malice` | Krishna / Mahabharata | 2 songs | primary text + no confirmed DP
 
-Krishna and Balarama go to Mathura, defeat the wrestlers and kill their maternal uncle Kamsa.
+Kamsa, Krishna's maternal uncle, persecutes his sister Devaki's newborn children (Bhagavata 10.4.1-5).
 
 ## References
 

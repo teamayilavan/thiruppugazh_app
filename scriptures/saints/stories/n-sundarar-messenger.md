@@ -4,7 +4,7 @@
 
 `n-sundarar-messenger` | Other Tamil Shaiva saints and poets | 4 songs
 
-Sundarar had quarrelled with his wife Paravai at Tiruvarur. Shiva himself walked to her door as his devotee's messenger, more than once, to reconcile them.
+After Sundarar married Sangili at Tiruvorriyur, breaking a vow, his first wife Paravai at Tiruvarur was sunk in sulking anger (PP 314-323). At Sundarar's prayer Shiva himself went to her door at night as his messenger (Eyarkon Kalikkama puranam 331-340) and, the Puranam says, went again later.
 
 ## References
 

@@ -2,7 +2,7 @@
 
 `krishna-butter-pot` | Krishna / Mahabharata | 10 songs | primary text + Divya Prabandham
 
-Krishna steals butter and curds from the hanging pots (uri) in gopi houses. Yashoda ties him to a wooden mortar with a rope, giving him the name Damodara.
+Krishna steals curd and butter from the swinging pots in the gopis' houses, piling planks to reach them (Bhagavata 10.8.29-31).
 
 ## References
 

@@ -2,7 +2,7 @@
 
 `ramayana-army-march` | Ramayana | 2 songs | primary text + no confirmed DP
 
-Hanuman brings Rama and Sugriva together; they swear friendship before fire. Sugriva's armies are gathered and sent to find Sita and then march to Lanka.
+Sugriva's vanara army sets out south for Lanka, eager to free Sita (Valmiki Yuddha 4.62-70).
 
 ## References
 

@@ -4,7 +4,7 @@
 
 `d-kali-dance` | Ambal, Parvati, Durga and Kali | 2 songs
 
-Kali, furious after killing demons, threatened Shiva's town of Thiruvalangadu. Shiva proposed a dance contest; when she matched every pose he lifted his foot to his ear (Urdhva Tandava), a pose she would not match, and she yielded.
+Temple legend of Thiruvalangadu (accounts differ in the details): Kali, furious after killing demons, threatened Shiva's town. Shiva proposed a dance contest; when she matched every pose he lifted his foot to his ear (Urdhva Tandava), a pose she would not match, and she yielded.
 
 ## References
 

@@ -4,7 +4,7 @@
 
 `sam-fever` | Thirugnana Sambandar | 12 songs
 
-Under Jain influence the Pandya king (Koon Pandyan, later Nindrasir Nedumaran) fell to a fever after the Jains' fire was turned on him. Queen Mangaiyarkkarasi and the minister Kulachchirai called Sambandar, who sang 'Mantiramavathu Neeru', put holy ash on the king, cured the fever and straightened his hunchback.
+Under Jain influence the Pandya king (called Maran in the Puranam; later tradition names him Koon Pandyan, 'the hunchback', and Nindrasir Nedumaran) fell ill with a burning fever after the Jains tried to burn Sambandar's lodging and the fire turned on the king (PP 678-705). Queen Mangaiyarkkarasi and the minister Kulachchirai had called Sambandar to Madurai. The Jains' attempt on the left side only made the fever worse (763-766); Sambandar sang 'Mantiramavathu Neeru', rubbed holy ash on the king, and the fever left him (764-765, 772). The songs often join the straightening of the king's hunchback to this cure; in the Puranam it comes later, at the river test (847).
 
 ## References
 

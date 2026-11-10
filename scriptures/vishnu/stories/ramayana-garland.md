@@ -2,7 +2,7 @@
 
 `ramayana-garland` | Ramayana | 1 songs | primary text + no confirmed DP
 
-Sugriva fights his brother Vali, who has driven him out; Rama, hidden by a tree, shoots Vali. Tara, Vali's wife, laments; Sugriva is crowned. The 'garland to mark Sugriva' is the identification used in the second fight.
+Before the second fight between Vali and Sugriva, Rama has a gaja creeper hung round Sugriva's neck so that he can tell the brothers apart (Valmiki Kishkindha 12.39-41; Kamba, Vali Vadhai Padalam 61).
 
 ## References
 

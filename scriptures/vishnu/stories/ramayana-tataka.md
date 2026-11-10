@@ -2,7 +2,7 @@
 
 `ramayana-tataka` | Ramayana | 2 songs | primary text + Divya Prabandham
 
-Vishwamitra takes the boy Rama and Lakshmana to guard his yajna. On the way Rama kills the demoness Tataka, receives divine missiles, then protects the sacrifice at Siddhashrama from Maricha and Subahu.
+On the road to Siddhashrama the sage Vishwamitra has Rama kill the demoness Tataka; Rama's arrow strikes her in the chest and she falls dead (Valmiki Bala 26.25; Kamba, Tataka Vadhai Padalam 45, 49).
 
 ## References
 

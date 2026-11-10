@@ -2,7 +2,7 @@
 
 `avatar-brahma-origin` | Avatars and Vishnu images | 4 songs | primary text + Divya Prabandham
 
-Brahma sits on the lotus that grows from Vishnu's navel; Murugan is Vishnu's nephew and Brahma's rival.
+A lotus grows from Vishnu's navel as he lies on the serpent Ananta over the waters, and Brahma is born in it (Bhagavata 3.8.14-16). Many songs name Brahma as 'the one on the lotus'.
 
 ## References
 

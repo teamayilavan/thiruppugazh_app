@@ -2,7 +2,7 @@
 
 `krishna-mortar-bound` | Krishna / Mahabharata | 6 songs | primary text + Divya Prabandham
 
-Krishna steals butter and curds from the hanging pots (uri) in gopi houses. Yashoda ties him to a wooden mortar with a rope, giving him the name Damodara.
+Caught stealing, Krishna sits on an upturned mortar giving butter to monkeys and runs when Yashoda comes with a stick (Bhagavata 10.9.8-9); every rope she brings is two fingers too short until he lets her bind him (10.9.15-18). Hence the name Damodara.
 
 ## References
 

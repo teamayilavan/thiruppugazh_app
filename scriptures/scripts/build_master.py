@@ -42,7 +42,7 @@ for domain, M in D.DOMAINS:
     for eid, e in M.E.items():
         uid = f"{domain}-{eid}"
         sd = STORY.get(D.slug_for(domain, eid))
-        U[uid] = dict(id=uid, domain=domain, eid=eid, title=e["title"], brief=(sd or {}).get("brief", ""),
+        U[uid] = dict(id=uid, domain=domain, eid=eid, title=e["title"], brief=(getattr(D, "BRIEF_BY_EPISODE", {}).get(uid) or (sd or {}).get("brief", "")),
                       note=e.get("note", ""), refs=D.build_refs(domain, e), dp=D.dp_for(domain, eid), songs={})
     for sid, v in M.A_.items():
         for eid in v["eps"]:

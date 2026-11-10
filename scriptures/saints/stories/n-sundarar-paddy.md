@@ -4,7 +4,7 @@
 
 `n-sundarar-paddy` | Other Tamil Shaiva saints and poets | 1 songs
 
-Pleased by Sundarar's Tamil hymns, Shiva ordered heaps of paddy at Kundaiyur delivered to Paravai.
+Kundaiyur Kizhar, a farmer devoted to Sundarar, had a mountain of paddy he could not carry to him. At Sundarar's prayer Shiva sent dwarf attendants, who carried it in the night to Paravai's house in Tiruvarur (Eyarkon Kalikkama puranam 10-27).
 
 ## References
 

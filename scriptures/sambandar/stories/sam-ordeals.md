@@ -4,7 +4,7 @@
 
 `sam-ordeals` | Thirugnana Sambandar | 10 songs
 
-The Jains proposed contests: both sides' palm-leaf scriptures were thrown into fire (Sambandar's stayed green), then into the flooded Vaigai (his leaf went upstream and halted at Tiruvedagam while theirs was swept away).
+The Jains proposed contests: both sides' palm-leaf scriptures were put into fire (Sambandar's leaf stayed green, PP 786-788), then into the flooded Vaigai (his leaf went upstream and halted at Tiruvedagam while theirs was swept away, PP 846-850). As the leaf floated against the flood the king's hunchback straightened (PP 847).
 
 ## References
 

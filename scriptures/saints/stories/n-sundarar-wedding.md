@@ -4,7 +4,7 @@
 
 `n-sundarar-wedding` | Other Tamil Shaiva saints and poets | 1 songs
 
-On Sundarar's wedding day an old man claimed Sundarar was his slave by an ancient bond. Sundarar scorned him, 'you lying madman', until the old man vanished into the temple and was revealed as Shiva.
+As Sundarar was about to marry at Thirunavalur, an old brahmin stopped the wedding, claiming by a bond that Sundarar and his family were his slaves. Sundarar called him a madman and tore the bond; the old man led him to Thiruvennainallur and vanished into the temple, where Shiva revealed himself and named Sundarar 'Vanthondan' (PP, Thirumalai Sargam 186-216).
 
 ## References
 

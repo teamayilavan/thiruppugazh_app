@@ -4,7 +4,7 @@
 
 `sam-poompavai` | Thirugnana Sambandar | 3 songs
 
-At Mylapore the merchant Sivanesar had kept the ashes and bones of his dead daughter Poompavai, hoping for Sambandar. The saint sang a Tevaram hymn and she rose from the pot as a living girl. The songs say 'brought the skeleton back as a girl'.
+At Mylapore the merchant Sivanesar had vowed his daughter Poompavai to Sambandar (PP 1053). A snake bit her in a garden and she died (1055-1058); her father kept her bones in a pot. When Sambandar came he sang the hymn 'Mattitta Punnai' (Tevaram 2.47, named in PP 1088) and she rose alive from the pot. The songs say 'brought the skeleton back as a girl'.
 
 ## References
 

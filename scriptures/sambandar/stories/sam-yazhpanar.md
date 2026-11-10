@@ -4,7 +4,7 @@
 
 `sam-yazhpanar` | Thirugnana Sambandar | 1 songs
 
-The minstrel Thiruneelakanta Yazhpanar and his wife joined Sambandar and played his hymns on the yazh. One hymn was too large for the instrument, which broke, and Sambandar gave him a new one. Song 354 names the minstrel at Thiruvanaikka.
+The minstrel Thiruneelakanta Yazhpanar came to Sirkazhi with his wife Matanga Chulamani and played Sambandar's hymns on his yazh (PP 131-141). When a hymn would not fit the instrument he was ready to destroy it; Sambandar stopped him, saying the grace of the hymn cannot be measured by an instrument, and bade him play as the music came (PP 449-452). Song 354 names the minstrel at Thiruvanaikka.
 
 ## References
 

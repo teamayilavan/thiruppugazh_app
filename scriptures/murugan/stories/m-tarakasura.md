@@ -4,7 +4,7 @@
 
 `m-tarakasura` | Murugan's own lore (Kanda Puranam) | 15 songs
 
-Tarakasura, Surapadman's brother, was killed by Murugan before the final battle (Asura Kandam).
+Tarakan, brother of Surapadman, held the city beside the Krouncha mountain; Murugan's host marched on it and his Vel killed Tarakan (Utpatti Kandam, Tarakan Varaip Padalam, vv. 1329-1531, esp. 1509-1519).
 
 ## References
 

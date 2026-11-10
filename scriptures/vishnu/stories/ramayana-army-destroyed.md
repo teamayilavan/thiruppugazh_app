@@ -2,6 +2,8 @@
 
 `ramayana-army-destroyed` | Ramayana | 19 songs | primary text + Divya Prabandham
 
+Rama destroys the rakshasa troops of Ravana's army (Valmiki Yuddha 93.7-34).
+
 ## References
 
 | Source | Reference | What it says / quote |

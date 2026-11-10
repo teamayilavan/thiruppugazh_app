@@ -4,7 +4,7 @@
 
 `m-saravana` | Murugan's own lore (Kanda Puranam) | 21 songs
 
-Six sparks from Shiva's eye were carried by Agni and Ganga into the Saravana lake, became six babies, and were nursed by the six Krittika women; Parvati joined them into one child with six faces. Related to the Shiva-set story murugan-skanda-birth.
+Sparks from the eyes in Shiva's forehead were carried by Agni and Vayu to the Ganga, which bore them to the Saravana lake (KP 914-923, 935-950). There they became six children, attended by the six Krittika women (966, 976); Parvati embraced the six and made them one child with six faces and twelve arms (1034-1035). Related to the Shiva-set story murugan-skanda-birth.
 
 ## References
 

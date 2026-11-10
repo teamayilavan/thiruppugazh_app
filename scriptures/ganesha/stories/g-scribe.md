@@ -4,7 +4,7 @@
 
 `g-scribe` | Ganesha | 3 songs
 
-Vyasa dictated the Mahabharata and Ganesha wrote it down on Mount Meru, breaking off his own tusk for a pen when the first one failed.
+The songs say Ganesha wrote the Mahabharata on Mount Meru with his broken tusk while Vyasa narrated it (songs 88, 1016, 1315). Tradition; not found in the texts checked.
 
 ## References
 

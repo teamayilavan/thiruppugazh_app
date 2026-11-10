@@ -49,3 +49,14 @@ Texts are cached in `scripts/.cache/` (git-ignored): `pp_all.json` = Periya Pura
 | Periya Puranam | 12280:1088 | மட்டிட்ட | names the Poompavai hymn 'Mattitta' | ok |
 | Periya Puranam | 12280:1119 | திருமயிலை | Mylapore | ok |
 | Periya Puranam | 12280:1245 | பெருமணம் | Perumanam (no song) | ok |
+| Periya Puranam | 12280:14 | பன்னிரண்டுதிருப்பெயர் | Sirkazhi's twelve names | ok |
+| Periya Puranam | 12280:59 | கரையில்வைத்து | the child left on the bank | ok |
+| Periya Puranam | 12280:131 | மதங்கசூளாமணியார் | Yazhpanar's wife Matanga Chulamani | ok |
+| Periya Puranam | 12280:450 | யாழினால் | the yazh: Yazhpanar about to destroy it | ok |
+| Periya Puranam | 12280:764 | நீறே | holy ash is the cure | ok |
+| Periya Puranam | 12280:765 | தடவ | Sambandar rubs the ash | ok |
+| Periya Puranam | 12280:763 | பீலி | the Jains' peacock feathers on the left side | ok |
+| Periya Puranam | 12280:847 | கூன்நிமிர்ந்த | the hunchback straightens at the river test | ok |
+| Periya Puranam | 12280:786 | பச்சை | the leaf stays green in the fire | ok |
+| Periya Puranam | 12280:1053 | பூம்பாவை | Poompavai betrothed to Sambandar | ok |
+| Periya Puranam | 12280:1058 | பணம் | the snake that bit her | ok |

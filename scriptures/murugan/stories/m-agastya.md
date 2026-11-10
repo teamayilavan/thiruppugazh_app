@@ -4,7 +4,7 @@
 
 `m-agastya` | Murugan's own lore (Kanda Puranam) | 7 songs
 
-Murugan is said to have taught Agastya the secret of the sage's own wisdom and to have given Tamil to him.
+The songs say Murugan taught the sage Agastya, who dwells on Mount Pothigai, the essence of Tamil knowledge. The Kanda Puranam text checked has no such passage in its first kandam.
 
 ## References
 

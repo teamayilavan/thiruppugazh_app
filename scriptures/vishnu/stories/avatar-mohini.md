@@ -2,7 +2,7 @@
 
 `avatar-mohini` | Avatars and Vishnu images | 4 songs | primary text + Divya Prabandham
 
-Gods and demons churn the milk ocean with Mount Mandara and the serpent Vasuki; poison is drunk by Shiva, nectar emerges, Vishnu as Mohini keeps it from the demons.
+Vishnu takes the form of the beautiful woman Mohini; the demons are charmed by her beauty, and she smiles and speaks to them (Bhagavata 8.9.2, 8.9.8-9).
 
 ## References
 

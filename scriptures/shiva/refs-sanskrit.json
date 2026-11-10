@@ -202,16 +202,16 @@
   {
    "src": "Linga Purana",
    "ref": "Linga Purana 1.17",
-   "gist": "Lingodbhava: Brahma's false claim (context only)",
+   "gist": "Context only: the chapter is the Lingodbhava (fiery pillar). An editor's note on the page says Brahma lost his fifth head, in one version for lying, in another for speaking disrespectfully of Shiva",
    "url": "https://www.wisdomlib.org/hinduism/book/the-linga-purana/d/doc1195230.html",
    "confirmed": false
   },
   {
    "src": "Shiva Purana",
-   "ref": "Shiva Purana, Satarudra-samhita ch.8-9 (Bhairava)",
-   "gist": "Bhairava incarnation / sports (keyword hits only)",
+   "ref": "Shiva Purana, Satarudra-samhita ch.9 (Bhairava)",
+   "gist": "After cutting off Brahma's head, Bhairava wanders the three worlds with the skull in his hand in the Kapalika vow, pursued by Brahmahatya (the guilt of killing a brahmin)",
    "url": "https://www.wisdomlib.org/hinduism/book/shiva-purana-english/d/doc226405.html",
-   "confirmed": false
+   "confirmed": true
   }
  ],
  "shiva-bhikshatana": [
@@ -223,18 +223,11 @@
    "confirmed": false
   },
   {
-   "src": "Shiva Purana",
-   "ref": "Shiva Purana, Koti-rudra-samhita ch.29 (Darukavana)",
-   "gist": "Darukavana rakshasas and a jyotirlinga: partial link",
-   "url": "https://www.wisdomlib.org/hinduism/book/shiva-purana-english/d/doc226530.html",
-   "confirmed": false
-  },
-  {
    "src": "Linga Purana",
-   "ref": "Linga Purana 1.29-31, 1.106",
-   "gist": "Bhiksha keyword hits near the Daruka-forest material (not read)",
+   "ref": "Linga Purana 1.29",
+   "gist": "Rudra, nude, dark and handsome, goes to the Daruka forest to test the sages' faith and their wives",
    "url": "https://www.wisdomlib.org/hinduism/book/the-linga-purana/d/doc1195242.html",
-   "confirmed": false
+   "confirmed": true
   }
  ],
  "shiva-annamalai": [
@@ -303,18 +296,9 @@
   {
    "src": "Linga Purana",
    "ref": "Linga Purana 1.95-96",
-   "gist": "Nrisimha chapter; Shiva's deeds (Sharabha keyword hits, not read)",
-   "url": "https://www.wisdomlib.org/hinduism/book/the-linga-purana/d/doc1196075.html",
-   "confirmed": false
-  }
- ],
- "shiva-dakshinamurti": [
-  {
-   "src": "Shiva Purana",
-   "ref": "Shiva Purana, Rudra-samhita 1 ch.8",
-   "gist": "Dakshinamurti appears only as a mantra name, no story",
-   "url": "https://www.wisdomlib.org/hinduism/book/shiva-purana-english/d/doc225976.html",
-   "confirmed": false
+   "gist": "Ch.95 the exploits of Nrisimha; ch.96 Shiva takes the terrible Sharabha form to curb Nrisimha, and Nrisimha prays to him",
+   "url": "https://www.wisdomlib.org/hinduism/book/the-linga-purana/d/doc1196076.html",
+   "confirmed": true
   }
  ],
  "shiva-ardhanari": [
@@ -383,15 +367,6 @@
    "ref": "MBh 3,213-221",
    "gist": "Skanda born of Agni and Svaha (variant)",
    "url": "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/2_epic/mbh/mbh_03_u.htm",
-   "confirmed": false
-  }
- ],
- "shiva-pranava": [
-  {
-   "src": "Skanda Purana",
-   "ref": "Skanda Purana, Kedara-khanda ch.7",
-   "gist": "Only: the six-syllable mantra passed from Skanda to Agastya; not the Pranava teaching to Shiva",
-   "url": "https://www.wisdomlib.org/hinduism/book/the-skanda-purana/d/doc365954.html",
    "confirmed": false
   }
  ]

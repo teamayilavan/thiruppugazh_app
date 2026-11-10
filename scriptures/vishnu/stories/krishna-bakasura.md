@@ -2,6 +2,8 @@
 
 `krishna-bakasura` | Krishna / Mahabharata | 1 songs | primary text + Divya Prabandham
 
+The demon Baka, in the form of a huge crane, swallows Krishna, who burns in its throat until it spits him out; Krishna then splits its beak (Bhagavata 10.11.48-51).
+
 ## References
 
 | Source | Reference | What it says / quote |

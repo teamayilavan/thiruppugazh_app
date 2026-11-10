@@ -63,7 +63,7 @@
    "domain": "ramayana",
    "eid": "tataka",
    "title": "Tataka killed",
-   "brief": "Vishwamitra takes the boy Rama and Lakshmana to guard his yajna. On the way Rama kills the demoness Tataka, receives divine missiles, then protects the sacrifice at Siddhashrama from Maricha and Subahu.",
+   "brief": "On the road to Siddhashrama the sage Vishwamitra has Rama kill the demoness Tataka; Rama's arrow strikes her in the chest and she falls dead (Valmiki Bala 26.25; Kamba, Tataka Vadhai Padalam 45, 49).",
    "note": "",
    "refs": [
     {
@@ -111,12 +111,12 @@
    "domain": "ramayana",
    "eid": "yajna",
    "title": "Vishwamitra's sacrifice protected",
-   "brief": "Vishwamitra takes the boy Rama and Lakshmana to guard his yajna. On the way Rama kills the demoness Tataka, receives divine missiles, then protects the sacrifice at Siddhashrama from Maricha and Subahu.",
+   "brief": "At Siddhashrama Rama and Lakshmana guard Vishwamitra's sacrifice; Rama kills the demon Subahu and drives Maricha away, flung into the sea (Valmiki Bala 30; Kamba, Velvi Padalam 39, 41).",
    "note": "",
    "refs": [
     {
      "src": "Valmiki Ramayana",
-     "ref": "Bala 31 (whole sarga)",
+     "ref": "Bala 30 (whole sarga)",
      "gist": "Rama guards the sacrifice; Subahu killed, Maricha flung away",
      "pinned": true
     },
@@ -689,7 +689,7 @@
    "domain": "ramayana",
    "eid": "garland",
    "title": "Garland to mark Sugriva",
-   "brief": "Sugriva fights his brother Vali, who has driven him out; Rama, hidden by a tree, shoots Vali. Tara, Vali's wife, laments; Sugriva is crowned. The 'garland to mark Sugriva' is the identification used in the second fight.",
+   "brief": "Before the second fight between Vali and Sugriva, Rama has a gaja creeper hung round Sugriva's neck so that he can tell the brothers apart (Valmiki Kishkindha 12.39-41; Kamba, Vali Vadhai Padalam 61).",
    "note": "Kamba verse 61: Rama tells Sugriva to go wearing a flowering creeper (கொடிப் பூ).",
    "refs": [
     {
@@ -718,7 +718,7 @@
    "domain": "ramayana",
    "eid": "vali",
    "title": "Vali killed",
-   "brief": "Sugriva fights his brother Vali, who has driven him out; Rama, hidden by a tree, shoots Vali. Tara, Vali's wife, laments; Sugriva is crowned. The 'garland to mark Sugriva' is the identification used in the second fight.",
+   "brief": "Rama draws his bow and looses an arrow that strikes Vali in the chest and fells him (Valmiki Kishkindha 16.32-36; Kamba, Vali Vadhai Padalam 65-67).",
    "note": "",
    "refs": [
     {
@@ -800,7 +800,7 @@
    "domain": "ramayana",
    "eid": "sugriva-crown",
    "title": "Sugriva crowned",
-   "brief": "Hanuman brings Rama and Sugriva together; they swear friendship before fire. Sugriva's armies are gathered and sent to find Sita and then march to Lanka.",
+   "brief": "After Vali's death Sugriva is crowned king of Kishkindha (Valmiki Kishkindha 26; Kamba, Arasiyal Padalam 5).",
    "note": "In Kamba Lakshmana places the crown on Sugriva at Rama's order (verse 5).",
    "refs": [
     {
@@ -838,7 +838,7 @@
    "domain": "ramayana",
    "eid": "army-march",
    "title": "The vanara army marches to Lanka",
-   "brief": "Hanuman brings Rama and Sugriva together; they swear friendship before fire. Sugriva's armies are gathered and sent to find Sita and then march to Lanka.",
+   "brief": "Sugriva's vanara army sets out south for Lanka, eager to free Sita (Valmiki Yuddha 4.62-70).",
    "note": "",
    "refs": [
     {
@@ -1335,7 +1335,7 @@
    "domain": "ramayana",
    "eid": "kumbhakarna",
    "title": "Kumbhakarna killed",
-   "brief": "",
+   "brief": "Rama kills Ravana's brother Kumbhakarna, cutting off his head; the body falls on the wall of Lanka (Valmiki Yuddha 67.165-172; Kamba, Kumbakarnan Vadhai Padalam 337-359).",
    "note": "",
    "refs": [
     {
@@ -1391,7 +1391,7 @@
    "domain": "ramayana",
    "eid": "kumbha",
    "title": "Kumbha killed by Sugriva",
-   "brief": "",
+   "brief": "Kumbha, son of Kumbhakarna, is felled by a blow from Sugriva (Valmiki Yuddha 76.92-93; Kamba, Atikayan Vadhai Padalam 236-246).",
    "note": "Kamba tells Kumbha's death inside the Atikayan padalam.",
    "refs": [
     {
@@ -1504,7 +1504,7 @@
    "domain": "ramayana",
    "eid": "army-destroyed",
    "title": "Ravana's army destroyed",
-   "brief": "",
+   "brief": "Rama destroys the rakshasa troops of Ravana's army (Valmiki Yuddha 93.7-34).",
    "note": "General battle; no single verse.",
    "refs": [
     {
@@ -1613,7 +1613,7 @@
    "domain": "ramayana",
    "eid": "heads-cut",
    "title": "Ravana's heads cut off and regrow",
-   "brief": "",
+   "brief": "Rama cuts off Ravana's heads one after another, but each grows back; a hundred are cut in vain (Valmiki Yuddha 107.54-58; Kamba, Ravana Vadhai Padalam 148-162).",
    "note": "",
    "refs": [
     {
@@ -1909,7 +1909,7 @@
    "domain": "ramayana",
    "eid": "ravana-death",
    "title": "Ravana killed by the Brahma weapon",
-   "brief": "",
+   "brief": "Rama fits the Brahma weapon to his bow; it tears Ravana's heart and he falls from his chariot (Valmiki Yuddha 108.15-22; Kamba, Ravana Vadhai Padalam 194-196).",
    "note": "",
    "refs": [
     {
@@ -2398,7 +2398,7 @@
    "domain": "krishna",
    "eid": "butter-pot",
    "title": "Butter and curd stolen from the hanging pots",
-   "brief": "Krishna steals butter and curds from the hanging pots (uri) in gopi houses. Yashoda ties him to a wooden mortar with a rope, giving him the name Damodara.",
+   "brief": "Krishna steals curd and butter from the swinging pots in the gopis' houses, piling planks to reach them (Bhagavata 10.8.29-31).",
    "note": "",
    "refs": [
     {
@@ -2534,7 +2534,7 @@
    "domain": "krishna",
    "eid": "mortar-bound",
    "title": "Tied to the mortar (Damodara)",
-   "brief": "Krishna steals butter and curds from the hanging pots (uri) in gopi houses. Yashoda ties him to a wooden mortar with a rope, giving him the name Damodara.",
+   "brief": "Caught stealing, Krishna sits on an upturned mortar giving butter to monkeys and runs when Yashoda comes with a stick (Bhagavata 10.9.8-9); every rope she brings is two fingers too short until he lets her bind him (10.9.15-18). Hence the name Damodara.",
    "note": "",
    "refs": [
     {
@@ -2745,7 +2745,7 @@
    "domain": "krishna",
    "eid": "bakasura",
    "title": "Bakasura (crane demon)",
-   "brief": "",
+   "brief": "The demon Baka, in the form of a huge crane, swallows Krishna, who burns in its throat until it spits him out; Krishna then splits its beak (Bhagavata 10.11.48-51).",
    "note": "",
    "refs": [
     {
@@ -3179,7 +3179,7 @@
    "domain": "krishna",
    "eid": "kamsa",
    "title": "Kamsa killed",
-   "brief": "Krishna and Balarama go to Mathura, defeat the wrestlers and kill their maternal uncle Kamsa.",
+   "brief": "At Mathura Krishna leaps onto the royal dais, seizes Kamsa by the hair and throws him down (Bhagavata 10.44.34-37).",
    "note": "",
    "refs": [
     {
@@ -3247,7 +3247,7 @@
    "domain": "krishna",
    "eid": "kamsa-malice",
    "title": "Kamsa's cruelty to his sister's child",
-   "brief": "Krishna and Balarama go to Mathura, defeat the wrestlers and kill their maternal uncle Kamsa.",
+   "brief": "Kamsa, Krishna's maternal uncle, persecutes his sister Devaki's newborn children (Bhagavata 10.4.1-5).",
    "note": "",
    "refs": [
     {
@@ -3641,7 +3641,7 @@
    "domain": "krishna",
    "eid": "bhishma-shikhandi",
    "title": "Bhishma falls to Arjuna behind Shikhandi",
-   "brief": "General references to the Bharata war, the Kauravas' fall and its aftermath.",
+   "brief": "In the Bharata war Arjuna shoots Bhishma, with Shikhandi placed in front of him (Mahabharata 6,114.53).",
    "note": "",
    "refs": [
     {
@@ -3749,7 +3749,7 @@
    "domain": "krishna",
    "eid": "duryodhana-fall",
    "title": "Duryodhana's thighs broken",
-   "brief": "General references to the Bharata war, the Kauravas' fall and its aftermath.",
+   "brief": "In the mace duel Bhima smashes Duryodhana's thighs, fulfilling the vow he made at the dice game (Mahabharata 9,57.6-44).",
    "note": "",
    "refs": [
     {
@@ -3808,7 +3808,7 @@
    "domain": "krishna",
    "eid": "pandava-coronation",
    "title": "Yudhishthira crowned king",
-   "brief": "Krishna as the Pandavas' ally and friend, steering the Kurukshetra war.",
+   "brief": "After the war Yudhishthira is anointed king of the earth (Mahabharata 12,40.15).",
    "note": "",
    "refs": [
     {
@@ -4076,7 +4076,7 @@
    "domain": "avatar",
    "eid": "samudra-manthana",
    "title": "Churning the milk ocean",
-   "brief": "Gods and demons churn the milk ocean with Mount Mandara and the serpent Vasuki; poison is drunk by Shiva, nectar emerges, Vishnu as Mohini keeps it from the demons.",
+   "brief": "Vishnu tells the gods to churn the milk ocean with Mount Mandara as the rod and the serpent Vasuki as the rope (Bhagavata 8.6.22-23; Valmiki Bala 45.17-18). Uccaihshravas, Airavata and Kaustubha emerge, Lakshmi takes her garland to Vishnu, and Dhanvantari appears with the jug of nectar, which the demons snatch (Bhagavata 8.8).",
    "note": "",
    "refs": [
     {
@@ -4200,7 +4200,7 @@
    "domain": "avatar",
    "eid": "halahala",
    "title": "The poison drunk by Shiva",
-   "brief": "Gods and demons churn the milk ocean with Mount Mandara and the serpent Vasuki; poison is drunk by Shiva, nectar emerges, Vishnu as Mohini keeps it from the demons.",
+   "brief": "When the churned ocean throws up the kalakuta poison, all beings go to Shiva, who drinks it from the hollow of his palm (Bhagavata 8.7.18-19, 8.7.42; Valmiki Bala 45.19-25).",
    "note": "",
    "refs": [
     {
@@ -4280,7 +4280,7 @@
    "domain": "avatar",
    "eid": "mohini",
    "title": "Mohini and the nectar",
-   "brief": "Gods and demons churn the milk ocean with Mount Mandara and the serpent Vasuki; poison is drunk by Shiva, nectar emerges, Vishnu as Mohini keeps it from the demons.",
+   "brief": "Vishnu takes the form of the beautiful woman Mohini; the demons are charmed by her beauty, and she smiles and speaks to them (Bhagavata 8.9.2, 8.9.8-9).",
    "note": "Nectar given to the gods by Vishnu as Mohini.",
    "refs": [
     {
@@ -4766,7 +4766,7 @@
    "domain": "avatar",
    "eid": "brahma-origin",
    "title": "Brahma born from Vishnu's navel lotus",
-   "brief": "Brahma sits on the lotus that grows from Vishnu's navel; Murugan is Vishnu's nephew and Brahma's rival.",
+   "brief": "A lotus grows from Vishnu's navel as he lies on the serpent Ananta over the waters, and Brahma is born in it (Bhagavata 3.8.14-16). Many songs name Brahma as 'the one on the lotus'.",
    "note": "",
    "refs": [
     {

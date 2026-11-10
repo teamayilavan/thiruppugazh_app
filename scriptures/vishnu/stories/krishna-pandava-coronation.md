@@ -2,7 +2,7 @@
 
 `krishna-pandava-coronation` | Krishna / Mahabharata | 2 songs | primary text + no confirmed DP
 
-Krishna as the Pandavas' ally and friend, steering the Kurukshetra war.
+After the war Yudhishthira is anointed king of the earth (Mahabharata 12,40.15).
 
 ## References
 

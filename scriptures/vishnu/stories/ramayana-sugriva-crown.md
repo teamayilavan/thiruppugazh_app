@@ -2,7 +2,7 @@
 
 `ramayana-sugriva-crown` | Ramayana | 1 songs | primary text + Divya Prabandham
 
-Hanuman brings Rama and Sugriva together; they swear friendship before fire. Sugriva's armies are gathered and sent to find Sita and then march to Lanka.
+After Vali's death Sugriva is crowned king of Kishkindha (Valmiki Kishkindha 26; Kamba, Arasiyal Padalam 5).
 
 ## References
 

@@ -4,7 +4,7 @@
 
 `d-kanchi` | Ambal, Parvati, Durga and Kali | 4 songs
 
-Parvati made a sand lingam under the mango tree beside the Vegavati and worshipped it; when the river flooded she embraced the lingam to save it, and her bangles left their marks. Shiva then wedded her. The songs add the scar on his chest left by her breast.
+Temple legend: Parvati made a sand lingam under the mango tree beside the Vegavati and worshipped it; when the river flooded she embraced the lingam to save it, and her bangles left their marks. Shiva then wedded her. The songs add the scar on his chest left by her breast.
 
 ## References
 

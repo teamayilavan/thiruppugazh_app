@@ -2,13 +2,12 @@
 
 `murugan-pranava` | Murugan and Shiva | 68 songs | no primary text + Tamil Shaiva texts
 
-Brahma could not explain the meaning of Om, so Murugan imprisoned him. When Shiva asked for the release, Murugan taught him the meaning in his ear at Swamimalai (Swaminatha). The Thiruppugazh repeats this many times.
+Brahma could not explain the meaning of Om, so Murugan imprisoned him. When Shiva asked for the release, Murugan told him the meaning of Om in his ear. The Kanda Puranam (Utpatti Kandam, vv. 1213-1265) sets this on Mount Skanda; later Tamil tradition places it at Swamimalai (Swaminatha). The Thiruppugazh repeats this many times.
 
 ## References
 
 | Source | Reference | What it says / quote |
 |---|---|---|
-| Skanda Purana | Skanda Purana, Kedara-khanda ch.7 | Only: the six-syllable mantra passed from Skanda to Agastya; not the Pranava teaching to Shiva |
 | Tamil Shaiva texts | Kanda Puranam (Kachchiyappa Sivachariyar) Utpatti Kandam, Padalam 16 (Ayanai Siraipuri Padalam, vv 1205-1223), v 1210 | வேறு — Murugan, on being slighted by Brahma, questions him about the Vedas and creation. [https://ta.wikisource.org/wiki/%E0%AE%95%E0%AE%A8%E0%AF%8D%E0%AE%A4_%E0%AE%AA%E0%AF%81%E0%AE%B0%E0%AE%BE%E0%AE%A3%E0%AE%AE%E0%AF%8D] |
 | Tamil Shaiva texts | Kanda Puranam (Kachchiyappa Sivachariyar) Utpatti Kandam, Padalam 16, v 1213 | தாம ரைத்தலை யிருந்தவன் குடிலைமுன் — Brahma recites the Vedas' first word and Murugan asks for the meaning of the one syllable Om. [https://ta.wikisource.org/wiki/%E0%AE%95%E0%AE%A8%E0%AF%8D%E0%AE%A4_%E0%AE%AA%E0%AF%81%E0%AE%B0%E0%AE%BE%E0%AE%A3%E0%AE%AE%E0%AF%8D] |
 | Tamil Shaiva texts | Kanda Puranam (Kachchiyappa Sivachariyar) Utpatti Kandam, Padalam 16, v 1214 | முகத்தி லொன்றதா அவ்வெழுத் துடையதோர் — Murugan smiles; Brahma stares, bewildered, unable to give the meaning. [https://ta.wikisource.org/wiki/%E0%AE%95%E0%AE%A8%E0%AF%8D%E0%AE%A4_%E0%AE%AA%E0%AF%81%E0%AE%B0%E0%AE%BE%E0%AE%A3%E0%AE%AE%E0%AF%8D] |

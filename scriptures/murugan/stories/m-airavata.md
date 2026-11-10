@@ -4,7 +4,7 @@
 
 `m-airavata` | Murugan's own lore (Kanda Puranam) | 12 songs
 
-Deivayanai was brought up by Indra's white elephant Airavata, which is why songs call Murugan the son-in-law of Indra and Airavata's ward.
+The songs say Deivayanai was brought up by Indra's white elephant Airavata.
 
 ## References
 

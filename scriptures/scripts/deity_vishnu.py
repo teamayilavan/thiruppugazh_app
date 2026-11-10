@@ -28,6 +28,7 @@ import ramayana_episodes as RE  # noqa: E402
 from find_kamba import verses as kamba_verses  # noqa: E402
 from fetch_krishna import mbh_lines  # noqa: E402
 from story_data import S as STORY  # noqa: E402,F401
+from vishnu_briefs import BRIEF_BY_EPISODE  # noqa: E402,F401
 
 FOLDER = "vishnu"
 V = HERE.parent / FOLDER

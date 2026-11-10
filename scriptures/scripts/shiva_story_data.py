@@ -79,7 +79,8 @@ story("shiva-kurundam", "Manikkavasagar under the kurundam tree",
 # ------------------------------------------------------------ Murugan and Shiva
 story("shiva-pranava", "Murugan teaches Shiva the Pranava",
       "Brahma could not explain the meaning of Om, so Murugan imprisoned him. When Shiva asked for the release, Murugan "
-      "taught him the meaning in his ear at Swamimalai (Swaminatha). The Thiruppugazh repeats this many times.")
+      "told him the meaning of Om in his ear. The Kanda Puranam (Utpatti Kandam, vv. 1213-1265) sets this on Mount Skanda; later Tamil tradition "
+      "places it at Swamimalai (Swaminatha). The Thiruppugazh repeats this many times.")
 story("shiva-skanda-birth", "Murugan born from Shiva's eye",
-      "Six sparks from Shiva's forehead eye were carried by Agni and Ganga to the Saravana pool and became six babies, "
+      "Six sparks from Shiva's forehead eye were carried by Agni (and Vayu) to the Ganga, which bore them to the Saravana pool and became six babies, "
       "nursed by the six Krittikas. Uma joined them into one six-faced child.")

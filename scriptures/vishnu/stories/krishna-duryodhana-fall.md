@@ -2,7 +2,7 @@
 
 `krishna-duryodhana-fall` | Krishna / Mahabharata | 1 songs | primary text + no confirmed DP
 
-General references to the Bharata war, the Kauravas' fall and its aftermath.
+In the mace duel Bhima smashes Duryodhana's thighs, fulfilling the vow he made at the dice game (Mahabharata 9,57.6-44).
 
 ## References
 

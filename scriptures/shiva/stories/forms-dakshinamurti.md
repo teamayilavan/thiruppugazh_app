@@ -8,7 +8,6 @@ Shiva sits facing south under a banyan tree and teaches the sages Sanaka and his
 
 | Source | Reference | What it says / quote |
 |---|---|---|
-| Shiva Purana | Shiva Purana, Rudra-samhita 1 ch.8 | Dakshinamurti appears only as a mantra name, no story |
 | Tamil Shaiva texts | Tevaram (Appar) Tirumurai 4, pathigam 4.36 (திருப்பழனம்), verse 6; Tirumurai.pathigam.verse as numbered on thevaaram.org | ஆலின்கீ ழறங்க ளெல்லா — Appar at Pazhanam: under the banyan he taught the dharmas to the four, the subtle meaning of every text. [https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=4&Song_idField=4036] |
 | Tamil Shaiva texts | Tevaram (Appar) Tirumurai 6, pathigam 6.66 (திருநாகேச்சரம்), verse 2; Tirumurai.pathigam.verse as numbered on thevaaram.org | உரித்தானை மதவேழந் தன்னை — Appar at Tirunageswaram: seated under the banyan he taught the four (dharma, wealth, pleasure, liberation) with the six Angas and the Vedas. [https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=6&Song_idField=6066] |
 | Tamil Shaiva texts | Tevaram (Appar) Tirumurai 6, pathigam 6.74 (திருநாரையூர்), verse 9; Tirumurai.pathigam.verse as numbered on thevaaram.org | ஆலாலம் மிடற்றணியா அடக்கி — Appar at Naraiyur: under the banyan he taught the four. [https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=6&Song_idField=6074] |

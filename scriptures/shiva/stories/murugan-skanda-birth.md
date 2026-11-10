@@ -2,7 +2,7 @@
 
 `murugan-skanda-birth` | Murugan and Shiva | 4 songs | primary text + Tamil Shaiva texts
 
-Six sparks from Shiva's forehead eye were carried by Agni and Ganga to the Saravana pool and became six babies, nursed by the six Krittikas. Uma joined them into one six-faced child.
+Six sparks from Shiva's forehead eye were carried by Agni (and Vayu) to the Ganga, which bore them to the Saravana pool and became six babies, nursed by the six Krittikas. Uma joined them into one six-faced child.
 
 ## References
 

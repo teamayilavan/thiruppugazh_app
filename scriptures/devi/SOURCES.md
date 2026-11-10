@@ -25,3 +25,6 @@ Texts are cached in `scripts/.cache/` (git-ignored): `pp_all.json` = Periya Pura
 | Tiruvilaiyadal Puranam padalam | 4 | தடாதகை | Tatatakai (Meenakshi) | ok |
 | Tiruvilaiyadal Puranam padalam | 57 | வலை | Shiva casts the net | ok |
 | Tiruvilaiyadal Puranam padalam | 57 | சுறா | the shark | ok |
+| Tiruvilaiyadal Puranam padalam | 57 | நந்தி | Nandi the shark | ok |
+| Tiruvilaiyadal Puranam padalam | 57 | புன்னை | the baby under the punnai tree | ok |
+| Tiruvilaiyadal Puranam padalam | 57 | மீனாட்சி | the fisher-girl is Meenakshi | ok |

@@ -4,7 +4,7 @@
 
 `n-sundarar-gold` | Other Tamil Shaiva saints and poets | 1 songs
 
-Sundarar went to many Shaivite shrines to earn gold for Paravai, exhausted by the walking. Shiva supplied it.
+Song 947's commentary says Sundarar went to many Shaivite shrines to earn gold for Paravai and was exhausted by the walking. The Puranam tells a different gold episode (Shiva's hosts, as hunters, take Sundarar's gold at Tirumurugan Poondi, 164-172); the song's version was not found in the text.
 
 ## References
 

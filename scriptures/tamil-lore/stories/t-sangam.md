@@ -4,7 +4,7 @@
 
 `t-sangam` | Tamil literary lore | 5 songs
 
-When the Sangam poets of Madurai could not agree on the meaning of Shiva's Iraiyanar Akapporul, the mute boy Rudrasarman, born in a merchant family, was brought; he sat on the Sangam plank and the 49 poets' dispute was settled. The songs say Murugan was that boy.
+In the Tiruvilaiyadal Puranam the Sangam poets of Madurai quarrelled over whose poems were best; Shiva sent the five-year-old mute boy Rudrasarman, son of the merchant Dhanapati, to judge. The boy showed his delight only at true poetry and ranked Kapilar, Paranar and Nakkeerar highest (padalam 55; the plank, padalam 51). The songs (126, 568, 987) say Murugan was that boy, and some add the legend that 49 poets disputed the meaning of Shiva's Akapporul, which the boy settled.
 
 ## References
 

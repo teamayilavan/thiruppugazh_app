@@ -477,6 +477,31 @@ CHECKS["tamil-lore"] = [
     ("pp", "12680:3", "திருவானைக்கா", "Thiruvanaikka named"), ("pp", "12680:4", "சிலம்பிவலை", "the spider's web"), ("pp", "12680:12", "கோச்செங்கட்சோழர்", "Kochchengat Chola"),
 ]
 
+CHECKS["sambandar"] += [
+    ("pp", "12280:14", "பன்னிரண்டுதிருப்பெயர்", "Sirkazhi's twelve names"), ("pp", "12280:59", "கரையில்வைத்து", "the child left on the bank"),
+    ("pp", "12280:131", "மதங்கசூளாமணியார்", "Yazhpanar's wife Matanga Chulamani"), ("pp", "12280:450", "யாழினால்", "the yazh: Yazhpanar about to destroy it"),
+    ("pp", "12280:764", "நீறே", "holy ash is the cure"), ("pp", "12280:765", "தடவ", "Sambandar rubs the ash"), ("pp", "12280:763", "பீலி", "the Jains' peacock feathers on the left side"),
+    ("pp", "12280:847", "கூன்நிமிர்ந்த", "the hunchback straightens at the river test"), ("pp", "12280:786", "பச்சை", "the leaf stays green in the fire"),
+    ("pp", "12280:1053", "பூம்பாவை", "Poompavai betrothed to Sambandar"), ("pp", "12280:1058", "பணம்", "the snake that bit her"),
+]
+CHECKS["saints"] += [
+    ("pp", "12290:314", "சங்கிலியார்", "Sundarar marries Sangili at Tiruvorriyur"), ("pp", "12290:319", "புலவிக்கடல", "Paravai's sulking"), ("pp", "12290:338", "திறவாய்", "Shiva at Paravai's door: 'open'"),
+    ("pp", "12290:25", "குறட்பூதப்படை", "dwarf attendants carry the paddy to Paravai's house"), ("pp", "12000:187", "பித்தனுமாக", "Sundarar calls the old man a madman"),
+    ("pp", "12000:190", "ஆவணம்பறிக்க", "Sundarar takes (tears) the bond"), ("pp", "12000:216", "வன்றொண்டன்", "named Vanthondan"),
+    ("pp", "12100:118", "வாயினில்", "Kannappar tastes the meat in his mouth"), ("pp", "12100:121", "வாயினிற்கொண்டு", "water carried in the mouth"),
+    ("tvp", "57", "நந்தி", "Nandi born a shark"), ("tvp", "57", "புன்னை", "the baby found under the punnai tree"),
+]
+CHECKS["devi"] += [("tvp", "57", "நந்தி", "Nandi the shark"), ("tvp", "57", "புன்னை", "the baby under the punnai tree"), ("tvp", "57", "மீனாட்சி", "the fisher-girl is Meenakshi")]
+CHECKS["murugan"] += [
+    ("kp", "1331", "குறுமுனிசூளின்", "Krouncha cursed into a mountain by Agastya"), ("kp", "1336", "தாரகன்", "Tarakan beside the mountain"), ("kp", "1515", "தாரக", "the Vel kills Tarakan and the mountain"),
+    ("kp", "1213", "குடிலை", "Brahma gives only the letter-form of Om"), ("kp", "1220", "படைப்பது", "Murugan takes over creation"),
+    ("kp", "917", "கங்கையில்", "the sparks are sent to the Ganga"), ("kp", "966", "ஆரலாகும்மாதர்", "the six Krittika women"), ("kp", "1034", "ராறுபன்னிருபுய", "six faces and twelve arms"),
+]
+CHECKS["tamil-lore"] += [
+    ("tvp", "55", "தனபதி", "the merchant Dhanapati"), ("tvp", "55", "கபிலர்", "Kapilar ranked highest"), ("pp", "12680:5", "துதிக்கையினில்புக்கு", "the spider bites the elephant's trunk"),
+    ("pp", "12680:8", "கமலவதி", "Kamalavati"), ("pp", "12680:10", "கோச்செங்கண்ணானோ", "the red-eyed child"),
+]
+
 REF2 = {
     "n-sundarar-wedding": [PPX("12000", "Sundarar: Thadutatkonda Puranam (Thirumalai Sargam)", "vv. ~189-230; 189 and 220 checked", "the old man demands to see the bond; Sundarar scorns him")],
     "n-sundarar-messenger": [PPX("12290", "Eyarkon Kalikkama Nayanar Puranam", "v. 8 (Shiva sent as messenger), v. 337 (at Paravai's house); both checked")],
@@ -513,6 +538,12 @@ REF2 = {
 for _st in CATALOGUE:
     if _st["slug"] in REF2:
         _st["refs"] = REF2[_st["slug"]]
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from new_sets_briefs import BRIEF_FIX   # briefs corrected after reading the primary texts
+for _st in CATALOGUE:
+    if _st["slug"] in BRIEF_FIX:
+        _st["brief"] = BRIEF_FIX[_st["slug"]]
 
 SETS["sambandar"]["open_q"] = [
     "Periya Puranam numbering is now settled: the page and the Shiva file both use running verses 1-1256 (checks in this file's table).",

@@ -32,3 +32,11 @@ Texts are cached in `scripts/.cache/` (git-ignored): `pp_all.json` = Periya Pura
 | Kanda Puranam verse | 1277 | வள்ளி | Valli named | ok |
 | Tiruvilaiyadal Puranam padalam | 13 | வேல் | the Vel dries the sea (Ugrakumara Pandyan) | ok |
 | Tiruvilaiyadal Puranam padalam | 13 | கடல் | the sea | ok |
+| Kanda Puranam verse | 1331 | குறுமுனிசூளின் | Krouncha cursed into a mountain by Agastya | ok |
+| Kanda Puranam verse | 1336 | தாரகன் | Tarakan beside the mountain | ok |
+| Kanda Puranam verse | 1515 | தாரக | the Vel kills Tarakan and the mountain | ok |
+| Kanda Puranam verse | 1213 | குடிலை | Brahma gives only the letter-form of Om | ok |
+| Kanda Puranam verse | 1220 | படைப்பது | Murugan takes over creation | ok |
+| Kanda Puranam verse | 917 | கங்கையில் | the sparks are sent to the Ganga | ok |
+| Kanda Puranam verse | 966 | ஆரலாகும்மாதர் | the six Krittika women | ok |
+| Kanda Puranam verse | 1034 | ராறுபன்னிருபுய | six faces and twelve arms | ok |

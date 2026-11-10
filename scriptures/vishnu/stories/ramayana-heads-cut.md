@@ -2,6 +2,8 @@
 
 `ramayana-heads-cut` | Ramayana | 50 songs | primary text + Divya Prabandham
 
+Rama cuts off Ravana's heads one after another, but each grows back; a hundred are cut in vain (Valmiki Yuddha 107.54-58; Kamba, Ravana Vadhai Padalam 148-162).
+
 ## References
 
 | Source | Reference | What it says / quote |

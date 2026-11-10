@@ -2,7 +2,7 @@
 
 `avatar-samudra-manthana` | Avatars and Vishnu images | 9 songs | primary text + Divya Prabandham
 
-Gods and demons churn the milk ocean with Mount Mandara and the serpent Vasuki; poison is drunk by Shiva, nectar emerges, Vishnu as Mohini keeps it from the demons.
+Vishnu tells the gods to churn the milk ocean with Mount Mandara as the rod and the serpent Vasuki as the rope (Bhagavata 8.6.22-23; Valmiki Bala 45.17-18). Uccaihshravas, Airavata and Kaustubha emerge, Lakshmi takes her garland to Vishnu, and Dhanvantari appears with the jug of nectar, which the demons snatch (Bhagavata 8.8).
 
 ## References
 

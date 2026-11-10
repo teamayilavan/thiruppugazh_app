@@ -4,7 +4,7 @@
 
 `n-sundarar-crocodile` | Other Tamil Shaiva saints and poets | 1 songs
 
-At Avinashi a boy was swallowed by a crocodile. Years later Sundarar sang to Shiva and the crocodile spat out the boy alive, grown.
+Tradition and Sundarar's Avinashi hymn tell of a boy swallowed by a crocodile and given back alive years later when Sundarar sang to Shiva. This episode was NOT found in the Periya Puranam text.
 
 ## References
 

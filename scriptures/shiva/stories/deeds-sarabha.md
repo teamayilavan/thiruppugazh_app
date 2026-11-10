@@ -9,7 +9,7 @@ After Narasimha killed Hiranyakashipu his rage did not cool. Shiva took the form
 | Source | Reference | What it says / quote |
 |---|---|---|
 | Shiva Purana | Shiva Purana, Satarudra-samhita ch.11-12 | Prologue and the Sharabha incarnation of Shiva |
-| Linga Purana | Linga Purana 1.95-96 | Nrisimha chapter; Shiva's deeds (Sharabha keyword hits, not read) |
+| Linga Purana | Linga Purana 1.95-96 | Ch.95 the exploits of Nrisimha; ch.96 Shiva takes the terrible Sharabha form to curb Nrisimha, and Nrisimha prays to him |
 
 ## Songs
 

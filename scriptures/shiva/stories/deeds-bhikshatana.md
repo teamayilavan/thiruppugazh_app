@@ -1,6 +1,6 @@
 # Shiva as the wandering beggar
 
-`deeds-bhikshatana` | Deeds of Shiva | 3 songs | no primary text + Tamil Shaiva texts
+`deeds-bhikshatana` | Deeds of Shiva | 3 songs | primary text + Tamil Shaiva texts
 
 Carrying the skull bowl, Shiva wandered naked through the Daruka forest asking for alms, bewitching the sages' wives and breaking the sages' pride in rites. Vishnu appears as Mohini beside him in the story.
 
@@ -9,8 +9,7 @@ Carrying the skull bowl, Shiva wandered naked through the Daruka forest asking f
 | Source | Reference | What it says / quote |
 |---|---|---|
 | Shiva Purana | Shiva Purana, Satarudra-samhita ch.31 (Bhikshuvarya) | Shiva as mendicant incarnation (a different tale, not the Daruka-forest Bhikshatana) |
-| Shiva Purana | Shiva Purana, Koti-rudra-samhita ch.29 (Darukavana) | Darukavana rakshasas and a jyotirlinga: partial link |
-| Linga Purana | Linga Purana 1.29-31, 1.106 | Bhiksha keyword hits near the Daruka-forest material (not read) |
+| Linga Purana | Linga Purana 1.29 | Rudra, nude, dark and handsome, goes to the Daruka forest to test the sages' faith and their wives |
 | Tamil Shaiva texts | Tevaram (Sambandar) Tirumurai 3, pathigam 3.104 (திருப்பரிதிநியமம்), verse 1; Tirumurai.pathigam.verse as numbered on thevaaram.org | விண்கொண்ட தூமதி சூடிநீடு — Sambandar at Tiruparithiniyamam: a ten-verse refrain of the beggar who goes for alms and steals the beauty of the women's glances. [https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=3&Song_idField=3104] |
 | Tamil Shaiva texts | Tevaram (Sambandar) Tirumurai 3, pathigam 3.104 (திருப்பரிதிநியமம்), verse 7; Tirumurai.pathigam.verse as numbered on thevaaram.org | பிறைவளர் செஞ்சடை பின்றயங்கப் — Same pathigam: going from house to house for alms, he makes women's bangles slip and steals their beauty. [https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=3&Song_idField=3104] |
 | Tamil Shaiva texts | Tevaram (Sambandar) Tirumurai 1, pathigam 1.1 (திருப்பிரமபுரம்), verse 2; Tirumurai.pathigam.verse as numbered on thevaaram.org | முற்றலாமையிள நாகமோடேன முளைக்கொம்பவைபூண்டு — Sambandar's first pathigam (Tirupiramapuram): he goes for alms with a skull and the thief steals my heart. [https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=1&Song_idField=1001] |

@@ -4,7 +4,7 @@
 
 `m-sea-dried` | Murugan's own lore (Kanda Puranam) | 48 songs
 
-Surapadman fled into the sea; Murugan's Vel made the ocean dry up or boil, driving him out.
+As the songs retell the war: Surapadman fled into the sea and Murugan's Vel made the ocean dry up or boil. The Yuddha Kandam could not be checked online.
 
 ## References
 

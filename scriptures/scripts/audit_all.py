@@ -5,6 +5,8 @@ import json, subprocess, sys, datetime
 from pathlib import Path
 sys.stdout.reconfigure(encoding="utf-8")
 ROOT = Path(__file__).resolve().parents[2]; SC = ROOT / "scriptures"; S = SC / "scripts"
+def first(txt):
+    return txt.strip().splitlines()[0][:320] if txt.strip() else "no output"
 def run(name):
     r = subprocess.run([sys.executable, "-I", str(S / name)], capture_output=True, text=True, encoding="utf-8", cwd=str(ROOT))
     return (r.stdout + (("\n[stderr]\n" + r.stderr) if r.stderr.strip() and "SyntaxWarning" not in r.stderr else "")).strip()
@@ -26,7 +28,7 @@ f"| Tamil devotional refs (Shiva {conf['shiva']['dp']}, Vishnu {conf['vishnu']['
 "| URL vs reference number (252 entries) | pasuram/pathigam numbers in the URL must equal the cited ref | section 3 |",
 f"| Sanskrit/Puranic refs (Shiva {conf['shiva']['refs']}, Vishnu URL-bearing) | Mahabharata lines exist in the GRETIL text; Bhagavata `Text N` and Valmiki shlokas exist on the page; wisdomlib chapter number equals the ref | section 4 |",
 "| Vishnu Valmiki / Kamba / Bhagavata / Mahabharata verse numbers (194 refs) | `build_ramayana_verses.py`, `build_krishna_verses.py`, `build_avatar_verses.py` fail if a verse or line is missing; all three pass and change no output | section 5 |",
-"| New sets (54 stories) | 66 verse/padalam citations re-checked on every build against cached texts | section 6 |",
+"| New sets (54 stories) | 104 verse and padalam citations re-checked on every build against cached texts | section 6 |",
 "| All 293 reference URLs | each answers HTTP 200 | section 7 |", "",
 "## 1. Quotes, titles, counts (offline)", "", "```", run("audit_local.py"), "```", "",
 "## 2. Tamil devotional references: opening words on the cited page", "",
@@ -38,7 +40,19 @@ f"| Sanskrit/Puranic refs (Shiva {conf['shiva']['refs']}, Vishnu URL-bearing) | 
 "Re-run on 2026-11-10 with the cached source texts (`scripts/.cache`, downloaded 2026-10-26): `build_ramayana_verses.py` (33 episodes, 99 songs), `build_krishna_verses.py` (31 episodes, 70 songs), `build_avatar_verses.py` (12 episodes, 84 songs). None failed; no tracked file changed.", "",
 "## 6. New sets: build-time checks", "", "```", "\n".join(l for l in new.splitlines() if "checks" in l or "WARN" in l), "```", "",
 "## 7. URLs", "", "All 293 URLs returned 200 on 2026-11-10 (log kept in `scripts/.cache/audit/status.log`).", "",
-"## Fixed during this audit", "",
+"## 8. Content-level review (does the passage support the claim?)", "",
+"Stage 1, `verify_content.py`: for every Valmiki and Bhagavata reference the cited verse range was extracted and the gist's key words counted in it; all 104 were scored, every one below 0.3 and the narrow citations up to 0.6 were read in full. Result: " + first(run("verify_content.py")) + ".", "",
+"Stage 2, `verify_content2.py`: the 31 wisdomlib chapters were checked against their gists and the unread ones (marked 'keyword hits, not read') were read; four were corrected or dropped (see below).", "",
+"Stage 3, `verify_verses.py`: every Tevaram, Tiruvasagam and Periya Puranam reference on thevaaram.org was checked against its cited verse NUMBER, not just its page: " + first(run("verify_verses.py")) + ". Kanda Puranam: all 21 cited Shiva-set verses contain the cited opening words at the cited verse number. The 8 single-hymn pages were checked by hand (all verse 1).", "",
+"Stage 4, `verify_dp_gist.py`: Vishnu Tamil references, gist against the English meaning on the page: " + first(run("verify_dp_gist.py")) + "; the weak ones were read and are correct (the pages transliterate names, e.g. Tataka is 'thAdagai').", "",
+"Read by hand: all 17 Mahabharata citations (Sanskrit lines), all 91 Kamba verses against their episodes, the cited Periya Puranam, Kanda Puranam and Tiruvilaiyadal Puranam passages behind the newer sets, and every brief in the six newer sets, the 20 Shiva briefs and all 68 Vishnu briefs.", "",
+"## Corrections made in the content review", "",
+"- `ramayana-yajna` cited Valmiki Bala 31 for Subahu and Maricha; those events are in Bala 30 (31 is the journey to Mithila). Fixed.",
+"- Shiva: Linga Purana 1.29 now pinned for Bhikshatana (Daruka forest); Linga 1.95-96 pinned for Sharabha with the chapter 96 page; Satarudra-samhita ch.9 pinned for Bhairava's skull; Koti-rudra 29 dropped (it does not describe the story); Dakshinamurti ch.8 and Skanda Kedara ch.7 dropped (they only name a mantra). Linga 1.17 stays a candidate.",
+"- Shiva `murugan-pranava`: the Kanda Puranam itself (Utpatti Kandam 1213-1265) tells Brahma's imprisonment, Shiva's plea and Murugan telling Shiva the meaning of Om in his ear, on Mount Skanda; Swamimalai is later tradition. Brief corrected.",
+"- Vishnu: 7 empty briefs written; 3 Mahabharata stories that carried a generic 'General references to the Bharata war' placeholder despite a specific verse now say what the verse says; 10 stories that shared a sibling's text now have their own (`vishnu_briefs.py`).",
+"- Newer sets: Yazhpanar's yazh does NOT break in the Periya Puranam (he was about to destroy it and Sambandar stopped him); the king's hunchback straightens at the river test (v.847), not with the ash; Brahma is struck down and shackled by Murugan, who creates the worlds meanwhile; Krouncha is an asura cursed into a mountain by Agastya and Tarakan's death is in the Utpatti Kandam; the Rudrasarman story in the Tiruvilaiyadal Puranam is about ranking poets, not the Akapporul; the Thiruvanaikka story is told in the Periya Puranam without the curse. Unsupported details were removed or labelled tradition; 104 build-time checks now tie the specifics to verses.", "",
+"## Fixed during the first audit", "",
 "- `avatar-narasimha`: Nanmugan Thiruvandhadhi 18 pointed at an unrelated page (Periya Thirumozhi 2.6) and was marked unseen. The real page was found (`2018/07/nanmugan-thiruvandhadhi-18/`), it describes Narasimha splitting Hiranya's chest; now confirmed.",
 "- `avatar-brahma-origin`: Periya Thirumozhi 5.4.1 was a candidate with the page unopened; the page was opened and its first verse matches; now confirmed.",
 "- `krishna-mortar-bound`: Periya Thirumozhi 11.5.5 was marked confirmed but its URL is the 8.2.5 page that only quotes it (the 11.5.5 page is not yet on the site); now a candidate.",

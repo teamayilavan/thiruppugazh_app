@@ -22,7 +22,7 @@ ep("birth", "Rama's birth and childhood",
    [(BK, "திரு_அவதாரப்_படலம்", [])], "Song 68 (Kausalya calling the child) has no exact verse; the allusion is general.")
 ep("tataka", "Tataka killed", [(B, 26, "26.25", "Tataka is felled by Rama's arrow")],
    [(BK, "தாடகை_வதைப்_படலம்", [45, 49])])
-ep("yajna", "Vishwamitra's sacrifice protected", [(B, 31, "31 (whole sarga)", "Rama guards the sacrifice; Subahu killed, Maricha flung away")],
+ep("yajna", "Vishwamitra's sacrifice protected", [(B, 30, "30 (whole sarga)", "Rama guards the sacrifice; Subahu killed, Maricha flung away")],
    [(BK, "வேள்விப்_படலம்", [39, 41])])
 ep("ahalya", "Ahalya freed", [(B, 49, "49.16–17", "Rama and Lakshmana touch Ahalya's feet after the curse ends")],
    [(BK, "அகலிகைப்_படலம்", [14, 15])],

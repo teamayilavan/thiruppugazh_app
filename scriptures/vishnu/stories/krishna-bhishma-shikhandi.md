@@ -2,7 +2,7 @@
 
 `krishna-bhishma-shikhandi` | Krishna / Mahabharata | 1 songs | primary text + no confirmed DP
 
-General references to the Bharata war, the Kauravas' fall and its aftermath.
+In the Bharata war Arjuna shoots Bhishma, with Shikhandi placed in front of him (Mahabharata 6,114.53).
 
 ## References
 

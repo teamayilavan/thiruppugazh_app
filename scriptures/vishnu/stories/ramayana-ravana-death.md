@@ -2,6 +2,8 @@
 
 `ramayana-ravana-death` | Ramayana | 9 songs | primary text + Divya Prabandham
 
+Rama fits the Brahma weapon to his bow; it tears Ravana's heart and he falls from his chariot (Valmiki Yuddha 108.15-22; Kamba, Ravana Vadhai Padalam 194-196).
+
 ## References
 
 | Source | Reference | What it says / quote |

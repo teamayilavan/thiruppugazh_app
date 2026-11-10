@@ -4,7 +4,7 @@
 
 `t-spider-elephant` | Tamil literary lore | 1 songs
 
-Two Shiva attendants, cursed to be an elephant and a spider, worshipped the lingam at Thiruvanaikka; they fought and died, and the spider was reborn as the Chola king Kochchengat.
+In the Periya Puranam (Kochchengat Chola puranam 2-12) a white elephant daily worshipped the lingam under the jambu tree at Thiruvanaikka, and a spider spun a canopy of web over it. The elephant tore the web as unfit, the spider re-spun it, and finally crept into the elephant's trunk and bit it; both died. Shiva granted the spider rebirth as the Chola king Kochchengat, born to Subadeva and Kamalavati. Temple tradition adds that the two were cursed attendants of Shiva.
 
 ## References
 

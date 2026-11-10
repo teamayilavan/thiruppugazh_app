@@ -4,7 +4,7 @@
 
 `m-jayanta` | Murugan's own lore (Kanda Puranam) | 1 songs
 
-Indra's son Jayanta fled Surapadman's persecution and was freed from prison by Murugan, who restored the heavens to Indra.
+The song's commentary says Indra's son Jayanta fled Surapadman's persecution and was freed from prison by Murugan, who restored the heavens to Indra (Mahendra/Yuddha Kandam, not checkable online).
 
 ## References
 

@@ -4,7 +4,7 @@
 
 `m-valli-disguise` | Murugan's own lore (Kanda Puranam) | 25 songs
 
-Murugan came to Valli, the hunter's daughter, in the millet field as a hunter, an old man and a Vengai tree, and won her.
+The songs say Murugan came to Valli, the hunter's daughter, in the millet field as a hunter, an old man and a Vengai tree, and won her. The Kanda Puranam first kandam only foretells Valli and Deivayanai as his wives (vv. 1275-1277); the wooing is in a later kandam not checkable online.
 
 ## References
 

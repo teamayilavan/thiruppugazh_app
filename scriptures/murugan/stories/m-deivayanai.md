@@ -4,7 +4,7 @@
 
 `m-deivayanai` | Murugan's own lore (Kanda Puranam) | 42 songs
 
-After the war Indra gave his daughter Deivayanai (Devasena), raised by Airavata, to Murugan; the wedding is at Thiruparankundram. Many songs only name her as his consort beside Valli, so this list is partly epithet-level.
+Indra's daughter Deivayanai (Devasena), raised by Airavata, is Murugan's wife; tradition places the wedding at Thiruparankundram. Many songs only name her as his consort beside Valli, so this list is partly epithet-level. The first kandam of the Kanda Puranam foretells the marriage (vv. 1275-1277).
 
 ## References
 

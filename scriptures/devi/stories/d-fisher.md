@@ -4,7 +4,7 @@
 
 `d-fisher` | Ambal, Parvati, Durga and Kali | 2 songs
 
-Parvati was born to the fisher folk of the coast; Shiva cast his net, caught the shark that was troubling them, and married the fisher-girl.
+Parvati, cursed to be born a fisherman's daughter after she heard Shiva's Vedic teaching inattentively, was found as a baby under a punnai tree and raised by the chief of the Pandya coast's fishermen. Nandi, also cursed, became a shark that wrecked the nets; the chief promised his daughter (Meenakshi) to whoever caught it. Shiva came as a young fisherman, caught the shark and married her (Tiruvilaiyadal Puranam, padalam 57). Song 1165 adds that Murugan came to end the curse.
 
 ## References
 

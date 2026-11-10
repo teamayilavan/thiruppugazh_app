@@ -2,7 +2,7 @@
 
 `ramayana-vali` | Ramayana | 7 songs | primary text + Divya Prabandham
 
-Sugriva fights his brother Vali, who has driven him out; Rama, hidden by a tree, shoots Vali. Tara, Vali's wife, laments; Sugriva is crowned. The 'garland to mark Sugriva' is the identification used in the second fight.
+Rama draws his bow and looses an arrow that strikes Vali in the chest and fells him (Valmiki Kishkindha 16.32-36; Kamba, Vali Vadhai Padalam 65-67).
 
 ## References
 

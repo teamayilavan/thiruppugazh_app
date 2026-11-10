@@ -1,0 +1,72 @@
+# -*- coding: utf-8 -*-
+"""HAND-WRITTEN. Brief corrections for the newer story sets after the primary texts were read (2026-11-11).
+Each brief says only what a text I opened supports; tradition and song-only claims are labelled as such.
+build_new_sets.py replaces the catalogue brief with the entry here when the slug matches."""
+
+BRIEF_FIX = {
+ "sam-milk": ("As a small child Sambandar was left on the bank of the temple tank at Sirkazhi while his father bathed, and wept for him (PP 59-62). Shiva and Uma appeared, and Uma fed him "
+              "the milk of Shiva-wisdom from a golden bowl (PP 64-69). The songs say the Tevaram hymns flowed from that milk."),
+ "sam-yazhpanar": ("The minstrel Thiruneelakanta Yazhpanar came to Sirkazhi with his wife Matanga Chulamani and played Sambandar's hymns on his yazh (PP 131-141). When a hymn would not fit "
+                   "the instrument he was ready to destroy it; Sambandar stopped him, saying the grace of the hymn cannot be measured by an instrument, and bade him play as the music came (PP 449-452). "
+                   "Song 354 names the minstrel at Thiruvanaikka."),
+ "sam-fever": ("Under Jain influence the Pandya king (called Maran in the Puranam; later tradition names him Koon Pandyan, 'the hunchback', and Nindrasir Nedumaran) fell ill with a burning fever after the Jains "
+               "tried to burn Sambandar's lodging and the fire turned on the king (PP 678-705). Queen Mangaiyarkkarasi and the minister Kulachchirai had called Sambandar to Madurai. The Jains' attempt on the left side "
+               "only made the fever worse (763-766); Sambandar sang 'Mantiramavathu Neeru', rubbed holy ash on the king, and the fever left him (764-765, 772). The songs often join the straightening of the king's "
+               "hunchback to this cure; in the Puranam it comes later, at the river test (847)."),
+ "sam-ordeals": ("The Jains proposed contests: both sides' palm-leaf scriptures were put into fire (Sambandar's leaf stayed green, PP 786-788), then into the flooded Vaigai (his leaf went upstream and halted at "
+                 "Tiruvedagam while theirs was swept away, PP 846-850). As the leaf floated against the flood the king's hunchback straightened (PP 847)."),
+ "sam-poompavai": ("At Mylapore the merchant Sivanesar had vowed his daughter Poompavai to Sambandar (PP 1053). A snake bit her in a garden and she died (1055-1058); her father kept her bones in a pot. "
+                   "When Sambandar came he sang the hymn 'Mattitta Punnai' (Tevaram 2.47, named in PP 1088) and she rose alive from the pot. The songs say 'brought the skeleton back as a girl'."),
+ "n-sundarar-messenger": ("After Sundarar married Sangili at Tiruvorriyur, breaking a vow, his first wife Paravai at Tiruvarur was sunk in sulking anger (PP 314-323). At Sundarar's prayer Shiva himself went to her "
+                          "door at night as his messenger (Eyarkon Kalikkama puranam 331-340) and, the Puranam says, went again later."),
+ "n-sundarar-wedding": ("As Sundarar was about to marry at Thirunavalur, an old brahmin stopped the wedding, claiming by a bond that Sundarar and his family were his slaves. Sundarar called him a madman and tore the bond; "
+                        "the old man led him to Thiruvennainallur and vanished into the temple, where Shiva revealed himself and named Sundarar 'Vanthondan' (PP, Thirumalai Sargam 186-216)."),
+ "n-sundarar-paddy": ("Kundaiyur Kizhar, a farmer devoted to Sundarar, had a mountain of paddy he could not carry to him. At Sundarar's prayer Shiva sent dwarf attendants, who carried it in the night to Paravai's house "
+                      "in Tiruvarur (Eyarkon Kalikkama puranam 10-27)."),
+ "n-cheraman-kailasa": ("The Chera king Cheraman Perumal (Kazharitrarivar) was a close friend of Sundarar (PP Kazharitrarivar puranam 112-118, 173-175). The song's commentary says the king rode a horse to Kailasa "
+                        "in Sundarar's company and sang his Kailaya Gnana Ula there; the Puranam sections downloaded do not contain the ascent, so this rests on the song and tradition."),
+ "n-sundarar-gold": ("Song 947's commentary says Sundarar went to many Shaivite shrines to earn gold for Paravai and was exhausted by the walking. The Puranam tells a different gold episode (Shiva's hosts, as hunters, "
+                     "take Sundarar's gold at Tirumurugan Poondi, 164-172); the song's version was not found in the text."),
+ "n-sundarar-crocodile": ("Tradition and Sundarar's Avinashi hymn tell of a boy swallowed by a crocodile and given back alive years later when Sundarar sang to Shiva. This episode was NOT found in the Periya Puranam text."),
+ "n-kannappar": ("The hunter Kannappar bathed the Kalahasti lingam with water carried in his mouth, cleared the old flowers with his sandalled foot, and offered meat he had first tasted himself to be sure it was good "
+                 "(PP Kannappar puranam 118-123). When the lingam's eye bled he gave his own eyes (173-176)."),
+ "n-nakkeerar": ("Tradition says the poet Nakkeerar lost his concentration at Thiruparankundram, was seized by a demon and shut in a cave with many other prisoners, and sang the Tirumurugatruppadai, "
+                 "after which Murugan opened the cave and freed them. This is not in the Tiruvilaiyadal Puranam padalams checked (52-54 tell the quarrel with Shiva over the Pandya's poem)."),
+ "d-fisher": ("Parvati, cursed to be born a fisherman's daughter after she heard Shiva's Vedic teaching inattentively, was found as a baby under a punnai tree and raised by the chief of the Pandya coast's fishermen. "
+              "Nandi, also cursed, became a shark that wrecked the nets; the chief promised his daughter (Meenakshi) to whoever caught it. Shiva came as a young fisherman, caught the shark and married her "
+              "(Tiruvilaiyadal Puranam, padalam 57). Song 1165 adds that Murugan came to end the curse."),
+ "d-kanchi": ("Temple legend: Parvati made a sand lingam under the mango tree beside the Vegavati and worshipped it; when the river flooded she embraced the lingam to save it, and her bangles left their marks. "
+              "Shiva then wedded her. The songs add the scar on his chest left by her breast."),
+ "d-pathiri": ("Temple legend: the Goddess performed a penance under the pathiri tree at Thiruppathirippuliyur (Cuddalore) to be one with Shiva; the shrine marks the spot with a bare pedestal."),
+ "d-kali-dance": ("Temple legend of Thiruvalangadu (accounts differ in the details): Kali, furious after killing demons, threatened Shiva's town. Shiva proposed a dance contest; when she matched every pose he lifted his foot "
+                  "to his ear (Urdhva Tandava), a pose she would not match, and she yielded."),
+ "m-krouncha": ("In the Kanda Puranam Krouncha is an asura whom Agastya's curse turned into a mountain; the demon Tarakan lives beside it in a city of illusion, and Krouncha's own magic troubles Murugan's host "
+                "(Utpatti Kandam 1329-1336, 1416-1433). Murugan's Vel bursts Tarakan and the mountain together (1509-1516). The songs also use 'Krouncha pierced' for the whole war."),
+ "m-tarakasura": ("Tarakan, brother of Surapadman, held the city beside the Krouncha mountain; Murugan's host marched on it and his Vel killed Tarakan (Utpatti Kandam, Tarakan Varaip Padalam, vv. 1329-1531, esp. 1509-1519)."),
+ "m-brahma-prison": ("When Murugan asked the meaning of Om, Brahma could give only its letter-form, not its meaning (KP 1213-1217). Murugan made him fall, struck him with his foot and had him shackled in prison "
+                     "on Mount Skanda; meanwhile Murugan himself created the worlds (1219-1223). At Shiva's plea he released Brahma (1229-1256). Related to the Shiva-set story murugan-pranava."),
+ "m-saravana": ("Sparks from the eyes in Shiva's forehead were carried by Agni and Vayu to the Ganga, which bore them to the Saravana lake (KP 914-923, 935-950). There they became six children, attended by the "
+                "six Krittika women (966, 976); Parvati embraced the six and made them one child with six faces and twelve arms (1034-1035). Related to the Shiva-set story murugan-skanda-birth."),
+ "m-mango-sura": ("As the songs retell the war: on its last day Surapadman took the form of a huge mango tree in the sea; Murugan's Vel split it in two, and the halves became the peacock and the cock. "
+                  "The war itself is in the Yuddha Kandam, which could not be checked online."),
+ "m-sea-dried": ("As the songs retell the war: Surapadman fled into the sea and Murugan's Vel made the ocean dry up or boil. The Yuddha Kandam could not be checked online."),
+ "m-peacock-cock": ("As the songs retell the war: the two halves of the split Surapadman became Murugan's vehicle, the peacock, and the cock on his flag. The Yuddha Kandam could not be checked online."),
+ "m-jayanta": ("The song's commentary says Indra's son Jayanta fled Surapadman's persecution and was freed from prison by Murugan, who restored the heavens to Indra (Mahendra/Yuddha Kandam, not checkable online)."),
+ "m-agastya": ("The songs say Murugan taught the sage Agastya, who dwells on Mount Pothigai, the essence of Tamil knowledge. The Kanda Puranam text checked has no such passage in its first kandam."),
+ "m-valli-disguise": ("The songs say Murugan came to Valli, the hunter's daughter, in the millet field as a hunter, an old man and a Vengai tree, and won her. The Kanda Puranam first kandam only foretells Valli and Deivayanai "
+                      "as his wives (vv. 1275-1277); the wooing is in a later kandam not checkable online."),
+ "m-deivayanai": ("Indra's daughter Deivayanai (Devasena), raised by Airavata, is Murugan's wife; tradition places the wedding at Thiruparankundram. Many songs only name her as his consort beside Valli, so this list is partly "
+                  "epithet-level. The first kandam of the Kanda Puranam foretells the marriage (vv. 1275-1277)."),
+ "m-airavata": ("The songs say Deivayanai was brought up by Indra's white elephant Airavata."),
+ "g-valli-elephant": ("The songs say Ganesha took the form of a wild one-tusked elephant so that Valli, frightened, ran to Murugan's arms (songs 146, 715). Tradition, not a checked text."),
+ "g-race": ("Song 30 says Murugan flew round the world on his peacock in a contest with Ganesha; song 532 says the prized fruit was nonetheless given to Ganesha. Popular Pazhani tradition adds that Ganesha went round "
+            "his parents and that Murugan then left for Pazhani in anger."),
+ "g-scribe": ("The songs say Ganesha wrote the Mahabharata on Mount Meru with his broken tusk while Vyasa narrated it (songs 88, 1016, 1315). Tradition; not found in the texts checked."),
+ "t-sangam": ("In the Tiruvilaiyadal Puranam the Sangam poets of Madurai quarrelled over whose poems were best; Shiva sent the five-year-old mute boy Rudrasarman, son of the merchant Dhanapati, to judge. "
+              "The boy showed his delight only at true poetry and ranked Kapilar, Paranar and Nakkeerar highest (padalam 55; the plank, padalam 51). The songs (126, 568, 987) say Murugan was that boy, and some "
+              "add the legend that 49 poets disputed the meaning of Shiva's Akapporul, which the boy settled."),
+ "t-agastya": ("The songs say the sage Agastya of Mount Pothigai worshipped Murugan in Tamil and was taught the essence of Tamil knowledge by him; tradition makes Agastya the first Tamil grammarian. Also in `murugan/m-agastya`."),
+ "t-spider-elephant": ("In the Periya Puranam (Kochchengat Chola puranam 2-12) a white elephant daily worshipped the lingam under the jambu tree at Thiruvanaikka, and a spider spun a canopy of web over it. The elephant tore "
+                       "the web as unfit, the spider re-spun it, and finally crept into the elephant's trunk and bit it; both died. Shiva granted the spider rebirth as the Chola king Kochchengat, born to Subadeva "
+                       "and Kamalavati. Temple tradition adds that the two were cursed attendants of Shiva."),
+}

@@ -2,7 +2,7 @@
 
 `krishna-kamsa` | Krishna / Mahabharata | 4 songs | primary text + Divya Prabandham
 
-Krishna and Balarama go to Mathura, defeat the wrestlers and kill their maternal uncle Kamsa.
+At Mathura Krishna leaps onto the royal dais, seizes Kamsa by the hair and throws him down (Bhagavata 10.44.34-37).
 
 ## References
 

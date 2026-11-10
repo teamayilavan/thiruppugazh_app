@@ -26,3 +26,8 @@ Texts are cached in `scripts/.cache/` (git-ignored): `pp_all.json` = Periya Pura
 | Periya Puranam | 12680:3 | திருவானைக்கா | Thiruvanaikka named | ok |
 | Periya Puranam | 12680:4 | சிலம்பிவலை | the spider's web | ok |
 | Periya Puranam | 12680:12 | கோச்செங்கட்சோழர் | Kochchengat Chola | ok |
+| Tiruvilaiyadal Puranam padalam | 55 | தனபதி | the merchant Dhanapati | ok |
+| Tiruvilaiyadal Puranam padalam | 55 | கபிலர் | Kapilar ranked highest | ok |
+| Periya Puranam | 12680:5 | துதிக்கையினில்புக்கு | the spider bites the elephant's trunk | ok |
+| Periya Puranam | 12680:8 | கமலவதி | Kamalavati | ok |
+| Periya Puranam | 12680:10 | கோச்செங்கண்ணானோ | the red-eyed child | ok |

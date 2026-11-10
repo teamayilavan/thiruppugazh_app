@@ -4,7 +4,7 @@
 
 `n-kannappar` | Other Tamil Shaiva saints and poets | 3 songs
 
-The hunter Kannappar washed the Kalahasti lingam with water from his mouth, offered it tasted meat and, when its eye bled, gave his own eyes.
+The hunter Kannappar bathed the Kalahasti lingam with water carried in his mouth, cleared the old flowers with his sandalled foot, and offered meat he had first tasted himself to be sure it was good (PP Kannappar puranam 118-123). When the lingam's eye bled he gave his own eyes (173-176).
 
 ## References
 

@@ -10,8 +10,8 @@ Brahma's fifth head spoke proudly, or the head claimed equality with Shiva. Shiv
 |---|---|---|
 | Shiva Purana | Shiva Purana, Vidyesvara-samhita ch.8 | Bhairava, made from Shiva's brow, seizes Brahma's fifth head for his lie |
 | Skanda Purana | Skanda Purana, Kashi-khanda ch.31 (Manifestation of Bhairava) | Brahma's fifth head blazes with pride; Kalabhairava plucks it off with a fingernail |
-| Linga Purana | Linga Purana 1.17 | Lingodbhava: Brahma's false claim (context only) |
-| Shiva Purana | Shiva Purana, Satarudra-samhita ch.8-9 (Bhairava) | Bhairava incarnation / sports (keyword hits only) |
+| Linga Purana | Linga Purana 1.17 | Context only: the chapter is the Lingodbhava (fiery pillar). An editor's note on the page says Brahma lost his fifth head, in one version for lying, in another for speaking disrespectfully of Shiva |
+| Shiva Purana | Shiva Purana, Satarudra-samhita ch.9 (Bhairava) | After cutting off Brahma's head, Bhairava wanders the three worlds with the skull in his hand in the Kapalika vow, pursued by Brahmahatya (the guilt of killing a brahmin) |
 | Tamil Shaiva texts | Tevaram (Sambandar) Tirumurai 2, pathigam 2.19 (திருநெல்லிக்கா), verse 3; Tirumurai.pathigam.verse as numbered on thevaaram.org | நலந்தா னவன்நான் முகன்தன் — Sambandar at Tirunellikka: the skull-bearer holds Brahma's head. [https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=2&Song_idField=2019] |
 | Tamil Shaiva texts | Tevaram (Sambandar) Tirumurai 3, pathigam 3.89 (திருக்கொச்சைவயம்), verse 5; Tirumurai.pathigam.verse as numbered on thevaaram.org | மறைகொளும் திறலினா ராகுதிப் — Sambandar at Kochchaivayam: the Lord who cut off Brahma's head. [https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=3&Song_idField=3089] |
 | Tamil Shaiva texts | Tevaram (Appar) Tirumurai 6, pathigam 6.66 (திருநாகேச்சரம்), verse 8; Tirumurai.pathigam.verse as numbered on thevaaram.org | எய்தானைப் புரமூன்றும் இமைக்கும் — Appar at Tirunageswaram: cut one head of the unrighteous Brahma with a hand. [https://www.thevaaram.org/thirumurai_1/onepage.php?thiru=6&Song_idField=6066] |

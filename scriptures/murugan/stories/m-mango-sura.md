@@ -4,7 +4,7 @@
 
 `m-mango-sura` | Murugan's own lore (Kanda Puranam) | 73 songs
 
-In the last day of the war Surapadman took the form of a huge mango tree; Murugan's Vel split it in two, and the halves became the peacock and the cock.
+As the songs retell the war: on its last day Surapadman took the form of a huge mango tree in the sea; Murugan's Vel split it in two, and the halves became the peacock and the cock. The war itself is in the Yuddha Kandam, which could not be checked online.
 
 ## References
 

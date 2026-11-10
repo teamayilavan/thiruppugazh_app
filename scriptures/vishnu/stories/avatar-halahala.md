@@ -2,7 +2,7 @@
 
 `avatar-halahala` | Avatars and Vishnu images | 4 songs | primary text + Divya Prabandham
 
-Gods and demons churn the milk ocean with Mount Mandara and the serpent Vasuki; poison is drunk by Shiva, nectar emerges, Vishnu as Mohini keeps it from the demons.
+When the churned ocean throws up the kalakuta poison, all beings go to Shiva, who drinks it from the hollow of his palm (Bhagavata 8.7.18-19, 8.7.42; Valmiki Bala 45.19-25).
 
 ## References
 

@@ -2,11 +2,11 @@
  "stats": {
   "episodes_defined": 20,
   "stories_with_songs": 20,
-  "with_primary_text": 12,
+  "with_primary_text": 13,
   "with_confirmed_dp": 19,
-  "with_both": 11,
+  "with_both": 12,
   "only_primary": 1,
-  "only_dp": 8,
+  "only_dp": 7,
   "neither": 0,
   "songs_total": 309,
   "songs_with_story": 238,
@@ -1218,17 +1218,17 @@
     {
      "src": "Linga Purana",
      "ref": "Linga Purana 1.17",
-     "gist": "Lingodbhava: Brahma's false claim (context only)",
+     "gist": "Context only: the chapter is the Lingodbhava (fiery pillar). An editor's note on the page says Brahma lost his fifth head, in one version for lying, in another for speaking disrespectfully of Shiva",
      "quote": "",
      "pinned": false,
      "url": "https://www.wisdomlib.org/hinduism/book/the-linga-purana/d/doc1195230.html"
     },
     {
      "src": "Shiva Purana",
-     "ref": "Shiva Purana, Satarudra-samhita ch.8-9 (Bhairava)",
-     "gist": "Bhairava incarnation / sports (keyword hits only)",
+     "ref": "Shiva Purana, Satarudra-samhita ch.9 (Bhairava)",
+     "gist": "After cutting off Brahma's head, Bhairava wanders the three worlds with the skull in his hand in the Kapalika vow, pursued by Brahmahatya (the guilt of killing a brahmin)",
      "quote": "",
-     "pinned": false,
+     "pinned": true,
      "url": "https://www.wisdomlib.org/hinduism/book/shiva-purana-english/d/doc226405.html"
     }
    ],
@@ -1378,19 +1378,11 @@
      "url": "https://www.wisdomlib.org/hinduism/book/shiva-purana-english/d/doc226427.html"
     },
     {
-     "src": "Shiva Purana",
-     "ref": "Shiva Purana, Koti-rudra-samhita ch.29 (Darukavana)",
-     "gist": "Darukavana rakshasas and a jyotirlinga: partial link",
-     "quote": "",
-     "pinned": false,
-     "url": "https://www.wisdomlib.org/hinduism/book/shiva-purana-english/d/doc226530.html"
-    },
-    {
      "src": "Linga Purana",
-     "ref": "Linga Purana 1.29-31, 1.106",
-     "gist": "Bhiksha keyword hits near the Daruka-forest material (not read)",
+     "ref": "Linga Purana 1.29",
+     "gist": "Rudra, nude, dark and handsome, goes to the Daruka forest to test the sages' faith and their wives",
      "quote": "",
-     "pinned": false,
+     "pinned": true,
      "url": "https://www.wisdomlib.org/hinduism/book/the-linga-purana/d/doc1195242.html"
     }
    ],
@@ -1920,10 +1912,10 @@
     {
      "src": "Linga Purana",
      "ref": "Linga Purana 1.95-96",
-     "gist": "Nrisimha chapter; Shiva's deeds (Sharabha keyword hits, not read)",
+     "gist": "Ch.95 the exploits of Nrisimha; ch.96 Shiva takes the terrible Sharabha form to curb Nrisimha, and Nrisimha prays to him",
      "quote": "",
-     "pinned": false,
-     "url": "https://www.wisdomlib.org/hinduism/book/the-linga-purana/d/doc1196075.html"
+     "pinned": true,
+     "url": "https://www.wisdomlib.org/hinduism/book/the-linga-purana/d/doc1196076.html"
     }
    ],
    "dp": [],
@@ -2473,16 +2465,7 @@
    "title": "Dakshinamurti",
    "brief": "Shiva sits facing south under a banyan tree and teaches the sages Sanaka and his brothers by silence alone.",
    "note": "",
-   "refs": [
-    {
-     "src": "Shiva Purana",
-     "ref": "Shiva Purana, Rudra-samhita 1 ch.8",
-     "gist": "Dakshinamurti appears only as a mantra name, no story",
-     "quote": "",
-     "pinned": false,
-     "url": "https://www.wisdomlib.org/hinduism/book/shiva-purana-english/d/doc225976.html"
-    }
-   ],
+   "refs": [],
    "dp": [
     {
      "prabandham": "Tevaram (Appar)",
@@ -3277,18 +3260,9 @@
    "domain": "murugan",
    "eid": "pranava",
    "title": "Murugan teaches Shiva the Pranava",
-   "brief": "Brahma could not explain the meaning of Om, so Murugan imprisoned him. When Shiva asked for the release, Murugan taught him the meaning in his ear at Swamimalai (Swaminatha). The Thiruppugazh repeats this many times.",
+   "brief": "Brahma could not explain the meaning of Om, so Murugan imprisoned him. When Shiva asked for the release, Murugan told him the meaning of Om in his ear. The Kanda Puranam (Utpatti Kandam, vv. 1213-1265) sets this on Mount Skanda; later Tamil tradition places it at Swamimalai (Swaminatha). The Thiruppugazh repeats this many times.",
    "note": "",
-   "refs": [
-    {
-     "src": "Skanda Purana",
-     "ref": "Skanda Purana, Kedara-khanda ch.7",
-     "gist": "Only: the six-syllable mantra passed from Skanda to Agastya; not the Pranava teaching to Shiva",
-     "quote": "",
-     "pinned": false,
-     "url": "https://www.wisdomlib.org/hinduism/book/the-skanda-purana/d/doc365954.html"
-    }
-   ],
+   "refs": [],
    "dp": [
     {
      "prabandham": "Kanda Puranam (Kachchiyappa Sivachariyar)",
@@ -3675,7 +3649,7 @@
    "domain": "murugan",
    "eid": "skanda-birth",
    "title": "Murugan born from Shiva's eye",
-   "brief": "Six sparks from Shiva's forehead eye were carried by Agni and Ganga to the Saravana pool and became six babies, nursed by the six Krittikas. Uma joined them into one six-faced child.",
+   "brief": "Six sparks from Shiva's forehead eye were carried by Agni (and Vayu) to the Ganga, which bore them to the Saravana pool and became six babies, nursed by the six Krittikas. Uma joined them into one six-faced child.",
    "note": "",
    "refs": [
     {

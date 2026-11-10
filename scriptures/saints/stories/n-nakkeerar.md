@@ -4,7 +4,7 @@
 
 `n-nakkeerar` | Other Tamil Shaiva saints and poets | 9 songs
 
-The poet Nakkeerar was seized by a demon and shut in a cave at Thiruparankundram with a thousand other prisoners. He sang the Tirumurugatruppadai, Murugan opened the cave with his Vel and set them free. (The Pandya-court quarrel with Shiva over the fragrance of hair is a separate Tiruvilaiyadal story.)
+Tradition says the poet Nakkeerar lost his concentration at Thiruparankundram, was seized by a demon and shut in a cave with many other prisoners, and sang the Tirumurugatruppadai, after which Murugan opened the cave and freed them. This is not in the Tiruvilaiyadal Puranam padalams checked (52-54 tell the quarrel with Shiva over the Pandya's poem).
 
 ## References
 

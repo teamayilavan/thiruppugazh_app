@@ -4,7 +4,7 @@
 
 `m-peacock-cock` | Murugan's own lore (Kanda Puranam) | 3 songs
 
-The two halves of the split Surapadman became Murugan's vehicle, the peacock, and the cock on his flag.
+As the songs retell the war: the two halves of the split Surapadman became Murugan's vehicle, the peacock, and the cock on his flag. The Yuddha Kandam could not be checked online.
 
 ## References
 

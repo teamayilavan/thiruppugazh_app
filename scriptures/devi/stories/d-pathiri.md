@@ -4,7 +4,7 @@
 
 `d-pathiri` | Ambal, Parvati, Durga and Kali | 2 songs
 
-The Goddess performed a penance under the pathiri tree at Thiruppathirippuliyur (Cuddalore) to be one with Shiva; the shrine marks the spot with a bare pedestal.
+Temple legend: the Goddess performed a penance under the pathiri tree at Thiruppathirippuliyur (Cuddalore) to be one with Shiva; the shrine marks the spot with a bare pedestal.
 
 ## References
 

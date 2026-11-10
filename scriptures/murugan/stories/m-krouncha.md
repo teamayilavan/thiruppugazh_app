@@ -4,7 +4,7 @@
 
 `m-krouncha` | Murugan's own lore (Kanda Puranam) | 217 songs
 
-Murugan's Vel pierced the Krouncha mountain, the demon Tarakasura's hiding place and stronghold, which crumbled.
+In the Kanda Puranam Krouncha is an asura whom Agastya's curse turned into a mountain; the demon Tarakan lives beside it in a city of illusion, and Krouncha's own magic troubles Murugan's host (Utpatti Kandam 1329-1336, 1416-1433). Murugan's Vel bursts Tarakan and the mountain together (1509-1516). The songs also use 'Krouncha pierced' for the whole war.
 
 ## References
 

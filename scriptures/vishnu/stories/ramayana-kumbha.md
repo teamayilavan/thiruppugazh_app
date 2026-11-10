@@ -2,6 +2,8 @@
 
 `ramayana-kumbha` | Ramayana | 1 songs | primary text + no confirmed DP
 
+Kumbha, son of Kumbhakarna, is felled by a blow from Sugriva (Valmiki Yuddha 76.92-93; Kamba, Atikayan Vadhai Padalam 236-246).
+
 ## References
 
 | Source | Reference | What it says / quote |

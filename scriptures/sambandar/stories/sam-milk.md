@@ -4,7 +4,7 @@
 
 `sam-milk` | Thirugnana Sambandar | 10 songs
 
-As a three-year-old Sambandar was left on the bank of the temple tank while his father bathed, and cried. Shiva and Uma appeared, and Uma gave him milk of Shiva-wisdom from a golden bowl. The songs say the hymns flowed from that milk.
+As a small child Sambandar was left on the bank of the temple tank at Sirkazhi while his father bathed, and wept for him (PP 59-62). Shiva and Uma appeared, and Uma fed him the milk of Shiva-wisdom from a golden bowl (PP 64-69). The songs say the Tevaram hymns flowed from that milk.
 
 ## References
 

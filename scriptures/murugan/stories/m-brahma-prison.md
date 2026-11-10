@@ -4,7 +4,7 @@
 
 `m-brahma-prison` | Murugan's own lore (Kanda Puranam) | 15 songs
 
-When Brahma could not explain the meaning of Om to Murugan, the boy tapped his head and locked him in prison; Shiva then asked for his release. Related to the Shiva-set story murugan-pranava.
+When Murugan asked the meaning of Om, Brahma could give only its letter-form, not its meaning (KP 1213-1217). Murugan made him fall, struck him with his foot and had him shackled in prison on Mount Skanda; meanwhile Murugan himself created the worlds (1219-1223). At Shiva's plea he released Brahma (1229-1256). Related to the Shiva-set story murugan-pranava.
 
 ## References
 

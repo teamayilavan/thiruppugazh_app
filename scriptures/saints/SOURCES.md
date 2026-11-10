@@ -40,3 +40,14 @@ Texts are cached in `scripts/.cache/` (git-ignored): `pp_all.json` = Periya Pura
 | Tiruvilaiyadal Puranam padalam | 60 | நரி | horses turned back into foxes | ok |
 | Tiruvilaiyadal Puranam padalam | 61 | வந்தி | Vandi | ok |
 | Tiruvilaiyadal Puranam padalam | 61 | பிட்டு | the pittu | ok |
+| Periya Puranam | 12290:314 | சங்கிலியார் | Sundarar marries Sangili at Tiruvorriyur | ok |
+| Periya Puranam | 12290:319 | புலவிக்கடல | Paravai's sulking | ok |
+| Periya Puranam | 12290:338 | திறவாய் | Shiva at Paravai's door: 'open' | ok |
+| Periya Puranam | 12290:25 | குறட்பூதப்படை | dwarf attendants carry the paddy to Paravai's house | ok |
+| Periya Puranam | 12000:187 | பித்தனுமாக | Sundarar calls the old man a madman | ok |
+| Periya Puranam | 12000:190 | ஆவணம்பறிக்க | Sundarar takes (tears) the bond | ok |
+| Periya Puranam | 12000:216 | வன்றொண்டன் | named Vanthondan | ok |
+| Periya Puranam | 12100:118 | வாயினில் | Kannappar tastes the meat in his mouth | ok |
+| Periya Puranam | 12100:121 | வாயினிற்கொண்டு | water carried in the mouth | ok |
+| Tiruvilaiyadal Puranam padalam | 57 | நந்தி | Nandi born a shark | ok |
+| Tiruvilaiyadal Puranam padalam | 57 | புன்னை | the baby found under the punnai tree | ok |

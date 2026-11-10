@@ -4,7 +4,7 @@
 
 `n-cheraman-kailasa` | Other Tamil Shaiva saints and poets | 1 songs
 
-The Chera king Cheraman Perumal, Sundarar's friend, rode a divine horse to Kailasa after Sundarar was taken up on a white elephant. There the king sang his Kailaya Gnana Ula.
+The Chera king Cheraman Perumal (Kazharitrarivar) was a close friend of Sundarar (PP Kazharitrarivar puranam 112-118, 173-175). The song's commentary says the king rode a horse to Kailasa in Sundarar's company and sang his Kailaya Gnana Ula there; the Puranam sections downloaded do not contain the ascent, so this rests on the song and tradition.
 
 ## References
 

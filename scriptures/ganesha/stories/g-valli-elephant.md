@@ -4,7 +4,7 @@
 
 `g-valli-elephant` | Ganesha | 4 songs
 
-To make Valli run into Murugan's arms, Murugan asked his brother Ganesha to appear as a wild elephant; Valli clung to Murugan in fear.
+The songs say Ganesha took the form of a wild one-tusked elephant so that Valli, frightened, ran to Murugan's arms (songs 146, 715). Tradition, not a checked text.
 
 ## References
 

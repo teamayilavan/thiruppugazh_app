@@ -4,7 +4,7 @@
 
 `g-race` | Ganesha | 2 songs
 
-Narada's fruit of wisdom was to go to the son who circled the world first; Murugan flew round on his peacock, Ganesha went round his parents, and Murugan left for Pazhani in anger.
+Song 30 says Murugan flew round the world on his peacock in a contest with Ganesha; song 532 says the prized fruit was nonetheless given to Ganesha. Popular Pazhani tradition adds that Ganesha went round his parents and that Murugan then left for Pazhani in anger.
 
 ## References
 
