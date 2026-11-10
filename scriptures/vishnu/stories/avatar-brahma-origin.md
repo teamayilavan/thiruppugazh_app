@@ -10,7 +10,7 @@ Brahma sits on the lotus that grows from Vishnu's navel; Murugan is Vishnu's nep
 |---|---|---|
 | Bhagavata Purana | SB 3.8.14-16 | A lotus grows from Vishnu; Brahma is born in it |
 | Divya Prabandham | Nanmugan Thiruvandhadhi (Thirumazhisai Alvar) 1 | nAnmuganai nArAyaNan padaiththAn — Narayana created four-faced Brahma, who created Shiva; Brahma is born from Narayana. [https://divyaprabandham.koyil.org/index.php/2018/06/nanmugan-thiruvandhadhi-1/] |
-| Divya Prabandham (candidate) | Periya Thirumozhi 5.4.1 | (not seen) — Search snippet: the Lord made four-headed Brahma on the lotus of his navel; page not opened. [https://divyaprabandham.koyil.org/index.php/2023/08/periya-thirumozhi-5-4-1/] |
+| Divya Prabandham | Periya Thirumozhi 5.4.1 | உந்தி மேல் நான்முகனைப் படைத்தான் — The Lord who swallowed the worlds made four-headed Brahma on the lotus of his navel; Srirangam is his abode. [https://divyaprabandham.koyil.org/index.php/2023/08/periya-thirumozhi-5-4-1/] |
 
 ## Songs
 

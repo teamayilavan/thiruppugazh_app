@@ -54,6 +54,8 @@ scriptures/
 Build: `python -I scriptures/scripts/build_master.py --deity shiva` (default is vishnu).
 New deity or theme folders (e.g. `murugan-lore/`) follow the same shape.
 
+`AUDIT.md` reports what was checked across all sets and what was not; rerun with `python -I scriptures/scripts/audit_all.py` (needs the page cache described there).
+
 `sambandar/`, `saints/`, `devi/`, `murugan/`, `ganesha/` and `tamil-lore/` (added 2026-11-10) are generated from a hand-written catalogue in
 `scripts/build_new_sets.py` (`python -I scriptures/scripts/build_new_sets.py`). Each has `README.md`, `STORIES.md`, `by-song.md`,
 `song-story-map.txt`, `SOURCES.md` and `stories/`. Their song lists are keyword-level (English commentary sweep plus a quoted Tamil line
