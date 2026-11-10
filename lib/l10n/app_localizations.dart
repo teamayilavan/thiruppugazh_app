@@ -1412,6 +1412,18 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Stops the screen from dimming on a song page. Chanting mode always does this.'**
   String get keepScreenOnReadingHint;
+
+  /// No description provided for @recentSearches.
+  ///
+  /// In en, this message translates to:
+  /// **'Recent searches'**
+  String get recentSearches;
+
+  /// No description provided for @clearRecentSearches.
+  ///
+  /// In en, this message translates to:
+  /// **'Clear'**
+  String get clearRecentSearches;
 }
 
 class _AppLocalizationsDelegate

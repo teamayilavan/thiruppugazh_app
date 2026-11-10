@@ -726,4 +726,10 @@ class AppLocalizationsTa extends AppLocalizations {
   @override
   String get keepScreenOnReadingHint =>
       'பாடல் பக்கத்தில் திரை மங்காமல் இருக்கும். பாராயண முறையில் எப்போதும் இவ்வாறே இருக்கும்.';
+
+  @override
+  String get recentSearches => 'சமீபத்திய தேடல்கள்';
+
+  @override
+  String get clearRecentSearches => 'அழி';
 }

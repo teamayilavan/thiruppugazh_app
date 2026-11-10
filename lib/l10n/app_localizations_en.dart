@@ -720,4 +720,10 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get keepScreenOnReadingHint =>
       'Stops the screen from dimming on a song page. Chanting mode always does this.';
+
+  @override
+  String get recentSearches => 'Recent searches';
+
+  @override
+  String get clearRecentSearches => 'Clear';
 }

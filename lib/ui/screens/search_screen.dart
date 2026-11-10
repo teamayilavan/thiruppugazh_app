@@ -7,6 +7,8 @@ import '../../data/models/search_filter.dart';
 import '../../data/repositories/song_repository.dart';
 import '../../providers/lyrics_language_provider.dart';
 import '../../l10n/app_localizations.dart';
+import '../../services/recent_searches.dart';
+import '../../utils/search_snippet.dart';
 import '../../../constants/app_constants.dart';
 
 class SearchScreen extends StatefulWidget {
@@ -25,10 +27,12 @@ class _SearchScreenState extends State<SearchScreen> {
   bool _isLoading = false;
   Timer? _debounce;
   SearchFilter _filter = const SearchFilter();
+  List<String> _recent = [];
 
   @override
   void initState() {
     super.initState();
+    _loadRecent();
     _searchController.addListener(() {
       setState(() {});
     });
@@ -74,6 +78,87 @@ class _SearchScreenState extends State<SearchScreen> {
         _filter = updatedFilter;
       });
     }
+  }
+
+  Future<void> _loadRecent() async {
+    final recent = await RecentSearches.load();
+    if (mounted) setState(() => _recent = recent);
+  }
+
+  Future<void> _rememberSearch() async {
+    final recent = await RecentSearches.add(_searchController.text);
+    if (mounted) setState(() => _recent = recent);
+  }
+
+  void _useRecent(String query) {
+    _searchController.text = query;
+    _searchController.selection = TextSelection.collapsed(offset: query.length);
+    _performSearch(query);
+  }
+
+  Future<void> _clearRecent() async {
+    await RecentSearches.clear();
+    if (mounted) setState(() => _recent = []);
+  }
+
+  Widget _recentSearches(AppLocalizations l10n) {
+    return ListView(
+      children: [
+        Padding(
+          padding: const EdgeInsets.fromLTRB(16, 4, 8, 0),
+          child: Row(
+            children: [
+              Expanded(
+                child: Text(
+                  l10n.recentSearches,
+                  style: Theme.of(context).textTheme.titleSmall,
+                ),
+              ),
+              TextButton(
+                onPressed: _clearRecent,
+                child: Text(l10n.clearRecentSearches),
+              ),
+            ],
+          ),
+        ),
+        for (final query in _recent)
+          ListTile(
+            leading: const Icon(Icons.history),
+            title: Text(query),
+            onTap: () => _useRecent(query),
+          ),
+      ],
+    );
+  }
+
+  /// The place, plus the lyric line that matched (with the matched words in
+  /// bold) when the song was found by its lyrics.
+  Widget _subtitle(BuildContext context, String place, SearchSnippet? snippet) {
+    final small = Theme.of(context).textTheme.bodySmall;
+    if (snippet == null) return Text(place, style: small);
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(place, style: small),
+        const SizedBox(height: 2),
+        Text.rich(
+          TextSpan(
+            style: small,
+            children: [
+              TextSpan(text: snippet.before),
+              if (snippet.match.isNotEmpty)
+                TextSpan(
+                  text: snippet.match,
+                  style: const TextStyle(fontWeight: FontWeight.bold),
+                ),
+              TextSpan(text: snippet.after),
+            ],
+          ),
+          maxLines: 2,
+          overflow: TextOverflow.ellipsis,
+        ),
+      ],
+    );
   }
 
   @override
@@ -128,6 +213,9 @@ class _SearchScreenState extends State<SearchScreen> {
               Expanded(
                 child: _isLoading
                     ? const Center(child: CircularProgressIndicator())
+                    : _searchController.text.trim().isEmpty &&
+                          _recent.isNotEmpty
+                    ? _recentSearches(l10n)
                     : _results.isEmpty
                     ? Center(
                         child: Text(
@@ -160,13 +248,20 @@ class _SearchScreenState extends State<SearchScreen> {
                                 style: Theme.of(context).textTheme.bodyLarge,
                               ),
                               title: Text(displayTitle),
-                              subtitle: Text(
+                              subtitle: _subtitle(
+                                context,
                                 displayPlace,
-                                style: Theme.of(context).textTheme.bodySmall,
+                                findMatchingLine(
+                                  song,
+                                  _searchController.text,
+                                  preferEnglish:
+                                      lyricsLang == LyricsLanguage.english,
+                                ),
                               ),
                               tileColor: paneSelectionColor(context, song.id),
                               onTap: () {
                                 _searchFocusNode.unfocus();
+                                _rememberSearch();
                                 openSong(context, song);
                               },
                             );
