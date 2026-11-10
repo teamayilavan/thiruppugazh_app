@@ -10,7 +10,7 @@ There are now two strands of work:
 
 ## 1. State at a glance
 
-- Branch `next`. Last commit `fb5943c`. **Uncommitted** (owner has not asked): `scriptures/scripts/make_pdf.py`, `scriptures/pdf/` (template, narratives, `.gitignore`), and an edit to `scripts/build_new_sets.py` (the Deva verse 132 note). Everything else from this session is committed (`13c18d3` ... `fb5943c`). Nothing pushed this session. `main` untouched.
+- Branch `next`: **everything is committed and pushed** (last commit `b0f0af8`, 2026-11-11; remote `origin` = teamayilavan/thiruppugazh_app). `main` untouched. The generated PDFs and their JSON are git-ignored; rebuild them with `make_pdf.py`.
 - Typst: upgraded to **0.15.1** at `D:\Software\Typst\typst.exe` (on PATH). The old 0.13.1 binary is kept next to it as `typst-0.13.1.exe.bak`.
 - The 8 PDFs and two samples are copied to **`D:\thiruppugazh-books\`** for the owner to review (see 3).
 - All build checks pass: `build_new_sets.py` gives sambandar 40/40, saints 33/33, devi 25/25, murugan 62/62, tamil-lore 18/18, **0 warnings**; `audit_local.py` is clean (0 missing quotes, 0 bad titles, 0 count mismatches, 142 stories, 1,494 song entries).
@@ -157,7 +157,7 @@ Song source: `assets/thiruppugazh.db`, table `songs`, read-only. Columns: `id` (
 2. Write narratives volume by volume (Vol IV, Shiva, Vishnu), rebuild, copy to `D:\thiruppugazh-books\`, ask for review of each volume.
 3. Look through the full-edition PDFs of Vishnu, Shiva and Vol IV page by page for layout faults (only Murugan and the samples were inspected closely): long titles, songs with many verses, wide reference tables, blank gaps before panels, Tamil wrapping.
 4. Regenerate `AUDIT.md` (`audit_all.py`; it is stale, dated 2026-11-10) and fold this session's results into `STATUS.md`.
-5. Commit when asked: suggested small commits (a) `make_pdf.py` + `pdf/book.typ` + `pdf/.gitignore`, (b) `pdf/narratives/`, (c) the `build_new_sets.py` note fix and regenerated Murugan files.
+5. Commit and push only when asked (the work up to `b0f0af8` was committed and pushed at the owner's request). Suggested small commits as you go: generator/template, then narratives per volume, then regenerated sets.
 6. Research leftovers if time allows: Kamba/Valmiki wording comparison for the most-told Vishnu stories (Gajendra, Vamana, Krishna butter, Ramayana war); the 552 songs in no story (second keyword pass, then reading); the app side is undecided (CLAUDE.md principles apply if stories ever go in the app: offline, quiet, opt-in, Tamil layout testing).
 
 ## 10. Kickoff prompt for the next session
