@@ -1424,6 +1424,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Clear'**
   String get clearRecentSearches;
+
+  /// No description provided for @filterLibraryHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Filter by song or text'**
+  String get filterLibraryHint;
 }
 
 class _AppLocalizationsDelegate

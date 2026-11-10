@@ -732,4 +732,7 @@ class AppLocalizationsTa extends AppLocalizations {
 
   @override
   String get clearRecentSearches => 'அழி';
+
+  @override
+  String get filterLibraryHint => 'பாடல் அல்லது உரையால் வடிகட்டு';
 }

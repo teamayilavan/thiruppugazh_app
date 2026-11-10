@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../widgets/adaptive_layout.dart';
 import 'package:provider/provider.dart';
 import '../widgets/empty_hint.dart';
+import '../widgets/library_filter.dart';
 import '../../data/repositories/song_repository.dart';
 import '../../l10n/app_localizations.dart';
 import '../widgets/link_actions.dart';
@@ -52,6 +53,7 @@ class HighlightsList extends StatefulWidget {
 
 class _HighlightsListState extends State<HighlightsList> {
   late Future<List<Map<String, dynamic>>> _future;
+  String _filter = '';
 
   late final SongRepository _repo;
 
@@ -94,8 +96,12 @@ class _HighlightsListState extends State<HighlightsList> {
         if (snapshot.hasError) {
           return Center(child: Text(l10n.anErrorOccurred));
         }
-        final rows = snapshot.data ?? [];
-        if (rows.isEmpty) {
+        final allRows = snapshot.data ?? [];
+        final rows = filterLibraryRows(allRows, _filter, [
+          'song_title',
+          'text_content',
+        ]);
+        if (allRows.isEmpty) {
           return EmptyHint(
             icon: Icons.highlight,
             title: l10n.noHighlightsFound,
@@ -111,7 +117,7 @@ class _HighlightsListState extends State<HighlightsList> {
         }
         final songIds = grouped.keys.toList();
 
-        return ListView.separated(
+        final list = ListView.separated(
           itemCount: songIds.length,
           separatorBuilder: (_, _) => const Divider(),
           itemBuilder: (context, index) {
@@ -121,6 +127,7 @@ class _HighlightsListState extends State<HighlightsList> {
             final count = songRows.length;
 
             return ListTile(
+              tileColor: paneSelectionColor(context, songId),
               title: Text(
                 songTitle,
                 style: const TextStyle(fontWeight: FontWeight.bold),
@@ -146,6 +153,13 @@ class _HighlightsListState extends State<HighlightsList> {
             );
           },
         );
+        return libraryListFrame(
+          l10n: l10n,
+          total: allRows.length,
+          nothingMatches: rows.isEmpty,
+          onFilter: (value) => setState(() => _filter = value),
+          list: list,
+        );
       },
     );
   }
@@ -160,6 +174,7 @@ class NotesList extends StatefulWidget {
 
 class _NotesListState extends State<NotesList> {
   late Future<List<Map<String, dynamic>>> _future;
+  String _filter = '';
 
   late final SongRepository _repo;
 
@@ -202,8 +217,12 @@ class _NotesListState extends State<NotesList> {
         if (snapshot.hasError) {
           return Center(child: Text(l10n.anErrorOccurred));
         }
-        final rows = snapshot.data ?? [];
-        if (rows.isEmpty) {
+        final allRows = snapshot.data ?? [];
+        final rows = filterLibraryRows(allRows, _filter, [
+          'song_title',
+          'content',
+        ]);
+        if (allRows.isEmpty) {
           return EmptyHint(
             icon: Icons.note,
             title: l10n.noNotesFound,
@@ -211,7 +230,7 @@ class _NotesListState extends State<NotesList> {
           );
         }
 
-        return ListView.separated(
+        final list = ListView.separated(
           itemCount: rows.length,
           separatorBuilder: (_, _) => const Divider(),
           itemBuilder: (context, index) {
@@ -221,6 +240,7 @@ class _NotesListState extends State<NotesList> {
             final content = row['content'] as String;
 
             return ListTile(
+              tileColor: paneSelectionColor(context, songId),
               title: Text(
                 songTitle,
                 style: const TextStyle(fontWeight: FontWeight.bold),
@@ -244,6 +264,7 @@ class _NotesListState extends State<NotesList> {
                 }
               },
               trailing: IconButton(
+                tooltip: l10n.deleteNote,
                 icon: const Icon(Icons.delete_outline),
                 onPressed: () async {
                   final confirm = await showDialog<bool>(
@@ -279,6 +300,13 @@ class _NotesListState extends State<NotesList> {
             );
           },
         );
+        return libraryListFrame(
+          l10n: l10n,
+          total: allRows.length,
+          nothingMatches: rows.isEmpty,
+          onFilter: (value) => setState(() => _filter = value),
+          list: list,
+        );
       },
     );
   }
@@ -293,6 +321,7 @@ class LinksList extends StatefulWidget {
 
 class _LinksListState extends State<LinksList> {
   late Future<List<Map<String, dynamic>>> _future;
+  String _filter = '';
 
   late final SongRepository _repo;
 
@@ -335,8 +364,13 @@ class _LinksListState extends State<LinksList> {
         if (snapshot.hasError) {
           return Center(child: Text(l10n.anErrorOccurred));
         }
-        final rows = snapshot.data ?? [];
-        if (rows.isEmpty) {
+        final allRows = snapshot.data ?? [];
+        final rows = filterLibraryRows(allRows, _filter, [
+          'song_title',
+          'url',
+          'title',
+        ]);
+        if (allRows.isEmpty) {
           return EmptyHint(
             icon: Icons.link,
             title: l10n.noLinksFound,
@@ -344,7 +378,7 @@ class _LinksListState extends State<LinksList> {
           );
         }
 
-        return ListView.separated(
+        final list = ListView.separated(
           itemCount: rows.length,
           separatorBuilder: (_, _) => const Divider(),
           itemBuilder: (context, index) {
@@ -360,6 +394,7 @@ class _LinksListState extends State<LinksList> {
                 : url;
 
             return ListTile(
+              tileColor: paneSelectionColor(context, songId),
               title: Text(
                 songTitle,
                 style: const TextStyle(fontWeight: FontWeight.bold),
@@ -407,6 +442,13 @@ class _LinksListState extends State<LinksList> {
               ),
             );
           },
+        );
+        return libraryListFrame(
+          l10n: l10n,
+          total: allRows.length,
+          nothingMatches: rows.isEmpty,
+          onFilter: (value) => setState(() => _filter = value),
+          list: list,
         );
       },
     );
