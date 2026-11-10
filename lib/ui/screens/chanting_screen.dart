@@ -56,7 +56,7 @@ class _ChantingScreenState extends State<ChantingScreen>
     WidgetsBinding.instance.addObserver(this);
     _index = widget.initialIndex < 0 ? 0 : widget.initialIndex;
     _pageController = PageController(initialPage: _index);
-    ScreenAwakeService.setKeepAwake(true);
+    ScreenAwakeService.acquire();
     _loadPrefs();
     WidgetsBinding.instance.addPostFrameCallback((_) => _recordPosition());
   }
@@ -66,7 +66,7 @@ class _ChantingScreenState extends State<ChantingScreen>
     WidgetsBinding.instance.removeObserver(this);
     _timer?.cancel();
     _pageController.dispose();
-    ScreenAwakeService.setKeepAwake(false);
+    ScreenAwakeService.release();
     super.dispose();
   }
 

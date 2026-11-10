@@ -19,7 +19,9 @@ import '../../l10n/app_localizations.dart';
 import '../../utils/app_logger.dart';
 import '../../providers/lyrics_language_provider.dart';
 import '../../providers/lyrics_font_size_provider.dart';
+import '../../providers/keep_screen_on_provider.dart';
 import '../../providers/reading_state_provider.dart';
+import '../../services/screen_awake_service.dart';
 import 'chanting_screen.dart';
 
 List<String> selectMayuragiriLyrics(Song song, bool useEnglish) {
@@ -100,12 +102,33 @@ class _SongDetailScreenState extends State<SongDetailScreen> {
     }
   }
 
+  /// Whether this page is holding the screen on (the user's reading setting).
+  bool _holdingScreenOn = false;
+
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
     _lyricsLanguage = Provider.of<LyricsLanguageProvider>(
       context,
     ).lyricsLanguage;
+    // Follows the setting, including a change made while the page is open.
+    final keepOn = Provider.of<KeepScreenOnProvider>(context).enabled;
+    if (keepOn && !_holdingScreenOn) {
+      _holdingScreenOn = true;
+      ScreenAwakeService.acquire();
+    } else if (!keepOn && _holdingScreenOn) {
+      _holdingScreenOn = false;
+      ScreenAwakeService.release();
+    }
+  }
+
+  @override
+  void dispose() {
+    if (_holdingScreenOn) {
+      _holdingScreenOn = false;
+      ScreenAwakeService.release();
+    }
+    super.dispose();
   }
 
   Future<void> _loadCategoryInfo(SongRepository repo) async {

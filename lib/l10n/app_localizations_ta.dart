@@ -719,4 +719,11 @@ class AppLocalizationsTa extends AppLocalizations {
   @override
   String get linksHint =>
       'ஒரு பாடலில் “இணைப்பைச் சேர்” என்பதைப் பயன்படுத்தவும்; அல்லது YouTube அல்லது வேறு செயலியிலிருந்து இணைப்பைப் பகிர்ந்து திருப்புகழைத் தேர்ந்தெடுக்கவும்.';
+
+  @override
+  String get keepScreenOnReading => 'படிக்கும்போது திரையை எரியவிடு';
+
+  @override
+  String get keepScreenOnReadingHint =>
+      'பாடல் பக்கத்தில் திரை மங்காமல் இருக்கும். பாராயண முறையில் எப்போதும் இவ்வாறே இருக்கும்.';
 }

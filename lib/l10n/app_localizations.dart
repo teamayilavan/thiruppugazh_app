@@ -1400,6 +1400,18 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Use Add Link on a song, or share a link from YouTube or any app and choose Thiruppugazh.'**
   String get linksHint;
+
+  /// No description provided for @keepScreenOnReading.
+  ///
+  /// In en, this message translates to:
+  /// **'Keep the screen on while reading'**
+  String get keepScreenOnReading;
+
+  /// No description provided for @keepScreenOnReadingHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Stops the screen from dimming on a song page. Chanting mode always does this.'**
+  String get keepScreenOnReadingHint;
 }
 
 class _AppLocalizationsDelegate

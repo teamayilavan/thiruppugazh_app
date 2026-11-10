@@ -713,4 +713,11 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get linksHint =>
       'Use Add Link on a song, or share a link from YouTube or any app and choose Thiruppugazh.';
+
+  @override
+  String get keepScreenOnReading => 'Keep the screen on while reading';
+
+  @override
+  String get keepScreenOnReadingHint =>
+      'Stops the screen from dimming on a song page. Chanting mode always does this.';
 }

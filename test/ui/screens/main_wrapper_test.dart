@@ -10,6 +10,7 @@ import 'package:thiruppugazh/constants/app_constants.dart';
 import 'package:thiruppugazh/data/repositories/song_repository.dart';
 import 'package:thiruppugazh/l10n/app_localizations.dart';
 import 'package:thiruppugazh/providers/auto_backup_status_provider.dart';
+import 'package:thiruppugazh/providers/keep_screen_on_provider.dart';
 import 'package:thiruppugazh/providers/language_provider.dart';
 import 'package:thiruppugazh/providers/lyrics_font_size_provider.dart';
 import 'package:thiruppugazh/providers/lyrics_language_provider.dart';
@@ -82,6 +83,7 @@ Future<void> _pump(
         ChangeNotifierProvider(create: (_) => LyricsLanguageProvider()),
         ChangeNotifierProvider(create: (_) => LyricsFontSizeProvider()),
         ChangeNotifierProvider(create: (_) => ReminderSettingsProvider()),
+        ChangeNotifierProvider(create: (_) => KeepScreenOnProvider()),
         ChangeNotifierProvider.value(value: reading),
         ChangeNotifierProvider(create: (_) => AutoBackupStatusProvider()),
         ChangeNotifierProvider(create: (_) => SongListProvider(repo)),

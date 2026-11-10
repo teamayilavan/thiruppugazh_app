@@ -5,6 +5,7 @@ import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../../providers/auto_backup_status_provider.dart';
 import '../../providers/theme_provider.dart';
+import '../../providers/keep_screen_on_provider.dart';
 import '../../providers/language_provider.dart';
 import '../../providers/lyrics_language_provider.dart';
 import '../../providers/reminder_settings_provider.dart';
@@ -26,6 +27,7 @@ class SettingsScreen extends StatelessWidget {
     final languageProvider = Provider.of<LanguageProvider>(context);
     final lyricsLanguageProvider = Provider.of<LyricsLanguageProvider>(context);
     final reminderProvider = Provider.of<ReminderSettingsProvider>(context);
+    final keepScreenOn = Provider.of<KeepScreenOnProvider>(context);
     final l10n = AppLocalizations.of(context)!;
 
     return Scaffold(
@@ -65,6 +67,14 @@ class SettingsScreen extends StatelessWidget {
               onTap: () {
                 _showThemeDialog(context, themeProvider);
               },
+            ),
+            const Divider(),
+            SwitchListTile(
+              secondary: const Icon(Icons.stay_current_portrait_outlined),
+              title: Text(l10n.keepScreenOnReading),
+              subtitle: Text(l10n.keepScreenOnReadingHint),
+              value: keepScreenOn.enabled,
+              onChanged: keepScreenOn.setEnabled,
             ),
             const Divider(),
             SwitchListTile(

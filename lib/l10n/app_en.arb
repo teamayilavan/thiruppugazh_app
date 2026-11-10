@@ -283,5 +283,7 @@
   "recentlyRead": "Recently read",
   "highlightsHint": "On a song, select some lines and choose Highlight. They will be gathered here.",
   "notesHint": "Use Song Note on any song to write a reflection. Your notes will be gathered here.",
-  "linksHint": "Use Add Link on a song, or share a link from YouTube or any app and choose Thiruppugazh."
+  "linksHint": "Use Add Link on a song, or share a link from YouTube or any app and choose Thiruppugazh.",
+  "keepScreenOnReading": "Keep the screen on while reading",
+  "keepScreenOnReadingHint": "Stops the screen from dimming on a song page. Chanting mode always does this."
 }

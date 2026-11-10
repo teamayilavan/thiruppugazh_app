@@ -5,6 +5,7 @@ import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:thiruppugazh/data/repositories/song_repository.dart';
 import 'package:thiruppugazh/l10n/app_localizations.dart';
+import 'package:thiruppugazh/providers/keep_screen_on_provider.dart';
 import 'package:thiruppugazh/providers/lyrics_font_size_provider.dart';
 import 'package:thiruppugazh/providers/lyrics_language_provider.dart';
 import 'package:thiruppugazh/providers/reading_state_provider.dart';
@@ -33,6 +34,7 @@ Future<void> _pump(
         ChangeNotifierProvider<SongRepository>.value(value: FakeSongRepo()),
         ChangeNotifierProvider(create: (_) => LyricsFontSizeProvider()),
         ChangeNotifierProvider(create: (_) => LyricsLanguageProvider()),
+        ChangeNotifierProvider(create: (_) => KeepScreenOnProvider()),
         ChangeNotifierProvider.value(value: reading),
       ],
       child: MaterialApp(

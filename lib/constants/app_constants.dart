@@ -23,6 +23,8 @@ class AppConstants {
   static const String chantPaceSecondsPrefsKey = 'chant_pace_seconds';
   static const String chantAutoPrefsKey = 'chant_auto';
   static const String chantShowTunePrefsKey = 'chant_show_tune';
+  static const String keepScreenOnReadingPrefsKey = 'keep_screen_on_reading';
+  static const String recentSearchesPrefsKey = 'recent_searches';
 
   // ==================== Deep Link ====================
   static const String deepLinkDomain = 'thiruppugazh.ayilavan.org';
