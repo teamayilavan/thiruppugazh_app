@@ -18,3 +18,7 @@ remotion/.cache/
 
 # Raw emulator captures
 recordings/raw/
+
+# Instagram posters and the frames they are built from (rebuild with npm run posters)
+exports/posters/
+remotion/public/posters/

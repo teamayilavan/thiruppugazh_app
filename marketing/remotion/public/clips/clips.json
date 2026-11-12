@@ -78,5 +78,30 @@
     "raw_seconds": 12.12,
     "active_seconds": 8.13,
     "windows": 5
+  },
+  "n01_search_match": {
+    "raw_seconds": 7.56,
+    "active_seconds": 8.36,
+    "windows": 1
+  },
+  "n02_share_in": {
+    "raw_seconds": 21.37,
+    "active_seconds": 22.17,
+    "windows": 1
+  },
+  "n03_widget": {
+    "raw_seconds": 8.64,
+    "active_seconds": 4.98,
+    "windows": 3
+  },
+  "n04_settings": {
+    "raw_seconds": 12.26,
+    "active_seconds": 8.7,
+    "windows": 7
+  },
+  "n05_tablet": {
+    "raw_seconds": 13.66,
+    "active_seconds": 7.37,
+    "windows": 6
   }
 }

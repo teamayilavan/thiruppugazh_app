@@ -7,10 +7,15 @@
     "prep": "python scripts/prep_clips.py",
     "studio": "remotion studio src/index.ts",
     "still": "remotion still src/index.ts Cut-music",
-    "render": "remotion render src/index.ts Cut-music ../exports/thiruppugazh-music-v1.mp4 --crf=18 --pixel-format=yuv420p"
+    "render": "remotion render src/index.ts Cut-music ../exports/thiruppugazh-music-v1.mp4 --crf=18 --pixel-format=yuv420p",
+    "render:v2": "remotion render src/index.ts Cut-v2 ../exports/thiruppugazh-v2-raw.mp4 --crf=18 --pixel-format=yuv420p",
+    "still:v2": "remotion still src/index.ts Cut-v2",
+    "posters": "remotion still src/index.ts Poster-brand ../exports/posters/01-brand.png && remotion still src/index.ts Poster-search ../exports/posters/02-search.png && remotion still src/index.ts Poster-meaning ../exports/posters/03-meaning.png && remotion still src/index.ts Poster-temples ../exports/posters/04-temples.png && remotion still src/index.ts Poster-chanting ../exports/posters/05-chanting.png && remotion still src/index.ts Poster-widget ../exports/posters/06-widget.png && remotion still src/index.ts Poster-language ../exports/posters/07-language.png && remotion still src/index.ts Poster-tablet ../exports/posters/08-tablet.png && remotion still src/index.ts Poster-promise ../exports/posters/09-promise.png"
   },
   "dependencies": {
+    "@phosphor-icons/react": "2.1.7",
     "@remotion/cli": "4.0.538",
+    "@remotion/google-fonts": "4.0.538",
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "remotion": "4.0.538"

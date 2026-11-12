@@ -1,5 +1,19 @@
 # Marketing video: status and handoff
 
+## v2 (2026-11-12): clean, modern cut with the 1.7.0 features
+
+`exports/thiruppugazh-v2.mp4` (git-ignored): 9:16, 1080x1920, 30 fps, 130.6 s, music only, English on-screen text only. Composition `Cut-v2` in `remotion/src/v2/` (v1 `Cut-music` is untouched).
+
+- **Look:** deep green with slow-moving light, Outfit display type, one mint accent, a big flush-bottom phone that floats and leans a little each beat, word-by-word headline reveals, a "New in 1.7" chip on new features only, a tablet scene, a logo lockup bookending the video.
+- **Footage:** the 1.6.0 clips are reused (phone screens did not change in 1.7.0) plus new clips recorded on the 1.7.0 release APK: `n01_search_match` (match line in bold), `n02_share_in` (share from a Wikipedia page, recent songs picker; replaces the YouTube share, so no third-party channel names remain), `n03_widget`, `n04_settings` (keep screen on, reminder), `n05_tablet` (Tablet_API_36, reading pane, arrow keys). Tap scripts: `recordings/n_*.py`.
+- **Music:** original, synthesized by `audio/make_music.py` (tanpura, pad, flute, vina, frame drum, D Mohanam). Not yet auditioned by a person; swap `remotion/public/music-v2.m4a` for a licensed track any time.
+- **Rebuild:** `cd remotion && npm run prep` (or `python scripts/prep_clips.py n0` for the new clips only), `npm run render:v2`, then the loudness pass in `remotion/README.md` (output `exports/thiruppugazh-v2.mp4`).
+- **Known nits:** the widget tap shows the app's white launch frame for about half a second; the language beat runs about 3.5x speed; the reminder-notification tap was not recorded (the emulator's alarm fired at 08:00 UTC, not local time, so it did not trigger when the clock was moved; worth checking on a real phone whether the daily reminder follows the device time zone).
+
+- **Posters (2026-11-12):** nine Instagram feed posters, 1080x1350 (4:5), in `exports/posters/` (git-ignored). Source: `remotion/src/posters/Poster.tsx`, screens in `remotion/public/posters/`; rebuild with `npm run posters`.
+
+---
+
 Last updated 2026-10-25 (end of session 1). Read this first when resuming.
 
 ## Where we are

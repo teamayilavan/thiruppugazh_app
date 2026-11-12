@@ -40,3 +40,13 @@ Run order matters because the app keeps state: b10 before b11 (the continue card
 Clip lengths are not real time: `screenrecord` drops static stretches and the recorder ends at the last change, so check the last frame (`ffmpeg -sseof -0.3`), not a coarse contact sheet.
 
 Measured positions (1080x2400): nav bar y=2250 at x=108/324/540/756/972; search FAB (964,2010); song page chant icon (723,919); first lyric line hold (300,1135) then toolbar Highlight (433,1013); end-of-page buttons Note (283,1066), Add Link (797,1066), Share Text (283,1318), Share Link (797,1318); heart FAB (964,2032), playlist FAB (964,2221); category sheet first row (540,1903), Save (931,2232); chanting screen tune toggle (765,137), Manual (404,2096), Auto (675,2096), next verse (975,2243).
+
+## 1.7.0 beats (2026-11-12, release build of `next`)
+
+New tap scripts, one per clip: `n_search.py` (search showing the matching line), `n_share.py` (share a Chrome page into the app; needs Chrome past its first-run screens and a couple of songs opened first so the recent-songs picker is filled), `n_widget.py` (the widget must already be on the home screen), `n_set.py` (keep-screen-on and daily reminder; resets both to off first), `n_tab.py` (run on `Tablet_API_36`: 2560x1600, reading pane and arrow keys).
+
+- Place the widget: long-press the launcher, Widgets, search "Thiruppugazh", then `input draganddrop 300 1000 300 700 2500` on the preview (a plain `swipe` does not pick it up).
+- Run `python n_x.py` scripts from this folder (`python -I` drops the script directory, so `adbtool` is not found).
+- Demo mode drops out when the clock changes; re-send the `com.android.systemui.demo` broadcasts (enter, clock, battery, network, notifications visible false).
+- The 8:00 reminder was scheduled for 08:00 UTC on the emulator, so moving the clock did not trigger it; the notification-tap beat was not recorded.
+- Tablet clip: the emulator reports 2560x1600; seed with `seed_demo.py` after the first launch, as for the phone.

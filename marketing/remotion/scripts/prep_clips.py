@@ -2,7 +2,7 @@
 
 screenrecord writes frames only when the screen changes, so idle stretches show up as gaps in the
 timestamps. We keep each burst of activity (plus a short hold after it so results can be read) and
-drop the idle gaps. Output: public/clips/<name>.mp4 (720x1600, 30 fps) and public/clips/clips.json
+drop the idle gaps. Output: public/clips/<name>.mp4 (720x1600 phone, 1600x1000 tablet, 30 fps) and public/clips/clips.json
 (durations in seconds). Needs ffmpeg/ffprobe on PATH or in the WinGet location.
 """
 import glob, json, os, subprocess, sys
@@ -50,18 +50,21 @@ def windows(times):
 
 def main():
     os.makedirs(OUT, exist_ok=True)
-    meta = {}
+    meta_path = os.path.join(OUT, "clips.json")
+    meta = json.load(open(meta_path)) if os.path.exists(meta_path) else {}
+    only = sys.argv[1:]  # optional name prefixes: `python prep_clips.py n0` re-encodes only the new clips
     for path in sorted(glob.glob(os.path.join(RAW, "*.mp4"))):
         name = os.path.splitext(os.path.basename(path))[0]
-        if name in SKIP:
+        if name in SKIP or (only and not any(name.startswith(o) for o in only)):
             continue
+        size = "1600:1000" if "tablet" in name else "720:1600"  # tablet clips are 2560x1600 landscape
         times = frame_times(path)
         wins = windows(times)
         sel = "+".join(f"between(t,{a:.3f},{b:.3f})" for a, b in wins)
         dur = sum(b - a for a, b in wins)
         dest = os.path.join(OUT, name + ".mp4")
         subprocess.run([FFMPEG, "-v", "error", "-y", "-i", path, "-an",
-                        "-vf", f"fps=30,select='{sel}',setpts=N/(30*TB),scale=720:1600:flags=lanczos",
+                        "-vf", f"fps=30,select='{sel}',setpts=N/(30*TB),scale={size}:flags=lanczos",
                         "-c:v", "libx264", "-preset", "slow", "-crf", "18", "-pix_fmt", "yuv420p", "-r", "30", dest],
                        check=True)
         meta[name] = {"raw_seconds": round(times[-1], 2), "active_seconds": round(dur, 2), "windows": len(wins)}
