@@ -166,3 +166,14 @@ Song source: `assets/thiruppugazh.db`, table `songs`, read-only. Columns: `id` (
 > (pdf/narratives/<slug>.txt, built with scripts/make_pdf.py). 14 of 142 are written. First ask whether I have reviewed the PDFs in D:\thiruppugazh-books
 > and answered the open questions in section 8; then continue with Volume IV (the 42 stories of Sambandar, saints, Devi, Ganesha, Tamil lore), writing each
 > strictly from the cached verses, checking every claim against the verse, and rebuilding the PDFs. Commit only when I ask.
+
+## 9. New strand (2026-11-16): storylines for animated videos
+
+The owner widened the scope: besides the research base and the printed books, every story now has a **storyline for an animated video**, hosted online (not in the app). Rules, format and progress are in [`storylines/README.md`](storylines/README.md) and [`storylines/CHECKLIST.md`](storylines/CHECKLIST.md).
+
+- **English only, under 3 minutes** (7 to 9 scenes, at most 165 seconds), one file per story at `storylines/<set>/<slug>.md`.
+- `python -I -X utf8 scriptures/scripts/check_storylines.py` enforces the rules and ticks the checklist. **All 142 first drafts exist and pass it.**
+- **They are first drafts, written fast.** Murugan (12) rest on the verified narratives. Sambandar (12) rest on the research briefs; the files flag the few scenes that need a verse check (`sam-palanquin`, `sam-three-saints`, `sam-todudaiya`). The Saints, Devi, Ganesha, Tamil lore, Shiva and Vishnu films rest on the briefs and on the standard tellings; where the research has only a song or a single line, the file says so and keeps the film to a short invocation. Scenes are storyboard-level (visuals plus a short narration), not yet full scripts.
+- **Open owner decisions** are written into the files' production notes: whether the Jain impalement tradition (`sam-jains`) appears at all, and how to frame `krishna-clothes`, `krishna-naraka-wives` and `ramayana-sita-agni` for a public video.
+- **Next:** a verse-check pass per set against the caches in section 5, then a richer second pass (fuller narration, dialogue) for the stories chosen for production first.
+- Not committed at the time of writing.
