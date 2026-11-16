@@ -1,0 +1,14 @@
+# Secrets and big generated files stay out of git
+.env
+.venv/
+out/
+cache/
+*.wav
+*.mp4
+*.mov
+*.blend1
+# Images the owner drops in stay out of git (large); keep the folder itself
+assets/inbox/**/*.png
+assets/inbox/**/*.jpg
+assets/inbox/**/*.jpeg
+assets/inbox/**/*.webp

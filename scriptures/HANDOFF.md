@@ -177,3 +177,7 @@ The owner widened the scope: besides the research base and the printed books, ev
 - **Open owner decisions** are written into the files' production notes: whether the Jain impalement tradition (`sam-jains`) appears at all, and how to frame `krishna-clothes`, `krishna-naraka-wives` and `ramayana-sita-agni` for a public video.
 - **Next:** a verse-check pass per set against the caches in section 5, then a richer second pass (fuller narration, dialogue) for the stories chosen for production first.
 - Not committed at the time of writing.
+
+## 10. Animation production (started 2026-11-16)
+
+The storylines are to become animated videos (2D, owner and Claude only; English female Sarvam voice; synthesised music; 16:9 and 9:16). Everything about the look, tools, decisions, the pending Flow motion test and the next steps is in [`animation/README.md`](animation/README.md). Read it first. Nothing in `animation/` is committed yet; images and renders are git-ignored.
