@@ -26,3 +26,8 @@ One file per story: `storylines/<set>/<slug>.md`.
 ## Respect
 
 These are sacred stories. Gods and sages are shown with dignity, no mockery, no gore, no violence shown on screen beyond a flash or a silhouette. Where a story has variants, the video follows the source named in the file.
+
+## Two levels of finish
+
+- **Draft (storyboard):** scenes with visuals and a short narration line. All 142 are at this level.
+- **Script level (second pass):** each scene has **Visual**, full **Narration**, any **Dialogue**, and **Sound**, with enough spoken words to fill the time (about 1.6 to 2.2 words a second: roughly 300 to 365 words for a 2:45 film), and every claim checked against its source verses. The file's title line says "script level (second pass)". The checker reports how many files reach this level. So far: `avatar-gajendra`, `m-saravana`.

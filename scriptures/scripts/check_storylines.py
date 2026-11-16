@@ -16,7 +16,6 @@ SECTIONS = [
     "## One-line story",
     "## What the story rests on",
     "## Characters",
-    "## The storyline",
     "## The Thiruppugazh connection",
     "## Production notes",
 ]
@@ -35,6 +34,8 @@ def check(path):
         problems.append(f"{total} sec (max {MAX_SECONDS})")
     if TAMIL.search(text):
         problems.append("contains Tamil text")
+    if "## The storyline" not in text and "## The script" not in text:
+        problems.append("missing section: ## The storyline / ## The script")
     for h in SECTIONS:
         if h not in text:
             problems.append(f"missing section: {h}")
@@ -42,6 +43,18 @@ def check(path):
     if nums != list(range(1, len(nums) + 1)):
         problems.append("scene numbers are not 1..n")
     return total, len(scenes), problems
+
+
+def narration_words(path):
+    """Words spoken in the narration and dialogue lines (not the visual notes)."""
+    text = open(path, encoding="utf-8").read()
+    n = 0
+    for m in re.finditer(r"^\*\*(?:Narration|Dialogue)[^*]*:\*\*\s*(.*)$", text, re.M):
+        n += len(re.findall(r"[A-Za-z']+", m.group(1)))
+    # lines like **Gajendra:** "..." are dialogue too
+    for m in re.finditer(r"^\*\*(?!Narration|Visual|Sound|Dialogue|Added|Tradition|Honesty|Note|Open)[A-Z][A-Za-z ]+:\*\*\s*\"(.*)\"", text, re.M):
+        n += len(re.findall(r"[A-Za-z']+", m.group(1)))
+    return n
 
 
 def main():
@@ -85,6 +98,20 @@ def main():
             out[i] = f"Progress: **{done} of {total_items}** written and passing `scripts/check_storylines.py`."
     open(cl, "w", encoding="utf-8", newline="\n").write("\n".join(out))
     print(f"{done} of {total_items} pass; {bad} fail")
+    # Narration depth: a 2:45 film carries about 330 to 400 spoken words.
+    thin = []
+    for d in sorted(os.listdir(ROOT)):
+        sub = os.path.join(ROOT, d)
+        if not os.path.isdir(sub):
+            continue
+        for f in sorted(os.listdir(sub)):
+            if f.endswith(".md") and f[:-3] in ok:
+                w = narration_words(os.path.join(sub, f))
+                secs = ok[f[:-3]][0]
+                if w < 2.0 * secs * 0.8:
+                    thin.append((w, f[:-3]))
+    full = len(ok) - len(thin)
+    print(f"script-level narration (>= about 1.6 words/sec): {full} of {len(ok)}; thin drafts: {len(thin)}")
     return 1 if bad else 0
 
 
