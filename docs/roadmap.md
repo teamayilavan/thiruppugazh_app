@@ -13,12 +13,23 @@ screens), a **Discover features** row in Settings, and a dismissible card on Hom
 cards have a **Try it** button; the rest explain how to use the feature. One device-side
 preference (`discover_card_dismissed`); no database, schema or backup change.
 
-Still to do before release:
+Pending before release (to finalize later):
 
-- A native Tamil speaker reads the Tamil card wording.
-- Check the release build on a device (English, dark theme, a tablet-size window).
-- Add a card whenever a release adds a feature (`discoverFeatures()` in
-  `lib/ui/screens/discover_screen.dart`).
+- **Tamil wording:** a native Tamil speaker reads all the Discover strings (cards, intro,
+  Home card, Settings row). The Tamil was written by the builder; "Try it" is
+  "முயன்று பார்", and the chanting and library cards are the first to check.
+- **On-device checks not yet done:** the other seven Try it destinations (only Favorites was
+  tried by hand), dark theme, a tablet-size emulator window, and a clean first launch
+  (the emulator kept existing app data). English was checked by the owner and looked good.
+- **Release build:** build the signed release APK and smoke-test it (code shrinking and lint
+  only run there).
+- **Review:** a fresh-context review of the branch was skipped; run `/code-review` before
+  merging if wanted.
+- **Release steps:** let `next` soak, bump the version in `pubspec.yaml` and move the
+  `[Unreleased]` changelog entry under it, merge `next` into `main`, tag `vX.Y.Z`. Nothing
+  on `next` has been pushed since the Discover commits.
+- **Ongoing:** add a Discover card whenever a release adds a feature
+  (`discoverFeatures()` in `lib/ui/screens/discover_screen.dart`).
 
 ## Exploring
 
