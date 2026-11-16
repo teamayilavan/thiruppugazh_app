@@ -25,6 +25,7 @@ A modern Thiruppugazh app offering lot of simple and purposeful features.
 -   **Smart Search**: Results are ranked: song number first, then title, then opening words, followed by matches in the rest of the lyrics, temples and tunes. It forgives spelling: type `muthaitharu` or `thirupugazh` in plain English letters, mix up ன/ந or ல/ள/ழ in Tamil, or type the words in any order.
 -   **Chanting Mode**: One verse at a time in large text, with the tune pattern as a cue and the screen kept awake. Move through by hand, or let it advance on its own at a pace you choose (5 seconds to 1 minute).
 -   **Continue Where You Left Off**: The home screen remembers your last song, and the verse you were chanting.
+-   **Discover Features**: An opt-in page of short feature cards, each with a Try it button, reached from Settings or a small card on the home screen that you can close for good. No tour, no tracking.
 -   **Adjustable Text**: Increase or decrease the lyrics size to suit you.
 -   **Share**: Share a song's text or a link that opens it in the app.
 -   **Daily Reminder**: An opt-in local notification at a time you choose — entirely offline, no server involved.

@@ -7,6 +7,7 @@ import 'data/database/database_helper.dart';
 import 'data/repositories/song_repository.dart';
 import 'providers/auto_backup_status_provider.dart';
 import 'providers/theme_provider.dart';
+import 'providers/discover_provider.dart';
 import 'providers/keep_screen_on_provider.dart';
 import 'providers/language_provider.dart';
 import 'providers/lyrics_language_provider.dart';
@@ -38,6 +39,7 @@ Future<void> main() async {
         ChangeNotifierProvider(create: (context) => ReminderSettingsProvider()),
         ChangeNotifierProvider(create: (context) => ReadingStateProvider()),
         ChangeNotifierProvider(create: (context) => KeepScreenOnProvider()),
+        ChangeNotifierProvider(create: (context) => DiscoverProvider()),
         ChangeNotifierProvider.value(value: autoBackupStatus),
         ChangeNotifierProvider(
           create: (context) => SongListProvider(repository),

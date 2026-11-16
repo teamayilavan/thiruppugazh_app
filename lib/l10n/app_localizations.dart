@@ -1436,6 +1436,210 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Clear search'**
   String get clearSearch;
+
+  /// No description provided for @discoverTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Discover features'**
+  String get discoverTitle;
+
+  /// No description provided for @discoverIntro.
+  ///
+  /// In en, this message translates to:
+  /// **'A short look at what the app can do. Open anything that interests you. Nothing here changes your data.'**
+  String get discoverIntro;
+
+  /// No description provided for @discoverTryIt.
+  ///
+  /// In en, this message translates to:
+  /// **'Try it'**
+  String get discoverTryIt;
+
+  /// No description provided for @discoverChantingTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Chanting mode'**
+  String get discoverChantingTitle;
+
+  /// No description provided for @discoverChantingBody.
+  ///
+  /// In en, this message translates to:
+  /// **'On any song, tap the meditating figure beside “Lyrics” to read one verse at a time, in large text, with the tune as a cue.'**
+  String get discoverChantingBody;
+
+  /// No description provided for @discoverContinueTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Continue where you left off'**
+  String get discoverContinueTitle;
+
+  /// No description provided for @discoverContinueBody.
+  ///
+  /// In en, this message translates to:
+  /// **'The Songs tab remembers the last song you opened, and the verse you were chanting.'**
+  String get discoverContinueBody;
+
+  /// No description provided for @discoverFavoritesTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Favorites'**
+  String get discoverFavoritesTitle;
+
+  /// No description provided for @discoverFavoritesBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Tap the heart on a song to keep it in your Favorites.'**
+  String get discoverFavoritesBody;
+
+  /// No description provided for @discoverCategoriesTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Your own categories'**
+  String get discoverCategoriesTitle;
+
+  /// No description provided for @discoverCategoriesBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Group songs your own way, such as one list for each day of the week.'**
+  String get discoverCategoriesBody;
+
+  /// No description provided for @discoverLibraryTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Highlights, notes and links'**
+  String get discoverLibraryTitle;
+
+  /// No description provided for @discoverLibraryBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Highlight verses, write a note or attach a link on any song. They are all gathered in your Library.'**
+  String get discoverLibraryBody;
+
+  /// No description provided for @discoverLinksTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Links on songs'**
+  String get discoverLinksTitle;
+
+  /// No description provided for @discoverLinksBody.
+  ///
+  /// In en, this message translates to:
+  /// **'On a song, tap Add Link to keep a kirtan video or discourse with it.'**
+  String get discoverLinksBody;
+
+  /// No description provided for @discoverShareTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Share a link into the app'**
+  String get discoverShareTitle;
+
+  /// No description provided for @discoverShareBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Share a link from YouTube or a browser and choose Thiruppugazh. Pick the song and it is saved.'**
+  String get discoverShareBody;
+
+  /// No description provided for @discoverWidgetTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Today\'s song widget'**
+  String get discoverWidgetTitle;
+
+  /// No description provided for @discoverWidgetBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Add Thiruppugazh from your phone\'s widget picker to see today\'s song on your home screen.'**
+  String get discoverWidgetBody;
+
+  /// No description provided for @discoverReminderTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Daily reminder'**
+  String get discoverReminderTitle;
+
+  /// No description provided for @discoverReminderBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Turn on a daily notification in Settings. Tapping it opens today\'s song.'**
+  String get discoverReminderBody;
+
+  /// No description provided for @discoverSearchTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Search by title or lyrics'**
+  String get discoverSearchTitle;
+
+  /// No description provided for @discoverSearchBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Search shows the line that matched, and remembers your last few searches.'**
+  String get discoverSearchBody;
+
+  /// No description provided for @discoverKeepAwakeTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Keep the screen on'**
+  String get discoverKeepAwakeTitle;
+
+  /// No description provided for @discoverKeepAwakeBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Stop the screen dimming while you read. Switch it on in Settings.'**
+  String get discoverKeepAwakeBody;
+
+  /// No description provided for @discoverLanguageTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Language and text size'**
+  String get discoverLanguageTitle;
+
+  /// No description provided for @discoverLanguageBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose Tamil or English lyrics in Settings. On a song, the text-size buttons make lyrics larger or smaller.'**
+  String get discoverLanguageBody;
+
+  /// No description provided for @discoverBackupTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Backup and restore'**
+  String get discoverBackupTitle;
+
+  /// No description provided for @discoverBackupBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Export your favorites, categories, notes, highlights and links, and import them on another phone. Settings also shows your last automatic backup.'**
+  String get discoverBackupBody;
+
+  /// No description provided for @discoverTabletTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Reading pane on tablets'**
+  String get discoverTabletTitle;
+
+  /// No description provided for @discoverTabletBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Keep the song list on the left and the open song on the right. Use the previous and next buttons, or the Left and Right arrow keys, to move between songs.'**
+  String get discoverTabletBody;
+
+  /// No description provided for @discoverCardTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'New here? See what the app can do'**
+  String get discoverCardTitle;
+
+  /// No description provided for @discoverCardBody.
+  ///
+  /// In en, this message translates to:
+  /// **'A short look at the features, whenever you like.'**
+  String get discoverCardBody;
+
+  /// No description provided for @discoverCardDismiss.
+  ///
+  /// In en, this message translates to:
+  /// **'Close'**
+  String get discoverCardDismiss;
 }
 
 class _AppLocalizationsDelegate

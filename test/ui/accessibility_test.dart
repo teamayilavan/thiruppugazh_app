@@ -166,4 +166,28 @@ void main() {
       await check(tester, 'chanting, $mode');
     });
   }
+
+  for (final mode in const [ThemeMode.light, ThemeMode.dark]) {
+    for (final language in const ['en', 'ta']) {
+      testWidgets('Home card and Discover page, $mode, $language', (
+        tester,
+      ) async {
+        await pumpShell(
+          tester,
+          _tallPhone,
+          language: language,
+          themeMode: mode,
+          showDiscoverCard: true,
+        );
+        final strings = l10n(tester);
+        expect(find.text(strings.discoverCardTitle), findsOneWidget);
+        await check(tester, 'Home with Discover card, $mode, $language');
+
+        await tester.tap(find.text(strings.discoverCardTitle));
+        await settleShell(tester);
+        expect(find.text(strings.discoverIntro), findsOneWidget);
+        await check(tester, 'Discover page, $mode, $language');
+      });
+    }
+  }
 }

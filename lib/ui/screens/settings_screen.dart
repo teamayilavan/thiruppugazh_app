@@ -12,6 +12,7 @@ import '../../providers/reminder_settings_provider.dart';
 import '../../l10n/app_localizations.dart';
 import '../../services/backup_service.dart';
 import '../widgets/link_actions.dart';
+import 'discover_screen.dart';
 import 'privacy_policy_screen.dart';
 
 class SettingsScreen extends StatelessWidget {
@@ -67,6 +68,15 @@ class SettingsScreen extends StatelessWidget {
               onTap: () {
                 _showThemeDialog(context, themeProvider);
               },
+            ),
+            const Divider(),
+            ListTile(
+              leading: const Icon(Icons.explore_outlined),
+              title: Text(l10n.discoverTitle),
+              trailing: const Icon(Icons.chevron_right),
+              onTap: () => Navigator.of(
+                context,
+              ).push(MaterialPageRoute(builder: (_) => const DiscoverScreen())),
             ),
             const Divider(),
             SwitchListTile(

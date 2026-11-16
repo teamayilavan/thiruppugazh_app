@@ -732,4 +732,122 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get clearSearch => 'Clear search';
+
+  @override
+  String get discoverTitle => 'Discover features';
+
+  @override
+  String get discoverIntro =>
+      'A short look at what the app can do. Open anything that interests you. Nothing here changes your data.';
+
+  @override
+  String get discoverTryIt => 'Try it';
+
+  @override
+  String get discoverChantingTitle => 'Chanting mode';
+
+  @override
+  String get discoverChantingBody =>
+      'On any song, tap the meditating figure beside “Lyrics” to read one verse at a time, in large text, with the tune as a cue.';
+
+  @override
+  String get discoverContinueTitle => 'Continue where you left off';
+
+  @override
+  String get discoverContinueBody =>
+      'The Songs tab remembers the last song you opened, and the verse you were chanting.';
+
+  @override
+  String get discoverFavoritesTitle => 'Favorites';
+
+  @override
+  String get discoverFavoritesBody =>
+      'Tap the heart on a song to keep it in your Favorites.';
+
+  @override
+  String get discoverCategoriesTitle => 'Your own categories';
+
+  @override
+  String get discoverCategoriesBody =>
+      'Group songs your own way, such as one list for each day of the week.';
+
+  @override
+  String get discoverLibraryTitle => 'Highlights, notes and links';
+
+  @override
+  String get discoverLibraryBody =>
+      'Highlight verses, write a note or attach a link on any song. They are all gathered in your Library.';
+
+  @override
+  String get discoverLinksTitle => 'Links on songs';
+
+  @override
+  String get discoverLinksBody =>
+      'On a song, tap Add Link to keep a kirtan video or discourse with it.';
+
+  @override
+  String get discoverShareTitle => 'Share a link into the app';
+
+  @override
+  String get discoverShareBody =>
+      'Share a link from YouTube or a browser and choose Thiruppugazh. Pick the song and it is saved.';
+
+  @override
+  String get discoverWidgetTitle => 'Today\'s song widget';
+
+  @override
+  String get discoverWidgetBody =>
+      'Add Thiruppugazh from your phone\'s widget picker to see today\'s song on your home screen.';
+
+  @override
+  String get discoverReminderTitle => 'Daily reminder';
+
+  @override
+  String get discoverReminderBody =>
+      'Turn on a daily notification in Settings. Tapping it opens today\'s song.';
+
+  @override
+  String get discoverSearchTitle => 'Search by title or lyrics';
+
+  @override
+  String get discoverSearchBody =>
+      'Search shows the line that matched, and remembers your last few searches.';
+
+  @override
+  String get discoverKeepAwakeTitle => 'Keep the screen on';
+
+  @override
+  String get discoverKeepAwakeBody =>
+      'Stop the screen dimming while you read. Switch it on in Settings.';
+
+  @override
+  String get discoverLanguageTitle => 'Language and text size';
+
+  @override
+  String get discoverLanguageBody =>
+      'Choose Tamil or English lyrics in Settings. On a song, the text-size buttons make lyrics larger or smaller.';
+
+  @override
+  String get discoverBackupTitle => 'Backup and restore';
+
+  @override
+  String get discoverBackupBody =>
+      'Export your favorites, categories, notes, highlights and links, and import them on another phone. Settings also shows your last automatic backup.';
+
+  @override
+  String get discoverTabletTitle => 'Reading pane on tablets';
+
+  @override
+  String get discoverTabletBody =>
+      'Keep the song list on the left and the open song on the right. Use the previous and next buttons, or the Left and Right arrow keys, to move between songs.';
+
+  @override
+  String get discoverCardTitle => 'New here? See what the app can do';
+
+  @override
+  String get discoverCardBody =>
+      'A short look at the features, whenever you like.';
+
+  @override
+  String get discoverCardDismiss => 'Close';
 }

@@ -25,6 +25,7 @@ class AppConstants {
   static const String chantShowTunePrefsKey = 'chant_show_tune';
   static const String keepScreenOnReadingPrefsKey = 'keep_screen_on_reading';
   static const String recentSearchesPrefsKey = 'recent_searches';
+  static const String discoverCardDismissedPrefsKey = 'discover_card_dismissed';
 
   // ==================== Deep Link ====================
   static const String deepLinkDomain = 'thiruppugazh.ayilavan.org';

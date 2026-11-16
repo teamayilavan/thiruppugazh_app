@@ -51,6 +51,11 @@ Shown from `SongDetailScreen`'s "add to categories" FAB, as a **modal bottom she
 -   Checkbox list of existing categories (Favorites excluded — that's a separate FAB).
 -   **Create inline**: a text field + "+" button lets you type a new category name without leaving the sheet. It's staged locally, shown as a `CheckboxListTile` matching the existing-category rows (checked by default; unchecking removes it from the pending list) until the sheet's Save button is tapped — Cancel discards it. On Save, staged names are created (`SongRepository.createCategory`) and the song is linked to them in the same pass. Added to remove the friction of having no categories to pick from on first use.
 
+#### `DiscoverScreen`
+-   A quiet page of short feature cards (`discoverFeatures()` lists them). Each card has an icon, a title, one line, and a **Try it** button that pushes an existing screen on the current navigator, so on tablets the navigation rail stays. Cards with no screen of their own (widget, share into the app, chanting) show a how-to line instead; the tablet reading-pane card is listed only on large screens.
+-   Reached from the **Discover features** row in Settings and from `DiscoverCard`, a dismissible card on Home between the Continue and Today's song cards. Opening Discover from the card, or closing it, hides the card for good.
+-   Never changes user data. The only state is `DiscoverProvider`'s one device-side flag, preference key `discover_card_dismissed` (not in the database, not in backups).
+
 #### `PrivacyPolicyScreen`
 Displays the privacy policy in Tamil and English.
 
@@ -75,6 +80,7 @@ Displays the privacy policy in Tamil and English.
 -   `ThemeProvider`: Manages light/dark mode.
 -   `LanguageProvider`: Manages the app's UI localization (English/Tamil).
 -   `LyricsLanguageProvider`: Manages which language *song content* (lyrics, meanings, tune) displays in — independent of the UI language above; falls back to Tamil for the 7 songs without English content.
+-   `DiscoverProvider`: Whether the Home card pointing to Discover was closed (`discover_card_dismissed` preference; hidden until the saved value is read).
 -   `ReminderSettingsProvider`: Manages the Daily Reminder toggle/time, and requests/tracks the OS notification permission.
 -   `AutoBackupStatusProvider`: Exposes the "Last automatic backup" timestamp shown in Settings — updated by `AutoBackupService`, not the UI, whenever a debounced backup write succeeds.
 -   `AutoBackupService` (not a `Provider` — a plain service wired up in `main.dart`): hooks `DatabaseHelper.onMutation` to debounce a backup snapshot write after any data change, does the one-shot silent restore check on a freshly-copied database, and an opportunistic staleness check on startup. See `docs/automated-backup-plan.md`.

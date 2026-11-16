@@ -5,6 +5,7 @@ import '../../data/repositories/song_repository.dart';
 import '../../providers/song_list_provider.dart';
 import '../../providers/lyrics_language_provider.dart';
 import '../widgets/continue_card.dart';
+import '../widgets/discover_card.dart';
 import '../widgets/todays_song_card.dart';
 import '../widgets/adaptive_layout.dart';
 import 'search_screen.dart';
@@ -178,6 +179,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ),
                     const SliverToBoxAdapter(child: ContinueCard()),
+                    const SliverToBoxAdapter(child: DiscoverCard()),
                     const SliverToBoxAdapter(child: TodaysSongCard()),
                     SliverPadding(
                       padding: const EdgeInsets.symmetric(

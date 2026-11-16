@@ -9,6 +9,8 @@ import 'package:thiruppugazh/providers/language_provider.dart';
 import 'package:thiruppugazh/providers/lyrics_language_provider.dart';
 import 'package:thiruppugazh/providers/reminder_settings_provider.dart';
 import 'package:thiruppugazh/providers/theme_provider.dart';
+import 'package:thiruppugazh/theme/app_theme.dart';
+import 'package:thiruppugazh/ui/screens/discover_screen.dart';
 import 'package:thiruppugazh/ui/screens/settings_screen.dart';
 
 Widget _wrapped() {
@@ -21,10 +23,11 @@ Widget _wrapped() {
       ChangeNotifierProvider(create: (_) => AutoBackupStatusProvider()),
       ChangeNotifierProvider(create: (_) => KeepScreenOnProvider()),
     ],
-    child: const MaterialApp(
+    child: MaterialApp(
+      theme: lightTheme,
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
-      home: SettingsScreen(),
+      home: const SettingsScreen(),
     ),
   );
 }
@@ -76,5 +79,17 @@ void main() {
       listen: false,
     );
     expect(provider.enabled, isTrue);
+  });
+
+  testWidgets('the Discover features row opens the Discover page', (
+    tester,
+  ) async {
+    // This test has no DiscoverProvider: the row must not depend on one.
+    await tester.pumpWidget(_wrapped());
+    await tester.pumpAndSettle();
+
+    await tester.tap(find.text('Discover features'));
+    await tester.pumpAndSettle();
+    expect(find.byType(DiscoverScreen), findsOneWidget);
   });
 }

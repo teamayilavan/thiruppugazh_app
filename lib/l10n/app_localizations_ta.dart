@@ -738,4 +738,121 @@ class AppLocalizationsTa extends AppLocalizations {
 
   @override
   String get clearSearch => 'தேடலை அழி';
+
+  @override
+  String get discoverTitle => 'வசதிகளைக் கண்டறிக';
+
+  @override
+  String get discoverIntro =>
+      'செயலியில் என்னென்ன செய்யலாம் என்பதன் சுருக்கம். விரும்பியதைத் திறந்து பாருங்கள். இங்கு எதுவும் உங்கள் தரவை மாற்றாது.';
+
+  @override
+  String get discoverTryIt => 'முயன்று பார்';
+
+  @override
+  String get discoverChantingTitle => 'பாராயண முறை';
+
+  @override
+  String get discoverChantingBody =>
+      'எந்தப் பாடலிலும் “பாடல்” அருகிலுள்ள தியான உருவத்தைத் தொட்டால், ஒரு நேரத்தில் ஒரு பத்தி பெரிய எழுத்தில், சந்தக் குறிப்புடன் தெரியும்.';
+
+  @override
+  String get discoverContinueTitle => 'விட்ட இடத்திலிருந்து தொடரவும்';
+
+  @override
+  String get discoverContinueBody =>
+      'பாடல்கள் பக்கம், நீங்கள் கடைசியாகத் திறந்த பாடலையும், பாராயணம் செய்த பத்தியையும் நினைவில் வைத்திருக்கும்.';
+
+  @override
+  String get discoverFavoritesTitle => 'பிடித்தவை';
+
+  @override
+  String get discoverFavoritesBody =>
+      'ஒரு பாடலில் இதய வடிவைத் தொட்டால் அது பிடித்தவையில் சேரும்.';
+
+  @override
+  String get discoverCategoriesTitle => 'உங்கள் சொந்த வகைகள்';
+
+  @override
+  String get discoverCategoriesBody =>
+      'வாரத்தின் ஒவ்வொரு நாளுக்கும் ஒரு பட்டியல் என, பாடல்களை உங்கள் விருப்பப்படி தொகுக்கலாம்.';
+
+  @override
+  String get discoverLibraryTitle => 'வண்ணமிடல், குறிப்புகள், இணைப்புகள்';
+
+  @override
+  String get discoverLibraryBody =>
+      'எந்தப் பாடலிலும் வரிகளுக்கு வண்ணமிடலாம், குறிப்பு எழுதலாம், இணைப்பைச் சேர்க்கலாம். அனைத்தும் தொகுப்பில் சேரும்.';
+
+  @override
+  String get discoverLinksTitle => 'பாடலில் இணைப்புகள்';
+
+  @override
+  String get discoverLinksBody =>
+      'ஒரு பாடலில் “இணைப்பைச் சேர்” என்பதைத் தொட்டு, கீர்த்தன வீடியோ அல்லது சொற்பொழிவை அதனுடன் வைத்துக்கொள்ளலாம்.';
+
+  @override
+  String get discoverShareTitle => 'இணைப்பைச் செயலிக்குப் பகிர்தல்';
+
+  @override
+  String get discoverShareBody =>
+      'YouTube அல்லது உலாவியிலிருந்து இணைப்பைப் பகிர்ந்து திருப்புகழைத் தேர்ந்தெடுங்கள். பாடலைத் தேர்ந்தெடுத்தால் அது சேமிக்கப்படும்.';
+
+  @override
+  String get discoverWidgetTitle => 'இன்றைய பாடல் விட்ஜெட்';
+
+  @override
+  String get discoverWidgetBody =>
+      'உங்கள் தொலைபேசியின் விட்ஜெட் பட்டியலிலிருந்து திருப்புகழைச் சேர்த்தால், முகப்புத் திரையில் இன்றைய பாடல் தெரியும்.';
+
+  @override
+  String get discoverReminderTitle => 'தினசரி நினைவூட்டல்';
+
+  @override
+  String get discoverReminderBody =>
+      'அமைப்புகளில் தினசரி அறிவிப்பை இயக்கலாம். அதைத் தொட்டால் இன்றைய பாடல் திறக்கும்.';
+
+  @override
+  String get discoverSearchTitle => 'தலைப்பு அல்லது வரிகளால் தேடல்';
+
+  @override
+  String get discoverSearchBody =>
+      'தேடலில் பொருந்திய வரி காட்டப்படும்; சமீபத்திய சில தேடல்களும் நினைவில் இருக்கும்.';
+
+  @override
+  String get discoverKeepAwakeTitle => 'திரையை எரியவிடுதல்';
+
+  @override
+  String get discoverKeepAwakeBody =>
+      'படிக்கும்போது திரை மங்காமல் இருக்க, அமைப்புகளில் இதை இயக்கலாம்.';
+
+  @override
+  String get discoverLanguageTitle => 'மொழியும் எழுத்தளவும்';
+
+  @override
+  String get discoverLanguageBody =>
+      'அமைப்புகளில் தமிழ் அல்லது ஆங்கிலப் பாடல் வரிகளைத் தேர்ந்தெடுக்கலாம். பாடலில் உள்ள எழுத்தளவு பொத்தான்கள் வரிகளைப் பெரிதாக்கும் அல்லது சிறிதாக்கும்.';
+
+  @override
+  String get discoverBackupTitle => 'காப்புப்பிரதி, மீட்டமைத்தல்';
+
+  @override
+  String get discoverBackupBody =>
+      'பிடித்தவை, வகைகள், குறிப்புகள், வண்ணமிடல்கள், இணைப்புகளை ஏற்றுமதி செய்து, வேறு தொலைபேசியில் இறக்குமதி செய்யலாம். கடைசி தானியங்கி காப்புப்பிரதியும் அமைப்புகளில் தெரியும்.';
+
+  @override
+  String get discoverTabletTitle => 'டேப்லெட்டில் வாசிப்புப் பலகை';
+
+  @override
+  String get discoverTabletBody =>
+      'இடதுபுறம் பாடல் பட்டியல், வலதுபுறம் திறந்த பாடல். முந்தைய, அடுத்த பொத்தான்கள் அல்லது இடது, வலது அம்புக்குறி விசைகளால் பாடல்களுக்கு இடையே செல்லலாம்.';
+
+  @override
+  String get discoverCardTitle => 'புதியவரா? செயலியின் வசதிகளைப் பாருங்கள்';
+
+  @override
+  String get discoverCardBody => 'விரும்பும்போது வசதிகளின் சுருக்கமான பார்வை.';
+
+  @override
+  String get discoverCardDismiss => 'மூடு';
 }

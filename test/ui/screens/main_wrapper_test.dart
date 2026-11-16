@@ -6,7 +6,9 @@ import 'package:thiruppugazh/l10n/app_localizations.dart';
 import 'package:thiruppugazh/providers/reading_state_provider.dart';
 import 'package:thiruppugazh/services/daily_song_service.dart';
 import 'package:thiruppugazh/services/reminder_notification_service.dart';
+import 'package:thiruppugazh/ui/screens/discover_screen.dart';
 import 'package:thiruppugazh/ui/screens/main_wrapper.dart';
+import 'package:thiruppugazh/ui/screens/song_list_screen.dart';
 import 'package:thiruppugazh/ui/screens/song_detail_screen.dart';
 
 import '../../support/fake_song_repo.dart';
@@ -269,6 +271,47 @@ void main() {
     testWidgets('a normal start does not open a song', (tester) async {
       await pumpShell(tester, phonePortrait);
       expect(find.byType(SongDetailScreen), findsNothing);
+    });
+  });
+
+  group('Discover', () {
+    const cardTitle = 'New here? See what the app can do';
+
+    testWidgets('on a tablet, Try it and Back keep the navigation rail', (
+      tester,
+    ) async {
+      await pumpShell(tester, tabletLandscape, showDiscoverCard: true);
+      await tester.tap(find.text(cardTitle));
+      await settleShell(tester);
+      expect(find.byType(DiscoverScreen), findsOneWidget);
+      expect(find.byType(NavigationRail), findsOneWidget);
+
+      final tryFavorites = find.descendant(
+        of: find.ancestor(
+          of: find.text('Favorites'),
+          matching: find.byType(Card),
+        ),
+        matching: find.byType(TextButton),
+      );
+      await tester.ensureVisible(tryFavorites);
+      await tester.tap(tryFavorites);
+      await settleShell(tester);
+      expect(find.byType(SongListScreen), findsOneWidget);
+      expect(find.byType(NavigationRail), findsOneWidget);
+
+      await tester.binding.handlePopRoute();
+      await settleShell(tester);
+      expect(find.byType(SongListScreen), findsNothing);
+      expect(find.byType(DiscoverScreen), findsOneWidget);
+      expect(find.byType(NavigationRail), findsOneWidget);
+    });
+
+    testWidgets('the Home card is gone after it is closed', (tester) async {
+      await pumpShell(tester, phonePortrait, showDiscoverCard: true);
+      expect(find.text(cardTitle), findsOneWidget);
+      await tester.tap(find.byTooltip('Close'));
+      await settleShell(tester);
+      expect(find.text(cardTitle), findsNothing);
     });
   });
 
