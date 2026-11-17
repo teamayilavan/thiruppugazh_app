@@ -1,6 +1,6 @@
 # The Pillar of Fire (Annamalai)
 
-`deeds-annamalai` | Shiva | running time 2:45 (8 scenes) | tone: pride, awe, humility
+`deeds-annamalai` | Shiva | running time 2:45 (8 scenes) | tone: pride, awe, humility | **script level (second pass)**
 
 ## One-line story
 
@@ -25,43 +25,57 @@ Brahma and Vishnu quarrel over who is greater; Shiva stands between them as an e
 - **Vishnu:** blue, thoughtful; as a boar.
 - **Shiva:** the pillar of fire, then a figure in the fire.
 
-## The storyline
+## The script
+
+Narration is one calm, warm voice, about two words a second; quiet at the start, full of wonder at the pillar, gentle at the end.
 
 ### 1. The quarrel (20 sec)
-In the sky, Brahma and Vishnu argue, each insisting he is the greater.
-**Narration:** "Brahma and Vishnu quarrelled over which was greater."
+**Visual:** A vast, dim sky before the worlds were settled. Brahma, four-faced, sits on a lotus; Vishnu, blue and calm, stands opposite. Each points to himself; their voices rise, and the sky darkens between them.
+**Narration:** "Long ago, before the worlds were settled, Brahma the creator and Vishnu the preserver fell into a quarrel. Each said, I am the greater."
+**Dialogue:** Brahma: "I made all that is."
+**Dialogue:** Vishnu: "And all that is rests in me."
+**Sound:** two low, clashing tones.
 
 ### 2. The pillar (25 sec)
-Between them rises a vast column of fire, without beginning or end.
-**Narration:** "Then a pillar of fire rose between them."
+**Visual:** Between them a column of fire rises out of the dark, silent and endless. It fills the frame from top to bottom; the camera tilts up and down and finds no end. The fire is golden light, soft at the edges, casting no smoke.
+**Narration:** "Then, between them, a pillar of fire rose up. It was not like any fire they knew. It gave light but did not burn. Above it there was only more fire, and below it, only more fire. It had no beginning and no end that anyone could see."
+**Sound:** a deep, rising hum; the quarrel's tones fall silent.
 
 ### 3. The challenge (20 sec)
-A voice from the fire: "Whoever finds my end is the greater."
-**Narration:** "Whoever found its end, would be the greater."
+**Visual:** Brahma and Vishnu stare at the pillar, then at each other. They nod: one points down, the other up.
+**Narration:** "The two gods fell silent. Then they made an agreement. Whoever found an end of this pillar would be the greater. Vishnu would seek its foot, far below. Brahma would seek its crown, far above."
+**Sound:** a single bell.
 
 ### 4. The boar (25 sec)
-Vishnu becomes a great boar and digs down, down, through earth and darkness.
-**Narration:** "Vishnu became a boar and dug down."
+**Visual:** Vishnu becomes a great dark boar with shining tusks and plunges into the earth beside the pillar. Layers of rock, roots and darkness pass; the fire runs on beside him, always further down.
+**Narration:** "Vishnu took the form of a great boar and dug down into the earth. He dug through rock, through roots, through the deep darkness under the world, for ages beyond counting. And still the fire went down before him, without end."
+**Sound:** a steady digging rhythm, deeper and deeper.
 
 ### 5. The swan (25 sec)
-Brahma becomes a swan and flies up, up into the light.
-**Narration:** "Brahma became a swan and flew up."
+**Visual:** Brahma becomes a white swan and climbs past clouds, past the sun, past the stars. The pillar rises beside him, endless, its light growing brighter.
+**Narration:** "Brahma took the form of a white swan and flew up. He flew past the clouds, past the sun, past the farthest stars, higher and higher. And still the fire rose above him, and he could see no top."
+**Sound:** wing beats; a thin, high wind.
 
-### 6. The failure (20 sec)
-Vishnu returns, exhausted: "I could not find the foot." Brahma returns, claiming he has seen the crown.
-**Narration:** "Vishnu said he could not find it. Brahma said he had."
+### 6. The return (20 sec)
+**Visual:** Both return to the middle, tired. Vishnu, in his own form again, bows his head. Brahma lifts his chin.
+**Narration:** "At last both came back, tired. Vishnu bowed, and spoke the truth."
+**Dialogue:** Vishnu: "I could not find its foot."
+**Narration (continued):** "But Brahma said that he had reached the top, and seen the crown."
+**Sound:** a soft chord for Vishnu; a hollow note for Brahma.
 
 ### 7. The truth (20 sec)
-Shiva appears in the fire: the fire shows Brahma's lie. Brahma bows his head.
-**Narration:** "But the Lord knew the truth."
+**Visual:** The pillar opens like a door of light, and Shiva stands within it, calm. Brahma lowers his eyes; Vishnu folds his hands. Neither is mocked: both are small before the light.
+**Narration:** "Then the Lord himself shone out from the pillar. He was the fire, and the fire had no end. He knew the truth. Brahma's claim was false, and he bowed his head. Vishnu, who had spoken honestly, was honoured."
+**Sound:** a great, warm chord.
 
 ### 8. The hill (10 sec)
-The fire cools to a hill at Tiruvannamalai.
-**Narration:** "And the fire became a hill, where it is worshipped still."
+**Visual:** The pillar slowly settles into a red hill at dawn. A lamp burns on its summit.
+**Narration:** "Tradition says the fire became the hill of Tiruvannamalai, where he is worshipped still."
+**Sound:** temple bells, far off.
 
 ## The Thiruppugazh connection (end card)
 
-Songs 205, 360, 479, 733 and others.
+Arunagiri praises Shiva as the endless fire whose foot and crown Brahma and Vishnu could not find. Songs to show: 205 (Swamimalai), 360 (Thiruvanaikka), 479 (Chidambaram), 733 (Thirukkovalur), 957 (Madurai).
 
 ## Production notes
 

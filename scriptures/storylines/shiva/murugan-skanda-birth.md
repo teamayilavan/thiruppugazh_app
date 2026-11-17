@@ -1,6 +1,6 @@
 # Fire, River and Reeds (The Birth of Skanda in the Epics)
 
-`murugan-skanda-birth` | Shiva | running time 2:45 (8 scenes) | tone: mythic, luminous, tender
+`murugan-skanda-birth` | Shiva | running time 2:45 (8 scenes) | tone: mythic, luminous, tender | **script level (second pass)**
 
 ## One-line story
 
@@ -24,43 +24,53 @@ In the epic and Puranic telling, six sparks from Shiva's forehead eye are carrie
 
 - **Shiva, Agni, Ganga, the Krittikas, the child.**
 
-## The storyline
+## The script
+
+Narration is one calm, warm voice, mythic and luminous, like an old tale told by a lamp. About two words a second.
 
 ### 1. A son needed (20 sec)
-The gods ask Shiva for a commander: a son born of his power.
-**Narration:** "The gods needed a son of Shiva."
+**Visual:** The gods, pale and anxious, stand before Kailasa. Behind them, smoke and shadow: the demons are winning. Indra leads them, bowing.
+**Narration:** "Long ago the gods were in great trouble. A powerful demon was harming the worlds, and none of them could stand against him. They needed a commander, a leader for their army. Only a son of Shiva, they knew, could save them."
+**Sound:** a low, uneasy drone; distant war drums.
 
-### 2. The sparks (25 sec)
-Sparks fall from Shiva's forehead eye.
-**Narration:** "Sparks fell from his forehead eye."
+### 2. The fiery power (20 sec)
+**Visual:** On Kailasa, Shiva's form blazes. A ball of fiery light, his own power, too bright to look at, leaves him and falls through the clouds.
+**Narration:** "The old Sanskrit epics, the Ramayana and the Mahabharata, tell what happened next. A fiery power came forth from Shiva, so bright and so strong that nothing in the worlds could hold it."
+**Sound:** a deep roar of fire; a rising chord.
 
 ### 3. Agni (20 sec)
-Agni takes them, but cannot hold them.
-**Narration:** "Agni carried them, but they were too strong."
+**Visual:** Agni, the fire god, red-skinned with flames for hair, catches the light. He staggers; even he glows white with its heat. He carries it, struggling, toward a great river.
+**Narration:** "Agni, the god of fire, took it up. But even fire could not bear it for long. It burned brighter than he did. So he carried it to the river Ganga."
+**Sound:** crackling fire; heavy footsteps.
 
 ### 4. The Ganga (20 sec)
-The Ganga takes them, flows with them to the reeds.
-**Narration:** "The Ganga bore them to the reeds."
+**Visual:** The Ganga, a goddess flowing with the river, receives the light. The water shines and boils. She carries it down from the mountains and lays it in a thicket of tall reeds at the foot of the Himalaya.
+**Narration:** "The Ganga received it into her waters. But the river too could not hold it. She carried it down from the mountains, and laid it among the tall reeds at the foot of the Himalaya."
+**Sound:** rushing water, then a gentle stream.
 
-### 5. The reed pool (25 sec)
-A lake of reeds; six babies appear on lotuses.
-**Narration:** "In the reed pool, six babies were born."
+### 5. The child in the reeds (25 sec)
+**Visual:** Golden light glows in the reed thicket. The reeds part. In their midst lies a shining child, glowing like the morning sun, and the earth around him turns to gold.
+**Narration:** "There, in the thicket of reeds, a child was born, shining like the rising sun. The reeds around him, the epics say, and the hills nearby, turned to gold. The reed thicket is the Saravana, and so he is called Saravanabhava, born in the reeds."
+**Sound:** a soft, high choir; a baby's first cry.
 
-### 6. The Krittikas (25 sec)
-Six women nurse the children; each child has a mother.
-**Narration:** "Six women nursed them."
+### 6. The six mothers (25 sec)
+**Visual:** Six radiant women, the Krittikas, the stars of the Pleiades, come down from the night sky. Each one wants to hold the child. The child turns six faces toward them, one for each mother, and is fed by all six at once.
+**Narration:** "Six shining women came down from the sky: the Krittikas, the six stars. Each one wanted to nurse him. So the child took six faces, and drank from all six together. That is why he is called Karttikeya, the son of the Krittikas."
+**Sound:** six soft bell tones, one for each.
 
-### 7. Uma (20 sec)
-Uma embraces the six, and they become one, with six faces.
-**Narration:** "Uma joined them into one."
+### 7. Skanda (15 sec)
+**Visual:** The child, now one body with six faces, sits up and laughs. The gods arrive and bow; the Krittikas stand around him, glowing.
+**Narration:** "The epics give him many names. Skanda, Guha, Kumara. The gods saw him and rejoiced. Their commander had come."
+**Sound:** a bright fanfare of conch shells.
 
-### 8. Kumara (10 sec)
-The child smiles.
-**Narration:** "And Kumara was born."
+### 8. The Tamil telling (20 sec)
+**Visual:** The scene dissolves into a Tamil picture: six sparks leap from Shiva's forehead eye, six babies lie on six lotuses in the Saravana pool, and Uma gathers them in her arms. They become one child with six faces.
+**Narration:** "The Tamil Kanda Puranam tells it another way: six sparks from Shiva's forehead eye, six babies on six lotuses, and Uma, who joined them into one. Arunagiri sings of the child born from the eye of the Lord of Thillai."
+**Sound:** a temple bell; a gentle closing melody.
 
 ## The Thiruppugazh connection (end card)
 
-Songs 476, 929, 1005 and 1155.
+The Thiruppugazh recalls Murugan's birth from Shiva in songs 476 (Chidambaram: born from the eye of the Lord of Thillai), 929 (Karuvur), 1005 and 1155 (general songs).
 
 ## Production notes
 

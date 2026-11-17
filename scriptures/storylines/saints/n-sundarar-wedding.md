@@ -1,6 +1,6 @@
 # The Old Man Who Stopped the Wedding
 
-`n-sundarar-wedding` | Saints | running time 2:45 (8 scenes) | tone: comic confusion, then awe
+`n-sundarar-wedding` | Saints | running time 2:45 (8 scenes) | tone: comic confusion, then awe | **script level (second pass)**
 
 ## One-line story
 
@@ -26,43 +26,57 @@ As Sundarar is about to marry, an old Brahmin stops the wedding, claiming by a w
 - **The bride's family and guests.**
 - **Village elders.**
 
-## The storyline
+## The script
+
+Narration is one calm, warm voice, about two words a second; bright and comic at the wedding, puzzled on the road, hushed with awe at the temple.
 
 ### 1. The wedding hall (20 sec)
-Thirunavalur: a hall of garlands and music. Sundarar, in wedding finery, takes his seat.
-**Narration:** "Sundarar was about to be married at Thirunavalur."
+**Visual:** A village wedding hall under a pandal of garlands and mango leaves. Music, lamps, guests in silk. The bridegroom, young Nambi Arurar, handsome and radiant, takes his seat. The bride's family bustles happily; the sacred fire is lit.
+**Narration:** "Long ago a young man of Thirunavalur, Nambi Arurar, was about to be married. The hall was full of flowers and music, and the sacred fire was lit. Everything was ready."
+**Sound:** nadaswaram and drums; laughter.
 
 ### 2. The interruption (20 sec)
-An old man leans on a stick and calls out: "Stop!"
-**Narration:** "An old Brahmin stood up and cried: 'Stop!'"
+**Visual:** An old brahmin, bent and leaning on a stick, with a palm-leaf deed in his hand, totters through the crowd to the front. The music stops one instrument at a time. He raises his hand.
+**Narration:** "Then a very old brahmin came tottering into the hall, leaning on a stick, a palm-leaf deed in his hand. He raised his voice, and the music stopped."
+**Dialogue:** The old man: "Listen, all of you! I have a claim on this bridegroom."
+**Sound:** instruments trailing off; a murmur.
 
-### 3. The claim (25 sec)
-He holds a palm-leaf: "This bond says that you, and all your family, are my slaves."
-**Narration:** "He said Sundarar was his slave, by a bond."
+### 3. The claim (20 sec)
+**Visual:** The old man holds up the palm leaf for all to see. The guests gasp. The bridegroom stares, then begins to laugh.
+**Narration:** "He said that Arurar was his slave, by a deed that Arurar's own grandfather had written, and that the young man must serve him."
+**Dialogue:** The old man: "This Arurar of Navalur is my servant. That is all I say."
+**Sound:** shocked whispers; a comic pluck.
 
 ### 4. The tearing (20 sec)
-Sundarar, annoyed, calls him mad, and tears the leaf in two.
-**Narration:** "Sundarar called him mad, and tore the bond."
+**Visual:** Arurar, half laughing and half angry, demands to see the deed. The old man will not hand it over. Arurar snatches at it; the old man runs; Arurar chases him through the hall, catches the leaf, and tears it to pieces.
+**Narration:** "Arurar laughed and called him a madman. He demanded to see the deed, chased the old man through the hall, seized the leaf, and tore it to pieces."
+**Dialogue:** Arurar: "Are you mad, old man? Since when are brahmins anyone's slaves?"
+**Sound:** running feet; a tearing sound; the crowd gasps.
 
 ### 5. The elders (25 sec)
-The guests argue; the old man insists on the matter being judged: "Let us go to the elders."
-**Narration:** "The old man would not let it go."
+**Visual:** The old man is not upset at all. He calmly says this was only a copy, and that he lives at Thiruvennainallur, where the original is. Everyone goes there. Before the elders' assembly the old man shows the original deed. It is read aloud; the grandfather's signature is compared and found true. The elders turn to Arurar.
+**Narration:** "The old man only smiled: that was a copy, he said, the true deed is in my village, Thiruvennainallur. Let the elders there decide. So they went. The elders read the deed, compared the grandfather's writing, and found it true. Arurar had lost."
+**Sound:** a gentle procession drum; an elder's voice reading.
 
-### 6. The road to Thiruvennainallur (20 sec)
-They walk together to the temple, the old man at the front.
-**Narration:** "He led him to Thiruvennainallur."
+### 6. The road to the temple (20 sec)
+**Visual:** The elders ask the old man where his house is, so that they may see it. He leads them through the village. Arurar follows close behind him, strangely drawn, like iron to a magnet.
+**Narration:** "The elders asked the old man to show them his house. He led them through the village, and Arurar followed close behind him, drawn to him as if he could not help it."
+**Sound:** footsteps; a single held note growing.
 
 ### 7. The vanishing (20 sec)
-At the temple gate, the old man walks into the sanctum and disappears.
-**Narration:** "And into the temple, he vanished."
+**Visual:** At the temple gate the old man does not stop. He walks into the temple, toward the sanctum, and disappears into the light. Everyone halts. Arurar runs to the doorway and stares.
+**Narration:** "But he did not go to any house. He walked into the temple of the Lord at Thiruvennainallur, and vanished. Arurar stood at the doorway, trembling."
+**Sound:** silence; then a deep bell.
 
-### 8. The Lord (15 sec)
-Shiva appears, smiling. "You are my servant. Be called Vanthondan."
-**Narration:** "It was the Lord himself. And he gave Sundarar a name."
+### 8. The Lord (20 sec)
+**Visual:** The Lord appears in the sky on his bull, with the Goddess beside him, radiant. Arurar weeps and falls to the ground. Flowers fall from the sky.
+**Narration:** "Then the Lord appeared and told him: you were my servant before you were born. You spoke harshly to me, so you shall be called Vanthondan, the bold servant. You called me a madman: now begin your song with that word. And Arurar sang, 'Pitha', O madman, crowned with the moon."
+**Dialogue:** The Lord: "Sing of us."
+**Sound:** a swell of music; Arurar's voice beginning the hymn.
 
 ## The Thiruppugazh connection (end card)
 
-Song 717 names the story.
+Song 717 (Uthiramerur) tells how the Lord came with a sealed deed to Sundarar's wedding, was called a madman, and won his claim. Show song 717.
 
 ## Production notes
 

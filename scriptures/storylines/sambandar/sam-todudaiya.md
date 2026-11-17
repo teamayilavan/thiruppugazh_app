@@ -1,6 +1,6 @@
 # The First Hymn ("Todudaiya Seviyan")
 
-`sam-todudaiya` | Sambandar | running time 2:30 (7 scenes) | tone: astonished, then radiant
+`sam-todudaiya` | Sambandar | running time 2:30 (7 scenes) | tone: astonished, then radiant | **script level (second pass)**
 
 ## One-line story
 
@@ -24,39 +24,50 @@ With the milk still on his lips, the child points to Shiva in the sky and sings 
 - **Shiva** (in the sky, above the temple).
 - **Townspeople.**
 
-## The storyline
+## The script
 
-### 1. The questions (20 sec)
-The father holds a stick over the child: "Who gave you this milk? From whose bowl?" The child looks up.
-**Narration:** "His father asked: who had fed him?"
+Narration is one calm, warm voice, about two words a second; astonished, then radiant.
 
-### 2. The finger (20 sec)
-The child raises a hand and points toward the temple tower, where light gathers.
-**Narration:** "The child did not answer. He pointed."
+### 1. The father returns (20 sec)
+**Visual:** Sivapadahridayar rises from the temple tank, water streaming from him, and climbs the steps. His little son sits quietly on the bank, a white trace of milk at the corner of his mouth, a golden cup beside him.
+**Narration:** "Sivapadahridayar finished his prayers and came up out of the water. He had been gone only a short while. His little son was sitting quietly on the bank, no longer crying. And there was milk on the child's lips, and a light in his eyes."
+**Sound:** water dripping; a curious single note.
 
-### 3. The vision (25 sec)
-Shiva, the Lord, rides above the temple on a bull, with Uma beside him, framed by the sky.
-**Narration:** "Above the temple, the Lord was seen."
+### 2. Anger (20 sec)
+**Visual:** The father frowns, alarmed. A Brahmin child must not take food from strangers. He picks up a thin stick from the ground and raises it, more worried than cruel.
+**Narration:** "The father was alarmed. Who had fed his child, and with what? He picked up a small stick and lifted it."
+**Dialogue:** Sivapadahridayar: "Who gave you this milk? Show me who it was!"
+**Sound:** a sharp drum tap.
 
-### 4. The song (25 sec)
-The child opens his mouth; the first line of the hymn rises, each word glowing in the air: "Todudaiya Seviyan..."
-**Narration:** "And with milk still on his lips, he sang."
+### 3. Tears of joy (20 sec)
+**Visual:** The child does not flinch. His eyes fill, but with joy. Slowly he lifts one small hand high, one finger raised to the sky above the temple tower.
+**Narration:** "The child was not afraid. Tears of joy came to his eyes. He lifted one little hand, and pointed up, above the temple."
+**Sound:** a hush; a soft rising tone.
 
-### 5. The first words (20 sec)
-The words are those of a boy who is not yet three years old; the people gather around, wondering.
-**Narration:** "He was only a small child. But the words were a hymn, perfect, and new."
+### 4. What the child sees (25 sec)
+**Visual:** Over the Thoni shrine, Shiva and Uma shine on the white bull, filling the sky with light. We see them from the child's side; the father, beside him, sees only sky.
+**Narration:** "There, above the tower, on the white bull, sat Shiva with Uma, in a great light. The child could see them, though his father could not."
+**Sound:** a warm chord, bells far away.
 
-### 6. The father's tears (20 sec)
-The father falls to his knees; neighbours join; the song travels through the town.
-**Narration:** "His father could not speak."
+### 5. The first hymn (30 sec)
+**Visual:** The child begins to sing. We do not hear words, only a pure young voice carried by music. Light ripples outward over the tank, the town, the fields. People on the steps stop and turn.
+**Narration:** "And the child began to sing. He sang of the Lord who wears a woman's earring in one ear, who rides the bull, whose hair holds the white moon. Its first words were 'Todudaiya Seviyan'. It was the first hymn of the Tevaram."
+**Sound:** a child's voice humming a melody, no lyrics; temple drums join.
 
-### 7. A beginning (20 sec)
-Dawn over the town. The song is carried on the wind across the river.
-**Narration:** "So began the Tevaram."
+### 6. "This is the one" (20 sec)
+**Visual:** At the end of the hymn the child turns to his father and points again.
+**Narration:** "At the end of every verse he named the Lord of Brahmapuram. And when the song was done he said to his father:"
+**Dialogue:** Sambandar: "He is the one who did this for me."
+**Sound:** the music comes to rest.
+
+### 7. The stick falls (15 sec)
+**Visual:** The stick slips from the father's hand into the grass. He kneels and folds his hands. Behind them, the temple tower glows in morning sun.
+**Narration:** "The stick fell from the father's hand. He knelt, and folded his hands before his little son. People came running from the town to see the child who sang. From that morning he would sing in temple after temple, all his life. The Tamil Veda had begun."
+**Sound:** one clear bell.
 
 ## The Thiruppugazh connection (end card)
 
-Song 776 names this first hymn. Continue to `sam-yazhpanar` and `sam-fever` for the hymns' later life.
+Song 776, sung at Sirkazhi, recalls that Murugan, as Sambandar, sang the first hymn of the Tevaram there. Song to show: 776 (Sirkazhi).
 
 ## Production notes
 

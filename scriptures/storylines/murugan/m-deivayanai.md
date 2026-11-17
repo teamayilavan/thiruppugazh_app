@@ -1,6 +1,6 @@
 # The Wedding on the Hill (Murugan and Deivayanai)
 
-`m-deivayanai` | Murugan | running time 2:45 (8 scenes) | tone: gratitude, then festival
+`m-deivayanai` | Murugan | running time 2:45 (8 scenes) | tone: gratitude, then festival | **script level (second pass)**
 
 ## One-line story
 
@@ -39,39 +39,51 @@ When the war is won and the gods are free, Indra offers his daughter Deivayanai 
 
 Thiruparankundram hill; the wedding hall; gathered camps.
 
-## The storyline
+## The script
+
+Narration is one calm, warm voice, about two words a second, growing festive toward the end.
 
 ### 1. The grateful father (20 sec)
-In the golden city, the war is over. Indra, lit by joy, tells Brahma and the gods: he will give his daughter to Murugan. The gods agree gladly.
-**Narration:** "When the war was over, Indra decided to give his daughter to Murugan, and the gods were glad."
+**Visual:** After the war: the sky clearing over the sea, banners lowered. Indra, crowned, stands among the gods with Brahma beside him. He speaks, and the gods nod and smile.
+**Narration:** "When the long war was over and the demon king was dead, Indra, the king of the gods, made a decision. He would give his daughter, Deivayanai, to Murugan, who had set them all free. He told Brahma and the gods, and they were glad."
+**Sound:** gentle strings after silence; a murmur of assent.
 
 ### 2. A remembered penance (20 sec)
-Indra remembers: his daughter had once sat in penance by a pool, for this very lord. The fruit of that penance had come.
-**Narration:** "He remembered that she had prayed for this lord, long before."
+**Visual:** Indra's memory, painted soft: his daughter beside a still pool, hands folded in prayer; the great white elephant Airavata keeping watch.
+**Narration:** "He remembered that, long before, she had done hard penance beside a quiet pool, praying for this very lord. Now the fruit of that penance had come."
+**Sound:** a single drone, the pool's ripple.
 
 ### 3. The messenger (20 sec)
-A messenger flies to Mount Meru, to Indra's queen: the demon is dead, the gods are free, Murugan is at Thiruparankundram. The queen is overjoyed.
-**Narration:** "A messenger took the news to Indra's queen. 'Come,' said Indra, 'and bring our daughter.'"
+**Visual:** A messenger flies up to Mount Meru. Indra's queen sits with her daughter and attendants. He bows and speaks.
+**Narration:** "Indra sent a messenger to his queen on Mount Meru."
+**Dialogue:** Messenger: "The demon has fallen and the gods are free. Murugan has come to Thiruparankundram. Indra asks you to come there at once, and to bring your daughter."
+**Sound:** a quick drum under the message.
 
 ### 4. The journey (20 sec)
-The queen and Deivayanai ride Airavata across the sky. They land at Thiruparankundram; freed goddesses welcome them with garlands.
-**Narration:** "They flew on Airavata to the hill. The goddesses who had been in prison were waiting."
+**Visual:** The queen and Deivayanai mount Airavata, decked in gold. They walk the clouds southward toward a green hill. On the hill, goddesses newly freed from prison run to meet them.
+**Narration:** "The queen was overjoyed. With her daughter beside her, she mounted Airavata and went through the sky to the hill. The goddesses, freed from the demon's prison, gathered to welcome them."
+**Sound:** wind, a flowing melody, women's voices in welcome.
 
 ### 5. Indra's words (25 sec)
-Indra, with the gods, praises Murugan: "You broke the strength of the asuras and freed the gods. What can a small one like me give in return? My daughter is here. Marry her."
-**Narration:** "Indra said: 'You freed us. My daughter is here. Take her to your strong shoulder.'"
+**Visual:** On the hilltop Murugan sits with his spear, the peacock behind him. Indra comes with the host of the gods and bows with folded hands. Deivayanai stands a little behind her mother.
+**Narration:** "Then Indra stood before Murugan, with all the gods, and praised him."
+**Dialogue:** Indra: "You have broken the strength of the asuras and set the gods free. What can one as small as I do in return? My daughter is here on this hill. Marry her, and take her to your strong shoulder."
+**Sound:** a single held chord under Indra's words.
 
 ### 6. Murugan's answer (20 sec)
-Murugan smiles. "She too has done great penance. Let the day be fixed as you wish."
-**Narration:** "Murugan answered that she too had done great penance."
+**Visual:** Murugan looks at Deivayanai; she lowers her eyes. He turns back to Indra and nods, kind and calm.
+**Narration:** "Murugan answered gently. She too, he said, had done great penance. Let the wedding day be fixed, as Indra wished."
+**Sound:** the melody of scene 2, now warm and full.
 
 ### 7. The invitations (25 sec)
-Messengers fly out: to the gods, the sages, the kings of the earth. The divine builder raises the hall on the hill. Mucukundan sets out in a golden chariot with his army; kings and hosts gather around the hill.
-**Narration:** "Messengers went out to every world. The builder prepared the hall. Kings came, with their armies."
+**Visual:** A montage: messengers fly to every world, to gods, sages and the kings of the earth. The divine builder raises a wedding hall of pillars and flowers on the hill. On the plain, an earthly king, Mucukundan, rides in a golden chariot at the head of his army; other kings and their hosts circle the hill.
+**Narration:** "Messengers went out to every world, to the gods, the sages and the kings of the earth. The divine builder raised a hall for the wedding. King Mucukundan came in his golden chariot, with his army, and the kings of the earth gathered around the hill."
+**Sound:** a festive rhythm building; drums, nadaswaram.
 
 ### 8. The wedding (15 sec)
-The hall, lit and full. Deivayanai and Murugan take their places side by side. Flowers fall like rain.
-**Narration:** "And at Thiruparankundram, Murugan and Deivayanai were married."
+**Visual:** The hall full of light. Murugan and Deivayanai seated side by side; garlands exchanged; flowers fall from the sky. Final image: the hill of Thiruparankundram at dusk, lamps on its slopes.
+**Narration:** "And there, at Thiruparankundram, Murugan and Deivayanai were married, as the old texts had foretold."
+**Sound:** the full festive melody; a conch to close.
 
 ## The Thiruppugazh connection (end card)
 

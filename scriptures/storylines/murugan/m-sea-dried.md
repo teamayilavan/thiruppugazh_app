@@ -1,6 +1,6 @@
 # The Sea That Dried (Fire on the Waters)
 
-`m-sea-dried` | Murugan | running time 2:45 (8 scenes) | tone: epic, a poet's compression of a war
+`m-sea-dried` | Murugan | running time 2:45 (8 scenes) | tone: epic, a poet's compression of a war | **script level (second pass)**
 
 ## One-line story
 
@@ -25,43 +25,53 @@ Arunagiri sings that Murugan's spear dried or boiled the sea; this film shows wh
 - **Surapadman:** a shadow, then a figure in the sea.
 - **The sea:** a character in itself: waves, steam, cracked bed.
 
-## The storyline
+## The script
+
+Narration is one calm, warm voice, about two words a second; the voice of someone explaining a poem, then caught up in its pictures.
 
 ### 1. The poet's line (15 sec)
-A still dawn sea. A spear of light hangs above it. The poet's voice: the spear that dried the sea.
-**Narration:** "The poet sings in a single line: the spear that dried the sea. The Puranam has a longer story."
+**Visual:** A still sea at dawn. A thin spear of light hangs above the water. Faint lettering of a song line glows and fades in the sky.
+**Narration:** "In many songs, the poet Arunagiri sings of the spear that dried the sea. It is one line. Behind it lies a long story, from the Kanda Puranam."
+**Sound:** a single sung phrase, soft and distant.
 
 ### 2. Arrows and fire (25 sec)
-Murugan and Surapadman duel in the sky with arrows. Fire rises from the arrows and catches the earth. Below, the sea shrinks; the Ganga runs dry.
-**Narration:** "When their arrows crossed, fire rose from them. The sea dried up, and the Ganga went dry."
+**Visual:** In the sky Murugan and Surapadman duel with arrows. Where the arrows cross, fire bursts out and falls on the earth. Below, the sea shrinks back from the shores, and the Ganga thins to a silver thread.
+**Narration:** "In the great war, Murugan and the demon king Surapadman fought with arrows. The Puranam says that fire rose where their arrows met, and caught the earth. The sea dried up, and even the holy Ganga ran dry."
+**Sound:** the hiss of arrows; crackling fire; water draining away.
 
 ### 3. A dry bed (15 sec)
-The sea bed, cracked, strewn with shells, the beached whales small and white. Silence.
-**Narration:** "The waters had gone, and the bed lay open to the sky."
+**Visual:** The sea bed lies open to the sky: cracked mud, scattered shells, rocks that have never seen the sun. Silence.
+**Narration:** "Where the waters had been, the bed of the sea lay open to the sky, cracked and still. Shells and stones that had never seen the sun lay drying in the heat."
+**Sound:** almost silence; a faint wind.
 
 ### 4. The peacock's wings (25 sec)
-Murugan flies on the peacock that was Indra. Each beat of its wings sends a wind over the water; the wide sea shrinks away from it.
-**Narration:** "When he flew on Indra's peacock, even the beating of its wings dried the sea."
+**Visual:** Murugan rides a great peacock; the Puranam says it was Indra, king of the gods, in that form. Each beat of its wings sends a wind over the water, and the wide sea shrinks away before it.
+**Narration:** "Later in the war, Indra, the king of the gods, took the form of a peacock and carried Murugan into the fight. The Puranam says that the beating of its wings made even the wide sea dry up."
+**Sound:** great slow wingbeats; waves pulling back.
 
-### 5. The demon flees to the sea (20 sec)
-On the last day, Surapadman sees the spear coming. He leaves the sky and plunges into the middle of the sea.
-**Narration:** "On the last day, the demon fled into the sea."
+### 5. The demon goes into the sea (20 sec)
+**Visual:** The last day. Surapadman in the sky sees the spear coming, shining like many suns. He turns and plunges down into the middle of the sea.
+**Narration:** "On the last day of the war, Surapadman saw Murugan's spear coming for him. He left the sky and went down into the middle of the sea. The spear did not drive him there. It followed him."
+**Sound:** a rush of descent; a deep splash.
 
 ### 6. The flame (30 sec)
-The spear follows. It breathes out a great flame that spreads over all seven oceans and up to the sky. The whole world seems on fire; steam and light fill the frame.
-**Narration:** "The spear followed him. Its flame spread over all seven oceans, and the world seemed to burn."
+**Visual:** The spear follows him. From it pours a great flame that spreads over all the seven oceans and up into the sky. Steam rises everywhere; light fills the frame; the whole world seems to be burning.
+**Narration:** "As it flew, the spear breathed out a mass of flame. The flame spread over all the seven oceans and up into the sky and the lands around. The whole world seemed to be on fire, and the waters steamed beneath it."
+**Sound:** a roar of fire over water; hissing steam.
 
 ### 7. The boiling sea (25 sec)
-The sea itself boils, and in its middle a huge mango tree stands (a quick cut to the story of `m-mango-sura`).
-**Narration:** "And in the middle of the boiling sea stood the demon, in the shape of a tree."
+**Visual:** The sea seethes and boils. In its middle stands a vast mango tree, its jewelled fruit glowing through the steam. A quick cut only: this is the story of another film.
+**Narration:** "And in the middle of that burning sea stood the demon, in the shape of a mango tree. What happened to the tree is another story. Here, it is enough to see the sea on fire."
+**Sound:** bubbling water; the strange chord of the mango tree.
 
 ### 8. The line again (10 sec)
-The poet's single line returns over a calm, rising dawn.
-**Narration:** "So the poet sings it in one line: the spear that dried the sea."
+**Visual:** Calm returns. A new dawn rises over a quiet sea; the song line glows once more.
+**Narration:** "The flame on the waters, the dried bed, the wind of the wings: Arunagiri gathers all these pictures into a single line. The spear that dried the sea."
+**Sound:** the sung phrase returns, fuller.
 
 ## The Thiruppugazh connection (end card)
 
-About 48 songs say that Murugan's spear dried the sea or made it boil. Songs to show: 38 and 72 (Thiruchendur), 140, 143, 144 and 152 (Palani).
+About forty-eight songs say that Murugan's spear dried the sea or made it boil. Songs to show: 38 and 72 (Thiruchendur), 140, 143, 144 and 152 (Palani). The poet's line gathers several pictures from the Kanda Puranam; it is not the separate Madurai tale of the Pandya prince who dried the sea.
 
 ## Production notes
 

@@ -49,7 +49,7 @@ Progress: **142 of 142** written and passing `scripts/check_storylines.py`.
 
 ## Devi (`devi/`, 12 stories)
 
-- [x] `d-angayarkanni`: Angayarkanni (Meenakshi) at Madurai (7 scenes, 2:30)
+- [x] `d-angayarkanni`: Angayarkanni (Meenakshi) at Madurai (7 scenes, 2:45)
 - [x] `d-battlefield`: Durga and Bhadrakali dance on Murugan's battlefield (7 scenes, 2:40)
 - [x] `d-fisher`: Parvati as the fishermen's daughter (8 scenes, 2:45)
 - [x] `d-himavan`: Parvati, daughter of Himavan (7 scenes, 2:40)
@@ -94,10 +94,10 @@ Progress: **142 of 142** written and passing `scripts/check_storylines.py`.
 - [x] `forms-nataraja`: Shiva the dancer (Nataraja) (8 scenes, 2:45)
 - [x] `murugan-pranava`: Murugan teaches Shiva the Pranava (8 scenes, 2:45)
 - [x] `murugan-skanda-birth`: Murugan born from Shiva's eye (8 scenes, 2:45)
-- [x] `saints-kurundam`: Manikkavasagar under the kurundam tree (7 scenes, 2:45)
+- [x] `saints-kurundam`: Manikkavasagar under the kurundam tree (7 scenes, 2:40)
 - [x] `saints-nayanmar`: Saints of the Tamil Shaiva tradition (8 scenes, 2:45)
 - [x] `saints-sambandar`: Sambandar and the Jains (8 scenes, 2:45)
-- [x] `saints-tiruvilaiyadal`: The sacred sports at Madurai (8 scenes, 2:40)
+- [x] `saints-tiruvilaiyadal`: The sacred sports at Madurai (8 scenes, 2:45)
 
 ## Vishnu (`vishnu/`, 68 stories)
 

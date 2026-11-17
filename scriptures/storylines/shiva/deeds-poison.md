@@ -1,6 +1,6 @@
 # The Blue-Throated Lord (Shiva Drinks the Poison)
 
-`deeds-poison` | Shiva | running time 2:45 (8 scenes) | tone: dread, courage, a quiet blue ending
+`deeds-poison` | Shiva | running time 2:45 (8 scenes) | tone: dread, courage, a quiet blue ending | **script level (second pass)**
 
 ## One-line story
 
@@ -27,43 +27,54 @@ When the gods and demons churn the Ocean of Milk, the Halahala poison rises and 
 - **Parvati:** beside him, a hand at his throat.
 - **Vishnu and Brahma.**
 
-## The storyline
+## The script
+
+Narration is one calm, warm voice, about two words a second; steady at the churning, hushed with dread at the poison, quiet and tender at the end.
 
 ### 1. The churning (30 sec)
-The Ocean of Milk, a mountain as the rod, a serpent as the rope; gods pull one way, demons the other.
-**Narration:** "The gods and demons churned the Ocean of Milk, to win the nectar."
+**Visual:** The ocean of milk, white and endless. A great mountain stands in it as a churning rod, with the vast serpent Vasuki wound around it. Gods pull at one end, demons at the other; the mountain turns, and the ocean foams.
+**Narration:** "Long ago, the gods and the demons joined together to churn the ocean of milk. They hoped to draw out the nectar that gives undying life. They used a great mountain as the churning rod, and the serpent Vasuki as the rope. Back and forth they pulled, and the ocean foamed."
+**Sound:** a rhythmic heave and creak; rolling waves.
 
 ### 2. The poison (25 sec)
-A black cloud boils up from the sea: the Halahala poison, scorching the air.
-**Narration:** "But first, a poison rose."
+**Visual:** From the depths a dark cloud rises, spreading across the white water like ink. Where it passes, the foam turns grey and the sky dims. It has no face, only darkness and heat shimmer.
+**Narration:** "But before any nectar came, something dark rose up from the deep. It was Halahala, the deadliest of poisons. Like a black cloud it spread over the water, and its heat began to scorch all the worlds."
+**Sound:** the rhythm stops; a low, spreading rumble.
 
 ### 3. The flight (20 sec)
-The gods and demons flee; the poison spreads.
-**Narration:** "It threatened the whole world."
+**Visual:** The gods drop the serpent rope; the demons scatter. Everyone runs, looking back at the cloud as it follows.
+**Narration:** "The gods let go of the rope. The demons fled. No one could stand against that poison, and no place in the worlds was safe from it. The sea, the earth and the sky all began to burn."
+**Sound:** hurried footsteps; wind.
 
 ### 4. The plea (20 sec)
-The gods, with Vishnu and Brahma, run to Shiva on Kailasa.
-**Narration:** "They ran to Shiva."
+**Visual:** On white Kailasa, the gods fall at Shiva's feet. Vishnu stands among them, hands folded.
+**Narration:** "The gods ran to Kailasa, to Shiva, and fell at his feet. The Ramayana says Vishnu himself asked Shiva to take it."
+**Dialogue:** The gods: "Lord, save us. Only you can."
+**Sound:** a pleading choir, very soft.
 
 ### 5. The consent (15 sec)
-Parvati nods, with trust; Shiva rises.
-**Narration:** "Parvati consented."
+**Visual:** Shiva turns to Parvati beside him. They look at each other; she nods, calm and trusting.
+**Narration:** "Shiva turned to Parvati, his wife. She knew his strength, and she knew his kindness. Without fear, she gave her consent."
+**Sound:** a single warm note.
 
 ### 6. The drinking (25 sec)
-Shiva cups his hands; the black stream flows into them; he drinks.
-**Narration:** "He drank the poison."
+**Visual:** Shiva rises and walks to the edge of the dark cloud. He gathers it into his cupped palm, where it becomes a small dark pool, and drinks. The sky clears; the ocean turns white again.
+**Narration:** "Shiva gathered the poison into his palm, as if it were only water, and drank it, out of pity for all living things. And the worlds grew cool and safe again."
+**Sound:** a deep hush; then the sound of the sea, calm.
 
 ### 7. The throat (20 sec)
-Parvati lays a hand on his throat; the poison stays there, and his neck turns blue.
-**Narration:** "She held his throat, and the poison stayed."
+**Visual:** Parvati gently lays her hand at Shiva's throat. Beneath her fingers a soft blue glow gathers and stays.
+**Narration:** "Tamil tradition tells that Parvati gently held his throat, so that the poison would go no further. There it stayed, held still in his throat, and it did him no harm at all."
+**Sound:** a tender melody.
 
 ### 8. The blue throat (10 sec)
-The gods bow; Shiva smiles, his throat a deep blue.
-**Narration:** "So he is called the Blue-Throated."
+**Visual:** Close on Shiva's calm face; his throat glows a deep, peaceful blue.
+**Narration:** "And his throat was blue forever. That is why he is called Neelakantha, the Blue-Throated Lord, who took the poison so that others might live."
+**Sound:** temple bells.
 
 ## The Thiruppugazh connection (end card)
 
-15 songs recall it, including 27, 46, 70 and 99.
+Arunagiri sings of the Lord who drank the poison of the sea to save the worlds. Songs to show: 27, 46 and 99 (Thiruchendur), 197 (Palani), 264 (Thiruthani), 907 (Vayalur).
 
 ## Production notes
 

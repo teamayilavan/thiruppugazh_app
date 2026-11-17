@@ -1,6 +1,6 @@
 # Murugan Woos Valli (the Hunter, the Tree and the Old Man)
 
-`m-valli-disguise` | Murugan | running time 2:40 (8 scenes) | tone: playful, then comic fright, then tender
+`m-valli-disguise` | Murugan | running time 2:40 (8 scenes) | tone: playful, then comic fright, then tender | **script level (second pass)**
 
 ## One-line story
 
@@ -37,43 +37,55 @@ Murugan comes down from his hill to win the heart of Valli, the hunter-chief's d
 
 The millet field with its platform; the hills; the hunters' village.
 
-## The storyline
+## The script
+
+Narration is one calm, warm voice, about two words a second; playful, then comic in the fright, then tender at the end.
 
 ### 1. The watcher (15 sec)
-Valli on a platform among the millet, a sling in her hand, calling to scare away green parrots. Wind and golden grain.
-**Narration:** "Valli, the hunter-chief's daughter, kept watch over the millet and drove off the birds."
+**Visual:** Golden millet on a hillside. Valli stands on a raised platform in the field, a sling in her hand, calling out to drive away flocks of green parrots.
+**Narration:** "On a hill of the hunters lived Valli, the daughter of Nambi, their chief. Every day she stood on a platform in the millet field, and drove away the parrots."
+**Sound:** wind in the grain; parrot calls; her bright calls.
 
 ### 2. The young hunter (20 sec)
-A tall young hunter steps from the trees with a striped bow, an anklet at his foot, a garland on his shoulders. He speaks to her of his longing. She hesitates, looks away.
-**Narration:** "A young hunter came, and told her what was in his heart."
+**Visual:** A tall young hunter steps from the trees, with a striped bow, an anklet at his foot and a garland on his shoulders. He speaks to her gently. She hesitates and looks away.
+**Narration:** "Murugan came from Tiruttani to her mountain. He came as a tall young hunter, with a striped bow, an anklet and a garland. He stood before her, and told her of his longing."
+**Sound:** a playful flute.
 
 ### 3. The tree (20 sec)
-Her father Nambi comes with the hunters. The young man is gone; where he stood there is a Vengai tree. The hunters wonder; some want to cut it. Nambi sees nothing wrong, and leaves.
-**Narration:** "When her father came, the hunter was a tree. And the hunters did not know what to make of it."
+**Visual:** Footsteps and voices: Nambi comes with his hunters. The young man is gone; where he stood there is a Vengai tree. The hunters stare; one lifts an axe. Nambi shakes his head, and they leave. The tree becomes a young man again.
+**Narration:** "Then her father came with the hunters. In a moment the young man became a Vengai tree. The hunters were amazed, for no tree had stood there before. Some wanted to cut it down. But Nambi saw no harm, and they went away. And the tree became a man again."
+**Sound:** footsteps; puzzled murmurs; a comic woodwind; a soft chime.
 
 ### 4. The old man (20 sec)
-When they leave, an old ascetic stands in the field, with holy ash. He greets Nambi, who returns, and gives him the ash. He asks Valli for food and water; she serves him kindly.
-**Narration:** "Then an old man came. He blessed her father, and asked her for food and water, and she gave them."
+**Visual:** Later an old ascetic of the Saiva path walks into the field, white ash on his brow. He greets Nambi and gives him holy ash. He asks Valli for food and for water; she brings them kindly.
+**Narration:** "Next he came as an old holy man, with sacred ash on his brow. He greeted her father and blessed him with the ash. He asked Valli for food, and then for water. She gave him both, with kindness."
+**Sound:** a gentle temple bell; water poured.
 
 ### 5. The declaration (15 sec)
-The old man speaks of his love for her. Valli's eyes flash. "Be gone!"
-**Narration:** "But when he spoke of love, she grew angry and told him to go."
+**Visual:** The old man speaks of his love. Valli's eyes flash; she points away down the hill.
+**Narration:** "But then the old man spoke of love. Valli was furious."
+**Dialogue:** Valli: "Go away from here!"
+**Sound:** a sharp drum stroke.
 
 ### 6. The elephant (25 sec)
-The old man looks up to the sky, thinking of his brother. A wild elephant crashes through the millet, roaring. Valli runs and clings to the old man: "Save me!"
-**Narration:** "He thought of his elder brother, the elephant-faced Vinayaka, and a wild elephant came roaring. She ran to the old man, and held on."
+**Visual:** The old man glances up, thinking of his brother. A huge wild elephant crashes through the millet, trumpeting, ears flapping, comic rather than frightening. Valli shrieks, runs to the old man, and clings to him.
+**Narration:** "The old man thought of his elder brother, the elephant-faced Vinayaka. At once a wild elephant came roaring through the millet. Valli forgot her anger. She ran to the old man and held on to him."
+**Dialogue:** Valli: "Save me, save me from the elephant!"
+**Sound:** trumpeting; crashing stalks; a comic, galloping rhythm.
 
 ### 7. The true form (25 sec)
-The elephant withdraws; Murugan thanks his brother with a glance. Then the old man is gone: Murugan stands in his true form, six faces and twelve arms, the spear and the peacock beside him. He tells her that in an earlier birth she had done penance to win him.
-**Narration:** "And then he showed her who he was."
+**Visual:** The elephant stops, winks at the old man and walks away; Murugan thanks his brother with a glance. Then the old man is gone: Murugan stands in his true form, six faces and twelve arms, the spear in hand and the peacock beside him. Valli looks up in wonder.
+**Narration:** "Murugan thanked his brother, and the elephant went away. Then the old man was gone, and Murugan stood before her as he truly is, with six faces and twelve arms, the spear and the peacock. He told her that in an earlier birth she had done penance to win him."
+**Sound:** the music stills, then a radiant chord.
 
 ### 8. The wedding (20 sec)
-In her father's house, in the hunters' village, Nambi gives her hand to Murugan. The sage Narada arranges the rites. Flowers fall.
-**Narration:** "And in her father's house, they were married."
+**Visual:** In Nambi's house in the hunters' village, lamps and flowers. Nambi places Valli's hand in Murugan's. The sage Narada performs the rites. Flowers fall.
+**Narration:** "In her father's house in the hunters' village, Nambi gave his daughter's hand to Murugan. The sage Narada arranged the rites. And so the girl who guarded the millet became the bride of the Lord."
+**Sound:** wedding drums and pipes; joyful bells.
 
 ## The Thiruppugazh connection (end card)
 
-About twenty-five songs refer to this story: 29 (Thiruchendur), 105, 143 and 196 (Palani), 237 (Swamimalai), 266 (Thiruthani). Valli's marriage is the second of Murugan's two weddings.
+About twenty-five songs remember Murugan wooing Valli as a hunter, a tree and an old man. Songs to show: 29 (Thiruchendur), 105, 143 and 196 (Palani), 237 (Swamimalai), 266 (Thiruthani).
 
 ## Production notes
 

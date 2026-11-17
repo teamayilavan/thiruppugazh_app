@@ -1,6 +1,6 @@
 # The Sage of Pothigai and the Language of Tamil
 
-`t-agastya` | Tamil lore | running time 2:35 (7 scenes) | tone: serene, scholarly, glowing
+`t-agastya` | Tamil lore | running time 2:35 (7 scenes) | tone: serene, scholarly, glowing | **script level (second pass)**
 
 ## One-line story
 
@@ -23,39 +23,48 @@ On Mount Pothigai, the sage Agastya worships Murugan in Tamil, and the songs say
 - **Murugan:** a young teacher, calm.
 - **Students** (symbolic): children learning letters.
 
-## The storyline
+## The script
+
+Narration is one calm, warm voice, about two words a second; serene and unhurried, glowing at the teaching.
 
 ### 1. Pothigai (20 sec)
-A misty mountain in the south; a hermitage among bamboo.
-**Narration:** "On Mount Pothigai, in the south, lived the sage Agastya."
+**Visual:** A misty green mountain in the far south. Bamboo and waterfalls; a small hermitage on a ledge. A short, radiant sage with a grey beard and a water pot steps out into the morning.
+**Narration:** "Far in the south of India rises the mountain of Pothigai. The Kanda Puranam tells how Shiva himself sent the sage Agastya there, and calls him the Tamil sage. On this mountain he made his home."
+**Sound:** waterfalls; birdsong; a soft drone.
 
 ### 2. The worship (25 sec)
-He sits at dawn and sings to Murugan, in Tamil.
-**Narration:** "He worshipped Murugan, and he did it in Tamil."
+**Visual:** At dawn Agastya sits before a small shrine with a spear set upright in it. He sings, eyes closed, hands joined; the words rise in the air as soft light.
+**Narration:** "Every morning Agastya worshipped Murugan. The songs of Arunagiri say he worshipped him in pure Tamil, and in nothing else. He sang, and his song rose over the mountain like the mist."
+**Sound:** a gentle chant, without clear words; a temple bell.
 
-### 3. The lord comes (25 sec)
-A radiant young god sits beside him; Agastya bows.
-**Narration:** "And the Lord came to him."
+### 3. The Lord comes (25 sec)
+**Visual:** Light gathers in the hermitage. A radiant young god appears, with a spear in his hand and a peacock behind him. Agastya bows low to the ground. Murugan lifts him up.
+**Narration:** "One day, when the sage bowed down at his feet, Murugan came to him and blessed him with his grace. The young god lifted up the old sage, and sat down beside him, as a teacher sits beside his student."
+**Sound:** the music brightens; a single clear bell.
 
 ### 4. The teaching (30 sec)
-Murugan speaks; letters glow in the air; Agastya listens and traces them.
-**Narration:** "The songs say Murugan taught him the essence of Tamil."
+**Visual:** Murugan speaks quietly into Agastya's ear. Tamil letters glow in the air between them, turning, joining into words and verses. Agastya listens with shining eyes and traces the letters with his finger.
+**Narration:** "Then, the songs say, Murugan taught him. He spoke the essence of Tamil knowledge into the sage's ear. He taught him the three branches of Tamil, the word, the music and the drama, and the true knowledge that lies beyond them. This is what the songs say. The old Puranas do not tell it."
+**Sound:** a warm, glowing melody; the letters chime softly.
 
 ### 5. The grammar (20 sec)
-Agastya writes lines on a palm-leaf: the first grammar.
-**Narration:** "Tradition says Agastya made the first grammar."
+**Visual:** Agastya sits with palm leaves and a stylus, writing line after line. Young students gather around him, listening.
+**Narration:** "Tradition says that Agastya then made the first grammar of the Tamil language, and taught it to his students. That book has long been lost, but his name has never been forgotten."
+**Sound:** the scratch of a stylus; quiet voices.
 
 ### 6. The gift (25 sec)
-Children learn letters from his students, and sing.
-**Narration:** "And the gift reached the children of the Tamil land."
+**Visual:** Time passes over the land. In village schools under trees, children trace Tamil letters in sand and chant them aloud; poets sing in halls; the river of Tamil flows on.
+**Narration:** "From teacher to student, the gift was handed down. Children wrote their letters in the sand. Poets sang in the halls of kings. And the Tamil people came to honour Agastya as the father of their language."
+**Sound:** children's voices chanting; a flowing theme.
 
 ### 7. The song (10 sec)
-A child sings a Thiruppugazh line.
-**Narration:** "So the poet sings it."
+**Visual:** A devotee sings at a shrine of Murugan; behind, the misty mountain of Pothigai.
+**Narration:** "So, in song after song, Arunagiri praises Murugan as the teacher of the small Tamil sage of Pothigai."
+**Sound:** a single sung phrase.
 
 ## The Thiruppugazh connection (end card)
 
-Songs 180, 619, 915, 954 and 1081.
+Arunagiri praises Murugan as the teacher of Agastya, the Tamil sage of Pothigai. Songs to show: 180 (Palani), 619 (Pugazhimalai), 915 (Vayalur), 954 (Thanichchayam), 1081 and 1299 (general songs).
 
 ## Production notes
 

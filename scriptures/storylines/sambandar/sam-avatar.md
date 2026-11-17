@@ -1,6 +1,6 @@
 # The Child Who Gave the Tamil Veda (Murugan as Sambandar)
 
-`sam-avatar` | Sambandar | running time 2:45 (8 scenes) | tone: wonder, miracle after miracle, a quiet ending
+`sam-avatar` | Sambandar | running time 2:45 (8 scenes) | tone: wonder, miracle after miracle, a quiet ending | **script level (second pass)**
 
 ## One-line story
 
@@ -28,43 +28,53 @@ The songs say Murugan himself was born as the child saint Sambandar of Sirkazhi,
 - **Murugan** (a golden figure in the background of the first and last scenes).
 - **Uma and Shiva, the king of the Pandya land, the minstrel, Poompavai.**
 
-## The storyline
+## The script
+
+Narration is one calm, warm voice, about two words a second; wonder at each miracle, and a quiet ending. Each scene is a short window into a film of its own.
 
 ### 1. Sirkazhi (20 sec)
-A temple town by the river at dawn: gopurams, a tank, temple bells. A baby is born in a Brahmin home. A golden figure watches over the cradle.
-**Narration:** "In the town of Sirkazhi, a child was born. The songs say it was Murugan himself."
+**Visual:** Dawn over the temple town of Sirkazhi by the sea. Lamps glow in a Brahmin house; a baby's hand closes around a finger. High above the town, faint as a cloud, the shape of a peacock and a spear fades into the sky.
+**Narration:** "In the town of Sirkazhi, by the sea, a child was born to a devout Brahmin family. The Puranam calls him Thirugnana Sambandar. And the Thiruppugazh says, again and again, that this child was Murugan himself, who hid his spear and his peacock and came down to earth."
+**Sound:** waves; a temple bell; a soft flute.
 
 ### 2. The golden bowl (25 sec)
-At the temple tank, the weeping child. Shiva and Uma appear; Uma feeds him from a golden bowl.
-**Narration:** "A goddess fed him the milk of wisdom."
+**Visual:** The temple tank. A three-year-old boy cries on the bank. Shiva and Uma appear above the shrine; Uma kneels and gives him a golden bowl that glows with soft white light.
+**Narration:** "When he was three years old, he was left for a moment on the bank of the temple tank, and he cried. Shiva and Uma came to him. Uma fed him from a golden bowl, the milk of wisdom."
+**Sound:** a child's cry, then a single sustained note.
 
 ### 3. The first hymn (20 sec)
-The child points to Shiva and sings the first hymn.
-**Narration:** "And he began to sing."
+**Visual:** The father, stick in hand, demands who fed the child. The boy points to the sky and sings. Light ripples out over the town.
+**Narration:** "His father asked who had fed him. The child pointed to the sky, and sang. It was the first hymn of the Tevaram, the Tamil Veda."
+**Sound:** a young voice, wordless; drums join.
 
 ### 4. The lyre (20 sec)
-A minstrel plays his hymns on a lyre.
-**Narration:** "A minstrel carried his songs across the land."
+**Visual:** A minstrel plays the yazh while his wife sings; the child sings beside them. Then a quick montage of temple towers, one after another, as they travel.
+**Narration:** "A minstrel and his wife joined him, and played his hymns on the yazh. Together they went from temple to temple, all over the Tamil land, and at every temple he sang."
+**Sound:** the yazh and a travelling rhythm.
 
-### 5. The ash (25 sec)
-Madurai. A king burning with fever; the child rubs holy ash on him; the fever leaves.
-**Narration:** "A king burned with fever. A child gave him holy ash."
+### 5. The ash (20 sec)
+**Visual:** Madurai. A king burns red with fever on his bed. The child touches holy ash to his body; the red glow drains away.
+**Narration:** "In Madurai, the Pandya king burned with a fever no one could cure. The child sang of the holy ash, touched the king with it, and the fever was gone. The queen and the whole city rejoiced."
+**Sound:** a hot crackle, then a cool, clear chord.
 
 ### 6. The leaf (25 sec)
-A palm-leaf in a fire, staying green; a leaf in a flooded river, floating against the stream.
-**Narration:** "His leaf stayed green in the fire, and swam against the river."
+**Visual:** A palm leaf rests in a great fire and stays green. Then a leaf on the flooded Vaigai turns and swims upstream, while another is swept away. On the bank, the king stands up straight.
+**Narration:** "A leaf of his hymns stayed green in the fire. Another leaf swam up the flooded river, against the current. And the king, whose back was bent, stood up straight."
+**Sound:** fire; rushing water; a rising melody.
 
 ### 7. Poompavai (20 sec)
-A pot of bones; a girl rises from it, alive.
-**Narration:** "He called a girl back from her bones."
+**Visual:** Mylapore. A covered clay pot before a temple tower. The child sings. The pot opens like a lotus, and a young girl stands up, alive.
+**Narration:** "At Mylapore, a girl had died of a snake bite, and her father had kept her bones in a pot. The child sang before the temple, and Poompavai rose up from the pot, alive and smiling."
+**Sound:** a hush; a burst of joy; "Hara! Hara!"
 
-### 8. The Tamil Veda (10 sec)
-Hymns rising as light over the Tamil country.
-**Narration:** "These songs became the Tamil Veda."
+### 8. The Tamil Veda (15 sec)
+**Visual:** Palm-leaf bundles of hymns, stacked high in a temple hall, glowing. The child's small figure walks away down a long road at sunset. The peacock shape returns, faint, in the sky.
+**Narration:** "His hymns are still sung today, in the first three books of the Tevaram. Arunagiri sang that they were the Tamil Veda, given to the world by Murugan himself."
+**Sound:** a choir humming softly; a single peacock call.
 
 ## The Thiruppugazh connection (end card)
 
-105 songs name Sambandar, almost all in one line saying that Murugan took birth as him. Every episode in this set has its own film.
+In nearly a hundred songs Arunagiri says that Murugan himself was born as Sambandar and gave the world the Tevaram, the Tamil Veda. Songs to show: 134 (Palani), 261 (Thiruthani), 764 and 774 (Sirkazhi), 913 (Vayalur), 962 (Madurai), 1317 (Pazhamudircholai).
 
 ## Production notes
 

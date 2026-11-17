@@ -1,6 +1,6 @@
 # The Crocodile Gives Back the Child (Sundarar at Avinashi)
 
-`n-sundarar-crocodile` | Saints | running time 2:40 (7 scenes) | tone: grief, hope, a miracle
+`n-sundarar-crocodile` | Saints | running time 2:40 (7 scenes) | tone: grief, hope, a miracle | **script level (second pass)**
 
 ## One-line story
 
@@ -25,39 +25,50 @@ At Avinashi, Sundarar sings a hymn, and the Lord makes a crocodile give back the
 - **The crocodile:** in the water, not frightening on its release.
 - **Kala (Yama):** a distant presence in the hymn.
 
-## The storyline
+## The script
+
+Narration is one calm, warm voice, about two words a second; soft with grief, steady with hope, glowing at the miracle. The film says which parts belong to tradition.
 
 ### 1. The town (20 sec)
-Avinashi at sunrise; the temple, the tank, women carrying water.
-**Narration:** "At the temple town of Avinashi, there was a tank with a crocodile."
+**Visual:** Avinashi at sunrise, in the Kongu country: the temple tower, a wide tank below it, women carrying water pots, children playing on the steps. Far out in the water, two eyes break the surface and sink again.
+**Narration:** "This is a story the songs remember, and that Sundarar himself sang about. In the temple town of Avinashi there was a great tank of water, and in its deep water lived a crocodile."
+**Sound:** morning bells; children's voices; a quiet splash.
 
-### 2. The loss (30 sec)
-Two boys play at the tank; one slips; the crocodile swallows him. The other runs home screaming.
-**Narration:** "A crocodile swallowed a child. His parents mourned."
+### 2. The loss (25 sec)
+**Visual:** Two small boys run down the steps to bathe, laughing. One slips into the deep water. A ripple, and he is gone. The other boy stands frozen, then runs up the street crying. We never see the crocodile; only the ripple spreading.
+**Narration:** "Tradition tells that two little boys went down to bathe. One of them slipped into the deep water, and the crocodile took him. His friend ran home, crying, and the whole street came running. But the water was still again."
+**Sound:** laughter, a splash, then silence; a single cry.
 
 ### 3. The wait (20 sec)
-Seasons pass; the parents light a lamp each night.
-**Narration:** "They never forgot him."
+**Visual:** A small house. A father and mother sit by a lamp, holding a tiny pair of anklets. Seasons pass through the window: rain, harvest, summer. Each night the mother lights the lamp again.
+**Narration:** "The boy's parents grieved, and the years did not heal them. Each night his mother lit a lamp. These details of the parents come from the tradition, not from the hymn."
+**Sound:** a soft, sad flute; rain, then crickets.
 
 ### 4. The saint arrives (25 sec)
-Sundarar arrives at the temple. The parents come to him. He nods.
-**Narration:** "Then Sundarar came to Avinashi."
+**Visual:** Music and drums in the street: devotees escort a radiant young saint in white, Sundarar. In another house a feast is being held. In the small house the parents hear the drums and come out, and the mother weeps. Sundarar sees her and stops.
+**Narration:** "Then the saint Sundarar came to Avinashi, singing the Lord's praise. He saw a grieving mother, and asked why she wept. She told him of her son, taken long ago by the crocodile in the tank."
+**Dialogue:** Sundarar: "Mother, why do you weep, when the whole town is singing?"
+**Sound:** festive drums, fading; the mother's quiet voice.
 
 ### 5. The hymn (25 sec)
-At the bank of the tank, he sings: "Command Kala to make the crocodile give back the child."
-**Narration:** "He sang, and he asked the Lord to command Death himself to make the crocodile give back the boy."
+**Visual:** Sundarar goes down to the bank of the tank with the parents and a crowd of devotees. He faces the temple tower, folds his hands, and sings. The words rise as gold light over the water. Far away, a dark, quiet figure, Kala, who is Death, turns his head.
+**Narration:** "Sundarar stood on the bank and sang to the Lord of Avinashi. In his hymn, which is still sung today, he asks the Lord to command Kala, who is Death himself, to make the crocodile give back the child."
+**Dialogue:** Sundarar: "Lord, command Death. Let the crocodile on the bank give back the boy."
+**Sound:** his single voice, then devotees joining softly.
 
 ### 6. The return (25 sec)
-The water stirs; the crocodile rises and gently sets a child on the bank, alive.
-**Narration:** "The crocodile gave him back."
+**Visual:** The water stirs. Slowly a great crocodile rises, calm, not menacing. It swims to the steps, opens its jaws gently, and a boy stands up on the bank, alive and whole and grown taller. The crocodile sinks back without a sound.
+**Narration:** "The water stirred. The crocodile came up to the bank, and it gave the child back, alive and well. The boy stood on the steps, blinking in the sunlight, as if he had only been asleep."
+**Sound:** water parting; a bright, rising chord.
 
-### 7. The reunion (15 sec)
-The parents run; the child lies in their arms.
-**Narration:** "The boy was alive."
+### 7. The reunion (20 sec)
+**Visual:** The parents run down the steps and hold the boy. The crowd cries out and throws flowers. Sundarar stands apart, his hands folded toward the temple, smiling. Final image: the mother's lamp, burning in the sunlight.
+**Narration:** "His mother and father held him in their arms. The people threw flowers and praised the Lord. And Sundarar turned toward the temple, and gave thanks."
+**Sound:** joyful nadaswaram and drums; then one bell.
 
 ## The Thiruppugazh connection (end card)
 
-Song 1320 names the story.
+Song 1320 (Pazhamudircholai) tells how the Lord listened to Sundarar's Tamil hymn and made the crocodile give back the boy, alive, before his parents. Show song 1320.
 
 ## Production notes
 

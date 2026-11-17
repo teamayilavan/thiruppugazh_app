@@ -1,6 +1,6 @@
 # The Thirty-Two Charities of Kamakshi
 
-`d-kamakshi-32` | Devi | running time 2:30 (7 scenes) | tone: warm, giving, an invocation
+`d-kamakshi-32` | Devi | running time 2:30 (7 scenes) | tone: warm, giving, an invocation | **script level (second pass)**
 
 ## One-line story
 
@@ -21,39 +21,48 @@ At Kanchi, the Goddess is said to have performed thirty-two acts of charity, and
 - **Kamakshi:** the Goddess of Kanchi, gracious, with a bowl.
 - **The poor, the hungry, the sick, the pilgrims.**
 
-## The storyline
+## The script
+
+Narration is one calm, warm voice, about two words a second; warm and unhurried, like someone giving thanks. The film never lists the thirty-two: it shows giving.
 
 ### 1. The city of Kanchi (25 sec)
-Temples, a river, pilgrims.
-**Narration:** "At Kanchi, the Goddess is called Kamakshi."
+**Visual:** Kanchipuram at dawn: temple towers, a tank glinting, silk weavers opening their looms, a stream of pilgrims. The camera comes to rest at the shrine of the Goddess Kamakshi, her lamp burning.
+**Narration:** "Kanchi is a city of temples, one of the oldest holy cities of the Tamil land. Here the Goddess is worshipped as Kamakshi, the one with eyes full of love. Arunagiri sang here, and he praises her for one thing above all: her giving."
+**Sound:** temple bells; looms clacking; the chant of morning worship.
 
 ### 2. A giving hand (25 sec)
-The Goddess feeds the hungry from a bowl.
-**Narration:** "The songs say she gave."
+**Visual:** The Goddess, gracious, in simple dress, holding a bowl. A hungry child stands before her. She fills the bowl and gives it. The child's face lights up.
+**Narration:** "The songs say that the Goddess, at Kanchi, did the thirty-two works of dharma. Dharma, here, means right action and charity: the good deeds that keep the world alive. And they begin with a simple act, a full bowl for an empty hand."
+**Sound:** a soft melody on the veena; a child's laugh.
 
 ### 3. More giving (20 sec)
-Others come: she clothes, tends, shelters.
-**Narration:** "She gave to everyone who came."
+**Visual:** A gentle montage: water given to a thirsty traveller; a lamp lit for someone in the dark; shelter in the rain; a hand on the shoulder of someone sick. The Goddess is in each, sometimes only her hand is seen.
+**Narration:** "Food for the hungry, water for the thirsty, shelter for the traveller, care for the sick. Each is a kind of giving, and each is a kind of worship."
+**Sound:** the melody continues; rain; a lamp's small flame.
 
 ### 4. The thirty-two (25 sec)
-Thirty-two small lamps light one by one on the screen.
-**Narration:** "The songs speak of thirty-two acts of charity."
+**Visual:** Thirty-two small lamps, lit one by one in a long row before the shrine, each by a different hand: old and young, rich and poor.
+**Narration:** "In five of his songs Arunagiri calls her the one who carried out the thirty-two dharmas, or the one who did many good works at Kanchi. One song says she did them without any flaw. Another calls her the beautiful one in whom dharma grows."
+**Sound:** a soft chime with each lamp.
 
 ### 5. The list not told (20 sec)
-The lamps glow; the voice pauses.
-**Narration:** "We do not know every one of them."
+**Visual:** The row of lamps glows, but we never see what each one stands for. The camera moves slowly along them.
+**Narration:** "The songs do not list the thirty-two. Tradition knows them, but we will not name them here. It is enough to know that the Mother of the world is also the one who gives, and gives, and gives."
+**Sound:** quiet; a single held note.
 
 ### 6. The people (20 sec)
-Pilgrims lining up, grateful.
-**Narration:** "But we know that she gave."
+**Visual:** Devotees in Kanchi today: a woman sharing food at the temple gate, a man pouring water for pilgrims, a child giving a flower. The Goddess's light falls on them.
+**Narration:** "And so those who love her try to give as she gives. Every kindness done in her name is a small part of her dharma."
+**Sound:** street sounds softening; temple music.
 
 ### 7. The evening (15 sec)
-The temple glows in the dusk.
-**Narration:** "And Kanchi remembers."
+**Visual:** Dusk. The lamps before Kamakshi's shrine burn steadily. The doors close softly.
+**Narration:** "Arunagiri calls her the one who gives like the wish-fulfilling tree of heaven. She is Murugan's mother."
+**Sound:** evening bells; a last soft chord.
 
 ## The Thiruppugazh connection (end card)
 
-Songs 291, 322, 438, 540 and 894.
+Arunagiri praises Kamakshi of Kanchi as the one who carried out the thirty-two works of dharma, and as Murugan's mother. Songs to show: 291 (Thiruthani), 322 (Kanchipuram), 438 (Thiruvannamalai), 540 (Vallimalai) and 894 (Kuratti).
 
 ## Production notes
 
