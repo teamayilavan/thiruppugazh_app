@@ -73,6 +73,8 @@ Design notes: panels are header strip + centred lines in a bordered block; highl
 
 ## 4. Story texts: status and method
 
+**Update 2026-11-17: all 142 are written** (see `STATUS.md` and `storylines/REVIEW-NOTES.md`). The paragraph below is the earlier state.
+
 **Written (14 of 142):** all 12 Murugan stories (`m-agastya`, `m-airavata`, `m-brahma-prison`, `m-deivayanai`, `m-jayanta`, `m-krouncha`, `m-mango-sura`, `m-peacock-cock`, `m-saravana`, `m-sea-dried`, `m-tarakasura`, `m-valli-disguise`) plus `avatar-gajendra` and `d-mahisha`. **128 remain** (brief only): Vishnu 67, Shiva 20, Vol IV 41.
 
 Method that worked (keep it): for each story, read the actual cached verses (do not trust a brief or a page summariser), write only what a verse says, put the verse numbers in brackets, and say plainly where the songs differ from the text or where nothing was found (see `m-sea-dried`, `m-agastya`). Before finishing, re-read each claim against the verse. This caught real errors in my own first drafts (a wrong "Indra arrives" at Deva 132, "Murugan smiles" that was Surapadman, the moon/sun/elephants of the quarters). Treat every first draft as suspect.
