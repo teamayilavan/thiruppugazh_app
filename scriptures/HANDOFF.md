@@ -8,6 +8,26 @@ There are now two strands of work:
 1. **The research base** (142 stories, their songs and references), accuracy-first. Largely complete; see 2 and 6.
 2. **The books**: *Stories in the Thiruppugazh*, a printable A4 publication built with Typst from that research. A working pipeline exists; the main remaining job is **writing the story texts** (14 of 142 done). See 3 to 5.
 
+## 0. Pending after 2026-11-17 (read first)
+
+All 142 book narratives and all 142 animation scripts are written and committed; the story-song index (`scripts/make_index.py`, output `pdf/story-song-index.pdf` and `.xlsx`, copies in `D:/thiruppugazh-books/`) is ready to send to the Thiruppugazh expert. Details of every item below are in `storylines/REVIEW-NOTES.md`.
+
+**Owner decisions**
+1. Sambandar and the Jains: the book narratives state the impalement (Periya Puranam 853-855); the film leaves it out. Keep the book paragraph or soften it?
+2. Framing for public videos: `krishna-clothes`, `krishna-naraka-wives`, `ramayana-sita-agni`.
+3. `avatar-pralaya` is now framed as Markandeya's vision (Bhagavata 12.9.20-27): confirm.
+4. `d-idumbai` narrative has one paragraph on the Hidimba episode (Mahabharata); confirm it may stay.
+
+**For the expert (send the index PDF)**
+5. Doubtful song assignments: 161 (likely `ramayana-vibhishana-crown`, not `ramayana-sita-agni`), 835 ("Kumban": Kumbha or Kumbhakarna), 1325 (`ramayana-sita-jewels`, weak; maybe Trivikrama).
+6. Details written from memory without a verse number, flagged for a spot-check (mostly Ramayana and Shiva Purana).
+
+**Research updates after the review** (change the generators, not the generated files)
+7. Briefs that say "not found" but the texts have it: the Pranava whisper (Utpatti 1259-1265), Parvati's birth to Himavan (Utpatti 375-410), Sambandar at Thiruvalangadu (Periya Puranam 1007-1011). Edit `build_new_sets.py` / `new_sets_briefs.py` / `shiva_story_data.py`, rebuild.
+8. Apply the expert's song decisions to the song-story maps, then rebuild the books (`make_pdf.py`) and the index (`make_index.py`).
+
+**Still open from before:** the Kaumaram.com credit line, the introduction text in `pdf/book.typ`, and whether generated PDFs are committed (section 8). **Animation:** the Gemini Flow image-to-video test decides the motion approach (`animation/README.md`).
+
 ## 1. State at a glance
 
 - Branch `next`: **everything is committed and pushed** (last commit `b0f0af8`, 2026-11-11; remote `origin` = teamayilavan/thiruppugazh_app). `main` untouched. The generated PDFs and their JSON are git-ignored; rebuild them with `make_pdf.py`.
