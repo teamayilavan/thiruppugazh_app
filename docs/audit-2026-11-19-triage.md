@@ -6,6 +6,21 @@ Read this first when continuing the audit work. It records what was checked agai
 
 **Rule of thumb:** the audit is good at *finding* issues but states several causes as certain when they are only plausible. Verify with a test before fixing.
 
+## At a glance (state at the end of 2026-11-19)
+
+**Fixed on `next`** (commits `493ec07`, `c573367`, `c5ae090`, `e95ec66`, `5ed696d`; analyze clean, 361 tests; checked on the emulator where noted in the log):
+- Tamil-only category names were rejected (M1); the favorite heart emptied after saving categories (M2b); raw error text in category SnackBars (S2).
+- After a database recovery an older auto-backup overwrote rescued notes and highlights (M7, a real data-loss bug); rescuing a pre-links database stranded a 37 MB file; backup input checks (S1a).
+- Today's song widget read the database on the main thread (P8); `text/plain; charset=...` shares were dropped (M9).
+- Light-theme muted text contrast and the crossed light/dark references; leftover English strings and hard-coded colours (M11, partly); dead `lib/generated/` (M5); URL userinfo and length (S1b).
+- Link-save errors, deep-link `mounted` checks (M4, verified parts); failed import triggering a backup (M3); overlapping auto-backup writes (M8); typing limits (S3).
+
+**Disproved or dropped:** M2 as described, P2 (keyboard wipes dialog; tested), P4 (controller leaks; not worth the risk).
+
+**Open, needs an owner decision or its own project:** S4 deep-link filters, M6 tracked binaries, P5 indexes (with the next DB bump), P1 drop bundled migration JSONs (full upgrade matrix first), performance items (unmeasured), M10 reminder service, CI/Netlify hardening, remaining M4 sub-items, M9 warm-start race (unverified).
+
+**Before the next release:** build and smoke-test the signed release APK where `upload-keystore.jks` lives (it is not on the machine used for this work); R8 and release lint already pass. Bump the version only when preparing the release (CLAUDE.md).
+
 ## 1. Verdict per item
 
 Status: DONE = fixed and tested; TODO = planned; TEST FIRST = write a test to prove it before deciding; DEFER = real but not worth doing now; DROP = disproved.
