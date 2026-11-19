@@ -548,6 +548,11 @@ class AppLocalizationsEn extends AppLocalizations {
   String get couldNotOpenPlayStore => 'Couldn\'t open Google Play';
 
   @override
+  String appVersion(String version, String build) {
+    return 'Version $version ($build)';
+  }
+
+  @override
   String get viewSourceCode => 'View Source Code on GitHub';
 
   @override

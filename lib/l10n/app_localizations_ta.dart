@@ -554,6 +554,11 @@ class AppLocalizationsTa extends AppLocalizations {
   String get couldNotOpenPlayStore => 'Google Play-ஐத் திறக்க முடியவில்லை';
 
   @override
+  String appVersion(String version, String build) {
+    return 'பதிப்பு $version ($build)';
+  }
+
+  @override
   String get viewSourceCode => 'GitHub-இல் மூலக் குறியீட்டைக் காண்க';
 
   @override

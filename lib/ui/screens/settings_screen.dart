@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../widgets/adaptive_layout.dart';
 import 'package:intl/intl.dart';
+import 'package:package_info_plus/package_info_plus.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../../constants/app_constants.dart';
@@ -246,6 +247,7 @@ class SettingsScreen extends StatelessWidget {
                 ),
               ),
             ),
+            const _VersionLine(),
           ],
         ),
       ),
@@ -506,5 +508,51 @@ class SettingsScreen extends StatelessWidget {
       case ThemeMode.system:
         return l10n.systemDefault;
     }
+  }
+}
+
+/// A quiet "Version 1.7.0 (9)" line at the bottom of Settings, read from the
+/// installed app, so a user can tell support (or themselves, next to the
+/// Check for updates button) which version they have. Shows nothing if the
+/// version can't be read.
+class _VersionLine extends StatefulWidget {
+  const _VersionLine();
+
+  @override
+  State<_VersionLine> createState() => _VersionLineState();
+}
+
+class _VersionLineState extends State<_VersionLine> {
+  PackageInfo? _info;
+
+  @override
+  void initState() {
+    super.initState();
+    _load();
+  }
+
+  Future<void> _load() async {
+    try {
+      final info = await PackageInfo.fromPlatform();
+      if (mounted) setState(() => _info = info);
+    } catch (_) {
+      // Leave the line out rather than show an error.
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final info = _info;
+    if (info == null) return const SizedBox.shrink();
+    final l10n = AppLocalizations.of(context)!;
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(16, 8, 16, 24),
+      child: Center(
+        child: Text(
+          l10n.appVersion(info.version, info.buildNumber),
+          style: Theme.of(context).textTheme.bodySmall,
+        ),
+      ),
+    );
   }
 }

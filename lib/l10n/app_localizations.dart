@@ -1107,6 +1107,12 @@ abstract class AppLocalizations {
   /// **'Couldn\'t open Google Play'**
   String get couldNotOpenPlayStore;
 
+  /// No description provided for @appVersion.
+  ///
+  /// In en, this message translates to:
+  /// **'Version {version} ({build})'**
+  String appVersion(String version, String build);
+
   /// No description provided for @viewSourceCode.
   ///
   /// In en, this message translates to:

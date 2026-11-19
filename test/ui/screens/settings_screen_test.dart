@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:package_info_plus/package_info_plus.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:thiruppugazh/constants/app_constants.dart';
@@ -56,6 +57,21 @@ void main() {
       find.widgetWithText(OutlinedButton, 'Visit Mayuragiri.com'),
       findsNothing,
     );
+  });
+
+  testWidgets('shows the installed version at the bottom', (tester) async {
+    PackageInfo.setMockInitialValues(
+      appName: 'Thiruppugazh',
+      packageName: 'org.ayilavan.thiruppugazh',
+      version: '1.7.0',
+      buildNumber: '9',
+      buildSignature: '',
+    );
+    await tester.pumpWidget(_wrapped());
+    await tester.pumpAndSettle();
+    await tester.scrollUntilVisible(find.text('Version 1.7.0 (9)'), 300);
+
+    expect(find.text('Version 1.7.0 (9)'), findsOneWidget);
   });
 
   testWidgets('Check for updates asks first, naming Google Play', (

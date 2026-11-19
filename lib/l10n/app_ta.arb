@@ -170,6 +170,7 @@
   "privacyPolicy": "தனியுரிமைக் கொள்கை",
   "checkForUpdates": "புதுப்பிப்புகளைச் சரிபார்க்க",
   "couldNotOpenPlayStore": "Google Play-ஐத் திறக்க முடியவில்லை",
+  "appVersion": "பதிப்பு {version} ({build})",
   "viewSourceCode": "GitHub-இல் மூலக் குறியீட்டைக் காண்க",
   "visitMayuragiriWebsite": "மயூரகிரி.காம்-ஐப் பார்வையிடவும்",
   "increaseLyricsFontSize": "பாடல் வரிகளின் எழுத்துருவை பெரிதாக்கு",

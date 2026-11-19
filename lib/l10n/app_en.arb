@@ -214,6 +214,13 @@
   "privacyPolicy": "Privacy Policy",
   "checkForUpdates": "Check for updates",
   "couldNotOpenPlayStore": "Couldn't open Google Play",
+  "appVersion": "Version {version} ({build})",
+  "@appVersion": {
+    "placeholders": {
+      "version": {"type": "String"},
+      "build": {"type": "String"}
+    }
+  },
   "viewSourceCode": "View Source Code on GitHub",
   "visitMayuragiriWebsite": "Visit Mayuragiri.com",
   "increaseLyricsFontSize": "Increase lyrics font size",
