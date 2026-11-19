@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:thiruppugazh/constants/app_constants.dart';
 import 'package:thiruppugazh/l10n/app_localizations.dart';
 import 'package:thiruppugazh/providers/auto_backup_status_provider.dart';
 import 'package:thiruppugazh/providers/keep_screen_on_provider.dart';
@@ -55,6 +56,33 @@ void main() {
       find.widgetWithText(OutlinedButton, 'Visit Mayuragiri.com'),
       findsNothing,
     );
+  });
+
+  testWidgets('Check for updates asks first, naming Google Play', (
+    tester,
+  ) async {
+    await tester.pumpWidget(_wrapped());
+    await tester.pumpAndSettle();
+
+    final button = find.widgetWithText(OutlinedButton, 'Check for updates');
+    await tester.scrollUntilVisible(button, 300);
+    await tester.tap(button);
+    await tester.pumpAndSettle();
+
+    // Nothing opens without the confirmation, which names the site.
+    expect(find.text('Open External Link'), findsOneWidget);
+    expect(find.textContaining('play.google.com'), findsOneWidget);
+
+    await tester.tap(find.text('Cancel'));
+    await tester.pumpAndSettle();
+    expect(find.text('Open External Link'), findsNothing);
+  });
+
+  testWidgets('the store address is an https Google Play page', (tester) async {
+    final uri = Uri.parse(AppConstants.playStoreUrl);
+    expect(uri.scheme, 'https');
+    expect(uri.host, 'play.google.com');
+    expect(uri.queryParameters['id'], 'org.ayilavan.thiruppugazh');
   });
 
   testWidgets('keeping the screen on while reading is an opt-in switch', (

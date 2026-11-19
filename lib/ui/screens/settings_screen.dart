@@ -3,6 +3,7 @@ import '../widgets/adaptive_layout.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
+import '../../constants/app_constants.dart';
 import '../../providers/auto_backup_status_provider.dart';
 import '../../providers/theme_provider.dart';
 import '../../providers/keep_screen_on_provider.dart';
@@ -225,6 +226,20 @@ class SettingsScreen extends StatelessWidget {
               child: SizedBox(
                 width: double.infinity,
                 child: OutlinedButton.icon(
+                  onPressed: () => _checkForUpdates(context),
+                  icon: const Icon(Icons.system_update),
+                  label: Text(l10n.checkForUpdates),
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                horizontal: 16.0,
+                vertical: 8.0,
+              ),
+              child: SizedBox(
+                width: double.infinity,
+                child: OutlinedButton.icon(
                   onPressed: () => _launchGitHubRepo(context),
                   icon: const Icon(Icons.code),
                   label: Text(l10n.viewSourceCode),
@@ -235,6 +250,25 @@ class SettingsScreen extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  /// Opens the app's Play Store page, after the usual confirmation naming the
+  /// site. The Play app shows an Update button when a newer version exists;
+  /// this app makes no network request of its own.
+  Future<void> _checkForUpdates(BuildContext context) async {
+    final messenger = ScaffoldMessenger.of(context);
+    final failure = AppLocalizations.of(context)!.couldNotOpenPlayStore;
+    final url = Uri.parse(AppConstants.playStoreUrl);
+    if (!await confirmOpenLink(context, url.toString())) return;
+    var opened = false;
+    try {
+      opened = await launchUrl(url, mode: LaunchMode.externalApplication);
+    } catch (_) {
+      opened = false;
+    }
+    if (!opened) {
+      messenger.showSnackBar(SnackBar(content: Text(failure)));
+    }
   }
 
   Future<void> _launchGitHubRepo(BuildContext context) async {

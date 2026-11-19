@@ -542,6 +542,12 @@ class AppLocalizationsEn extends AppLocalizations {
   String get privacyPolicy => 'Privacy Policy';
 
   @override
+  String get checkForUpdates => 'Check for updates';
+
+  @override
+  String get couldNotOpenPlayStore => 'Couldn\'t open Google Play';
+
+  @override
   String get viewSourceCode => 'View Source Code on GitHub';
 
   @override

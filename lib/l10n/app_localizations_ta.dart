@@ -548,6 +548,12 @@ class AppLocalizationsTa extends AppLocalizations {
   String get privacyPolicy => 'தனியுரிமைக் கொள்கை';
 
   @override
+  String get checkForUpdates => 'புதுப்பிப்புகளைச் சரிபார்க்க';
+
+  @override
+  String get couldNotOpenPlayStore => 'Google Play-ஐத் திறக்க முடியவில்லை';
+
+  @override
   String get viewSourceCode => 'GitHub-இல் மூலக் குறியீட்டைக் காண்க';
 
   @override

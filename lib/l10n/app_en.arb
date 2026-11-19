@@ -212,6 +212,8 @@
   "highlight": "Highlight",
   "highlights": "Highlights",
   "privacyPolicy": "Privacy Policy",
+  "checkForUpdates": "Check for updates",
+  "couldNotOpenPlayStore": "Couldn't open Google Play",
   "viewSourceCode": "View Source Code on GitHub",
   "visitMayuragiriWebsite": "Visit Mayuragiri.com",
   "increaseLyricsFontSize": "Increase lyrics font size",

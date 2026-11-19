@@ -1095,6 +1095,18 @@ abstract class AppLocalizations {
   /// **'Privacy Policy'**
   String get privacyPolicy;
 
+  /// No description provided for @checkForUpdates.
+  ///
+  /// In en, this message translates to:
+  /// **'Check for updates'**
+  String get checkForUpdates;
+
+  /// No description provided for @couldNotOpenPlayStore.
+  ///
+  /// In en, this message translates to:
+  /// **'Couldn\'t open Google Play'**
+  String get couldNotOpenPlayStore;
+
   /// No description provided for @viewSourceCode.
   ///
   /// In en, this message translates to:

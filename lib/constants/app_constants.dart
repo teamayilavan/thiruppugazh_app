@@ -27,6 +27,12 @@ class AppConstants {
   static const String recentSearchesPrefsKey = 'recent_searches';
   static const String discoverCardDismissedPrefsKey = 'discover_card_dismissed';
 
+  // ==================== Store ====================
+  /// The app's Google Play page (the Play app opens it and offers an update
+  /// if there is one). The app itself never goes online.
+  static const String playStoreUrl =
+      'https://play.google.com/store/apps/details?id=org.ayilavan.thiruppugazh';
+
   // ==================== Deep Link ====================
   static const String deepLinkDomain = 'thiruppugazh.ayilavan.org';
 
