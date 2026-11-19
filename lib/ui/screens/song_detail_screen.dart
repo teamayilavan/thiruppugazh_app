@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 import 'package:share_plus/share_plus.dart';
 
@@ -355,6 +356,9 @@ class _SongDetailScreenState extends State<SongDetailScreen> {
           width: double.maxFinite,
           child: TextField(
             controller: noteController,
+            inputFormatters: [
+              LengthLimitingTextInputFormatter(AppConstants.noteMaxLength),
+            ],
             maxLines: null,
             expands: true,
             textAlignVertical: TextAlignVertical.top,

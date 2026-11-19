@@ -93,6 +93,7 @@
   "failedToLoadCategories": "வகைகளை ஏற்றுவதில் தோல்வி",
   "errorUpdatingFavorite": "பிடித்தவையை புதுப்பிப்பதில் பிழை",
   "errorUpdatingCategory": "வகையை புதுப்பிப்பதில் பிழை",
+  "linkSaveFailed": "இணைப்பை சேமிக்க முடியவில்லை. மீண்டும் முயலவும்.",
   "errorUpdatingCategories": "வகைகளை புதுப்பிப்பதில் பிழை",
   "retry": "மீண்டும் முயற்சி",
   

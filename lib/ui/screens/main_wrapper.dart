@@ -268,9 +268,13 @@ class _MainWrapperState extends State<MainWrapper> {
     _appLinks = AppLinks();
 
     // Check initial link if app was launched via deep link
-    final initialLink = await _appLinks.getInitialLink();
-    if (initialLink != null) {
-      _handleDeepLink(initialLink);
+    try {
+      final initialLink = await _appLinks.getInitialLink();
+      if (initialLink != null && mounted) {
+        _handleDeepLink(initialLink);
+      }
+    } catch (e, st) {
+      AppLogger.error('Reading the initial link failed', error: e, stackTrace: st);
     }
 
     // Listen for deep links while app is running
@@ -280,6 +284,7 @@ class _MainWrapperState extends State<MainWrapper> {
   }
 
   Future<void> _handleDeepLink(Uri uri) async {
+    if (!mounted) return;
     // Expected formats:
     // 1. Custom Scheme: thiruppugazh://song/{id} (Legacy/Internal)
     // 2. App Link: https://thiruppugazh.ayilavan.org/song/{id}
@@ -305,7 +310,13 @@ class _MainWrapperState extends State<MainWrapper> {
 
       if (songId != null) {
         final repo = Provider.of<SongRepository>(context, listen: false);
-        final song = await repo.getSongById(songId);
+        final Song? song;
+        try {
+          song = await repo.getSongById(songId);
+        } catch (e, st) {
+          AppLogger.error('Opening a song link failed', error: e, stackTrace: st);
+          return;
+        }
 
         if (song != null && mounted) {
           if (_paneActive) {

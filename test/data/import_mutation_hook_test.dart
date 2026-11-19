@@ -47,6 +47,22 @@ void main() {
     expect(calls, 1);
     expect(identical(DatabaseHelper.onMutation, hook), isTrue);
 
+    // A failing import (rolled back) must not trigger a backup rewrite, and
+    // must still put the hook back.
+    calls = 0;
+    await expectLater(
+      BackupService().applyImport({
+        'version': 1,
+        'favorites': [],
+        'categories': [
+          {'name': 5, 'songs': []},
+        ],
+      }),
+      throwsA(anything),
+    );
+    expect(calls, 0);
+    expect(identical(DatabaseHelper.onMutation, hook), isTrue);
+
     final db = await DatabaseHelper().database;
     await db.close();
     dir.deleteSync(recursive: true);

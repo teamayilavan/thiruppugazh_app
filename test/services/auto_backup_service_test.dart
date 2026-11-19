@@ -62,6 +62,35 @@ void main() {
     expect(File('${file.path}.tmp').existsSync(), false);
   });
 
+  test('overlapping writeNow calls run one at a time and the last sees newest data', () async {
+    final statusProvider = AutoBackupStatusProvider();
+    await Future.delayed(Duration.zero);
+    var running = 0;
+    var maxRunning = 0;
+    var version = 0;
+
+    final service = AutoBackupService(
+      backupJsonBuilder: () async {
+        running++;
+        if (running > maxRunning) maxRunning = running;
+        final snapshot = ++version;
+        await Future.delayed(const Duration(milliseconds: 30));
+        running--;
+        return {'version': 1, 'n': snapshot};
+      },
+      applyImport: (_) async => throw UnimplementedError(),
+      statusProvider: statusProvider,
+      backupDirectory: tempDir,
+    );
+
+    await Future.wait([service.writeNow(), service.writeNow(), service.writeNow()]);
+
+    expect(maxRunning, 1);
+    final file = File(p.join(tempDir.path, 'thiruppugazh_auto_backup.json'));
+    expect(jsonDecode(await file.readAsString())['n'], version);
+    expect(File('${file.path}.tmp').existsSync(), false);
+  });
+
   test('a mutation debounces to a single write after the configured delay', () async {
     final statusProvider = AutoBackupStatusProvider();
     await Future.delayed(Duration.zero);

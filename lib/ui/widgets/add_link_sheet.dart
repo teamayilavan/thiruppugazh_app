@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 
+import '../../constants/app_constants.dart';
 import '../../data/models/link_model.dart';
 import '../../data/repositories/song_repository.dart';
 import '../../l10n/app_localizations.dart';
+import '../../utils/app_logger.dart';
 import '../../utils/link_utils.dart';
 
 /// Shows a bottom sheet to attach a web link to [songId]. Resolves to true
@@ -67,14 +69,25 @@ class _AddLinkSheetState extends State<_AddLinkSheet> {
     setState(() => _saving = true);
     final repo = Provider.of<SongRepository>(context, listen: false);
     final label = _labelController.text.trim();
-    final added = await repo.addLinkIfAbsent(
-      SongLink(
-        songId: widget.songId,
-        url: url,
-        title: label.isEmpty ? null : label,
-        createdAt: DateTime.now(),
-      ),
-    );
+    final bool added;
+    try {
+      added = await repo.addLinkIfAbsent(
+        SongLink(
+          songId: widget.songId,
+          url: url,
+          title: label.isEmpty ? null : label,
+          createdAt: DateTime.now(),
+        ),
+      );
+    } catch (e, st) {
+      AppLogger.error('Saving a link failed', error: e, stackTrace: st);
+      if (!mounted) return;
+      setState(() {
+        _saving = false;
+        _error = l10n.linkSaveFailed;
+      });
+      return;
+    }
     if (!mounted) return;
     if (added) {
       Navigator.of(context).pop(true);
@@ -104,6 +117,9 @@ class _AddLinkSheetState extends State<_AddLinkSheet> {
           const SizedBox(height: 16),
           TextField(
             controller: _urlController,
+            inputFormatters: [
+              LengthLimitingTextInputFormatter(LinkUtils.maxUrlLength),
+            ],
             keyboardType: TextInputType.url,
             autofocus: true,
             onChanged: (_) {
@@ -124,6 +140,11 @@ class _AddLinkSheetState extends State<_AddLinkSheet> {
           const SizedBox(height: 12),
           TextField(
             controller: _labelController,
+            inputFormatters: [
+              LengthLimitingTextInputFormatter(
+                AppConstants.linkLabelMaxLength,
+              ),
+            ],
             textCapitalization: TextCapitalization.sentences,
             decoration: InputDecoration(
               labelText: l10n.linkLabelOptional,

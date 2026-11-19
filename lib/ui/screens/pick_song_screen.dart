@@ -9,6 +9,7 @@ import '../../data/models/search_filter.dart';
 import '../../data/models/song_model.dart';
 import '../../data/repositories/song_repository.dart';
 import '../../l10n/app_localizations.dart';
+import '../../utils/app_logger.dart';
 import '../../providers/lyrics_language_provider.dart';
 import '../../providers/reading_state_provider.dart';
 
@@ -106,16 +107,29 @@ class _PickSongScreenState extends State<PickSongScreen> {
     if (_saving) return;
     setState(() => _saving = true);
     final navigator = Navigator.of(context);
+    final messenger = ScaffoldMessenger.of(context);
     final repo = Provider.of<SongRepository>(context, listen: false);
 
-    final added = await repo.addLinkIfAbsent(
-      SongLink(
-        songId: song.id,
-        url: widget.url,
-        title: widget.title,
-        createdAt: DateTime.now(),
-      ),
-    );
+    final bool added;
+    try {
+      added = await repo.addLinkIfAbsent(
+        SongLink(
+          songId: song.id,
+          url: widget.url,
+          title: widget.title,
+          createdAt: DateTime.now(),
+        ),
+      );
+    } catch (e, st) {
+      AppLogger.error('Saving a shared link failed', error: e, stackTrace: st);
+      if (!mounted) return;
+      setState(() => _saving = false);
+      messenger.showSnackBar(
+        SnackBar(content: Text(AppLocalizations.of(context)!.linkSaveFailed)),
+      );
+      return;
+    }
+    if (!mounted) return;
     navigator.pop(PickSongResult(song: song, added: added));
   }
 

@@ -93,6 +93,7 @@
   "failedToLoadCategories": "Failed to load categories",
   "errorUpdatingFavorite": "Error updating favorite",
   "errorUpdatingCategory": "Error updating category",
+  "linkSaveFailed": "Couldn't save the link. Please try again.",
   "errorUpdatingCategories": "Error updating categories",
   "retry": "Retry",
   

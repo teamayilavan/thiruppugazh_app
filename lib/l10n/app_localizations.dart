@@ -584,6 +584,12 @@ abstract class AppLocalizations {
   /// **'Error updating category'**
   String get errorUpdatingCategory;
 
+  /// No description provided for @linkSaveFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Couldn\'t save the link. Please try again.'**
+  String get linkSaveFailed;
+
   /// No description provided for @errorUpdatingCategories.
   ///
   /// In en, this message translates to:

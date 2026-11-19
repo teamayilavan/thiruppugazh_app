@@ -266,6 +266,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get errorUpdatingCategory => 'Error updating category';
 
   @override
+  String get linkSaveFailed => 'Couldn\'t save the link. Please try again.';
+
+  @override
   String get errorUpdatingCategories => 'Error updating categories';
 
   @override

@@ -38,6 +38,12 @@ class AppConstants {
   static const int categoryMinNameLength = 2;
   static const int categoryMaxNameLength = 50;
 
+  /// Typing limits for a song note and a saved link's label. Generous for any
+  /// real use; they only stop a huge paste from bloating the database and
+  /// Auto Backup. Existing, longer notes are kept untouched.
+  static const int noteMaxLength = 20000;
+  static const int linkLabelMaxLength = 200;
+
   // ==================== Pagination ====================
   static const int pageSize = 50;
   static const int defaultPage = 0;

@@ -61,6 +61,14 @@ Update this section as work lands.
   - S1a: `maxBackupCategorySongs` (100,000) total cap in `validateBackupMap`; `maybeRestore` checks `maxBackupFileBytes` and that the JSON is an object; `pickAndPreviewBackup` checks the same. Tests added.
   - Not changed: M3, M8 (deferred).
   - Committed as `c573367`.
+- 2026-11-19: **Round 2 of deferred items done** (analyze clean, 361 tests pass):
+  - M3 fixed (`applyImport` fires the hook only after a successful commit; test added). M8 fixed (`writeNow` serializes writes with an in-flight future and a write-again flag; test with overlapping calls added).
+  - M4 (the verified parts): `add_link_sheet` and `pick_song_screen` catch save errors, log them and show new `linkSaveFailed`; `main_wrapper` `_handleDeepLink` checks `mounted` and catches errors. Other M4 sub-items (categories-screen `setState` ordering, search-screen request guard and stale filter query, song-detail dialog `mounted` check) were not touched.
+  - P2 **disproved**: `test/ui/widgets/add_to_category_dialog_test.dart` shows keyboard-inset frames do not reset ticks or re-query (this test also covers Tamil names in the dialog). Dropped.
+  - P4 **won't fix**: disposing right after `showDialog` returns would dispose while the exit animation still uses the controller; the proper fix is three small StatefulWidget refactors for a few bytes saved per open. Not worth the risk.
+  - S3: typing limits added (note 20,000, link 2,048, label 200; UI only, imports unlimited so no user data is ever refused).
+  - Emulator: share to "Pick a song", search, choose a song: "Link added to ..." and the app returned to the launcher (debug APK). Not re-checked on the device: link-save failure message, note limit.
+  - Still deferred, each needing a decision or its own project: S4 (intent filters), M6 (tracked binaries), M9 warm-start handler race (unverified), P1 (drop the migration JSONs), P5 (indexes, next DB bump), P3/P6/P7/P9-P13 (performance, unmeasured), M10 (reminder service), CI/Netlify items.
 - 2026-11-19: **Batches 3 and 4 done** (commit `c5ae090`; analyze clean, 357 tests pass).
   - Batch 3: P8 (`TodaysSongWidget.onUpdate` uses `goAsync()` + a worker thread), M9 MIME (`startsWith("text/plain")`; the warm-start handler race was not changed or verified).
   - Batch 4: M11 partly (l10n for `Tune not available`, create-category label/tooltip, category semantics; `Colors.red`/yellow replaced by `AppColors.destructive`/`verseHighlight`; `textMuted` darkened to `#476450` and the light/dark references uncrossed), M5 (`lib/generated/` removed), S1b (`isValidUrl` rejects userinfo and URLs over 2,048 chars; test added).

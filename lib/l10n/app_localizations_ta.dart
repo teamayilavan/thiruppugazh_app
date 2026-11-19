@@ -266,6 +266,10 @@ class AppLocalizationsTa extends AppLocalizations {
   String get errorUpdatingCategory => 'வகையை புதுப்பிப்பதில் பிழை';
 
   @override
+  String get linkSaveFailed =>
+      'இணைப்பை சேமிக்க முடியவில்லை. மீண்டும் முயலவும்.';
+
+  @override
   String get errorUpdatingCategories => 'வகைகளை புதுப்பிப்பதில் பிழை';
 
   @override

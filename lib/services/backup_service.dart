@@ -401,11 +401,15 @@ class BackupService {
     // and fire it once afterwards so the auto-backup is rewritten once.
     final hook = DatabaseHelper.onMutation;
     DatabaseHelper.onMutation = null;
+    var succeeded = false;
     try {
-      return await _applyImportInTransaction(map);
+      final result = await _applyImportInTransaction(map);
+      succeeded = true;
+      return result;
     } finally {
       DatabaseHelper.onMutation = hook;
-      hook?.call();
+      // A failed import rolled back: nothing changed, nothing to back up.
+      if (succeeded) hook?.call();
     }
   }
 

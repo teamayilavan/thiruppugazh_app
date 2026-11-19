@@ -113,7 +113,31 @@ class AutoBackupService {
   /// Writes the current backup snapshot to disk immediately and records
   /// the time. Safe to call directly (used by the opportunistic startup
   /// check) or via the debounced [onMutation] path.
-  Future<void> writeNow() async {
+  Future<void> writeNow() {
+    // One write at a time: they share a single temp file, so two overlapping
+    // writes (a debounced change and the startup check) could clobber each
+    // other. A call made while one is running just asks for one more pass.
+    final running = _inFlight;
+    if (running != null) {
+      _writeAgain = true;
+      return running;
+    }
+    final run = _writeUntilSettled().whenComplete(() => _inFlight = null);
+    _inFlight = run;
+    return run;
+  }
+
+  Future<void>? _inFlight;
+  bool _writeAgain = false;
+
+  Future<void> _writeUntilSettled() async {
+    do {
+      _writeAgain = false;
+      await _writeOnce();
+    } while (_writeAgain);
+  }
+
+  Future<void> _writeOnce() async {
     try {
       final map = await _backupJsonBuilder();
       final file = await _backupFile();
