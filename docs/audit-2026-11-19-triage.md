@@ -19,7 +19,7 @@ Read this first when continuing the audit work. It records what was checked agai
 
 **Open, needs an owner decision or its own project:** S4 deep-link filters, M6 tracked binaries, P5 indexes (with the next DB bump), P1 drop bundled migration JSONs (full upgrade matrix first), performance items (unmeasured), M10 reminder service, CI/Netlify hardening, remaining M4 sub-items, M9 warm-start race (unverified).
 
-**Before the next release:** build and smoke-test the signed release APK where `upload-keystore.jks` lives (it is not on the machine used for this work); R8 and release lint already pass. Bump the version only when preparing the release (CLAUDE.md).
+**Released:** 1.8.0 (build 10) was uploaded to Google Play and submitted for review on 2026-11-19 (signed AAB; the signed APK passed an in-place upgrade test from 1.7.0 with no data loss). Still to do once Play approves: merge `next` into `main` and tag `v1.8.0` (CLAUDE.md release flow). Then run a quick check from the Play internal/production track, since only the APK was installed on the emulator.
 
 ## 1. Verdict per item
 
@@ -99,3 +99,5 @@ An expansion of `docs/memorization-practice-plan.md`. Checked: 1,340 songs; 9 so
 Not verified: how many songs have usable `mayuragiri_lyrics_separated` (the JSON has 1,334 entries; the doc says 1,300); the example starter-song numbers; whether `tune_list` parses into short/long beats.
 
 Open design points for the owner: the new plan changes "Again" to step down 2 boxes instead of resetting to box 1; the per-verse meaning sheet needs `words`/`meanings` aligned to verses (prove with the Phase 0 data audit); Phase 1 (Chanting Studio, preferences only, no DB change) is the suggested start; Phase 4 would need an opt-in `RECORD_AUDIO` permission (owner decision). Nothing from this plan is started.
+
+- 2026-11-19: **1.8.0 (10) submitted to Google Play.** Owner uploaded the AAB and sent it for review. Open after approval: merge `next` to `main`, tag `v1.8.0`, push. Next-release candidates: S4, M6, P5/P1 with the next DB bump, native-Tamil review of the new strings.
