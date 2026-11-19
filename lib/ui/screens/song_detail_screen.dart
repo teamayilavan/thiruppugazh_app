@@ -16,6 +16,7 @@ import '../widgets/song_web_links.dart';
 
 import '../../constants/app_constants.dart';
 import '../../l10n/app_localizations.dart';
+import '../../theme/app_theme.dart';
 import '../../utils/app_logger.dart';
 import '../../providers/lyrics_language_provider.dart';
 import '../../providers/lyrics_font_size_provider.dart';
@@ -308,7 +309,7 @@ class _SongDetailScreenState extends State<SongDetailScreen> {
       final isHighlighted = _highlights.any((h) => h.verseIndex == i);
       // Using a light yellow background for highlighted text
       final bgColor = isHighlighted
-          ? Colors.yellow.withValues(alpha: 0.3)
+          ? AppColors.verseHighlight.withValues(alpha: 0.3)
           : null;
 
       final style = Theme.of(context).textTheme.bodyLarge?.copyWith(

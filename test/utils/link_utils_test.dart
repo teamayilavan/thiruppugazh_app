@@ -3,6 +3,15 @@ import 'package:thiruppugazh/utils/link_utils.dart';
 
 void main() {
   group('isValidUrl', () {
+    test('rejects userinfo and over-long URLs', () {
+      expect(LinkUtils.isValidUrl('https://youtube.com@evil.example/x'), isFalse);
+      expect(LinkUtils.isValidUrl('https://user:pw@example.com'), isFalse);
+      expect(
+        LinkUtils.isValidUrl('https://example.com/${'a' * 2100}'),
+        isFalse,
+      );
+    });
+
     test('accepts http and https', () {
       expect(LinkUtils.isValidUrl('https://youtu.be/abc'), isTrue);
       expect(LinkUtils.isValidUrl('http://example.com/a?b=1'), isTrue);

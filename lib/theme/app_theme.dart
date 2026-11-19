@@ -52,7 +52,9 @@ class AppColors {
   static const Color card = Color(0xFFB3D8A8);
   static const Color textHigh = Color(0xFF196519);
   static const Color text = Color(0xFF0D3619);
-  static const Color textMuted = Color(0xFFA9A9A9);
+  // Darker than the dark theme's muted grey: A9A9A9 on the pale green was
+  // only ~1.7:1; this reaches about 4.9:1.
+  static const Color textMuted = Color(0xFF476450);
   static const Color accent = Color(0xFF80AF81);
 
   // Dark Theme Colors
@@ -63,6 +65,12 @@ class AppColors {
   static const Color dtext = Color(0xFFECECEC);
   static const Color dtextMuted = Color(0xFFA9A9A9);
   static const Color daccent = Color(0xFF609755);
+
+  /// Delete actions and error text (same red as the themes' error colour).
+  static const Color destructive = Color(0xFFF44336);
+
+  /// Background behind a highlighted verse (translucent over the lyrics).
+  static const Color verseHighlight = Color(0xFFFFEB3B);
 
   /// Filled buttons on the song page. Darker than [daccent] so the light button
   /// text reaches 4.5:1 contrast (it was 2.9:1 on [daccent]).
@@ -117,7 +125,7 @@ final lightTheme = ThemeData(
         return const IconThemeData(color: AppColors.dbackground);
       } else {
         // Otherwise, apply this color for the "unselected" state.
-        return const IconThemeData(color: AppColors.dtextMuted);
+        return const IconThemeData(color: AppColors.textMuted);
       }
     }),
     labelTextStyle: WidgetStateProperty.all(
@@ -129,7 +137,7 @@ final lightTheme = ThemeData(
     backgroundColor: AppColors.container,
     indicatorColor: AppColors.accent,
     selectedIconTheme: IconThemeData(color: AppColors.dbackground),
-    unselectedIconTheme: IconThemeData(color: AppColors.dtextMuted),
+    unselectedIconTheme: IconThemeData(color: AppColors.textMuted),
     selectedLabelTextStyle: TextStyle(
       fontSize: 12,
       fontWeight: FontWeight.w600,
@@ -194,7 +202,7 @@ final darkTheme = ThemeData(
         return const IconThemeData(color: AppColors.background);
       } else {
         // Otherwise, apply this color for the "unselected" state.
-        return const IconThemeData(color: AppColors.textMuted);
+        return const IconThemeData(color: AppColors.dtextMuted);
       }
     }),
     labelTextStyle: WidgetStateProperty.all(
@@ -205,7 +213,7 @@ final darkTheme = ThemeData(
     backgroundColor: AppColors.dcontainer,
     indicatorColor: AppColors.daccent,
     selectedIconTheme: IconThemeData(color: AppColors.background),
-    unselectedIconTheme: IconThemeData(color: AppColors.textMuted),
+    unselectedIconTheme: IconThemeData(color: AppColors.dtextMuted),
     selectedLabelTextStyle: TextStyle(
       fontSize: 12,
       fontWeight: FontWeight.w600,

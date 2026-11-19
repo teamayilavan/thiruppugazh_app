@@ -113,7 +113,7 @@ class _SongListScreenState extends State<SongListScreen> {
                       subtitle: Text(
                         displayPlace.isNotEmpty
                             ? displayPlace
-                            : 'Tune not available',
+                            : AppLocalizations.of(context)!.tuneNotAvailable,
                         //change text size
                         style: Theme.of(context).textTheme.bodySmall,
                       ),

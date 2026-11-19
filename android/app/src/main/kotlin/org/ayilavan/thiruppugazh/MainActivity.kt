@@ -67,7 +67,7 @@ class MainActivity : FlutterActivity() {
 
     /** Returns the text of an ACTION_SEND text/plain intent, consuming it. */
     private fun takeSharedText(intent: Intent?): String? {
-        if (intent?.action != Intent.ACTION_SEND || intent.type != "text/plain") return null
+        if (intent?.action != Intent.ACTION_SEND || intent.type?.startsWith("text/plain") != true) return null
         // A shared link or caption is short; don't pass an enormous string
         // through the channel and into a regex.
         val text = intent.getCharSequenceExtra(Intent.EXTRA_TEXT)?.toString()?.take(MAX_SHARED_TEXT)

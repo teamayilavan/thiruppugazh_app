@@ -27,8 +27,21 @@ class TodaysSongWidget : AppWidgetProvider() {
         appWidgetManager: AppWidgetManager,
         appWidgetIds: IntArray,
     ) {
-        val views = buildViews(context)
-        for (id in appWidgetIds) appWidgetManager.updateAppWidget(id, views)
+        // Reading the 37 MB song database must not block the main thread
+        // (a slow disk or a locked file could trigger an ANR), so do it on a
+        // worker thread and tell the system when finished. goAsync() keeps
+        // the receiver alive for that.
+        val pending = goAsync()
+        Thread {
+            try {
+                val views = buildViews(context)
+                for (id in appWidgetIds) appWidgetManager.updateAppWidget(id, views)
+            } catch (e: Exception) {
+                Log.w(TAG, "Could not update the widget", e)
+            } finally {
+                pending.finish()
+            }
+        }.start()
     }
 
     override fun onReceive(context: Context, intent: Intent) {

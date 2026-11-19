@@ -5,6 +5,7 @@ import '../widgets/empty_hint.dart';
 import '../widgets/library_filter.dart';
 import '../../data/repositories/song_repository.dart';
 import '../../l10n/app_localizations.dart';
+import '../../theme/app_theme.dart';
 import '../widgets/link_actions.dart';
 
 class HighlightsNotesScreen extends StatelessWidget {
@@ -136,7 +137,7 @@ class _HighlightsListState extends State<HighlightsList> {
                 padding: const EdgeInsets.only(top: 4.0),
                 child: Text(
                   '$count ${count == 1 ? l10n.highlight : l10n.highlights}',
-                  style: const TextStyle(color: Colors.grey),
+                  style: Theme.of(context).textTheme.bodySmall,
                 ),
               ),
               onTap: () async {
@@ -281,7 +282,7 @@ class _NotesListState extends State<NotesList> {
                           onPressed: () => Navigator.of(context).pop(true),
                           child: Text(
                             l10n.delete,
-                            style: const TextStyle(color: Colors.red),
+                            style: const TextStyle(color: AppColors.destructive),
                           ),
                         ),
                       ],

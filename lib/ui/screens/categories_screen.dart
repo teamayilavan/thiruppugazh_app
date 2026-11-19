@@ -108,8 +108,7 @@ class CategoriesScreen extends StatelessWidget {
       ),
       floatingActionButton: Semantics(
         button: true,
-        label: 'Create new category',
-        hint: 'Tap to create a new song category',
+        label: AppLocalizations.of(context)!.createNewCategory,
         child: FloatingActionButton(
           heroTag: 'add_category_fab',
           onPressed: () {
@@ -117,7 +116,7 @@ class CategoriesScreen extends StatelessWidget {
             // automatically update UI thanks to the Consumer.
             _showCreateCategoryDialog(context);
           },
-          tooltip: 'Create Category',
+          tooltip: AppLocalizations.of(context)!.createCategory,
           child: const Icon(Icons.add),
         ),
       ),
@@ -128,8 +127,8 @@ class CategoriesScreen extends StatelessWidget {
     final l10n = AppLocalizations.of(context)!;
     return Semantics(
       button: true,
-      label: '${category.name} category',
-      hint: '${category.songCount} songs',
+      label: category.name,
+      hint: l10n.songCountLabel(category.songCount),
       child: ListTile(
         leading: Icon(
           category.id == 1 ? Icons.favorite : Icons.folder_open_outlined,
@@ -176,11 +175,11 @@ class CategoriesScreen extends StatelessWidget {
                     value: 'delete',
                     child: Row(
                       children: [
-                        const Icon(Icons.delete, size: 20, color: Colors.red),
+                        const Icon(Icons.delete, size: 20, color: AppColors.destructive),
                         const SizedBox(width: 8),
                         Text(
                           l10n.delete,
-                          style: const TextStyle(color: Colors.red),
+                          style: const TextStyle(color: AppColors.destructive),
                         ),
                       ],
                     ),
@@ -507,7 +506,7 @@ class CategoriesScreen extends StatelessWidget {
                   Navigator.of(dialogContext).pop();
                 }
               },
-              style: FilledButton.styleFrom(backgroundColor: Colors.red),
+              style: FilledButton.styleFrom(backgroundColor: AppColors.destructive),
               child: Text(l10n.delete),
             ),
           ],

@@ -58,12 +58,19 @@ class LinkUtils {
     return rest.length > 80 ? '${rest.substring(0, 80).trimRight()}…' : rest;
   }
 
+  /// Longest URL accepted (the common practical limit for browsers).
+  static const int maxUrlLength = 2048;
+
   /// True only for absolute http/https URLs with a host. Anything else
   /// (javascript:, file:, intent:) is rejected so a tap can never launch it.
   static bool isValidUrl(String? url) {
     if (url == null) return false;
     final uri = Uri.tryParse(url.trim());
     if (uri == null || !uri.hasAuthority || uri.host.isEmpty) return false;
+    // "https://youtube.com@evil.example" really goes to evil.example; a saved
+    // link has no reason to carry credentials, so reject userinfo. Also bound
+    // the length so a pasted blob can't be stored as a "link".
+    if (uri.userInfo.isNotEmpty || url.length > maxUrlLength) return false;
     final scheme = uri.scheme.toLowerCase();
     return scheme == 'http' || scheme == 'https';
   }
