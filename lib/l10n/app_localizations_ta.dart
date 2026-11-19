@@ -263,6 +263,9 @@ class AppLocalizationsTa extends AppLocalizations {
   String get errorUpdatingFavorite => 'பிடித்தவையை புதுப்பிப்பதில் பிழை';
 
   @override
+  String get errorUpdatingCategory => 'வகையை புதுப்பிப்பதில் பிழை';
+
+  @override
   String get errorUpdatingCategories => 'வகைகளை புதுப்பிப்பதில் பிழை';
 
   @override

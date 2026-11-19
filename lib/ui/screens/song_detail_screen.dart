@@ -823,8 +823,10 @@ ${_displayLyricsList.join('\n')}''';
                     currentCategoryIds: _categoryIds,
                     onCategoryIdsChanged: (updatedIds) {
                       setState(() {
+                        // Favorites live in songs.is_favorite, not in
+                        // song_categories, so the dialog's result says
+                        // nothing about it; keep the flag as it was.
                         _categoryIds = updatedIds;
-                        _isFavorite = updatedIds.contains(1);
                       });
                     },
                   ),

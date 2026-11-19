@@ -7,6 +7,8 @@ import 'song_list_screen.dart';
 import '../widgets/error_display_widget.dart';
 import '../../l10n/app_localizations.dart';
 import '../../constants/app_constants.dart';
+import '../../utils/app_logger.dart';
+import '../../utils/category_name.dart';
 import '../../theme/app_theme.dart';
 
 // ✨ It's now a simpler StatelessWidget
@@ -240,11 +242,9 @@ class CategoriesScreen extends StatelessWidget {
                       return l10n.categoryMaxLength;
                     }
 
-                    // Sanitize: Remove special characters (keep letters, numbers, spaces)
-                    final sanitized = trimmed
-                        .replaceAll(RegExp(r'[^\w\s]'), '')
-                        .trim();
-                    if (sanitized.isEmpty) {
+                    // Needs at least one letter or digit (any script, so
+                    // Tamil names are fine).
+                    if (!hasValidCategoryNameChars(trimmed)) {
                       return l10n.enterValidCategoryName;
                     }
 
@@ -305,7 +305,12 @@ class CategoriesScreen extends StatelessWidget {
                               if (dialogContext.mounted) {
                                 Navigator.of(dialogContext).pop();
                               }
-                            } catch (e) {
+                            } catch (e, st) {
+                              AppLogger.error(
+                                'Creating category failed',
+                                error: e,
+                                stackTrace: st,
+                              );
                               setState(() {
                                 isCreating = false;
                               });
@@ -315,7 +320,7 @@ class CategoriesScreen extends StatelessWidget {
                                 ).showSnackBar(
                                   SnackBar(
                                     content: Text(
-                                      '${l10n.errorCreatingCategory}: $e',
+                                      l10n.errorCreatingCategory,
                                     ),
                                   ),
                                 );
@@ -374,10 +379,7 @@ class CategoriesScreen extends StatelessWidget {
                     if (trimmed.length > AppConstants.categoryMaxNameLength) {
                       return l10n.categoryMaxLength;
                     }
-                    final sanitized = trimmed
-                        .replaceAll(RegExp(r'[^\w\s]'), '')
-                        .trim();
-                    if (sanitized.isEmpty) {
+                    if (!hasValidCategoryNameChars(trimmed)) {
                       return l10n.enterValidCategoryName;
                     }
                     return null;
@@ -442,7 +444,12 @@ class CategoriesScreen extends StatelessWidget {
                               if (dialogContext.mounted) {
                                 Navigator.of(dialogContext).pop();
                               }
-                            } catch (e) {
+                            } catch (e, st) {
+                              AppLogger.error(
+                                'Renaming category failed',
+                                error: e,
+                                stackTrace: st,
+                              );
                               setState(() {
                                 isSaving = false;
                               });
@@ -452,7 +459,7 @@ class CategoriesScreen extends StatelessWidget {
                                 ).showSnackBar(
                                   SnackBar(
                                     content: Text(
-                                      'Error updating category: $e',
+                                      l10n.errorUpdatingCategory,
                                     ),
                                   ),
                                 );

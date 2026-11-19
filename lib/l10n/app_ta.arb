@@ -92,6 +92,7 @@
   "failedToLoadSongs": "பாடல்களை ஏற்றுவதில் தோல்வி",
   "failedToLoadCategories": "வகைகளை ஏற்றுவதில் தோல்வி",
   "errorUpdatingFavorite": "பிடித்தவையை புதுப்பிப்பதில் பிழை",
+  "errorUpdatingCategory": "வகையை புதுப்பிப்பதில் பிழை",
   "errorUpdatingCategories": "வகைகளை புதுப்பிப்பதில் பிழை",
   "retry": "மீண்டும் முயற்சி",
   

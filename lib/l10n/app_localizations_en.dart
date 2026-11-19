@@ -263,6 +263,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get errorUpdatingFavorite => 'Error updating favorite';
 
   @override
+  String get errorUpdatingCategory => 'Error updating category';
+
+  @override
   String get errorUpdatingCategories => 'Error updating categories';
 
   @override

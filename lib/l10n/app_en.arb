@@ -92,6 +92,7 @@
   "failedToLoadSongs": "Failed to load songs",
   "failedToLoadCategories": "Failed to load categories",
   "errorUpdatingFavorite": "Error updating favorite",
+  "errorUpdatingCategory": "Error updating category",
   "errorUpdatingCategories": "Error updating categories",
   "retry": "Retry",
   

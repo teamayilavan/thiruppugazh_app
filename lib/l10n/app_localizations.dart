@@ -578,6 +578,12 @@ abstract class AppLocalizations {
   /// **'Error updating favorite'**
   String get errorUpdatingFavorite;
 
+  /// No description provided for @errorUpdatingCategory.
+  ///
+  /// In en, this message translates to:
+  /// **'Error updating category'**
+  String get errorUpdatingCategory;
+
   /// No description provided for @errorUpdatingCategories.
   ///
   /// In en, this message translates to:

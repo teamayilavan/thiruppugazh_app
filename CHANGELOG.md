@@ -7,6 +7,11 @@ Notable changes to this project. Format loosely follows [Keep a Changelog](https
 ### Added
 - **Discover features.** An opt-in page of short feature cards (chanting mode, Continue, Favorites, categories, highlights/notes/links, share into the app, the Today's song widget, the daily reminder, search, keep screen on, language and text size, backup, and the tablet reading pane on large screens). Cards for features that have a screen carry a **Try it** button; the rest explain how to use the feature. Reached from a new **Discover features** row in Settings, and from a small card on Home that opens nothing by itself and stays gone once closed or used. Works in English and Tamil, on phones and tablets (Try it stays inside the current tab, so the navigation rail remains). New device-side preference `discover_card_dismissed`; no database, schema or backup change.
 
+### Fixed
+- **Category names written only in Tamil are accepted.** Creating or renaming a category (and the new-category field in "Add to category") rejected any name without an English letter or digit, because the check only recognised ASCII. Any letter or digit in any script now counts.
+- **The favorite heart stays right after you change a song's categories.** Saving categories on a favorited song used to empty the heart on screen (the song was still a favorite; reopening showed it again).
+- **Category errors no longer show raw error text.** A failure while creating, renaming or updating categories shows a plain message in your language; the details go to the log. New string `errorUpdatingCategory` (English and Tamil).
+
 ## [1.7.0+9] — 2026-11-12
 
 ### Added

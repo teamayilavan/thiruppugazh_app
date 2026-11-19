@@ -3,6 +3,8 @@ import 'package:provider/provider.dart';
 import '../../data/repositories/song_repository.dart';
 import '../../data/models/song_model.dart';
 import '../../constants/app_constants.dart';
+import '../../utils/app_logger.dart';
+import '../../utils/category_name.dart';
 import '../../l10n/app_localizations.dart';
 
 class AddToCategoryDialog extends StatefulWidget {
@@ -46,8 +48,7 @@ class _AddToCategoryDialogState extends State<AddToCategoryDialog> {
     if (name.length > AppConstants.categoryMaxNameLength) {
       return l10n.categoryMaxLength;
     }
-    final sanitized = name.replaceAll(RegExp(r'[^\w\s]'), '').trim();
-    if (sanitized.isEmpty) {
+    if (!hasValidCategoryNameChars(name)) {
       return l10n.enterValidCategoryName;
     }
     final isDuplicate = existingNames.any(
@@ -147,14 +148,19 @@ class _AddToCategoryDialogState extends State<AddToCategoryDialog> {
                     content: Text(l10n.categoriesUpdated(widget.song.title)),
                   ),
                 );
-              } catch (e) {
+              } catch (e, st) {
+                AppLogger.error(
+                  'Updating categories failed',
+                  error: e,
+                  stackTrace: st,
+                );
                 if (!mounted) return;
                 setDialogState(() {
                   _isSaving = false;
                 });
                 messenger.showSnackBar(
                   SnackBar(
-                    content: Text('${l10n.errorUpdatingCategories}: $e'),
+                    content: Text(l10n.errorUpdatingCategories),
                   ),
                 );
               }
