@@ -4,8 +4,10 @@ Notable changes to this project. Format loosely follows [Keep a Changelog](https
 
 ## [Unreleased]
 
+## [1.8.0+10] — 2026-11-19
+
 ### Added
-- **App version** shown quietly at the bottom of Settings ("Version 1.7.0 (9)"), so you can tell which version you have, for example when writing to support. Read from the installed app with the new `package_info_plus` dependency; no permission, no network. New string `appVersion` (English and Tamil).
+- **App version** shown quietly at the bottom of Settings ("Version 1.8.0 (10)"), so you can tell which version you have, for example when writing to support. Read from the installed app with the new `package_info_plus` dependency; no permission, no network. New string `appVersion` (English and Tamil).
 - **Check for updates** (Settings, at the bottom). Opens the app's Google Play page after the usual "You are about to visit play.google.com" confirmation; the Play app shows an Update button when a newer version exists. The app itself still makes no network request and needs no new permission. Works in English and Tamil (new strings `checkForUpdates`, `couldNotOpenPlayStore`).
 - **Discover features.** An opt-in page of short feature cards (chanting mode, Continue, Favorites, categories, highlights/notes/links, share into the app, the Today's song widget, the daily reminder, search, keep screen on, language and text size, backup, and the tablet reading pane on large screens). Cards for features that have a screen carry a **Try it** button; the rest explain how to use the feature. Reached from a new **Discover features** row in Settings, and from a small card on Home that opens nothing by itself and stays gone once closed or used. Works in English and Tamil, on phones and tablets (Try it stays inside the current tab, so the navigation rail remains). New device-side preference `discover_card_dismissed`; no database, schema or backup change.
 
