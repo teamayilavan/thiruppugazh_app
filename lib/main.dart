@@ -59,8 +59,13 @@ Future<void> main() async {
       await DatabaseHelper().database;
       await BackupService().deleteStaleExports();
       await autoBackupService.maybeRestore(
-        isFreshDatabase: DatabaseHelper().wasFreshlyCreated,
-        databaseWasRecovered: DatabaseHelper().wasRecovered,
+        // After a clean rescue the database already holds the user's latest
+        // data; an older snapshot must not be restored over it.
+        isFreshDatabase:
+            DatabaseHelper().wasFreshlyCreated &&
+            !DatabaseHelper().userDataRescued,
+        databaseWasRecovered:
+            DatabaseHelper().wasRecovered && !DatabaseHelper().userDataRescued,
       );
       // A restore changes data behind screens that already loaded.
       repository.refresh();

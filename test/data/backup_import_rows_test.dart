@@ -81,6 +81,21 @@ void main() {
       );
     });
 
+    test('rejects too many category-song entries in total', () {
+      final half = List<int>.filled(maxBackupCategorySongs ~/ 2 + 1, 1);
+      expect(
+        () => validateBackupMap({
+          'version': 1,
+          'favorites': [],
+          'categories': [
+            {'name': 'A', 'songs': half},
+            {'name': 'B', 'songs': half},
+          ],
+        }),
+        throwsA(isA<FormatException>()),
+      );
+    });
+
     test('accepts a minimal valid backup', () {
       expect(
         () => validateBackupMap({'version': 1, 'favorites': [], 'categories': []}),

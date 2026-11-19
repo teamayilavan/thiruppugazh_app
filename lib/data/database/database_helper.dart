@@ -31,6 +31,7 @@ class DatabaseHelper {
     _databaseFuture = null;
     _instance._wasFreshlyCreated = false;
     _instance._wasRecovered = false;
+    _instance._userDataRescued = false;
   }
   static const int _dbVersion = AppConstants.dbVersion;
 
@@ -47,6 +48,12 @@ class DatabaseHelper {
   /// though it may already have run once on this device.
   bool _wasRecovered = false;
   bool get wasRecovered => _wasRecovered;
+
+  /// True if, after such a recovery, every user table was copied across from
+  /// the set-aside database. The new database then already holds the user's
+  /// latest data, so an (older) auto-backup must not be restored over it.
+  bool _userDataRescued = false;
+  bool get userDataRescued => _userDataRescued;
 
   /// Called after any write that changes backup-relevant data (favorites,
   /// categories, notes, highlights). Set by [AutoBackupService] at startup
@@ -173,6 +180,7 @@ class DatabaseHelper {
     if (setAside != null) {
       final rescued = await _rescueUserData(db, setAside);
       if (rescued) {
+        _userDataRescued = true;
         await _deleteQuietly(setAside);
       }
     }
@@ -260,7 +268,25 @@ class DatabaseHelper {
           'UPDATE main.songs SET is_favorite = 1 WHERE id IN '
           '(SELECT id FROM old.songs WHERE is_favorite = 1)',
     };
+    // Which tables the old file actually has: a database from before a table
+    // existed (e.g. links, added in v6) is not a failure, just nothing to copy.
+    final oldTables = <String>{};
+    try {
+      final rows = await db.rawQuery(
+        "SELECT name FROM old.sqlite_master WHERE type = 'table'",
+      );
+      oldTables.addAll(rows.map((r) => r['name'] as String));
+    } catch (e, st) {
+      allOk = false;
+      AppLogger.error(
+        'Could not list the tables of the set-aside database',
+        error: e,
+        stackTrace: st,
+      );
+    }
     for (final entry in statements.entries) {
+      final table = entry.key == 'favorites' ? 'songs' : entry.key;
+      if (oldTables.isNotEmpty && !oldTables.contains(table)) continue;
       try {
         await db.execute(entry.value);
       } catch (e, st) {

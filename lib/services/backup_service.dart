@@ -262,7 +262,11 @@ class BackupService {
         throw const FormatException('Backup file is unexpectedly large');
       }
       final content = await file.readAsString();
-      final Map<String, dynamic> importMap = jsonDecode(content);
+      final decoded = jsonDecode(content);
+      if (decoded is! Map<String, dynamic>) {
+        throw const FormatException('Backup must be a JSON object');
+      }
+      final Map<String, dynamic> importMap = decoded;
       validateBackupMap(importMap);
 
       final favIds = (importMap['favorites'] as List).whereType<int>();
@@ -546,6 +550,11 @@ const int maxBackupFileBytes = 5 * 1024 * 1024;
 /// Largest number of entries accepted in any one list of a backup.
 const int maxBackupListLength = 10000;
 
+/// Most song entries allowed across all categories of one backup. A real
+/// backup tops out near songs x categories (a few tens of thousands); this
+/// stops a crafted file from stalling the import transaction.
+const int maxBackupCategorySongs = 100000;
+
 /// Validates the structure of a parsed backup map. Throws [FormatException]
 /// if it can't be imported safely. Shared by the manual import and the
 /// silent auto-restore, so both apply the same checks.
@@ -576,6 +585,7 @@ void validateBackupMap(Map<String, dynamic> map) {
   if (categories.length > maxBackupListLength) {
     throw const FormatException('categories list is unexpectedly large');
   }
+  var categorySongTotal = 0;
   for (final cat in categories) {
     if (cat is! Map) {
       throw const FormatException('each category must be an object');
@@ -592,6 +602,10 @@ void validateBackupMap(Map<String, dynamic> map) {
         throw const FormatException(
           'category songs must contain only integers',
         );
+      }
+      categorySongTotal += songs.length;
+      if (categorySongTotal > maxBackupCategorySongs) {
+        throw const FormatException('category songs are unexpectedly many');
       }
     }
   }

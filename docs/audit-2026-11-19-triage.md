@@ -54,7 +54,13 @@ Update this section as work lands.
 - 2026-11-19: triage written.
 - 2026-11-19: **Batch 1 done on `next`, uncommitted** (analyze clean, 352 tests pass; not checked on the emulator): M1 (new `lib/utils/category_name.dart` + `test/utils/category_name_test.dart`, used in the 3 places), M2b (`song_detail_screen.dart` no longer sets `_isFavorite` from the dialog result), S2 (3 SnackBars show localized text, errors logged; new `errorUpdatingCategory` in both arbs). `CHANGELOG.md` updated.
   - **Not done in Batch 1:** P4 (controller leaks): disposing right after `showDialog` completes would dispose while the dialog's exit animation still uses the controller, so it needs the small-StatefulWidget refactor; left for later. P2: still needs a widget test. M2b has no widget test yet (the song page is heavy to pump); verify on the emulator.
-  - Next: Batch 2 (write the M7 test first).
+  - Committed as `493ec07`.
+- 2026-11-19: **Batch 2 done on `next`, uncommitted.**
+  - **M7 confirmed as a real bug** by `test/data/recovery_then_restore_test.dart` (it failed before the fix: an older auto-backup overwrote the rescued newer note and highlight). Fix: `DatabaseHelper.userDataRescued` (true after a complete rescue); `main.dart` passes `isFreshDatabase`/`databaseWasRecovered` as false in that case, so the snapshot is not restored. If the rescue was partial or failed, behaviour is as before (restore may fill the gaps).
+  - Second M7 problem: rescuing a set-aside DB without a `links` table counted as a failure and stranded the old file. `_rescueUserData` now lists the old file's tables and skips missing ones. Test: `test/data/recovery_pre_links_test.dart` (written after the fix; not run red).
+  - S1a: `maxBackupCategorySongs` (100,000) total cap in `validateBackupMap`; `maybeRestore` checks `maxBackupFileBytes` and that the JSON is an object; `pickAndPreviewBackup` checks the same. Tests added.
+  - Not changed: M3, M8 (deferred).
+  - Next: Batch 3 (Android: P8 widget off the main thread, M9 MIME), needs the emulator.
 
 ## 4. The learning and memorization plan (`thiruppugazh_learning_and_memorization_plan.md`)
 

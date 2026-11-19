@@ -159,8 +159,15 @@ class AutoBackupService {
     }
 
     try {
+      if (await file.length() > maxBackupFileBytes) {
+        throw const FormatException('Auto-backup file is unexpectedly large');
+      }
       final content = await file.readAsString();
-      final map = jsonDecode(content) as Map<String, dynamic>;
+      final decoded = jsonDecode(content);
+      if (decoded is! Map<String, dynamic>) {
+        throw const FormatException('Auto-backup must be a JSON object');
+      }
+      final map = decoded;
       // Same validation as the manual import path; anything unsupported or
       // malformed throws FormatException and is logged below.
       validateBackupMap(map);

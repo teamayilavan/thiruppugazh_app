@@ -6,6 +6,7 @@ import 'package:path/path.dart' as p;
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:thiruppugazh/providers/auto_backup_status_provider.dart';
 import 'package:thiruppugazh/services/auto_backup_service.dart';
+import 'package:thiruppugazh/services/backup_service.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
@@ -171,6 +172,23 @@ void main() {
 
       expect(imports, 0);
       expect(markerFile.existsSync(), true);
+    });
+
+    test('ignores a snapshot that is too large or not a JSON object', () async {
+      var imports = 0;
+      final service = buildService((map) async {
+        imports++;
+        return null;
+      });
+
+      await backupFile.writeAsString('[1, 2, 3]');
+      await service.maybeRestore(isFreshDatabase: true);
+      expect(imports, 0);
+
+      await markerFile.delete();
+      await backupFile.writeAsString(' ' * (maxBackupFileBytes + 1));
+      await service.maybeRestore(isFreshDatabase: true);
+      expect(imports, 0);
     });
 
     test('does nothing on an ordinary reopen', () async {

@@ -10,6 +10,8 @@ Notable changes to this project. Format loosely follows [Keep a Changelog](https
 ### Fixed
 - **Category names written only in Tamil are accepted.** Creating or renaming a category (and the new-category field in "Add to category") rejected any name without an English letter or digit, because the check only recognised ASCII. Any letter or digit in any script now counts.
 - **The favorite heart stays right after you change a song's categories.** Saving categories on a favorited song used to empty the heart on screen (the song was still a favorite; reopening showed it again).
+- **Recovering a damaged database no longer rolls your notes and highlights back.** If the song database had to be replaced and your data was rescued from the old file, the app then restored the automatic backup on top of it; an older snapshot overwrote newer notes and highlights. After a complete rescue the backup is no longer restored. A damaged database from before the Links feature also no longer leaves a 37 MB leftover file on the device.
+- **Backup files are checked more strictly.** An automatic backup that is too large or not a JSON object is ignored, a manual import that is not a JSON object reports a clear error instead of crashing, and a backup with an absurd number of category entries is refused. No format change.
 - **Category errors no longer show raw error text.** A failure while creating, renaming or updating categories shows a plain message in your language; the details go to the log. New string `errorUpdatingCategory` (English and Tamil).
 
 ## [1.7.0+9] — 2026-11-12
