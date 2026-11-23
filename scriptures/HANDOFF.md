@@ -1,12 +1,14 @@
-# Scripture work: handoff (end of session, 2026-11-11)
+# Scripture work: handoff (updated 2026-11-23)
 
-Read this first in the next session, then `README.md` (layout), `STATUS.md` (log) and `AUDIT.md` (what is verified; it is **stale**, see 9).
+Read this first in the next session, then `README.md` (layout), `STATUS.md` (log) and `AUDIT.md` (what is verified; it is **stale**, see 9, step 6).
 `scriptures/` is research material. It is never bundled into the app and never touches `lib/`, the DB or the schema.
 
-There are now two strands of work:
+There are four strands of work:
 
 1. **The research base** (142 stories, their songs and references), accuracy-first. Largely complete; see 2 and 6.
-2. **The books**: *Stories in the Thiruppugazh*, a printable A4 publication built with Typst from that research. A working pipeline exists; the main remaining job is **writing the story texts** (14 of 142 done). See 3 to 5.
+2. **The books**: *Stories in the Thiruppugazh*, a printable A4 publication built with Typst from that research. **All 142 story texts are written** (2026-11-17); what remains is the owner's and the expert's review and a rebuild. See 0 and 3 to 5.
+3. **Animated videos**: 142 storylines at script level (section 11); production is blocked on the Flow motion test (section 12).
+4. **Tamil edition** (started 2026-11-23): porting the English story texts and storylines into Tamil. See 13.
 
 ## 0. Pending after 2026-11-17 (read first)
 
@@ -26,11 +28,11 @@ All 142 book narratives and all 142 animation scripts are written and committed;
 7. Briefs that say "not found" but the texts have it: the Pranava whisper (Utpatti 1259-1265), Parvati's birth to Himavan (Utpatti 375-410), Sambandar at Thiruvalangadu (Periya Puranam 1007-1011). Edit `build_new_sets.py` / `new_sets_briefs.py` / `shiva_story_data.py`, rebuild.
 8. Apply the expert's song decisions to the song-story maps, then rebuild the books (`make_pdf.py`) and the index (`make_index.py`).
 
-**Still open from before:** the Kaumaram.com credit line, the introduction text in `pdf/book.typ`, and whether generated PDFs are committed (section 8). **Animation:** the Gemini Flow image-to-video test decides the motion approach (`animation/README.md`).
+**Still open from before:** the narrative tone (now that all 142 are written, a read of a few per volume), the Kaumaram.com credit line, the introduction text in `pdf/book.typ`, and whether generated PDFs are committed (section 8). **Animation:** the Gemini Flow image-to-video test decides the motion approach (`animation/README.md`).
 
 ## 1. State at a glance
 
-- Branch `next`: **everything is committed and pushed** (last commit `b0f0af8`, 2026-11-11; remote `origin` = teamayilavan/thiruppugazh_app). `main` untouched. The generated PDFs and their JSON are git-ignored; rebuild them with `make_pdf.py`.
+- Branch `next`: **everything is committed and pushed** (last scripture commit `47c7f2c`, 2026-11-17; remote `origin` = teamayilavan/thiruppugazh_app). `main` has the scripture work only up to `72ff259` (2026-11-11); the narratives, storylines, animation plan and index are on `next` only. The generated PDFs and their JSON are git-ignored; rebuild them with `make_pdf.py`.
 - Typst: upgraded to **0.15.1** at `D:\Software\Typst\typst.exe` (on PATH). The old 0.13.1 binary is kept next to it as `typst-0.13.1.exe.bak`.
 - The 8 PDFs and two samples are copied to **`D:\thiruppugazh-books\`** for the owner to review (see 3).
 - All build checks pass: `build_new_sets.py` gives sambandar 40/40, saints 33/33, devi 25/25, murugan 62/62, tamil-lore 18/18, **0 warnings**; `audit_local.py` is clean (0 missing quotes, 0 bad titles, 0 count mismatches, 142 stories, 1,494 song entries).
@@ -93,9 +95,7 @@ Design notes: panels are header strip + centred lines in a bordered block; highl
 
 ## 4. Story texts: status and method
 
-**Update 2026-11-17: all 142 are written** (see `STATUS.md` and `storylines/REVIEW-NOTES.md`). The paragraph below is the earlier state.
-
-**Written (14 of 142):** all 12 Murugan stories (`m-agastya`, `m-airavata`, `m-brahma-prison`, `m-deivayanai`, `m-jayanta`, `m-krouncha`, `m-mango-sura`, `m-peacock-cock`, `m-saravana`, `m-sea-dried`, `m-tarakasura`, `m-valli-disguise`) plus `avatar-gajendra` and `d-mahisha`. **128 remain** (brief only): Vishnu 67, Shiva 20, Vol IV 41.
+**All 142 are written** (2026-11-17; about 57,000 words in `pdf/narratives/<slug>.txt`). The first 14 (12 Murugan, `avatar-gajendra`, `d-mahisha`) were written one by one; the other 128 were written in parallel from the digests and the cached texts, and the corrections and open questions from that pass are in `storylines/REVIEW-NOTES.md`. Any rewrite (after the owner's or the expert's review) keeps the method below.
 
 Method that worked (keep it): for each story, read the actual cached verses (do not trust a brief or a page summariser), write only what a verse says, put the verse numbers in brackets, and say plainly where the songs differ from the text or where nothing was found (see `m-sea-dried`, `m-agastya`). Before finishing, re-read each claim against the verse. This caught real errors in my own first drafts (a wrong "Indra arrives" at Deva 132, "Murugan smiles" that was Surapadman, the moon/sun/elephants of the quarters). Treat every first draft as suspect.
 
@@ -106,7 +106,7 @@ Where the texts are (all under `scripts/.cache/`, see 5):
 - Sambandar, saints: `pp_all.json` (Periya Puranam, every section), `tvp.json` (Tiruvilaiyadal Puranam), `tev_index.json`.
 - Devi, Ganesha, Tamil lore: `markandeya_dm_verses.json`, `kp_*.json`, `kanchi_part1.json`, `purananuru.json`.
 
-Suggested order: **Vol IV first** (42 stories, texts already in hand), then **Shiva (20)**, then **Vishnu (68, the largest)**. Have the owner review each volume's narratives before moving on. For every story whose narrative is written, also check its reference table reads cleanly in the PDF.
+For every story, also check its reference table reads cleanly in the PDF (step 4 of section 9).
 
 ## 5. Layout of the research base and how to run it
 
@@ -168,38 +168,56 @@ Song source: `assets/thiruppugazh.db`, table `songs`, read-only. Columns: `id` (
 
 1. **Credit line** for Kaumaram.com (wording above is a draft) and whether to add a title/copyright page or editor name. The cover is title-only by instruction.
 2. **Introduction text** in `pdf/book.typ` is my draft (fifteenth-century dating, "1,340 songs", description of the book); the owner should read it.
-3. **Narrative tone and length**: review the 14 written stories (especially `avatar-gajendra`, `m-valli-disguise`, `m-sea-dried`) before the other 128 are written in the same style.
+3. **Narrative tone and length**: all 142 are now written (the old rule "review 14 before writing the rest" is overtaken). The owner should still read a few per volume (`avatar-gajendra`, `m-valli-disguise`, `m-sea-dried`, and some of the 128 written in parallel) before the Tamil translation starts, since Tamil follows the English.
 4. Should the generated PDFs be committed (earlier Vishnu/Shiva PDFs were), or stay out of git (current `.gitignore`)?
 5. In the verses edition, songs whose allusion is only in the meaning are listed in one sentence; acceptable, or should the first verse be shown?
 6. Tamil labels (பாடல், பொருள்) on the song panel and English section headings: keep the mix?
 
-## 9. Next steps, in order
+## 9. Next steps, in order (updated 2026-11-23)
 
-1. Owner reviews the PDFs in `D:\thiruppugazh-books\` (cover, contents, a Murugan volume, the samples) and answers 8. **Do not write the remaining 128 narratives until the owner has accepted the style of the first 14.**
-2. Write narratives volume by volume (Vol IV, Shiva, Vishnu), rebuild, copy to `D:\thiruppugazh-books\`, ask for review of each volume.
-3. Look through the full-edition PDFs of Vishnu, Shiva and Vol IV page by page for layout faults (only Murugan and the samples were inspected closely): long titles, songs with many verses, wide reference tables, blank gaps before panels, Tamil wrapping.
-4. Regenerate `AUDIT.md` (`audit_all.py`; it is stale, dated 2026-11-10) and fold this session's results into `STATUS.md`.
-5. Commit and push only when asked (the work up to `b0f0af8` was committed and pushed at the owner's request). Suggested small commits as you go: generator/template, then narratives per volume, then regenerated sets.
-6. Research leftovers if time allows: Kamba/Valmiki wording comparison for the most-told Vishnu stories (Gajendra, Vamana, Krishna butter, Ramayana war); the 552 songs in no story (second keyword pass, then reading); the app side is undecided (CLAUDE.md principles apply if stories ever go in the app: offline, quiet, opt-in, Tamil layout testing).
+1. **Owner:** answer the decisions in section 0 (items 1-4) and the open questions in section 8; read a sample of narratives per volume.
+2. **Owner:** send `pdf/story-song-index.pdf` (copy in `D:\thiruppugazh-books\`) to the Thiruppugazh expert.
+3. Research corrections that do not wait for the expert (section 0, item 7): fix the three "not found" briefs in the generators, rebuild.
+4. Look through the full-edition PDFs of Vishnu, Shiva and Vol IV page by page for layout faults (only Murugan and the samples were inspected closely): long titles, songs with many verses, wide reference tables, blank gaps before panels, Tamil wrapping.
+5. When the expert answers: apply the song decisions (section 0, item 8), rebuild the books and the index, copy to `D:\thiruppugazh-books\`.
+6. Regenerate `AUDIT.md` (`audit_all.py`; stale, dated 2026-11-10) and fold the results into `STATUS.md`.
+7. **Tamil edition** (section 13): glossary first, then a pilot of a few stories for the owner to judge, then the rest volume by volume. Translate a story only after its English is settled, or the two drift.
+8. Animation: the owner runs the Flow motion test (section 12).
+9. Commit and push only when asked. Small commits: generator/template, then texts per volume, then regenerated sets.
+10. Research leftovers if time allows: Kamba/Valmiki wording comparison for the most-told Vishnu stories (Gajendra, Vamana, Krishna butter, Ramayana war); the 552 songs in no story (second keyword pass, then reading); the app side is undecided (CLAUDE.md principles apply if stories ever go in the app: offline, quiet, opt-in, Tamil layout testing).
 
 ## 10. Kickoff prompt for the next session
 
-> Read scriptures/HANDOFF.md, then README.md and STATUS.md. We are writing the story texts for the book "Stories in the Thiruppugazh"
-> (pdf/narratives/<slug>.txt, built with scripts/make_pdf.py). 14 of 142 are written. First ask whether I have reviewed the PDFs in D:\thiruppugazh-books
-> and answered the open questions in section 8; then continue with Volume IV (the 42 stories of Sambandar, saints, Devi, Ganesha, Tamil lore), writing each
-> strictly from the cached verses, checking every claim against the verse, and rebuilding the PDFs. Commit only when I ask.
+> Read scriptures/HANDOFF.md (section 0 first), then README.md and STATUS.md. All 142 English story texts and storylines are written.
+> First ask which of the owner decisions in sections 0 and 8 are answered and whether the expert has replied about the index.
+> Then work through section 9 in order; for the Tamil edition follow section 13 (glossary, then pilot, then volumes),
+> translating from the settled English and checking names and quotes against the Tamil sources. Commit only when I ask.
 
-## 9. New strand (2026-11-16): storylines for animated videos
+## 11. Storylines for animated videos (2026-11-16)
 
 The owner widened the scope: besides the research base and the printed books, every story now has a **storyline for an animated video**, hosted online (not in the app). Rules, format and progress are in [`storylines/README.md`](storylines/README.md) and [`storylines/CHECKLIST.md`](storylines/CHECKLIST.md).
 
 - **English only, under 3 minutes** (7 to 9 scenes, at most 165 seconds), one file per story at `storylines/<set>/<slug>.md`.
 - `python -I -X utf8 scriptures/scripts/check_storylines.py` enforces the rules and ticks the checklist. **All 142 first drafts exist and pass it.**
-- **They are first drafts, written fast.** Murugan (12) rest on the verified narratives. Sambandar (12) rest on the research briefs; the files flag the few scenes that need a verse check (`sam-palanquin`, `sam-three-saints`, `sam-todudaiya`). The Saints, Devi, Ganesha, Tamil lore, Shiva and Vishnu films rest on the briefs and on the standard tellings; where the research has only a song or a single line, the file says so and keeps the film to a short invocation. Scenes are storyboard-level (visuals plus a short narration), not yet full scripts.
+- *(2026-11-17: all 142 are now at script level and committed; the corrections are in `storylines/REVIEW-NOTES.md`. The rest of this list is the 2026-11-16 first-draft state.)*
+- **They were first drafts, written fast.** Murugan (12) rest on the verified narratives. Sambandar (12) rest on the research briefs; the files flag the few scenes that need a verse check (`sam-palanquin`, `sam-three-saints`, `sam-todudaiya`). The Saints, Devi, Ganesha, Tamil lore, Shiva and Vishnu films rest on the briefs and on the standard tellings; where the research has only a song or a single line, the file says so and keeps the film to a short invocation. Scenes are storyboard-level (visuals plus a short narration), not yet full scripts.
 - **Open owner decisions** are written into the files' production notes: whether the Jain impalement tradition (`sam-jains`) appears at all, and how to frame `krishna-clothes`, `krishna-naraka-wives` and `ramayana-sita-agni` for a public video.
 - **Next:** a verse-check pass per set against the caches in section 5, then a richer second pass (fuller narration, dialogue) for the stories chosen for production first.
-- Not committed at the time of writing.
 
-## 10. Animation production (started 2026-11-16)
+## 12. Animation production (started 2026-11-16)
 
-The storylines are to become animated videos (2D, owner and Claude only; English female Sarvam voice; synthesised music; 16:9 and 9:16). Everything about the look, tools, decisions, the pending Flow motion test and the next steps is in [`animation/README.md`](animation/README.md). Read it first. Nothing in `animation/` is committed yet; images and renders are git-ignored.
+The storylines are to become animated videos (2D, owner and Claude only; English female Sarvam voice; synthesised music; 16:9 and 9:16). Everything about the look, tools, decisions, the pending Flow motion test and the next steps is in [`animation/README.md`](animation/README.md). Read it first. The plan, prompts and tools in `animation/` are committed (`ba98d9d`); images, renders and `.env` are git-ignored.
+
+## 13. Tamil edition (started 2026-11-23)
+
+Goal: the English story texts (`pdf/narratives/`, 142 files, about 57,000 words) and later the storylines exist in Tamil too. The songs and their meanings in the books are already Tamil; only the story text, headings and front matter are English.
+
+**Owner's decisions (2026-11-23):** a **separate Tamil edition** (not bilingual), in **simple modern prose**. Start with the glossary.
+
+**Status:** glossary draft 2 in `tamil/GLOSSARY.md` (527 rows), checked by `scripts/glossary_check.py` against the narratives and the app's Tamil meanings, lyrics and song places (report: `tamil/glossary-report.md`; 87 names that occur once are left to add as they come up). Style guide, work order and the questions for the pilot are in `tamil/README.md`. **Pilot done (2026-11-23):** five stories in `pdf/narratives-ta/` (`m-valli-disguise`, `avatar-gajendra`, `sam-milk`, `t-patrons`, `deeds-kama`); the choices applied and what was found are in `tamil/PILOT-NOTES.md`. The checker also reads the Tamil texts now. Next: the owner and a Tamil reader review the pilot; then the volumes, Murugan first. **Open:** Purananuru 151 for Kumanan is probably 161 (a Wikisource numbering fault), see the pilot notes. Ground rules:
+- Translate only from the settled English (after the section 0 decisions and the expert's song corrections), so the two editions do not drift.
+- One glossary for names and terms (deities, saints, places, texts, weapons) used by every story, preferring the forms the Thiruppugazh itself and the Kanda Puranam / Periya Puranam use.
+- Where the English quotes or paraphrases a Tamil source (Kanda Puranam, Periya Puranam, Tevaram, Kamba Ramayanam, Purananuru), use the original Tamil words from the cached texts, not a back-translation. Sanskrit sources (Valmiki, Bhagavata, Mahabharata, Devi Mahatmya) are translated, with the verse numbers kept.
+- Keep the verse numbers in brackets exactly as in the English.
+- A Tamil reader the owner trusts should review a pilot before the rest is done.
+
