@@ -2,6 +2,10 @@
 
 **Next session: read `HANDOFF.md` first.** It has the current counts, owner decisions, how to rebuild and re-verify, what is not verified, and the ordered next steps.
 
+**End of session 2026-11-23.** Everything committed and pushed to `next`. HANDOFF sections 10, 13 and 14 hold the next-session prompt, the Tamil status table and the notes for this Linux machine.
+
+**Tamil: Volume IV done (2026-11-23).** 38 more stories (Sambandar, saints, Devi, Ganesha, Tamil lore); `sam-jains` and `d-idumbai` held for owner decisions. 54 of 142 Tamil stories exist; all pass the checker (paragraphs, numbers, glossary forms). Review items in `tamil/PILOT-NOTES.md`, including one inconsistency to decide (respect forms for the Lord in disguise) and a wrong-looking "(Madurai)" in the English of `sam-fever`.
+
 **Tamil: Murugan volume done (2026-11-23).** The other 11 Murugan stories translated (12 of 12 with Valli; 16 Tamil stories in all). Padalam titles and two quoted lines verified against the Project Madurai Kanda Puranam pages; the Tarakan padalam title is still unverified. `glossary_check.py` now also checks each Tamil story against its English (paragraphs and numbers: 0 differences). Notes in `tamil/PILOT-NOTES.md`.
 
 **Tamil pilot (2026-11-23).** Five stories translated into simple modern Tamil (`pdf/narratives-ta/`: Valli, Gajendra, the milk of wisdom, the Sangam patrons, the burning of Kama), about 1,460 words. `glossary_check.py` now also flags non-glossary forms in the Tamil texts (0). Choices for review and findings in `tamil/PILOT-NOTES.md`, including a probable wrong Purananuru number (151 for Kumanan; likely 161, from a mis-numbered Wikisource page), not yet changed.

@@ -1,5 +1,35 @@
 # Tamil translation notes for the owner's review
 
+## Volume IV: done except two held stories (2026-11-23)
+
+38 more stories translated: Sambandar 11 of 12, saints 10 of 10, Devi 11 of 12, Ganesha 3 of 3, Tamil lore 5 of 5
+(with `sam-milk` and `t-patrons` from the pilot). 54 Tamil stories in all; every one has the English paragraphs and
+exactly its numbers, and uses only glossary forms (or a form the glossary notes as permitted there).
+
+**Held back** until the owner decides (HANDOFF section 0): `sam-jains` (keep or soften the impalement paragraph) and
+`d-idumbai` (the Hidimba paragraph). Translating them now would mean translating twice.
+
+Quoted in the original Tamil (from the app's song text, or the opening words of well-known hymns):
+- song 94 "காளவிட மூணி மாதங்கி" (`d-matangi`), song 540 "அறம்வளர் சுந்தரி" (`d-kamakshi-32`), song 745
+  "பாடல வளநகர்" (`d-pathiri`), all checked against the app's lyrics.
+- hymn openings: "செய்யனே திருஆலவாய்", "பையவே", "மந்திரமாவது நீறு", "மானினேர்விழி" (`sam-fever`); "வாழ்க அந்தணர்"
+  (`sam-ordeals`); "மட்டிட்ட புன்னை" (`sam-poompavai`); "துஞ்ச வருவாரும்" (`sam-thiruvalangadu`); "மாதர் மடப்பிடி"
+  (`sam-yazhpanar`); "பித்தா பிறைசூடி" (`n-sundarar-wedding`); "நமச்சிவாய வாழ்க" (`n-manikkavasagar`); and the
+  Lord's "நில்லு கண்ணப்ப" (`n-kannappar`). These are well known but were not checked against the cached texts on
+  this machine: confirm when the caches are at hand.
+
+To check:
+- **The disguised Lord.** `m-valli-disguise` gives the disguised Murugan respectful forms throughout; `n-vandi-pittu`
+  gives the labourer (the Lord in disguise) plain forms until he is revealed, as most Tamil tellings do. One rule
+  should apply to both; say which.
+- `sam-fever` keeps the English's "Many songs, such as 527, 789 and 962 (Madurai)": in the app only 962 is a
+  Madurai song (527 is திருவேங்கடம், 789 is பாகை). The English should probably move "(Madurai)" or drop it.
+- `d-angayarkanni`: Kulasekhara here is the Pandya king (குலசேகரன்), not the Alvar; the glossary row now says so.
+- `t-spider-elephant`: the queen's words are rendered "என் செங்கண்ணன்", from the English; the Periya Puranam's own
+  wording was not at hand.
+- `n-sundarar-paddy`: "dwarf attendants" → குள்ளப் பூதகணங்கள்.
+
+
 ## Volume III, Murugan: done (2026-11-23)
 
 All 12 Murugan stories are in `pdf/narratives-ta/` (`m-valli-disguise` from the pilot, 11 more), with the pilot's

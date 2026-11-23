@@ -105,7 +105,7 @@ least sure of. Rows marked *kept on purpose* chose a modern form over a better-a
 | Kamalaksha | | கமலாட்சன் | | |
 | Vidyunmali | | வித்யுன்மாலி | | |
 
-| Tadatakai | | தடாதகைப் பிராட்டியார் | தடாதகை | Meenakshi as the Pandya princess (*check*) |
+| Tadatakai |  | தடாதகை | தடாதகைப் பிராட்டியார் | Meenakshi as the Pandya princess |
 | Lord of the Boat | Thoniappar | தோணியப்பர் | | the Lord of the Thoni shrine at Sirkazhi |
 | bull | | இடபம் | ரிஷபம்; விடை | Shiva's mount; விடை is the poetic word, kept on purpose |
 | Kamari | | காமாரி | | "the enemy of Kama"; explain with காமன் |
@@ -116,7 +116,7 @@ least sure of. Rows marked *kept on purpose* chose a modern form over a better-a
 |---|---|---|---|---|
 | Vishnu | | திருமால் | விஷ்ணு; மால் | in our prose திருமால்; விஷ்ணு only in a Sanskrit title (விஷ்ணு புராணம்) |
 | Narayana | | நாராயணன் | | |
-| Hari | | ஹரி | அரி | kept on purpose |
+| Hari |  | ஹரி |  | kept on purpose; the songs' அரி is not listed as a form: it also begins அரிய |
 | Achyuta | | அச்சுதன் | | |
 | Mukunda | | முகுந்தன் | | |
 | Madhava | | மாதவன் | | |
@@ -208,7 +208,7 @@ least sure of. Rows marked *kept on purpose* chose a modern form over a better-a
 | Tarakan | Taraka | தாரகன் | | |
 | Mahendrapuri | | மகேந்திரபுரி | | Surapadman's city |
 | Krouncha | | கிரவுஞ்ச மலை | கிரௌஞ்சம் |; the asura → கிரவுஞ்சன்; the mountain, in short → கிரவுஞ்சம் |
-| Mahishasura | Mahisha | மகிஷாசுரன் | மகிடன்; மகிஷன் | |
+| Mahishasura | Mahisha | மகிஷாசுரன் | மகிடன்; மகிஷன் | where the English (a song) says "Mahisha" → மகிஷன் |
 | Naraka | | நரகாசுரன் | நரகன் | |
 | Mura | | முரன் | | |
 | Hiranyakashipu | Hiranya; Iraniyan | இரணியன் | இரணியகசிபு | |
@@ -332,10 +332,12 @@ least sure of. Rows marked *kept on purpose* chose a modern form over a better-a
 | English | Other English spellings | Tamil | Also seen | Note |
 |---|---|---|---|---|
 | Arunagiri | Arunagirinathar | அருணகிரிநாதர் | அருணகிரியார் | |
-| Sambandar | Thirugnanasambandar; Thirugnana Sambandar; Gnanasambandan | திருஞானசம்பந்தர் | சம்பந்தர்; ஞானசம்பந்தன் | first mention திருஞானசம்பந்தர், then சம்பந்தர் |
-| Appar | Thirunavukkarasar | அப்பர் | திருநாவுக்கரசர் | |
+| Sambandar | Thirugnanasambandar; Thirugnana Sambandar; Gnanasambandan | திருஞானசம்பந்தர் | சம்பந்தர்; ஞானசம்பந்தன் | first mention திருஞானசம்பந்தர், then சம்பந்தர்; where the English has "Gnanasambandan" (the Lord's words) → ஞானசம்பந்தன் |
+| Appar | Thirunavukkarasar | அப்பர் | திருநாவுக்கரசர் | where the English gives his name "Thirunavukkarasar" → திருநாவுக்கரசர் |
 | Marulneekkiyar | | மருள்நீக்கியார் | | Appar's birth name |
-| Sundarar | Arurar; Vanthondan | சுந்தரர் | ஆரூரர்; வன்தொண்டர் | |
+| Sundarar | | சுந்தரர் | | |
+| Arurar | Nambi Arurar | ஆரூரர் | | Sundarar's name before and in his calling; in full நம்பி ஆரூரர் |
+| Vanthondan | | வன்தொண்டர் | | "the bold servant", the Lord's name for Sundarar |
 | Manikkavasagar | | மாணிக்கவாசகர் | | |
 | Vathavurar | Vadavurar; Tiruvadavurar | திருவாதவூரர் | வாதவூரர் | |
 | Kannappar | Kannappa | கண்ணப்பர் | | |
@@ -365,7 +367,7 @@ least sure of. Rows marked *kept on purpose* chose a modern form over a better-a
 | Bhagavathiyar | | பகவதியார் | | Sambandar's mother |
 | Thiruneelakanta Yazhpanar | Yazhpanar | திருநீலகண்ட யாழ்ப்பாணர் | | |
 | Tilakavathiyar | | திலகவதியார் | | |
-| Kochchengat Chola | Kochchengannan | கோச்செங்கட் சோழர் | கோச்செங்கணான் | |
+| Kochchengat Chola | Kochchengannan | கோச்செங்கட் சோழர் | கோச்செங்கணான் | the baby's name in the story → கோச்செங்கணான் |
 | Eyarkon Kalikkama | | ஏயர்கோன் கலிக்காமர் | | |
 | Rudrasarman | | உருத்திரசன்மன் | | the mute child of the Sangam story |
 | Dharumi | Brahmin Dharumi | தருமி | | |
@@ -374,7 +376,7 @@ least sure of. Rows marked *kept on purpose* chose a modern form over a better-a
 | Alvars | Azhwars; Alvar; Azhwar | ஆழ்வார்கள் | ஆழ்வார் | |
 | Andal | | ஆண்டாள் | | |
 | Periyazhwar | | பெரியாழ்வார் | | |
-| Kulasekhara Alvar | Kulasekhara Azhwar; Kulasekhara | குலசேகர ஆழ்வார் | | |
+| Kulasekhara Alvar | Kulasekhara Azhwar; Kulasekhara | குலசேகர ஆழ்வார் |  | the Pandya king Kulasekhara of the Madurai story → குலசேகர பாண்டியன் |
 | Thirumangai Alvar | | திருமங்கை ஆழ்வார் | | |
 | Nammazhwar | | நம்மாழ்வார் | | |
 | Poigai Alvar | | பொய்கையாழ்வார் | | |
@@ -400,7 +402,7 @@ least sure of. Rows marked *kept on purpose* chose a modern form over a better-a
 | Ori | | ஓரி | | |
 | Malayadhvaja | | மலயத்துவசன் | | |
 | Kanchanamalai | | காஞ்சனமாலை | | |
-| Pandya | | பாண்டியன் | பாண்டிய மன்னன் | adjective → பாண்டிய |
+| Pandya |  | பாண்டியன் | பாண்டிய மன்னன் | adjective → பாண்டிய; பாண்டிய மன்னன் where the English says "the Pandya king" |
 | Chola | | சோழன் | | adjective → சோழ |
 | Chera | | சேரன் | | adjective → சேர |
 | Pallava | | பல்லவன் | | |
@@ -434,8 +436,8 @@ least sure of. Rows marked *kept on purpose* chose a modern form over a better-a
 | Kamakottam | Kamakkottam | காமக்கோட்டம் | | |
 | Ekambam | Ekambareshwara | ஏகாம்பரம் | ஏகாம்பரநாதர் | the god → ஏகாம்பரநாதர் |
 | Thiruvannamalai | Tiruvannamalai; Thiruvarunai; Annamalai; Arunachala; Arunacala | திருவண்ணாமலை | அண்ணாமலை; அருணை; அருணாசலம் | the hill → அண்ணாமலை |
-| Sirkazhi | | சீர்காழி | காழி | its twelve names: next table; kept on purpose |
-| Tiruvarur | Thiruvarur | திருவாரூர் | ஆரூர் | |
+| Sirkazhi |  | சீர்காழி | காழி | its twelve names: next table; kept on purpose; in the list of its twelve names, காழி |
+| Tiruvarur | Thiruvarur | திருவாரூர் |  | ஆரூர் in poetry (not listed as a form: it also begins ஆரூரர்) |
 | Srirangam | Thiruvarangam | ஸ்ரீரங்கம் | திருவரங்கம்; அரங்கம் | |
 | Thiruvanaikka | | திருவானைக்கா | | |
 | Thiruvalangadu | Alangadu | திருவாலங்காடு | ஆலங்காடு | |
@@ -443,10 +445,10 @@ least sure of. Rows marked *kept on purpose* chose a modern form over a better-a
 | Thiruvathigai | Tiruvadigai; Thiruvathigai Veerattanam | திருவதிகை | அதிகை | Veerattanam → வீரட்டானம் |
 | Veerattanam | Virattam | வீரட்டானம் | | |
 | Thiruppathirippuliyur | Pattaliyur; Padalanagar | திருப்பாதிரிப்புலியூர் | | today's Cuddalore (கடலூர்) |
-| Vedaranyam | Maraikkadu; Thirumaraikkadu | வேதாரண்யம் | திருமறைக்காடு | |
-| Mylapore | Thirumayilai | மயிலாப்பூர் | திருமயிலை | |
+| Vedaranyam | Maraikkadu; Thirumaraikkadu | வேதாரண்யம் | திருமறைக்காடு | where the English gives "Thirumaraikkadu" → திருமறைக்காடு |
+| Mylapore | Thirumayilai | மயிலாப்பூர் | திருமயிலை | as a song place, the app's திருமயிலை |
 | Kapaliccharam | | கபாலீச்சரம் | | |
-| Avinashi | Avinasi; Thirupukkoliyur | அவிநாசி | திருப்புக்கொளியூர் | |
+| Avinashi | Avinasi; Thirupukkoliyur | அவிநாசி | திருப்புக்கொளியூர் | the Tevaram's name, and the app's place for song 947 → திருப்புக்கொளியூர் |
 | Perunthurai | Thiruperunthurai | திருப்பெருந்துறை | பெருந்துறை | |
 | Thiruvathavur | Vadavur | திருவாதவூர் | வாதவூர் | |
 | Thirukkadavur | Kadavur; Kadavur Virattam | திருக்கடவூர் | கடவூர் | |
@@ -455,7 +457,7 @@ least sure of. Rows marked *kept on purpose* chose a modern form over a better-a
 | Vriddhachalam | | விருத்தாசலம் | திருமுதுகுன்றம் | |
 | Thiruvennainallur | | திருவெண்ணெய்நல்லூர் | | |
 | Thirunavalur | | திருநாவலூர் | | |
-| Kalahasti | Thirukkalathi | காளஹஸ்தி | திருக்காளத்தி | |
+| Kalahasti | Thirukkalathi | காளஹஸ்தி | திருக்காளத்தி | as a song place, the app's திருக்காளத்தி |
 | Tirupati | Thiruvenkatam; Thiruvengadam; Venkatam | திருப்பதி | திருவேங்கடம்; வேங்கடம் | |
 | Kumbakonam | Kudanthai | கும்பகோணம் | குடந்தை | |
 | Tiruchirappalli | Thiruchirappalli | திருச்சிராப்பள்ளி | சிராப்பள்ளி |the app writes திருசிராப்பள்ளி (without ச்); our prose keeps the standard spelling |
@@ -581,15 +583,15 @@ least sure of. Rows marked *kept on purpose* chose a modern form over a better-a
 | Purananuru | | புறநானூறு | | |
 | Tirukkural | Thirukkural | திருக்குறள் | | |
 | Iraiyanar Akapporul | | இறையனார் அகப்பொருள் | | |
-| Tirukkailaya Gnana Ula | Adi Ula; Ula | திருக்கயிலாய ஞான உலா | ஆதி உலா | |
-| Vedas | Veda; Tamil Veda | வேதங்கள் | மறை | Tamil Veda → தமிழ் வேதம் |
+| Tirukkailaya Gnana Ula | Adi Ula; Ula | திருக்கயிலாய ஞான உலா | ஆதி உலா | the songs' name for it, "Adi Ula" → ஆதி உலா |
+| Vedas | Veda; Tamil Veda | வேதங்கள் |  | Tamil Veda → தமிழ் வேதம்; also மறை in poetry (not listed as a form: it also begins மறைந்தது) |
 | Upanishads | | உபநிடதங்கள் | | |
 | Agamas | | ஆகமங்கள் | | |
 | Puranas | Purana; Puranam | புராணங்கள் | புராணம் |; a single Purana → புராணம் |
 | Parva | | பர்வம் | பருவம் | Adi → ஆதி; Sabha → சபா; Vana → வன; Virata → விராட; Udyoga → உத்யோக; Bhishma → பீஷ்ம; Drona → துரோண; Karna → கர்ண; Shalya → சல்லிய; Sauptika → சௌப்திக; Shanti → சாந்தி; Mausala → மௌசல; kept on purpose |
 | padalam | Padalam | படலம் | | **padalam titles (Kamban, Kanda Puranam) are written in their Tamil original**, from `scripts/story_data.py` and the caches; never translated from the English transliteration |
 | Puranam (a Periya Puranam life) | | புராணம் | | "Kannappa Nayanar Puranam" → கண்ணப்ப நாயனார் புராணம் |
-| pathigam | hymn | பதிகம் | திருப்பதிகம் | |
+| pathigam | hymn | பதிகம் | திருப்பதிகம் | in a title, as the source has it (மூத்த திருப்பதிகம்) |
 
 | kandam | Kanda | காண்டம் | | |
 | Utpatti Kandam | Utpatti | உற்பத்திக் காண்டம் | | Kanda Puranam |
@@ -636,7 +638,7 @@ least sure of. Rows marked *kept on purpose* chose a modern form over a better-a
 | Pashupata | | பாசுபதம் | | the weapon |
 | Tandava | | தாண்டவம் | | Urdhva Tandava → ஊர்த்துவ தாண்டவம் |
 | Lord | Supreme Lord; Great Lord; Supreme Being; God | இறைவன் | பெருமான் | "the Lord" on its own → இறைவன்; with a name, use the honorific form of that name; kept on purpose; பெருமான் in an epithet such as உலகை உண்ட பெருமான் |
-| verse | | பாடல் | செய்யுள் | "verse 1851" → பாடல் 1851 |
+| verse |  | பாடல் | செய்யுள் | "verse 1851" → பாடல் 1851; a stanza in general, unnumbered → செய்யுள் |
 | song | | பாடல் | | "song 835" → பாடல் 835 (the Thiruppugazh number) |
 | trident | | சூலம் | திரிசூலம் | |
 | Vedic | | வேத | | adjective |
