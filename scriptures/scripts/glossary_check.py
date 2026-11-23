@@ -170,6 +170,25 @@ def main():
                 n = ta_count(text, a)
                 if n:
                     misuse.append(f"| {Path(f).stem} | {a} ({n}) | {r['ta']} | {r['en']} |")
+    # Tamil texts against their English: same paragraphs and the same numbers (verses, songs, chapters).
+    parity = []
+    for f in ta_files:
+        en_file = NARR / Path(f).name
+        if not en_file.exists():
+            parity.append(f"| {Path(f).stem} | no English file | |")
+            continue
+        en_text, ta_text = en_file.read_text(encoding="utf-8"), Path(f).read_text(encoding="utf-8")
+        paras = lambda t: len([p for p in re.split(r"\n\s*\n", t.strip()) if p.strip()])
+        nums = lambda t: collections.Counter(re.findall(r"\d+(?:[.,]\d+)*", t))
+        if paras(en_text) != paras(ta_text):
+            parity.append(f"| {Path(f).stem} | paragraphs: English {paras(en_text)}, Tamil {paras(ta_text)} | |")
+        ne, nt = nums(en_text), nums(ta_text)
+        if ne != nt:
+            parity.append(f"| {Path(f).stem} | numbers differ | only English: {' '.join((ne - nt).elements()) or '-'}; "
+                          f"only Tamil: {' '.join((nt - ne).elements()) or '-'} |")
+    out += ["", f"## Tamil texts against the English ({len(parity)})", "",
+            "Each Tamil story should have the English story's paragraphs and exactly its numbers.", "",
+            "| Story | Problem | Detail |", "|---|---|---|"] + (parity or ["| none | | |"])
     out += ["", f"## Tamil texts: forms the glossary does not choose ({len(misuse)})", "",
             f"Over the {len(ta_files)} files in `pdf/narratives-ta/`. Fix the text, or note in the glossary why the "
             "form is right there (a note that names the form silences it).", "",

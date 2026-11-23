@@ -34,7 +34,7 @@ least sure of. Rows marked *kept on purpose* chose a modern form over a better-a
 | Murugan | | முருகன் | முருகப்பெருமான் | "Lord Murugan" → முருகப்பெருமான் |
 | Kandan | | கந்தன் | கந்தவேள் | |
 | Kumara | Kumaran | குமரன் | குமாரன் | |
-| Skanda | | ஸ்கந்தன் | கந்தன் | only where a Sanskrit text names him; Skanda Purana → ஸ்கந்த புராணம்; kept on purpose |
+| Skanda | | ஸ்கந்தன் | கந்தன் | the English "Kandan" → கந்தன் (its own row); ஸ்கந்தன் only where a Sanskrit text names him; Skanda Purana → ஸ்கந்த புராணம்; kept on purpose |
 | Karttikeya | | கார்த்திகேயன் | | |
 | Swaminatha | Swaminathan | சுவாமிநாதன் | | |
 | Gurunatha | | குருநாதன் | | |
@@ -49,9 +49,11 @@ least sure of. Rows marked *kept on purpose* chose a modern form over a better-a
 | peacock | | மயில் | | |
 | cock banner | | சேவல் கொடி | | |
 
-| Veerabahu | | வீரபாகு | வீரவாகு | Kanda Puranam quotes keep வீரவாகு |
+| Veerabahu | | வீரபாகு | வீரவாகு | Kanda Puranam quotes keep வீரவாகு; the padalam title வீரவாகு சயந்தனை தேற்று படலம் keeps it |
 | Nambi | | நம்பி | நம்பிராஜன் | Valli's father |
 | Vengai | | வேங்கை மரம் | | the tree Murugan becomes |
+| Skanda mountain | | கந்தகிரி | | where Brahma is imprisoned (*check*) |
+| Mucukundan | | முசுகுந்தன் | | |
 ## Shiva, Devi, Ganesha
 
 | English | Other English spellings | Tamil | Also seen | Note |
@@ -149,7 +151,7 @@ least sure of. Rows marked *kept on purpose* chose a modern form over a better-a
 | Brahma | Creator | பிரமன் | பிரம்மா; நான்முகன் | songs and meanings say பிரமன் |
 | Indra | | இந்திரன் | | |
 | Sachi | | இந்திராணி | சசி | |
-| Jayanta | Jayantan | ஜயந்தன் | சயந்தன் | |
+| Jayanta | Jayantan | ஜயந்தன் | சயந்தன் |; the Kanda Puranam and its padalam titles say சயந்தன் |
 | Airavata | | ஐராவதம் | | |
 | Yama | Death | யமன் | எமன்; இயமன் | |
 | Agni | | அக்கினி | அக்னி | |
@@ -176,7 +178,7 @@ least sure of. Rows marked *kept on purpose* chose a modern form over a better-a
 | Manigriva | | மணிக்ரீவன் | | |
 | Matali | | மாதலி | | Indra's charioteer |
 | Vishvakarma | | விஸ்வகர்மா | | |
-| Mayan | Maya | மயன் | | the asura architect (Tripura, Surapadman's city) |
+| Mayan | Maya | மயன் | | the asura architect (Tripura, Surapadman's city); Surapadman's mother, also "Maya" in the English (`m-peacock-cock`) → மாயை |
 | Ganga | Ganges | கங்கை | | |
 | Yamuna | | யமுனை | | |
 | Kaveri | | காவிரி | | |
@@ -192,6 +194,10 @@ least sure of. Rows marked *kept on purpose* chose a modern form over a better-a
 | Devala | | தேவல முனிவர் | | |
 | gandharva | | கந்தர்வன் | | |
 | wish-giving tree | | கற்பக மரம் | கற்பகம் | |
+| divine builder | | தேவதச்சன் | | |
+| golden city | | பொன்னகர் | | Indra's capital |
+| elephants of the quarters | | திசை யானைகள் | | |
+| yojana | yojanas | யோசனை | | |
 ## Asuras and demons
 
 | English | Other English spellings | Tamil | Also seen | Note |
@@ -201,7 +207,7 @@ least sure of. Rows marked *kept on purpose* chose a modern form over a better-a
 | Surapadman | Suran; Sura | சூரபத்மன் | சூரன்; சூரபன்மன் | the meanings' form; சூரன் for short. Kanda Puranam quotes keep சூரபன்மன்; kept on purpose |
 | Tarakan | Taraka | தாரகன் | | |
 | Mahendrapuri | | மகேந்திரபுரி | | Surapadman's city |
-| Krouncha | | கிரவுஞ்ச மலை | கிரௌஞ்சம் | |
+| Krouncha | | கிரவுஞ்ச மலை | கிரௌஞ்சம் |; the asura → கிரவுஞ்சன்; the mountain, in short → கிரவுஞ்சம் |
 | Mahishasura | Mahisha | மகிஷாசுரன் | மகிடன்; மகிஷன் | |
 | Naraka | | நரகாசுரன் | நரகன் | |
 | Mura | | முரன் | | |

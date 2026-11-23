@@ -1,4 +1,30 @@
-# Tamil pilot: notes for the owner's review (2026-11-23)
+# Tamil translation notes for the owner's review
+
+## Volume III, Murugan: done (2026-11-23)
+
+All 12 Murugan stories are in `pdf/narratives-ta/` (`m-valli-disguise` from the pilot, 11 more), with the pilot's
+choices below. The checker now also compares each Tamil story with its English: same paragraphs and exactly the
+same numbers (0 differences over all 16 files).
+
+Verified from the Project Madurai Kanda Puranam pages the research used (2026-11-23) and written in the original:
+- padalam titles: சயந்தன் புலம்புறு படலம், சயந்தன் கனவுகாண் படலம், வீரவாகு சயந்தனை தேற்று படலம் (Mahendra 9-11,
+  `m-jayanta`); தெய்வயானையம்மை திருமணப் படலம் (Deva 2, `m-deivayanai`); கிரவுஞ்சப் படலம் (Asura 24, `m-krouncha`).
+- two quoted lines: "மருப்பிரண் டுடையதோர் வார ணத்துடன்" (Deva 46, `m-airavata`) and "சுமக்குதி எம்மை"
+  (Yuddha 2896, `m-peacock-cock`), each glossed in modern Tamil.
+
+To check:
+- `m-tarakasura`: the English names the padalam "Tarakan Varaip Padalam"; the Utpatti Kandam page was not
+  available, so the Tamil says only "the padalam named for him". Fill in the Tamil title when the text is at hand
+  ("Varaip" may be a misreading of வதைப்).
+- `m-brahma-prison`: "the Skanda mountain" is rendered கந்தகிரி (*check* in the glossary).
+- The speeches in `m-brahma-prison` (1229, 1245), `m-deivayanai` (51-53) and Agastya's curse in `m-krouncha`
+  (1218-1221) are modern Tamil from the English, not the verses; the verse openings are known (Deva 51-53,
+  Asura 1218-1221) if the owner prefers a quoted line.
+- `m-jayanta` and `m-tarakasura` drop the English's "whom Sanskrit calls Jayanta / Taraka": in Tamil the two
+  spellings do not differ the same way. `m-jayanta` says instead that the Kanda Puranam calls him சயந்தன்.
+- `m-agastya` keeps the English's first person (நான் படித்த அளவில்).
+
+# Pilot (2026-11-23)
 
 Five stories translated from the settled English into simple modern Tamil, in `pdf/narratives-ta/`:
 
