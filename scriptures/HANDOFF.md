@@ -8,7 +8,7 @@ There are four strands of work:
 1. **The research base** (142 stories, their songs and references), accuracy-first. Largely complete; see 2 and 6.
 2. **The books**: *Stories in the Thiruppugazh*, a printable A4 publication built with Typst from that research. **All 142 story texts are written** (2026-11-17); what remains is the owner's and the expert's review and a rebuild. See 0 and 3 to 5.
 3. **Animated videos**: 142 storylines at script level (section 11); production is blocked on the Flow motion test (section 12).
-4. **Tamil edition** (started 2026-11-23): the story texts in Tamil, for a separate Tamil edition. **72 of 142 done** (Murugan, Volume IV and Shiva). See 13.
+4. **Tamil edition** (started 2026-11-23): the story texts in Tamil, for a separate Tamil edition. **138 of 142 done**; the other four are held for owner decisions. See 13.
 
 ## 0. Pending after 2026-11-17 (read first)
 
@@ -182,7 +182,7 @@ Song source: `assets/thiruppugazh.db`, table `songs`, read-only. Columns: `id` (
 4. Look through the full-edition PDFs of Vishnu, Shiva and Vol IV page by page for layout faults (only Murugan and the samples were inspected closely): long titles, songs with many verses, wide reference tables, blank gaps before panels, Tamil wrapping.
 5. When the expert answers: apply the song decisions (section 0, item 8), rebuild the books and the index, copy to `D:\thiruppugazh-books\`.
 6. Regenerate `AUDIT.md` (`audit_all.py`; stale, dated 2026-11-10) and fold the results into `STATUS.md`.
-7. **Tamil edition** (section 13): the owner reviews the pilot and Murugan/Vol IV notes (`tamil/PILOT-NOTES.md`), ideally with a Tamil reader; the Shiva volume is done (2026-11-24), so Vishnu (67 to go) is next. `sam-jains`, `saints-sambandar` and `d-idumbai` follow the section 0 decisions. Then propose the book's language switch (`make_pdf.py` / `book.typ`, Tamil titles per story) before changing it.
+7. **Tamil edition** (section 13): the owner reviews the pilot and Murugan/Vol IV notes (`tamil/PILOT-NOTES.md`), ideally with a Tamil reader; all four volumes are done (2026-11-24) except four held stories. `sam-jains`, `saints-sambandar`, `d-idumbai` and `avatar-pralaya` follow the section 0 decisions. Then propose the book's language switch (`make_pdf.py` / `book.typ`, Tamil titles per story) before changing it.
 8. Animation: the owner runs the Flow motion test (section 12).
 9. Commit and push only when asked. Small commits: generator/template, then texts per volume, then regenerated sets.
 10. Research leftovers if time allows: Kamba/Valmiki wording comparison for the most-told Vishnu stories (Gajendra, Vamana, Krishna butter, Ramayana war); the 552 songs in no story (second keyword pass, then reading); the app side is undecided (CLAUDE.md principles apply if stories ever go in the app: offline, quiet, opt-in, Tamil layout testing).
@@ -190,10 +190,10 @@ Song source: `assets/thiruppugazh.db`, table `songs`, read-only. Columns: `id` (
 ## 10. Kickoff prompt for the next session
 
 > Read scriptures/HANDOFF.md (section 0, then section 13), then tamil/README.md and tamil/PILOT-NOTES.md.
-> 72 of 142 stories are in Tamil (Murugan, Volume IV and Shiva). First ask which owner decisions are answered: section 0,
+> 138 of 142 stories are in Tamil; four are held for owner decisions (section 13). First ask which owner decisions are answered: section 0,
 > the review items in PILOT-NOTES (respect forms for the Lord in disguise, the Purananuru 151/161 question, the Shiva
-> volume's choices and the "film" wording in two English narratives), and
-> whether a Tamil reader has looked at the pilot. Then continue with the Vishnu volume (67 stories) in the same way:
+> volume's choices and the "film" wording in 18 English narratives), and
+> whether a Tamil reader has looked at the pilot. Then translate the held stories that the decisions release, in the same way:
 > glossary forms, app song places, original Tamil for quoted lines, and run scripts/glossary_check.py after each
 > batch until it reports 0 differences. Commit only when I ask.
 
@@ -220,11 +220,11 @@ Goal: a **separate Tamil edition** of the four volumes, in **simple modern prose
 
 | Volume | Tamil stories | Notes |
 |---|---|---|
-| I Vishnu | 1 of 68 (`avatar-gajendra`, pilot) | next |
+| I Vishnu | 67 of 68 | done 2026-11-24; `avatar-pralaya` held for section 0, item 3 |
 | II Shiva | 19 of 20 | done 2026-11-24; `saints-sambandar` held for section 0, item 1 (same impalement paragraph as `sam-jains`) |
 | III Murugan | 12 of 12 | done |
 | IV the rest | 40 of 42 | `sam-jains`, `d-idumbai` held for section 0 decisions |
-| **Total** | **72 of 142** | |
+| **Total** | **138 of 142** | held: `sam-jains`, `saints-sambandar` (item 1), `d-idumbai` (item 4), `avatar-pralaya` (item 3) |
 
 **Files.** `pdf/narratives-ta/<slug>.txt` (same slug and paragraphs as the English); `tamil/GLOSSARY.md` (544 rows, the one Tamil form per name and term, with notes on permitted uses); `tamil/README.md` (style guide and order of work); `tamil/PILOT-NOTES.md` (choices applied and review items, per volume); `tamil/glossary-report.md` (generated).
 

@@ -60,7 +60,7 @@ least sure of. Rows marked *kept on purpose* chose a modern form over a better-a
 |---|---|---|---|---|
 | Shiva | | சிவபெருமான் | சிவன் | "Lord Shiva" and Shiva in narration → சிவபெருமான்; சிவன் only in compounds |
 | Rudra | | ருத்திரன் | உருத்திரன் | |
-| Hara | | ஹரன் | அரன் | kept on purpose |
+| Hara | | ஹரன் | அரன் | kept on purpose; Vibhishana's counsellor Hara (Kamban, Vibhishanan Adaikkala 13) → அரன், as Kamban names him |
 | Shankara | | சங்கரன் | | |
 | Maheshvara | | மகேஸ்வரன் | மகேசன் | |
 | Nataraja | | நடராஜர் | நடராசர் | |
@@ -118,15 +118,17 @@ least sure of. Rows marked *kept on purpose* chose a modern form over a better-a
 | Narayana | | நாராயணன் | | |
 | Hari |  | ஹரி |  | kept on purpose; the songs' அரி is not listed as a form: it also begins அரிய |
 | Achyuta | | அச்சுதன் | | |
+| Ajita | | அஜிதன் | | the Bhagavata's "unconquered" Vishnu |
+| Sridhara | | ஸ்ரீதரன் | | |
 | Mukunda | | முகுந்தன் | | |
 | Madhava | | மாதவன் | | |
 | Murari | | முராரி | | |
 | Keshava | | கேசவன் | | |
 | Damodara | Damodaran | தாமோதரன் | | |
-| Gopala | Gopalakrishna | கோபாலன் | கோபாலகிருஷ்ணன் | |
-| Ranganatha | Periya Perumal | அரங்கநாதர் | ரங்கநாதர்; பெரிய பெருமாள் | |
+| Gopala | Gopalakrishna | கோபாலன் | கோபாலகிருஷ்ணன் | where the English gives "Gopalakrishna" (song 1098's word) → கோபாலகிருஷ்ணன் |
+| Ranganatha | Periya Perumal | அரங்கநாதர் | ரங்கநாதர்; பெரிய பெருமாள் | where the English says "Periya Perumal" → பெரிய பெருமாள் |
 | Krishna | Kannan | கண்ணன் | கிருஷ்ணன் | the songs and meanings say கண்ணன்; கிருஷ்ணன் only in a Sanskrit title |
-| Rama | | ராமன் | இராமன்; ராமர் | |
+| Rama | | ராமன் | இராமன்; ராமர் | in a quoted Kamban line, his spellings இராமன், இராகவன் |
 | Raghava | | ராகவன் | இராகவன் | |
 | Balarama | | பலராமன் | பலதேவன் | |
 | Narasimha | | நரசிம்மர் | நரசிங்கம் | |
@@ -139,7 +141,7 @@ least sure of. Rows marked *kept on purpose* chose a modern form over a better-a
 | Dhanvantari | | தன்வந்திரி | | |
 | Lakshmi | | லட்சுமி | இலக்குமி; திருமகள் | kept on purpose |
 | Garuda | | கருடன் | | |
-| Adisesha | Adishesha; Ananta | ஆதிசேஷன் | அனந்தன் | |
+| Adisesha | Adishesha; Ananta | ஆதிசேஷன் | அனந்தன் | where the English says "Ananta" (the Bhagavata's name for the serpent bed) → அனந்தன் |
 | Sudarshana | discus | சக்கரம் | சுதர்சனம் | the discus → சக்கரம்; by name → சுதர்சனம் |
 | Panchajanya | conch | பாஞ்சஜன்யம் | சங்கு | the conch → சங்கு; kept on purpose |
 | Kaustubha | | கௌஸ்துபம் | | |
@@ -148,7 +150,7 @@ least sure of. Rows marked *kept on purpose* chose a modern form over a better-a
 
 | English | Other English spellings | Tamil | Also seen | Note |
 |---|---|---|---|---|
-| Brahma | Creator | பிரமன் | பிரம்மா; நான்முகன் | songs and meanings say பிரமன் |
+| Brahma | Creator | பிரமன் | பிரம்மா; நான்முகன் | songs and meanings say பிரமன்; "the four-faced one" and the title நான்முகன் திருவந்தாதி → நான்முகன் |
 | Indra | | இந்திரன் | | |
 | Sachi | | இந்திராணி | சசி | |
 | Jayanta | Jayantan | ஜயந்தன் | சயந்தன் |; the Kanda Puranam and its padalam titles say சயந்தன் |
@@ -179,7 +181,7 @@ least sure of. Rows marked *kept on purpose* chose a modern form over a better-a
 | Manigriva | | மணிக்ரீவன் | | |
 | Matali | | மாதலி | | Indra's charioteer |
 | Vishvakarma | | விஸ்வகர்மா | | |
-| Mayan | Maya | மயன் | | the asura architect (Tripura, Surapadman's city); Surapadman's mother, also "Maya" in the English (`m-peacock-cock`) → மாயை |
+| Mayan | Maya | மயன் | | the asura architect (Tripura, Surapadman's city); Surapadman's mother, also "Maya" in the English (`m-peacock-cock`) → மாயை; Vishnu as "the great Mayan" of the songs → மாயன், மாமாயன் |
 | Ganga | Ganges | கங்கை | | |
 | Yamuna | | யமுனை | | |
 | Kaveri | | காவிரி | | |
@@ -191,6 +193,7 @@ least sure of. Rows marked *kept on purpose* chose a modern form over a better-a
 | Vasuki | | வாசுகி | | |
 | Uccaihshravas | | உச்சைச்சிரவம் | | |
 | Halahala | | ஆலகால விஷம் | ஆலகாலம் | |
+| kalakuta | | காலகூடம் | | the Bhagavata's other name for the poison |
 
 | Devala | | தேவல முனிவர் | | |
 | gandharva | | கந்தர்வன் | | |
@@ -223,6 +226,8 @@ least sure of. Rows marked *kept on purpose* chose a modern form over a better-a
 | Sakatasura | Sakata | சகடாசுரன் | சகடன் | |
 | Baka | | பகாசுரன் | | |
 | Kuvalayapida | | குவலயாபீடம் | | the elephant |
+| Bhauma | | பௌமன் | | Naraka, "son of the earth" |
+| Kanva | | கண்வர் | | the sage (Mausala story) |
 | Chanura | | சாணூரன் | | |
 | Mushtika | | முஷ்டிகன் | | |
 | Hidimba | | இடும்பன் | | the rakshasa of the Mahabharata |
@@ -247,11 +252,11 @@ least sure of. Rows marked *kept on purpose* chose a modern form over a better-a
 | Tataka | | தாடகை | | |
 | Subahu | | சுபாகு | | |
 | Maricha | | மாரீசன் | | |
-| Ravana | | ராவணன் | இராவணன் | |
-| Kumbhakarna | Kumbakarnan | கும்பகர்ணன் | கும்பகருணன் | |
+| Ravana | | ராவணன் | இராவணன் | in Kamban's padalam titles and quoted lines, his spelling இராவணன் (இராவணன் சூழ்ச்சிப் படலம், இராவணன் வதைப் படலம்) |
+| Kumbhakarna | Kumbakarnan | கும்பகர்ணன் | கும்பகருணன் | in Kamban's title, his spelling கும்பகருணன் (கும்பகருணன் வதைப் படலம்) |
 | Kumbha | Kumban | கும்பன் | | son of Kumbhakarna; see song 835 in REVIEW-NOTES |
-| Vibhishana | | விபீஷணன் | வீடணன் | |
-| Indrajit | | இந்திரஜித் | இந்திரசித்து | |
+| Vibhishana | | விபீஷணன் | வீடணன் | in Kamban's titles, his spelling வீடணன் (வீடணன் அடைக்கலப் படலம், வீடணன் முடி சூட்டு படலம்) |
+| Indrajit | | இந்திரஜித் | இந்திரசித்து | in Kamban's title, his spelling இந்திரசித்து (இந்திரசித்து வதைப் படலம்) |
 | Atikaya | | அதிகாயன் | | |
 | Surpanakha | | சூர்ப்பணகை | | |
 | Khara | | கரன் | | |
@@ -265,6 +270,8 @@ least sure of. Rows marked *kept on purpose* chose a modern form over a better-a
 | Vali | | வாலி | | |
 | Angada | | அங்கதன் | | |
 | Tara | | தாரை | | |
+| Anala | | அனலன் | | Vibhishana's counsellor (Kamban) |
+| Anila | | அனிலன் | | Vibhishana's counsellor (Kamban) |
 | Kesari | | கேசரி | | |
 | Nala | | நளன் | | the monkey who built the bridge |
 | Guha | | குகன் | | |
@@ -284,7 +291,7 @@ least sure of. Rows marked *kept on purpose* chose a modern form over a better-a
 | Sahadeva | | சகாதேவன் | | |
 | Draupadi | | திரௌபதி | பாஞ்சாலி | |
 | Kunti | | குந்தி | | |
-| Duryodhana | Suyodhana | துரியோதனன் | சுயோதனன் | |
+| Duryodhana | Suyodhana | துரியோதனன் | சுயோதனன் | where the English quotes Krishna's "Suyodhana" → சுயோதனன் |
 | Dhritarashtra | King Dhritarashtra | திருதராஷ்டிரன் | | |
 | Gandhari | | காந்தாரி | | |
 | Bhishma | | பீஷ்மர் | வீடுமன் | |
@@ -294,6 +301,7 @@ least sure of. Rows marked *kept on purpose* chose a modern form over a better-a
 | Vidura | | விதுரர் | | |
 | Jayadratha | | ஜயத்ரதன் | சயத்திரதன் | |
 | Abhimanyu | | அபிமன்யு | | |
+| Amba | | அம்பை | | the princess reborn as Shikhandi |
 | Shikhandi | | சிகண்டி | | |
 | Sanjaya | | சஞ்சயன் | | |
 | Satyaki | | சாத்யகி | | |
@@ -307,6 +315,9 @@ least sure of. Rows marked *kept on purpose* chose a modern form over a better-a
 | Vrishnis | Andhakas; Bhojas | விருஷ்ணிகள் | | Andhakas → அந்தகர்கள்; Bhojas → போஜர்கள் |
 | Yashoda | | யசோதை | | |
 | Nanda | | நந்தகோபர் | நந்தன் | |
+| yakshas | yaksha | யட்சர்கள் | | |
+| gopis | gopi | கோபியர் | | the cowherd women of Vraja |
+| Vasudeva (Krishna) | | வாசுதேவன் | | Krishna as "son of Vasudeva" (Narada's curse in `krishna-yamalarjuna`); his father is வசுதேவர் |
 | Vasudeva | | வசுதேவர் | | |
 | Devaki | | தேவகி | | |
 | Rohini | | ரோகிணி | | |
@@ -315,7 +326,7 @@ least sure of. Rows marked *kept on purpose* chose a modern form over a better-a
 | Ugrasena | King Ugrasena | உக்கிரசேனன் | | |
 | Pradyumna | | பிரத்யும்னன் | | |
 | Samba | | சாம்பன் | | |
-| Kuchela | Sudama | குசேலர் | சுதாமா | |
+| Kuchela | Sudama | குசேலர் | சுதாமா | the southern name; where the English names the later "Sudama" → சுதாமா |
 | Sandipani | | சாந்தீபனி | | |
 | Daruka | | தாருகன் | | |
 | Jara | | ஜரா | | the hunter |
@@ -377,6 +388,7 @@ least sure of. Rows marked *kept on purpose* chose a modern form over a better-a
 | Alvars | Azhwars; Alvar; Azhwar | ஆழ்வார்கள் | ஆழ்வார் | |
 | Andal | | ஆண்டாள் | | |
 | Periyazhwar | | பெரியாழ்வார் | | |
+| Thondaradippodi Alvar | Thondaradippodi | தொண்டரடிப்பொடி ஆழ்வார் | | author of the Thiruppalliyezhuchchi |
 | Kulasekhara Alvar | Kulasekhara Azhwar; Kulasekhara | குலசேகர ஆழ்வார் |  | the Pandya king Kulasekhara of the Madurai story → குலசேகர பாண்டியன் |
 | Thirumangai Alvar | | திருமங்கை ஆழ்வார் | | |
 | Nammazhwar | | நம்மாழ்வார் | | |
@@ -439,7 +451,7 @@ least sure of. Rows marked *kept on purpose* chose a modern form over a better-a
 | Thiruvannamalai | Tiruvannamalai; Thiruvarunai; Annamalai; Arunachala; Arunacala | திருவண்ணாமலை | அண்ணாமலை; அருணை; அருணாசலம் | the hill → அண்ணாமலை; the Skanda Purana's Arunacala-khanda → அருணாசல கண்டம் (the one permitted use of அருணாசலம்) |
 | Sirkazhi |  | சீர்காழி | காழி | its twelve names: next table; kept on purpose; in the list of its twelve names, காழி |
 | Tiruvarur | Thiruvarur | திருவாரூர் |  | ஆரூர் in poetry (not listed as a form: it also begins ஆரூரர்) |
-| Srirangam | Thiruvarangam | ஸ்ரீரங்கம் | திருவரங்கம்; அரங்கம் | |
+| Srirangam | Thiruvarangam | ஸ்ரீரங்கம் | திருவரங்கம்; அரங்கம் | where the English says "Thiruvarangam" (a song's word) → திருவரங்கம் |
 | Thiruvanaikka | | திருவானைக்கா | | |
 | Thiruvalangadu | Alangadu | திருவாலங்காடு | ஆலங்காடு | |
 | Pazhaiyanur | | பழையனூர் | | |
@@ -459,8 +471,8 @@ least sure of. Rows marked *kept on purpose* chose a modern form over a better-a
 | Thiruvennainallur | | திருவெண்ணெய்நல்லூர் | | |
 | Thirunavalur | | திருநாவலூர் | | |
 | Kalahasti | Thirukkalathi | காளஹஸ்தி | திருக்காளத்தி | as a song place, the app's திருக்காளத்தி |
-| Tirupati | Thiruvenkatam; Thiruvengadam; Venkatam | திருப்பதி | திருவேங்கடம்; வேங்கடம் | |
-| Kumbakonam | Kudanthai | கும்பகோணம் | குடந்தை | |
+| Tirupati | Thiruvenkatam; Thiruvengadam; Venkatam | திருப்பதி | திருவேங்கடம்; வேங்கடம் | the town → திருப்பதி; the hill, "Venkatam" → வேங்கடம்; "Thiruvengadam" and the app's song place → திருவேங்கடம் |
+| Kumbakonam | Kudanthai | கும்பகோணம் | குடந்தை | in an Alvar's list of shrines, where the English says "Kudanthai" → குடந்தை |
 | Tiruchirappalli | Thiruchirappalli | திருச்சிராப்பள்ளி | சிராப்பள்ளி |the app writes திருசிராப்பள்ளி (without ச்); our prose keeps the standard spelling |
 | Thanjavur | | தஞ்சாவூர் | | |
 | Mayiladuthurai | | மயிலாடுதுறை | | |
@@ -494,6 +506,11 @@ least sure of. Rows marked *kept on purpose* chose a modern form over a better-a
 | Chaikkadu | Tiruchaikkadu | திருச்சாய்க்காடு | | Appar's hymn 4.65, as thevaaram.org names it |
 | Mullaivayil | Tirumullaivayil | திருமுல்லைவாயில் | | Sundarar's hymn 7.69 (thevaaram.org: வடதிருமுல்லைவாயில்) |
 | Tiruparithiniyamam | Parithiniyamam | திருப்பரிதிநியமம் | | Sambandar's hymn 3.104, as thevaaram.org names it |
+| Pindaraka | | பிண்டாரகம் | | the holy place of the Mausala curse |
+| Thirukkannapuram | | திருக்கண்ணபுரம் | | an Alvar shrine (Kulasekhara's lullaby, Perumal Thirumozhi 8) |
+| Virinchipuram | | விரிஞ்சிபுரம் | | the app's place for some songs is விரிஞ்சிபுரம்* (with an asterisk); our prose drops it |
+| Thiruppernagar | | திருப்பேர்நகர் | | an Alvar shrine (Koviladi); not the song place பேறைநகர் |
+| Thiruvaypadi | | திருவாய்ப்பாடி | | Periyazhwar's name for Krishna's cowherd village |
 | Pazhanam | Tiruppazhanam | திருப்பழனம் | | Appar's hymn 4.36, near Thiruvaiyaru; not Palani ("Pazhanam" was wrongly a Palani variant until 2026-11-24) |
 | Avaduthurai | Thiruvavaduthurai | திருவாவடுதுறை | | Appar's hymn 5.29 |
 | Aiyaru | Thiruvaiyaru | திருவையாறு | | Appar's hymn 6.38 |
@@ -539,7 +556,7 @@ least sure of. Rows marked *kept on purpose* chose a modern form over a better-a
 | Nandigrama | | நந்திகிராமம் | | |
 | Siddhashrama | | சித்தாசிரமம் | | |
 | Mathura | | மதுரா | வடமதுரை | |
-| Gokula | | கோகுலம் | ஆயர்பாடி | |
+| Gokula | | கோகுலம் | ஆயர்பாடி | Vraja and "the cowherd village" → ஆயர்பாடி (the Vraja row) |
 | Vraja | | ஆயர்பாடி | விரஜம் | |
 | Vrindavan | | பிருந்தாவனம் | | |
 | Govardhana | | கோவர்த்தன மலை | | |
@@ -548,6 +565,7 @@ least sure of. Rows marked *kept on purpose* chose a modern form over a better-a
 | Kurukshetra | | குருக்ஷேத்திரம் | | |
 | Prabhasa | | பிரபாசம் | | |
 | Pragjyotisha | | பிராக்ஜோதிஷம் | | |
+| Dvaita | Dvaita forest | துவைத வனம் | | |
 | Kamyaka | | காம்யக வனம் | | |
 | Sutala | | சுதலம் | | |
 | Mandakini | | மந்தாகினி | | |
@@ -566,7 +584,7 @@ least sure of. Rows marked *kept on purpose* chose a modern form over a better-a
 | Kamba Ramayanam | Tamil Ramayana | கம்பராமாயணம் | | |
 | Valmiki Ramayana | Ramayana | வால்மீகி ராமாயணம் | | the story itself → ராமாயணம் |
 | Bhagavata Purana | Bhagavata | பாகவத புராணம் | ஸ்ரீமத் பாகவதம் | |
-| Mahabharata | Bharata | மகாபாரதம் | பாரதம் | |
+| Mahabharata | Bharata | மகாபாரதம் | பாரதம் | "a Bharata war" (song 785) → பாரதப் போர், the one permitted use of பாரதம் |
 | Critical Edition | | செம்பதிப்பு | | the Pune Critical Edition (*check*) |
 | Harivamsa | | ஹரிவம்சம் | | |
 | Bhagavad Gita | Gita | பகவத் கீதை | | |
@@ -615,6 +633,7 @@ least sure of. Rows marked *kept on purpose* chose a modern form over a better-a
 | Daksha Kandam | | தட்ச காண்டம் | | Kanda Puranam |
 | Bala Kandam | Bala Kanda; Bala | பால காண்டம் | | |
 | Aranya Kanda | Aranya | ஆரணிய காண்டம் | | |
+| Ayodhya Kanda | Ayodhya Kandam | அயோத்தியா காண்டம் | | "Valmiki Ramayana, Ayodhya 11" → வால்மீகி ராமாயணம், அயோத்தியா காண்டம் 11 |
 | Kishkindha Kanda | | கிஷ்கிந்தா காண்டம் | கிட்கிந்தா காண்டம் | Kamban's quoted titles keep கிட்கிந்தா |
 | Sundara Kandam | Sundara Kanda; Sundara | சுந்தர காண்டம் | | |
 | Satarudra | | சதருத்ர சம்ஹிதை | | Shiva Purana |
@@ -649,9 +668,14 @@ least sure of. Rows marked *kept on purpose* chose a modern form over a better-a
 | Om | Pranava | ஓம் | பிரணவம் | "the Pranava" → பிரணவம் |
 | sage | | முனிவர் | ரிஷி | |
 | Brahmahatya | | பிரமஹத்தி | | |
+| kadamba | kadamba tree | கடம்ப மரம் | | |
+| parijata | parijata tree | பாரிஜாத மரம் | | the tree of heaven; the drama Parijatapaharanam → பாரிஜாதாபஹரணம் |
+| eraka | eraka grass | ஏரகப் புல் | | the reeds of the Mausala story |
+| kanthal | glory lily | காந்தள் | | the flower of Murugan's hills (song 266) |
+| maruda | arjuna tree; maruda tree; twin trees | மருத மரம் | | the twin trees Krishna uprooted |
 | Pashupata | | பாசுபதம் | | the weapon |
 | banyan | | ஆலமரம் | | Dakshinamurti's tree; "the stone banyan" → கல்லால மரம் |
-| kurundam | kurundam tree | குருந்த மரம் | | Manikkavasagar's tree at Thiruperunthurai |
+| kurundam | kurundam tree; kurundham | குருந்த மரம் | | Manikkavasagar's tree at Thiruperunthurai; "kurundham" in the clothes story (Andal's tree) → குருந்த மரம் |
 | pittu | | பிட்டு | | Vandi's steamed rice cake |
 | arugu | arugu grass | அறுகு | | |
 | five sacred letters | | ஐந்தெழுத்து | திருவைந்தெழுத்து | the mantra நமசிவாய |

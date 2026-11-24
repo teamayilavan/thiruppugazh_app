@@ -1,5 +1,62 @@
 # Tamil translation notes for the owner's review
 
+## Volume I, Vishnu: done except one held story (2026-11-24)
+
+66 stories translated (67 of 68 with the pilot's `avatar-gajendra`): ten avatar stories, all 27 Krishna and
+Mahabharata stories, all 29 Ramayana stories. 138 Tamil stories in all; the checker reports 0 paragraph or number
+differences and 0 non-glossary forms over all of them.
+
+**Kamban** is quoted from the Tamil verses the research already holds (`vishnu/ramayana-episodes.md`, from the
+Kamban pages it read): where the English renders a verse closely, the Tamil quotes the phrase it renders
+("அஞ்சனவண்ண! நின் அபயம் யாம்", "தீயவை யாவையினும் சிறந்த தீயாள்", "வீங்கினாள்; விம்மினாள்; விழுந்தாள்",
+"கமலத்தோன் தன் பேருடை அண்ட கோளம் பிளந்தது", "மூக்கு இலா முகம்", Vibhishana's farewell and Rama's "நின்னொடும்
+எழுவர் ஆனேம்", Sita's "மனத்தினால், வாக்கினால், மறு உற்றேன் எனின்…", and others), each with a short modern gloss.
+Padalam titles are Kamban's, with his spellings (இராவணன், கும்பகருணன், வீடணன், இந்திரசித்து); the glossary notes
+permit those spellings there only.
+
+**The expert's song items** (HANDOFF section 0, item 5) touch three of these stories, and the Tamil follows the
+English as it stands: `ramayana-sita-agni` (song 161), `ramayana-kumbha` (835, "Kumban") and `ramayana-sita-jewels`
+(1325). If the expert moves a song, change both languages.
+
+**Held back:** `avatar-pralaya`, until the owner confirms the Markandeya framing (HANDOFF section 0, item 3).
+The three framing items for public videos (item 2) concern the films, not the book, so those stories go ahead.
+
+**Respect forms in this volume** (please confirm): respectful verbs for Vishnu and his avatars (Rama, Krishna,
+Balarama, Vamana, the boar, the man-lion, Mohini), Sita, the gods (Indra too, even as Krishna's opponent), sages
+and Alvars, and the human elders whose glossary form already ends in -ர் (Bhishma, Drona, Vidura, Dharmar,
+Vasudeva, Nandagopar, Kuchela, Manu). Plain forms for other human characters (Dasaratha, Lakshmana, Arjuna, Karna,
+Prahlada, Bali), Hanuman and the monkeys (as Kamban narrates), and the villains. Animals neuter. The infant Krishna
+takes respectful verbs in our narration (குழந்தை உதைத்தார்); where the English gives the cowherd women's, Yashoda's
+or an Alvar-mother's own words, those keep the plain form they would use (திருடுகிறான்). The Earth, like Ganga,
+takes the plain feminine.
+
+Quoted in the original Tamil, each checked against the research's Divya Prabandham files, divyaprabandham.koyil.org
+or the app's lyrics:
+- "வங்கக் கடல் கடைந்த மாதவனை" (Thiruppavai 30), "ஓங்கி உலகளந்த" (Thiruppavai 3), "புள்ளின் வாய் கீண்டானை"
+  (Thiruppavai 13), "நான்முகனை நாராயணன் படைத்தான்" (Nanmugan Thiruvandhadhi 1), "அகலகில்லேன் இறையும்"
+  (Thiruvaimozhi 6.10.10), "மாயச் சகடம்" (Periyazhwar Thirumozhi 3.9.9).
+- Song words from the app: "தயிர்ச்சோரன்" (121), "தாமோதரன் முராரி" (629), "பாரை யுண்ட மாயன் வேயை யூதி" (1170),
+  "திமித திமிதிமி" (163), "தாந்ததிமி தோதி" (620), "மருகனெ னாமற் சூழ்கொலை கருதிய மாமப் பாதகன்" (1274); "the great
+  Mayan" of song 169 is மாமாயன் (Vishnu), not the asura architect மயன்.
+- Kamban's padalam titles from the research's Tamil (இரணியன் வதைப் படலம், வேள்விப் படலம்).
+
+Found in the English (not changed):
+- `krishna-bakasura` cites "Peyalvar … (Periya Thiruvandhadhi 64)". Periya Thiruvandhadhi is Nammazhwar's; Peyalvar's
+  work is the Moonram Thiruvandhadhi. One of the two names is wrong.
+- `avatar-temple` cites Thiruchchandha Viruththam 81 for "the Lord stands at Venkatam"; the research gives 81's
+  opening as "kadaindha pARkadal" (the churning, as `avatar-samudra-manthana` uses it). Probably a wrong number.
+- **More "film" wording in book text**: `ramayana-vali` ("the film does not try to settle it") and
+  `ramayana-army-destroyed` (a whole sentence: "For a film, the battle is best shown as light and smoke…"), as in
+  `saints-kurundam` and `saints-sambandar`. The Tamil keeps the English as it stands; fix both together. A search (2026-11-24) finds the
+  word in **18** English narratives: `d-battlefield`, `d-idumbai`, `d-kanchi`, `d-matangi`, `d-kamakshi-32`, `n-sundarar-gold`,
+  `ramayana-army-destroyed`, `ramayana-vali`, `saints-kurundam`, `saints-sambandar`, and `sam-birth`, `sam-jains`, `sam-milk`,
+  `sam-palanquin`, `sam-poompavai`, `sam-thiruvalangadu`, `sam-todudaiya`, `sam-yazhpanar`. Their Tamil texts carry the same
+  sentences. Storyline wording leaked into the book narratives; remove it from both languages before the book is rebuilt.
+
+New glossary rows and notes: Ajita, Sridhara, kalakuta, Thondaradippodi Alvar, Thiruppernagar, Thiruvaypadi, gopis,
+kadamba, maruda (the arjuna / twin trees), Vasudeva as Krishna (வாசுதேவன்); notes for Ananta, நான்முகன் ("the four-faced
+one"), மாயன், Periya Perumal, Thiruvarangam, Venkatam / Thiruvengadam, Kudanthai, Gopalakrishna, and ஆயர்பாடி under Gokula.
+
 ## Volume II, Shiva: done except one held story (2026-11-24)
 
 18 more stories translated (19 of 20 with the pilot's `deeds-kama`): the eleven deeds, the three forms, three of the
