@@ -2,7 +2,7 @@
 
 **Next session: read `HANDOFF.md` first.** It has the current counts, owner decisions, how to rebuild and re-verify, what is not verified, and the ordered next steps.
 
-**End of session 2026-11-23.** Everything committed and pushed to `next`. HANDOFF sections 10, 13 and 14 hold the next-session prompt, the Tamil status table and the notes for this Linux machine.
+**End of session 2026-11-24.** Everything committed and pushed to `next`. Tamil: 138 of 142 stories (Shiva and Vishnu volumes done this session); four held for owner decisions. HANDOFF section 0 (new items 9-11) lists English fixes the Tamil work found; sections 10, 13 and 14 hold the next-session prompt, the Tamil status and method, and the notes for this Linux machine.
 
 **Tamil: Vishnu volume done (2026-11-24).** 66 more stories (67 of 68 with `avatar-gajendra`); `avatar-pralaya` held for the Markandeya framing decision. 138 of 142 Tamil stories now exist, all passing the checker. Kamban is quoted from the Tamil verses in `vishnu/ramayana-episodes.md`; Alvar openings and song words were checked against the research's Divya Prabandham files, divyaprabandham.koyil.org and the app's lyrics. Review items in `tamil/PILOT-NOTES.md`: the respect-form rule for this volume, two likely citation errors in the English, and "film" wording in 18 English narratives (and their Tamil).
 

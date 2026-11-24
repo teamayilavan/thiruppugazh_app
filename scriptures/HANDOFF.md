@@ -1,4 +1,4 @@
-# Scripture work: handoff (end of session, 2026-11-23)
+# Scripture work: handoff (end of session, 2026-11-24)
 
 Read this first in the next session, then `README.md` (layout), `STATUS.md` (log) and `AUDIT.md` (what is verified; it is **stale**, see 9, step 6).
 `scriptures/` is research material. It is never bundled into the app and never touches `lib/`, the DB or the schema.
@@ -28,11 +28,16 @@ All 142 book narratives and all 142 animation scripts are written and committed;
 7. Briefs that say "not found" but the texts have it: the Pranava whisper (Utpatti 1259-1265), Parvati's birth to Himavan (Utpatti 375-410), Sambandar at Thiruvalangadu (Periya Puranam 1007-1011). Edit `build_new_sets.py` / `new_sets_briefs.py` / `shiva_story_data.py`, rebuild.
 8. Apply the expert's song decisions to the song-story maps, then rebuild the books (`make_pdf.py`) and the index (`make_index.py`).
 
+**English fixes found by the Tamil work (2026-11-24; fix both languages together, details in `tamil/PILOT-NOTES.md`)**
+9. **"Film" wording in book text**: 18 narratives speak of "the film" (storyline wording that leaked in): `d-battlefield`, `d-idumbai`, `d-kanchi`, `d-matangi`, `d-kamakshi-32`, `n-sundarar-gold`, `ramayana-army-destroyed`, `ramayana-vali`, `saints-kurundam`, `saints-sambandar`, `sam-birth`, `sam-jains`, `sam-milk`, `sam-palanquin`, `sam-poompavai`, `sam-thiruvalangadu`, `sam-todudaiya`, `sam-yazhpanar`. Remove from the English and the Tamil.
+10. Likely citation errors: `krishna-bakasura` "Peyalvar … Periya Thiruvandhadhi 64" (that work is Nammazhwar's); `avatar-temple` Thiruchchandha Viruththam 81 for Venkatam (81 is the churning); `sam-fever` "(Madurai)" after songs 527, 789; Purananuru 151 for Kumanan in `t-patrons` (probably 161).
+11. Tevaram 6.38.5 in `forms-ardhanari`: the English reads it "male and female, and without birth", the thevaaram.org commentary "no births as woman or man". Decide the reading.
+
 **Still open from before:** the narrative tone (now that all 142 are written, a read of a few per volume), the Kaumaram.com credit line, the introduction text in `pdf/book.typ`, and whether generated PDFs are committed (section 8). **Animation:** the Gemini Flow image-to-video test decides the motion approach (`animation/README.md`).
 
 ## 1. State at a glance
 
-- Branch `next`: **everything is committed and pushed** at the end of the 2026-11-23 session (remote `origin` = teamayilavan/thiruppugazh_app). `main` has the scripture work only up to `72ff259` (2026-11-11); the narratives, storylines, animation plan, index and the Tamil work are on `next` only.
+- Branch `next`: **everything is committed and pushed** at the end of the 2026-11-24 session (remote `origin` = teamayilavan/thiruppugazh_app). `main` has the scripture work only up to `72ff259` (2026-11-11); the narratives, storylines, animation plan, index and the Tamil work are on `next` only.
 - **Two machines.** The earlier sessions ran on Windows (paths below under `D:\`; the source caches in `scripts/.cache/` exist only there). The 2026-11-23 session ran on Linux (see 14): no caches, no Typst checked, so no PDF was rebuilt there. The generated PDFs and their JSON are git-ignored; rebuild them with `make_pdf.py`.
 - Typst: upgraded to **0.15.1** at `D:\Software\Typst\typst.exe` (on PATH). The old 0.13.1 binary is kept next to it as `typst-0.13.1.exe.bak`.
 - The 8 PDFs and two samples are copied to **`D:\thiruppugazh-books\`** for the owner to review (see 3).
@@ -174,7 +179,7 @@ Song source: `assets/thiruppugazh.db`, table `songs`, read-only. Columns: `id` (
 5. In the verses edition, songs whose allusion is only in the meaning are listed in one sentence; acceptable, or should the first verse be shown?
 6. Tamil labels (பாடல், பொருள்) on the song panel and English section headings: keep the mix?
 
-## 9. Next steps, in order (updated 2026-11-23)
+## 9. Next steps, in order (updated 2026-11-24)
 
 1. **Owner:** answer the decisions in section 0 (items 1-4) and the open questions in section 8; read a sample of narratives per volume.
 2. **Owner:** send `pdf/story-song-index.pdf` (copy in `D:\thiruppugazh-books\`) to the Thiruppugazh expert.
@@ -182,7 +187,7 @@ Song source: `assets/thiruppugazh.db`, table `songs`, read-only. Columns: `id` (
 4. Look through the full-edition PDFs of Vishnu, Shiva and Vol IV page by page for layout faults (only Murugan and the samples were inspected closely): long titles, songs with many verses, wide reference tables, blank gaps before panels, Tamil wrapping.
 5. When the expert answers: apply the song decisions (section 0, item 8), rebuild the books and the index, copy to `D:\thiruppugazh-books\`.
 6. Regenerate `AUDIT.md` (`audit_all.py`; stale, dated 2026-11-10) and fold the results into `STATUS.md`.
-7. **Tamil edition** (section 13): the owner reviews the pilot and Murugan/Vol IV notes (`tamil/PILOT-NOTES.md`), ideally with a Tamil reader; all four volumes are done (2026-11-24) except four held stories. `sam-jains`, `saints-sambandar`, `d-idumbai` and `avatar-pralaya` follow the section 0 decisions. Then propose the book's language switch (`make_pdf.py` / `book.typ`, Tamil titles per story) before changing it.
+7. **Tamil edition** (section 13): 138 of 142 done (2026-11-24). The owner reviews `tamil/PILOT-NOTES.md` (one section per volume), ideally with a Tamil reader. Fix the English items in section 0 (9-11) in both languages. `sam-jains`, `saints-sambandar`, `d-idumbai` and `avatar-pralaya` follow the section 0 decisions. Then propose the book's language switch (`make_pdf.py` / `book.typ`, Tamil titles per story) before changing it.
 8. Animation: the owner runs the Flow motion test (section 12).
 9. Commit and push only when asked. Small commits: generator/template, then texts per volume, then regenerated sets.
 10. Research leftovers if time allows: Kamba/Valmiki wording comparison for the most-told Vishnu stories (Gajendra, Vamana, Krishna butter, Ramayana war); the 552 songs in no story (second keyword pass, then reading); the app side is undecided (CLAUDE.md principles apply if stories ever go in the app: offline, quiet, opt-in, Tamil layout testing).
@@ -191,8 +196,8 @@ Song source: `assets/thiruppugazh.db`, table `songs`, read-only. Columns: `id` (
 
 > Read scriptures/HANDOFF.md (section 0, then section 13), then tamil/README.md and tamil/PILOT-NOTES.md.
 > 138 of 142 stories are in Tamil; four are held for owner decisions (section 13). First ask which owner decisions are answered: section 0,
-> the review items in PILOT-NOTES (respect forms for the Lord in disguise, the Purananuru 151/161 question, the Shiva
-> volume's choices and the "film" wording in 18 English narratives), and
+> the review items in PILOT-NOTES (respect forms, incl. the Lord in disguise; the Purananuru 151/161 question; Tevaram
+> 6.38.5; the "film" wording in 18 English narratives, section 0 item 9), and
 > whether a Tamil reader has looked at the pilot. Then translate the held stories that the decisions release, in the same way:
 > glossary forms, app song places, original Tamil for quoted lines, and run scripts/glossary_check.py after each
 > batch until it reports 0 differences. Commit only when I ask.
@@ -216,7 +221,7 @@ The storylines are to become animated videos (2D, owner and Claude only; English
 
 Goal: a **separate Tamil edition** of the four volumes, in **simple modern prose** (owner's decisions, 2026-11-23). The songs and their meanings are already Tamil; the story texts (`pdf/narratives/`, 142 files, about 57,000 words), headings and front matter are what change. The storylines may follow later.
 
-**Where it stands (end of 2026-11-23):**
+**Where it stands (end of 2026-11-24):**
 
 | Volume | Tamil stories | Notes |
 |---|---|---|
@@ -226,7 +231,7 @@ Goal: a **separate Tamil edition** of the four volumes, in **simple modern prose
 | IV the rest | 40 of 42 | `sam-jains`, `d-idumbai` held for section 0 decisions |
 | **Total** | **138 of 142** | held: `sam-jains`, `saints-sambandar` (item 1), `d-idumbai` (item 4), `avatar-pralaya` (item 3) |
 
-**Files.** `pdf/narratives-ta/<slug>.txt` (same slug and paragraphs as the English); `tamil/GLOSSARY.md` (544 rows, the one Tamil form per name and term, with notes on permitted uses); `tamil/README.md` (style guide and order of work); `tamil/PILOT-NOTES.md` (choices applied and review items, per volume); `tamil/glossary-report.md` (generated).
+**Files.** `pdf/narratives-ta/<slug>.txt` (same slug and paragraphs as the English); `tamil/GLOSSARY.md` (587 rows, the one Tamil form per name and term, with notes on permitted uses); `tamil/README.md` (style guide and order of work); `tamil/PILOT-NOTES.md` (choices applied and review items, per volume); `tamil/glossary-report.md` (generated).
 
 **The checker** `python3 -I -X utf8 scriptures/scripts/glossary_check.py` (read-only except its report) checks, and at the end of the session reports 0 problems on all of:
 - each Tamil story has the English story's paragraphs and **exactly its numbers** (verses, songs, chapters);
@@ -234,6 +239,10 @@ Goal: a **separate Tamil edition** of the four volumes, in **simple modern prose
 - glossary forms against the app's Tamil meanings, lyrics and song places (`assets/thiruppugazh.db`).
 
 **How a story is translated** (keep this): read the English; look up the app's `place` for every song the English places ("song 928 (Karuvur)" → பாடல் 928 (கருவூர்)); quote Tamil originals where the English quotes or names them (padalam titles, hymn openings, song lines: check song lines against the app's lyrics, padalam titles against the Project Madurai pages the research used); translate the rest into plain modern Tamil, paragraph for paragraph, adding nothing; respect forms for gods, saints, sages and Arunagiri, plain for villains and ordinary characters, neuter for animals; run the checker; fix or note every flag.
+
+**Sources used for quoted Tamil (Linux, no caches):** Kamban verses are in `vishnu/ramayana-episodes.md` (Tamil text of every cited verse; quote the phrase the English renders, gloss it in modern Tamil). Tevaram / Tirumandiram / Periya Puranam: place names, section titles and opening words in `shiva/tirumurai-deeds.json` and `shiva/refs-saints.json`; full verses on thevaaram.org (`onepage.php?thiru=<book>&Song_idField=<id>` with `curl`). Divya Prabandham openings: `vishnu/dp/*.json` (`first_words`, URLs on divyaprabandham.koyil.org). Song words: the app DB's `lyrics` (Python `sqlite3`). Tiruvilaiyadal padalam titles: Tamil Wikisource pages cited in `shiva/stories/`.
+
+**Glossary practice:** an "also seen" form used on purpose (Kamban's இராவணன் in his titles, தில்லை where the English says Thillai) is permitted by naming it in that row's note; the checker then stops flagging it. Rows are edited by name (exact-string replacement failed once on a row with variants). Respect-form rules per volume are in `PILOT-NOTES.md`.
 
 **Open items:** the review list in `tamil/PILOT-NOTES.md`, chiefly: the respect forms for the Lord in disguise (`m-valli-disguise` vs `n-vandi-pittu`); Purananuru 151 for Kumanan, probably 161 (Wikisource's "151-160" page prints 161-170); the unverified Tarakan padalam title; hymn openings quoted from memory, to check against the caches; "(Madurai)" in the English of `sam-fever`.
 
