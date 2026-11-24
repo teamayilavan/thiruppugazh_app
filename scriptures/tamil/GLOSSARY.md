@@ -156,6 +156,7 @@ least sure of. Rows marked *kept on purpose* chose a modern form over a better-a
 | Yama | Death | யமன் | எமன்; இயமன் | |
 | Agni | | அக்கினி | அக்னி | |
 | Vayu | | வாயு | | |
+| Svaha | | சுவாகா | | Agni's wife (Mahabharata, Vana Parva) |
 | Varuna | | வருணன் | | |
 | Kubera | | குபேரன் | | |
 | Kama | | மன்மதன் | காமன்; மதன் |; காமன் only to explain காமாரி |
@@ -411,7 +412,7 @@ least sure of. Rows marked *kept on purpose* chose a modern form over a better-a
 
 | English | Other English spellings | Tamil | Also seen | Note |
 |---|---|---|---|---|
-| Palani | Pazhani; Pazhanam | பழநி | பழனி; திருஆவினன்குடி | |
+| Palani | Pazhani | பழநி | பழனி; திருஆவினன்குடி | |
 | Thiruchendur | Tiruchendur | திருச்செந்தூர் | செந்தில் | |
 | Thiruparankundram | Parankundram | திருப்பரங்குன்றம் | பரங்குன்றம் | |
 | Swamimalai | | சுவாமிமலை | திருவேரகம் | Thiru Ooragam / Edagam are other shrines, see below |
@@ -431,11 +432,11 @@ least sure of. Rows marked *kept on purpose* chose a modern form over a better-a
 | English | Other English spellings | Tamil | Also seen | Note |
 |---|---|---|---|---|
 | Madurai | Alavai; Kudal | மதுரை | ஆலவாய்; கூடல் | in Sambandar's and the Tiruvilaiyadal stories ஆலவாய் where the source says it |
-| Chidambaram | Thillai; Chitrambalam | சிதம்பரம் | தில்லை; சிற்றம்பலம் | |
+| Chidambaram | Thillai; Chitrambalam | சிதம்பரம் | தில்லை; சிற்றம்பலம் | where the English says "Thillai" → தில்லை; the hall, the Chitrambalam → சிற்றம்பலம் |
 | Kanchi | Kanchipuram; Kachchi | காஞ்சி | காஞ்சிபுரம்; கச்சி | kept on purpose; கச்சி also begins கச்சியப்பர், a different name |
 | Kamakottam | Kamakkottam | காமக்கோட்டம் | | |
 | Ekambam | Ekambareshwara | ஏகாம்பரம் | ஏகாம்பரநாதர் | the god → ஏகாம்பரநாதர் |
-| Thiruvannamalai | Tiruvannamalai; Thiruvarunai; Annamalai; Arunachala; Arunacala | திருவண்ணாமலை | அண்ணாமலை; அருணை; அருணாசலம் | the hill → அண்ணாமலை |
+| Thiruvannamalai | Tiruvannamalai; Thiruvarunai; Annamalai; Arunachala; Arunacala | திருவண்ணாமலை | அண்ணாமலை; அருணை; அருணாசலம் | the hill → அண்ணாமலை; the Skanda Purana's Arunacala-khanda → அருணாசல கண்டம் (the one permitted use of அருணாசலம்) |
 | Sirkazhi |  | சீர்காழி | காழி | its twelve names: next table; kept on purpose; in the list of its twelve names, காழி |
 | Tiruvarur | Thiruvarur | திருவாரூர் |  | ஆரூர் in poetry (not listed as a form: it also begins ஆரூரர்) |
 | Srirangam | Thiruvarangam | ஸ்ரீரங்கம் | திருவரங்கம்; அரங்கம் | |
@@ -475,7 +476,8 @@ least sure of. Rows marked *kept on purpose* chose a modern form over a better-a
 | Panruti | | பண்ருட்டி | | |
 | Kongu | | கொங்கு நாடு | | |
 | Pothigai | Podiya; Mount Pothigai | பொதிகை | பொதியமலை | |
-| Kasi | Kashi; Varanasi | காசி | வாரணாசி | |
+| Bindu lake | Bindusaras | பிந்து ஏரி | | where Shiva released the Ganga (Ramayana 1.43) |
+| Kasi | Kashi; Varanasi | காசி | வாரணாசி | the Skanda Purana's Kashi-khanda → காசி கண்டம் |
 | Kedara | | கேதாரம் | | |
 
 | Kundaiyur | | குண்டையூர் | | |
@@ -489,6 +491,17 @@ least sure of. Rows marked *kept on purpose* chose a modern form over a better-a
 | Malaya | | மலய மலை | | |
 | Kurukkai | | குறுக்கை | திருக்குறுக்கை | a Virattanam |
 | Anga | | அங்க நாடு | | |
+| Chaikkadu | Tiruchaikkadu | திருச்சாய்க்காடு | | Appar's hymn 4.65, as thevaaram.org names it |
+| Mullaivayil | Tirumullaivayil | திருமுல்லைவாயில் | | Sundarar's hymn 7.69 (thevaaram.org: வடதிருமுல்லைவாயில்) |
+| Tiruparithiniyamam | Parithiniyamam | திருப்பரிதிநியமம் | | Sambandar's hymn 3.104, as thevaaram.org names it |
+| Pazhanam | Tiruppazhanam | திருப்பழனம் | | Appar's hymn 4.36, near Thiruvaiyaru; not Palani ("Pazhanam" was wrongly a Palani variant until 2026-11-24) |
+| Avaduthurai | Thiruvavaduthurai | திருவாவடுதுறை | | Appar's hymn 5.29 |
+| Aiyaru | Thiruvaiyaru | திருவையாறு | | Appar's hymn 6.38 |
+| Naraiyur | Thirunaraiyur | திருநாரையூர் | | Appar's hymn 6.74 |
+| Tirunageswaram | Nageswaram | திருநாகேச்சரம் | | hymns 6.66, 2.24, 7.99, as thevaaram.org names it |
+| Nagai-Karonam | | திருநாகைக் காரோணம் | | Appar's hymn 6.22 (Nagapattinam) |
+| Anniyur | | திருஅன்னியூர் | | Appar's hymn 5.8 |
+| Daruka forest | | தாருகாவனம் | | where Bhikshatana tested the sages; not the asura Daruka (தாருகன்) |
 ## Places: the twelve names of Sirkazhi
 
 | English | Other English spellings | Tamil | Also seen | Note |
@@ -611,6 +624,7 @@ least sure of. Rows marked *kept on purpose* chose a modern form over a better-a
 | Kirththit Tiruvagaval | | கீர்த்தித் திருஅகவல் | | Tiruvasagam |
 | Arutpathu | | அருட்பத்து | | Tiruvasagam |
 | Tiruvammanai | | திருவம்மானை | | Tiruvasagam |
+| Ananda Malai | | ஆனந்தமாலை | | Tiruvasagam |
 | Tiruporchunnam | | திருப்பொற்சுண்ணம் | | Tiruvasagam |
 | Tantra | | தந்திரம் | | the nine parts of Tirumandiram: "ninth Tantra" → ஒன்பதாம் தந்திரம் |
 | Adbhuta Koothu | | அற்புதக் கூத்து | | |
@@ -636,6 +650,11 @@ least sure of. Rows marked *kept on purpose* chose a modern form over a better-a
 | sage | | முனிவர் | ரிஷி | |
 | Brahmahatya | | பிரமஹத்தி | | |
 | Pashupata | | பாசுபதம் | | the weapon |
+| banyan | | ஆலமரம் | | Dakshinamurti's tree; "the stone banyan" → கல்லால மரம் |
+| kurundam | kurundam tree | குருந்த மரம் | | Manikkavasagar's tree at Thiruperunthurai |
+| pittu | | பிட்டு | | Vandi's steamed rice cake |
+| arugu | arugu grass | அறுகு | | |
+| five sacred letters | | ஐந்தெழுத்து | திருவைந்தெழுத்து | the mantra நமசிவாய |
 | Tandava | | தாண்டவம் | | Urdhva Tandava → ஊர்த்துவ தாண்டவம் |
 | Lord | Supreme Lord; Great Lord; Supreme Being; God | இறைவன் | பெருமான் | "the Lord" on its own → இறைவன்; with a name, use the honorific form of that name; kept on purpose; பெருமான் in an epithet such as உலகை உண்ட பெருமான் |
 | verse |  | பாடல் | செய்யுள் | "verse 1851" → பாடல் 1851; a stanza in general, unnumbered → செய்யுள் |

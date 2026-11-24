@@ -1,5 +1,57 @@
 # Tamil translation notes for the owner's review
 
+## Volume II, Shiva: done except one held story (2026-11-24)
+
+18 more stories translated (19 of 20 with the pilot's `deeds-kama`): the eleven deeds, the three forms, three of the
+four saints stories, and the two Murugan stories of this volume. 72 Tamil stories in all; the checker reports 0
+paragraph or number differences and 0 non-glossary forms over all of them.
+
+**Held back:** `saints-sambandar`. Its third paragraph is the same impalement passage as `sam-jains` (Periya
+Puranam 855-856, "it is not shown in the film"), so it waits for the same owner decision (HANDOFF section 0, item 1).
+
+Quoted in the original Tamil, each checked this session against thevaaram.org, the research files or Wikisource:
+- Tevaram 1.1.2, 1.1.4: "எனதுள்ளங்கவர்கள்வன்" ("the thief who stole my heart", `deeds-bhikshatana`).
+- Tevaram 4.81.4, Appar's Thillai verse, in full: "குனித்த புருவமுங் … வேண்டுவ தேயிந்த மாநிலத்தே" (`forms-nataraja`),
+  followed by a short modern gloss that keeps to the English. The full verse also names the coral-red body (பவளம்போன்
+  மேனி), which the English list leaves out.
+- Tevaram 6.38.5: "பெண்ணாண் பிறப்பிலியாய் நின்றாய் நீயே" (`forms-ardhanari`). The English reads it "you are male and
+  female, and without birth"; the thevaaram.org commentary reads "you have no births as woman or man". The Tamil quotes
+  the line and glosses it as the English does. **Check** which reading the book should follow.
+- Tirumandiram section titles from the research's thevaaram.org references: "அடிமுடி தேடல்" (`deeds-annamalai`), and
+  "பதிவலியில் வீரட்டம் எட்டு" for the English "Virattam section" (`deeds-yama`).
+- "சொற்றுணை வேதியன்" (Tevaram 4.11, `saints-nayanmar`), "சோதியே சுடரே சூழொளி விளக்கே" (Arutpathu 1,
+  `saints-kurundam`), from the research files; the Periya Puranam title திருநாவுக்கரசு நாயனார் புராணம் from thevaaram.org.
+- Tiruvilaiyadal Puranam padalam 58: "திருவாதவூரடிகளுக்கு உபதேசித்த படலம்" (`saints-kurundam`), from the Wikisource
+  page the research cites.
+- Hymn places in Tamil as thevaaram.org names them (`shiva/tirumurai-deeds.json`): திருச்சாய்க்காடு, திருமுல்லைவாயில்,
+  திருப்பரிதிநியமம், திருப்பழனம், திருவாவடுதுறை, திருவையாறு, திருநாரையூர், திருநாகேச்சரம், திருநாகைக் காரோணம்,
+  திருஅன்னியூர்.
+
+**Glossary fix:** "Pazhanam" was listed as a spelling of Palani (பழநி). In both stories that use it (`forms-ardhanari`,
+`forms-dakshinamurti`) it is Appar's Tiruppazhanam near Thiruvaiyaru (hymn 4.36). It now has its own row, திருப்பழனம்.
+New rows: the ten hymn places above, Daruka forest (தாருகாவனம்), Bindu lake, Svaha, banyan / stone banyan (ஆலமரம்,
+கல்லால மரம்), kurundam, pittu, arugu, five sacred letters (ஐந்தெழுத்து), Ananda Malai; notes for Kashi-khanda,
+Arunacala-khanda, and Thillai / the Chitrambalam where the English names them.
+
+Choices applied (please confirm):
+- **Ganga** takes the plain feminine (கங்கை நினைத்தாள்) in `deeds-ganga` and `murugan-skanda-birth`, as a river acting in
+  pride, as most Tamil tellings have it (compare Valli, choice 2 of the pilot).
+- **Markandeya** takes the respectful form throughout, even as "the boy" (சிறுவரான மார்க்கண்டேயர்), as a sage.
+- **The infant Murugan** takes the respectful form (குழந்தை பிறக்கிறார்), as in `m-saravana`.
+- **Nandi** respectful; **Daksha, Yama, Ravana, Mayan, Bhagiratha** plain. Bhagiratha is a devout king; he is plain
+  under the pilot's rule for human characters.
+- "Kalantaka or Kalasamharamurti" gives one Tamil name, காலசம்ஹார மூர்த்தி (the glossary maps both to it).
+- `deeds-brahma-head`: "his father's victories" is made explicit as முருகனின் தந்தை.
+- Song places are the app's (திருத்தணிகை, காஞ்சீபுரம், கயிலைமலை, திருவருணை, திருக்காளத்தி); for song 555 the prose keeps
+  திருச்சிராப்பள்ளி (glossary note). Song 1 has no place in the English and none was added (the app's "place" for it is
+  விநாயகர், a section, not a town).
+
+Found in the English (not changed):
+- `saints-kurundam` says "This film and this account dwell on the turning point under the tree", and
+  `saints-sambandar` says "it is not shown in the film". Book text should not mention a film; these look like
+  storyline wording that slipped into the narratives. The Tamil of `saints-kurundam` keeps the English as it stands;
+  fix both languages together.
+
 ## Volume IV: done except two held stories (2026-11-23)
 
 38 more stories translated: Sambandar 11 of 12, saints 10 of 10, Devi 11 of 12, Ganesha 3 of 3, Tamil lore 5 of 5

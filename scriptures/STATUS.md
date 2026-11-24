@@ -4,6 +4,8 @@
 
 **End of session 2026-11-23.** Everything committed and pushed to `next`. HANDOFF sections 10, 13 and 14 hold the next-session prompt, the Tamil status table and the notes for this Linux machine.
 
+**Tamil: Shiva volume done (2026-11-24).** 18 more stories (19 of 20 with `deeds-kama`); `saints-sambandar` held, since it carries the same impalement paragraph as `sam-jains`. 72 of 142 Tamil stories exist; all pass the checker. Seven Tamil originals were checked against thevaaram.org, the research files and Wikisource this session; the glossary gains 19 rows and loses a wrong "Pazhanam" = Palani mapping. Review items in `tamil/PILOT-NOTES.md`, including a reading of Tevaram 6.38.5 and "film" wording in two English narratives.
+
 **Tamil: Volume IV done (2026-11-23).** 38 more stories (Sambandar, saints, Devi, Ganesha, Tamil lore); `sam-jains` and `d-idumbai` held for owner decisions. 54 of 142 Tamil stories exist; all pass the checker (paragraphs, numbers, glossary forms). Review items in `tamil/PILOT-NOTES.md`, including one inconsistency to decide (respect forms for the Lord in disguise) and a wrong-looking "(Madurai)" in the English of `sam-fever`.
 
 **Tamil: Murugan volume done (2026-11-23).** The other 11 Murugan stories translated (12 of 12 with Valli; 16 Tamil stories in all). Padalam titles and two quoted lines verified against the Project Madurai Kanda Puranam pages; the Tarakan padalam title is still unverified. `glossary_check.py` now also checks each Tamil story against its English (paragraphs and numbers: 0 differences). Notes in `tamil/PILOT-NOTES.md`.
